@@ -100,7 +100,7 @@ const originalModList = {
    engMod: "Monsters fire 2 additional Projectiles",
    tier: 440,
    engRegex: "oj",
-   Regex: "放",
+   Regex: "放つ",
    modTier17: false,
  },
  "モンスターの移動スピードが#%増加する|モンスターのアタックスピードが#%増加する|モンスターのキャストスピードが%増加する": {
@@ -108,7 +108,7 @@ const originalModList = {
    engMod: "#% increased Monster Movement Speed|#% increased Monster Attack Speed|% increased Monster Cast Speed",
    tier: 420,
    engRegex: "r at",
-   Regex: "ス.*増",
+   Regex: "ーのキ",
    modTier17: false,
  },
  "ユニークボスのダメージが#%増加する|ユニークボスのアタックスピードおよびキャストスピードが#%増加する": {
@@ -124,7 +124,7 @@ const originalModList = {
    engMod: "Monsters have #% increased Area of Effect",
    tier: 400,
    engRegex: "e \\d+% increased ar",
-   Regex: "範.*増",
+   Regex: "ターの効",
    modTier17: false,
  },
  "ユニークボスのライフが#%増加する|ユニークボスの効果範囲が#%増加する": {
@@ -164,7 +164,7 @@ const originalModList = {
    engMod: "#% increased Monster Damage",
    tier: 370,
    engRegex: "r damage$",
-   Regex: "ダ.*増",
+   Regex: "ターのダ.*増",
    modTier17: false,
  },
  "モンスターの命中力が#%増加する|全てのプレイヤーはスペルダメージを抑制して防ぐダメージ割合が-#%される": {
@@ -196,7 +196,7 @@ const originalModList = {
    engMod: "Players are Cursed with Enfeeble",
    tier: 360,
    engRegex: "eble$",
-   Regex: "ーブ",
+   Regex: "ンフ",
    modTier17: false,
  },
  "プレイヤーはテンポラルチェーンの呪いを受ける": {
@@ -204,7 +204,7 @@ const originalModList = {
    engMod: "Players are Cursed with Temporal Chains",
    tier: 360,
    engRegex: "h tem",
-   Regex: "ルチ",
+   Regex: "ンポ",
    modTier17: false,
  },
  "プレイヤーはヴァルネラビリティの呪いを受ける": {
@@ -236,7 +236,7 @@ const originalModList = {
    engMod: "Area has patches of Consecrated Ground",
    tier: 310,
    engRegex: "nsecrate",
-   Regex: "神",
+   Regex: "に神",
    modTier17: false,
  },
  "エリアには感電領域がまだらに存在し受けるダメージを#%増加させる": {
@@ -252,7 +252,7 @@ const originalModList = {
    engMod: "Area has patches of desecrated ground",
    tier: 310,
    engRegex: "s of d",
-   Regex: "冒",
+   Regex: "は冒",
    modTier17: false,
  },
  "全てのプレイヤーのアーマーが#%低下する|全てのプレイヤーのブロック率が#%減少する": {
@@ -364,7 +364,7 @@ const originalModList = {
    engMod: "Monsters have a #% chance to Ignite, Freeze and Shock on Hit",
    tier: 98,
    engRegex: "te,",
-   Regex: "凍",
+   Regex: "、凍",
    modTier17: false,
  },
  "モンスターアタックはヒット時に#%の確率で串刺しを付与する": {
@@ -396,7 +396,7 @@ const originalModList = {
    engMod: "Area contains two Unique Bosses",
    tier: 90,
    engRegex: "two",
-   Regex: "2体",
+   Regex: "体の",
    modTier17: false,
  },
  "ユニークボスは取り憑かれている": {
@@ -436,7 +436,7 @@ const originalModList = {
    engMod: "Monsters gain a Power Charge on Hit",
    tier: 80,
    engRegex: "a pow",
-   Regex: "パ.*獲",
+   Regex: "パ.*時",
    modTier17: false,
  },
  "モンスターはヒット時にエンデュランスチャージを1個獲得する": {
@@ -460,7 +460,7 @@ const originalModList = {
    engMod: "Players have #% less Area of Effect",
    tier: 60,
    engRegex: "ss are",
-   Regex: "効.*低",
+   Regex: "範.*低",
    modTier17: false,
  },
  "モンスターはヒット時に盲目を付与する": {
@@ -556,7 +556,7 @@ const originalModList = {
    engMod: "Area is inhabited by Humanoids",
    tier: 4,
    engRegex: "hum",
-   Regex: "ヒュ",
+   Regex: "マノ",
    modTier17: false,
  },
  "エリアにはソラリスの狂信者が出現する": {
@@ -596,7 +596,7 @@ const originalModList = {
    engMod: "Area is inhabited by Undead",
    tier: 4,
    engRegex: "by un",
-   Regex: "ッド",
+   Regex: "デッ",
    modTier17: false,
  },
  "エリアには遠距離攻撃を行うモンスターが生息している": {
@@ -612,7 +612,7 @@ const originalModList = {
    engMod: "#% increased number of Rare Monsters",
    tier: 1,
    engRegex: "nu",
-   Regex: "レ.*増",
+   Regex: "アモ.*数",
    modTier17: false,
  },
  "マジックモンスターの数が#%増加する": {
@@ -644,7 +644,7 @@ const originalModList = {
    engMod: "(T17) Monsters have #% increased Area of Effect|Monsters fire 4 additional Projectiles",
    tier: 1111,
    engRegex: "tiles$",
-   Regex: "放",
+   Regex: "ターの効",
    modTier17: true,
  },
  "(T17) モンスターのダメージが#%増加する": {
@@ -652,7 +652,7 @@ const originalModList = {
    engMod: "(T17) #% increased Monster Damage",
    tier: 1111,
    engRegex: "r damage$",
-   Regex: "ダ.*増",
+   Regex: "ターのダ.*増",
    modTier17: true,
  },
  "(T17) モンスターは最大ライフの#%を追加最大エナジーシールドとして獲得する": {
@@ -724,7 +724,7 @@ const originalModList = {
    engMod: "(T17) Monsters inflict 2 Grasping Vines on Hit",
    tier: 1111,
    engRegex: "pin",
-   Regex: "縛",
+   Regex: "に束",
    modTier17: true,
  },
  "(T17) レアモンスターはボラタイルコアを持つ": {
@@ -756,7 +756,7 @@ const originalModList = {
    engMod: "(T17) #% increased Monster Movement Speed|#% increased Monster Attack Speed|#% increased Monster Cast Speed",
    tier: 1111,
    engRegex: "\\d+% increased monster c",
-   Regex: "ス.*増",
+   Regex: "ーのキ",
    modTier17: true,
  },
  "(T17) プレイヤーは血塗れのノコギリに襲われる": {
@@ -836,7 +836,7 @@ const originalModList = {
    engMod: "(T17) Rare monsters in area are Shaper-Touched",
    tier: 1111,
    engRegex: "hap",
-   Regex: "ェイ",
+   Regex: "に触",
    modTier17: true,
  },
  "(T17) プレイヤーのトーテムの最大召喚数 -2体": {
@@ -844,7 +844,7 @@ const originalModList = {
    engMod: "(T17) Players have -2 to maximum number of Summoned Totems",
    tier: 1111,
    engRegex: "moned",
-   Regex: "ムの",
+   Regex: "大召",
    modTier17: true,
  },
  "(T17) マインを投げるプレイヤーのスキルのマインが1個少なくなる|トラップを投げるプレイヤーのスキルのトラップが1個少なくなる": {
@@ -876,7 +876,7 @@ const originalModList = {
    engMod: "(T17) Map Boss is accompanied by a Synthesis Boss",
    tier: 1111,
    engRegex: "yn",
-   Regex: "ンセ",
+   Regex: "スボ",
    modTier17: true,
  },
  "(T17) エリアには灼熱の代行者のルーンが出現する": {
@@ -964,7 +964,7 @@ const originalModList = {
    engMod: "(T17) Players have #% less Area of Effect",
    tier: 1111,
    engRegex: "ss are",
-   Regex: "効.*低",
+   Regex: "範.*低",
    modTier17: true,
  },
  "(T17) モンスターがクリティカルストライクから受ける追加ダメージが#%減少する": {
@@ -1060,7 +1060,7 @@ const originalModList = {
    engMod: "(T17) Players have #% reduced effect of Non-Curse Auras from Skills",
    tier: 1111,
    engRegex: "non",
-   Regex: "ラの",
+   Regex: "ーラ",
    modTier17: true,
  },
  "(T17) 全てのプレイヤーはライフ、マナおよびエナジーシールドを自動回復することができない": {
@@ -1084,7 +1084,7 @@ const originalModList = {
    engMod: "(T17) Monster Damage Penetrates #% Elemental Resistances",
    tier: 1111,
    engRegex: "net",
-   Regex: "破",
+   Regex: "破す",
    modTier17: true,
  },
  "(T17) プレイヤーは直近使用したスキルの回数ごとにアクションスピードが#%減少する": {
@@ -1140,7 +1140,7 @@ const originalModList = {
    engMod: "(T17) 25% chance for Rare Monsters to Fracture on death",
    tier: 1111,
    engRegex: "o F",
-   Regex: "亡",
+   Regex: "亡時",
    modTier17: true,
  },
 };
