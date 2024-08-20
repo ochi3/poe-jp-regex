@@ -25,8 +25,19 @@
     </div>
 
     <div id="contentArea">
-        <div id="mapContent">
 
+
+      <div class="input-group">
+        <label for="profileSelect">プロファイル:</label>
+        <select id="profileSelect" onchange="loadProfile()">
+          <option value="default">デフォルト</option>
+        </select>
+        <button onclick="saveProfile()">保存</button>
+        <button onclick="deleteProfile()">削除</button>
+        <input type="text" id="profileName" placeholder="プロファイル名" />
+        <button onclick="renameProfile()">名称変更</button>
+      </div>
+      
             <div id="combinedRegexContainer">
                 <div id="combinedRegexOutput"></div>
                 <span id="charCount" class="char-count"></span>
