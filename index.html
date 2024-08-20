@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PoE JP Regex</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="sideMenu">
+      <h3>PoE JP Regex</h3>
+      <h4>Patch 3.25 テスト中</h4>
+
+        <button onclick="switchFunction('map')">マップ mod</button>
+        <button onclick="switchFunction('trans')"><s>変換</s></button>
+        <button onclick="switchFunction('flask')"><s>フラスコ</s></button>
+        <button onclick="switchFunction('beast')"><s>ビースト</s></button>
+        <button onclick="switchFunction('expe')"><s>エクスペ</s></button>
+        <h4>Discord @ochi3c</h4>
+        <h4>不具合等ありましたらご連絡ください。</h4>
+        <h4>まだ作成したばかりなので不具合が多いかもしれません。</h4>
+        <h4>特に日本語↔️英語は 試していないのでご注意ください。</h4>
+        <h4>レアリティのノーマル、マジック、レアのregexが分からないので知ってる方居たら教えてくれると助かります。</h4>
+
+    </div>
+
+    <div id="contentArea">
+        <div id="mapContent">
+
+            <div id="combinedRegexContainer">
+                <div id="combinedRegexOutput"></div>
+                <span id="charCount" class="char-count"></span>
+                <button onclick="copyToClipboard()">コピー</button>
+                <button onclick="resetAll()">リセット</button>
+                <button onclick="toggleLanguage()">日本語 / English</button>
+
+                <div class="input-group">
+                    <label class="input-label" for="itemQuantityInput">
+                        数量:
+                        <input type="number" id="itemQuantityInput" onchange="updateCombinedRegex()">
+                        <div class="tooltip" id="itemQuantityTooltip">この値以上の数量がマッチします。※10単位で切り捨てされます。</div>
+                    </label>
+                </div>
+
+                <div class="input-group">
+                    <label class="input-label" for="packSizeInput">
+                        パックサイズ:
+                        <input type="number" id="packSizeInput" oninput="updateCombinedRegex()">
+                        <div class="tooltip" id="packSizeTooltip">この値以上のパックサイズがマッチします。※10単位で切り捨てされます。</div>
+                    </label>
+                </div>
+                <div>
+                </div>
+
+                <div class="input-group">
+                    <label class="checkbox-label" for="ngModCheckbox">
+                        <input type="checkbox" id="ngModCheckbox" onchange="updateCombinedRegex()">
+                        NG mod
+                        <div class="tooltip" id="ngModTooltip">選択されたModを除外します。</div>
+                    </label>
+                </div>
+
+                <div class="input-group">
+                    <label for="mapTierCheckbox">
+                        <input type="checkbox" id="mapTierCheckbox" onchange="updateModList()">T17 mod
+                    </label>
+                </div>
+            </div>
+
+            <div id="ModListContainer">
+                <div id="ModListResult" style="display: none;"></div>
+                <!-- <h2>Mod</h2> -->
+                <input type="text" id="effectSearch" placeholder="Modを検索..." oninput="filterEffects()">
+                <div id="ModList"></div>
+            </div>
+        </div>
+
+        <div id="transContent" style="display: none;">
+            <h1>コンバーター</h1>
+            <h2>気が向いたら作る</h2>
+        </div>
+
+        <div id="flaskContent" style="display: none;">
+            <h1>フラスコ</h1>
+            <h2>気が向いたら作る</h2>
+        </div>
+
+        <div id="beastContent" style="display: none;">
+            <h1>ビースト</h1>
+            <h2>気が向いたら作る</h2>
+        </div>
+
+        <div id="expeContent" style="display: none;">
+            <h1>エクスペ</h1>
+            <h2>気が向いたら作る</h2>
+        </div>
+    </div>
+
+    <script src="modList.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
