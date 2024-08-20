@@ -10,24 +10,19 @@ function toggleLanguage() {
 }
 
 function updateModList() {
-  const ModListDiv = document.getElementById('ModList');
-  ModListDiv.innerHTML = '';
+    const ModListDiv = document.getElementById('ModList');
+    ModListDiv.innerHTML = '';
 
-  const isT17 = document.getElementById('mapTierCheckbox').checked;
+    const isT17 = document.getElementById('mapTierCheckbox').checked;
 
-  for (const [key, value] of Object.entries(ModList)) {
-    if (!isT17 && value.Tier > 1) continue;
-    addEffectItem(key, value);
-  }
+    // ModListをtierでソート
+    const sortedModList = Object.entries(ModList)
+        .filter(([key, value]) => !(value.modTier17 && !isT17))
+        .sort(([keyA, valueA], [keyB, valueB]) => valueB.tier - valueA.tier);
 
-  // チェックボックスの状態を反映する
-  const checkboxes = document.querySelectorAll('#ModList input[type=checkbox]');
-  checkboxes.forEach(checkbox => {
-    checkbox.checked = checkedMods.has(checkbox.id);
-  });
-
-  // チェックボックスのイベントリスナーを追加
-  addModCheckboxEventListeners();
+    sortedModList.forEach(([key, value]) => {
+        addEffectItem(key, value);
+    });
 }
 
 function addEffectItem(key, value) {
@@ -259,22 +254,21 @@ function loadCheckboxState() {
 
 // MODチェックボックスの状態を保存する関数
 function saveModCheckboxState() {
-  const state = {};
-  for (const mod of checkedMods) {
-    state[mod] = true;
-  }
-  localStorage.setItem('modCheckboxState', JSON.stringify(state));
+    const checkboxes = document.querySelectorAll('#ModList input[type=checkbox]');
+    const state = {};
+    checkboxes.forEach(checkbox => {
+        state[checkbox.id] = checkbox.checked;
+    });
+    localStorage.setItem('modCheckboxState', JSON.stringify(state));
 }
 
-function loadModCheckboxState() {
-  const state = JSON.parse(localStorage.getItem('modCheckboxState') || '{}');
-  checkedMods.clear();
-  for (const mod in state) {
-    if (state[mod]) {
-      checkedMods.add(mod);
-    }
-  }
+function addModCheckboxEventListeners() {
+    const checkboxes = document.querySelectorAll('#ModList input[type=checkbox]');
+    checkboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', saveModCheckboxState);
+    });
 }
+
 // MODリストの更新後にイベントリスナーを追加
 function updateModList() {
     const ModListDiv = document.getElementById('ModList');
@@ -291,32 +285,18 @@ function updateModList() {
     addModCheckboxEventListeners();
 }
 
-function addModCheckboxEventListeners() {
-  const checkboxes = document.querySelectorAll('#ModList input[type=checkbox]');
-  checkboxes.forEach(checkbox => {
-    checkbox.addEventListener('change', () => {
-      if (checkbox.checked) {
-        checkedMods.add(checkbox.id);
-      } else {
-        checkedMods.delete(checkbox.id);
-      }
-      saveModCheckboxState();
-      updateCombinedRegex();
-    });
-  });
-}
 // ページロード時にチェックボックスの状態を復元
 document.addEventListener('DOMContentLoaded', () => {
     loadModCheckboxState();
     updateModList();
 });
 
-// MODチェックボックスの状態を復元する関数
 function loadModCheckboxState() {
     const state = JSON.parse(localStorage.getItem('modCheckboxState') || '{}');
     const checkboxes = document.querySelectorAll('#ModList input[type=checkbox]');
     checkboxes.forEach(checkbox => {
         checkbox.checked = state[checkbox.id] || false;
+        checkbox.dispatchEvent(new Event('change')); // チェック状態の変更を即時通知
     });
 
     // チェックボックスの状態をcheckedModsに反映
@@ -334,163 +314,10 @@ document.getElementById('mapTierCheckbox').addEventListener('change', saveCheckb
 // ページロード時にチェックボックスの状態を復元
 document.addEventListener('DOMContentLoaded', loadCheckboxState);
 
-let profiles = {
-  "default": {
-    itemQuantity: "",
-    packSize: "",
-    ngMod: false,
-    mapTier: false,
-    checkedMods: new Set()
-  }
-};
-
-function saveProfile() {
-  const profileName = document.getElementById("profileName").value.trim();
-  if (profileName) {
-    profiles[profileName] = {
-      itemQuantity: document.getElementById("itemQuantityInput").value,
-      packSize: document.getElementById("packSizeInput").value,
-      ngMod: document.getElementById("ngModCheckbox").checked,
-      mapTier: document.getElementById("mapTierCheckbox").checked,
-      checkedMods: new Set(checkedMods)
-    };
-    updateProfileSelect();
-    saveProfilesToStorage();
-  }
-}
-
-
-function deleteProfile() {
-  const profileSelect = document.getElementById("profileSelect");
-  const selectedProfile = profileSelect.value;
-  if (selectedProfile !== "default") {
-    delete profiles[selectedProfile];
-    updateProfileSelect();
-    saveProfilesToStorage();
-    loadProfile();
-  }
-}
-
-function renameProfile() {
-  const profileName = document.getElementById("profileName").value.trim();
-  const profileSelect = document.getElementById("profileSelect");
-  const selectedProfile = profileSelect.value;
-  if (profileName && selectedProfile !== "default") {
-    profiles[profileName] = profiles[selectedProfile];
-    delete profiles[selectedProfile];
-    updateProfileSelect();
-    saveProfilesToStorage();
-    profileSelect.value = profileName;
-    loadProfile();
-  }
-}
-
-function loadProfile() {
-  const profileSelect = document.getElementById("profileSelect");
-  const selectedProfile = profileSelect.value;
-  const profile = profiles[selectedProfile];
-
-  document.getElementById("itemQuantityInput").value = profile.itemQuantity;
-  document.getElementById("packSizeInput").value = profile.packSize;
-  document.getElementById("ngModCheckbox").checked = profile.ngMod;
-  document.getElementById("mapTierCheckbox").checked = profile.mapTier;
-
-  checkedMods.clear();
-  profile.checkedMods.forEach(mod => checkedMods.add(mod));
-
-  updateModList();
-  updateCombinedRegex();
-}
-
-function updateProfileSelect() {
-  const profileSelect = document.getElementById("profileSelect");
-  profileSelect.innerHTML = "";
-
-  const defaultOption = document.createElement("option");
-  defaultOption.value = "default";
-  defaultOption.textContent = "デフォルト";
-  profileSelect.appendChild(defaultOption);
-
-  for (const profileName in profiles) {
-    if (profileName !== "default") {
-      const option = document.createElement("option");
-      option.value = profileName;
-      option.textContent = profileName;
-      profileSelect.appendChild(option);
-    }
-  }
-
-  // 前回選択していたプロファイルを選択状態に戻す
-  const selectedProfile = localStorage.getItem("selectedProfile");
-  if (selectedProfile && profiles[selectedProfile]) {
-    profileSelect.value = selectedProfile;
-    loadProfile(); // プロファイルの設定を読み込む
-  }
-}
-
-function saveProfilesToStorage() {
-  localStorage.setItem("profiles", JSON.stringify(profiles));
-}
-
-function loadProfilesFromStorage() {
-  const storedProfiles = localStorage.getItem("profiles");
-  if (storedProfiles) {
-    profiles = JSON.parse(storedProfiles);
-    updateProfileSelect();
-    localStorage.setItem("selectedProfile", profileSelect.value);
-  }
-}
-
-function createProfile() {
-  const newProfileName = document.getElementById('newProfileName').value.trim();
-  if (newProfileName) {
-    profiles[newProfileName] = {
-      itemQuantity: document.getElementById('itemQuantityInput').value,
-      packSize: document.getElementById('packSizeInput').value,
-      ngMod: document.getElementById('ngModCheckbox').checked,
-      mapTier: document.getElementById('mapTierCheckbox').checked,
-      checkedMods: new Set(checkedMods)
-    };
-    document.getElementById('newProfileName').value = '';
-    updateProfileSelect();
-    saveProfilesToStorage();
-  }
-}
-
-function deleteProfile() {
-  const profileSelect = document.getElementById('profileSelect');
-  const selectedProfile = profileSelect.value;
-  if (selectedProfile !== 'default') {
-    if (confirm(`本当に "${selectedProfile}" を削除しますか?`)) {
-      delete profiles[selectedProfile];
-      updateProfileSelect();
-      saveProfilesToStorage();
-      loadProfile();
-    }
-  }
-}
-
-function loadProfilesFromStorage() {
-  const storedProfiles = localStorage.getItem("profiles");
-  if (storedProfiles) {
-    profiles = JSON.parse(storedProfiles);
-    updateProfileSelect();
-
-    // 前回選択していたプロファイルを自動的に読み込む
-    const lastSelectedProfile = localStorage.getItem("selectedProfile");
-    if (lastSelectedProfile && profiles[lastSelectedProfile]) {
-      document.getElementById("profileSelect").value = lastSelectedProfile;
-      loadProfile();
-    }
-  }
-}
-
-document.addEventListener("DOMContentLoaded", loadProfilesFromStorage);
-
 document.addEventListener('DOMContentLoaded', () => {
-  loadModCheckboxState();
-  updateModList();
-  switchFunction('map');
-  initializeTooltips();
-  updateCombinedRegex();
+    loadModCheckboxState();
+    updateModList();
+    switchFunction('map');
+    initializeTooltips();
+    updateCombinedRegex();
 });

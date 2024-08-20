@@ -26,22 +26,12 @@
 
     <div id="contentArea">
 
-      <div class="input-group">
-        <label for="profileSelect">プロファイル:</label>
-        <select id="profileSelect" onchange="loadProfile()">
-          <option value="default">デフォルト</option>
-        </select>
-        <button onclick="deleteProfile()">削除</button>
-      </div>
-
             <div id="combinedRegexContainer">
                 <div id="combinedRegexOutput"></div>
                 <span id="charCount" class="char-count"></span>
                 <button onclick="copyToClipboard()">コピー</button>
                 <button onclick="resetAll()">リセット</button>
                 <button onclick="toggleLanguage()">日本語 / English</button>
-                <input type="text" id="newProfileName" placeholder="新しいプロファイル名" />
-                <button onclick="createProfile()">+</button>
 
 
                 <div class="input-group">
