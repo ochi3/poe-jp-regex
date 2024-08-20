@@ -17,13 +17,14 @@ function updateModList() {
 
     // ModListをtierでソート
     const sortedModList = Object.entries(ModList)
-        .filter(([key, value]) => !(value.modTier17 && !isT17))
+        .filter(([key, value]) => !(!isT17 && value.modTier17))
         .sort(([keyA, valueA], [keyB, valueB]) => valueB.tier - valueA.tier);
 
     sortedModList.forEach(([key, value]) => {
         addEffectItem(key, value);
     });
 }
+
 
 function addEffectItem(key, value) {
     const ModListDiv = document.getElementById('ModList');
@@ -50,6 +51,7 @@ function addEffectItem(key, value) {
     effectItem.classList.add('effect-item');
     if (value.tier > 1001) {
         effectItem.style.color = '#e0b8ee';
+        effectItem.classList.add('t17-effect');
     } else if (value.tier > 750) {
         effectItem.style.color = '#ed4c4c';
     } else if (value.tier > 500) {
@@ -220,6 +222,8 @@ function switchFunction(type) {
     }
 }
 
+
+
 function initializeTooltips() {
     document.querySelectorAll('.effect-item').forEach(item => {
         const tooltip = item.querySelector('.tooltip');
@@ -265,9 +269,19 @@ function saveModCheckboxState() {
 function addModCheckboxEventListeners() {
     const checkboxes = document.querySelectorAll('#ModList input[type=checkbox]');
     checkboxes.forEach(checkbox => {
-        checkbox.addEventListener('change', saveModCheckboxState);
+        checkbox.addEventListener('change', () => {
+            if (checkbox.checked) {
+                checkedMods.add(checkbox.value);
+            } else {
+                checkedMods.delete(checkbox.value);
+            }
+            updateCombinedRegex();
+            saveModCheckboxState();
+        });
     });
 }
+
+
 
 // MODリストの更新後にイベントリスナーを追加
 function updateModList() {
@@ -276,14 +290,20 @@ function updateModList() {
 
     const isT17 = document.getElementById('mapTierCheckbox').checked;
 
-    for (const [key, value] of Object.entries(ModList)) {
-        if (!isT17 && value.Tier > 1) continue;
+    // ModListをtierでソート
+    const sortedModList = Object.entries(ModList)
+        .filter(([key, value]) => !(value.modTier17 && !isT17))
+        .sort(([keyA, valueA], [keyB, valueB]) => valueB.tier - valueA.tier);
+
+    sortedModList.forEach(([key, value]) => {
         addEffectItem(key, value);
-    }
+    });
 
     // チェックボックスのイベントリスナーを追加
     addModCheckboxEventListeners();
 }
+
+
 
 // ページロード時にチェックボックスの状態を復元
 document.addEventListener('DOMContentLoaded', () => {
