@@ -20,10 +20,6 @@ function updateModList() {
         .filter(([key, value]) => !(!isT17 && value.modTier17))
         .sort(([keyA, valueA], [keyB, valueB]) => valueB.tier - valueA.tier);
 
-        if (currentProfile !== 'default') {
-            loadProfileSettings(currentProfile);
-        }
-
     sortedModList.forEach(([key, value]) => {
         addEffectItem(key, value);
     });
@@ -105,10 +101,6 @@ function updateCombinedRegex() {
     if (packSizeValue) {
         const packSizeRegex = getFixedRangeRegex(packSizeValue, currentLanguage === 'ja' ? 'クサ.*' : 'iz.*');
         combinedResult += ` ${packSizeRegex}`;
-    }
-
-    if (currentProfile !== 'default') {
-        loadProfileSettings(currentProfile);
     }
 
     combinedResult = `${ModListResult} ${combinedResult}`.trim();
@@ -342,109 +334,6 @@ document.getElementById('mapTierCheckbox').addEventListener('change', saveCheckb
 // ページロード時にチェックボックスの状態を復元
 document.addEventListener('DOMContentLoaded', loadCheckboxState);
 
-let currentProfile = 'default';
-const profiles = { 'default': {} };
-
-function switchProfile() {
-    const profileSelect = document.getElementById('profileSelect');
-    const selectedProfile = profileSelect.value;
-    if (selectedProfile !== currentProfile) {
-        currentProfile = selectedProfile;
-        loadProfileSettings(currentProfile);
-        updateModList();
-        updateCombinedRegex();
-    }
-}
-
-function addProfile() {
-    document.getElementById('profileInputContainer').style.display = 'flex';
-}
-
-function saveProfile() {
-    const profileName = document.getElementById('profileNameInput').value.trim();
-    if (profileName) {
-        profiles[profileName] = { ...checkedMods };
-        updateProfileSelect(profileName);
-        document.getElementById('profileInputContainer').style.display = 'none';
-        document.getElementById('profileNameInput').value = '';
-        saveProfileSettings();
-    }
-}
-
-function deleteProfile() {
-    const profileName = document.getElementById('profileSelect').value;
-    if (profileName !== 'default') {
-        delete profiles[profileName];
-        updateProfileSelect();
-        if (profileName === currentProfile) {
-            currentProfile = 'default';
-            loadProfileSettings(currentProfile);
-            updateModList();
-            updateCombinedRegex();
-        }
-        saveProfileSettings();
-    }
-}
-
-function updateProfileSelect(newProfile) {
-    const profileSelect = document.getElementById('profileSelect');
-    profileSelect.innerHTML = '<option value="default">Default</option>';
-    for (const profile in profiles) {
-        if (profile !== 'default') {
-            const option = document.createElement('option');
-            option.value = profile;
-            option.textContent = profile;
-            profileSelect.add(option);
-        }
-    }
-    if (newProfile) {
-        profileSelect.value = newProfile;
-    }
-}
-
-function loadProfileSettings(profile) {
-    if (profiles[profile]) {
-        checkedMods = new Set(Object.keys(profiles[profile]));
-    } else {
-        checkedMods = new Set();
-    }
-    updateModList();
-    updateCombinedRegex();
-    saveProfileSettings();
-}
-
-function loadCheckedModsFromProfile(profile) {
-    if (profiles[profile]) {
-        checkedMods = new Set(Object.keys(profiles[profile]));
-    } else {
-        checkedMods = new Set();
-    }
-    updateModList();
-    updateCombinedRegex();
-}
-
-function saveProfileSettings() {
-    profiles[currentProfile] = Object.fromEntries(checkedMods);
-    localStorage.setItem('profiles', JSON.stringify(profiles));
-    localStorage.setItem('currentProfile', currentProfile);
-}
-
-function loadProfileSettings() {
-    const savedProfiles = JSON.parse(localStorage.getItem('profiles') || '{}');
-    for (const profile in savedProfiles) {
-        profiles[profile] = savedProfiles[profile];
-    }
-    updateProfileSelect();
-}
-
-document.getElementById('addProfileButton').addEventListener('click', addProfile);
-document.getElementById('saveProfileButton').addEventListener('click', saveProfile);
-document.getElementById('deleteProfileButton').addEventListener('click', deleteProfile);
-document.getElementById('profileSelect').addEventListener('change', switchProfile);
-
-document.addEventListener('DOMContentLoaded', loadProfileSettings);
-
-document.getElementById('profileSelect').addEventListener('change', switchProfile);
 document.addEventListener('DOMContentLoaded', () => {
     loadModCheckboxState();
     updateModList();
