@@ -100,7 +100,7 @@ const originalModList = {
    engMod: "Monsters fire 2 additional Projectiles",
    tier: 440,
    engRegex: "oj",
-   Regex: "放",
+   Regex: "放つ",
    modTier17: false,
  },
  "モンスターの移動スピードが#%増加する|モンスターのアタックスピードが#%増加する|モンスターのキャストスピードが%増加する": {
@@ -108,7 +108,7 @@ const originalModList = {
    engMod: "#% increased Monster Movement Speed|#% increased Monster Attack Speed|% increased Monster Cast Speed",
    tier: 420,
    engRegex: "r at",
-   Regex: "ス.*増",
+   Regex: "ーのキ",
    modTier17: false,
  },
  "ユニークボスのダメージが#%増加する|ユニークボスのアタックスピードおよびキャストスピードが#%増加する": {
@@ -124,7 +124,7 @@ const originalModList = {
    engMod: "Monsters have #% increased Area of Effect",
    tier: 400,
    engRegex: "e \\d+% increased ar",
-   Regex: "範.*増",
+   Regex: "ターの効",
    modTier17: false,
  },
  "ユニークボスのライフが#%増加する|ユニークボスの効果範囲が#%増加する": {
@@ -164,7 +164,7 @@ const originalModList = {
    engMod: "#% increased Monster Damage",
    tier: 370,
    engRegex: "r damage$",
-   Regex: "ダ.*増",
+   Regex: "ターのダ.*増",
    modTier17: false,
  },
  "モンスターの命中力が#%増加する|全てのプレイヤーはスペルダメージを抑制して防ぐダメージ割合が-#%される": {
@@ -196,7 +196,7 @@ const originalModList = {
    engMod: "Players are Cursed with Enfeeble",
    tier: 360,
    engRegex: "eble$",
-   Regex: "ーブ",
+   Regex: "ンフ",
    modTier17: false,
  },
  "プレイヤーはテンポラルチェーンの呪いを受ける": {
@@ -204,7 +204,7 @@ const originalModList = {
    engMod: "Players are Cursed with Temporal Chains",
    tier: 360,
    engRegex: "h tem",
-   Regex: "ルチ",
+   Regex: "ンポ",
    modTier17: false,
  },
  "プレイヤーはヴァルネラビリティの呪いを受ける": {
@@ -236,7 +236,7 @@ const originalModList = {
    engMod: "Area has patches of Consecrated Ground",
    tier: 310,
    engRegex: "nsecrate",
-   Regex: "神",
+   Regex: "に神",
    modTier17: false,
  },
  "エリアには感電領域がまだらに存在し受けるダメージを#%増加させる": {
@@ -252,7 +252,7 @@ const originalModList = {
    engMod: "Area has patches of desecrated ground",
    tier: 310,
    engRegex: "s of d",
-   Regex: "冒",
+   Regex: "は冒",
    modTier17: false,
  },
  "全てのプレイヤーのアーマーが#%低下する|全てのプレイヤーのブロック率が#%減少する": {
@@ -364,7 +364,7 @@ const originalModList = {
    engMod: "Monsters have a #% chance to Ignite, Freeze and Shock on Hit",
    tier: 98,
    engRegex: "te,",
-   Regex: "凍",
+   Regex: "、凍",
    modTier17: false,
  },
  "モンスターアタックはヒット時に#%の確率で串刺しを付与する": {
@@ -396,7 +396,7 @@ const originalModList = {
    engMod: "Area contains two Unique Bosses",
    tier: 90,
    engRegex: "two",
-   Regex: "2体",
+   Regex: "体の",
    modTier17: false,
  },
  "ユニークボスは取り憑かれている": {
@@ -436,7 +436,7 @@ const originalModList = {
    engMod: "Monsters gain a Power Charge on Hit",
    tier: 80,
    engRegex: "a pow",
-   Regex: "パ.*獲",
+   Regex: "パ.*時",
    modTier17: false,
  },
  "モンスターはヒット時にエンデュランスチャージを1個獲得する": {
@@ -460,7 +460,7 @@ const originalModList = {
    engMod: "Players have #% less Area of Effect",
    tier: 60,
    engRegex: "ss are",
-   Regex: "効.*低",
+   Regex: "範.*低",
    modTier17: false,
  },
  "モンスターはヒット時に盲目を付与する": {
@@ -556,7 +556,7 @@ const originalModList = {
    engMod: "Area is inhabited by Humanoids",
    tier: 4,
    engRegex: "hum",
-   Regex: "ヒュ",
+   Regex: "マノ",
    modTier17: false,
  },
  "エリアにはソラリスの狂信者が出現する": {
@@ -596,7 +596,7 @@ const originalModList = {
    engMod: "Area is inhabited by Undead",
    tier: 4,
    engRegex: "by un",
-   Regex: "ッド",
+   Regex: "デッ",
    modTier17: false,
  },
  "エリアには遠距離攻撃を行うモンスターが生息している": {
@@ -612,7 +612,7 @@ const originalModList = {
    engMod: "#% increased number of Rare Monsters",
    tier: 1,
    engRegex: "nu",
-   Regex: "レ.*増",
+   Regex: "アモ.*数",
    modTier17: false,
  },
  "マジックモンスターの数が#%増加する": {
@@ -644,7 +644,7 @@ const originalModList = {
    engMod: "(T17) Monsters have #% increased Area of Effect|Monsters fire 4 additional Projectiles",
    tier: 1111,
    engRegex: "tiles$",
-   Regex: "放",
+   Regex: "ターの効",
    modTier17: true,
  },
  "(T17) モンスターのダメージが#%増加する": {
@@ -652,7 +652,7 @@ const originalModList = {
    engMod: "(T17) #% increased Monster Damage",
    tier: 1111,
    engRegex: "r damage$",
-   Regex: "ダ.*増",
+   Regex: "ターのダ.*増"",
    modTier17: true,
  },
  "(T17) モンスターは最大ライフの#%を追加最大エナジーシールドとして獲得する": {
@@ -724,7 +724,7 @@ const originalModList = {
    engMod: "(T17) Monsters inflict 2 Grasping Vines on Hit",
    tier: 1111,
    engRegex: "pin",
-   Regex: "縛",
+   Regex: "に束",
    modTier17: true,
  },
  "(T17) レアモンスターはボラタイルコアを持つ": {
@@ -756,7 +756,7 @@ const originalModList = {
    engMod: "(T17) #% increased Monster Movement Speed|#% increased Monster Attack Speed|#% increased Monster Cast Speed",
    tier: 1111,
    engRegex: "\\d+% increased monster c",
-   Regex: "ス.*増",
+   Regex: "ーのキ",
    modTier17: true,
  },
  "(T17) プレイヤーは血塗れのノコギリに襲われる": {
@@ -836,7 +836,7 @@ const originalModList = {
    engMod: "(T17) Rare monsters in area are Shaper-Touched",
    tier: 1111,
    engRegex: "hap",
-   Regex: "ェイ",
+   Regex: "に触",
    modTier17: true,
  },
  "(T17) プレイヤーのトーテムの最大召喚数 -2体": {
@@ -844,7 +844,7 @@ const originalModList = {
    engMod: "(T17) Players have -2 to maximum number of Summoned Totems",
    tier: 1111,
    engRegex: "moned",
-   Regex: "ムの",
+   Regex: "大召",
    modTier17: true,
  },
  "(T17) マインを投げるプレイヤーのスキルのマインが1個少なくなる|トラップを投げるプレイヤーのスキルのトラップが1個少なくなる": {
@@ -876,7 +876,7 @@ const originalModList = {
    engMod: "(T17) Map Boss is accompanied by a Synthesis Boss",
    tier: 1111,
    engRegex: "yn",
-   Regex: "ンセ",
+   Regex: "スボ",
    modTier17: true,
  },
  "(T17) エリアには灼熱の代行者のルーンが出現する": {
@@ -964,7 +964,7 @@ const originalModList = {
    engMod: "(T17) Players have #% less Area of Effect",
    tier: 1111,
    engRegex: "ss are",
-   Regex: "効.*低",
+   Regex: "範.*低",
    modTier17: true,
  },
  "(T17) モンスターがクリティカルストライクから受ける追加ダメージが#%減少する": {
@@ -1060,7 +1060,7 @@ const originalModList = {
    engMod: "(T17) Players have #% reduced effect of Non-Curse Auras from Skills",
    tier: 1111,
    engRegex: "non",
-   Regex: "ラの",
+   Regex: "ーラ",
    modTier17: true,
  },
  "(T17) 全てのプレイヤーはライフ、マナおよびエナジーシールドを自動回復することができない": {
@@ -1084,7 +1084,7 @@ const originalModList = {
    engMod: "(T17) Monster Damage Penetrates #% Elemental Resistances",
    tier: 1111,
    engRegex: "net",
-   Regex: "破",
+   Regex: "破す",
    modTier17: true,
  },
  "(T17) プレイヤーは直近使用したスキルの回数ごとにアクションスピードが#%減少する": {
@@ -1140,7 +1140,243 @@ const originalModList = {
    engMod: "(T17) 25% chance for Rare Monsters to Fracture on death",
    tier: 1111,
    engRegex: "o F",
-   Regex: "亡",
+   Regex: "亡時",
    modTier17: true,
  },
 };
+
+// map name
+// 展望台のマップ
+// 砂浜のマップ
+// 墓場のマップ
+// 地下牢のマップ
+// 鋳造工場のマップ
+// 路地のマップ
+// 刑務所のマップ
+// 砂漠のマップ
+// 枯れた湖のマップ
+// 水没鉱山のマップ
+// 沼地のマップ
+// 氷山のマップ
+// 檻のマップ
+// 真菌の空洞のマップ
+// 採掘場のマップ
+// レイラインのマップ
+// 半島のマップ
+// 港湾のマップ
+// 埋葬室のマップ
+// 監房のマップ
+// 拱廊のマップ
+// 街の広場のマップ
+// 遺物保管室のマップ
+// 裁判所のマップ
+// 岸辺のマップ
+// シャトーのマップ
+// 洞窟のマップ
+// 氷河のマップ
+// 火山のマップ
+// 灯台のマップ
+// 峡谷のマップ
+// 凍結した船室のマップ
+// 谷間の墓地のマップ
+// 深紅の町のマップ
+// 分岐した川のマップ
+// 凍てついた川のマップ
+// 禁じられた森のマップ
+// 温室のマップ
+// 硫黄噴出孔のマップ
+// 幽霊屋敷のマップ
+// 迷路のマップ
+// 水道のマップ
+// 有毒な下水道のマップ
+// 古代都市のマップ
+//象牙の寺院のマップ
+// 蜘蛛の巣のマップ
+// 古墳のマップ
+// 霊廟のマップ
+// 農地のマップ
+// ジャングルバレーのマップ
+// ファンタズマゴリアのマップ
+// 学院のマップ
+// 密林のマップ
+// 埠頭のマップ
+// 灰の森のマップ
+// 環礁のマップ
+// 墓地のマップ
+// 地底海のマップ
+// 火口のマップ
+// 珊瑚の遺跡のマップ
+// 溶岩溜まりのマップ
+// 邸宅のマップ
+// 城壁のマップ
+// 砂丘のマップ
+// 遺骨安置所のマップ
+// 地下河川のマップ
+// 庭園のマップ
+// アラクニドの巣のマップ
+// バザールのマップ
+// 研究所のマップ
+// 害虫の谷のマップ
+// 根に覆われた遺跡のマップ
+// ヴァールピラミッドのマップ
+// 晶洞のマップ
+// 武器庫のマップ
+// 中庭のマップ
+// 泥の間欠泉のマップ
+// 岸のマップ
+// 熱帯の島のマップ
+// 鉱泉のマップ
+// 月の寺院のマップ
+// 地下墓所のマップ
+// 塔のマップ
+// 汚水槽のマップ
+// 高原のマップ
+// 河口のマップ
+// 金庫室のマップ
+// 寺院のマップ
+// 闘技場のマップ
+// 博物館のマップ
+// 写字室のマップ
+// 包囲された街のマップ
+// シンセシスのマップ
+// 造船所のマップ
+// 鐘楼のマップ
+// アラクニドの墓のマップ
+// 荒野のマップ
+// 貧民街のマップ
+// 湿原のマップ
+// 桟橋のマップ
+// 呪われた地下聖堂のマップ
+// 果樹園のマップ
+// 遊歩道のマップ
+// 根城のマップ
+// 列柱広場のマップ
+// 原初の水溜まりのマップ
+// 蜘蛛の森のマップ
+// 入り江のマップ
+// 水路のマップ
+// 工場のマップ
+// 台地のマップ
+// 闘拳場のマップ
+// 干上がった海のマップ
+// 冒涜された大聖堂のマップ
+// 山頂のマップ
+// 根に覆われた神殿のマップ
+// 城跡のマップ
+// 水晶鉱山のマップ
+// 別荘のマップ
+// 原初の建築群のマップ
+// 死者の都のマップ
+// 競走路のマップ
+// カルデラのマップ
+// ゲットーのマップ
+// 公園のマップ
+// 奇形の体内のマップ
+// テラスのマップ
+// 神殿のマップ
+// 兵器庫のマップ
+// 砂漠の泉のマップ
+// コアのマップ
+// コロシアムのマップ
+// 酸の洞窟のマップ
+// 暗い森のマップ
+// 深紅の寺院のマップ
+// 広場のマップ
+// 発掘現場のマップ
+// 宮殿のマップ
+// 溶岩湖のマップ
+// 聖堂のマップ
+// 水没都市のマップ
+// 岩礁のマップ
+// 死骸のマップ
+// 淀みのマップ
+// 茨の谷のマップ
+// サイロのマップ
+// キメラの闘拳場のマップ
+// ヒュドラの巣のマップ
+// ミノタウロスの迷宮のマップ
+// フェニックスの鍛冶場のマップ
+// シェイパーの領域
+// ヴァールテンプルのマップ
+// ハービンジャーのマップ
+// 刻み込まれたアルティメイタム
+// 聖域のマップ
+// 城塞のマップ
+// 要塞のマップ
+// 醜態のマップ
+// ジッグラトのマップ
+
+// Mapの上に付いてる変なやつ
+// 放置された鉄格子
+// 恐怖の中心部
+// 塹壕の空洞
+// 禁断の深部
+// 苦しむ墓所
+// 混沌の泥沼
+// 焼き付く束縛
+// 寂れた土牢
+// 刻まれた墓所
+// 猛烈な深淵
+// 呪われたジグラート
+// 囁く領土
+// 破壊された底
+// 塹壕のアルコーブ
+// 隠れた堅塁
+// 荒れ狂う底
+// 隠れた秘所
+// 鉄の貯蔵所
+// 夢の孤独
+// 死の遺跡
+// 亡霊の墓所
+// 荒らされた営舎
+// 痛みの大洞窟
+// 有害な残骸
+// 死の営舎
+// 悪魔の聖所
+// 鉄の回廊
+// 拷問用の泥沼
+// 狂気の深淵
+// 宿命の営舎
+// 不浄な名残
+// 鋼鉄の大洞窟
+// 混乱させる領土
+// 地下の領域
+// いびつな底
+// 悪夢の墓所
+// 冒涜されたジグラート
+// みすぼらしい泥沼
+// 難攻不落の檻
+// 放置された暗部
+// 策謀の根城
+// 穢れた貯蔵所
+// 囁く悪所
+// 拷問用の沼地
+// 籠城の天底
+// 威嚇する巣窟
+// 邪悪な根城
+// 穢れた鉄格子
+// いびつな独房
+// 破壊された土牢
+// 走り回る遺跡
+// 狂気の掌握
+// 隠された牢屋
+// 憎悪の貯蔵所
+// 死の巣窟
+// 萎れさせる暗部
+// 宿命の底
+// 幽霊の悪所
+// 呪われたアルコーブ
+// 残酷な悪所
+// 死の鉄格子
+// 不安な営舎
+// 誘惑的な底
+// 生霊の営舎
+// サイクロプスの沼地
+// 宿命の悪所
+// 地下の深淵
+// 死の墓所
+// 闇の悪所
+// 狂気の根城
+// 浪費された掌握
+// 焼き付く檻
+// 籠城の中心部
