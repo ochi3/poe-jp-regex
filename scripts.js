@@ -107,6 +107,20 @@ function generateRarityRegex() {
             : `"y: (${currentRarities.join('|')})"`;
     }
 }
+//保存-消すかも
+document.getElementById('normalCheckbox').addEventListener('change', () => {
+    saveSearchModeState();
+    updateCombinedRegex();
+});
+document.getElementById('magicCheckbox').addEventListener('change', () => {
+    saveSearchModeState();
+    updateCombinedRegex();
+});
+document.getElementById('rareCheckbox').addEventListener('change', () => {
+    saveSearchModeState();
+    updateCombinedRegex();
+});
+
 
 function updateCombinedRegex() {
     const itemQuantityValue = document.getElementById('itemQuantityInput').value;
@@ -246,6 +260,8 @@ function resetAll() {
     document.querySelectorAll('#ModList input[type=checkbox]').forEach(checkbox => checkbox.checked = false);
 
     // Clear local storage
+    localStorage.removeItem('searchModeState');
+    localStorage.removeItem('inputState');
     localStorage.removeItem('modCheckboxState');
     localStorage.removeItem('ngModChecked');
     localStorage.removeItem('mapTierChecked');
@@ -255,6 +271,7 @@ function resetAll() {
 
     // Reinitialize ModList and Regex
     ModList = {...originalModList};
+    checkedMods.clear();
     updateModList();
     updateCombinedRegex();
 }
@@ -465,6 +482,7 @@ function loadInputState() {
     document.getElementById('mapInput').value = state.map || '';
 }
 
+
 // チェックボックスの状態を保存するイベントリスナーを追加
 document.getElementById('ngModCheckbox').addEventListener('change', saveCheckboxState);
 document.getElementById('mapTierCheckbox').addEventListener('change', saveCheckboxState);
@@ -481,6 +499,54 @@ document.getElementById('searchAllRadio').addEventListener('change', updateSearc
 document.getElementById('searchAnyRadio').addEventListener('change', updateSearchMode);
 
 loadInputState();
+//一時的に
+function saveSearchModeState() {
+    const state = {
+        searchMode: searchAllMode ? 'all' : 'any',
+        rarityChecked: {
+            normal: document.getElementById('normalCheckbox').checked,
+            magic: document.getElementById('magicCheckbox').checked,
+            rare: document.getElementById('rareCheckbox').checked
+        }
+    };
+    localStorage.setItem('searchModeState', JSON.stringify(state));
+}
+
+function loadSearchModeState() {
+    const state = JSON.parse(localStorage.getItem('searchModeState') || '{}');
+    if (state.searchMode === 'any') {
+        document.getElementById('searchAnyRadio').checked = true;
+    } else {
+        document.getElementById('searchAllRadio').checked = true;
+    }
+    document.getElementById('normalCheckbox').checked = state.rarityChecked?.normal || false;
+    document.getElementById('magicCheckbox').checked = state.rarityChecked?.magic || false;
+    document.getElementById('rareCheckbox').checked = state.rarityChecked?.rare || false;
+    updateSearchMode();
+}
+function updateSearchMode() {
+    searchAllMode = document.getElementById('searchAllRadio').checked;
+    saveSearchModeState();
+    updateCombinedRegex();
+}
+//一時的に
+
+
+document.getElementById('searchAllRadio').addEventListener('change', updateSearchMode);
+document.getElementById('searchAnyRadio').addEventListener('change', updateSearchMode);
+
+document.getElementById('normalCheckbox').addEventListener('change', () => {
+    saveSearchModeState();
+    updateCombinedRegex();
+});
+document.getElementById('magicCheckbox').addEventListener('change', () => {
+    saveSearchModeState();
+    updateCombinedRegex();
+});
+document.getElementById('rareCheckbox').addEventListener('change', () => {
+    saveSearchModeState();
+    updateCombinedRegex();
+});
 
 const inputFields = [
     'itemQuantityInput',
@@ -499,6 +565,7 @@ inputFields.forEach(fieldId => {
 });
 
     loadModCheckboxState();
+    loadSearchModeState();
     updateModList();
     switchFunction('map');
     initializeTooltips();
