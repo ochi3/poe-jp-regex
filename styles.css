@@ -76,6 +76,7 @@ input[type="text"], input[type="number"] {
     padding: 8px 12px;
     border-radius: 5px;
     font-size: 14px;
+    width: 40px;
 }
 
 input[type="checkbox"] {
