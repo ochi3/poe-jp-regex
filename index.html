@@ -66,7 +66,7 @@
                   </label>
                   <label>
                     <input type="radio" name="searchMode" id="searchAllRadio" value="all" checked>
-                    全てを検索
+                    全て値以上
                   </label>
                   <label>
                     <input type="radio" name="searchMode" id="searchAnyRadio" value="any" >
@@ -87,7 +87,7 @@
 
                 <div class="input-group">
                     <label class="checkbox-label" for="ngModCheckbox">
-                        <input type="checkbox" id="ngModCheckbox" onchange="updateCombinedRegex()">
+                        <input type="checkbox" id="ngModCheckbox" onchange="updateCombinedRegex()" checked>
                         NG mod
                         <div class="tooltip" id="ngModTooltip">選択されたModを除外します。</div>
                     </label>
