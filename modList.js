@@ -634,7 +634,7 @@ const originalModList = {
  "(T17) プレイヤーとそのミニオンは10秒ごとに4秒間ダメージを与えられない": {
    mod: "(T17) プレイヤーとそのミニオンは10秒ごとに4秒間ダメージを与えられない",
    engMod: "(T17) Players and their Minions deal no damage for 4 out of every 10 seconds",
-   tier: 1111,
+   tier: 1200,
    engRegex: "ever",
    Regex: "を与",
    modTier17: true,
@@ -690,7 +690,7 @@ const originalModList = {
  "(T17) モンスターは物理ダメージの#%を反射する": {
    mod: "(T17) モンスターは物理ダメージの#%を反射する",
    engMod: "(T17) Monsters reflect #% of Physical Damage",
-   tier: 1111,
+   tier: 1300,
    engRegex: "f ph",
    Regex: "物.*反",
    modTier17: true,
@@ -698,7 +698,7 @@ const originalModList = {
  "(T17) モンスターは元素ダメージの#%を反射する": {
    mod: "(T17) モンスターは元素ダメージの#%を反射する",
    engMod: "(T17) Monsters reflect #% of Elemental Damage",
-   tier: 1111,
+   tier: 1300,
    engRegex: "tal d",
    Regex: "素.*反",
    modTier17: true,
@@ -1026,7 +1026,7 @@ const originalModList = {
  "(T17) プレイヤーの防御力が#%低下する": {
    mod: "(T17) プレイヤーの防御力が#%低下する",
    engMod: "(T17) Players have #% less Defences",
-   tier: 1111,
+   tier: 1200,
    engRegex: "efe",
    Regex: "御",
    modTier17: true,
@@ -1034,7 +1034,7 @@ const originalModList = {
  "(T17) プレイヤーはエナジーシールドをリチャージできない": {
    mod: "(T17) プレイヤーはエナジーシールドをリチャージできない",
    engMod: "(T17) Players cannot Recharge Energy Shield",
-   tier: 1111,
+   tier: 1200,
    engRegex: "rech",
    Regex: "リチ",
    modTier17: true,
@@ -1090,7 +1090,7 @@ const originalModList = {
  "(T17) プレイヤーは直近使用したスキルの回数ごとにアクションスピードが#%減少する": {
    mod: "(T17) プレイヤーは直近使用したスキルの回数ごとにアクションスピードが#%減少する",
    engMod: "(T17) Players have #% reduced Action Speed for each time they've used a Skill Recently",
-   tier: 1111,
+   tier: 1400,
    engRegex: "'v",
    Regex: "数ご",
    modTier17: true,

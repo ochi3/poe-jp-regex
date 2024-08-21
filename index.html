@@ -22,7 +22,6 @@
         <h4>不具合等ありましたらご連絡ください。</h4>
         <h4>まだ作成したばかりなので不具合が多いかもしれません。</h4>
         <h4>特に日本語↔️英語は 試していないのでご注意ください。</h4>
-        <h4>レアリティのノーマル、マジック、レアのregexが分からないので知ってる方居たら教えてくれると助かります。</h4>
 
     </div>
 
@@ -30,11 +29,6 @@
       <div id="mapContent">
 
             <div id="combinedRegexContainer">
-
-                <div id="profileInputContainer" style="display: none;">
-                    <input type="text" id="profileNameInput" placeholder="Enter profile name">
-                    <button id="saveProfileButton">Save</button>
-                </div>
 
                 <div id="combinedRegexOutput"></div>
                 <span id="charCount" class="char-count"></span>
@@ -49,16 +43,46 @@
                         <input type="number" id="itemQuantityInput" onchange="updateCombinedRegex()">
                         <div class="tooltip" id="itemQuantityTooltip">この値以上の数量がマッチします。※10単位で切り捨てされます。</div>
                     </label>
-                </div>
-
-                <div class="input-group">
                     <label class="input-label" for="packSizeInput">
                         パックサイズ:
                         <input type="number" id="packSizeInput" oninput="updateCombinedRegex()">
                         <div class="tooltip" id="packSizeTooltip">この値以上のパックサイズがマッチします。※10単位で切り捨てされます。</div>
                     </label>
                 </div>
+
+                <div class="input-group">
+                  <label class="input-label" for="scarabInput">
+                    スカラベ:
+                    <input type="number" id="scarabInput">
+                  </label>
+                  <label class="input-label" for="currencyInput">
+                    カレンシー:
+                    <input type="number" id="currencyInput">
+                  </label>
+
+                  <label class="input-label" for="mapInput">
+                    マップ:
+                    <input type="number" id="mapInput">
+                  </label>
+                  <label>
+                    <input type="radio" name="searchMode" id="searchAllRadio" value="all" checked>
+                    全てを検索
+                  </label>
+                  <label>
+                    <input type="radio" name="searchMode" id="searchAnyRadio" value="any" >
+                    どれか
+                  </label>
+
+                </div>
+
                 <div>
+                  <div class="input-group">
+                    <label class="checkbox-label" for="raritiesCheckbox">
+                      <input type="checkbox" id="normalCheckbox" value="normal"> ノーマル
+                      <input type="checkbox" id="magicCheckbox" value="magic"> マジック
+                      <input type="checkbox" id="rareCheckbox" value="rare"> レア
+                  </label>
+                  </div>
                 </div>
 
                 <div class="input-group">
@@ -74,6 +98,9 @@
                         <input type="checkbox" id="mapTierCheckbox" onchange="updateModList()">T17 mod
                     </label>
                 </div>
+
+
+
             </div>
 
             <div id="ModListContainer">

@@ -70,6 +70,43 @@ function addEffectItem(key, value) {
     ModListDiv.appendChild(effectItem);
 }
 
+function generateRarityRegex() {
+    const normalChecked = document.getElementById('normalCheckbox').checked;
+    const magicChecked = document.getElementById('magicCheckbox').checked;
+    const rareChecked = document.getElementById('rareCheckbox').checked;
+
+    const rarities = {
+        ja: [],
+        en: []
+    };
+
+    if (normalChecked) {
+        rarities.ja.push('ノ');
+        rarities.en.push('n');
+    }
+    if (magicChecked) {
+        rarities.ja.push('マ');
+        rarities.en.push('m');
+    }
+    if (rareChecked) {
+        rarities.ja.push('レ');
+        rarities.en.push('r');
+    }
+
+    const currentRarities = rarities[currentLanguage];
+
+    if (currentRarities.length === 0 || currentRarities.length === 3) {
+        return '';
+    } else if (currentRarities.length === 1) {
+        return currentLanguage === 'ja'
+            ? `"ィ: ${currentRarities[0]}"`
+            : `"y: ${currentRarities[0]}"`;
+    } else {
+        return currentLanguage === 'ja'
+            ? `"ィ: (${currentRarities.join('|')})"`
+            : `"y: (${currentRarities.join('|')})"`;
+    }
+}
 
 function updateCombinedRegex() {
     const itemQuantityValue = document.getElementById('itemQuantityInput').value;
@@ -94,19 +131,76 @@ function updateCombinedRegex() {
     document.getElementById('ModListResult').textContent = ModListResult;
 
     if (itemQuantityValue) {
-        const itemQuantityRegex = getFixedRangeRegex(itemQuantityValue, currentLanguage === 'ja' ? 'ム数.*' : 'm q.*');
+        const itemQuantityRegex = getFixedRangeRegex(itemQuantityValue, currentLanguage === 'ja' ? '量:.*' : 'm q.*');
         combinedResult += ` ${itemQuantityRegex}`;
     }
 
     if (packSizeValue) {
-        const packSizeRegex = getFixedRangeRegex(packSizeValue, currentLanguage === 'ja' ? 'クサ.*' : 'iz.*');
+        const packSizeRegex = getFixedRangeRegex(packSizeValue, currentLanguage === 'ja' ? 'ズ:.*' : 'iz.*');
         combinedResult += ` ${packSizeRegex}`;
+    }
+
+    const extraRegex = generateExtraRegex();
+    if (extraRegex) {
+        combinedResult += ` ${extraRegex}`;
+    }
+
+    const rarityRegex = generateRarityRegex();
+    if (rarityRegex) {
+        combinedResult = `${rarityRegex} ${combinedResult}`.trim();
     }
 
     combinedResult = `${ModListResult} ${combinedResult}`.trim();
     document.getElementById('combinedRegexOutput').textContent = combinedResult;
 
     updateCharCount();
+}
+
+let searchAllMode = true;
+
+function updateSearchMode() {
+    searchAllMode = document.getElementById('searchAllRadio').checked;
+    updateCombinedRegex();
+}
+
+function toggleSearchMode(mode) {
+    searchAllMode = mode === 'all';
+    document.getElementById('searchAllButton').classList.toggle('active', searchAllMode);
+    document.getElementById('searchAnyButton').classList.toggle('active', !searchAllMode);
+    updateCombinedRegex();
+}
+
+function generateExtraRegex() {
+    const scarabValue = document.getElementById('scarabInput').value;
+    const currencyValue = document.getElementById('currencyInput').value;
+    const mapValue = document.getElementById('mapInput').value;
+
+    let extraRegex = [];
+
+    if (scarabValue) {
+        const scarabRegex = getFixedRangeRegex(scarabValue, currentLanguage === 'ja' ? 'ベ:.*' : 'e s.*');
+        extraRegex.push(scarabRegex);
+    }
+
+    if (currencyValue) {
+        const currencyRegex = getFixedRangeRegex(currencyValue, currentLanguage === 'ja' ? 'ー:.*' : 'y f.*');
+        extraRegex.push(currencyRegex);
+    }
+
+    if (mapValue) {
+        const mapRegex = getFixedRangeRegex(mapValue, currentLanguage === 'ja' ? 'プ:.*' : 'ps f.*');
+        extraRegex.push(mapRegex);
+    }
+
+    if (extraRegex.length === 0) {
+        return '';
+    }
+
+    if (searchAllMode) {
+        return extraRegex.join(' ');
+    } else {
+        return extraRegex.join('|').replace(/"/g, '');
+    }
 }
 
 function updateCharCount() {
@@ -133,11 +227,33 @@ function resetAll() {
     // Clear input fields
     document.getElementById('itemQuantityInput').value = '';
     document.getElementById('packSizeInput').value = '';
+    document.getElementById('scarabInput').value = '';
+    document.getElementById('currencyInput').value = '';
+    document.getElementById('mapInput').value = '';
     document.getElementById('ngModCheckbox').checked = false;
     document.getElementById('mapTierCheckbox').checked = false;
+    document.getElementById('normalCheckbox').checked = false;
+    document.getElementById('magicCheckbox').checked = false;
+    document.getElementById('rareCheckbox').checked = false;
+    document.getElementById('searchAllRadio').checked = false;
+    document.getElementById('searchAnyRadio').checked = true;
+
+
+    // Clear all checked mods
     checkedMods.clear();
+
+    // Clear all checkboxes
     document.querySelectorAll('#ModList input[type=checkbox]').forEach(checkbox => checkbox.checked = false);
 
+    // Clear local storage
+    localStorage.removeItem('modCheckboxState');
+    localStorage.removeItem('ngModChecked');
+    localStorage.removeItem('mapTierChecked');
+    localStorage.removeItem('normalChecked');
+    localStorage.removeItem('magicChecked');
+    localStorage.removeItem('rareChecked');
+
+    // Reinitialize ModList and Regex
     ModList = {...originalModList};
     updateModList();
     updateCombinedRegex();
@@ -201,11 +317,11 @@ function filterEffects() {
         const label = effects[i].getElementsByTagName('label')[0];
         const modName = label.textContent.toLowerCase();
 
-        if (modName.includes(searchTerm)) {
-            effects[i].style.display = '';
-        } else {
-            effects[i].style.display = 'none';
-        }
+        const mod = ModList[label.htmlFor];
+        const searchTargets = currentLanguage === 'ja' ? [mod.mod, mod.engMod] : [mod.engMod, mod.mod];
+        const match = searchTargets.some(target => target.toLowerCase().includes(searchTerm));
+
+        effects[i].style.display = match ? '' : 'none';
     }
 }
 
@@ -307,8 +423,9 @@ function updateModList() {
 
 // ページロード時にチェックボックスの状態を復元
 document.addEventListener('DOMContentLoaded', () => {
-    loadModCheckboxState();
+    loadCheckboxState();
     updateModList();
+    updateCombinedRegex();
 });
 
 function loadModCheckboxState() {
@@ -327,6 +444,27 @@ function loadModCheckboxState() {
         }
     });
 }
+
+function saveInputState() {
+    const state = {
+        itemQuantity: document.getElementById('itemQuantityInput').value,
+        packSize: document.getElementById('packSizeInput').value,
+        scarab: document.getElementById('scarabInput').value,
+        currency: document.getElementById('currencyInput').value,
+        map: document.getElementById('mapInput').value
+    };
+    localStorage.setItem('inputState', JSON.stringify(state));
+}
+
+function loadInputState() {
+    const state = JSON.parse(localStorage.getItem('inputState') || '{}');
+    document.getElementById('itemQuantityInput').value = state.itemQuantity || '';
+    document.getElementById('packSizeInput').value = state.packSize || '';
+    document.getElementById('scarabInput').value = state.scarab || '';
+    document.getElementById('currencyInput').value = state.currency || '';
+    document.getElementById('mapInput').value = state.map || '';
+}
+
 // チェックボックスの状態を保存するイベントリスナーを追加
 document.getElementById('ngModCheckbox').addEventListener('change', saveCheckboxState);
 document.getElementById('mapTierCheckbox').addEventListener('change', saveCheckboxState);
@@ -334,7 +472,32 @@ document.getElementById('mapTierCheckbox').addEventListener('change', saveCheckb
 // ページロード時にチェックボックスの状態を復元
 document.addEventListener('DOMContentLoaded', loadCheckboxState);
 
+
 document.addEventListener('DOMContentLoaded', () => {
+document.getElementById('normalCheckbox').addEventListener('change', updateCombinedRegex);
+document.getElementById('magicCheckbox').addEventListener('change', updateCombinedRegex);
+document.getElementById('rareCheckbox').addEventListener('change', updateCombinedRegex);
+document.getElementById('searchAllRadio').addEventListener('change', updateSearchMode);
+document.getElementById('searchAnyRadio').addEventListener('change', updateSearchMode);
+
+loadInputState();
+
+const inputFields = [
+    'itemQuantityInput',
+    'packSizeInput',
+    'scarabInput',
+    'currencyInput',
+    'mapInput'
+];
+
+inputFields.forEach(fieldId => {
+    const field = document.getElementById(fieldId);
+    field.addEventListener('input', () => {
+        saveInputState();
+        updateCombinedRegex();
+    });
+});
+
     loadModCheckboxState();
     updateModList();
     switchFunction('map');
