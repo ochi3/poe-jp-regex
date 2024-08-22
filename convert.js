@@ -3,7 +3,7 @@ function convertRegex() {
   let jpRegex = '';
   let details = [];
 
-  // Check if the input starts with "!"
+  // !確認
   const isNegated = engRegex.startsWith('"!');
   const cleanEngRegex = engRegex.replace(/^"|"$/g, '').replace(/^!/, '');
 
@@ -20,7 +20,7 @@ function convertRegex() {
     }
   });
 
-  // Add negation if the original input was negated
+  //
   if (isNegated) {
     jpRegex = `"!${jpRegex}"`;
   } else if (engRegex.startsWith('"') && engRegex.endsWith('"')) {

@@ -359,11 +359,20 @@ function switchFunction(type) {
     document.getElementById('jpRegexOutput').textContent = '';
     document.getElementById('detailsList').innerHTML = '';
   }
+
+  document.querySelectorAll('#sideMenu .nav-link').forEach(link => {
+  link.classList.remove('active');
+  if (link.getAttribute('href') === `#${type}`) {
+    link.classList.add('active');
+  }
+});
+
 }
 
-// ページロード時とブラウザの戻る/進むボタンでのナビゲーション処理
-window.addEventListener('load', handleNavigation);
-window.addEventListener('popstate', handleNavigation);
+function updateNavigation(type) {
+  history.pushState(null, '', `#${type}`);
+}
+
 
 function handleNavigation() {
   const hash = window.location.hash.slice(1);
@@ -377,9 +386,13 @@ function handleNavigation() {
   }
 }
 
+window.addEventListener('load', handleNavigation);
+window.addEventListener('popstate', handleNavigation);
+
+
 // サイドメニューのリンクにイベントリスナーを追加
 document.addEventListener('DOMContentLoaded', () => {
-  const menuLinks = document.querySelectorAll('#sideMenu a');
+  const menuLinks = document.querySelectorAll('#sideMenu .nav-link');
   menuLinks.forEach(link => {
     link.addEventListener('click', (e) => {
       e.preventDefault();
@@ -388,7 +401,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
-
 
 function initializeTooltips() {
     document.querySelectorAll('.effect-item').forEach(item => {

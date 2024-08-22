@@ -16,6 +16,7 @@ h1 {
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
+
 #sideMenu {
     width: 200px;
     height: 100vh;
@@ -27,21 +28,43 @@ h1 {
     box-sizing: border-box;
 }
 
-#sideMenu button {
+#sideMenu .nav-link {
     display: block;
-    width: 100%;
+    width: 80%;
+    padding: 12px 15px;
     margin-bottom: 10px;
-    padding: 10px;
     background-color: #2c2c2c;
     color: #fff;
-    border: none;
+    text-decoration: none;
     border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    transition: all 0.3s ease;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-left: 3px solid transparent;
 }
 
-#sideMenu button:hover {
+#sideMenu .nav-link:hover, #sideMenu .nav-link:focus {
     background-color: #3c3c3c;
+    border-left-color: #4CAF50;
+    transform: translateX(5px);
+}
+
+#sideMenu .nav-link.active {
+    background-color: #3c3c3c;
+    border-left-color: #4CAF50;
+}
+
+/* サイドメニュー内の他のリンクのスタイル */
+#sideMenu a:not(.nav-link) {
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#sideMenu a:not(.nav-link):hover {
+    color: #4CAF50;
 }
 
 #contentArea {
@@ -274,3 +297,7 @@ button:hover {
   margin-bottom: 10px;
   font-size: 16px;
 }
+
+
+
+/* ... (rest of the existing styles) ... */
