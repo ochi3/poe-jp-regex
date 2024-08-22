@@ -343,18 +343,51 @@ function filterEffects() {
 }
 
 function switchFunction(type) {
-    const contents = ['mapContent', 'transContent', 'flaskContent', 'beastContent', 'expeContent'];
-    contents.forEach(content => {
-        document.getElementById(content).style.display = 'none';
-    });
-    document.getElementById(`${type}Content`).style.display = 'block';
+  const contents = ['mapContent', 'transContent', 'flaskContent', 'beastContent', 'expeContent'];
+  contents.forEach(content => {
+    document.getElementById(content).style.display = 'none';
+  });
+  document.getElementById(`${type}Content`).style.display = 'block';
 
-    if (type === 'map') {
-        updateModList();
-        updateCombinedRegex();
-    }
+  updateNavigation(type);
+
+  if (type === 'map') {
+    updateModList();
+    updateCombinedRegex();
+  } else if (type === 'trans') {
+    document.getElementById('engRegexInput').value = '';
+    document.getElementById('jpRegexOutput').textContent = '';
+    document.getElementById('detailsList').innerHTML = '';
+  }
 }
 
+// ページロード時とブラウザの戻る/進むボタンでのナビゲーション処理
+window.addEventListener('load', handleNavigation);
+window.addEventListener('popstate', handleNavigation);
+
+function handleNavigation() {
+  const hash = window.location.hash.slice(1);
+  if (hash && ['map', 'trans', 'flask', 'beast', 'expe'].includes(hash)) {
+    switchFunction(hash);
+  } else {
+    // URLにハッシュがない場合のみデフォルトページを設定
+    if (!hash) {
+      switchFunction('map');
+    }
+  }
+}
+
+// サイドメニューのリンクにイベントリスナーを追加
+document.addEventListener('DOMContentLoaded', () => {
+  const menuLinks = document.querySelectorAll('#sideMenu a');
+  menuLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const type = link.getAttribute('href').slice(1);
+      switchFunction(type);
+    });
+  });
+});
 
 
 function initializeTooltips() {

@@ -12,7 +12,7 @@
       <h4>Patch 3.25 テスト中</h4>
 
         <button onclick="switchFunction('map')">マップ mod</button>
-        <button onclick="switchFunction('trans')"><s>変換</s></button>
+        <button onclick="switchFunction('trans')">英語Regex変換</button>
         <button onclick="switchFunction('flask')"><s>フラスコ</s></button>
         <button onclick="switchFunction('beast')"><s>ビースト</s></button>
         <button onclick="switchFunction('expe')"><s>エクスペ</s></button>
@@ -116,11 +116,31 @@
         </div>
 
         <div id="transContent" style="display: none;">
-            <h1>コンバーター</h1>
-            <h2>気が向いたら作る</h2>
+          <h2>英語のRegexを日本語に変換できます。</h2>
+          <h4>poe.reのRegexを参考にしています。<br />poe.reやPoEのアップデートで壊れる可能性があります。<br />パックサイズ等は未対応です。 </h4>
+
+
+          <div>
+            <label for="engRegexInput">英語のRegexを入力してください:</label>
+            <input type="text" id="engRegexInput" placeholder="例: tal d|non" style="width: 100%; padding: 5px; margin-bottom: 10px;">
+            <button onclick="convertRegex()">日本語に変換</button>
+          </div>
+          <div id="conversionResult">
+            <p><strong>日本語Regex</strong><br />
+              <span id="jpRegexOutput"></span></p>
+            <button onclick="copyJpRegex()">コピー</button>
+            <h3>Mod</h3>
+            <ul id="detailsList"></ul>
+          </div>
         </div>
 
-        <div id="flaskContent" style="display: none;">
+        <script>
+          // ナビゲーション用の関数をここに追加
+          function updateNavigation(type) {
+            history.pushState(null, '', `#${type}`);
+          }
+        </script>
+          <div id="flaskContent" style="display: none;">
             <h1>フラスコ</h1>
             <h2>気が向いたら作る</h2>
         </div>
@@ -137,6 +157,7 @@
     </div>
 
     <script src="modList.js"></script>
+    <script src="convert.js"></script>
     <script src="scripts.js"></script>
 </body>
 </html>
