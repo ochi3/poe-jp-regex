@@ -116,7 +116,7 @@ const originalModList = {
    engMod: "Unique Boss deals #% increased Damage|Unique Boss has #% increased Attack and Cast Speed",
    tier: 420,
    engRegex: "d at",
-   Regex: "ボ.*範",
+   Regex: "ユ.*ピ",
    modTier17: false,
  },
  "モンスターの効果範囲が#%増加する": {
@@ -132,7 +132,7 @@ const originalModList = {
    engMod: "Unique Boss has #% increased Life|Unique Boss has #% increased Area of Effect",
    tier: 400,
    engRegex: "d li",
-   Regex: "ボ.*範",
+   Regex: "ユ.*範",
    modTier17: false,
  },
  "モンスターはヒット時に毒を付与する": {
