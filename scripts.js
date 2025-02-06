@@ -330,13 +330,18 @@ function filterEffects() {
     const ModListDiv = document.getElementById('ModList');
 
     const effects = ModListDiv.getElementsByClassName('effect-item');
+    const terms = searchTerm.split(/\s+/).filter(t => t); // 空白区切りで複数キーワード
+
     for (let i = 0; i < effects.length; i++) {
         const label = effects[i].getElementsByTagName('label')[0];
-        const modName = label.textContent.toLowerCase();
-
         const mod = ModList[label.htmlFor];
         const searchTargets = currentLanguage === 'ja' ? [mod.mod, mod.engMod] : [mod.engMod, mod.mod];
-        const match = searchTargets.some(target => target.toLowerCase().includes(searchTerm));
+
+        const match = terms.every(term =>
+            searchTargets.some(target =>
+                target.toLowerCase().includes(term)
+            )
+        );
 
         effects[i].style.display = match ? '' : 'none';
     }
@@ -374,42 +379,77 @@ function updateNavigation(type) {
 }
 
 
+// ナビゲーション処理を強化したバージョン
+let currentHash = '';
+
 function handleNavigation() {
   const validSections = ['map', 'trans', 'flask', 'beast', 'expe'];
-  const hash = window.location.hash.slice(1);
+  const newHash = window.location.hash.slice(1).toLowerCase();
+  const targetSection = validSections.includes(newHash) ? newHash : 'map';
 
-  // 現在のハッシュが有効かチェック
-  const targetSection = validSections.includes(hash) ? hash : 'map';
-
-  // URLが不正な場合のみ更新
-  if (!validSections.includes(hash)) {
-    history.replaceState(null, '', `#${targetSection}`);
+  // ハッシュが実際に変更された場合のみ処理
+  if (currentHash !== targetSection) {
+    currentHash = targetSection;
+    switchFunction(targetSection);
   }
 
-  switchFunction(targetSection);
+  // 不正なハッシュを修正
+  if (window.location.hash !== `#${targetSection}`) {
+    history.replaceState(null, '', `#${targetSection}`);
+  }
 }
 
-// 初期化処理の修正
-document.addEventListener('DOMContentLoaded', () => {
-  // 既存の初期化処理...
+// コンテンツ切り替え関数の改善
+function switchFunction(type) {
+  const contents = ['mapContent', 'transContent', 'flaskContent', 'beastContent', 'expeContent'];
 
-  // リロード時に必ずハッシュをチェック
-  handleNavigation();
-});
+  // すべてのコンテンツを非表示
+  contents.forEach(content => {
+    document.getElementById(content).style.display = 'none';
+  });
 
+  // 対象コンテンツを表示
+  const targetContent = `${type}Content`;
+  if (document.getElementById(targetContent)) {
+    document.getElementById(targetContent).style.display = 'block';
+  }
+
+  // ナビゲーションのアクティブ状態更新
+  document.querySelectorAll('#sideMenu .nav-link').forEach(link => {
+    link.classList.remove('active');
+    if (link.getAttribute('href') === `#${type}`) {
+      link.classList.add('active');
+    }
+  });
+
+  // ハッシュの整合性を保証
+  if (window.location.hash !== `#${type}`) {
+    history.replaceState(null, '', `#${type}`);
+  }
+}
+
+// イベントリスナーの設定
 window.addEventListener('hashchange', handleNavigation);
 window.addEventListener('load', handleNavigation);
 window.addEventListener('popstate', handleNavigation);
 
-
-// サイドメニューのリンクにイベントリスナーを追加
+// 初期化処理
 document.addEventListener('DOMContentLoaded', () => {
-  const menuLinks = document.querySelectorAll('#sideMenu .nav-link');
-  menuLinks.forEach(link => {
+  // 最初のハッシュチェックを厳密に行う
+  const initialHash = window.location.hash.slice(1).toLowerCase();
+  if (!['map', 'trans', 'flask', 'beast', 'expe'].includes(initialHash)) {
+    history.replaceState(null, '', '#map');
+  }
+  handleNavigation();
+
+  // サイドメニューのクリック処理
+  document.querySelectorAll('#sideMenu .nav-link').forEach(link => {
     link.addEventListener('click', (e) => {
       e.preventDefault();
       const type = link.getAttribute('href').slice(1);
-      switchFunction(type);
+      if (currentHash !== type) {
+        window.location.hash = type;
+      }
     });
   });
 });
@@ -629,7 +669,7 @@ inputFields.forEach(fieldId => {
     updateCombinedRegex();
 });
 
-// プロファイルデータ構造
+// プロファイル関連の関数群
 let profiles = {};
 let selectedProfile = null;
 
@@ -641,41 +681,183 @@ function saveProfile() {
     return;
   }
 
+  // 重複チェック
+  if (profiles[profileName] && !confirm(`${profileName} は既に存在します。上書きしますか？`)) {
+    return;
+  }
+
+  // 入力値バリデーション
+  if (!validateInputs()) return;
+
+  // 現在の状態をキャプチャ
   profiles[profileName] = {
     mods: Array.from(checkedMods),
     settings: {
       itemQuantity: document.getElementById('itemQuantityInput').value,
       packSize: document.getElementById('packSizeInput').value,
-      searchMode: document.querySelector('input[name="searchMode"]:checked').value
+      scarab: document.getElementById('scarabInput').value,
+      currency: document.getElementById('currencyInput').value,
+      map: document.getElementById('mapInput').value,
+      searchMode: document.querySelector('input[name="searchMode"]:checked')?.value || 'any',
+      ngModChecked: document.getElementById('ngModCheckbox').checked,
+      mapTierChecked: document.getElementById('mapTierCheckbox').checked,
+      rarities: {
+        normal: document.getElementById('normalCheckbox').checked,
+        magic: document.getElementById('magicCheckbox').checked,
+        rare: document.getElementById('rareCheckbox').checked
+      }
     }
   };
 
   localStorage.setItem('poeProfiles', JSON.stringify(profiles));
   updateProfileList();
+
+  // ローカルストレージ更新
+  saveModCheckboxState();
+  saveInputState();
+  saveCheckboxState();
+  saveSearchModeState();
+
   alert(`"${profileName}" を保存しました`);
+  document.getElementById('profileName').value = '';
 }
 
 // プロファイル読み込み
 function loadProfile() {
   const profileName = document.getElementById('profileList').value;
-  if (!profileName || !profiles[profileName]) return;
+  if (!profileName || !profiles[profileName]) {
+    alert('プロファイルを選択してください');
+    return;
+  }
 
-  const profile = profiles[profileName];
+  try {
+    // 完全リセット
+    resetAll();
 
-  // MOD状態復元
-  checkedMods.clear();
-  profile.mods.forEach(mod => checkedMods.add(mod));
+    const profile = profiles[profileName];
 
-  // 入力値復元
-  document.getElementById('itemQuantityInput').value = profile.settings.itemQuantity;
-  document.getElementById('packSizeInput').value = profile.settings.packSize;
-  document.querySelector(`input[name="searchMode"][value="${profile.settings.searchMode}"]`).checked = true;
+    // 入力値復元
+    document.getElementById('itemQuantityInput').value = profile.settings.itemQuantity || '';
+    document.getElementById('packSizeInput').value = profile.settings.packSize || '';
+    document.getElementById('scarabInput').value = profile.settings.scarab || '';
+    document.getElementById('currencyInput').value = profile.settings.currency || '';
+    document.getElementById('mapInput').value = profile.settings.map || '';
 
-  // UI更新
+    // チェックボックス状態復元
+    document.getElementById('ngModCheckbox').checked = profile.settings.ngModChecked;
+    document.getElementById('mapTierCheckbox').checked = profile.settings.mapTierChecked;
+    document.getElementById('normalCheckbox').checked = profile.settings.rarities.normal;
+    document.getElementById('magicCheckbox').checked = profile.settings.rarities.magic;
+    document.getElementById('rareCheckbox').checked = profile.settings.rarities.rare;
+
+    // 検索モード
+    const searchMode = profile.settings.searchMode || 'any';
+    document.querySelector(`input[name="searchMode"][value="${searchMode}"]`).checked = true;
+
+    // MODチェックボックス復元
+    checkedMods.clear();
+    profile.mods.forEach(mod => {
+      if (ModList[mod]) checkedMods.add(mod);
+    });
+
+    // ローカルストレージ更新
+    localStorage.setItem('modCheckboxState', JSON.stringify(
+      Object.fromEntries([...checkedMods].map(mod => [mod, true]))
+    ));
+
+    // UI強制更新
+    updateModList();
+    updateCombinedRegex();
+    document.getElementById('profileName').value = profileName;
+
+    // イベントトリガー
+    ['change', 'input'].forEach(event => {
+      document.getElementById('mapTierCheckbox').dispatchEvent(new Event(event));
+      document.getElementById('ngModCheckbox').dispatchEvent(new Event(event));
+    });
+
+    console.log('プロファイル読み込み成功:', profileName);
+  } catch (error) {
+    console.error('プロファイル読み込みエラー:', error);
+    alert('プロファイルの読み込みに失敗しました');
+  }
+}
+
+// プロファイル削除
+function deleteProfile() {
+  const profileName = document.getElementById('profileList').value;
+  if (!profileName || !profiles[profileName]) {
+    alert('削除するプロファイルを選択してください');
+    return;
+  }
+
+  if (confirm(`本当に "${profileName}" を完全に削除しますか？\nこの操作は元に戻せません！`)) {
+    delete profiles[profileName];
+    localStorage.setItem('poeProfiles', JSON.stringify(profiles));
+    updateProfileList();
+    alert(`"${profileName}" を削除しました`);
+  }
+}
+
+// プロファイルリスト更新
+function updateProfileList() {
+  const select = document.getElementById('profileList');
+  const currentValue = select.value;
+
+  select.innerHTML = '<option value="">-- プロファイル選択 --</option>';
+
+  Object.keys(profiles).sort().forEach(name => {
+    const option = document.createElement('option');
+    option.value = name;
+    option.textContent = name;
+    option.selected = (name === currentValue);
+    select.appendChild(option);
+  });
+}
+
+// 入力バリデーション
+function validateInputs() {
+  const inputs = [
+    'itemQuantityInput',
+    'packSizeInput',
+    'scarabInput',
+    'currencyInput',
+    'mapInput'
+  ];
+
+  for (const id of inputs) {
+    const value = document.getElementById(id).value;
+    if (value && (isNaN(value) || value < 0)) {
+      alert(`${id.replace('Input', '')} には0以上の数値を入力してください`);
+      document.getElementById(id).focus();
+      return false;
+    }
+  }
+  return true;
+}
+
+// 初期化処理
+document.addEventListener('DOMContentLoaded', () => {
+  // プロファイルリストのイベントリスナー
+  document.getElementById('profileList').addEventListener('change', function() {
+    if (this.value) {
+      loadProfile();
+      document.getElementById('profileName').value = this.value;
+    }
+  });
+
+});
+document.addEventListener('DOMContentLoaded', () => {
+  // 既存の初期化処理...
+
+  // プロファイル読み込み後に強制更新を追加
+  loadModCheckboxState();
+  loadInputState();
+  loadCheckboxState();
+  loadSearchModeState();
   updateModList();
   updateCombinedRegex();
-  selectedProfile = profileName;
-}
+});
 
 // プロファイル削除
 function deleteProfile() {
