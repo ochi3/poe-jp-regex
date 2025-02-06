@@ -171,7 +171,7 @@ const originalModList = {
    mod: "モンスターの命中力が#%増加する|全てのプレイヤーはスペルダメージを抑制して防ぐダメージ割合が-#%される",
    engMod: "Monsters have #% increased Accuracy Rating|Players have -#% to amount of Suppressed Spell Damage Prevented",
    tier: 365,
-   engRegex: "rev",
+   engRegex: "prev",
    Regex: "を抑",
    modTier17: false,
  },
@@ -730,7 +730,7 @@ const originalModList = {
  "(T17) レアモンスターはボラタイルコアを持つ": {
    mod: "(T17) レアモンスターはボラタイルコアを持つ",
    engMod: "(T17) Rare Monsters have Volatile Cores",
-   tier: 1111,
+   tier: 1200,
    engRegex: "cores",
    Regex: "ラタ",
    modTier17: true,
@@ -770,7 +770,7 @@ const originalModList = {
  "(T17) エリアには溺死のオーブが出現する": {
    mod: "(T17) エリアには溺死のオーブが出現する",
    engMod: "(T17) Area contains Drowning Orbs",
-   tier: 1111,
+   tier: 1300,
    engRegex: "wni",
    Regex: "溺",
    modTier17: true,
@@ -810,7 +810,7 @@ const originalModList = {
  "(T17) プレイヤーはレアまたはユニークのモンスターを倒した後 10秒間死の呪印を受ける": {
    mod: "(T17) プレイヤーはレアまたはユニークのモンスターを倒した後 10秒間死の呪印を受ける",
    engMod: "(T17) Players are Marked for Death for 10 seconds after killing a Rare or Unique monster",
-   tier: 1111,
+   tier: 1500,
    engRegex: "rke",
    Regex: "印",
    modTier17: true,
@@ -818,7 +818,7 @@ const originalModList = {
  "(T17) レアまたはユニークのモンスターはヒット時にプレイヤーまたはミニオンからライフ、マナおよびエナジーシールドの#%を取り除く": {
    mod: "(T17) レアまたはユニークのモンスターはヒット時にプレイヤーまたはミニオンからライフ、マナおよびエナジーシールドの#%を取り除く",
    engMod: "(T17) Rare and Unique Monsters remove #% of Life, Mana and Energy Shield on hit",
-   tier: 1111,
+   tier: 1500,
    engRegex: "na a",
    Regex: "はミ",
    modTier17: true,
@@ -882,7 +882,7 @@ const originalModList = {
  "(T17) エリアには灼熱の代行者のルーンが出現する": {
    mod: "(T17) エリアには灼熱の代行者のルーンが出現する",
    engMod: "(T17) Area contains Runes of the Searing Exarch",
-   tier: 1111,
+   tier: 1300,
    engRegex: "ch$",
    Regex: "灼",
    modTier17: true,
@@ -1098,7 +1098,7 @@ const originalModList = {
  "(T17) エリアには不安定な触手の悪魔が出現する": {
    mod: "(T17) エリアには不安定な触手の悪魔が出現する",
    engMod: "(T17) Area contains Unstable Tentacle Fiends",
-   tier: 1111,
+   tier: 1300,
    engRegex: "tab",
    Regex: "手",
    modTier17: true,
@@ -1106,7 +1106,7 @@ const originalModList = {
  "(T17) エリアには覚醒者の荒廃が斑状に出現する": {
    mod: "(T17) エリアには覚醒者の荒廃が斑状に出現する",
    engMod: "(T17) Area has patches of Awakeners' Desolation",
-   tier: 1111,
+   tier: 1300,
    engRegex: "wak",
    Regex: "廃",
    modTier17: true,

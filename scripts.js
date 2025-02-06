@@ -375,17 +375,29 @@ function updateNavigation(type) {
 
 
 function handleNavigation() {
+  const validSections = ['map', 'trans', 'flask', 'beast', 'expe'];
   const hash = window.location.hash.slice(1);
-  if (hash && ['map', 'trans', 'flask', 'beast', 'expe'].includes(hash)) {
-    switchFunction(hash);
-  } else {
-    // URLにハッシュがない場合のみデフォルトページを設定
-    if (!hash) {
-      switchFunction('map');
-    }
+
+  // 現在のハッシュが有効かチェック
+  const targetSection = validSections.includes(hash) ? hash : 'map';
+
+  // URLが不正な場合のみ更新
+  if (!validSections.includes(hash)) {
+    history.replaceState(null, '', `#${targetSection}`);
   }
+
+  switchFunction(targetSection);
 }
 
+// 初期化処理の修正
+document.addEventListener('DOMContentLoaded', () => {
+  // 既存の初期化処理...
+
+  // リロード時に必ずハッシュをチェック
+  handleNavigation();
+});
+
+window.addEventListener('hashchange', handleNavigation);
 window.addEventListener('load', handleNavigation);
 window.addEventListener('popstate', handleNavigation);
 
@@ -616,3 +628,99 @@ inputFields.forEach(fieldId => {
     initializeTooltips();
     updateCombinedRegex();
 });
+
+// プロファイルデータ構造
+let profiles = {};
+let selectedProfile = null;
+
+// プロファイル保存
+function saveProfile() {
+  const profileName = document.getElementById('profileName').value.trim();
+  if (!profileName) {
+    alert('プロファイル名を入力してください');
+    return;
+  }
+
+  profiles[profileName] = {
+    mods: Array.from(checkedMods),
+    settings: {
+      itemQuantity: document.getElementById('itemQuantityInput').value,
+      packSize: document.getElementById('packSizeInput').value,
+      searchMode: document.querySelector('input[name="searchMode"]:checked').value
+    }
+  };
+
+  localStorage.setItem('poeProfiles', JSON.stringify(profiles));
+  updateProfileList();
+  alert(`"${profileName}" を保存しました`);
+}
+
+// プロファイル読み込み
+function loadProfile() {
+  const profileName = document.getElementById('profileList').value;
+  if (!profileName || !profiles[profileName]) return;
+
+  const profile = profiles[profileName];
+
+  // MOD状態復元
+  checkedMods.clear();
+  profile.mods.forEach(mod => checkedMods.add(mod));
+
+  // 入力値復元
+  document.getElementById('itemQuantityInput').value = profile.settings.itemQuantity;
+  document.getElementById('packSizeInput').value = profile.settings.packSize;
+  document.querySelector(`input[name="searchMode"][value="${profile.settings.searchMode}"]`).checked = true;
+
+  // UI更新
+  updateModList();
+  updateCombinedRegex();
+  selectedProfile = profileName;
+}
+
+// プロファイル削除
+function deleteProfile() {
+  const profileName = document.getElementById('profileList').value;
+  if (!profileName || !confirm(`${profileName}を削除しますか？`)) return;
+
+  delete profiles[profileName];
+  localStorage.setItem('poeProfiles', JSON.stringify(profiles));
+  updateProfileList();
+}
+
+// プロファイルリスト更新
+function updateProfileList() {
+  const select = document.getElementById('profileList');
+  select.innerHTML = '<option value="">-- プロファイル選択 --</option>';
+
+  Object.keys(profiles).forEach(name => {
+    const option = document.createElement('option');
+    option.value = name;
+    option.textContent = name;
+    select.appendChild(option);
+  });
+}
+
+// 初期化時にプロファイル読み込み
+document.addEventListener('DOMContentLoaded', () => {
+  const savedProfiles = localStorage.getItem('poeProfiles');
+  if (savedProfiles) {
+    profiles = JSON.parse(savedProfiles);
+    updateProfileList();
+  }
+});
+
+function exportProfiles() {
+  const data = JSON.stringify(profiles);
+  const blob = new Blob([data], {type: 'application/json'});
+  // ダウンロード処理...
+}
+
+function importProfiles(event) {
+  const file = event.target.files[0];
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    profiles = JSON.parse(e.target.result);
+    updateProfileList();
+  };
+  reader.readAsText(file);
+}

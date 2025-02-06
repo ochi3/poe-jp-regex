@@ -1,3 +1,4 @@
+/* 全体のリセット */
 body {
     font-family: 'Roboto', Arial, sans-serif;
     background-color: #0a0a0a;
@@ -8,15 +9,7 @@ body {
     display: flex;
 }
 
-h1 {
-    text-align: center;
-    color: #ffffff;
-    font-size: 2.5em;
-    margin-bottom: 30px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-}
-
-
+/* サイドメニュー */
 #sideMenu {
     width: 200px;
     height: 100vh;
@@ -40,84 +33,72 @@ h1 {
     transition: all 0.3s ease;
     font-size: 14px;
     font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 1px;
     border-left: 3px solid transparent;
 }
 
-#sideMenu .nav-link:hover, #sideMenu .nav-link:focus {
+#sideMenu .nav-link:hover {
     background-color: #3c3c3c;
     border-left-color: #4CAF50;
     transform: translateX(5px);
 }
 
-#sideMenu .nav-link.active {
-    background-color: #3c3c3c;
-    border-left-color: #4CAF50;
-}
-
-/* サイドメニュー内の他のリンクのスタイル */
-#sideMenu a:not(.nav-link) {
-    color: #FFFFFF;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-#sideMenu a:not(.nav-link):hover {
-    color: #4CAF50;
-}
-
+/* メインコンテンツエリア */
 #contentArea {
     margin-left: 220px;
     padding: 20px;
     flex-grow: 1;
 }
 
-#combinedRegexContainer, #ModListContainer {
+#combinedRegexContainer,
+#ModListContainer {
     background-color: #1e1e1e;
     border-radius: 10px;
     padding: 20px;
     margin-bottom: 30px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
+/* 入力フィールド */
 .input-group {
     margin: 15px 0;
     display: flex;
     align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
 }
 
-.input-group label {
-    margin-right: 15px;
-    font-weight: bold;
-}
-
-input[type="text"], input[type="number"] {
+input[type="text"],
+input[type="number"],
+#combinedRegexOutput {
     background-color: #2c2c2c;
     border: 1px solid #444;
     color: #fff;
     padding: 8px 12px;
     border-radius: 5px;
     font-size: 14px;
-    width: 40px;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
-input[type="checkbox"] {
-    margin-right: 10px;
+input[type="text"],
+#combinedRegexOutput {
+    width: calc(100% - 20px);
+    padding: 15px 20px;
+    font-size: 16px;
+    transition: all 0.3s ease;
 }
 
+input[type="number"] {
+    width: 80px;
+}
+
+/* ボタン */
 button {
     background-color: #4CAF50;
     border: none;
     color: white;
     padding: 12px 24px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 10px 5px;
-    cursor: pointer;
     border-radius: 5px;
+    cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
@@ -125,6 +106,7 @@ button:hover {
     background-color: #45a049;
 }
 
+/* Modリスト関連 */
 #ModList {
     display: flex;
     flex-direction: column;
@@ -135,169 +117,81 @@ button:hover {
 #ModList .effect-item {
     display: flex;
     align-items: center;
-    cursor: pointer;
-    padding: 5px 0;
+    padding: 8px 0;
 }
 
-#ModList input[type="checkbox"] {
-    margin: 0 10px 0 0;
-}
-
-#ModList label {
-    margin: 0;
-    font-size: 14px;
-}
-
-#combinedRegexOutput, #ModListResult {
+#combinedRegexOutput,
+#ModListResult {
     background-color: #2c2c2c;
     padding: 15px;
     border-radius: 5px;
-    margin-top: 10px;
+    margin: 15px 0;
     font-family: 'Courier New', monospace;
-    word-break: break-all;
+    word-break: break-word;
 }
 
 .char-count {
     margin-left: 20px;
-    font-size: 14px;
     color: #888;
 }
 
 #effectSearch {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    background-color: #2c2c2c;
-    border: 1px solid #444;
-    color: #fff;
-    border-radius: 5px;
-    font-size: 14px;
-}
-
-.t17-effect {
-    color: #8e4494;
-    font-weight: bold;
-}
-
-.input-group {
+    padding: 15px;
     margin: 15px 0;
-    display: flex;
-    align-items: center;
-    position: relative;
+    font-size: 16px;
 }
 
-.checkbox-label {
-    position: relative;
-    display: inline-flex;
-    align-items: center;
-}
-
-.input-label {
-    position: relative;
-    display: inline-flex;
-    align-items: center;
+/* ツールチップ */
+.tooltip {
+    position: absolute;
+    background-color: #333;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    z-index: 1000;
+    left: 100%;
+    margin-left: 10px;
+    display: none;
 }
 
 .input-label:hover .tooltip {
     display: block;
 }
 
-.tooltip {
-    position: absolute;
-    display: none;
-    background-color: #333;
+/* プロファイル管理 */
+.profile-section {
+    margin: 25px 0;
+    padding: 15px;
+    background: #1e1e1e;
+    border-radius: 8px;
+}
+
+.profile-controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.profile-input,
+.profile-select {
+    padding: 12px 15px;
+    font-size: 16px;
+    background: #2c2c2c;
+    border: 1px solid #444;
     color: #fff;
-    padding: 5px;
-    border-radius: 3px;
-    font-size: 12px;
-    white-space: nowrap;
-    z-index: 1000;
-    left: 100%;
-    margin-left: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.checkbox-label:hover .tooltip {
-    display: block;
-
-.tooltip-visible {
-    display: block;
-}
-
-.input-group .checkbox-label:hover .tooltip {
-    display: block;
-}
-
-#languageToggle {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-}
-
-#languageToggle button {
-    background-color: #4CAF50;
-    border: none;
-    color: white;
-    padding: 8px 16px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 14px;
-    margin: 4px 2px;
-    cursor: pointer;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-#languageToggle button:hover {
-    background-color: #45a049;
+.profile-select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='%23fff'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 18px;
 }
-
-#profileSelect {
-  background-color: #2c2c2c;
-  color: #fff;
-  border: 1px solid #444;
-  padding: 8px 12px;
-  border-radius: 5px;
-  font-size: 14px;
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5z' fill='%23fff'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 8px center;
-  background-size: 24px;
-  padding-right: 30px;
-  cursor: pointer;
-}
-
-#profileSelect option {
-  background-color: #2c2c2c;
-  color: #fff;
-}
-
-.input-group label {
-    display: inline-block;
-    margin-right: 15px;
-    cursor: pointer;
-}
-
-.input-group input[type="radio"] {
-    margin-right: 5px;
-}
-
-.input-group label:hover {
-    color: #4a4a4a;
-}
-
-#engRegexInput {
-  width: 100%;
-  padding: 5px;
-  margin-bottom: 10px;
-  font-size: 16px;
-}
-
-
-
-/* ... (rest of the existing styles) ... */

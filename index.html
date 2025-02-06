@@ -42,6 +42,21 @@
 
             <div id="combinedRegexContainer">
 
+              <!-- プロファイル管理セクション -->
+              <div>
+                <input type="text"
+                       id="profileName"
+                       placeholder="プロファイル名を入力してください。"
+                       class="large-input">
+                <button onclick="saveProfile()">保存</button>
+                <button onclick="loadProfile()">読み込み</button>
+                <button onclick="deleteProfile()">削除</button>
+                <select id="profileList" onchange="updateProfileSelection()">
+                  <option value="">-- プロファイル選択 --</option>
+                </select>
+              </div>
+
+
                 <div id="combinedRegexOutput"></div>
                 <button onclick="copyToClipboard()">コピー</button>
                 <button onclick="resetAll()">リセット</button>
