@@ -148,7 +148,7 @@ const originalModList = {
    engMod: "Monsters have a #% chance to avoid Poison, Impale, and Bleeding",
    tier: 390,
    engRegex: "on,",
-   Regex: "で毒,",
+   Regex: "で毒、",
    modTier17: false,
  },
  "モンスターのスキルは追加で2回連鎖する": {
