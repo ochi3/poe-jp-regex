@@ -81,15 +81,15 @@ function generateRarityRegex() {
     };
 
     if (normalChecked) {
-        rarities.ja.push('ノ');
+        rarities.ja.push('ル');
         rarities.en.push('n');
     }
     if (magicChecked) {
-        rarities.ja.push('マ');
+        rarities.ja.push('ク');
         rarities.en.push('m');
     }
     if (rareChecked) {
-        rarities.ja.push('レ');
+        rarities.ja.push('ア');
         rarities.en.push('r');
     }
 
@@ -99,11 +99,11 @@ function generateRarityRegex() {
         return '';
     } else if (currentRarities.length === 1) {
         return currentLanguage === 'ja'
-            ? `"ィ: ${currentRarities[0]}"`
+            ? `${currentRarities[0]}\$`
             : `"y: ${currentRarities[0]}"`;
     } else {
         return currentLanguage === 'ja'
-            ? `"ィ: (${currentRarities.join('|')})"`
+            ? `(${currentRarities.join('|')})\$`
             : `"y: (${currentRarities.join('|')})"`;
     }
 }
@@ -137,36 +137,47 @@ function updateCombinedRegex() {
 
     let ModListResult = '';
     if (effectResults.length > 0) {
-        ModListResult = effectResults.join('|');
-        if (ngModChecked) {
-            ModListResult = `"!${ModListResult}"`;
+        let mods = effectResults;
+        if (currentLanguage === 'en') {
+            // 英語：各MODを個別にクオート
+            mods = mods.map(mod => `"${ngModChecked ? '!' : ''}${mod}"`);
+        } else {
+            // 日本語：|で結合
+            mods = mods.map(mod => ngModChecked ? `!${mod}` : mod);
         }
+        ModListResult = currentLanguage === 'en' ? mods.join(' ') : mods.join('|');
     }
+
     document.getElementById('ModListResult').textContent = ModListResult;
 
+    const rarityRegex = generateRarityRegex();
+
+    let combinedORParts = [];
+    if (ModListResult) combinedORParts.push(ModListResult);
+    if (rarityRegex) combinedORParts.push(rarityRegex);
+
+    const combinedOR = currentLanguage === 'en'
+        ? combinedORParts.join(' ')  // 英語はスペース区切り
+        : combinedORParts.join('|'); // 日本語は|区切り
+
+    const otherParts = [];
     if (itemQuantityValue) {
         const itemQuantityRegex = getFixedRangeRegex(itemQuantityValue, currentLanguage === 'ja' ? '量:.*' : 'm q.*');
-        combinedResult += ` ${itemQuantityRegex}`;
+        otherParts.push(itemQuantityRegex);
     }
-
     if (packSizeValue) {
         const packSizeRegex = getFixedRangeRegex(packSizeValue, currentLanguage === 'ja' ? 'ズ:.*' : 'iz.*');
-        combinedResult += ` ${packSizeRegex}`;
+        otherParts.push(packSizeRegex);
     }
 
     const extraRegex = generateExtraRegex();
-    if (extraRegex) {
-        combinedResult += ` ${extraRegex}`;
-    }
+    if (extraRegex) otherParts.push(extraRegex);
 
-    const rarityRegex = generateRarityRegex();
-    if (rarityRegex) {
-        combinedResult = `${rarityRegex} ${combinedResult}`.trim();
-    }
+    combinedResult = [];
+    if (combinedOR) combinedResult.push(combinedOR);
+    combinedResult = combinedResult.concat(otherParts).join(' ');
 
-    combinedResult = `${ModListResult} ${combinedResult}`.trim();
-    document.getElementById('combinedRegexOutput').textContent = combinedResult;
-
+    document.getElementById('combinedRegexOutput').textContent = combinedOR + ' ' + otherParts.join(' ');
     updateCharCount();
 }
 
@@ -348,7 +359,7 @@ function filterEffects() {
 }
 
 function switchFunction(type) {
-  const contents = ['mapContent', 'transContent', 'flaskContent', 'beastContent', 'expeContent'];
+  const contents = ['mapContent', 'transContent', 'flaskContent', 'beastContent', 'expeContent', 'boardContent'];
   contents.forEach(content => {
     document.getElementById(content).style.display = 'none';
   });
@@ -383,7 +394,7 @@ function updateNavigation(type) {
 let currentHash = '';
 
 function handleNavigation() {
-  const validSections = ['map', 'trans', 'flask', 'beast', 'expe'];
+  const validSections = ['map', 'trans', 'flask', 'beast', 'expe', 'board'];
   const newHash = window.location.hash.slice(1).toLowerCase();
   const targetSection = validSections.includes(newHash) ? newHash : 'map';
 
@@ -401,7 +412,7 @@ function handleNavigation() {
 
 // コンテンツ切り替え関数の改善
 function switchFunction(type) {
-  const contents = ['mapContent', 'transContent', 'flaskContent', 'beastContent', 'expeContent'];
+  const contents = ['mapContent', 'transContent', 'flaskContent', 'beastContent', 'expeContent', 'boardContent'];
 
   // すべてのコンテンツを非表示
   contents.forEach(content => {
@@ -437,7 +448,7 @@ window.addEventListener('popstate', handleNavigation);
 document.addEventListener('DOMContentLoaded', () => {
   // 最初のハッシュチェックを厳密に行う
   const initialHash = window.location.hash.slice(1).toLowerCase();
-  if (!['map', 'trans', 'flask', 'beast', 'expe'].includes(initialHash)) {
+  if (!['map', 'trans', 'flask', 'beast', 'expe', 'board'].includes(initialHash)) {
     history.replaceState(null, '', '#map');
   }
   handleNavigation();
