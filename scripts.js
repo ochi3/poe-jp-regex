@@ -135,12 +135,10 @@ function updateCombinedRegex() {
         effectResults.push(currentLanguage === 'ja' ? mod.Regex : mod.engRegex);
     });
 
-    let ModListResult = '';
-    if (effectResults.length > 0) {
-        ModListResult = effectResults.join('|');
-        if (ngModChecked) {
-            ModListResult = `"!${ModListResult}"`;
-        }
+    let ModListResult = effectResults.length > 0 ? effectResults.join('|') : '';
+
+    if (ModListResult && ngModChecked) {
+        ModListResult = `"!${ModListResult}"`;
     }
     document.getElementById('ModListResult').textContent = ModListResult;
 
@@ -160,15 +158,28 @@ function updateCombinedRegex() {
     }
 
     const rarityRegex = generateRarityRegex();
-    if (rarityRegex) {
-        combinedResult = `${rarityRegex} ${combinedResult}`.trim();
+
+    if (currentLanguage === 'ja') {
+        if (rarityRegex && ModListResult) {
+            combinedResult = `${ModListResult}|${rarityRegex}${combinedResult}`.trim();
+        } else if (rarityRegex) {
+            combinedResult = `${rarityRegex}${combinedResult}`.trim();
+        } else if (ModListResult) {
+            combinedResult = `${ModListResult}${combinedResult}`.trim();
+        }
+    } else {
+        if (ModListResult) {
+            combinedResult = `${ModListResult} ${rarityRegex} ${combinedResult}`.trim();
+        } else {
+            combinedResult = `${rarityRegex} ${combinedResult}`.trim();
+        }
     }
 
-    combinedResult = `${ModListResult} ${combinedResult}`.trim();
     document.getElementById('combinedRegexOutput').textContent = combinedResult;
 
     updateCharCount();
 }
+
 
 let searchAllMode = true;
 
