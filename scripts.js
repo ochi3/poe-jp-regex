@@ -137,47 +137,36 @@ function updateCombinedRegex() {
 
     let ModListResult = '';
     if (effectResults.length > 0) {
-        let mods = effectResults;
-        if (currentLanguage === 'en') {
-            // 英語：各MODを個別にクオート
-            mods = mods.map(mod => `"${ngModChecked ? '!' : ''}${mod}"`);
-        } else {
-            // 日本語：|で結合
-            mods = mods.map(mod => ngModChecked ? `!${mod}` : mod);
+        ModListResult = effectResults.join('|');
+        if (ngModChecked) {
+            ModListResult = `"!${ModListResult}"`;
         }
-        ModListResult = currentLanguage === 'en' ? mods.join(' ') : mods.join('|');
     }
-
     document.getElementById('ModListResult').textContent = ModListResult;
 
-    const rarityRegex = generateRarityRegex();
-
-    let combinedORParts = [];
-    if (ModListResult) combinedORParts.push(ModListResult);
-    if (rarityRegex) combinedORParts.push(rarityRegex);
-
-    const combinedOR = currentLanguage === 'en'
-        ? combinedORParts.join(' ')  // 英語はスペース区切り
-        : combinedORParts.join('|'); // 日本語は|区切り
-
-    const otherParts = [];
     if (itemQuantityValue) {
         const itemQuantityRegex = getFixedRangeRegex(itemQuantityValue, currentLanguage === 'ja' ? '量:.*' : 'm q.*');
-        otherParts.push(itemQuantityRegex);
+        combinedResult += ` ${itemQuantityRegex}`;
     }
+
     if (packSizeValue) {
         const packSizeRegex = getFixedRangeRegex(packSizeValue, currentLanguage === 'ja' ? 'ズ:.*' : 'iz.*');
-        otherParts.push(packSizeRegex);
+        combinedResult += ` ${packSizeRegex}`;
     }
 
     const extraRegex = generateExtraRegex();
-    if (extraRegex) otherParts.push(extraRegex);
+    if (extraRegex) {
+        combinedResult += ` ${extraRegex}`;
+    }
 
-    combinedResult = [];
-    if (combinedOR) combinedResult.push(combinedOR);
-    combinedResult = combinedResult.concat(otherParts).join(' ');
+    const rarityRegex = generateRarityRegex();
+    if (rarityRegex) {
+        combinedResult = `${rarityRegex} ${combinedResult}`.trim();
+    }
 
-    document.getElementById('combinedRegexOutput').textContent = combinedOR + ' ' + otherParts.join(' ');
+    combinedResult = `${ModListResult} ${combinedResult}`.trim();
+    document.getElementById('combinedRegexOutput').textContent = combinedResult;
+
     updateCharCount();
 }
 
@@ -359,7 +348,7 @@ function filterEffects() {
 }
 
 function switchFunction(type) {
-  const contents = ['mapContent', 'transContent', 'flaskContent', 'beastContent', 'expeContent', 'boardContent'];
+  const contents = ['mapContent', 'transContent', 'flaskContent', 'beastContent', 'expeContent'];
   contents.forEach(content => {
     document.getElementById(content).style.display = 'none';
   });
@@ -394,7 +383,7 @@ function updateNavigation(type) {
 let currentHash = '';
 
 function handleNavigation() {
-  const validSections = ['map', 'trans', 'flask', 'beast', 'expe', 'board'];
+  const validSections = ['map', 'trans', 'flask', 'beast', 'expe'];
   const newHash = window.location.hash.slice(1).toLowerCase();
   const targetSection = validSections.includes(newHash) ? newHash : 'map';
 
@@ -412,7 +401,7 @@ function handleNavigation() {
 
 // コンテンツ切り替え関数の改善
 function switchFunction(type) {
-  const contents = ['mapContent', 'transContent', 'flaskContent', 'beastContent', 'expeContent', 'boardContent'];
+  const contents = ['mapContent', 'transContent', 'flaskContent', 'beastContent', 'expeContent'];
 
   // すべてのコンテンツを非表示
   contents.forEach(content => {
@@ -448,7 +437,7 @@ window.addEventListener('popstate', handleNavigation);
 document.addEventListener('DOMContentLoaded', () => {
   // 最初のハッシュチェックを厳密に行う
   const initialHash = window.location.hash.slice(1).toLowerCase();
-  if (!['map', 'trans', 'flask', 'beast', 'expe', 'board'].includes(initialHash)) {
+  if (!['map', 'trans', 'flask', 'beast', 'expe'].includes(initialHash)) {
     history.replaceState(null, '', '#map');
   }
   handleNavigation();
