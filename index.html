@@ -23,11 +23,15 @@
       <h3>PoE JP Regex</h3>
       <h4>Patch 3.25 テスト中</h4>
 
-      <a href="#map" class="nav-link">マップ mod</a>
-      <a href="#trans" class="nav-link">英語Regex変換</a>
-      <!-- <a href="#flask" class="nav-link">フラスコ</a>
-      <a href="#beast" class="nav-link">ビースト</a>
-      <a href="#expe" class="nav-link">エクスペ</a> -->
+      <nav>
+        <a href="#map" class="nav-link active">マップMod</a>
+        <a href="#trans" class="nav-link">英語Regex変換</a>
+        <!-- <a href="#board" class="nav-link">プロファイル共有</a> -->
+
+        <!-- <a href="#flask" class="nav-link">🧪 フラスコ</a>
+        <a href="#beast" class="nav-link">🐾 ビースト</a>
+        <a href="#expe" class="nav-link">⚡ エクスペ</a> -->
+      </nav>
 
         <h4>Discord @ochi3c
           Twitter <a href="https://x.com/ochi3c" style="color: #FFFFFF;">@ochi3c</a>
@@ -176,6 +180,28 @@
             <h1>エクスペ</h1>
             <h2>気が向いたら作る</h2>
         </div>
+
+        <div id="boardContent" style="display: none;">
+          <div class="section-card">
+            <h3 class="section-title">プロファイル共有</h3>
+
+            <div id="profileBoard">
+              <div class="board-controls">
+                <button onclick="loadSharedProfiles()">🔄 更新</button>
+                <input type="text" id="boardSearch" placeholder="検索...">
+              </div>
+              <div id="profileListings"></div>
+            </div>
+
+            <div class="share-form">
+              <h4>プロファイルを共有</h4>
+              <input type="text" id="shareProfileName" placeholder="プロファイル名">
+              <textarea id="shareDescription" placeholder="説明文（任意）"></textarea>
+              <button onclick="postProfile()">共有投稿</button>
+            </div>
+          </div>
+        </div>
+
     </div>
 
     <script src="modList.js"></script>
