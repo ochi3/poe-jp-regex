@@ -234,9 +234,9 @@ function updateCharCount() {
     const charCountElement = document.getElementById('charCount');
     charCountElement.textContent = `文字数: ${charCount}`;
 
-    if (charCount > 50) {
+    if (charCount > 250) {
         charCountElement.style.color = 'red';
-        charCountElement.textContent += ' (50文字を超えています)';
+        charCountElement.textContent += ' (250文字を超えています)';
     } else {
         charCountElement.style.color = '';
     }
