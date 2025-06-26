@@ -298,6 +298,9 @@ function getFixedRangeRegex(num, basePattern, optimize = false) {
   if (quant <= 9) {
     numberRegex = `[${quant}-9]`;
   }
+  else if (quant === 100) {
+    return `"${basePattern}\\d..%"`;
+  }
   else if (quant < 100) {
     const str = quant.toString();
     const d0 = str[0];
