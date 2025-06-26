@@ -52,7 +52,7 @@ const originalModList = {
    engMod: "Monsters cannot be Leeched from",
    tier: 600,
    engRegex: "eec",
-   Regex: "リー",
+   Regex: "ーチで",
    modTier17: false,
  },
  "モンスターのクリティカル率が#%増加する モンスターのクリティカルダメージ倍率 +#%": {
@@ -944,11 +944,11 @@ const originalModList = {
    modTier17: true,
  },
  "(T17) モンスターからリーチできない": {
-   mod: "(T17) モンスターからリーチできない",
+   mod: "(T17) モンスターかーらリチできない",
    engMod: "(T17) Monsters cannot be Leeched from",
    tier: 1111,
    engRegex: "eec",
-   Regex: "リー",
+   Regex: "ーチで",
    modTier17: true,
  },
  "(T17) プレイヤーはヴァルネラビリティの呪いを受ける": {
