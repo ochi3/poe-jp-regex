@@ -317,7 +317,9 @@ function getFixedRangeRegex(num, basePattern, optimize = false) {
     const str = quant.toString().padStart(3, '0');
     const d1 = str[1];
     const d2 = str[2];
-    if (d1 === '0') {
+    if (d2 === '0') {
+      numberRegex = `1[${d1}-9].|[2-9]..`;
+    } else if (d1 === '0') {
       numberRegex = `\\d0[${d2}-9]|\\d[1-9].`;
     } else if (d1 === '9' && d2 === '9') {
       numberRegex = `199|[2-9]..`;
