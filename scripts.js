@@ -287,53 +287,47 @@ function resetAll() {
     updateCombinedRegex();
 }
 
-function getFixedRangeRegex(num, basePattern) {
-    num = parseInt(num);
-    if (isNaN(num) || num < 0) return '';
-
-    if (num >= 200) {
-        return `"${basePattern}2..%"`;
-    } else if (num >= 190) {
-        return `"${basePattern}19.%"`;
-    } else if (num >= 180) {
-        return `"${basePattern}1[89].%"`;
-    } else if (num >= 170) {
-        return `"${basePattern}1[7-9].%"`;
-    } else if (num >= 160) {
-        return `"${basePattern}1[6-9].%"`;
-    } else if (num >= 150) {
-        return `"${basePattern}1[5-9].%"`;
-    } else if (num >= 140) {
-        return `"${basePattern}1[4-9].%"`;
-    } else if (num >= 130) {
-        return `"${basePattern}1[3-9].%"`;
-    } else if (num >= 120) {
-        return `"${basePattern}1[2-9].%"`;
-    } else if (num >= 110) {
-        return `"${basePattern}1[1-9].%"`;
-    } else if (num >= 100) {
-        return `"${basePattern}\\d{3}%"`;
-    } else if (num >= 90) {
-        return `"${basePattern}(9.|1..)%"`;
-    } else if (num >= 80) {
-        return `"${basePattern}([89].|1..)%"`;
-    } else if (num >= 70) {
-        return `"${basePattern}([7-9].|1..)%"`;
-    } else if (num >= 60) {
-        return `"${basePattern}([6-9].|1..)%"`;
-    } else if (num >= 50) {
-        return `"${basePattern}([5-9].|1..)%"`;
-    } else if (num >= 40) {
-        return `"${basePattern}([4-9].|1..)%"`;
-    } else if (num >= 30) {
-        return `"${basePattern}([3-9].|1..)%"`;
-    } else if (num >= 20) {
-        return `"${basePattern}([2-9].|1..)%"`;
-    } else if (num >= 10) {
-        return `"${basePattern}([1-9].|1..)%"`;
+function getFixedRangeRegex(num, basePattern, optimize = false) {
+  num = parseInt(num);
+  if (isNaN(num) || num < 0) return '';
+  const quant = optimize ? Math.floor(num / 10) * 10 : num;
+  let numberRegex;
+  if (quant === 0) {
+    return num === 0 ? `"${basePattern}0%"` : `"${basePattern}[0-${num}]%"`;
+  }
+  if (quant <= 9) {
+    numberRegex = `[${quant}-9]`;
+  }
+  else if (quant < 100) {
+    const str = quant.toString();
+    const d0 = str[0];
+    const d1 = str[1];
+    if (d1 === '0') {
+      numberRegex = `[${d0}-9].|\\d..`;
+    } else if (d0 === '9') {
+      numberRegex = `${d0}[${d1}-9]|\\d..`;
     } else {
-        return `"${basePattern}[1-9]%"`;
+      numberRegex = `${d0}[${d1}-9]|[${Number(d0) + 1}-9].|\\d..`;
     }
+  }
+  else if (quant < 200) {
+    const str = quant.toString().padStart(3, '0');
+    const d1 = str[1];
+    const d2 = str[2];
+    if (d1 === '0') {
+      numberRegex = `\\d0[${d2}-9]|\\d[1-9].`;
+    } else if (d1 === '9' && d2 === '9') {
+      numberRegex = `199|[2-9]..`;
+    } else {
+      numberRegex = d1 === '9'
+        ? `19[${d2}-9]|[2-9]..`
+        : `1([${d1}-9][${d2}-9]|[${Number(d1) + 1}-9].)|[2-9]..`;
+    }
+  }
+  else {
+    numberRegex = `[2-9]..`;
+  }
+  return `"${basePattern}${quant >= 10 ? '(' + numberRegex + ')' : numberRegex}%"`;
 }
 
 function filterEffects() {
