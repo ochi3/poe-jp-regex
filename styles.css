@@ -350,6 +350,7 @@ button:hover {
   padding: 10px 5px;
   border-bottom: 1px solid #333;
   background-color: #1e1e1e;
+  cursor: pointer;
 }
 
 .beast-item:hover {
@@ -359,15 +360,22 @@ button:hover {
 .beast-item > div {
   display: flex;
   align-items: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 0 5px;
 }
 
+/* 各カラムの幅（レスポンシブ対応） */
 .beast-select {
   width: 50px;
+  min-width: 50px;
   justify-content: center;
 }
 
 .beast-price {
   width: 100px;
+  min-width: 100px;
   justify-content: center;
   font-weight: bold;
   color: #4CAF50;
@@ -375,21 +383,48 @@ button:hover {
 
 .beast-name {
   width: 200px;
-  padding-left: 10px;
+  min-width: 200px;
   color: #ffcc00;
   font-weight: bold;
 }
 
 .beast-family {
   width: 150px;
-  padding-left: 10px;
+  min-width: 150px;
   color: #aaa;
 }
 
 .beast-effect {
   flex-grow: 1;
-  padding-left: 10px;
+  min-width: 200px;
   color: #ddd;
+  white-space: normal; /* 効果説明は折り返し可能に */
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  .beast-table-container {
+    height: 60vh;
+  }
+  
+  .beast-header, .beast-item {
+    font-size: 12px;
+  }
+  
+  .beast-price {
+    width: 80px;
+    min-width: 80px;
+  }
+  
+  .beast-name {
+    width: 150px;
+    min-width: 150px;
+  }
+  
+  .beast-family {
+    width: 120px;
+    min-width: 120px;
+  }
 }
 
 /* スクロールバー */
