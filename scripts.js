@@ -1041,7 +1041,6 @@ function resetBeastSelection() {
 function copyBeastRegex() {
   const regex = document.getElementById('beastRegexOutput').textContent;
   navigator.clipboard.writeText(regex)
-    .then(() => alert('クリップボードにコピーしました'))
     .catch(err => console.error('コピー失敗:', err));
 }
 
