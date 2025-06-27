@@ -1,4 +1,4 @@
-const beastList = {
+const beastlist = {
   "ビビッド・ウォッチャー": {
     engName: "Vivid Watcher",
     family: "深海",
