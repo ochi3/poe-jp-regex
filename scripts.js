@@ -357,112 +357,84 @@ function filterEffects() {
     }
 }
 
-function switchFunction(type) {
-  const contents = ['mapContent', 'transContent', 'flaskContent', 'beastContent', 'expeContent'];
-  contents.forEach(content => {
-    document.getElementById(content).style.display = 'none';
-  });
-  document.getElementById(`${type}Content`).style.display = 'block';
-
-  updateNavigation(type);
-
-  if (type === 'map') {
-    updateModList();
-    updateCombinedRegex();
-  } else if (type === 'trans') {
-    document.getElementById('engRegexInput').value = '';
-    document.getElementById('jpRegexOutput').textContent = '';
-    document.getElementById('detailsList').innerHTML = '';
-  }
-
-  document.querySelectorAll('#sideMenu .nav-link').forEach(link => {
-  link.classList.remove('active');
-  if (link.getAttribute('href') === `#${type}`) {
-    link.classList.add('active');
-  }
-});
-
-}
-
-function updateNavigation(type) {
-  history.pushState(null, '', `#${type}`);
-}
-
-
-// ナビゲーション処理を強化したバージョン
-let currentHash = '';
-
-function handleNavigation() {
-  const validSections = ['map', 'trans', 'flask', 'beast', 'expe'];
-  const newHash = window.location.hash.slice(1).toLowerCase();
-  const targetSection = validSections.includes(newHash) ? newHash : 'map';
-
-  // ハッシュが実際に変更された場合のみ処理
-  if (currentHash !== targetSection) {
-    currentHash = targetSection;
-    switchFunction(targetSection);
-  }
-
-  // 不正なハッシュを修正
-  if (window.location.hash !== `#${targetSection}`) {
-    history.replaceState(null, '', `#${targetSection}`);
-  }
-}
-
-// コンテンツ切り替え関数の改善
-function switchFunction(type) {
-  const contents = ['mapContent', 'transContent', 'flaskContent', 'beastContent', 'expeContent'];
-
-  // すべてのコンテンツを非表示
-  contents.forEach(content => {
-    document.getElementById(content).style.display = 'none';
-  });
-
-  // 対象コンテンツを表示
-  const targetContent = `${type}Content`;
-  if (document.getElementById(targetContent)) {
-    document.getElementById(targetContent).style.display = 'block';
-  }
-
-  // ナビゲーションのアクティブ状態更新
-  document.querySelectorAll('#sideMenu .nav-link').forEach(link => {
-    link.classList.remove('active');
-    if (link.getAttribute('href') === `#${type}`) {
-      link.classList.add('active');
-    }
-  });
-
-  // ハッシュの整合性を保証
-  if (window.location.hash !== `#${type}`) {
-    history.replaceState(null, '', `#${type}`);
-  }
-}
-
-// イベントリスナーの設定
-window.addEventListener('hashchange', handleNavigation);
-window.addEventListener('load', handleNavigation);
-window.addEventListener('popstate', handleNavigation);
-
-// 初期化処理
-document.addEventListener('DOMContentLoaded', () => {
-  // 最初のハッシュチェックを厳密に行う
-  const initialHash = window.location.hash.slice(1).toLowerCase();
-  if (!['map', 'trans', 'flask', 'beast', 'expe'].includes(initialHash)) {
-    history.replaceState(null, '', '#map');
-  }
-  handleNavigation();
-
-  // サイドメニューのクリック処理
-  document.querySelectorAll('#sideMenu .nav-link').forEach(link => {
-    link.addEventListener('click', (e) => {
-      e.preventDefault();
-      const type = link.getAttribute('href').slice(1);
-      if (currentHash !== type) {
-        window.location.hash = type;
-      }
+    // スクリプトの初期化を修正
+    document.addEventListener('DOMContentLoaded', () => {
+        // 初期化処理を即時実行
+        initializeApplication();
     });
-  });
-});
+
+    function initializeApplication() {
+        // タブ切り替えの初期化
+        const initialTab = window.location.hash.slice(1) || 'map';
+        const initialTabId = `${initialTab}Content`;
+        
+        if (document.getElementById(initialTabId)) {
+            switchTab(initialTabId);
+        } else {
+            switchTab('mapContent');
+            history.replaceState(null, '', '#map');
+        }
+
+        // イベントリスナーの設定
+        window.addEventListener('hashchange', handleHashChange);
+        
+        document.querySelectorAll('#sideMenu .nav-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const tabId = this.dataset.tab;
+                switchTab(tabId);
+            });
+        });
+
+        // その他の初期化処理
+        loadInitialData();
+        setupEventListeners();
+    }
+
+// タブ切り替え関数（ハッシュ対応版）
+function switchTab(tabId) {
+    // すべてのコンテンツを非表示
+    document.querySelectorAll('.tab-content').forEach(content => {
+        content.style.display = 'none';
+    });
+    
+    // 対象コンテンツを表示
+    const targetContent = document.getElementById(tabId);
+    if (targetContent) {
+        targetContent.style.display = 'block';
+    }
+    
+    // ナビゲーションのアクティブ状態更新
+    document.querySelectorAll('#sideMenu .nav-link').forEach(link => {
+        link.classList.remove('active');
+        if (link.dataset.tab === tabId) {
+            link.classList.add('active');
+        }
+    });
+    
+    // 現在のタブをハッシュとして設定（タブIDから'Content'を除く）
+    const tabName = tabId.replace('Content', '');
+    if (window.location.hash !== `#${tabName}`) {
+        history.replaceState(null, '', `#${tabName}`);
+    }
+}
+
+
+// ハッシュ変更を監視してタブ切り替え
+function handleHashChange() {
+    const tabName = window.location.hash.slice(1) || 'map';
+    const tabId = `${tabName}Content`;
+    
+    // タブが存在するか確認
+    if (document.getElementById(tabId)) {
+        switchTab(tabId);
+    } else {
+        // 無効なハッシュの場合はデフォルトタブ
+        switchTab('mapContent');
+        history.replaceState(null, '', '#map');
+    }
+}
+
 
 function initializeTooltips() {
     document.querySelectorAll('.effect-item').forEach(item => {
@@ -544,13 +516,6 @@ function updateModList() {
 }
 
 
-
-// ページロード時にチェックボックスの状態を復元
-document.addEventListener('DOMContentLoaded', () => {
-    loadCheckboxState();
-    updateModList();
-    updateCombinedRegex();
-});
 
 function loadModCheckboxState() {
     const state = JSON.parse(localStorage.getItem('modCheckboxState') || '{}');
@@ -916,3 +881,214 @@ function importProfiles(event) {
   };
   reader.readAsText(file);
 }
+
+// ビースト
+// ソート状態を管理する変数
+let beastSortColumn = null;
+let beastSortDirection = 'asc';
+
+// ビーストリストのレンダリング（ソート機能追加）
+function renderBeastList() {
+  const container = document.getElementById('beastListContainer');
+  container.innerHTML = '';
+  
+  // ビーストデータを配列に変換
+  let beasts = Object.entries(beastList);
+  
+  // ソート処理
+  if (beastSortColumn) {
+    beasts.sort((a, b) => {
+      const [nameA, dataA] = a;
+      const [nameB, dataB] = b;
+      let valueA, valueB;
+      
+      switch (beastSortColumn) {
+        case 'price':
+          valueA = parseFloat(dataA.chaosValue);
+          valueB = parseFloat(dataB.chaosValue);
+          break;
+        case 'name':
+          valueA = nameA;
+          valueB = nameB;
+          break;
+        case 'family':
+          valueA = dataA.family;
+          valueB = dataB.family;
+          break;
+        case 'effect':
+          valueA = dataA.effect;
+          valueB = dataB.effect;
+          break;
+        default:
+          return 0;
+      }
+      
+      // 数値と文字列で比較方法を変更
+      let comparison = 0;
+      if (typeof valueA === 'number') {
+        comparison = valueA - valueB;
+      } else {
+        comparison = valueA.localeCompare(valueB);
+      }
+      
+      return beastSortDirection === 'asc' ? comparison : -comparison;
+    });
+  }
+
+  beasts.forEach(([name, data]) => {
+    const beastItem = document.createElement('div');
+    beastItem.className = 'beast-item';
+    beastItem.dataset.engName = data.engName;
+    
+    // 行全体クリックイベントを追加
+    beastItem.addEventListener('click', function(e) {
+      // チェックボックス自体のクリックは除外
+      if (e.target.tagName !== 'INPUT') {
+        const checkbox = this.querySelector('input');
+        checkbox.checked = !checkbox.checked;
+        const event = new Event('change', { bubbles: true });
+        checkbox.dispatchEvent(event);
+      }
+    });
+    
+    beastItem.innerHTML = `
+      <div class="beast-select">
+        <input type="checkbox" id="beast-${name}" value="${name}">
+      </div>
+      <div class="beast-price">${data.chaosValue}</div>
+      <div class="beast-name">${name}</div>
+      <div class="beast-family">${data.family}</div>
+      <div class="beast-effect">${data.effect}</div>
+    `;
+
+    const checkbox = beastItem.querySelector('input');
+    checkbox.checked = checkedBeasts.has(name);
+    checkbox.addEventListener('change', function() {
+      if (this.checked) {
+        checkedBeasts.add(name);
+      } else {
+        checkedBeasts.delete(name);
+      }
+      updateBeastRegex();
+      saveBeastCheckboxState();
+    });
+    
+    container.appendChild(beastItem);
+  });
+}
+
+// ソート処理関数
+function sortBeasts(column) {
+  // 同じカラムをクリックした場合は昇順/降順を切り替え
+  if (beastSortColumn === column) {
+    beastSortDirection = beastSortDirection === 'asc' ? 'desc' : 'asc';
+  } else {
+    beastSortColumn = column;
+    beastSortDirection = 'asc';
+  }
+  
+  // ソートアイコンを更新
+  updateSortIcons();
+  
+  // リストを再描画
+  renderBeastList();
+}
+
+// ソートアイコンを更新
+function updateSortIcons() {
+  const headers = document.querySelectorAll('.beast-header > div');
+  headers.forEach(header => {
+    header.innerHTML = header.innerHTML.replace(/ ↑| ↓/g, '');
+    if (header.dataset.column === beastSortColumn) {
+      // 修正: 昇順は↓、降順は↑（直感的な表示に変更）
+      header.innerHTML += beastSortDirection === 'asc' ? ' ↓' : ' ↑';
+    }
+  });
+}
+
+// ビーストRegex更新
+function updateBeastRegex() {
+  const selectedRegexes = Array.from(checkedBeasts).map(name => beastList[name].regex);
+  const regex = selectedRegexes.join('|');
+  
+  document.getElementById('beastRegexOutput').textContent = regex;
+  
+  // 文字数カウント
+  const charCount = regex.length;
+  const charCountElement = document.getElementById('beastCharCount');
+  charCountElement.textContent = `文字数: ${charCount}`;
+  
+  if (charCount > 250) {
+    charCountElement.style.color = 'red';
+    charCountElement.textContent += ' (250文字を超えています)';
+  } else {
+    charCountElement.style.color = '';
+  }
+}
+
+// ビースト選択リセット
+function resetBeastSelection() {
+  checkedBeasts.clear();
+  document.querySelectorAll('#beastListContainer input[type="checkbox"]').forEach(checkbox => {
+    checkbox.checked = false;
+  });
+  updateBeastRegex();
+  saveBeastCheckboxState();
+}
+
+// ビーストRegexコピー
+function copyBeastRegex() {
+  const regex = document.getElementById('beastRegexOutput').textContent;
+  navigator.clipboard.writeText(regex)
+    .then(() => alert('クリップボードにコピーしました'))
+    .catch(err => console.error('コピー失敗:', err));
+}
+
+// ビースト検索
+function filterBeasts() {
+  const term = document.getElementById('beastSearch').value.toLowerCase();
+  
+  document.querySelectorAll('.beast-item').forEach(item => {
+    const japaneseName = item.querySelector('.beast-name').textContent.toLowerCase();
+    const englishName = beastList[japaneseName]?.engName.toLowerCase() || '';
+    const family = item.querySelector('.beast-family').textContent.toLowerCase();
+    const effect = item.querySelector('.beast-effect').textContent.toLowerCase();
+    
+    const match = 
+      japaneseName.includes(term) || 
+      englishName.includes(term) || 
+      family.includes(term) || 
+      effect.includes(term);
+    
+    item.style.display = match ? 'flex' : 'none';
+  });
+}
+
+// チェックボックス状態保存
+function saveBeastCheckboxState() {
+  const state = Array.from(checkedBeasts);
+  localStorage.setItem('beastCheckboxState', JSON.stringify(state));
+}
+
+// チェックボックス状態復元
+function loadBeastCheckboxState() {
+  const saved = localStorage.getItem('beastCheckboxState');
+  if (saved) {
+    checkedBeasts = new Set(JSON.parse(saved));
+  }
+}
+
+// 初期化処理
+document.addEventListener('DOMContentLoaded', () => {
+  // ソートヘッダーの設定
+  document.querySelectorAll('.beast-header > div[data-column]').forEach(header => {
+    header.addEventListener('click', () => {
+      sortBeasts(header.dataset.column);
+    });
+  });
+  
+  // ビースト関連の初期化
+  loadBeastCheckboxState();
+  renderBeastList();
+  updateBeastRegex();
+});

@@ -234,3 +234,195 @@ button:hover {
 @keyframes spin {
   to { transform: rotate(360deg); }
 }
+
+#linkContent ul {
+    list-style: none;
+    padding: 0;
+}
+
+#linkContent li {
+    margin-bottom: 16px; /* リンク間の余白 */
+}
+
+#linkContent a {
+    color: #ffffff; /* 白文字 */
+    text-decoration: underline; /* 下線ありでリンクと認識しやすく */
+}
+
+#linkContent a:hover {
+    color: #cccccc; /* ホバー時に少しグレーへ */
+}
+
+#linkContent h1, #linkContent h2 {
+    color: #ffffff;
+}
+
+#linkContent {
+       color: #dddddd; /* 説明文も明るめに */
+}
+
+/* ビーストアイテム */
+/* ビーストRegexコンテナ */
+.beast-table-container {
+  border: 1px solid #444;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: #1e1e1e;
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* ビューポートの高さに合わせて調整 */
+}
+
+#beastRegexOutput {
+  background-color: #2c2c2c;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-family: 'Courier New', monospace;
+  word-break: break-word;
+}
+
+/* ビーストテーブルコンテナ */
+.beast-table-container {
+  border: 1px solid #444;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: #1e1e1e;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* ヘッダー行 */
+.beast-header {
+  display: flex;
+  background-color: #333;
+  font-weight: bold;
+  padding: 10px 5px;
+  border-bottom: 1px solid #444;
+}
+
+.beast-header > div {
+  cursor: pointer;
+  user-select: none;
+  padding: 0 5px;
+}
+
+.beast-header > div:hover {
+  background-color: #444;
+}
+
+.beast-col-select {
+  width: 50px;
+  text-align: center;
+}
+
+.beast-col-price {
+  width: 100px;
+  text-align: center;
+}
+
+.beast-col-name {
+  width: 200px;
+  padding-left: 10px;
+}
+
+.beast-col-family {
+  width: 150px;
+  padding-left: 10px;
+}
+
+.beast-col-effect {
+  flex-grow: 1;
+  padding-left: 10px;
+}
+
+
+/* ビーストリスト */
+.beast-list {
+  overflow-y: auto;
+  flex-grow: 1; /* 利用可能なスペースをすべて使用 */
+}
+
+/* ビーストアイテム */
+.beast-item {
+  display: flex;
+  padding: 10px 5px;
+  border-bottom: 1px solid #333;
+  background-color: #1e1e1e;
+}
+
+.beast-item:hover {
+  background-color: #2a2a2a;
+}
+
+.beast-item > div {
+  display: flex;
+  align-items: center;
+}
+
+.beast-select {
+  width: 50px;
+  justify-content: center;
+}
+
+.beast-price {
+  width: 100px;
+  justify-content: center;
+  font-weight: bold;
+  color: #4CAF50;
+}
+
+.beast-name {
+  width: 200px;
+  padding-left: 10px;
+  color: #ffcc00;
+  font-weight: bold;
+}
+
+.beast-family {
+  width: 150px;
+  padding-left: 10px;
+  color: #aaa;
+}
+
+.beast-effect {
+  flex-grow: 1;
+  padding-left: 10px;
+  color: #ddd;
+}
+
+/* スクロールバー */
+.beast-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.beast-list::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+.beast-list::-webkit-scrollbar-thumb {
+  background: #4CAF50;
+  border-radius: 4px;
+}
+
+/* 入力グループ - Mapタブと同じスタイル */
+.input-group {
+  margin: 15px 0;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.input-group input[type="text"] {
+  flex-grow: 1;
+  padding: 10px;
+  background-color: #2c2c2c;
+  border: 1px solid #444;
+  color: white;
+  border-radius: 5px;
+}

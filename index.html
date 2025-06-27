@@ -7,7 +7,6 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-BV04ELTZSP');
     </script>
     <meta name="google-site-verification" content="M679Lx1mttxZau0-nYyXDgG72YyGkistNw9JxAOYAk8" />
@@ -24,13 +23,12 @@
       <h4>Patch 3.26</h4>
 
       <nav>
-        <a href="#map" class="nav-link active">マップMod</a>
-        <a href="#trans" class="nav-link">英語Regex変換</a>
-        <!-- <a href="#board" class="nav-link">プロファイル共有</a> -->
-
-        <!-- <a href="#flask" class="nav-link">🧪 フラスコ</a>
-        <a href="#beast" class="nav-link">🐾 ビースト</a>
-        <a href="#expe" class="nav-link">⚡ エクスペ</a> -->
+        <a href="#map" class="nav-link active" data-tab="mapContent">マップMod</a>
+        <a href="#trans" class="nav-link" data-tab="transContent">英語Regex変換</a>
+        <!-- <a href="#flask" class="nav-link" data-tab="flaskContent">🧪 フラスコ</a>-->
+        <a href="#beast" class="nav-link" data-tab="beastContent">ビースト</a>
+        <!--<a href="#expe" class="nav-link" data-tab="expeContent">⚡ エクスペ</a> -->
+        <a href="#link" class="nav-link" data-tab="linkContent">リンク集</a>
       </nav>
 
         <h4>Discord @ochi3c
@@ -39,21 +37,18 @@
         <h4>NGMODとレアリティのフィルターは同時に使えないかもしれません、FBお待ちしております。</h4>
         <h4>Change log<br>25/06/27<br>数値Regex仕様変更<br><br>25/06/05<br>文字数制限50→250<br></h4>
 
-
     </div>
 
     <div id="contentArea">
-      <div id="mapContent">
-
+      <div id="mapContent" class="tab-content">
             <div id="combinedRegexContainer">
-
-              <!-- プロファイル管理セクション -->
+                <!-- プロファイル管理セクション -->
                 <div>
                   <input type="text" id="profileName" placeholder="プロファイル名を入力してください。" class="large-input">
                   <button onclick="saveProfile()">保存</button>
                   <button onclick="loadProfile()">読み込み</button>
                   <button onclick="deleteProfile()">削除</button>
-                  <select id="profileList" onchange="updateProfileSelection()">
+                  <select id="profileList">
                       <option value="">-- プロファイル選択 --</option>
                   </select>
                 </div>
@@ -67,12 +62,12 @@
                 <div class="input-group">
                     <label class="input-label" for="itemQuantityInput">
                         数量:
-                        <input type="number" id="itemQuantityInput" onchange="updateCombinedRegex()">
+                        <input type="number" id="itemQuantityInput">
                         <div class="tooltip" id="itemQuantityTooltip">この値以上の数量がマッチします。※10単位で切り捨てされます。</div>
                     </label>
                     <label class="input-label" for="packSizeInput">
                         パックサイズ:
-                        <input type="number" id="packSizeInput" oninput="updateCombinedRegex()">
+                        <input type="number" id="packSizeInput">
                         <div class="tooltip" id="packSizeTooltip">この値以上のパックサイズがマッチします。※10単位で切り捨てされます。</div>
                     </label>
                 </div>
@@ -99,7 +94,6 @@
                     <input type="radio" name="searchMode" id="searchAnyRadio" value="any" >
                     どれか
                   </label>
-
                 </div>
 
                 <div>
@@ -118,7 +112,7 @@
 
                 <div class="input-group">
                     <label class="checkbox-label" for="ngModCheckbox">
-                        <input type="checkbox" id="ngModCheckbox" onchange="updateCombinedRegex()" checked>
+                        <input type="checkbox" id="ngModCheckbox" checked>
                         NG mod
                         <div class="tooltip" id="ngModTooltip">選択されたModを除外します。</div>
                     </label>
@@ -126,26 +120,21 @@
 
                 <div class="input-group">
                     <label for="mapTierCheckbox">
-                        <input type="checkbox" id="mapTierCheckbox" onchange="updateModList()">T17 mod
+                        <input type="checkbox" id="mapTierCheckbox">T17 mod
                     </label>
                 </div>
-
-
-
             </div>
 
             <div id="ModListContainer">
                 <div id="ModListResult" style="display: none;"></div>
-                <!-- <h2>Mod</h2> -->
                 <input type="text" id="effectSearch" placeholder="Modを検索..." oninput="filterEffects()">
                 <div id="ModList"></div>
             </div>
         </div>
 
-        <div id="transContent" style="display: none;">
+        <div id="transContent" class="tab-content" style="display: none;">
           <h2>英語のRegexを日本語に変換できます。</h2>
           <h4>poe.reのRegexを参考にしています。<br />poe.reやPoEのアップデートで壊れる可能性があります。<br />パックサイズ等は未対応です。 </h4>
-
 
           <div>
             <label for="engRegexInput">英語のRegexを入力してください:</label>
@@ -161,51 +150,137 @@
           </div>
         </div>
 
-        <script>
-          // ナビゲーション用の関数をここに追加
-          function updateNavigation(type) {
-            history.pushState(null, '', `#${type}`);
-          }
-        </script>
-          <div id="flaskContent" style="display: none;">
+        <div id="flaskContent" class="tab-content" style="display: none;">
             <h1>フラスコ</h1>
             <h2>気が向いたら作る</h2>
         </div>
 
-        <div id="beastContent" style="display: none;">
-            <h1>ビースト</h1>
-            <h2>気が向いたら作る</h2>
+        <div id="beastContent" class="tab-content" style="display: none;">
+          <!-- Regex出力と操作ボタン -->
+          <div id="combinedBeastRegexContainer">
+            <div id="beastRegexOutput"></div>
+            <button onclick="copyBeastRegex()">コピー</button>
+            <button onclick="resetBeastSelection()">リセット</button>
+            <span id="beastCharCount" class="char-count"></span>
+          </div>
+          
+          <!-- 検索ボックス -->
+          <div class="input-group">
+            <input type="text" id="beastSearch" placeholder="ビーストを検索...価格は参考程度にお願いします。最終更新25/06/27" oninput="filterBeasts()">
+          </div>
+          
+          <!-- ビースト一覧 -->
+          <div class="beast-table-container">
+            <div class="beast-header">
+              <div class="beast-col-select" data-column="select">選択</div>
+              <div class="beast-col-price" data-column="price">価格</div>
+              <div class="beast-col-name" data-column="name">ビースト名</div>
+              <div class="beast-col-family" data-column="family">ファミリー</div>
+              <div class="beast-col-effect" data-column="effect">レシピの説明</div>
+            </div>
+            <div id="beastListContainer" class="beast-list"></div>
+          </div>
         </div>
 
-        <div id="expeContent" style="display: none;">
+        <div id="expeContent" class="tab-content" style="display: none;">
             <h1>エクスペ</h1>
             <h2>気が向いたら作る</h2>
         </div>
+        
+  <div id="linkContent" class="tab-content" style="display: none;">
+      <h1>リンク集</h1>
+    <ul>
+        <li>
+            <strong><a href="https://poedb.tw/us/" target="_blank" rel="noopener noreferrer">PoEDB</a></strong><br>
+            データベース
+        </li>
+        <li>
+            <strong><a href="https://poe.ninja/" target="_blank" rel="noopener noreferrer">poe.ninja</a></strong><br>
+            アイテムの相場、ビルド
+        </li>
+        <li>
+            <strong><a href="https://vilsol.github.io/timeless-jewels/tree" target="_blank" rel="noopener noreferrer">Timeless Jewel Calculator</a></strong><br>
+            Timeless Jewelの検索
+        </li>
+        <li>
+            <strong><a href="https://poeplanner.com/atlas-tree" target="_blank" rel="noopener noreferrer">poe planner</a></strong><br>
+            アトラスパッシブツリーのシミュレータ
+        </li>
+        <li>
+            <strong><a href="https://pathofpathing.com/" target="_blank" rel="noopener noreferrer">path of pathing</a></strong><br>
+            アトラスパッシブツリーのシミュレータ。コンテンツを選ぶとパッシブを自動で振ってくれる
+        </li>
+        <li>
+            <strong><a href="https://www.craftofexile.com/" target="_blank" rel="noopener noreferrer">Craft of Exile</a></strong><br>
+            アイテムクラフトシミュレータ
+        </li>
+        <li>
+            <strong><a href="https://www.poelab.com/" target="_blank" rel="noopener noreferrer">poelab</a></strong><br>
+            ラビリンスの日替わりレイアウト
+        </li>
+        <li>
+            <strong><a href="https://siveran.github.io/calc.html" target="_blank" rel="noopener noreferrer">Vorici chromatic calculator</a></strong><br>
+            色彩のオーブ計算機
+        </li>
+        <li>
+            <strong><a href="https://wealthyexile.com/" target="_blank" rel="noopener noreferrer">Wealthy Exile</a></strong><br>
+            資産管理・時給計算
+        </li>
+        <li>
+            <strong><a href="https://www.filterblade.xyz/" target="_blank" rel="noopener noreferrer">Filterblade</a></strong><br>
+            アイテムフィルターのカスタマイズ
+        </li>
+        <li>
+            <strong><a href="https://mapsofexile.com/" target="_blank" rel="noopener noreferrer">Maps of Exile</a></strong><br>
+            マップに関する情報集約
+        </li>
+        <li>
+            <strong><a href="https://poe.re/" target="_blank" rel="noopener noreferrer">PoE Regex</a></strong><br>
+            英語のRegex
+        </li>
+    </ul>
 
-        <div id="boardContent" style="display: none;">
-          <div class="section-card">
-            <h3 class="section-title">プロファイル共有</h3>
-
-            <div id="profileBoard">
-              <div class="board-controls">
-                <button onclick="loadSharedProfiles()">🔄 更新</button>
-                <input type="text" id="boardSearch" placeholder="検索...">
-              </div>
-              <div id="profileListings"></div>
-            </div>
-
-            <div class="share-form">
-              <h4>プロファイルを共有</h4>
-              <input type="text" id="shareProfileName" placeholder="プロファイル名">
-              <textarea id="shareDescription" placeholder="説明文（任意）"></textarea>
-              <button onclick="postProfile()">共有投稿</button>
-            </div>
-          </div>
-        </div>
+    <h2>日本語ツール</h2>
+    <ul>
+        <li>
+            <strong><a href="https://www.poeoverlay.com" target="_blank" rel="noopener noreferrer">POE Overlay</a></strong><br>
+            個人的にforkよりこっち
+        </li>
+        <li>
+            <strong><a href="https://github.com/PoE-Overlay-Community/PoE-Overlay-Community-Fork" target="_blank" rel="noopener noreferrer">PoE Overlay Community Fork</a></strong><br>
+            上記オーバーレイのfork版
+        </li>
+        <li>
+            <strong><a href="https://ochi3.github.io/exile-leveling-jp/#/" target="_blank" rel="noopener noreferrer">ACT道案内サイト</a></strong><br>
+            レベリングルートガイド（日本語）
+        </li>
+        <li>
+            <strong><a href="https://note.com/ochi3c/n/n9f7f828bd177" target="_blank" rel="noopener noreferrer">Lailloken-UI 日本語化</a></strong><br>
+            日本語化ガイド。新バージョン作成中
+        </li>
+        <li>
+            <strong><a href="https://note.com/ochi3c/n/nd535f4424443" target="_blank" rel="noopener noreferrer">Better Trading 日本語</a></strong><br>
+            お買い物リスト作成可能
+        </li>
+        <li>
+            <strong><a href="https://note.com/ready_iris3558/n/n6207f6acfa18" target="_blank" rel="noopener noreferrer">poeninja/pobb.inからトレードサイトに飛ぶ</a></strong><br>
+        </li>
+        <li>
+            <strong><a href="https://github.com/ryusus4/poe_ninja_to_trade" target="_blank" rel="noopener noreferrer">GitHub: poe_ninja_to_trade</a></strong>
+        </li>
+        <li>
+            <strong><a href="https://github.com/ryusus4/pobb_to_trade" target="_blank" rel="noopener noreferrer">GitHub: pobb_to_trade</a></strong>
+        </li>
+        <li>
+            <strong><a href="https://github.com/ryusus4/poe_transfer_jp_language" target="_blank" rel="noopener noreferrer">GitHub: poe_transfer_jp_language</a></strong>
+        </li>
+    </ul>
+</div>
 
     </div>
 
     <script src="modList.js"></script>
+    <script src="beastList.js"></script>
     <script src="convert.js"></script>
     <script src="scripts.js"></script>
 </body>
