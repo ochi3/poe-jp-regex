@@ -2,6 +2,7 @@ let ModList = {...originalModList};
 
 let currentLanguage = 'ja';
 let checkedMods = new Set();
+let checkedBeasts = new Set();
 
 function toggleLanguage() {
     currentLanguage = currentLanguage === 'ja' ? 'en' : 'ja';
@@ -944,7 +945,7 @@ function renderbeastlist() {
     beastItem.addEventListener('click', function(e) {
       // チェックボックス自体のクリックは除外
       if (e.target.tagName !== 'INPUT') {
-        const checkbox = this.querySelector('input');
+        const checkbox = beastItem.querySelector('input');
         checkbox.checked = !checkbox.checked;
         const event = new Event('change', { bubbles: true });
         checkbox.dispatchEvent(event);
