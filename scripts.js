@@ -888,12 +888,12 @@ let beastSortColumn = null;
 let beastSortDirection = 'asc';
 
 // ビーストリストのレンダリング（ソート機能追加）
-function renderBeastList() {
-  const container = document.getElementById('beastListContainer');
+function renderbeastlist() {
+  const container = document.getElementById('beastlistContainer');
   container.innerHTML = '';
   
   // ビーストデータを配列に変換
-  let beasts = Object.entries(beastList);
+  let beasts = Object.entries(beastlist);
   
   // ソート処理
   if (beastSortColumn) {
@@ -991,7 +991,7 @@ function sortBeasts(column) {
   updateSortIcons();
   
   // リストを再描画
-  renderBeastList();
+  renderbeastlist();
 }
 
 // ソートアイコンを更新
@@ -1008,7 +1008,7 @@ function updateSortIcons() {
 
 // ビーストRegex更新
 function updateBeastRegex() {
-  const selectedRegexes = Array.from(checkedBeasts).map(name => beastList[name].regex);
+  const selectedRegexes = Array.from(checkedBeasts).map(name => beastlist[name].regex);
   const regex = selectedRegexes.join('|');
   
   document.getElementById('beastRegexOutput').textContent = regex;
@@ -1029,7 +1029,7 @@ function updateBeastRegex() {
 // ビースト選択リセット
 function resetBeastSelection() {
   checkedBeasts.clear();
-  document.querySelectorAll('#beastListContainer input[type="checkbox"]').forEach(checkbox => {
+  document.querySelectorAll('#beastlistContainer input[type="checkbox"]').forEach(checkbox => {
     checkbox.checked = false;
   });
   updateBeastRegex();
@@ -1050,7 +1050,7 @@ function filterBeasts() {
   
   document.querySelectorAll('.beast-item').forEach(item => {
     const japaneseName = item.querySelector('.beast-name').textContent.toLowerCase();
-    const englishName = beastList[japaneseName]?.engName.toLowerCase() || '';
+    const englishName = beastlist[japaneseName]?.engName.toLowerCase() || '';
     const family = item.querySelector('.beast-family').textContent.toLowerCase();
     const effect = item.querySelector('.beast-effect').textContent.toLowerCase();
     
@@ -1089,6 +1089,6 @@ document.addEventListener('DOMContentLoaded', () => {
   
   // ビースト関連の初期化
   loadBeastCheckboxState();
-  renderBeastList();
+  renderbeastlist();
   updateBeastRegex();
 });
