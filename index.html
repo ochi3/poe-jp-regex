@@ -35,7 +35,7 @@
           Twitter <a href="https://x.com/ochi3c" style="color: #FFFFFF;">@ochi3c</a>
         <h4>不具合等ありましたらご連絡ください。</h4>
         <h4>NGMODとレアリティのフィルターは同時に使えないかもしれません、FBお待ちしております。</h4>
-        <h4>Change log<br>25/06/27<br>数値Regex仕様変更<br><br>25/06/05<br>文字数制限50→250<br></h4>
+        <h4>Change log<br>25/07/02<br>チェックボックスバグ修正<br><br>25/06/27<br>数値Regex仕様変更<br><br>25/06/05<br>文字数制限50→250<br></h4>
 
     </div>
 
@@ -62,12 +62,12 @@
                 <div class="input-group">
                     <label class="input-label" for="itemQuantityInput">
                         数量:
-                        <input type="number" id="itemQuantityInput">
+                        <input type="number" id="itemQuantityInput" onchange="updateCombinedRegex()">
                         <div class="tooltip" id="itemQuantityTooltip">この値以上の数量がマッチします。※10単位で切り捨てされます。</div>
                     </label>
                     <label class="input-label" for="packSizeInput">
                         パックサイズ:
-                        <input type="number" id="packSizeInput">
+                        <input type="number" id="packSizeInput" oninput="updateCombinedRegex()">
                         <div class="tooltip" id="packSizeTooltip">この値以上のパックサイズがマッチします。※10単位で切り捨てされます。</div>
                     </label>
                 </div>
@@ -112,7 +112,7 @@
 
                 <div class="input-group">
                     <label class="checkbox-label" for="ngModCheckbox">
-                        <input type="checkbox" id="ngModCheckbox" checked>
+                        <input type="checkbox" id="ngModCheckbox" onchange="updateCombinedRegex()" checked>
                         NG mod
                         <div class="tooltip" id="ngModTooltip">選択されたModを除外します。</div>
                     </label>
@@ -120,7 +120,7 @@
 
                 <div class="input-group">
                     <label for="mapTierCheckbox">
-                        <input type="checkbox" id="mapTierCheckbox">T17 mod
+                        <input type="checkbox" id="mapTierCheckbox" onchange="updateModList()">T17 mod
                     </label>
                 </div>
             </div>
