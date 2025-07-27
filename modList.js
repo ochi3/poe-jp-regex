@@ -944,7 +944,7 @@ const originalModList = {
    modTier17: true,
  },
  "(T17) モンスターからリーチできない": {
-   mod: "(T17) モンスターかーらリチできない",
+   mod: "(T17) モンスターからリーチできない",
    engMod: "(T17) Monsters cannot be Leeched from",
    tier: 1111,
    engRegex: "eec",
