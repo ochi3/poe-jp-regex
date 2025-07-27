@@ -1143,4 +1143,12 @@ const originalModList = {
    Regex: "亡時",
    modTier17: true,
  },
+   "(T17) プレイヤーはリーチによるライフ、マナおよびエナジーシールドの最大合計回復量が(50–60)%減少する": {
+   mod: "プレイヤーはリーチによるライフ、マナおよびエナジーシールドの最大合計回復量が(50–60)%減少する",
+   engMod: "(T17) Players have (50-60)% reduced Maximum total Life, Mana and Energy Shield Recovery per second from Leech",
+   tier: 1111,
+   engRegex: "tota",
+   Regex: "チによ",
+   modTier17: true,
+ },
 };
