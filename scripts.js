@@ -204,12 +204,12 @@ function generateExtraRegex() {
     let extraRegex = [];
 
     if (scarabValue) {
-        const scarabRegex = getFixedRangeRegex(scarabValue, currentLanguage === 'ja' ? 'ベ:.*' : 'e s.*');
+        const scarabRegex = getFixedRangeRegex(scarabValue, currentLanguage === 'ja' ? 'ベ:.*' : 're s.*');
         extraRegex.push(scarabRegex);
     }
 
     if (currencyValue) {
-        const currencyRegex = getFixedRangeRegex(currencyValue, currentLanguage === 'ja' ? 'ー:.*' : 'm rar.*');
+        const currencyRegex = getFixedRangeRegex(currencyValue, currentLanguage === 'ja' ? 'ー:.*' : 're cur.*');
         extraRegex.push(currencyRegex);
     }
 
