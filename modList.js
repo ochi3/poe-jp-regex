@@ -704,7 +704,7 @@ const originalModList = {
    modTier17: true,
  },
  "(T17) モンスターのライフが#%上昇する": {
-   mod: "(T17) モンスターのライフが#%上昇す",
+   mod: "(T17) モンスターのライフが#%上昇する",
    engMod: "(T17) #% more Monster Life",
    tier: 1111,
    engRegex: "r li",
