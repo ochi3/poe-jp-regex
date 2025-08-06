@@ -209,12 +209,12 @@ function generateExtraRegex() {
     }
 
     if (currencyValue) {
-        const currencyRegex = getFixedRangeRegex(currencyValue, currentLanguage === 'ja' ? 'ー:.*' : 'y f.*');
+        const currencyRegex = getFixedRangeRegex(currencyValue, currentLanguage === 'ja' ? 'ー:.*' : 'm rar.*');
         extraRegex.push(currencyRegex);
     }
 
     if (mapValue) {
-        const mapRegex = getFixedRangeRegex(mapValue, currentLanguage === 'ja' ? 'プ:.*' : 'ps f.*');
+        const mapRegex = getFixedRangeRegex(mapValue, currentLanguage === 'ja' ? 'プ:.*' : 're maps.*');
         extraRegex.push(mapRegex);
     }
 
