@@ -67,7 +67,6 @@ function addEffectItem(key, value) {
 
     effectItem.appendChild(checkbox);
     effectItem.appendChild(labelElem);
-
     ModListDiv.appendChild(effectItem);
 }
 
@@ -126,6 +125,7 @@ document.getElementById('rareCheckbox').addEventListener('change', () => {
 function updateCombinedRegex() {
     const itemQuantityValue = document.getElementById('itemQuantityInput').value;
     const packSizeValue = document.getElementById('packSizeInput').value;
+    const rarityValue = document.getElementById('rarityInput').value; // 新規追加
     const ngModChecked = document.getElementById('ngModCheckbox').checked;
 
     let combinedResult = '';
@@ -151,6 +151,11 @@ function updateCombinedRegex() {
     if (packSizeValue) {
         const packSizeRegex = getFixedRangeRegex(packSizeValue, currentLanguage === 'ja' ? 'ズ:.*' : 'iz.*');
         combinedResult += ` ${packSizeRegex}`;
+    }
+
+    if (rarityValue) { // 新規追加
+        const rarityRegex = getFixedRangeRegex(rarityValue, currentLanguage === 'ja' ? 'ティ:.*' : 'm rar.*');
+        combinedResult += ` ${rarityRegex}`;
     }
 
     const extraRegex = generateExtraRegex();
@@ -181,7 +186,6 @@ function updateCombinedRegex() {
     updateCharCount();
 }
 
-
 let searchAllMode = true;
 
 function updateSearchMode() {
@@ -204,17 +208,17 @@ function generateExtraRegex() {
     let extraRegex = [];
 
     if (scarabValue) {
-        const scarabRegex = getFixedRangeRegex(scarabValue, currentLanguage === 'ja' ? 'ベ:.*' : 're s.*');
+        const scarabRegex = getFixedRangeRegex(scarabValue, currentLanguage === 'ja' ? 'ラベ:.*' : 're s.*');
         extraRegex.push(scarabRegex);
     }
 
     if (currencyValue) {
-        const currencyRegex = getFixedRangeRegex(currencyValue, currentLanguage === 'ja' ? 'ー:.*' : 're cur.*');
+        const currencyRegex = getFixedRangeRegex(currencyValue, currentLanguage === 'ja' ? 'シー:.*' : 're cur.*');
         extraRegex.push(currencyRegex);
     }
 
     if (mapValue) {
-        const mapRegex = getFixedRangeRegex(mapValue, currentLanguage === 'ja' ? 'プ:.*' : 're maps.*');
+        const mapRegex = getFixedRangeRegex(mapValue, currentLanguage === 'ja' ? 'ップ:.*' : 're maps.*');
         extraRegex.push(mapRegex);
     }
 
@@ -253,6 +257,7 @@ function resetAll() {
     // Clear input fields
     document.getElementById('itemQuantityInput').value = '';
     document.getElementById('packSizeInput').value = '';
+    document.getElementById('rarityInput').value = '';
     document.getElementById('scarabInput').value = '';
     document.getElementById('currencyInput').value = '';
     document.getElementById('mapInput').value = '';
@@ -293,19 +298,19 @@ function getFixedRangeRegex(num, basePattern, optimize = false) {
   if (isNaN(num) || num < 0) return '';
   const quant = optimize ? Math.floor(num / 10) * 10 : num;
   let numberRegex;
+
   if (quant === 0) {
     return num === 0 ? `"${basePattern}0%"` : `"${basePattern}[0-${num}]%"`;
   }
+
   if (quant <= 9) {
     numberRegex = `[${quant}-9]`;
-  }
-  else if (quant === 100) {
+  } else if (quant === 100) {
     return `"${basePattern}\\d..%"`;
-  }
-  else if (quant < 100) {
+  } else if (quant < 100) {
     const str = quant.toString();
     const d0 = str[0];
-    const d1 = str[1];
+    const d1 = str[1] || '0';
     if (d1 === '0') {
       numberRegex = `[${d0}-9].|\\d..`;
     } else if (d0 === '9') {
@@ -313,26 +318,39 @@ function getFixedRangeRegex(num, basePattern, optimize = false) {
     } else {
       numberRegex = `${d0}[${d1}-9]|[${Number(d0) + 1}-9].|\\d..`;
     }
-  }
-  else if (quant < 200) {
-    const str = quant.toString().padStart(3, '0');
-    const d1 = str[1];
-    const d2 = str[2];
-    if (d2 === '0') {
-      numberRegex = `1[${d1}-9].|[2-9]..`;
-    } else if (d1 === '0') {
-      numberRegex = `\\d0[${d2}-9]|\\d[1-9].`;
-    } else if (d1 === '9' && d2 === '9') {
-      numberRegex = `199|[2-9]..`;
+  } else if (quant < 1000) {
+    // 100の倍数の場合、簡略化
+    if (quant % 100 === 0) {
+      const d0 = quant / 100;
+      numberRegex = `[${d0}-9]..`;
     } else {
-      numberRegex = d1 === '9'
-        ? `19[${d2}-9]|[2-9]..`
-        : `1([${d1}-9][${d2}-9]|[${Number(d1) + 1}-9].)|[2-9]..`;
+      // 非キリのいい数字（例: 500）は詳細なマッチ
+      const str = quant.toString();
+      const d0 = parseInt(str[0]);
+      const d1 = parseInt(str[1] || 0);
+      const d2 = parseInt(str[2] || 0);
+      let parts = [];
+
+      // d0より大きい（例: 6-9xx for 500）
+      if (d0 < 9) {
+        parts.push(`[${d0 + 1}-9]\\d\\d`);
+      }
+
+      // d0で、d1より大きい（例: 51x-59x for 500）
+      if (d1 < 9) {
+        parts.push(`${d0}[${d1 + 1}-9]\\d`);
+      }
+
+      // d0 d1で、d2以上（例: 500-509 for 500）
+      parts.push(`${d0}${d1}[${d2}-9]`);
+
+      numberRegex = parts.join('|');
     }
+  } else {
+    // 1000以上（稀だが、すべてにマッチ）
+    numberRegex = `\\d{4,}%`;
   }
-  else {
-    numberRegex = `[2-9]..`;
-  }
+
   return `"${basePattern}${quant >= 10 ? '(' + numberRegex + ')' : numberRegex}%"`;
 }
 
@@ -539,6 +557,7 @@ function saveInputState() {
     const state = {
         itemQuantity: document.getElementById('itemQuantityInput').value,
         packSize: document.getElementById('packSizeInput').value,
+        rarity: document.getElementById('rarityInput').value,
         scarab: document.getElementById('scarabInput').value,
         currency: document.getElementById('currencyInput').value,
         map: document.getElementById('mapInput').value
@@ -550,6 +569,7 @@ function loadInputState() {
     const state = JSON.parse(localStorage.getItem('inputState') || '{}');
     document.getElementById('itemQuantityInput').value = state.itemQuantity || '';
     document.getElementById('packSizeInput').value = state.packSize || '';
+    document.getElementById('rarityInput').value = state.rarity || '';
     document.getElementById('scarabInput').value = state.scarab || '';
     document.getElementById('currencyInput').value = state.currency || '';
     document.getElementById('mapInput').value = state.map || '';
@@ -624,6 +644,7 @@ document.getElementById('rareCheckbox').addEventListener('change', () => {
 const inputFields = [
     'itemQuantityInput',
     'packSizeInput',
+    'rarityInput',
     'scarabInput',
     'currencyInput',
     'mapInput'
