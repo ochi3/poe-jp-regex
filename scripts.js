@@ -16,16 +16,37 @@ function updateModList() {
 
     const isT17 = document.getElementById('mapTierCheckbox').checked;
 
-    // ModListをtierでソート
-    const sortedModList = Object.entries(ModList)
-        .filter(([key, value]) => !(!isT17 && value.modTier17))
-        .sort(([keyA, valueA], [keyB, valueB]) => valueB.tier - valueA.tier);
+    // 選択されたMODと選択されていないMODを分離
+    const selectedMods = [];
+    const unselectedMods = [];
 
-    sortedModList.forEach(([key, value]) => {
+    // ModListをフィルタリングして分類
+    Object.entries(ModList)
+        .filter(([key, value]) => !(!isT17 && value.modTier17))
+        .forEach(([key, value]) => {
+            if (checkedMods.has(key)) {
+                selectedMods.push([key, value]);
+            } else {
+                unselectedMods.push([key, value]);
+            }
+        });
+
+    // 選択されたMODをtierでソート（高い順）
+    selectedMods.sort(([keyA, valueA], [keyB, valueB]) => valueB.tier - valueA.tier);
+    
+    // 選択されていないMODをtierでソート（高い順）
+    unselectedMods.sort(([keyA, valueA], [keyB, valueB]) => valueB.tier - valueA.tier);
+
+    // 選択されたMODを先に表示
+    const sortedModList = [...selectedMods, ...unselectedMods];
+
+    sortedMods.forEach(([key, value]) => {
         addEffectItem(key, value);
     });
-}
 
+    // チェックボックスのイベントリスナーを追加
+    addModCheckboxEventListeners();
+}
 
 function addEffectItem(key, value) {
     const ModListDiv = document.getElementById('ModList');
@@ -42,6 +63,8 @@ function addEffectItem(key, value) {
         }
         saveModCheckboxState();
         updateCombinedRegex();
+        // チェック状態が変わったらリストを更新して選択されたMODを上に表示
+        updateModList();
     };
 
     const labelElem = document.createElement('label');
@@ -107,6 +130,7 @@ function generateRarityRegex() {
             : `"y: (${currentRarities.join('|')})"`;
     }
 }
+
 //保存-消すかも
 document.getElementById('normalCheckbox').addEventListener('change', () => {
     saveSearchModeState();
@@ -376,41 +400,7 @@ function filterEffects() {
     }
 }
 
-    // スクリプトの初期化を修正
-    document.addEventListener('DOMContentLoaded', () => {
-        // 初期化処理を即時実行
-        initializeApplication();
-    });
-
-    function initializeApplication() {
-        // タブ切り替えの初期化
-        const initialTab = window.location.hash.slice(1) || 'map';
-        const initialTabId = `${initialTab}Content`;
-        
-        if (document.getElementById(initialTabId)) {
-            switchTab(initialTabId);
-        } else {
-            switchTab('mapContent');
-            history.replaceState(null, '', '#map');
-        }
-
-        // イベントリスナーの設定
-        window.addEventListener('hashchange', handleHashChange);
-        
-        document.querySelectorAll('#sideMenu .nav-link').forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                const tabId = this.dataset.tab;
-                switchTab(tabId);
-            });
-        });
-
-        // その他の初期化処理
-        loadInitialData();
-        setupEventListeners();
-    }
-
-// タブ切り替え関数（ハッシュ対応版）
+// タブ切り替え関数（修正版）
 function switchTab(tabId) {
     // すべてのコンテンツを非表示
     document.querySelectorAll('.tab-content').forEach(content => {
@@ -438,7 +428,6 @@ function switchTab(tabId) {
     }
 }
 
-
 // ハッシュ変更を監視してタブ切り替え
 function handleHashChange() {
     const tabName = window.location.hash.slice(1) || 'map';
@@ -454,6 +443,48 @@ function handleHashChange() {
     }
 }
 
+// アプリケーション初期化（修正版）
+function initializeApplication() {
+    console.log('Initializing application...');
+    
+    // ハッシュに基づいて初期タブを設定
+    const initialTab = window.location.hash.slice(1) || 'map';
+    const initialTabId = `${initialTab}Content`;
+    
+    console.log('Initial tab:', initialTab, 'Tab ID:', initialTabId);
+    
+    if (document.getElementById(initialTabId)) {
+        switchTab(initialTabId);
+    } else {
+        console.log('Defaulting to map tab');
+        switchTab('mapContent');
+        history.replaceState(null, '', '#map');
+    }
+
+    // イベントリスナーの設定
+    window.addEventListener('hashchange', handleHashChange);
+    
+    document.querySelectorAll('#sideMenu .nav-link').forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const tabId = this.dataset.tab;
+            console.log('Tab clicked:', tabId);
+            switchTab(tabId);
+        });
+    });
+
+    // 状態復元
+    loadCheckboxState();
+    loadInputState();
+    loadModCheckboxState();
+    loadSearchModeState();
+    
+    // UI更新
+    updateModList();
+    updateCombinedRegex();
+    
+    console.log('Application initialized successfully');
+}
 
 function initializeTooltips() {
     document.querySelectorAll('.effect-item').forEach(item => {
@@ -512,8 +543,6 @@ function addModCheckboxEventListeners() {
     });
 }
 
-
-
 // MODリストの更新後にイベントリスナーを追加
 function updateModList() {
     const ModListDiv = document.getElementById('ModList');
@@ -521,10 +550,29 @@ function updateModList() {
 
     const isT17 = document.getElementById('mapTierCheckbox').checked;
 
-    // ModListをtierでソート
-    const sortedModList = Object.entries(ModList)
+    // 選択されたMODと選択されていないMODを分離
+    const selectedMods = [];
+    const unselectedMods = [];
+
+    // ModListをフィルタリングして分類
+    Object.entries(ModList)
         .filter(([key, value]) => !(value.modTier17 && !isT17))
-        .sort(([keyA, valueA], [keyB, valueB]) => valueB.tier - valueA.tier);
+        .forEach(([key, value]) => {
+            if (checkedMods.has(key)) {
+                selectedMods.push([key, value]);
+            } else {
+                unselectedMods.push([key, value]);
+            }
+        });
+
+    // 選択されたMODをtierでソート（高い順）
+    selectedMods.sort(([keyA, valueA], [keyB, valueB]) => valueB.tier - valueA.tier);
+    
+    // 選択されていないMODをtierでソート（高い順）
+    unselectedMods.sort(([keyA, valueA], [keyB, valueB]) => valueB.tier - valueA.tier);
+
+    // 選択されたMODを先に表示
+    const sortedModList = [...selectedMods, ...unselectedMods];
 
     sortedModList.forEach(([key, value]) => {
         addEffectItem(key, value);
@@ -533,8 +581,6 @@ function updateModList() {
     // チェックボックスのイベントリスナーを追加
     addModCheckboxEventListeners();
 }
-
-
 
 function loadModCheckboxState() {
     const state = JSON.parse(localStorage.getItem('modCheckboxState') || '{}');
@@ -575,27 +621,14 @@ function loadInputState() {
     document.getElementById('mapInput').value = state.map || '';
 }
 
-
 // チェックボックスの状態を保存するイベントリスナーを追加
 document.getElementById('ngModCheckbox').addEventListener('change', saveCheckboxState);
 document.getElementById('mapTierCheckbox').addEventListener('change', saveCheckboxState);
 
-// ページロード時にチェックボックスの状態を復元
-document.addEventListener('DOMContentLoaded', loadCheckboxState);
-
-
-document.addEventListener('DOMContentLoaded', () => {
-document.getElementById('normalCheckbox').addEventListener('change', updateCombinedRegex);
-document.getElementById('magicCheckbox').addEventListener('change', updateCombinedRegex);
-document.getElementById('rareCheckbox').addEventListener('change', updateCombinedRegex);
-document.getElementById('searchAllRadio').addEventListener('change', updateSearchMode);
-document.getElementById('searchAnyRadio').addEventListener('change', updateSearchMode);
-
-loadInputState();
-//一時的に
+// 検索モードの状態を保存する関数
 function saveSearchModeState() {
     const state = {
-        searchMode: searchAllMode ? 'all' : 'any',
+        searchMode: document.querySelector('input[name="searchMode"]:checked')?.value || 'any',
         rarityChecked: {
             normal: document.getElementById('normalCheckbox').checked,
             magic: document.getElementById('magicCheckbox').checked,
@@ -605,66 +638,25 @@ function saveSearchModeState() {
     localStorage.setItem('searchModeState', JSON.stringify(state));
 }
 
+// 検索モードの状態を読み込む関数
 function loadSearchModeState() {
     const state = JSON.parse(localStorage.getItem('searchModeState') || '{}');
-    if (state.searchMode === 'any') {
-        document.getElementById('searchAnyRadio').checked = true;
-    } else {
-        document.getElementById('searchAllRadio').checked = true;
+    
+    // 検索モードを設定
+    const searchMode = state.searchMode || 'any';
+    const searchModeRadio = document.querySelector(`input[name="searchMode"][value="${searchMode}"]`);
+    if (searchModeRadio) {
+        searchModeRadio.checked = true;
     }
+    
+    // レアリティチェックボックスを設定
     document.getElementById('normalCheckbox').checked = state.rarityChecked?.normal || false;
     document.getElementById('magicCheckbox').checked = state.rarityChecked?.magic || false;
     document.getElementById('rareCheckbox').checked = state.rarityChecked?.rare || false;
-    updateSearchMode();
+    
+    // 検索モード変数を更新
+    searchAllMode = searchMode === 'all';
 }
-function updateSearchMode() {
-    searchAllMode = document.getElementById('searchAllRadio').checked;
-    saveSearchModeState();
-    updateCombinedRegex();
-}
-//一時的に
-
-
-document.getElementById('searchAllRadio').addEventListener('change', updateSearchMode);
-document.getElementById('searchAnyRadio').addEventListener('change', updateSearchMode);
-
-document.getElementById('normalCheckbox').addEventListener('change', () => {
-    saveSearchModeState();
-    updateCombinedRegex();
-});
-document.getElementById('magicCheckbox').addEventListener('change', () => {
-    saveSearchModeState();
-    updateCombinedRegex();
-});
-document.getElementById('rareCheckbox').addEventListener('change', () => {
-    saveSearchModeState();
-    updateCombinedRegex();
-});
-
-const inputFields = [
-    'itemQuantityInput',
-    'packSizeInput',
-    'rarityInput',
-    'scarabInput',
-    'currencyInput',
-    'mapInput'
-];
-
-inputFields.forEach(fieldId => {
-    const field = document.getElementById(fieldId);
-    field.addEventListener('input', () => {
-        saveInputState();
-        updateCombinedRegex();
-    });
-});
-
-    loadModCheckboxState();
-    loadSearchModeState();
-    updateModList();
-    switchFunction('map');
-    initializeTooltips();
-    updateCombinedRegex();
-});
 
 // プロファイル関連の関数群
 let profiles = {};
@@ -692,6 +684,7 @@ function saveProfile() {
     settings: {
       itemQuantity: document.getElementById('itemQuantityInput').value,
       packSize: document.getElementById('packSizeInput').value,
+      rarity: document.getElementById('rarityInput').value,
       scarab: document.getElementById('scarabInput').value,
       currency: document.getElementById('currencyInput').value,
       map: document.getElementById('mapInput').value,
@@ -736,6 +729,7 @@ function loadProfile() {
     // 入力値復元
     document.getElementById('itemQuantityInput').value = profile.settings.itemQuantity || '';
     document.getElementById('packSizeInput').value = profile.settings.packSize || '';
+    document.getElementById('rarityInput').value = profile.settings.rarity || '';
     document.getElementById('scarabInput').value = profile.settings.scarab || '';
     document.getElementById('currencyInput').value = profile.settings.currency || '';
     document.getElementById('mapInput').value = profile.settings.map || '';
@@ -757,6 +751,9 @@ function loadProfile() {
       if (ModList[mod]) checkedMods.add(mod);
     });
 
+    // プロファイル名を入力欄に表示
+    document.getElementById('profileName').value = profileName;
+
     // ローカルストレージ更新
     localStorage.setItem('modCheckboxState', JSON.stringify(
       Object.fromEntries([...checkedMods].map(mod => [mod, true]))
@@ -765,7 +762,6 @@ function loadProfile() {
     // UI強制更新
     updateModList();
     updateCombinedRegex();
-    document.getElementById('profileName').value = profileName;
 
     // イベントトリガー
     ['change', 'input'].forEach(event => {
@@ -817,6 +813,7 @@ function validateInputs() {
   const inputs = [
     'itemQuantityInput',
     'packSizeInput',
+    'rarityInput',
     'scarabInput',
     'currencyInput',
     'mapInput'
@@ -843,17 +840,52 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-});
-document.addEventListener('DOMContentLoaded', () => {
-  // 既存の初期化処理...
+  // プロファイル読み込み
+  const savedProfiles = localStorage.getItem('poeProfiles');
+  if (savedProfiles) {
+    profiles = JSON.parse(savedProfiles);
+    updateProfileList();
+  }
 
-  // プロファイル読み込み後に強制更新を追加
-  loadModCheckboxState();
-  loadInputState();
-  loadCheckboxState();
-  loadSearchModeState();
-  updateModList();
-  updateCombinedRegex();
+  // 検索モード関連のイベントリスナー
+  document.getElementById('searchAllRadio').addEventListener('change', updateSearchMode);
+  document.getElementById('searchAnyRadio').addEventListener('change', updateSearchMode);
+
+  document.getElementById('normalCheckbox').addEventListener('change', () => {
+    saveSearchModeState();
+    updateCombinedRegex();
+  });
+  document.getElementById('magicCheckbox').addEventListener('change', () => {
+    saveSearchModeState();
+    updateCombinedRegex();
+  });
+  document.getElementById('rareCheckbox').addEventListener('change', () => {
+    saveSearchModeState();
+    updateCombinedRegex();
+  });
+
+  const inputFields = [
+    'itemQuantityInput',
+    'packSizeInput',
+    'rarityInput',
+    'scarabInput',
+    'currencyInput',
+    'mapInput'
+  ];
+
+  inputFields.forEach(fieldId => {
+    const field = document.getElementById(fieldId);
+    field.addEventListener('input', () => {
+      saveInputState();
+      updateCombinedRegex();
+    });
+  });
+
+  // メイン初期化
+  initializeApplication();
+  
+  // ツールチップ初期化
+  initializeTooltips();
 });
 
 // プロファイル削除

@@ -1,0 +1,951 @@
+{
+  "bases": [
+    "Metadata/Items/Flasks/FlaskLife1",
+    "Metadata/Items/Flasks/FlaskLife2",
+    "Metadata/Items/Flasks/FlaskLife3",
+    "Metadata/Items/Flasks/FlaskLife4",
+    "Metadata/Items/Flasks/FlaskLife5",
+    "Metadata/Items/Flasks/FlaskLife6",
+    "Metadata/Items/Flasks/FlaskLife7",
+    "Metadata/Items/Flasks/FlaskLife8",
+    "Metadata/Items/Flasks/FlaskLife9",
+    "Metadata/Items/Flasks/FlaskLife10",
+    "Metadata/Items/Flasks/FlaskLife1Royale",
+    "Metadata/Items/Flasks/FlaskLife2Royale",
+    "Metadata/Items/Flasks/FlaskLife3Royale"
+  ],
+  "mods": {
+    "prefix": {
+      "FlaskIncreasedRecoverySpeed": [
+        {
+          "key": "FlaskIncreasedRecoverySpeed1",
+          "text": "回復レートが(41-46)%増加する",
+          "name": "無希釈の",
+          "tag": "utility_flask",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 600
+        },
+        {
+          "key": "FlaskIncreasedRecoverySpeed2",
+          "text": "回復レートが(47-52)%増加する",
+          "name": "濃い",
+          "tag": "utility_flask",
+          "generation_type": "prefix",
+          "required_level": 21,
+          "weight": 600
+        },
+        {
+          "key": "FlaskIncreasedRecoverySpeed3_",
+          "text": "回復レートが(53-58)%増加する",
+          "name": "ねっとりした",
+          "tag": "utility_flask",
+          "generation_type": "prefix",
+          "required_level": 41,
+          "weight": 600
+        },
+        {
+          "key": "FlaskIncreasedRecoverySpeed4",
+          "text": "回復レートが(59-64)%増加する",
+          "name": "凝縮した",
+          "tag": "utility_flask",
+          "generation_type": "prefix",
+          "required_level": 61,
+          "weight": 600
+        },
+        {
+          "key": "FlaskIncreasedRecoverySpeed5",
+          "text": "回復レートが(65-70)%増加する",
+          "name": "触媒作用の",
+          "tag": "utility_flask",
+          "generation_type": "prefix",
+          "required_level": 81,
+          "weight": 600
+        }
+      ],
+      "FlaskIncreasedRecoveryAmount": [
+        {
+          "key": "FlaskIncreasedRecoveryAmount1",
+          "text": "回復量が(41-46)%増加する\n回復レートが33%減少する",
+          "name": "実のある",
+          "tag": "utility_flask",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 600
+        },
+        {
+          "key": "FlaskIncreasedRecoveryAmount2_",
+          "text": "回復量が(47-52)%増加する\n回復レートが33%減少する",
+          "name": "不透明な",
+          "tag": "utility_flask",
+          "generation_type": "prefix",
+          "required_level": 21,
+          "weight": 600
+        },
+        {
+          "key": "FlaskIncreasedRecoveryAmount3",
+          "text": "回復量が(53-58)%増加する\n回復レートが33%減少する",
+          "name": "濃厚な",
+          "tag": "utility_flask",
+          "generation_type": "prefix",
+          "required_level": 41,
+          "weight": 600
+        },
+        {
+          "key": "FlaskIncreasedRecoveryAmount4",
+          "text": "回復量が(59-64)%増加する\n回復レートが33%減少する",
+          "name": "濃縮した",
+          "tag": "utility_flask",
+          "generation_type": "prefix",
+          "required_level": 61,
+          "weight": 600
+        },
+        {
+          "key": "FlaskIncreasedRecoveryAmount5",
+          "text": "回復量が(65-70)%増加する\n回復レートが33%減少する",
+          "name": "飽和した",
+          "tag": "utility_flask",
+          "generation_type": "prefix",
+          "required_level": 81,
+          "weight": 600
+        }
+      ],
+      "FlaskIncreasedRecoveryOnLowLife": [
+        {
+          "key": "FlaskIncreasedRecoveryOnLowLife1",
+          "text": "低ライフ時に使用すると回復量が(101-106)%上昇する",
+          "name": "慎重な",
+          "tag": "utility_flask",
+          "generation_type": "prefix",
+          "required_level": 6,
+          "weight": 600
+        },
+        {
+          "key": "FlaskIncreasedRecoveryOnLowLife2_",
+          "text": "低ライフ時に使用すると回復量が(107-112)%上昇する",
+          "name": "準備のいい",
+          "tag": "utility_flask",
+          "generation_type": "prefix",
+          "required_level": 25,
+          "weight": 600
+        },
+        {
+          "key": "FlaskIncreasedRecoveryOnLowLife3",
+          "text": "低ライフ時に使用すると回復量が(113-118)%上昇する",
+          "name": "入念な",
+          "tag": "utility_flask",
+          "generation_type": "prefix",
+          "required_level": 44,
+          "weight": 600
+        },
+        {
+          "key": "FlaskIncreasedRecoveryOnLowLife4",
+          "text": "低ライフ時に使用すると回復量が(119-124)%上昇する",
+          "name": "注意深い",
+          "tag": "utility_flask",
+          "generation_type": "prefix",
+          "required_level": 63,
+          "weight": 600
+        },
+        {
+          "key": "FlaskIncreasedRecoveryOnLowLife5",
+          "text": "低ライフ時に使用すると回復量が(125-130)%上昇する",
+          "name": "用心深い",
+          "tag": "utility_flask",
+          "generation_type": "prefix",
+          "required_level": 82,
+          "weight": 600
+        }
+      ],
+      "FlaskInstantRecoveryOnLowLife": [
+        {
+          "key": "FlaskInstantRecoveryOnLowLife1",
+          "text": "低ライフ時に即時回復になる\n回復量が(30-27)%減少する",
+          "name": "驚く",
+          "tag": "utility_flask",
+          "generation_type": "prefix",
+          "required_level": 9,
+          "weight": 600
+        },
+        {
+          "key": "FlaskInstantRecoveryOnLowLife2",
+          "text": "低ライフ時に即時回復になる\n回復量が(26-23)%減少する",
+          "name": "恐れる",
+          "tag": "utility_flask",
+          "generation_type": "prefix",
+          "required_level": 27,
+          "weight": 600
+        },
+        {
+          "key": "FlaskInstantRecoveryOnLowLife3",
+          "text": "低ライフ時に即時回復になる\n回復量が(22-19)%減少する",
+          "name": "警戒する",
+          "tag": "utility_flask",
+          "generation_type": "prefix",
+          "required_level": 45,
+          "weight": 600
+        },
+        {
+          "key": "FlaskInstantRecoveryOnLowLife4",
+          "text": "低ライフ時に即時回復になる\n回復量が(18-15)%減少する",
+          "name": "恐怖する",
+          "tag": "utility_flask",
+          "generation_type": "prefix",
+          "required_level": 63,
+          "weight": 600
+        },
+        {
+          "key": "FlaskInstantRecoveryOnLowLife5__",
+          "text": "低ライフ時に即時回復になる\n回復量が(14-11)%減少する",
+          "name": "狼狽する",
+          "tag": "utility_flask",
+          "generation_type": "prefix",
+          "required_level": 81,
+          "weight": 600
+        }
+      ],
+      "FlaskPartialInstantRecovery": [
+        {
+          "key": "FlaskPartialInstantRecovery1",
+          "text": "回復量の50%が即時適用される\n回復量が(55-52)%減少する\n回復レートが135%増加する",
+          "name": "煮え立つ",
+          "tag": "utility_flask",
+          "generation_type": "prefix",
+          "required_level": 3,
+          "weight": 600
+        },
+        {
+          "key": "FlaskPartialInstantRecovery2",
+          "text": "回復量の50%が即時適用される\n回復量が(51-48)%減少する\n回復レートが135%増加する",
+          "name": "迸る",
+          "tag": "utility_flask",
+          "generation_type": "prefix",
+          "required_level": 22,
+          "weight": 600
+        },
+        {
+          "key": "FlaskPartialInstantRecovery3",
+          "text": "回復量の50%が即時適用される\n回復量が(47-44)%減少する\n回復レートが135%増加する",
+          "name": "溢れ出る",
+          "tag": "utility_flask",
+          "generation_type": "prefix",
+          "required_level": 41,
+          "weight": 600
+        },
+        {
+          "key": "FlaskPartialInstantRecovery4",
+          "text": "回復量の50%が即時適用される\n回復量が(43-40)%減少する\n回復レートが135%増加する",
+          "name": "沸騰した",
+          "tag": "utility_flask",
+          "generation_type": "prefix",
+          "required_level": 60,
+          "weight": 600
+        },
+        {
+          "key": "FlaskPartialInstantRecovery5_",
+          "text": "回復量の50%が即時適用される\n回復量が(39-36)%減少する\n回復レートが135%増加する",
+          "name": "泡立つ",
+          "tag": "utility_flask",
+          "generation_type": "prefix",
+          "required_level": 79,
+          "weight": 600
+        }
+      ],
+      "FlaskFullInstantRecovery": [
+        {
+          "key": "FlaskFullInstantRecovery1",
+          "text": "即時回復\n回復量が66%減少する",
+          "name": "沸き立つ",
+          "tag": "utility_flask",
+          "generation_type": "prefix",
+          "required_level": 7,
+          "weight": 3000
+        }
+      ],
+      "FlaskExtraLifeCostsMana": [
+        {
+          "key": "FlaskExtraLifeCostsMana1",
+          "text": "ライフ回復量が(35-39)%増加する\n使用した時に回復したライフの10%をマナから取り除く",
+          "name": "阻害する",
+          "tag": "utility_flask",
+          "generation_type": "prefix",
+          "required_level": 13,
+          "weight": 600
+        },
+        {
+          "key": "FlaskExtraLifeCostsMana2",
+          "text": "ライフ回復量が(40-44)%増加する\n使用した時に回復したライフの10%をマナから取り除く",
+          "name": "目眩のする",
+          "tag": "utility_flask",
+          "generation_type": "prefix",
+          "required_level": 30,
+          "weight": 600
+        },
+        {
+          "key": "FlaskExtraLifeCostsMana3",
+          "text": "ライフ回復量が(46-50)%増加する\n使用した時に回復したライフの10%をマナから取り除く",
+          "name": "消耗する",
+          "tag": "utility_flask",
+          "generation_type": "prefix",
+          "required_level": 47,
+          "weight": 600
+        },
+        {
+          "key": "FlaskExtraLifeCostsMana4",
+          "text": "ライフ回復量が(51-55)%増加する\n使用した時に回復したライフの10%をマナから取り除く",
+          "name": "弱化する",
+          "tag": "utility_flask",
+          "generation_type": "prefix",
+          "required_level": 64,
+          "weight": 600
+        },
+        {
+          "key": "FlaskExtraLifeCostsMana5_",
+          "text": "ライフ回復量が(56-60)%増加する\n使用した時に回復したライフの10%をマナから取り除く",
+          "name": "搾り取る",
+          "tag": "utility_flask",
+          "generation_type": "prefix",
+          "required_level": 81,
+          "weight": 600
+        }
+      ],
+      "FlaskExtraMaxCharges": [
+        {
+          "key": "FlaskExtraCharges1",
+          "text": "最大チャージ数 +(16-19)",
+          "name": "広い",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 2,
+          "weight": 600
+        },
+        {
+          "key": "FlaskExtraCharges2__",
+          "text": "最大チャージ数 +(20-23)",
+          "name": "多量の",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 22,
+          "weight": 600
+        },
+        {
+          "key": "FlaskExtraCharges3_",
+          "text": "最大チャージ数 +(24-27)",
+          "name": "豊潤な",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 42,
+          "weight": 600
+        },
+        {
+          "key": "FlaskExtraCharges4__",
+          "text": "最大チャージ数 +(28-31)",
+          "name": "豊かな",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 62,
+          "weight": 600
+        },
+        {
+          "key": "FlaskExtraCharges5",
+          "text": "最大チャージ数 +(32-35)",
+          "name": "潤沢な",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 82,
+          "weight": 600
+        }
+      ],
+      "FlaskIncreasedChargesAdded": [
+        {
+          "key": "FlaskChargesAddedIncreasePercent1",
+          "text": "チャージ回復量が(16-20)%増加する",
+          "name": "常在の",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 3,
+          "weight": 600
+        },
+        {
+          "key": "FlaskChargesAddedIncreasePercent2_",
+          "text": "チャージ回復量が(21-25)%増加する",
+          "name": "絶え間なき",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 23,
+          "weight": 600
+        },
+        {
+          "key": "FlaskChargesAddedIncreasePercent3_",
+          "text": "チャージ回復量が(26-30)%増加する",
+          "name": "果てなき",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 43,
+          "weight": 600
+        },
+        {
+          "key": "FlaskChargesAddedIncreasePercent4_",
+          "text": "チャージ回復量が(31-45)%増加する",
+          "name": "底なしの",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 63,
+          "weight": 600
+        },
+        {
+          "key": "FlaskChargesAddedIncreasePercent5__",
+          "text": "チャージ回復量が(46-50)%増加する",
+          "name": "永久なる",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 83,
+          "weight": 600
+        }
+      ],
+      "FlaskChanceRechargeOnCrit": [
+        {
+          "key": "FlaskChanceRechargeOnCrit1",
+          "text": "プレイヤーがクリティカルストライクを与えた時に(11-15)%の確率でフラスコチャージを1獲得する",
+          "name": "衛生兵の",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 8,
+          "weight": 600
+        },
+        {
+          "key": "FlaskChanceRechargeOnCrit2",
+          "text": "プレイヤーがクリティカルストライクを与えた時に(16-20)%の確率でフラスコチャージを1獲得する",
+          "name": "医師の",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 26,
+          "weight": 600
+        },
+        {
+          "key": "FlaskChanceRechargeOnCrit3___",
+          "text": "プレイヤーがクリティカルストライクを与えた時に(21-25)%の確率でフラスコチャージを1獲得する",
+          "name": "医者の",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 44,
+          "weight": 600
+        },
+        {
+          "key": "FlaskChanceRechargeOnCrit4",
+          "text": "プレイヤーがクリティカルストライクを与えた時に(26-30)%の確率でフラスコチャージを1獲得する",
+          "name": "専門医の",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 62,
+          "weight": 600
+        },
+        {
+          "key": "FlaskChanceRechargeOnCrit5",
+          "text": "プレイヤーがクリティカルストライクを与えた時に(31-35)%の確率でフラスコチャージを1獲得する",
+          "name": "外科医の",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 80,
+          "weight": 600
+        }
+      ],
+      "FlaskChargesUsed": [
+        {
+          "key": "FlaskChargesUsed1",
+          "text": "使用に必要なチャージ量が(16-14)%減少する",
+          "name": "弟子の",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 14,
+          "weight": 600
+        },
+        {
+          "key": "FlaskChargesUsed2",
+          "text": "使用に必要なチャージ量が(19-17)%減少する",
+          "name": "学者の",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 31,
+          "weight": 600
+        },
+        {
+          "key": "FlaskChargesUsed3__",
+          "text": "使用に必要なチャージ量が(22-20)%減少する",
+          "name": "実践者の",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 48,
+          "weight": 600
+        },
+        {
+          "key": "FlaskChargesUsed4__",
+          "text": "使用に必要なチャージ量が(25-23)%減少する",
+          "name": "醸造者の",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 65,
+          "weight": 600
+        },
+        {
+          "key": "FlaskChargesUsed5",
+          "text": "使用に必要なチャージ量が(28-26)%減少する",
+          "name": "化学者の",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 82,
+          "weight": 600
+        }
+      ],
+      "FlaskFullRechargeOnHit": [
+        {
+          "key": "FlaskFullRechargeOnHit2_",
+          "text": "敵によるヒットを受けた時にチャージを1獲得する",
+          "name": "違反者の",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 29,
+          "weight": 600
+        },
+        {
+          "key": "FlaskFullRechargeOnHit4_",
+          "text": "敵によるヒットを受けた時にチャージを2獲得する",
+          "name": "マゾヒストの",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 63,
+          "weight": 600
+        },
+        {
+          "key": "FlaskFullRechargeOnHit5___",
+          "text": "敵によるヒットを受けた時にチャージを3獲得する",
+          "name": "鞭打苦行者の",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 80,
+          "weight": 600
+        }
+      ],
+      "FlaskIncreasedHealingCharges": [
+        {
+          "key": "FlaskIncreasedHealingCharges1",
+          "text": "回復量が(21-26)%増加する\n使用に必要なチャージ量が(20-25)%増加する",
+          "name": "硝酸塩の",
+          "tag": "utility_flask",
+          "generation_type": "prefix",
+          "required_level": 10,
+          "weight": 600
+        },
+        {
+          "key": "FlaskIncreasedHealingCharges2",
+          "text": "回復量が(27-32)%増加する\n使用に必要なチャージ量が(20-25)%増加する",
+          "name": "苦灰石の",
+          "tag": "utility_flask",
+          "generation_type": "prefix",
+          "required_level": 28,
+          "weight": 600
+        },
+        {
+          "key": "FlaskIncreasedHealingCharges3",
+          "text": "回復量が(33-38)%増加する\n使用に必要なチャージ量が(20-25)%増加する",
+          "name": "キーゼル石の",
+          "tag": "utility_flask",
+          "generation_type": "prefix",
+          "required_level": 46,
+          "weight": 600
+        },
+        {
+          "key": "FlaskIncreasedHealingCharges4____",
+          "text": "回復量が(39-44)%増加する\n使用に必要なチャージ量が(20-25)%増加する",
+          "name": "カイナイトの",
+          "tag": "utility_flask",
+          "generation_type": "prefix",
+          "required_level": 64,
+          "weight": 600
+        },
+        {
+          "key": "FlaskIncreasedHealingCharges5",
+          "text": "回復量が(45-50)%増加する\n使用に必要なチャージ量が(20-25)%増加する",
+          "name": "石膏の",
+          "tag": "utility_flask",
+          "generation_type": "prefix",
+          "required_level": 82,
+          "weight": 600
+        }
+      ]
+    },
+    "suffix": {
+      "FlaskHealsMinions": [
+        {
+          "key": "FlaskHealsMinions1",
+          "text": "ライフ回復の(100-119)%をミニオンに付与する",
+          "name": "初心者の",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 10,
+          "weight": 600
+        },
+        {
+          "key": "FlaskHealsMinions2",
+          "text": "ライフ回復の(120-139)%をミニオンに付与する",
+          "name": "侍祭の",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 28,
+          "weight": 600
+        },
+        {
+          "key": "FlaskHealsMinions3",
+          "text": "ライフ回復の(140-159)%をミニオンに付与する",
+          "name": "召喚師の",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 46,
+          "weight": 600
+        },
+        {
+          "key": "FlaskHealsMinions4____",
+          "text": "ライフ回復の(160-179)%をミニオンに付与する",
+          "name": "祈祷師の",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 64,
+          "weight": 600
+        },
+        {
+          "key": "FlaskHealsMinions5",
+          "text": "ライフ回復の(180-200)%をミニオンに付与する",
+          "name": "死霊術師の",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 82,
+          "weight": 600
+        }
+      ],
+      "FlaskCurseImmunity": [
+        {
+          "key": "FlaskCurseImmunity1",
+          "text": "使用した時に呪いを取り除く",
+          "name": "守衛の",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 18,
+          "weight": 3000
+        }
+      ],
+      "LocalLifeFlaskHinderNearbyEnemies": [
+        {
+          "key": "LocalLifeFlaskHinderNearbyEnemies1_",
+          "text": "フルライフでない時に使用すると近くの敵に阻害を与えその移動スピードを(17-22)%減少させる",
+          "name": "邪魔の",
+          "tag": "mana_flask",
+          "generation_type": "suffix",
+          "required_level": 30,
+          "weight": 750
+        },
+        {
+          "key": "LocalLifeFlaskHinderNearbyEnemies2_",
+          "text": "フルライフでない時に使用すると近くの敵に阻害を与えその移動スピードを(23-28)%減少させる",
+          "name": "妨害の",
+          "tag": "mana_flask",
+          "generation_type": "suffix",
+          "required_level": 48,
+          "weight": 750
+        },
+        {
+          "key": "LocalLifeFlaskHinderNearbyEnemies3_",
+          "text": "フルライフでない時に使用すると近くの敵に阻害を与えその移動スピードを(29-34)%減少させる",
+          "name": "閉鎖の",
+          "tag": "mana_flask",
+          "generation_type": "suffix",
+          "required_level": 66,
+          "weight": 750
+        },
+        {
+          "key": "LocalLifeFlaskHinderNearbyEnemies4",
+          "text": "フルライフでない時に使用すると近くの敵に阻害を与えその移動スピードを(35-40)%減少させる",
+          "name": "拘束の",
+          "tag": "mana_flask",
+          "generation_type": "suffix",
+          "required_level": 84,
+          "weight": 750
+        }
+      ],
+      "LocalFlaskImmuneToMaimAndHinder": [
+        {
+          "key": "LocalFlaskImmuneToMaimAndHinder1",
+          "text": "阻害状態で使用すると阻害の完全耐性を(6-8)秒間付与する\n重傷状態で使用すると重傷の完全耐性を(6-8)秒間付与する",
+          "name": "移動の",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 16,
+          "weight": 750
+        },
+        {
+          "key": "LocalFlaskImmuneToMaimAndHinder2",
+          "text": "阻害状態で使用すると阻害の完全耐性を(9-11)秒間付与する\n重傷状態で使用すると重傷の完全耐性を(9-11)秒間付与する",
+          "name": "動作の",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 38,
+          "weight": 750
+        },
+        {
+          "key": "LocalFlaskImmuneToMaimAndHinder3",
+          "text": "阻害状態で使用すると阻害の完全耐性を(12-14)秒間付与する\n重傷状態で使用すると重傷の完全耐性を(12-14)秒間付与する",
+          "name": "自由の",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 60,
+          "weight": 750
+        },
+        {
+          "key": "LocalFlaskImmuneToMaimAndHinder4",
+          "text": "阻害状態で使用すると阻害の完全耐性を(15-17)秒間付与する\n重傷状態で使用すると重傷の完全耐性を(15-17)秒間付与する",
+          "name": "解放の",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 82,
+          "weight": 750
+        }
+      ],
+      "LocalLifeFlaskAdditionalLifeRecovery": [
+        {
+          "key": "LocalLifeFlaskAdditionalLifeRecovery1",
+          "text": "フルライフでない時に使用するとフラスコのライフ回復量の(11-16)%を追加で10秒かけて回復する",
+          "name": "豊富さの",
+          "tag": "life_flask",
+          "generation_type": "suffix",
+          "required_level": 25,
+          "weight": 600
+        },
+        {
+          "key": "LocalLifeFlaskAdditionalLifeRecovery2__",
+          "text": "フルライフでない時に使用するとフラスコのライフ回復量の(17-22)%を追加で10秒かけて回復する",
+          "name": "豊作の",
+          "tag": "life_flask",
+          "generation_type": "suffix",
+          "required_level": 39,
+          "weight": 600
+        },
+        {
+          "key": "LocalLifeFlaskAdditionalLifeRecovery3",
+          "text": "フルライフでない時に使用するとフラスコのライフ回復量の(23-28)%を追加で10秒かけて回復する",
+          "name": "恵みの",
+          "tag": "life_flask",
+          "generation_type": "suffix",
+          "required_level": 53,
+          "weight": 600
+        },
+        {
+          "key": "LocalLifeFlaskAdditionalLifeRecovery4",
+          "text": "フルライフでない時に使用するとフラスコのライフ回復量の(29-34)%を追加で10秒かけて回復する",
+          "name": "持続の",
+          "tag": "life_flask",
+          "generation_type": "suffix",
+          "required_level": 67,
+          "weight": 600
+        },
+        {
+          "key": "LocalLifeFlaskAdditionalLifeRecovery5_",
+          "text": "フルライフでない時に使用するとフラスコのライフ回復量の(35-40)%を追加で10秒かけて回復する",
+          "name": "長期の",
+          "tag": "life_flask",
+          "generation_type": "suffix",
+          "required_level": 81,
+          "weight": 600
+        }
+      ],
+      "FlaskBleedCorruptingBloodImmunity": [
+        {
+          "key": "FlaskBleedCorruptingBloodImmunity1",
+          "text": "出血状態で使用すると出血の完全耐性を(6-8)秒間付与する\n穢れた血の影響下で使用すると穢れた血の完全耐性を(6-8)秒間付与する",
+          "name": "防水の",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 8,
+          "weight": 750
+        },
+        {
+          "key": "FlaskBleedCorruptingBloodImmunity2",
+          "text": "出血状態で使用すると出血の完全耐性を(9-11)秒間付与する\n穢れた血の影響下で使用すると穢れた血の完全耐性を(9-11)秒間付与する",
+          "name": "鎮痛の",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 32,
+          "weight": 750
+        },
+        {
+          "key": "FlaskBleedCorruptingBloodImmunity3______",
+          "text": "出血状態で使用すると出血の完全耐性を(12-14)秒間付与する\n穢れた血の影響下で使用すると穢れた血の完全耐性を(12-14)秒間付与する",
+          "name": "緩和の",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 56,
+          "weight": 750
+        },
+        {
+          "key": "FlaskBleedCorruptingBloodImmunity4_",
+          "text": "出血状態で使用すると出血の完全耐性を(15-17)秒間付与する\n穢れた血の影響下で使用すると穢れた血の完全耐性を(15-17)秒間付与する",
+          "name": "和らげの",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 80,
+          "weight": 750
+        }
+      ],
+      "FlaskShockImmunity": [
+        {
+          "key": "FlaskShockImmunity1",
+          "text": "感電状態で使用すると感電の完全耐性を(6-8)秒間付与する",
+          "name": "避雷の",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 6,
+          "weight": 750
+        },
+        {
+          "key": "FlaskShockImmunity2",
+          "text": "感電状態で使用すると感電の完全耐性を(9-11)秒間付与する",
+          "name": "接地の",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 30,
+          "weight": 750
+        },
+        {
+          "key": "FlaskShockImmunity3",
+          "text": "感電状態で使用すると感電の完全耐性を(12-14)秒間付与する",
+          "name": "絶縁体の",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 54,
+          "weight": 750
+        },
+        {
+          "key": "FlaskShockImmunity4_",
+          "text": "感電状態で使用すると感電の完全耐性を(15-17)秒間付与する",
+          "name": "誘電の",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 78,
+          "weight": 750
+        }
+      ],
+      "FlaskChillFreezeImmunity": [
+        {
+          "key": "FlaskChillFreezeImmunity1",
+          "text": "冷却状態で使用すると冷却の完全耐性を(6-8)秒間付与する\n凍結状態で使用すると凍結の完全耐性を(6-8)秒間付与する",
+          "name": "対流の",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 4,
+          "weight": 750
+        },
+        {
+          "key": "FlaskChillFreezeImmunity2",
+          "text": "冷却状態で使用すると冷却の完全耐性を(9-11)秒間付与する\n凍結状態で使用すると凍結の完全耐性を(9-11)秒間付与する",
+          "name": "熱力学の",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 28,
+          "weight": 750
+        },
+        {
+          "key": "FlaskChillFreezeImmunity3",
+          "text": "冷却状態で使用すると冷却の完全耐性を(12-14)秒間付与する\n凍結状態で使用すると凍結の完全耐性を(12-14)秒間付与する",
+          "name": "エントロピーの",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 52,
+          "weight": 750
+        },
+        {
+          "key": "FlaskChillFreezeImmunity4",
+          "text": "冷却状態で使用すると冷却の完全耐性を(15-17)秒間付与する\n凍結状態で使用すると凍結の完全耐性を(15-17)秒間付与する",
+          "name": "解凍の",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 76,
+          "weight": 750
+        }
+      ],
+      "FlaskIgniteImmunity": [
+        {
+          "key": "FlaskIgniteImmunity1",
+          "text": "発火状態で使用すると発火の完全耐性を(6-8)秒間付与する\n使用すると燃焼を全て取り除く",
+          "name": "湿気りの",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 6,
+          "weight": 750
+        },
+        {
+          "key": "FlaskIgniteImmunity2_",
+          "text": "発火状態で使用すると発火の完全耐性を(9-11)秒間付与する\n使用すると燃焼を全て取り除く",
+          "name": "もみ消しの",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 30,
+          "weight": 750
+        },
+        {
+          "key": "FlaskIgniteImmunity3_",
+          "text": "発火状態で使用すると発火の完全耐性を(12-14)秒間付与する\n使用すると燃焼を全て取り除く",
+          "name": "火消しの",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 54,
+          "weight": 750
+        },
+        {
+          "key": "FlaskIgniteImmunity4",
+          "text": "発火状態で使用すると発火の完全耐性を(15-17)秒間付与する\n使用すると燃焼を全て取り除く",
+          "name": "急冷の",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 78,
+          "weight": 750
+        }
+      ],
+      "FlaskPoisonImmunity": [
+        {
+          "key": "FlaskPoisonImmunity1__",
+          "text": "毒状態で使用すると毒の完全耐性を(6-8)秒間付与する",
+          "name": "耐毒剤の",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 16,
+          "weight": 750
+        },
+        {
+          "key": "FlaskPoisonImmunity2",
+          "text": "毒状態で使用すると毒の完全耐性を(9-11)秒間付与する",
+          "name": "療薬の",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 38,
+          "weight": 750
+        },
+        {
+          "key": "FlaskPoisonImmunity3",
+          "text": "毒状態で使用すると毒の完全耐性を(12-14)秒間付与する",
+          "name": "治療薬の",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 60,
+          "weight": 750
+        },
+        {
+          "key": "FlaskPoisonImmunity4",
+          "text": "毒状態で使用すると毒の完全耐性を(15-17)秒間付与する",
+          "name": "解毒剤の",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 82,
+          "weight": 750
+        }
+      ]
+    }
+  }
+}

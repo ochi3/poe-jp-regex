@@ -1,0 +1,2485 @@
+{
+  "bases": [
+    "Metadata/Items/Amulets/Amulet1",
+    "Metadata/Items/Amulets/Amulet2",
+    "Metadata/Items/Amulets/Amulet3",
+    "Metadata/Items/Amulets/Amulet4",
+    "Metadata/Items/Amulets/Amulet5",
+    "Metadata/Items/Amulets/Amulet6",
+    "Metadata/Items/Amulets/Amulet7",
+    "Metadata/Items/Amulets/Amulet8",
+    "Metadata/Items/Amulets/Amulet9",
+    "Metadata/Items/Amulets/Amulet10",
+    "Metadata/Items/Amulets/Talismans/Talisman4"
+  ],
+  "mods": {
+    "prefix": {
+      "IncreasedLife": [
+        {
+          "key": "IncreasedLife0",
+          "text": "最大ライフ +(3-9)",
+          "name": "強健な",
+          "tag": "fishing_rod",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 1000
+        },
+        {
+          "key": "IncreasedLife1",
+          "text": "最大ライフ +(10-24)",
+          "name": "健康な",
+          "tag": "fishing_rod",
+          "generation_type": "prefix",
+          "required_level": 5,
+          "weight": 1000
+        },
+        {
+          "key": "IncreasedLife2",
+          "text": "最大ライフ +(25-39)",
+          "name": "血色良い",
+          "tag": "fishing_rod",
+          "generation_type": "prefix",
+          "required_level": 11,
+          "weight": 1000
+        },
+        {
+          "key": "IncreasedLife3",
+          "text": "最大ライフ +(40-54)",
+          "name": "屈強な",
+          "tag": "fishing_rod",
+          "generation_type": "prefix",
+          "required_level": 18,
+          "weight": 1000
+        },
+        {
+          "key": "IncreasedLife4",
+          "text": "最大ライフ +(55-69)",
+          "name": "頑強な",
+          "tag": "fishing_rod",
+          "generation_type": "prefix",
+          "required_level": 24,
+          "weight": 1000
+        },
+        {
+          "key": "IncreasedLife5",
+          "text": "最大ライフ +(70-84)",
+          "name": "頑健な",
+          "tag": "fishing_rod",
+          "generation_type": "prefix",
+          "required_level": 30,
+          "weight": 1000
+        },
+        {
+          "key": "IncreasedLife6",
+          "text": "最大ライフ +(85-99)",
+          "name": "丸々とした",
+          "tag": "fishing_rod",
+          "generation_type": "prefix",
+          "required_level": 36,
+          "weight": 1000
+        },
+        {
+          "key": "IncreasedLife7",
+          "text": "最大ライフ +(100-114)",
+          "name": "雄健な",
+          "tag": "fishing_rod",
+          "generation_type": "prefix",
+          "required_level": 44,
+          "weight": 1000
+        },
+        {
+          "key": "IncreasedLife8",
+          "text": "最大ライフ +(115-129)",
+          "name": "競技者の",
+          "tag": "fishing_rod",
+          "generation_type": "prefix",
+          "required_level": 54,
+          "weight": 1000
+        }
+      ],
+      "IncreasedMana": [
+        {
+          "key": "IncreasedMana1",
+          "text": "最大マナ +(15-19)",
+          "name": "ベリルの",
+          "tag": "ring",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 1000
+        },
+        {
+          "key": "IncreasedMana2",
+          "text": "最大マナ +(20-24)",
+          "name": "コバルトの",
+          "tag": "ring",
+          "generation_type": "prefix",
+          "required_level": 11,
+          "weight": 1000
+        },
+        {
+          "key": "IncreasedMana3",
+          "text": "最大マナ +(25-29)",
+          "name": "淡青な",
+          "tag": "ring",
+          "generation_type": "prefix",
+          "required_level": 17,
+          "weight": 1000
+        },
+        {
+          "key": "IncreasedMana4",
+          "text": "最大マナ +(30-34)",
+          "name": "サファイアの",
+          "tag": "ring",
+          "generation_type": "prefix",
+          "required_level": 23,
+          "weight": 1000
+        },
+        {
+          "key": "IncreasedMana5",
+          "text": "最大マナ +(35-39)",
+          "name": "空色をした",
+          "tag": "ring",
+          "generation_type": "prefix",
+          "required_level": 29,
+          "weight": 1000
+        },
+        {
+          "key": "IncreasedMana6",
+          "text": "最大マナ +(40-44)",
+          "name": "アクア",
+          "tag": "ring",
+          "generation_type": "prefix",
+          "required_level": 35,
+          "weight": 1000
+        },
+        {
+          "key": "IncreasedMana7",
+          "text": "最大マナ +(45-49)",
+          "name": "オパール色をした",
+          "tag": "ring",
+          "generation_type": "prefix",
+          "required_level": 42,
+          "weight": 1000
+        },
+        {
+          "key": "IncreasedMana8",
+          "text": "最大マナ +(50-54)",
+          "name": "リンドウの",
+          "tag": "ring",
+          "generation_type": "prefix",
+          "required_level": 51,
+          "weight": 1000
+        },
+        {
+          "key": "IncreasedMana9",
+          "text": "最大マナ +(55-59)",
+          "name": "青鋼の",
+          "tag": "ring",
+          "generation_type": "prefix",
+          "required_level": 60,
+          "weight": 1000
+        },
+        {
+          "key": "IncreasedMana10",
+          "text": "最大マナ +(60-64)",
+          "name": "紺色をした",
+          "tag": "ring",
+          "generation_type": "prefix",
+          "required_level": 69,
+          "weight": 1000
+        },
+        {
+          "key": "IncreasedMana11",
+          "text": "最大マナ +(65-68)",
+          "name": "青い",
+          "tag": "ring",
+          "generation_type": "prefix",
+          "required_level": 75,
+          "weight": 1000
+        },
+        {
+          "key": "IncreasedMana12",
+          "text": "最大マナ +(69-73)",
+          "name": "藍色をした",
+          "tag": "ring",
+          "generation_type": "prefix",
+          "required_level": 81,
+          "weight": 1000
+        },
+        {
+          "key": "IncreasedMana13",
+          "text": "最大マナ +(74-78)",
+          "name": "群青色をした",
+          "tag": "ring",
+          "generation_type": "prefix",
+          "required_level": 85,
+          "weight": 1000
+        }
+      ],
+      "EnergyShield": [
+        {
+          "key": "IncreasedEnergyShield1",
+          "text": "最大エナジーシールド +(1-3)",
+          "name": "輝く",
+          "tag": "ring",
+          "generation_type": "prefix",
+          "required_level": 3,
+          "weight": 1000
+        },
+        {
+          "key": "IncreasedEnergyShield2",
+          "text": "最大エナジーシールド +(4-8)",
+          "name": "瞬く",
+          "tag": "ring",
+          "generation_type": "prefix",
+          "required_level": 11,
+          "weight": 1000
+        },
+        {
+          "key": "IncreasedEnergyShield3",
+          "text": "最大エナジーシールド +(9-12)",
+          "name": "煌く",
+          "tag": "ring",
+          "generation_type": "prefix",
+          "required_level": 17,
+          "weight": 1000
+        },
+        {
+          "key": "IncreasedEnergyShield4",
+          "text": "最大エナジーシールド +(13-15)",
+          "name": "光る",
+          "tag": "ring",
+          "generation_type": "prefix",
+          "required_level": 23,
+          "weight": 1000
+        },
+        {
+          "key": "IncreasedEnergyShield5",
+          "text": "最大エナジーシールド +(16-19)",
+          "name": "放射する",
+          "tag": "ring",
+          "generation_type": "prefix",
+          "required_level": 29,
+          "weight": 1000
+        },
+        {
+          "key": "IncreasedEnergyShield6",
+          "text": "最大エナジーシールド +(20-22)",
+          "name": "脈動する",
+          "tag": "ring",
+          "generation_type": "prefix",
+          "required_level": 35,
+          "weight": 1000
+        },
+        {
+          "key": "IncreasedEnergyShield7",
+          "text": "最大エナジーシールド +(23-26)",
+          "name": "沸き立つ",
+          "tag": "ring",
+          "generation_type": "prefix",
+          "required_level": 42,
+          "weight": 1000
+        },
+        {
+          "key": "IncreasedEnergyShield8",
+          "text": "最大エナジーシールド +(27-31)",
+          "name": "焼き付く",
+          "tag": "ring",
+          "generation_type": "prefix",
+          "required_level": 50,
+          "weight": 1000
+        },
+        {
+          "key": "IncreasedEnergyShield9",
+          "text": "最大エナジーシールド +(32-37)",
+          "name": "耀う",
+          "tag": "ring",
+          "generation_type": "prefix",
+          "required_level": 59,
+          "weight": 1000
+        },
+        {
+          "key": "IncreasedEnergyShield10",
+          "text": "最大エナジーシールド +(38-43)",
+          "name": "光り輝く",
+          "tag": "ring",
+          "generation_type": "prefix",
+          "required_level": 68,
+          "weight": 1000
+        },
+        {
+          "key": "IncreasedEnergyShield11",
+          "text": "最大エナジーシールド +(44-47)",
+          "name": "きらびやかな",
+          "tag": "ring",
+          "generation_type": "prefix",
+          "required_level": 74,
+          "weight": 1000
+        },
+        {
+          "key": "IncreasedEnergyShield12",
+          "text": "最大エナジーシールド +(48-51)",
+          "name": "眩い",
+          "tag": "ring",
+          "generation_type": "prefix",
+          "required_level": 80,
+          "weight": 1000
+        }
+      ],
+      "PhysicalDamage": [
+        {
+          "key": "AddedPhysicalDamage1",
+          "text": "1から2の物理ダメージをアタックに追加する",
+          "name": "閃く",
+          "tag": "ring",
+          "generation_type": "prefix",
+          "required_level": 5,
+          "weight": 1000
+        },
+        {
+          "key": "AddedPhysicalDamage2",
+          "text": "(2-3)から(4-5)の物理ダメージをアタックに追加する",
+          "name": "艶出しされた",
+          "tag": "ring",
+          "generation_type": "prefix",
+          "required_level": 13,
+          "weight": 1000
+        },
+        {
+          "key": "AddedPhysicalDamage3",
+          "text": "(3-4)から(6-7)の物理ダメージをアタックに追加する",
+          "name": "磨かれた",
+          "tag": "ring",
+          "generation_type": "prefix",
+          "required_level": 19,
+          "weight": 1000
+        },
+        {
+          "key": "AddedPhysicalDamage4",
+          "text": "(4-6)から(9-10)の物理ダメージをアタックに追加する",
+          "name": "研ぎ澄まされた",
+          "tag": "ring",
+          "generation_type": "prefix",
+          "required_level": 28,
+          "weight": 1000
+        },
+        {
+          "key": "AddedPhysicalDamage5",
+          "text": "(5-7)から(11-12)の物理ダメージをアタックに追加する",
+          "name": "光沢帯びた",
+          "tag": "ring",
+          "generation_type": "prefix",
+          "required_level": 35,
+          "weight": 1000
+        },
+        {
+          "key": "AddedPhysicalDamage6",
+          "text": "(6-9)から(13-15)の物理ダメージをアタックに追加する",
+          "name": "鍛えられた",
+          "tag": "ring",
+          "generation_type": "prefix",
+          "required_level": 44,
+          "weight": 1000
+        },
+        {
+          "key": "AddedPhysicalDamage7",
+          "text": "(7-10)から(15-18)の物理ダメージをアタックに追加する",
+          "name": "鋭利な",
+          "tag": "ring",
+          "generation_type": "prefix",
+          "required_level": 52,
+          "weight": 1000
+        },
+        {
+          "key": "AddedPhysicalDamage8",
+          "text": "(9-12)から(19-22)の物理ダメージをアタックに追加する",
+          "name": "鍛錬された",
+          "tag": "ring",
+          "generation_type": "prefix",
+          "required_level": 64,
+          "weight": 1000
+        },
+        {
+          "key": "AddedPhysicalDamage9",
+          "text": "(11-15)から(22-26)の物理ダメージをアタックに追加する",
+          "name": "猛烈な",
+          "tag": "ring",
+          "generation_type": "prefix",
+          "required_level": 76,
+          "weight": 1000
+        }
+      ],
+      "FireDamage": [
+        {
+          "key": "AddedFireDamage1",
+          "text": "1から2の火ダメージをアタックに追加する",
+          "name": "熱した",
+          "tag": "ring",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 500
+        },
+        {
+          "key": "AddedFireDamage2",
+          "text": "(3-5)から(7-8)の火ダメージをアタックに追加する",
+          "name": "燻る",
+          "tag": "ring",
+          "generation_type": "prefix",
+          "required_level": 12,
+          "weight": 500
+        },
+        {
+          "key": "AddedFireDamage3",
+          "text": "(5-7)から(11-13)の火ダメージをアタックに追加する",
+          "name": "発煙する",
+          "tag": "ring",
+          "generation_type": "prefix",
+          "required_level": 20,
+          "weight": 500
+        },
+        {
+          "key": "AddedFireDamage4",
+          "text": "(7-10)から(15-18)の火ダメージをアタックに追加する",
+          "name": "燃える",
+          "tag": "ring",
+          "generation_type": "prefix",
+          "required_level": 28,
+          "weight": 500
+        },
+        {
+          "key": "AddedFireDamage5",
+          "text": "(9-12)から(19-22)の火ダメージをアタックに追加する",
+          "name": "燃え立つ",
+          "tag": "ring",
+          "generation_type": "prefix",
+          "required_level": 35,
+          "weight": 500
+        },
+        {
+          "key": "AddedFireDamage6",
+          "text": "(11-15)から(23-27)の火ダメージをアタックに追加する",
+          "name": "焼き焦がす",
+          "tag": "ring",
+          "generation_type": "prefix",
+          "required_level": 44,
+          "weight": 500
+        },
+        {
+          "key": "AddedFireDamage7",
+          "text": "(13-18)から(27-31)の火ダメージをアタックに追加する",
+          "name": "焼却する",
+          "tag": "ring",
+          "generation_type": "prefix",
+          "required_level": 52,
+          "weight": 500
+        },
+        {
+          "key": "AddedFireDamage8",
+          "text": "(16-22)から(32-38)の火ダメージをアタックに追加する",
+          "name": "爆破する",
+          "tag": "ring",
+          "generation_type": "prefix",
+          "required_level": 64,
+          "weight": 500
+        },
+        {
+          "key": "AddedFireDamage9",
+          "text": "(19-25)から(39-45)の火ダメージをアタックに追加する",
+          "name": "火葬する",
+          "tag": "ring",
+          "generation_type": "prefix",
+          "required_level": 76,
+          "weight": 250
+        }
+      ],
+      "ColdDamage": [
+        {
+          "key": "AddedColdDamage1",
+          "text": "1から2の冷気ダメージをアタックに追加する",
+          "name": "凍てついた",
+          "tag": "ring",
+          "generation_type": "prefix",
+          "required_level": 2,
+          "weight": 500
+        },
+        {
+          "key": "AddedColdDamage2",
+          "text": "(3-4)から(7-8)の冷気ダメージをアタックに追加する",
+          "name": "冷えた",
+          "tag": "ring",
+          "generation_type": "prefix",
+          "required_level": 13,
+          "weight": 500
+        },
+        {
+          "key": "AddedColdDamage3",
+          "text": "(5-7)から(10-12)の冷気ダメージをアタックに追加する",
+          "name": "凍った",
+          "tag": "ring",
+          "generation_type": "prefix",
+          "required_level": 21,
+          "weight": 500
+        },
+        {
+          "key": "AddedColdDamage4",
+          "text": "(6-9)から(13-16)の冷気ダメージをアタックに追加する",
+          "name": "凍える",
+          "tag": "ring",
+          "generation_type": "prefix",
+          "required_level": 29,
+          "weight": 500
+        },
+        {
+          "key": "AddedColdDamage5",
+          "text": "(8-11)から(16-19)の冷気ダメージをアタックに追加する",
+          "name": "凍りつく",
+          "tag": "ring",
+          "generation_type": "prefix",
+          "required_level": 36,
+          "weight": 500
+        },
+        {
+          "key": "AddedColdDamage6",
+          "text": "(10-13)から(20-24)の冷気ダメージをアタックに追加する",
+          "name": "凍結した",
+          "tag": "ring",
+          "generation_type": "prefix",
+          "required_level": 45,
+          "weight": 500
+        },
+        {
+          "key": "AddedColdDamage7",
+          "text": "(12-16)から(24-28)の冷気ダメージをアタックに追加する",
+          "name": "氷結した",
+          "tag": "ring",
+          "generation_type": "prefix",
+          "required_level": 53,
+          "weight": 500
+        },
+        {
+          "key": "AddedColdDamage8",
+          "text": "(14-19)から(29-34)の冷気ダメージをアタックに追加する",
+          "name": "極地の",
+          "tag": "ring",
+          "generation_type": "prefix",
+          "required_level": 65,
+          "weight": 500
+        },
+        {
+          "key": "AddedColdDamage9",
+          "text": "(17-22)から(34-40)の冷気ダメージをアタックに追加する",
+          "name": "氷葬する",
+          "tag": "ring",
+          "generation_type": "prefix",
+          "required_level": 77,
+          "weight": 250
+        }
+      ],
+      "LightningDamage": [
+        {
+          "key": "AddedLightningDamage1",
+          "text": "1から5の雷ダメージをアタックに追加する",
+          "name": "電音の",
+          "tag": "ring",
+          "generation_type": "prefix",
+          "required_level": 3,
+          "weight": 500
+        },
+        {
+          "key": "AddedLightningDamage2",
+          "text": "1から(14-15)の雷ダメージをアタックに追加する",
+          "name": "電鳴の",
+          "tag": "ring",
+          "generation_type": "prefix",
+          "required_level": 13,
+          "weight": 500
+        },
+        {
+          "key": "AddedLightningDamage3",
+          "text": "(1-2)から(22-23)の雷ダメージをアタックに追加する",
+          "name": "雷音の",
+          "tag": "ring",
+          "generation_type": "prefix",
+          "required_level": 22,
+          "weight": 500
+        },
+        {
+          "key": "AddedLightningDamage4",
+          "text": "(1-2)から(27-28)の雷ダメージをアタックに追加する",
+          "name": "雷鳴の",
+          "tag": "ring",
+          "generation_type": "prefix",
+          "required_level": 28,
+          "weight": 500
+        },
+        {
+          "key": "AddedLightningDamage5",
+          "text": "(1-3)から(33-34)の雷ダメージをアタックに追加する",
+          "name": "電光走る",
+          "tag": "ring",
+          "generation_type": "prefix",
+          "required_level": 35,
+          "weight": 500
+        },
+        {
+          "key": "AddedLightningDamage6",
+          "text": "(1-4)から(40-43)の雷ダメージをアタックに追加する",
+          "name": "電弧する",
+          "tag": "ring",
+          "generation_type": "prefix",
+          "required_level": 44,
+          "weight": 500
+        },
+        {
+          "key": "AddedLightningDamage7",
+          "text": "(2-5)から(47-50)の雷ダメージをアタックに追加する",
+          "name": "電撃の",
+          "tag": "ring",
+          "generation_type": "prefix",
+          "required_level": 52,
+          "weight": 500
+        },
+        {
+          "key": "AddedLightningDamage8",
+          "text": "(3-6)から(57-61)の雷ダメージをアタックに追加する",
+          "name": "放電する",
+          "tag": "ring",
+          "generation_type": "prefix",
+          "required_level": 64,
+          "weight": 500
+        },
+        {
+          "key": "AddedLightningDamage9",
+          "text": "(3-7)から(68-72)の雷ダメージをアタックに追加する",
+          "name": "感電する",
+          "tag": "ring",
+          "generation_type": "prefix",
+          "required_level": 76,
+          "weight": 250
+        }
+      ],
+      "GlobalPhysicalDamageReductionRatingPercent": [
+        {
+          "key": "IncreasedPhysicalDamageReductionRatingPercent1",
+          "text": "アーマーが(4-8)%増加する",
+          "name": "補強された",
+          "tag": "amulet",
+          "generation_type": "prefix",
+          "required_level": 2,
+          "weight": 1000
+        },
+        {
+          "key": "IncreasedPhysicalDamageReductionRatingPercent2",
+          "text": "アーマーが(9-13)%増加する",
+          "name": "多層の",
+          "tag": "amulet",
+          "generation_type": "prefix",
+          "required_level": 18,
+          "weight": 1000
+        },
+        {
+          "key": "IncreasedPhysicalDamageReductionRatingPercent3",
+          "text": "アーマーが(14-18)%増加する",
+          "name": "甲殻付き",
+          "tag": "amulet",
+          "generation_type": "prefix",
+          "required_level": 30,
+          "weight": 1000
+        },
+        {
+          "key": "IncreasedPhysicalDamageReductionRatingPercent4",
+          "text": "アーマーが(19-23)%増加する",
+          "name": "強固な",
+          "tag": "amulet",
+          "generation_type": "prefix",
+          "required_level": 42,
+          "weight": 1000
+        },
+        {
+          "key": "IncreasedPhysicalDamageReductionRatingPercent5",
+          "text": "アーマーが(24-28)%増加する",
+          "name": "分厚い",
+          "tag": "amulet",
+          "generation_type": "prefix",
+          "required_level": 56,
+          "weight": 1000
+        },
+        {
+          "key": "IncreasedPhysicalDamageReductionRatingPercent6",
+          "text": "アーマーが(29-32)%増加する",
+          "name": "纏われた",
+          "tag": "amulet",
+          "generation_type": "prefix",
+          "required_level": 70,
+          "weight": 1000
+        },
+        {
+          "key": "IncreasedPhysicalDamageReductionRatingPercent7",
+          "text": "アーマーが(33-36)%増加する",
+          "name": "堅固な",
+          "tag": "amulet",
+          "generation_type": "prefix",
+          "required_level": 77,
+          "weight": 1000
+        }
+      ],
+      "GlobalEvasionRatingPercent": [
+        {
+          "key": "IncreasedEvasionRatingPercent1",
+          "text": "回避力が(4-8)%増加する",
+          "name": "機敏な",
+          "tag": "amulet",
+          "generation_type": "prefix",
+          "required_level": 2,
+          "weight": 1000
+        },
+        {
+          "key": "IncreasedEvasionRatingPercent2",
+          "text": "回避力が(9-13)%増加する",
+          "name": "踊り子の",
+          "tag": "amulet",
+          "generation_type": "prefix",
+          "required_level": 19,
+          "weight": 1000
+        },
+        {
+          "key": "IncreasedEvasionRatingPercent3",
+          "text": "回避力が(14-18)%増加する",
+          "name": "軽業師の",
+          "tag": "amulet",
+          "generation_type": "prefix",
+          "required_level": 30,
+          "weight": 1000
+        },
+        {
+          "key": "IncreasedEvasionRatingPercent4",
+          "text": "回避力が(19-23)%増加する",
+          "name": "素早い",
+          "tag": "amulet",
+          "generation_type": "prefix",
+          "required_level": 42,
+          "weight": 1000
+        },
+        {
+          "key": "IncreasedEvasionRatingPercent5",
+          "text": "回避力が(24-28)%増加する",
+          "name": "霞んだ",
+          "tag": "amulet",
+          "generation_type": "prefix",
+          "required_level": 56,
+          "weight": 1000
+        },
+        {
+          "key": "IncreasedEvasionRatingPercent6",
+          "text": "回避力が(29-32)%増加する",
+          "name": "異相の",
+          "tag": "amulet",
+          "generation_type": "prefix",
+          "required_level": 70,
+          "weight": 1000
+        },
+        {
+          "key": "IncreasedEvasionRatingPercent7",
+          "text": "回避力が(33-36)%増加する",
+          "name": "霧状の",
+          "tag": "amulet",
+          "generation_type": "prefix",
+          "required_level": 77,
+          "weight": 1000
+        }
+      ],
+      "GlobalEnergyShieldPercent": [
+        {
+          "key": "IncreasedEnergyShieldPercent1",
+          "text": "最大エナジーシールドが(2-4)%増加する",
+          "name": "守る",
+          "tag": "amulet",
+          "generation_type": "prefix",
+          "required_level": 3,
+          "weight": 1000
+        },
+        {
+          "key": "IncreasedEnergyShieldPercent2",
+          "text": "最大エナジーシールドが(5-7)%増加する",
+          "name": "強き意志の",
+          "tag": "amulet",
+          "generation_type": "prefix",
+          "required_level": 18,
+          "weight": 1000
+        },
+        {
+          "key": "IncreasedEnergyShieldPercent3",
+          "text": "最大エナジーシールドが(8-10)%増加する",
+          "name": "確固たる",
+          "tag": "amulet",
+          "generation_type": "prefix",
+          "required_level": 30,
+          "weight": 1000
+        },
+        {
+          "key": "IncreasedEnergyShieldPercent4",
+          "text": "最大エナジーシールドが(11-13)%増加する",
+          "name": "恐れ知らずな",
+          "tag": "amulet",
+          "generation_type": "prefix",
+          "required_level": 42,
+          "weight": 1000
+        },
+        {
+          "key": "IncreasedEnergyShieldPercent5",
+          "text": "最大エナジーシールドが(14-16)%増加する",
+          "name": "恐れ知らずな",
+          "tag": "amulet",
+          "generation_type": "prefix",
+          "required_level": 56,
+          "weight": 1000
+        },
+        {
+          "key": "IncreasedEnergyShieldPercent6",
+          "text": "最大エナジーシールドが(17-19)%増加する",
+          "name": "不屈の",
+          "tag": "amulet",
+          "generation_type": "prefix",
+          "required_level": 70,
+          "weight": 1000
+        },
+        {
+          "key": "IncreasedEnergyShieldPercent7",
+          "text": "最大エナジーシールドが(20-22)%増加する",
+          "name": "難攻不落の",
+          "tag": "amulet",
+          "generation_type": "prefix",
+          "required_level": 77,
+          "weight": 1000
+        }
+      ],
+      "SpellDamage": [
+        {
+          "key": "SpellDamage1",
+          "text": "スペルダメージが(3-7)%増加する",
+          "name": "詠唱者の",
+          "tag": "amulet",
+          "generation_type": "prefix",
+          "required_level": 5,
+          "weight": 1000
+        },
+        {
+          "key": "SpellDamage2",
+          "text": "スペルダメージが(8-12)%増加する",
+          "name": "魔道師の",
+          "tag": "amulet",
+          "generation_type": "prefix",
+          "required_level": 20,
+          "weight": 1000
+        },
+        {
+          "key": "SpellDamage3",
+          "text": "スペルダメージが(13-17)%増加する",
+          "name": "妖術師の",
+          "tag": "amulet",
+          "generation_type": "prefix",
+          "required_level": 38,
+          "weight": 1000
+        },
+        {
+          "key": "SpellDamage4",
+          "text": "スペルダメージが(18-22)%増加する",
+          "name": "魔術師の",
+          "tag": "amulet",
+          "generation_type": "prefix",
+          "required_level": 56,
+          "weight": 1000
+        },
+        {
+          "key": "SpellDamage5",
+          "text": "スペルダメージが(23-26)%増加する",
+          "name": "魔法使いの",
+          "tag": "amulet",
+          "generation_type": "prefix",
+          "required_level": 76,
+          "weight": 1000
+        }
+      ],
+      "IncreasedWeaponElementalDamagePercent": [
+        {
+          "key": "WeaponElementalDamage1",
+          "text": "アタックスキルの元素ダメージが(5-10)%増加する",
+          "name": "促進する",
+          "tag": "ring",
+          "generation_type": "prefix",
+          "required_level": 4,
+          "weight": 300
+        },
+        {
+          "key": "WeaponElementalDamage2",
+          "text": "アタックスキルの元素ダメージが(11-20)%増加する",
+          "name": "注ぎ込む",
+          "tag": "ring",
+          "generation_type": "prefix",
+          "required_level": 15,
+          "weight": 300
+        },
+        {
+          "key": "WeaponElementalDamage3",
+          "text": "アタックスキルの元素ダメージが(21-30)%増加する",
+          "name": "力を与える",
+          "tag": "ring",
+          "generation_type": "prefix",
+          "required_level": 30,
+          "weight": 300
+        },
+        {
+          "key": "WeaponElementalDamage4",
+          "text": "アタックスキルの元素ダメージが(31-36)%増加する",
+          "name": "解き放たれた",
+          "tag": "ring",
+          "generation_type": "prefix",
+          "required_level": 60,
+          "weight": 300
+        },
+        {
+          "key": "WeaponElementalDamage5",
+          "text": "アタックスキルの元素ダメージが(37-42)%増加する",
+          "name": "圧倒する",
+          "tag": "ring",
+          "generation_type": "prefix",
+          "required_level": 81,
+          "weight": 300
+        },
+        {
+          "key": "WeaponElementalDamage6_",
+          "text": "アタックスキルの元素ダメージが(43-50)%増加する",
+          "name": "壊滅させる",
+          "tag": "amulet",
+          "generation_type": "prefix",
+          "required_level": 86,
+          "weight": 300
+        }
+      ],
+      "ItemFoundRarityIncreasePrefix": [
+        {
+          "key": "ItemFoundRarityIncreasePrefix1",
+          "text": "見つかるアイテムのレアリティが(8-12)%増加する",
+          "name": "カササギの",
+          "tag": "ring",
+          "generation_type": "prefix",
+          "required_level": 20,
+          "weight": 1000
+        },
+        {
+          "key": "ItemFoundRarityIncreasePrefix2",
+          "text": "見つかるアイテムのレアリティが(13-18)%増加する",
+          "name": "海賊の",
+          "tag": "ring",
+          "generation_type": "prefix",
+          "required_level": 39,
+          "weight": 1000
+        },
+        {
+          "key": "ItemFoundRarityIncreasePrefix3",
+          "text": "見つかるアイテムのレアリティが(19-24)%増加する",
+          "name": "竜の",
+          "tag": "ring",
+          "generation_type": "prefix",
+          "required_level": 62,
+          "weight": 1000
+        },
+        {
+          "key": "ItemFoundRarityIncreasePrefix4_",
+          "text": "見つかるアイテムのレアリティが(25-28)%増加する",
+          "name": "ペランダスの",
+          "tag": "ring",
+          "generation_type": "prefix",
+          "required_level": 84,
+          "weight": 1000
+        }
+      ],
+      "GlobalSkillGemLevel": [
+        {
+          "key": "GlobalSkillGemLevel1",
+          "text": "全てのスキルジェムのレベル +1",
+          "name": "称揚者の",
+          "tag": "amulet",
+          "generation_type": "prefix",
+          "required_level": 75,
+          "weight": 50
+        }
+      ],
+      "GlobalFireGemLevel": [
+        {
+          "key": "GlobalFireGemLevel1_",
+          "text": "全ての火スキルジェムのレベル +1",
+          "name": "火山学者の",
+          "tag": "amulet",
+          "generation_type": "prefix",
+          "required_level": 75,
+          "weight": 200
+        }
+      ],
+      "GlobalColdGemLevel": [
+        {
+          "key": "GlobalColdGemLevel1__",
+          "text": "全ての冷気スキルジェムのレベル +1",
+          "name": "霜氷住まいの",
+          "tag": "amulet",
+          "generation_type": "prefix",
+          "required_level": 75,
+          "weight": 200
+        }
+      ],
+      "GlobalLightningGemLevel": [
+        {
+          "key": "GlobalLightningGemLevel1",
+          "text": "全ての雷スキルジェムのレベル +1",
+          "name": "嵐生みの",
+          "tag": "amulet",
+          "generation_type": "prefix",
+          "required_level": 75,
+          "weight": 200
+        }
+      ],
+      "GlobalPhysicalGemLevel": [
+        {
+          "key": "GlobalPhysicalGemLevel1_",
+          "text": "全ての物理スキルジェムのレベル +1",
+          "name": "ベヒーモスの",
+          "tag": "amulet",
+          "generation_type": "prefix",
+          "required_level": 75,
+          "weight": 200
+        }
+      ],
+      "GlobalChaosGemLevel": [
+        {
+          "key": "GlobalChaosGemLevel1",
+          "text": "全ての混沌スキルジェムのレベル +1",
+          "name": "挑発者の",
+          "tag": "amulet",
+          "generation_type": "prefix",
+          "required_level": 75,
+          "weight": 200
+        }
+      ]
+    },
+    "suffix": {
+      "Strength": [
+        {
+          "key": "Strength1",
+          "text": "筋力 +(8-12)",
+          "name": "蛮人の",
+          "tag": "ring",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 1000
+        },
+        {
+          "key": "Strength2",
+          "text": "筋力 +(13-17)",
+          "name": "レスラーの",
+          "tag": "ring",
+          "generation_type": "suffix",
+          "required_level": 11,
+          "weight": 1000
+        },
+        {
+          "key": "Strength3",
+          "text": "筋力 +(18-22)",
+          "name": "熊の",
+          "tag": "ring",
+          "generation_type": "suffix",
+          "required_level": 22,
+          "weight": 1000
+        },
+        {
+          "key": "Strength4",
+          "text": "筋力 +(23-27)",
+          "name": "ライオンの",
+          "tag": "ring",
+          "generation_type": "suffix",
+          "required_level": 33,
+          "weight": 1000
+        },
+        {
+          "key": "Strength5",
+          "text": "筋力 +(28-32)",
+          "name": "ゴリラの",
+          "tag": "ring",
+          "generation_type": "suffix",
+          "required_level": 44,
+          "weight": 1000
+        },
+        {
+          "key": "Strength6",
+          "text": "筋力 +(33-37)",
+          "name": "巨躯の",
+          "tag": "ring",
+          "generation_type": "suffix",
+          "required_level": 55,
+          "weight": 1000
+        },
+        {
+          "key": "Strength7",
+          "text": "筋力 +(38-42)",
+          "name": "リヴァイアサンの",
+          "tag": "ring",
+          "generation_type": "suffix",
+          "required_level": 66,
+          "weight": 1000
+        },
+        {
+          "key": "Strength8",
+          "text": "筋力 +(43-50)",
+          "name": "タイタンの",
+          "tag": "ring",
+          "generation_type": "suffix",
+          "required_level": 74,
+          "weight": 1000
+        },
+        {
+          "key": "Strength9",
+          "text": "筋力 +(51-55)",
+          "name": "神々の",
+          "tag": "ring",
+          "generation_type": "suffix",
+          "required_level": 82,
+          "weight": 1000
+        }
+      ],
+      "Dexterity": [
+        {
+          "key": "Dexterity1",
+          "text": "器用さ +(8-12)",
+          "name": "マングースの",
+          "tag": "ring",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 1000
+        },
+        {
+          "key": "Dexterity2",
+          "text": "器用さ +(13-17)",
+          "name": "リンクスの",
+          "tag": "ring",
+          "generation_type": "suffix",
+          "required_level": 11,
+          "weight": 1000
+        },
+        {
+          "key": "Dexterity3",
+          "text": "器用さ +(18-22)",
+          "name": "狐の",
+          "tag": "ring",
+          "generation_type": "suffix",
+          "required_level": 22,
+          "weight": 1000
+        },
+        {
+          "key": "Dexterity4",
+          "text": "器用さ +(23-27)",
+          "name": "隼の",
+          "tag": "ring",
+          "generation_type": "suffix",
+          "required_level": 33,
+          "weight": 1000
+        },
+        {
+          "key": "Dexterity5",
+          "text": "器用さ +(28-32)",
+          "name": "豹の",
+          "tag": "ring",
+          "generation_type": "suffix",
+          "required_level": 44,
+          "weight": 1000
+        },
+        {
+          "key": "Dexterity6",
+          "text": "器用さ +(33-37)",
+          "name": "豹の",
+          "tag": "ring",
+          "generation_type": "suffix",
+          "required_level": 55,
+          "weight": 1000
+        },
+        {
+          "key": "Dexterity7",
+          "text": "器用さ +(38-42)",
+          "name": "ジャガーの",
+          "tag": "ring",
+          "generation_type": "suffix",
+          "required_level": 66,
+          "weight": 1000
+        },
+        {
+          "key": "Dexterity8",
+          "text": "器用さ +(43-50)",
+          "name": "幻像の",
+          "tag": "ring",
+          "generation_type": "suffix",
+          "required_level": 74,
+          "weight": 1000
+        },
+        {
+          "key": "Dexterity9",
+          "text": "器用さ +(51-55)",
+          "name": "風の",
+          "tag": "ring",
+          "generation_type": "suffix",
+          "required_level": 82,
+          "weight": 1000
+        }
+      ],
+      "Intelligence": [
+        {
+          "key": "Intelligence1",
+          "text": "知性 +(8-12)",
+          "name": "生徒の",
+          "tag": "ring",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 1000
+        },
+        {
+          "key": "Intelligence2",
+          "text": "知性 +(13-17)",
+          "name": "学徒の",
+          "tag": "ring",
+          "generation_type": "suffix",
+          "required_level": 11,
+          "weight": 1000
+        },
+        {
+          "key": "Intelligence3",
+          "text": "知性 +(18-22)",
+          "name": "神童の",
+          "tag": "ring",
+          "generation_type": "suffix",
+          "required_level": 22,
+          "weight": 1000
+        },
+        {
+          "key": "Intelligence4",
+          "text": "知性 +(23-27)",
+          "name": "占師の",
+          "tag": "ring",
+          "generation_type": "suffix",
+          "required_level": 33,
+          "weight": 1000
+        },
+        {
+          "key": "Intelligence5",
+          "text": "知性 +(28-32)",
+          "name": "哲学者の",
+          "tag": "ring",
+          "generation_type": "suffix",
+          "required_level": 44,
+          "weight": 1000
+        },
+        {
+          "key": "Intelligence6",
+          "text": "知性 +(33-37)",
+          "name": "賢者の",
+          "tag": "ring",
+          "generation_type": "suffix",
+          "required_level": 55,
+          "weight": 1000
+        },
+        {
+          "key": "Intelligence7",
+          "text": "知性 +(38-42)",
+          "name": "碩学の",
+          "tag": "ring",
+          "generation_type": "suffix",
+          "required_level": 66,
+          "weight": 1000
+        },
+        {
+          "key": "Intelligence8",
+          "text": "知性 +(43-50)",
+          "name": "巨匠の",
+          "tag": "ring",
+          "generation_type": "suffix",
+          "required_level": 74,
+          "weight": 1000
+        },
+        {
+          "key": "Intelligence9",
+          "text": "知性 +(51-55)",
+          "name": "天才の",
+          "tag": "ring",
+          "generation_type": "suffix",
+          "required_level": 82,
+          "weight": 1000
+        }
+      ],
+      "AllAttributes": [
+        {
+          "key": "AllAttributes1",
+          "text": "全ての能力値 +(1-4)",
+          "name": "天雲の",
+          "tag": "amulet",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 800
+        },
+        {
+          "key": "AllAttributes2",
+          "text": "全ての能力値 +(5-8)",
+          "name": "空の",
+          "tag": "amulet",
+          "generation_type": "suffix",
+          "required_level": 11,
+          "weight": 800
+        },
+        {
+          "key": "AllAttributes3",
+          "text": "全ての能力値 +(9-12)",
+          "name": "隕石の",
+          "tag": "amulet",
+          "generation_type": "suffix",
+          "required_level": 22,
+          "weight": 800
+        },
+        {
+          "key": "AllAttributes4",
+          "text": "全ての能力値 +(13-16)",
+          "name": "彗星の",
+          "tag": "amulet",
+          "generation_type": "suffix",
+          "required_level": 33,
+          "weight": 800
+        },
+        {
+          "key": "AllAttributes5",
+          "text": "全ての能力値 +(17-20)",
+          "name": "天の",
+          "tag": "amulet",
+          "generation_type": "suffix",
+          "required_level": 44,
+          "weight": 800
+        },
+        {
+          "key": "AllAttributes6",
+          "text": "全ての能力値 +(21-24)",
+          "name": "銀河の",
+          "tag": "amulet",
+          "generation_type": "suffix",
+          "required_level": 55,
+          "weight": 800
+        },
+        {
+          "key": "AllAttributes7",
+          "text": "全ての能力値 +(25-28)",
+          "name": "宇宙の",
+          "tag": "amulet",
+          "generation_type": "suffix",
+          "required_level": 66,
+          "weight": 800
+        },
+        {
+          "key": "AllAttributes8",
+          "text": "全ての能力値 +(29-32)",
+          "name": "無限の",
+          "tag": "amulet",
+          "generation_type": "suffix",
+          "required_level": 77,
+          "weight": 800
+        },
+        {
+          "key": "AllAttributes9_",
+          "text": "全ての能力値 +(33-35)",
+          "name": "多元宇宙の",
+          "tag": "amulet",
+          "generation_type": "suffix",
+          "required_level": 85,
+          "weight": 800
+        }
+      ],
+      "LifeLeechPermyriad": [
+        {
+          "key": "LifeLeechPermyriadSuffix1",
+          "text": "物理アタックダメージの(0.2-0.4)%をライフとしてリーチする",
+          "name": "コバンザメの",
+          "tag": "ring",
+          "generation_type": "suffix",
+          "required_level": 50,
+          "weight": 1000
+        },
+        {
+          "key": "LifeLeechPermyriadSuffix2",
+          "text": "物理アタックダメージの(0.6-0.8)%をライフとしてリーチする",
+          "name": "ヤツメウナギの",
+          "tag": "ranged",
+          "generation_type": "suffix",
+          "required_level": 60,
+          "weight": 500
+        },
+        {
+          "key": "LifeLeechPermyriadSuffix3",
+          "text": "物理アタックダメージの(1-1.2)%をライフとしてリーチする",
+          "name": "吸血鬼の",
+          "tag": "ranged",
+          "generation_type": "suffix",
+          "required_level": 70,
+          "weight": 250
+        }
+      ],
+      "ManaLeechPermyriad": [
+        {
+          "key": "ManaLeechPermyriadSuffix1",
+          "text": "物理アタックダメージの(0.2-0.4)%をマナとしてリーチする",
+          "name": "渇きの",
+          "tag": "ring",
+          "generation_type": "suffix",
+          "required_level": 50,
+          "weight": 1000
+        },
+        {
+          "key": "ManaLeechPermyriadSuffix2",
+          "text": "物理アタックダメージの(0.6-0.8)%をマナとしてリーチする",
+          "name": "枯渇の",
+          "tag": "amulet",
+          "generation_type": "suffix",
+          "required_level": 70,
+          "weight": 1000
+        }
+      ],
+      "ItemFoundRarityIncrease": [
+        {
+          "key": "ItemFoundRarityIncrease1",
+          "text": "見つかるアイテムのレアリティが(6-10)%増加する",
+          "name": "掠奪の",
+          "tag": "ring",
+          "generation_type": "suffix",
+          "required_level": 3,
+          "weight": 1000
+        },
+        {
+          "key": "ItemFoundRarityIncrease2",
+          "text": "見つかるアイテムのレアリティが(11-14)%増加する",
+          "name": "強奪の",
+          "tag": "ring",
+          "generation_type": "suffix",
+          "required_level": 30,
+          "weight": 1000
+        },
+        {
+          "key": "ItemFoundRarityIncrease3",
+          "text": "見つかるアイテムのレアリティが(15-20)%増加する",
+          "name": "考古学の",
+          "tag": "ring",
+          "generation_type": "suffix",
+          "required_level": 53,
+          "weight": 1000
+        },
+        {
+          "key": "ItemFoundRarityIncrease4",
+          "text": "見つかるアイテムのレアリティが(21-26)%増加する",
+          "name": "発掘の",
+          "tag": "ring",
+          "generation_type": "suffix",
+          "required_level": 75,
+          "weight": 1000
+        }
+      ],
+      "IncreasedCastSpeed": [
+        {
+          "key": "IncreasedCastSpeed1",
+          "text": "キャストスピードが(5-8)%増加する",
+          "name": "才能の",
+          "tag": "wand",
+          "generation_type": "suffix",
+          "required_level": 2,
+          "weight": 800
+        },
+        {
+          "key": "IncreasedCastSpeed2",
+          "text": "キャストスピードが(9-12)%増加する",
+          "name": "軽快さの",
+          "tag": "wand",
+          "generation_type": "suffix",
+          "required_level": 15,
+          "weight": 800
+        },
+        {
+          "key": "IncreasedCastSpeed2Royale",
+          "text": "キャストスピードが(8-15)%増加する",
+          "name": "軽快さの",
+          "tag": "wand",
+          "generation_type": "suffix",
+          "required_level": 4,
+          "weight": 800
+        },
+        {
+          "key": "IncreasedCastSpeed3",
+          "text": "キャストスピードが(13-16)%増加する",
+          "name": "専門性の",
+          "tag": "wand",
+          "generation_type": "suffix",
+          "required_level": 30,
+          "weight": 800
+        },
+        {
+          "key": "IncreasedCastSpeed4",
+          "text": "キャストスピードが(17-20)%増加する",
+          "name": "手品の",
+          "tag": "wand",
+          "generation_type": "suffix",
+          "required_level": 40,
+          "weight": 800
+        }
+      ],
+      "IncreasedAccuracy": [
+        {
+          "key": "IncreasedAccuracyNew1_",
+          "text": "命中力 +(50-100)",
+          "name": "着実さの",
+          "tag": "gloves",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 600
+        },
+        {
+          "key": "IncreasedAccuracyNew2",
+          "text": "命中力 +(100-165)",
+          "name": "精密さの",
+          "tag": "gloves",
+          "generation_type": "suffix",
+          "required_level": 20,
+          "weight": 1000
+        },
+        {
+          "key": "IncreasedAccuracyNew3",
+          "text": "命中力 +(166-250)",
+          "name": "狙撃手の",
+          "tag": "gloves",
+          "generation_type": "suffix",
+          "required_level": 40,
+          "weight": 1000
+        },
+        {
+          "key": "IncreasedAccuracyNew4",
+          "text": "命中力 +(251-350)",
+          "name": "射手の",
+          "tag": "gloves",
+          "generation_type": "suffix",
+          "required_level": 60,
+          "weight": 1000
+        },
+        {
+          "key": "IncreasedAccuracyNew5_",
+          "text": "命中力 +(351-480)",
+          "name": "レンジャーの",
+          "tag": "gloves",
+          "generation_type": "suffix",
+          "required_level": 75,
+          "weight": 1000
+        }
+      ],
+      "LifeRegeneration": [
+        {
+          "key": "LifeRegeneration1",
+          "text": "毎秒(1-2)のライフを自動回復する",
+          "name": "イモリの",
+          "tag": "fishing_rod",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 1000
+        },
+        {
+          "key": "LifeRegeneration2",
+          "text": "毎秒(2.1-8)のライフを自動回復する",
+          "name": "蜥蜴の",
+          "tag": "fishing_rod",
+          "generation_type": "suffix",
+          "required_level": 7,
+          "weight": 1000
+        },
+        {
+          "key": "LifeRegeneration3",
+          "text": "毎秒(8.1-16)のライフを自動回復する",
+          "name": "平虫の",
+          "tag": "fishing_rod",
+          "generation_type": "suffix",
+          "required_level": 19,
+          "weight": 1000
+        },
+        {
+          "key": "LifeRegeneration4",
+          "text": "毎秒(16.1-24)のライフを自動回復する",
+          "name": "ヒトデの",
+          "tag": "fishing_rod",
+          "generation_type": "suffix",
+          "required_level": 31,
+          "weight": 1000
+        },
+        {
+          "key": "LifeRegeneration5",
+          "text": "毎秒(24.1-32)のライフを自動回復する",
+          "name": "ヒュドラの",
+          "tag": "fishing_rod",
+          "generation_type": "suffix",
+          "required_level": 44,
+          "weight": 1000
+        },
+        {
+          "key": "LifeRegeneration6",
+          "text": "毎秒(32.1-48)のライフを自動回復する",
+          "name": "トロルの",
+          "tag": "fishing_rod",
+          "generation_type": "suffix",
+          "required_level": 55,
+          "weight": 1000
+        },
+        {
+          "key": "LifeRegeneration7",
+          "text": "毎秒(48.1-64)のライフを自動回復する",
+          "name": "リスラーサの",
+          "tag": "fishing_rod",
+          "generation_type": "suffix",
+          "required_level": 68,
+          "weight": 1000
+        },
+        {
+          "key": "LifeRegeneration8_",
+          "text": "毎秒(64.1-96)のライフを自動回復する",
+          "name": "不死鳥の",
+          "tag": "fishing_rod",
+          "generation_type": "suffix",
+          "required_level": 74,
+          "weight": 1000
+        }
+      ],
+      "ManaRegeneration": [
+        {
+          "key": "ManaRegeneration1",
+          "text": "マナ自動回復レートが(10-19)%増加する",
+          "name": "興奮の",
+          "tag": "ring",
+          "generation_type": "suffix",
+          "required_level": 2,
+          "weight": 1000
+        },
+        {
+          "key": "ManaRegeneration2",
+          "text": "マナ自動回復レートが(20-29)%増加する",
+          "name": "歓喜の",
+          "tag": "ring",
+          "generation_type": "suffix",
+          "required_level": 18,
+          "weight": 1000
+        },
+        {
+          "key": "ManaRegeneration3",
+          "text": "マナ自動回復レートが(30-39)%増加する",
+          "name": "高揚の",
+          "tag": "ring",
+          "generation_type": "suffix",
+          "required_level": 29,
+          "weight": 1000
+        },
+        {
+          "key": "ManaRegeneration4",
+          "text": "マナ自動回復レートが(40-49)%増加する",
+          "name": "至福の",
+          "tag": "ring",
+          "generation_type": "suffix",
+          "required_level": 42,
+          "weight": 1000
+        },
+        {
+          "key": "ManaRegeneration5",
+          "text": "マナ自動回復レートが(50-59)%増加する",
+          "name": "陶酔の",
+          "tag": "ring",
+          "generation_type": "suffix",
+          "required_level": 55,
+          "weight": 1000
+        },
+        {
+          "key": "ManaRegeneration6",
+          "text": "マナ自動回復レートが(60-69)%増加する",
+          "name": "涅槃の",
+          "tag": "ring",
+          "generation_type": "suffix",
+          "required_level": 79,
+          "weight": 1000
+        }
+      ],
+      "CriticalStrikeChance": [
+        {
+          "key": "CriticalStrikeChance1",
+          "text": "グローバルクリティカル率が(10-14)%増加する",
+          "name": "突き刺しの",
+          "tag": "weapon",
+          "generation_type": "suffix",
+          "required_level": 5,
+          "weight": 1000
+        },
+        {
+          "key": "CriticalStrikeChance2",
+          "text": "グローバルクリティカル率が(15-19)%増加する",
+          "name": "穿刺の",
+          "tag": "weapon",
+          "generation_type": "suffix",
+          "required_level": 20,
+          "weight": 1000
+        },
+        {
+          "key": "CriticalStrikeChance3",
+          "text": "グローバルクリティカル率が(20-24)%増加する",
+          "name": "貫通の",
+          "tag": "weapon",
+          "generation_type": "suffix",
+          "required_level": 30,
+          "weight": 1000
+        },
+        {
+          "key": "CriticalStrikeChance4",
+          "text": "グローバルクリティカル率が(25-29)%増加する",
+          "name": "破裂の",
+          "tag": "weapon",
+          "generation_type": "suffix",
+          "required_level": 44,
+          "weight": 1000
+        },
+        {
+          "key": "CriticalStrikeChance5",
+          "text": "グローバルクリティカル率が(30-34)%増加する",
+          "name": "穿通の",
+          "tag": "weapon",
+          "generation_type": "suffix",
+          "required_level": 58,
+          "weight": 1000
+        },
+        {
+          "key": "CriticalStrikeChance6",
+          "text": "グローバルクリティカル率が(35-38)%増加する",
+          "name": "切開の",
+          "tag": "weapon",
+          "generation_type": "suffix",
+          "required_level": 72,
+          "weight": 1000
+        }
+      ],
+      "FireResistance": [
+        {
+          "key": "FireResist1",
+          "text": "火耐性 +(6-11)%",
+          "name": "仔竜の",
+          "tag": "armour",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 1000
+        },
+        {
+          "key": "FireResist2",
+          "text": "火耐性 +(12-17)%",
+          "name": "サラマンダーの",
+          "tag": "armour",
+          "generation_type": "suffix",
+          "required_level": 12,
+          "weight": 1000
+        },
+        {
+          "key": "FireResist3",
+          "text": "火耐性 +(18-23)%",
+          "name": "ドレイクの",
+          "tag": "armour",
+          "generation_type": "suffix",
+          "required_level": 24,
+          "weight": 1000
+        },
+        {
+          "key": "FireResist4",
+          "text": "火耐性 +(24-29)%",
+          "name": "窯の",
+          "tag": "armour",
+          "generation_type": "suffix",
+          "required_level": 36,
+          "weight": 1000
+        },
+        {
+          "key": "FireResist5",
+          "text": "火耐性 +(30-35)%",
+          "name": "炉の",
+          "tag": "armour",
+          "generation_type": "suffix",
+          "required_level": 48,
+          "weight": 1000
+        },
+        {
+          "key": "FireResist6",
+          "text": "火耐性 +(36-41)%",
+          "name": "火山の",
+          "tag": "armour",
+          "generation_type": "suffix",
+          "required_level": 60,
+          "weight": 1000
+        },
+        {
+          "key": "FireResist7",
+          "text": "火耐性 +(42-45)%",
+          "name": "マグマの",
+          "tag": "armour",
+          "generation_type": "suffix",
+          "required_level": 72,
+          "weight": 1000
+        },
+        {
+          "key": "FireResist8",
+          "text": "火耐性 +(46-48)%",
+          "name": "ツティオシュの",
+          "tag": "armour",
+          "generation_type": "suffix",
+          "required_level": 84,
+          "weight": 1000
+        }
+      ],
+      "ColdResistance": [
+        {
+          "key": "ColdResist1",
+          "text": "冷気耐性 +(6-11)%",
+          "name": "イヌイットの",
+          "tag": "armour",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 1000
+        },
+        {
+          "key": "ColdResist2",
+          "text": "冷気耐性 +(12-17)%",
+          "name": "アシカの",
+          "tag": "armour",
+          "generation_type": "suffix",
+          "required_level": 14,
+          "weight": 1000
+        },
+        {
+          "key": "ColdResist3",
+          "text": "冷気耐性 +(18-23)%",
+          "name": "ペンギンの",
+          "tag": "armour",
+          "generation_type": "suffix",
+          "required_level": 26,
+          "weight": 1000
+        },
+        {
+          "key": "ColdResist4",
+          "text": "冷気耐性 +(24-29)%",
+          "name": "イエティの",
+          "tag": "armour",
+          "generation_type": "suffix",
+          "required_level": 38,
+          "weight": 1000
+        },
+        {
+          "key": "ColdResist5",
+          "text": "冷気耐性 +(30-35)%",
+          "name": "セイウチの",
+          "tag": "armour",
+          "generation_type": "suffix",
+          "required_level": 50,
+          "weight": 1000
+        },
+        {
+          "key": "ColdResist6",
+          "text": "冷気耐性 +(36-41)%",
+          "name": "ホッキョクグマの",
+          "tag": "armour",
+          "generation_type": "suffix",
+          "required_level": 60,
+          "weight": 1000
+        },
+        {
+          "key": "ColdResist7",
+          "text": "冷気耐性 +(42-45)%",
+          "name": "氷の",
+          "tag": "armour",
+          "generation_type": "suffix",
+          "required_level": 72,
+          "weight": 1000
+        },
+        {
+          "key": "ColdResist8",
+          "text": "冷気耐性 +(46-48)%",
+          "name": "ハーストの",
+          "tag": "armour",
+          "generation_type": "suffix",
+          "required_level": 84,
+          "weight": 1000
+        }
+      ],
+      "LightningResistance": [
+        {
+          "key": "LightningResist1",
+          "text": "雷耐性 +(6-11)%",
+          "name": "雲の",
+          "tag": "armour",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 1000
+        },
+        {
+          "key": "LightningResist2",
+          "text": "雷耐性 +(12-17)%",
+          "name": "スコールの",
+          "tag": "armour",
+          "generation_type": "suffix",
+          "required_level": 13,
+          "weight": 1000
+        },
+        {
+          "key": "LightningResist3",
+          "text": "雷耐性 +(18-23)%",
+          "name": "嵐の",
+          "tag": "armour",
+          "generation_type": "suffix",
+          "required_level": 25,
+          "weight": 1000
+        },
+        {
+          "key": "LightningResist4",
+          "text": "雷耐性 +(24-29)%",
+          "name": "雷雲の",
+          "tag": "armour",
+          "generation_type": "suffix",
+          "required_level": 37,
+          "weight": 1000
+        },
+        {
+          "key": "LightningResist5",
+          "text": "雷耐性 +(30-35)%",
+          "name": "雷雨の",
+          "tag": "armour",
+          "generation_type": "suffix",
+          "required_level": 49,
+          "weight": 1000
+        },
+        {
+          "key": "LightningResist6",
+          "text": "雷耐性 +(36-41)%",
+          "name": "大渦の",
+          "tag": "armour",
+          "generation_type": "suffix",
+          "required_level": 60,
+          "weight": 1000
+        },
+        {
+          "key": "LightningResist7",
+          "text": "雷耐性 +(42-45)%",
+          "name": "雷の",
+          "tag": "armour",
+          "generation_type": "suffix",
+          "required_level": 72,
+          "weight": 1000
+        },
+        {
+          "key": "LightningResist8",
+          "text": "雷耐性 +(46-48)%",
+          "name": "エフィジの",
+          "tag": "armour",
+          "generation_type": "suffix",
+          "required_level": 84,
+          "weight": 1000
+        }
+      ],
+      "ChaosResistance": [
+        {
+          "key": "ChaosResist1",
+          "text": "混沌耐性 +(5-10)%",
+          "name": "迷い子の",
+          "tag": "armour",
+          "generation_type": "suffix",
+          "required_level": 16,
+          "weight": 250
+        },
+        {
+          "key": "ChaosResist2",
+          "text": "混沌耐性 +(11-15)%",
+          "name": "流刑の",
+          "tag": "armour",
+          "generation_type": "suffix",
+          "required_level": 30,
+          "weight": 250
+        },
+        {
+          "key": "ChaosResist3",
+          "text": "混沌耐性 +(16-20)%",
+          "name": "排出の",
+          "tag": "armour",
+          "generation_type": "suffix",
+          "required_level": 44,
+          "weight": 250
+        },
+        {
+          "key": "ChaosResist4",
+          "text": "混沌耐性 +(21-25)%",
+          "name": "排除の",
+          "tag": "armour",
+          "generation_type": "suffix",
+          "required_level": 56,
+          "weight": 250
+        },
+        {
+          "key": "ChaosResist5",
+          "text": "混沌耐性 +(26-30)%",
+          "name": "追放の",
+          "tag": "armour",
+          "generation_type": "suffix",
+          "required_level": 65,
+          "weight": 250
+        },
+        {
+          "key": "ChaosResist6",
+          "text": "混沌耐性 +(31-35)%",
+          "name": "バメスの",
+          "tag": "armour",
+          "generation_type": "suffix",
+          "required_level": 81,
+          "weight": 250
+        }
+      ],
+      "AllResistances": [
+        {
+          "key": "AllResistances1",
+          "text": "全ての元素耐性 +(3-5)%",
+          "name": "クリスタルの",
+          "tag": "shield",
+          "generation_type": "suffix",
+          "required_level": 12,
+          "weight": 1000
+        },
+        {
+          "key": "AllResistances2",
+          "text": "全ての元素耐性 +(6-8)%",
+          "name": "プリズムの",
+          "tag": "shield",
+          "generation_type": "suffix",
+          "required_level": 24,
+          "weight": 1000
+        },
+        {
+          "key": "AllResistances3",
+          "text": "全ての元素耐性 +(9-11)%",
+          "name": "万華鏡の",
+          "tag": "shield",
+          "generation_type": "suffix",
+          "required_level": 36,
+          "weight": 1000
+        },
+        {
+          "key": "AllResistances4",
+          "text": "全ての元素耐性 +(12-14)%",
+          "name": "斑入りの",
+          "tag": "shield",
+          "generation_type": "suffix",
+          "required_level": 48,
+          "weight": 1000
+        },
+        {
+          "key": "AllResistances5",
+          "text": "全ての元素耐性 +(15-16)%",
+          "name": "虹の",
+          "tag": "shield",
+          "generation_type": "suffix",
+          "required_level": 60,
+          "weight": 1000
+        },
+        {
+          "key": "AllResistances6",
+          "text": "全ての元素耐性 +(17-18)%",
+          "name": "波長の",
+          "tag": "shield",
+          "generation_type": "suffix",
+          "required_level": 85,
+          "weight": 1000
+        }
+      ],
+      "CriticalStrikeMultiplier": [
+        {
+          "key": "CriticalMultiplier1",
+          "text": "グローバルクリティカルダメージ倍率 +(8-12)%",
+          "name": "痛憤の",
+          "tag": "weapon",
+          "generation_type": "suffix",
+          "required_level": 8,
+          "weight": 1000
+        },
+        {
+          "key": "CriticalMultiplier2",
+          "text": "グローバルクリティカルダメージ倍率 +(13-19)%",
+          "name": "怒りの",
+          "tag": "weapon",
+          "generation_type": "suffix",
+          "required_level": 21,
+          "weight": 1000
+        },
+        {
+          "key": "CriticalMultiplier3",
+          "text": "グローバルクリティカルダメージ倍率 +(20-24)%",
+          "name": "激怒の",
+          "tag": "weapon",
+          "generation_type": "suffix",
+          "required_level": 31,
+          "weight": 1000
+        },
+        {
+          "key": "CriticalMultiplier4",
+          "text": "グローバルクリティカルダメージ倍率 +(25-29)%",
+          "name": "憤激の",
+          "tag": "weapon",
+          "generation_type": "suffix",
+          "required_level": 45,
+          "weight": 1000
+        },
+        {
+          "key": "CriticalMultiplier5",
+          "text": "グローバルクリティカルダメージ倍率 +(30-34)%",
+          "name": "凶暴性の",
+          "tag": "weapon",
+          "generation_type": "suffix",
+          "required_level": 59,
+          "weight": 1000
+        },
+        {
+          "key": "CriticalMultiplier6",
+          "text": "グローバルクリティカルダメージ倍率 +(35-38)%",
+          "name": "破壊の",
+          "tag": "weapon",
+          "generation_type": "suffix",
+          "required_level": 74,
+          "weight": 1000
+        }
+      ],
+      "LifeGainPerTarget": [
+        {
+          "key": "LifeGainPerTarget1",
+          "text": "アタックでヒットを与えた敵1体ごとに2のライフを獲得する",
+          "name": "活性化の",
+          "tag": "amulet",
+          "generation_type": "suffix",
+          "required_level": 8,
+          "weight": 1000
+        },
+        {
+          "key": "LifeGainPerTarget2",
+          "text": "アタックでヒットを与えた敵1体ごとに3のライフを獲得する",
+          "name": "復元の",
+          "tag": "amulet",
+          "generation_type": "suffix",
+          "required_level": 20,
+          "weight": 1000
+        },
+        {
+          "key": "LifeGainPerTarget3",
+          "text": "アタックでヒットを与えた敵1体ごとに4のライフを獲得する",
+          "name": "再生の",
+          "tag": "amulet",
+          "generation_type": "suffix",
+          "required_level": 30,
+          "weight": 1000
+        }
+      ],
+      "FireDamagePercentage": [
+        {
+          "key": "FireDamagePercent1",
+          "text": "火ダメージが(10-12)%増加する",
+          "name": "残り火の",
+          "tag": "wand",
+          "generation_type": "suffix",
+          "required_level": 8,
+          "weight": 500
+        },
+        {
+          "key": "FireDamagePercent2",
+          "text": "火ダメージが(13-15)%増加する",
+          "name": "石炭の",
+          "tag": "wand",
+          "generation_type": "suffix",
+          "required_level": 22,
+          "weight": 500
+        },
+        {
+          "key": "FireDamagePercent3",
+          "text": "火ダメージが(16-18)%増加する",
+          "name": "消し炭の",
+          "tag": "wand",
+          "generation_type": "suffix",
+          "required_level": 36,
+          "weight": 500
+        },
+        {
+          "key": "FireDamagePercent4",
+          "text": "火ダメージが(19-22)%増加する",
+          "name": "炎の",
+          "tag": "wand",
+          "generation_type": "suffix",
+          "required_level": 50,
+          "weight": 500
+        },
+        {
+          "key": "FireDamagePercent5",
+          "text": "火ダメージが(23-26)%増加する",
+          "name": "焼棄の",
+          "tag": "wand",
+          "generation_type": "suffix",
+          "required_level": 64,
+          "weight": 500
+        }
+      ],
+      "ColdDamagePercentage": [
+        {
+          "key": "ColdDamagePercent1",
+          "text": "冷気ダメージが(10-12)%増加する",
+          "name": "雪の",
+          "tag": "wand",
+          "generation_type": "suffix",
+          "required_level": 12,
+          "weight": 500
+        },
+        {
+          "key": "ColdDamagePercent2",
+          "text": "冷気ダメージが(13-15)%増加する",
+          "name": "霙の",
+          "tag": "wand",
+          "generation_type": "suffix",
+          "required_level": 24,
+          "weight": 500
+        },
+        {
+          "key": "ColdDamagePercent3",
+          "text": "冷気ダメージが(16-18)%増加する",
+          "name": "氷雪の",
+          "tag": "wand",
+          "generation_type": "suffix",
+          "required_level": 36,
+          "weight": 500
+        },
+        {
+          "key": "ColdDamagePercent4",
+          "text": "冷気ダメージが(19-22)%増加する",
+          "name": "霧氷の",
+          "tag": "wand",
+          "generation_type": "suffix",
+          "required_level": 50,
+          "weight": 500
+        },
+        {
+          "key": "ColdDamagePercent5",
+          "text": "冷気ダメージが(23-26)%増加する",
+          "name": "氷原の",
+          "tag": "wand",
+          "generation_type": "suffix",
+          "required_level": 64,
+          "weight": 500
+        }
+      ],
+      "LightningDamagePercentage": [
+        {
+          "key": "LightningDamagePercent1",
+          "text": "雷ダメージが(10-12)%増加する",
+          "name": "電光の",
+          "tag": "wand",
+          "generation_type": "suffix",
+          "required_level": 10,
+          "weight": 500
+        },
+        {
+          "key": "LightningDamagePercent2",
+          "text": "雷ダメージが(13-15)%増加する",
+          "name": "静電気の",
+          "tag": "wand",
+          "generation_type": "suffix",
+          "required_level": 23,
+          "weight": 500
+        },
+        {
+          "key": "LightningDamagePercent3",
+          "text": "雷ダメージが(16-18)%増加する",
+          "name": "電気の",
+          "tag": "wand",
+          "generation_type": "suffix",
+          "required_level": 36,
+          "weight": 500
+        },
+        {
+          "key": "LightningDamagePercent4",
+          "text": "雷ダメージが(19-22)%増加する",
+          "name": "電圧の",
+          "tag": "wand",
+          "generation_type": "suffix",
+          "required_level": 50,
+          "weight": 500
+        },
+        {
+          "key": "LightningDamagePercent5",
+          "text": "雷ダメージが(23-26)%増加する",
+          "name": "放電の",
+          "tag": "wand",
+          "generation_type": "suffix",
+          "required_level": 64,
+          "weight": 500
+        }
+      ],
+      "LifeGainedFromEnemyDeath": [
+        {
+          "key": "LifeGainedFromEnemyDeath1",
+          "text": "倒した敵1体ごとに(7-10)のライフを獲得する",
+          "name": "成功の",
+          "tag": "weapon",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 500
+        },
+        {
+          "key": "LifeGainedFromEnemyDeath2",
+          "text": "倒した敵1体ごとに(12-18)のライフを獲得する",
+          "name": "戦勝の",
+          "tag": "weapon",
+          "generation_type": "suffix",
+          "required_level": 23,
+          "weight": 500
+        },
+        {
+          "key": "LifeGainedFromEnemyDeath3",
+          "text": "倒した敵1体ごとに(24-32)のライフを獲得する",
+          "name": "勝利の",
+          "tag": "weapon",
+          "generation_type": "suffix",
+          "required_level": 40,
+          "weight": 500
+        },
+        {
+          "key": "LifeGainedFromEnemyDeath4",
+          "text": "倒した敵1体ごとに(35-44)のライフを獲得する",
+          "name": "征服の",
+          "tag": "weapon",
+          "generation_type": "suffix",
+          "required_level": 52,
+          "weight": 500
+        },
+        {
+          "key": "LifeGainedFromEnemyDeath5",
+          "text": "倒した敵1体ごとに(56-72)のライフを獲得する",
+          "name": "達成の",
+          "tag": "weapon",
+          "generation_type": "suffix",
+          "required_level": 66,
+          "weight": 500
+        },
+        {
+          "key": "LifeGainedFromEnemyDeath6",
+          "text": "倒した敵1体ごとに(84-110)のライフを獲得する",
+          "name": "名人技の",
+          "tag": "weapon",
+          "generation_type": "suffix",
+          "required_level": 81,
+          "weight": 500
+        }
+      ],
+      "ManaGainedFromEnemyDeath": [
+        {
+          "key": "ManaGainedFromEnemyDeath1",
+          "text": "倒した敵1体ごとに(4-6)のマナを獲得する",
+          "name": "吸収の",
+          "tag": "weapon",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 500
+        },
+        {
+          "key": "ManaGainedFromEnemyDeath2",
+          "text": "倒した敵1体ごとに(7-10)のマナを獲得する",
+          "name": "浸透の",
+          "tag": "weapon",
+          "generation_type": "suffix",
+          "required_level": 24,
+          "weight": 500
+        },
+        {
+          "key": "ManaGainedFromEnemyDeath3",
+          "text": "倒した敵1体ごとに(11-15)のマナを獲得する",
+          "name": "摂食の",
+          "tag": "weapon",
+          "generation_type": "suffix",
+          "required_level": 40,
+          "weight": 500
+        },
+        {
+          "key": "ManaGainedFromEnemyDeath4",
+          "text": "倒した敵1体ごとに(16-25)のマナを獲得する",
+          "name": "拡散の",
+          "tag": "weapon",
+          "generation_type": "suffix",
+          "required_level": 52,
+          "weight": 500
+        },
+        {
+          "key": "ManaGainedFromEnemyDeath5",
+          "text": "倒した敵1体ごとに(26-37)のマナを獲得する",
+          "name": "浸潤の",
+          "tag": "weapon",
+          "generation_type": "suffix",
+          "required_level": 66,
+          "weight": 500
+        },
+        {
+          "key": "ManaGainedFromEnemyDeath6",
+          "text": "倒した敵1体ごとに(38-50)のマナを獲得する",
+          "name": "保持の",
+          "tag": "weapon",
+          "generation_type": "suffix",
+          "required_level": 81,
+          "weight": 500
+        }
+      ],
+      "GlobalDamageOverTimeMultiplier": [
+        {
+          "key": "GlobalDamageOverTimeMultiplier1h1",
+          "text": "継続ダメージ倍率 +(7-11)%",
+          "name": "辛辣さの",
+          "tag": "bow",
+          "generation_type": "suffix",
+          "required_level": 44,
+          "weight": 300
+        },
+        {
+          "key": "GlobalDamageOverTimeMultiplier1h2_",
+          "text": "継続ダメージ倍率 +(12-15)%",
+          "name": "消散の",
+          "tag": "bow",
+          "generation_type": "suffix",
+          "required_level": 55,
+          "weight": 300
+        },
+        {
+          "key": "GlobalDamageOverTimeMultiplier1h3",
+          "text": "継続ダメージ倍率 +(16-19)%",
+          "name": "液化の",
+          "tag": "bow",
+          "generation_type": "suffix",
+          "required_level": 68,
+          "weight": 300
+        },
+        {
+          "key": "GlobalDamageOverTimeMultiplier1h4",
+          "text": "継続ダメージ倍率 +(20-23)%",
+          "name": "融解の",
+          "tag": "bow",
+          "generation_type": "suffix",
+          "required_level": 76,
+          "weight": 300
+        },
+        {
+          "key": "GlobalDamageOverTimeMultiplier1h5",
+          "text": "継続ダメージ倍率 +(24-26)%",
+          "name": "溶解の",
+          "tag": "bow",
+          "generation_type": "suffix",
+          "required_level": 82,
+          "weight": 300
+        }
+      ]
+    }
+  }
+}

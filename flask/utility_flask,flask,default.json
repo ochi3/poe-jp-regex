@@ -1,0 +1,1201 @@
+{
+  "bases": [
+    "Metadata/Items/Flasks/FlaskUtility1",
+    "Metadata/Items/Flasks/FlaskUtility2",
+    "Metadata/Items/Flasks/FlaskUtility3",
+    "Metadata/Items/Flasks/FlaskUtility4",
+    "Metadata/Items/Flasks/FlaskUtility5",
+    "Metadata/Items/Flasks/FlaskUtility6",
+    "Metadata/Items/Flasks/FlaskUtility7",
+    "Metadata/Items/Flasks/FlaskUtility8",
+    "Metadata/Items/Flasks/FlaskUtility9",
+    "Metadata/Items/Flasks/FlaskUtility10",
+    "Metadata/Items/Flasks/FlaskUtility11",
+    "Metadata/Items/Flasks/FlaskUtility12",
+    "Metadata/Items/Flasks/FlaskUtility13",
+    "Metadata/Items/Flasks/FlaskUtility14",
+    "Metadata/Items/Flasks/FlaskUtility15",
+    "Metadata/Items/Flasks/FlaskUtility16",
+    "Metadata/Items/Flasks/FlaskUtility17"
+  ],
+  "mods": {
+    "prefix": {
+      "FlaskExtraMaxCharges": [
+        {
+          "key": "FlaskExtraCharges1",
+          "text": "最大チャージ数 +(16-19)",
+          "name": "広い",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 2,
+          "weight": 600
+        },
+        {
+          "key": "FlaskExtraCharges2__",
+          "text": "最大チャージ数 +(20-23)",
+          "name": "多量の",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 22,
+          "weight": 600
+        },
+        {
+          "key": "FlaskExtraCharges3_",
+          "text": "最大チャージ数 +(24-27)",
+          "name": "豊潤な",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 42,
+          "weight": 600
+        },
+        {
+          "key": "FlaskExtraCharges4__",
+          "text": "最大チャージ数 +(28-31)",
+          "name": "豊かな",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 62,
+          "weight": 600
+        },
+        {
+          "key": "FlaskExtraCharges5",
+          "text": "最大チャージ数 +(32-35)",
+          "name": "潤沢な",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 82,
+          "weight": 600
+        }
+      ],
+      "FlaskIncreasedChargesAdded": [
+        {
+          "key": "FlaskChargesAddedIncreasePercent1",
+          "text": "チャージ回復量が(16-20)%増加する",
+          "name": "常在の",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 3,
+          "weight": 600
+        },
+        {
+          "key": "FlaskChargesAddedIncreasePercent2_",
+          "text": "チャージ回復量が(21-25)%増加する",
+          "name": "絶え間なき",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 23,
+          "weight": 600
+        },
+        {
+          "key": "FlaskChargesAddedIncreasePercent3_",
+          "text": "チャージ回復量が(26-30)%増加する",
+          "name": "果てなき",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 43,
+          "weight": 600
+        },
+        {
+          "key": "FlaskChargesAddedIncreasePercent4_",
+          "text": "チャージ回復量が(31-45)%増加する",
+          "name": "底なしの",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 63,
+          "weight": 600
+        },
+        {
+          "key": "FlaskChargesAddedIncreasePercent5__",
+          "text": "チャージ回復量が(46-50)%増加する",
+          "name": "永久なる",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 83,
+          "weight": 600
+        }
+      ],
+      "FlaskIncreasedRecoveryReducedEffect": [
+        {
+          "key": "FlaskIncreasedRecoveryReducedEffect1_",
+          "text": "チャージ回復量が(37-42)%増加する\n効果が25%減少する",
+          "name": "配布された",
+          "tag": "utility_flask",
+          "generation_type": "prefix",
+          "required_level": 20,
+          "weight": 600
+        },
+        {
+          "key": "FlaskIncreasedRecoveryReducedEffect2_",
+          "text": "チャージ回復量が(43-48)%増加する\n効果が25%減少する",
+          "name": "提供された",
+          "tag": "utility_flask",
+          "generation_type": "prefix",
+          "required_level": 36,
+          "weight": 600
+        },
+        {
+          "key": "FlaskIncreasedRecoveryReducedEffect3____",
+          "text": "チャージ回復量が(49-54)%増加する\n効果が25%減少する",
+          "name": "配分された",
+          "tag": "utility_flask",
+          "generation_type": "prefix",
+          "required_level": 52,
+          "weight": 600
+        },
+        {
+          "key": "FlaskIncreasedRecoveryReducedEffect4_",
+          "text": "チャージ回復量が(55-60)%増加する\n効果が25%減少する",
+          "name": "割り当てられた",
+          "tag": "utility_flask",
+          "generation_type": "prefix",
+          "required_level": 68,
+          "weight": 600
+        },
+        {
+          "key": "FlaskIncreasedRecoveryReducedEffect5",
+          "text": "チャージ回復量が(61-66)%増加する\n効果が25%減少する",
+          "name": "配給された",
+          "tag": "utility_flask",
+          "generation_type": "prefix",
+          "required_level": 84,
+          "weight": 600
+        }
+      ],
+      "FlaskChanceRechargeOnCrit": [
+        {
+          "key": "FlaskChanceRechargeOnCrit1",
+          "text": "プレイヤーがクリティカルストライクを与えた時に(11-15)%の確率でフラスコチャージを1獲得する",
+          "name": "衛生兵の",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 8,
+          "weight": 600
+        },
+        {
+          "key": "FlaskChanceRechargeOnCrit2",
+          "text": "プレイヤーがクリティカルストライクを与えた時に(16-20)%の確率でフラスコチャージを1獲得する",
+          "name": "医師の",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 26,
+          "weight": 600
+        },
+        {
+          "key": "FlaskChanceRechargeOnCrit3___",
+          "text": "プレイヤーがクリティカルストライクを与えた時に(21-25)%の確率でフラスコチャージを1獲得する",
+          "name": "医者の",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 44,
+          "weight": 600
+        },
+        {
+          "key": "FlaskChanceRechargeOnCrit4",
+          "text": "プレイヤーがクリティカルストライクを与えた時に(26-30)%の確率でフラスコチャージを1獲得する",
+          "name": "専門医の",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 62,
+          "weight": 600
+        },
+        {
+          "key": "FlaskChanceRechargeOnCrit5",
+          "text": "プレイヤーがクリティカルストライクを与えた時に(31-35)%の確率でフラスコチャージを1獲得する",
+          "name": "外科医の",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 80,
+          "weight": 600
+        }
+      ],
+      "FlaskEffectReducedDuration": [
+        {
+          "key": "FlaskEffectReducedDuration1",
+          "text": "持続時間が(38-33)%減少する\n効果が25%増加する",
+          "name": "初学者の",
+          "tag": "utility_flask",
+          "generation_type": "prefix",
+          "required_level": 20,
+          "weight": 1000
+        },
+        {
+          "key": "FlaskEffectReducedDuration2",
+          "text": "持続時間が(32-28)%減少する\n効果が25%増加する",
+          "name": "素人の",
+          "tag": "utility_flask",
+          "generation_type": "prefix",
+          "required_level": 50,
+          "weight": 1000
+        },
+        {
+          "key": "FlaskEffectReducedDuration3",
+          "text": "持続時間が(27-23)%減少する\n効果が25%増加する",
+          "name": "錬金術師の",
+          "tag": "utility_flask",
+          "generation_type": "prefix",
+          "required_level": 80,
+          "weight": 1000
+        }
+      ],
+      "FlaskChargesUsed": [
+        {
+          "key": "FlaskChargesUsed1",
+          "text": "使用に必要なチャージ量が(16-14)%減少する",
+          "name": "弟子の",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 14,
+          "weight": 600
+        },
+        {
+          "key": "FlaskChargesUsed2",
+          "text": "使用に必要なチャージ量が(19-17)%減少する",
+          "name": "学者の",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 31,
+          "weight": 600
+        },
+        {
+          "key": "FlaskChargesUsed3__",
+          "text": "使用に必要なチャージ量が(22-20)%減少する",
+          "name": "実践者の",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 48,
+          "weight": 600
+        },
+        {
+          "key": "FlaskChargesUsed4__",
+          "text": "使用に必要なチャージ量が(25-23)%減少する",
+          "name": "醸造者の",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 65,
+          "weight": 600
+        },
+        {
+          "key": "FlaskChargesUsed5",
+          "text": "使用に必要なチャージ量が(28-26)%減少する",
+          "name": "化学者の",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 82,
+          "weight": 600
+        }
+      ],
+      "FlaskUtilityIncreasedDuration": [
+        {
+          "key": "FlaskIncreasedDuration2",
+          "text": "持続時間が(16-20)%増加する",
+          "name": "調査者の",
+          "tag": "utility_flask",
+          "generation_type": "prefix",
+          "required_level": 20,
+          "weight": 600
+        },
+        {
+          "key": "FlaskIncreasedDuration3_",
+          "text": "持続時間が(21-25)%増加する",
+          "name": "分析者の",
+          "tag": "utility_flask",
+          "generation_type": "prefix",
+          "required_level": 36,
+          "weight": 600
+        },
+        {
+          "key": "FlaskIncreasedDuration4",
+          "text": "持続時間が(26-30)%増加する",
+          "name": "検査者の",
+          "tag": "utility_flask",
+          "generation_type": "prefix",
+          "required_level": 52,
+          "weight": 600
+        },
+        {
+          "key": "FlaskIncreasedDuration5__",
+          "text": "持続時間が(31-35)%増加する",
+          "name": "臨床医の",
+          "tag": "utility_flask",
+          "generation_type": "prefix",
+          "required_level": 68,
+          "weight": 600
+        },
+        {
+          "key": "FlaskIncreasedDuration6",
+          "text": "持続時間が(36-40)%増加する",
+          "name": "実験者の",
+          "tag": "utility_flask",
+          "generation_type": "prefix",
+          "required_level": 84,
+          "weight": 600
+        }
+      ],
+      "FlaskFullRechargeOnHit": [
+        {
+          "key": "FlaskFullRechargeOnHit2_",
+          "text": "敵によるヒットを受けた時にチャージを1獲得する",
+          "name": "違反者の",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 29,
+          "weight": 600
+        },
+        {
+          "key": "FlaskFullRechargeOnHit4_",
+          "text": "敵によるヒットを受けた時にチャージを2獲得する",
+          "name": "マゾヒストの",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 63,
+          "weight": 600
+        },
+        {
+          "key": "FlaskFullRechargeOnHit5___",
+          "text": "敵によるヒットを受けた時にチャージを3獲得する",
+          "name": "鞭打苦行者の",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 80,
+          "weight": 600
+        }
+      ]
+    },
+    "suffix": {
+      "FlaskBuffArmourWhileHealing": [
+        {
+          "key": "FlaskBuffArmourWhileHealing1",
+          "text": "効果中はアーマーが(41-45)%増加する",
+          "name": "アワビの",
+          "tag": "expedition_flask",
+          "generation_type": "suffix",
+          "required_level": 6,
+          "weight": 750
+        },
+        {
+          "key": "FlaskBuffArmourWhileHealing2",
+          "text": "効果中はアーマーが(46-50)%増加する",
+          "name": "カメの",
+          "tag": "expedition_flask",
+          "generation_type": "suffix",
+          "required_level": 32,
+          "weight": 750
+        },
+        {
+          "key": "FlaskBuffArmourWhileHealing3",
+          "text": "効果中はアーマーが(51-55)%増加する",
+          "name": "センザンコウの",
+          "tag": "expedition_flask",
+          "generation_type": "suffix",
+          "required_level": 58,
+          "weight": 750
+        },
+        {
+          "key": "FlaskBuffArmourWhileHealing4",
+          "text": "効果中はアーマーが(56-60)%増加する",
+          "name": "アルマジロの",
+          "tag": "expedition_flask",
+          "generation_type": "suffix",
+          "required_level": 84,
+          "weight": 750
+        }
+      ],
+      "FlaskBuffEvasionWhileHealing": [
+        {
+          "key": "FlaskBuffEvasionWhileHealing",
+          "text": "効果中は回避力が(41-45)%増加する",
+          "name": "ガゼルの",
+          "tag": "expedition_flask",
+          "generation_type": "suffix",
+          "required_level": 6,
+          "weight": 750
+        },
+        {
+          "key": "FlaskBuffEvasionWhileHealing2",
+          "text": "効果中は回避力が(46-50)%増加する",
+          "name": "レイヨウの",
+          "tag": "expedition_flask",
+          "generation_type": "suffix",
+          "required_level": 32,
+          "weight": 750
+        },
+        {
+          "key": "FlaskBuffEvasionWhileHealing3_",
+          "text": "効果中は回避力が(51-55)%増加する",
+          "name": "アイベックスの",
+          "tag": "expedition_flask",
+          "generation_type": "suffix",
+          "required_level": 58,
+          "weight": 750
+        },
+        {
+          "key": "FlaskBuffEvasionWhileHealing4",
+          "text": "効果中は回避力が(56-60)%増加する",
+          "name": "インパラの",
+          "tag": "expedition_flask",
+          "generation_type": "suffix",
+          "required_level": 84,
+          "weight": 750
+        }
+      ],
+      "FlaskBuffMovementSpeedWhileHealing": [
+        {
+          "key": "FlaskBuffMovementSpeedWhileHealing",
+          "text": "効果中は移動スピードが(6-8)%増加する",
+          "name": "ウサギの",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 5,
+          "weight": 1000
+        },
+        {
+          "key": "FlaskBuffMovementSpeedWhileHealing2",
+          "text": "効果中は移動スピードが(9-11)%増加する",
+          "name": "リンクスの",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 65,
+          "weight": 1000
+        },
+        {
+          "key": "FlaskBuffMovementSpeedWhileHealing3",
+          "text": "効果中は移動スピードが(12-14)%増加する",
+          "name": "チーターの",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 85,
+          "weight": 1000
+        }
+      ],
+      "FlaskBuffStunRecoveryWhileHealing": [
+        {
+          "key": "FlaskBuffStunRecoveryWhileHealing",
+          "text": "効果中はブロックおよびスタン復帰が(51-56)%増加する",
+          "name": "硬直の",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 600
+        },
+        {
+          "key": "FlaskBuffStunRecoveryWhileHealing2",
+          "text": "効果中はブロックおよびスタン復帰が(57-62)%増加する",
+          "name": "支えの",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 19,
+          "weight": 600
+        },
+        {
+          "key": "FlaskBuffStunRecoveryWhileHealing3",
+          "text": "効果中はブロックおよびスタン復帰が(63-68)%増加する",
+          "name": "底荷の",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 37,
+          "weight": 600
+        },
+        {
+          "key": "FlaskBuffStunRecoveryWhileHealing4",
+          "text": "効果中はブロックおよびスタン復帰が(69-74)%増加する",
+          "name": "釣り合いの",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 55,
+          "weight": 600
+        },
+        {
+          "key": "FlaskBuffStunRecoveryWhileHealing5",
+          "text": "効果中はブロックおよびスタン復帰が(75-80)%増加する",
+          "name": "安定化の",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 73,
+          "weight": 600
+        }
+      ],
+      "FlaskBuffResistancesWhileHealing": [
+        {
+          "key": "FlaskBuffResistancesWhileHealing",
+          "text": "効果中は(12-14)%の元素耐性が追加される",
+          "name": "クリスタルの",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 750
+        },
+        {
+          "key": "FlaskBuffResistancesWhileHealing3",
+          "text": "効果中は(15-17)%の元素耐性が追加される",
+          "name": "万華鏡の",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 41,
+          "weight": 750
+        },
+        {
+          "key": "FlaskBuffResistancesWhileHealing5_",
+          "text": "効果中は(18-20)%の元素耐性が追加される",
+          "name": "虹の",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 81,
+          "weight": 750
+        }
+      ],
+      "FlaskBuffAttackLifeLeechWhileHealing": [
+        {
+          "key": "FlaskBuffAttackLifeLeechWhileHealing1",
+          "text": "効果中はアタックダメージの0.4%をライフとしてリーチする",
+          "name": "血潮の",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 10,
+          "weight": 600
+        },
+        {
+          "key": "FlaskBuffAttackLifeLeechWhileHealing2",
+          "text": "効果中はアタックダメージの0.5%をライフとしてリーチする",
+          "name": "血煙の",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 20,
+          "weight": 600
+        },
+        {
+          "key": "FlaskBuffAttackLifeLeechWhileHealing3",
+          "text": "効果中はアタックダメージの0.6%をライフとしてリーチする",
+          "name": "虐殺の",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 40,
+          "weight": 600
+        },
+        {
+          "key": "FlaskBuffAttackLifeLeechWhileHealing4",
+          "text": "効果中はアタックダメージの0.7%をライフとしてリーチする",
+          "name": "屠殺の",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 60,
+          "weight": 600
+        },
+        {
+          "key": "FlaskBuffAttackLifeLeechWhileHealing5",
+          "text": "効果中はアタックダメージの0.8%をライフとしてリーチする",
+          "name": "瀉血の",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 80,
+          "weight": 600
+        }
+      ],
+      "FlaskBuffSpellEnergyShieldLeechWhileHealing": [
+        {
+          "key": "FlaskBuffSpellEnergyShieldLeechWhileHealing1",
+          "text": "効果中はスペルダメージの0.4%をエナジーシールドとしてリーチする",
+          "name": "逸らしの",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 10,
+          "weight": 600
+        },
+        {
+          "key": "FlaskBuffSpellEnergyShieldLeechWhileHealing2_",
+          "text": "効果中はスペルダメージの0.5%をエナジーシールドとしてリーチする",
+          "name": "消費の",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 20,
+          "weight": 600
+        },
+        {
+          "key": "FlaskBuffSpellEnergyShieldLeechWhileHealing3_____",
+          "text": "効果中はスペルダメージの0.6%をエナジーシールドとしてリーチする",
+          "name": "吸い取りの",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 40,
+          "weight": 600
+        },
+        {
+          "key": "FlaskBuffSpellEnergyShieldLeechWhileHealing4",
+          "text": "効果中はスペルダメージの0.7%をエナジーシールドとしてリーチする",
+          "name": "吸い上げの",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 60,
+          "weight": 600
+        },
+        {
+          "key": "FlaskBuffSpellEnergyShieldLeechWhileHealing5",
+          "text": "効果中はスペルダメージの0.8%をエナジーシールドとしてリーチする",
+          "name": "吸収の",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 80,
+          "weight": 600
+        }
+      ],
+      "FlaskBuffCriticalWhileHealing": [
+        {
+          "key": "FlaskBuffCriticalChanceWhileHealing1_",
+          "text": "効果中はクリティカル率が(26-31)%増加する",
+          "name": "穿刺の",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 18,
+          "weight": 600
+        },
+        {
+          "key": "FlaskBuffCriticalChanceWhileHealing2_",
+          "text": "効果中はクリティカル率が(32-37)%増加する",
+          "name": "貫通の",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 34,
+          "weight": 600
+        },
+        {
+          "key": "FlaskBuffCriticalChanceWhileHealing3",
+          "text": "効果中はクリティカル率が(38-43)%増加する",
+          "name": "破裂の",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 50,
+          "weight": 600
+        },
+        {
+          "key": "FlaskBuffCriticalChanceWhileHealing4__",
+          "text": "効果中はクリティカル率が(44-49)%増加する",
+          "name": "穿通の",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 66,
+          "weight": 600
+        },
+        {
+          "key": "FlaskBuffCriticalChanceWhileHealing5",
+          "text": "効果中はクリティカル率が(50-55)%増加する",
+          "name": "切開の",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 82,
+          "weight": 600
+        }
+      ],
+      "FlaskBuffFreezeShockIgniteChanceWhileHealing": [
+        {
+          "key": "FlaskBuffFreezeShockIgniteChanceWhileHealing1_",
+          "text": "効果中は(19-22)%の確率で凍結、感電および発火を付与する",
+          "name": "押し付けの",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 12,
+          "weight": 750
+        },
+        {
+          "key": "FlaskBuffFreezeShockIgniteChanceWhileHealing2____",
+          "text": "効果中は(23-26)%の確率で凍結、感電および発火を付与する",
+          "name": "強要の",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 32,
+          "weight": 750
+        },
+        {
+          "key": "FlaskBuffFreezeShockIgniteChanceWhileHealing3",
+          "text": "効果中は(27-30)%の確率で凍結、感電および発火を付与する",
+          "name": "加害の",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 52,
+          "weight": 750
+        },
+        {
+          "key": "FlaskBuffFreezeShockIgniteChanceWhileHealing4_",
+          "text": "効果中は(31-34)%の確率で凍結、感電および発火を付与する",
+          "name": "侵害の",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 72,
+          "weight": 750
+        }
+      ],
+      "FlaskBuffAvoidStunWhileHealing": [
+        {
+          "key": "FlaskBuffAvoidStunWhileHealing1_",
+          "text": "効果中は(31-35)%の確率でスタンを無効化する",
+          "name": "平静の",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 12,
+          "weight": 600
+        },
+        {
+          "key": "FlaskBuffAvoidStunWhileHealing2",
+          "text": "効果中は(36-40)%の確率でスタンを無効化する",
+          "name": "確かな足取りの",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 29,
+          "weight": 600
+        },
+        {
+          "key": "FlaskBuffAvoidStunWhileHealing3",
+          "text": "効果中は(41-45)%の確率でスタンを無効化する",
+          "name": "粘り強さの",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 46,
+          "weight": 600
+        },
+        {
+          "key": "FlaskBuffAvoidStunWhileHealing4",
+          "text": "効果中は(46-50)%の確率でスタンを無効化する",
+          "name": "執拗さの",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 63,
+          "weight": 600
+        },
+        {
+          "key": "FlaskBuffAvoidStunWhileHealing5",
+          "text": "効果中は(51-55)%の確率でスタンを無効化する",
+          "name": "しつこさの",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 80,
+          "weight": 600
+        }
+      ],
+      "FlaskBuffChillFreezeDuration": [
+        {
+          "key": "FlaskBuffChillFreezeDuration1",
+          "text": "効果中にプレイヤーに対する冷却の効果が(41-36)%減少する\n効果中はプレイヤーに対する凍結持続時間が(41-36)%減少する",
+          "name": "ウサギの",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 4,
+          "weight": 600
+        },
+        {
+          "key": "FlaskBuffChillFreezeDuration2_",
+          "text": "効果中にプレイヤーに対する冷却の効果が(47-42)%減少する\n効果中はプレイヤーに対する凍結持続時間が(47-42)%減少する",
+          "name": "猫の",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 23,
+          "weight": 600
+        },
+        {
+          "key": "FlaskBuffChillFreezeDuration3_",
+          "text": "効果中にプレイヤーに対する冷却の効果が(52-48)%減少する\n効果中はプレイヤーに対する凍結持続時間が(52-48)%減少する",
+          "name": "狐の",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 42,
+          "weight": 600
+        },
+        {
+          "key": "FlaskBuffChillFreezeDuration4",
+          "text": "効果中にプレイヤーに対する冷却の効果が(59-52)%減少する\n効果中はプレイヤーに対する凍結持続時間が(59-52)%減少する",
+          "name": "クロテンの",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 61,
+          "weight": 600
+        },
+        {
+          "key": "FlaskBuffChillFreezeDuration5",
+          "text": "効果中にプレイヤーに対する冷却の効果が(65-60)%減少する\n効果中はプレイヤーに対する凍結持続時間が(65-60)%減少する",
+          "name": "熊の",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 80,
+          "weight": 600
+        }
+      ],
+      "FlaskBuffShockEffect": [
+        {
+          "key": "FlaskBuffShockEffect1",
+          "text": "効果中はプレイヤーに対する感電の効果が(41-36)%減少する",
+          "name": "チドリの",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 6,
+          "weight": 600
+        },
+        {
+          "key": "FlaskBuffShockEffect2",
+          "text": "効果中はプレイヤーに対する感電の効果が(47-42)%減少する",
+          "name": "シギの",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 25,
+          "weight": 600
+        },
+        {
+          "key": "FlaskBuffShockEffect3___",
+          "text": "効果中はプレイヤーに対する感電の効果が(52-48)%減少する",
+          "name": "ウの",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 44,
+          "weight": 600
+        },
+        {
+          "key": "FlaskBuffShockEffect4",
+          "text": "効果中はプレイヤーに対する感電の効果が(59-52)%減少する",
+          "name": "ミユビシギの",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 63,
+          "weight": 600
+        },
+        {
+          "key": "FlaskBuffShockEffect5",
+          "text": "効果中はプレイヤーに対する感電の効果が(65-60)%減少する",
+          "name": "サギの",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 82,
+          "weight": 600
+        }
+      ],
+      "FlaskBuffCurseEffect": [
+        {
+          "key": "FlaskBuffCurseEffect1",
+          "text": "効果中にプレイヤーに対する呪いの効果が(41-36)%減少する",
+          "name": "ミズナギドリの",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 8,
+          "weight": 600
+        },
+        {
+          "key": "FlaskBuffCurseEffect2",
+          "text": "効果中にプレイヤーに対する呪いの効果が(47-42)%減少する",
+          "name": "モッキングバードの",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 27,
+          "weight": 600
+        },
+        {
+          "key": "FlaskBuffCurseEffect3_",
+          "text": "効果中にプレイヤーに対する呪いの効果が(52-48)%減少する",
+          "name": "ダイシャクシギの",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 46,
+          "weight": 600
+        },
+        {
+          "key": "FlaskBuffCurseEffect4",
+          "text": "効果中にプレイヤーに対する呪いの効果が(59-52)%減少する",
+          "name": "カカポの",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 65,
+          "weight": 600
+        },
+        {
+          "key": "FlaskBuffCurseEffect5",
+          "text": "効果中にプレイヤーに対する呪いの効果が(65-60)%減少する",
+          "name": "梟の",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 84,
+          "weight": 600
+        }
+      ],
+      "FlaskBuffAvoidChillFreeze": [
+        {
+          "key": "FlaskBuffAvoidChillFreeze1_",
+          "text": "効果中は(31-35)%の確率で冷却を無効化する\n効果中は(31-35)%の確率で凍結を無効化する",
+          "name": "シャチの",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 4,
+          "weight": 600
+        },
+        {
+          "key": "FlaskBuffAvoidChillFreeze2",
+          "text": "効果中は(36-40)%の確率で冷却を無効化する\n効果中は(36-40)%の確率で凍結を無効化する",
+          "name": "アシカの",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 23,
+          "weight": 600
+        },
+        {
+          "key": "FlaskBuffAvoidChillFreeze3",
+          "text": "効果中は(41-45)%の確率で冷却を無効化する\n効果中は(41-45)%の確率で凍結を無効化する",
+          "name": "イッカクの",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 42,
+          "weight": 600
+        },
+        {
+          "key": "FlaskBuffAvoidChillFreeze4",
+          "text": "効果中は(46-50)%の確率で冷却を無効化する\n効果中は(46-50)%の確率で凍結を無効化する",
+          "name": "シロイルカの",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 61,
+          "weight": 600
+        },
+        {
+          "key": "FlaskBuffAvoidChillFreeze5",
+          "text": "効果中は(51-55)%の確率で冷却を無効化する\n効果中は(51-55)%の確率で凍結を無効化する",
+          "name": "アザラシの",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 80,
+          "weight": 600
+        }
+      ],
+      "FlaskBuffAvoidIgnite": [
+        {
+          "key": "FlaskBuffAvoidIgnite1",
+          "text": "効果中は(31-35)%の確率で発火を無効化する",
+          "name": "グッピーの",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 6,
+          "weight": 600
+        },
+        {
+          "key": "FlaskBuffAvoidIgnite2",
+          "text": "効果中は(36-40)%の確率で発火を無効化する",
+          "name": "金魚の",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 25,
+          "weight": 600
+        },
+        {
+          "key": "FlaskBuffAvoidIgnite3",
+          "text": "効果中は(41-45)%の確率で発火を無効化する",
+          "name": "鯉の",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 44,
+          "weight": 600
+        },
+        {
+          "key": "FlaskBuffAvoidIgnite4___",
+          "text": "効果中は(46-50)%の確率で発火を無効化する",
+          "name": "ナマズの",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 63,
+          "weight": 600
+        },
+        {
+          "key": "FlaskBuffAvoidIgnite5_",
+          "text": "効果中は(51-55)%の確率で発火を無効化する",
+          "name": "マンボウの",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 82,
+          "weight": 600
+        }
+      ],
+      "FlaskBuffAvoidShock": [
+        {
+          "key": "FlaskBuffAvoidShock1",
+          "text": "効果中は(31-35)%の確率で感電を無効化する",
+          "name": "不老草の",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 6,
+          "weight": 600
+        },
+        {
+          "key": "FlaskBuffAvoidShock2_",
+          "text": "効果中は(36-40)%の確率で感電を無効化する",
+          "name": "フサゴケの",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 25,
+          "weight": 600
+        },
+        {
+          "key": "FlaskBuffAvoidShock3",
+          "text": "効果中は(41-45)%の確率で感電を無効化する",
+          "name": "ツボゴケの",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 44,
+          "weight": 600
+        },
+        {
+          "key": "FlaskBuffAvoidShock4_____",
+          "text": "効果中は(46-50)%の確率で感電を無効化する",
+          "name": "ダショウゴケの",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 63,
+          "weight": 600
+        },
+        {
+          "key": "FlaskBuffAvoidShock5",
+          "text": "効果中は(51-55)%の確率で感電を無効化する",
+          "name": "ミズゴケの",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 82,
+          "weight": 600
+        }
+      ],
+      "FlaskPoisonImmunityDuringEffect": [
+        {
+          "key": "FlaskPoisonImmunityDuringEffect",
+          "text": "効果中は毒に対する完全耐性を獲得する\n持続時間が(49-45)%低下する",
+          "name": "スカンクの",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 16,
+          "weight": 1000
+        },
+        {
+          "key": "FlaskPoisonImmunityDuringEffect2",
+          "text": "効果中は毒に対する完全耐性を獲得する\n持続時間が(44-40)%低下する",
+          "name": "ハリネズミの",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 46,
+          "weight": 1000
+        },
+        {
+          "key": "FlaskPoisonImmunityDuringEffect3",
+          "text": "効果中は毒に対する完全耐性を獲得する\n持続時間が(39-35)%低下する",
+          "name": "オポッサムの",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 76,
+          "weight": 1000
+        }
+      ],
+      "FlaskShockImmunityDuringEffect": [
+        {
+          "key": "FlaskShockImmunityDuringEffect",
+          "text": "効果中は感電に対する完全耐性を獲得する\n持続時間が(49-45)%低下する",
+          "name": "アナゴの",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 6,
+          "weight": 1000
+        },
+        {
+          "key": "FlaskShockImmunityDuringEffect2___",
+          "text": "効果中は感電に対する完全耐性を獲得する\n持続時間が(44-40)%低下する",
+          "name": "ウツボの",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 40,
+          "weight": 1000
+        },
+        {
+          "key": "FlaskShockImmunityDuringEffect3",
+          "text": "効果中は感電に対する完全耐性を獲得する\n持続時間が(39-35)%低下する",
+          "name": "ウナギの",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 74,
+          "weight": 1000
+        }
+      ],
+      "FlaskFreezeAndChillImmunityDuringEffect": [
+        {
+          "key": "FlaskFreezeAndChillImmunityDuringEffect",
+          "text": "効果中は凍結および冷却に対する完全耐性を獲得する\n持続時間が(49-45)%低下する",
+          "name": "鹿の",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 4,
+          "weight": 1000
+        },
+        {
+          "key": "FlaskFreezeAndChillImmunityDuringEffect2",
+          "text": "効果中は凍結および冷却に対する完全耐性を獲得する\n持続時間が(44-40)%低下する",
+          "name": "セイウチの",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 38,
+          "weight": 1000
+        },
+        {
+          "key": "FlaskFreezeAndChillImmunityDuringEffect3__",
+          "text": "効果中は凍結および冷却に対する完全耐性を獲得する\n持続時間が(39-35)%低下する",
+          "name": "ペンギンの",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 72,
+          "weight": 1000
+        }
+      ],
+      "FlaskIgniteImmunityDuringEffect": [
+        {
+          "key": "FlaskIgniteImmunityDuringEffect_",
+          "text": "効果中は発火の完全耐性を獲得する\n使用した時に燃焼を取り除く\n持続時間が(49-45)%低下する",
+          "name": "ウニの",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 6,
+          "weight": 1000
+        },
+        {
+          "key": "FlaskIgniteImmunityDuringEffect2",
+          "text": "効果中は発火の完全耐性を獲得する\n使用した時に燃焼を取り除く\n持続時間が(44-40)%低下する",
+          "name": "ムール貝の",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 40,
+          "weight": 1000
+        },
+        {
+          "key": "FlaskIgniteImmunityDuringEffect3",
+          "text": "効果中は発火の完全耐性を獲得する\n使用した時に燃焼を取り除く\n持続時間が(39-35)%低下する",
+          "name": "ヒトデの",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 74,
+          "weight": 1000
+        }
+      ],
+      "FlaskBleedingAndCorruptedBloodImmunityDuringEffect": [
+        {
+          "key": "FlaskBleedingAndCorruptedBloodImmunityDuringEffect_1",
+          "text": "効果中は出血および穢れた血に対して完全耐性を獲得する\n持続時間が(49-45)%低下する",
+          "name": "トカゲの",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 8,
+          "weight": 1000
+        },
+        {
+          "key": "FlaskBleedingAndCorruptedBloodImmunityDuringEffect2_",
+          "text": "効果中は出血および穢れた血に対して完全耐性を獲得する\n持続時間が(44-40)%低下する",
+          "name": "スキンクの",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 42,
+          "weight": 1000
+        },
+        {
+          "key": "FlaskBleedingAndCorruptedBloodImmunityDuringEffect3___",
+          "text": "効果中は出血および穢れた血に対して完全耐性を獲得する\n持続時間が(39-35)%低下する",
+          "name": "イグアナの",
+          "tag": "utility_flask",
+          "generation_type": "suffix",
+          "required_level": 76,
+          "weight": 1000
+        }
+      ]
+    }
+  }
+}
