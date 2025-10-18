@@ -676,7 +676,7 @@ button:active {
    スクロールバー
    ======================================== */
 ::-webkit-scrollbar {
-    width: 6px;
+    width: 16px;
     height: 6px;
 }
 
@@ -686,11 +686,15 @@ button:active {
 
 ::-webkit-scrollbar-thumb {
     background: var(--accent-primary);
-    border-radius: 3px;
+    border-radius: 8px;
+    border: 5px solid transparent; /* 外側に透明な余白を作る */
+    background-clip: content-box;   /* 中央部分だけ色を塗る */
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: var(--accent-hover);
+    background-color: var(--accent-hover);
+    border: 5px solid transparent;
+    background-clip: content-box;
 }
 
 /* サイドバーのスクロールバーを非表示 */
