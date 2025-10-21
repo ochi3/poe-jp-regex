@@ -316,316 +316,362 @@
             </div>
         </div>
 
-<!-- ベンダーRegexタブ -->
-<div id="vendorContent" class="tab-content">
-    <div class="card">
-        <h2 class="section-header">ベンダー(ACT用) Regex</h2>
-        <!-- <p style="color: var(--text-secondary); margin-bottom: 20px;">
-            ベンダーレシピ用のアイテムを検索するためのRegexを生成します。<br>
-            ソケットカラー、リンク数、MOD等で絞り込めます。
-        </p> -->
+        <!-- ベンダーRegexタブ -->
+        <div id="vendorContent" class="tab-content">
+            <div class="card">
+                <h2 class="section-header">ベンダー(ACT用) Regex</h2>
 
-        <!-- プロファイル管理 -->
-        <div class="input-group">
-            <input type="text" id="vendorProfileName" placeholder="プロファイル名を入力してください。" class="large-input">
-            <button onclick="saveVendorProfile()">保存</button>
-            <button onclick="loadVendorProfile()">読み込み</button>
-            <button onclick="deleteVendorProfile()">削除</button>
-            <select id="vendorProfileList" class="large-input">
-                <option value="">-- プロファイル選択 --</option>
-            </select>
+                <!-- プロファイル管理 -->
+                <div class="input-group">
+                    <input type="text" id="vendorProfileName" placeholder="プロファイル名を入力してください。" class="large-input">
+                    <button onclick="saveVendorProfile()">保存</button>
+                    <button onclick="loadVendorProfile()">読み込み</button>
+                    <button onclick="deleteVendorProfile()">削除</button>
+                    <select id="vendorProfileList" class="large-input">
+                        <option value="">-- プロファイル選択 --</option>
+                    </select>
+                </div>
+
+                <div class="output-area" id="vendorRegexOutput"></div>
+                <div class="input-group">
+                    <button onclick="copyVendorRegex()">コピー</button>
+                    <button onclick="resetVendorSettings()">リセット</button>
+                    <span id="vendorCharCount" class="char-count"></span>
+                </div>
+
+                <!-- 3列レイアウトに変更 -->
+                <div class="three-columns" style="margin-top: 30px;">
+                    <!-- 左カラム: 3リンクカラー -->
+                    <div class="half-width">
+                        <h3 style="color: var(--accent-primary); margin-bottom: 16px; border-bottom: 2px solid var(--accent-primary); padding-bottom: 8px;">
+                            リンクカラー (3L)
+                        </h3>
+                        
+                        <!-- 3Lのコンテンツはそのまま -->
+                        <div style="margin-bottom: 12px;">
+                            <label class="input-label">
+                                <input type="checkbox" id="vendor-color-rrA"> 🔴-🔴-⚪
+                            </label>
+                        </div>
+                        <div style="margin-bottom: 12px;">
+                            <label class="input-label">
+                                <input type="checkbox" id="vendor-color-ggA"> 🟢-🟢-⚪
+                            </label>
+                        </div>
+                        <div style="margin-bottom: 12px;">
+                            <label class="input-label">
+                                <input type="checkbox" id="vendor-color-bbA"> 🔵-🔵-⚪
+                            </label>
+                        </div>
+
+                        <div style="margin-top: 16px; margin-bottom: 8px;">
+                            <label class="input-label">
+                                <input type="checkbox" id="vendor-color-rrr"> 🔴-🔴-🔴
+                            </label>
+                        </div>
+                        <div style="margin-bottom: 8px;">
+                            <label class="input-label">
+                                <input type="checkbox" id="vendor-color-rrg"> 🔴-🔴-🟢
+                            </label>
+                        </div>
+                        <div style="margin-bottom: 8px;">
+                            <label class="input-label">
+                                <input type="checkbox" id="vendor-color-rrb"> 🔴-🔴-🔵
+                            </label>
+                        </div>
+
+                        <div style="margin-top: 16px; margin-bottom: 8px;">
+                            <label class="input-label">
+                                <input type="checkbox" id="vendor-color-ggg"> 🟢-🟢-🟢
+                            </label>
+                        </div>
+                        <div style="margin-bottom: 8px;">
+                            <label class="input-label">
+                                <input type="checkbox" id="vendor-color-ggr"> 🟢-🟢-🔴
+                            </label>
+                        </div>
+                        <div style="margin-bottom: 8px;">
+                            <label class="input-label">
+                                <input type="checkbox" id="vendor-color-ggb"> 🟢-🟢-🔵
+                            </label>
+                        </div>
+
+                        <div style="margin-top: 16px; margin-bottom: 8px;">
+                            <label class="input-label">
+                                <input type="checkbox" id="vendor-color-bbb"> 🔵-🔵-🔵
+                            </label>
+                        </div>
+                        <div style="margin-bottom: 8px;">
+                            <label class="input-label">
+                                <input type="checkbox" id="vendor-color-bbr"> 🔵-🔵-🔴
+                            </label>
+                        </div>
+                        <div style="margin-bottom: 8px;">
+                            <label class="input-label">
+                                <input type="checkbox" id="vendor-color-bbg"> 🔵-🔵-🟢
+                            </label>
+                        </div>
+
+                        <div style="margin-top: 16px; margin-bottom: 8px;">
+                            <label class="input-label">
+                                <input type="checkbox" id="vendor-color-rgb"> 🔴-🟢-🔵
+                            </label>
+                        </div>
+                        <div style="margin-bottom: 8px;">
+                            <label class="input-label">
+                                <input type="checkbox" id="vendor-color-raa"> 🔴-⚪-⚪
+                            </label>
+                        </div>
+                        <div style="margin-bottom: 8px;">
+                            <label class="input-label">
+                                <input type="checkbox" id="vendor-color-gaa"> 🟢-⚪-⚪
+                            </label>
+                        </div>
+                        <div style="margin-bottom: 8px;">
+                            <label class="input-label">
+                                <input type="checkbox" id="vendor-color-baa"> 🔵-⚪-⚪
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- 中央カラム: 2リンク & 任意リンク -->
+                    <div class="half-width">
+                        <h3 style="color: var(--accent-primary); margin-bottom: 16px; border-bottom: 2px solid var(--accent-primary); padding-bottom: 8px;">
+                            リンクカラー (2L)
+                        </h3>
+                        
+                        <!-- 2Lのコンテンツはそのまま -->
+                        <div style="margin-bottom: 8px;">
+                            <label class="input-label">
+                                <input type="checkbox" id="vendor-color-rr"> 🔴-🔴
+                            </label>
+                        </div>
+                        <div style="margin-bottom: 8px;">
+                            <label class="input-label">
+                                <input type="checkbox" id="vendor-color-gg"> 🟢-🟢
+                            </label>
+                        </div>
+                        <div style="margin-bottom: 8px;">
+                            <label class="input-label">
+                                <input type="checkbox" id="vendor-color-bb"> 🔵-🔵
+                            </label>
+                        </div>
+
+                        <div style="margin-top: 16px; margin-bottom: 8px;">
+                            <label class="input-label">
+                                <input type="checkbox" id="vendor-color-rb"> 🔴-🔵
+                            </label>
+                        </div>
+                        <div style="margin-bottom: 8px;">
+                            <label class="input-label">
+                                <input type="checkbox" id="vendor-color-gr"> 🟢-🔴
+                            </label>
+                        </div>
+                        <div style="margin-bottom: 8px;">
+                            <label class="input-label">
+                                <input type="checkbox" id="vendor-color-bg"> 🔵-🟢
+                            </label>
+                        </div>
+
+                        <h3 style="color: var(--accent-primary); margin: 24px 0 16px 0; border-bottom: 2px solid var(--accent-primary); padding-bottom: 8px;">
+                            任意リンク
+                        </h3>
+                        
+                        <!-- 任意リンクのコンテンツはそのまま -->
+                        <div style="margin-bottom: 8px;">
+                            <label class="input-label">
+                                <input type="checkbox" id="vendor-anyThreeLink"> ⚪-⚪-⚪ (3リンク)
+                            </label>
+                        </div>
+                        <div style="margin-bottom: 8px;">
+                            <label class="input-label">
+                                <input type="checkbox" id="vendor-anyFourLink"> ⚪-⚪-⚪-⚪ (4リンク)
+                            </label>
+                        </div>
+                        <div style="margin-bottom: 8px;">
+                            <label class="input-label">
+                                <input type="checkbox" id="vendor-anyFiveLink"> ⚪-⚪-⚪-⚪-⚪ (5リンク)
+                            </label>
+                        </div>
+                        <div style="margin-bottom: 8px;">
+                            <label class="input-label">
+                                <input type="checkbox" id="vendor-anySixLink"> 6リンク (Any)
+                            </label>
+                        </div>
+                        <div style="margin-bottom: 8px;">
+                            <label class="input-label">
+                                <input type="checkbox" id="vendor-anySixSocket"> 6ソケット (Any)
+                            </label>
+                        </div>
+                        <h3 style="color: var(--accent-primary); margin-bottom: 16px; border-bottom: 2px solid var(--accent-primary); padding-bottom: 8px;">
+                            移動速度
+                        </h3>
+                        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 8px;">
+                        <label class="input-label" style="font-size: 0.9em;">
+                            <input type="checkbox" id="vendor-movement-ten"> 10%
+                        </label>
+                        <label class="input-label" style="font-size: 0.9em;">
+                            <input type="checkbox" id="vendor-movement-fifteen"> 15%
+                        </label>
+                        <label class="input-label" style="font-size: 0.9em;">
+                            <input type="checkbox" id="vendor-movement-twenty"> 20%
+                        </label>
+                        <label class="input-label" style="font-size: 0.9em;">
+                            <input type="checkbox" id="vendor-movement-twentyfive"> 25%
+                        </label>
+                        <label class="input-label" style="font-size: 0.9em;">
+                            <input type="checkbox" id="vendor-movement-thirty"> 30%
+                        </label>
+                        </div>
+
+                    </div>
+
+                    <!-- 右カラム: 移動速度 & 武器ベース（幅広表示） -->
+                    <div>
+                        <!-- 武器ベース -->
+                        <h3 style="color: var(--accent-primary); margin-bottom: 16px; border-bottom: 2px solid var(--accent-primary); padding-bottom: 8px;">
+                        武器ベース
+                        </h3>
+                        <p style="color: #FCA5A5; font-size: 0.85em; margin-bottom: 12px;">
+                        選択した武器タイプは、ソケットやリンクに関係なく常にハイライトされます
+                        </p>
+
+                        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-bottom: 8px;">
+                        <label class="input-label" style="font-size: 0.9em;">
+                            <input type="checkbox" id="vendor-weapon-claw"> 鉤爪
+                        </label>
+                        <label class="input-label" style="font-size: 0.9em;">
+                            <input type="checkbox" id="vendor-weapon-dagger"> 短剣
+                        </label>
+                        <label class="input-label" style="font-size: 0.9em;">
+                            <input type="checkbox" id="vendor-weapon-wand"> ワンド
+                        </label>
+                        <label class="input-label" style="font-size: 0.9em;">
+                            <input type="checkbox" id="vendor-weapon-oneHandSword"> 片手剣
+                        </label>
+                        <label class="input-label" style="font-size: 0.9em;">
+                            <input type="checkbox" id="vendor-weapon-thrustingSword"> 刺突剣
+                        </label>
+                        <label class="input-label" style="font-size: 0.9em;">
+                            <input type="checkbox" id="vendor-weapon-oneHandAxe"> 片手斧
+                        </label>
+                        <label class="input-label" style="font-size: 0.9em;">
+                            <input type="checkbox" id="vendor-weapon-oneHandMace"> 片手メイス
+                        </label>
+                        <label class="input-label" style="font-size: 0.9em;">
+                            <input type="checkbox" id="vendor-weapon-runeDagger"> ルーンの短剣
+                        </label>
+                        <label class="input-label" style="font-size: 0.9em;">
+                            <input type="checkbox" id="vendor-weapon-sceptre"> セプター
+                        </label>
+                        <label class="input-label" style="font-size: 0.9em;">
+                            <input type="checkbox" id="vendor-weapon-bow"> 弓
+                        </label>
+                        <label class="input-label" style="font-size: 0.9em;">
+                            <input type="checkbox" id="vendor-weapon-staff"> スタッフ
+                        </label>
+                        <label class="input-label" style="font-size: 0.9em;">
+                            <input type="checkbox" id="vendor-weapon-twoHandSword"> 両手剣
+                        </label>
+                        <label class="input-label" style="font-size: 0.9em;">
+                            <input type="checkbox" id="vendor-weapon-twoHandAxe"> 両手斧
+                        </label>
+                        <label class="input-label" style="font-size: 0.9em;">
+                            <input type="checkbox" id="vendor-weapon-twoHandMace"> 両手メイス
+                        </label>
+                        <label class="input-label" style="font-size: 0.9em;">
+                            <input type="checkbox" id="vendor-weapon-warstaff"> ウォースタッフ
+                        </label>
+                        <label class="input-label" style="font-size: 0.9em;">
+                            <input type="checkbox" id="vendor-weapon-shield"> 盾
+                        </label>
+                        </div>
+                        
+                        <!-- NG武器ベースセクション -->
+                            <h3 style="color: #FCA5A5; margin: 24px 0 16px 0; border-bottom: 2px solid #FCA5A5; padding-bottom: 8px;">
+                                NG武器ベース（除外）
+                            </h3>
+                            <p style="color: #FCA5A5; font-size: 0.85em; margin-bottom: 12px;">
+                                選択した武器タイプを除外します（これらの武器はハイライトされません）
+                            </p>
+
+                            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-bottom: 8px;">
+                                <label class="input-label" style="font-size: 0.9em;">
+                                    <input type="checkbox" id="vendor-exclude-claw"> 鉤爪
+                                </label>
+                                <label class="input-label" style="font-size: 0.9em;">
+                                    <input type="checkbox" id="vendor-exclude-dagger"> 短剣
+                                </label>
+                                <label class="input-label" style="font-size: 0.9em;">
+                                    <input type="checkbox" id="vendor-exclude-wand"> ワンド
+                                </label>
+                                <label class="input-label" style="font-size: 0.9em;">
+                                    <input type="checkbox" id="vendor-exclude-oneHandSword"> 片手剣
+                                </label>
+                                <label class="input-label" style="font-size: 0.9em;">
+                                    <input type="checkbox" id="vendor-exclude-thrustingSword"> 刺突剣
+                                </label>
+                                <label class="input-label" style="font-size: 0.9em;">
+                                    <input type="checkbox" id="vendor-exclude-oneHandAxe"> 片手斧
+                                </label>
+                                <label class="input-label" style="font-size: 0.9em;">
+                                    <input type="checkbox" id="vendor-exclude-oneHandMace"> 片手メイス
+                                </label>
+                                <label class="input-label" style="font-size: 0.9em;">
+                                    <input type="checkbox" id="vendor-exclude-runeDagger"> ルーンの短剣
+                                </label>
+                                <label class="input-label" style="font-size: 0.9em;">
+                                    <input type="checkbox" id="vendor-exclude-sceptre"> セプター
+                                </label>
+                                <label class="input-label" style="font-size: 0.9em;">
+                                    <input type="checkbox" id="vendor-exclude-bow"> 弓
+                                </label>
+                                <label class="input-label" style="font-size: 0.9em;">
+                                    <input type="checkbox" id="vendor-exclude-staff"> スタッフ
+                                </label>
+                                <label class="input-label" style="font-size: 0.9em;">
+                                    <input type="checkbox" id="vendor-exclude-twoHandSword"> 両手剣
+                                </label>
+                                <label class="input-label" style="font-size: 0.9em;">
+                                    <input type="checkbox" id="vendor-exclude-twoHandAxe"> 両手斧
+                                </label>
+                                <label class="input-label" style="font-size: 0.9em;">
+                                    <input type="checkbox" id="vendor-exclude-twoHandMace"> 両手メイス
+                                </label>
+                                <label class="input-label" style="font-size: 0.9em;">
+                                    <input type="checkbox" id="vendor-exclude-warstaff"> ウォースタッフ
+                                </label>
+                                <label class="input-label" style="font-size: 0.9em;">
+                                    <input type="checkbox" id="vendor-exclude-shield"> 盾
+                                </label>
+                            </div>
+                    </div>
+                </div>
+
+        <!-- ジェム選択セクション - 全幅で下部に移動 -->
+                <div style="margin-top: 40px; border-top: 2px solid var(--accent-primary); padding-top: 20px;">
+                    <h3 style="color: var(--accent-primary); margin-bottom: 16px; text-align: center;">
+                        ジェム選択
+                    </h3>
+                    
+                    <div class="input-group" style="margin-bottom: 20px;">
+                        <textarea 
+                        id="gemSearch" 
+                        placeholder="英語名でも検索可（改行、カンマで複数検索可能）&#10;pobb.inのジェム欄コピペ出来ます&#10;例: &#10;Poisonous Concoction&#10;Herald of Agony&#10;Faster Attacks" 
+                        style="flex: 1; padding: 8px; height: 80px; resize: vertical; font-family: inherit;"
+                        ></textarea>
+                        <button onclick="document.getElementById('gemSearch').value = ''; filterGems();">検索クリア</button>
+                        <button onclick="resetGemSelection()">ジェムをリセット</button>
+                    </div>
+
+                    <div id="gemListContainer" style="margin-top: 20px;">
+                        <div style="color: var(--text-secondary); text-align: center; padding: 20px;">
+                            ジェムデータを読み込み中...
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <div class="output-area" id="vendorRegexOutput"></div>
-        <div class="input-group">
-            <button onclick="copyVendorRegex()">コピー</button>
-            <button onclick="resetVendorSettings()">リセット</button>
-            <span id="vendorCharCount" class="char-count"></span>
-        </div>
-
-        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 30px;">
-            <!-- 左カラム: 3リンクカラー -->
-            <div>
-                <h3 style="color: var(--accent-primary); margin-bottom: 16px; border-bottom: 2px solid var(--accent-primary); padding-bottom: 8px;">
-                    リンクカラー (3L)
-                </h3>
-                
-                <div style="margin-bottom: 12px;">
-                    <label class="input-label">
-                        <input type="checkbox" id="vendor-color-rrA"> 🔴-🔴-⚪
-                    </label>
-                </div>
-                <div style="margin-bottom: 12px;">
-                    <label class="input-label">
-                        <input type="checkbox" id="vendor-color-ggA"> 🟢-🟢-⚪
-                    </label>
-                </div>
-                <div style="margin-bottom: 12px;">
-                    <label class="input-label">
-                        <input type="checkbox" id="vendor-color-bbA"> 🔵-🔵-⚪
-                    </label>
-                </div>
-
-                <div style="margin-top: 16px; margin-bottom: 8px;">
-                    <label class="input-label">
-                        <input type="checkbox" id="vendor-color-rrr"> 🔴-🔴-🔴
-                    </label>
-                </div>
-                <div style="margin-bottom: 8px;">
-                    <label class="input-label">
-                        <input type="checkbox" id="vendor-color-rrg"> 🔴-🔴-🟢
-                    </label>
-                </div>
-                <div style="margin-bottom: 8px;">
-                    <label class="input-label">
-                        <input type="checkbox" id="vendor-color-rrb"> 🔴-🔴-🔵
-                    </label>
-                </div>
-
-                <div style="margin-top: 16px; margin-bottom: 8px;">
-                    <label class="input-label">
-                        <input type="checkbox" id="vendor-color-ggg"> 🟢-🟢-🟢
-                    </label>
-                </div>
-                <div style="margin-bottom: 8px;">
-                    <label class="input-label">
-                        <input type="checkbox" id="vendor-color-ggr"> 🟢-🟢-🔴
-                    </label>
-                </div>
-                <div style="margin-bottom: 8px;">
-                    <label class="input-label">
-                        <input type="checkbox" id="vendor-color-ggb"> 🟢-🟢-🔵
-                    </label>
-                </div>
-
-                <div style="margin-top: 16px; margin-bottom: 8px;">
-                    <label class="input-label">
-                        <input type="checkbox" id="vendor-color-bbb"> 🔵-🔵-🔵
-                    </label>
-                </div>
-                <div style="margin-bottom: 8px;">
-                    <label class="input-label">
-                        <input type="checkbox" id="vendor-color-bbr"> 🔵-🔵-🔴
-                    </label>
-                </div>
-                <div style="margin-bottom: 8px;">
-                    <label class="input-label">
-                        <input type="checkbox" id="vendor-color-bbg"> 🔵-🔵-🟢
-                    </label>
-                </div>
-
-                <div style="margin-top: 16px; margin-bottom: 8px;">
-                    <label class="input-label">
-                        <input type="checkbox" id="vendor-color-rgb"> 🔴-🟢-🔵
-                    </label>
-                </div>
-                <div style="margin-bottom: 8px;">
-                    <label class="input-label">
-                        <input type="checkbox" id="vendor-color-raa"> 🔴-⚪-⚪
-                    </label>
-                </div>
-                <div style="margin-bottom: 8px;">
-                    <label class="input-label">
-                        <input type="checkbox" id="vendor-color-gaa"> 🟢-⚪-⚪
-                    </label>
-                </div>
-                <div style="margin-bottom: 8px;">
-                    <label class="input-label">
-                        <input type="checkbox" id="vendor-color-baa"> 🔵-⚪-⚪
-                    </label>
-                </div>
-            </div>
-
-            <!-- 中央カラム: 2リンク & 武器ベース -->
-            <div>
-                <h3 style="color: var(--accent-primary); margin-bottom: 16px; border-bottom: 2px solid var(--accent-primary); padding-bottom: 8px;">
-                    リンクカラー (2L)
-                </h3>
-                
-                <div style="margin-bottom: 8px;">
-                    <label class="input-label">
-                        <input type="checkbox" id="vendor-color-rr"> 🔴-🔴
-                    </label>
-                </div>
-                <div style="margin-bottom: 8px;">
-                    <label class="input-label">
-                        <input type="checkbox" id="vendor-color-gg"> 🟢-🟢
-                    </label>
-                </div>
-                <div style="margin-bottom: 8px;">
-                    <label class="input-label">
-                        <input type="checkbox" id="vendor-color-bb"> 🔵-🔵
-                    </label>
-                </div>
-
-                <div style="margin-top: 16px; margin-bottom: 8px;">
-                    <label class="input-label">
-                        <input type="checkbox" id="vendor-color-rb"> 🔴-🔵
-                    </label>
-                </div>
-                <div style="margin-bottom: 8px;">
-                    <label class="input-label">
-                        <input type="checkbox" id="vendor-color-gr"> 🟢-🔴
-                    </label>
-                </div>
-                <div style="margin-bottom: 8px;">
-                    <label class="input-label">
-                        <input type="checkbox" id="vendor-color-bg"> 🔵-🟢
-                    </label>
-                </div>
-
-                <h3 style="color: var(--accent-primary); margin: 24px 0 16px 0; border-bottom: 2px solid var(--accent-primary); padding-bottom: 8px;">
-                    任意リンク
-                </h3>
-                
-                <div style="margin-bottom: 8px;">
-                    <label class="input-label">
-                        <input type="checkbox" id="vendor-anyThreeLink"> ⚪-⚪-⚪ (3リンク)
-                    </label>
-                </div>
-                <div style="margin-bottom: 8px;">
-                    <label class="input-label">
-                        <input type="checkbox" id="vendor-anyFourLink"> ⚪-⚪-⚪-⚪ (4リンク)
-                    </label>
-                </div>
-                <div style="margin-bottom: 8px;">
-                    <label class="input-label">
-                        <input type="checkbox" id="vendor-anyFiveLink"> ⚪-⚪-⚪-⚪-⚪ (5リンク)
-                    </label>
-                </div>
-                <div style="margin-bottom: 8px;">
-                    <label class="input-label">
-                        <input type="checkbox" id="vendor-anySixLink"> 6リンク (Any)
-                    </label>
-                </div>
-                <div style="margin-bottom: 8px;">
-                    <label class="input-label">
-                        <input type="checkbox" id="vendor-anySixSocket"> 6ソケット (Any)
-                    </label>
-                </div>
-
-            </div>
-
-            <!-- 右カラム: 移動速度 -->
-            <div>
-                <h3 style="color: var(--accent-primary); margin-bottom: 16px; border-bottom: 2px solid var(--accent-primary); padding-bottom: 8px;">
-                    移動速度
-                </h3>
-
-                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 8px;">
-                <label class="input-label" style="font-size: 0.9em;">
-                    <input type="checkbox" id="vendor-movement-ten"> 移動速度 10%
-                </label>
-                <label class="input-label" style="font-size: 0.9em;">
-                    <input type="checkbox" id="vendor-movement-fifteen"> 移動速度 15%
-                </label>
-                <label class="input-label" style="font-size: 0.9em;">
-                    <input type="checkbox" id="vendor-movement-twenty"> 移動速度 20%
-                </label>
-                </div>
-                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px;">
-                <label class="input-label" style="font-size: 0.9em;">
-                    <input type="checkbox" id="vendor-movement-twentyfive"> 移動速度 25%
-                </label>
-                <label class="input-label" style="font-size: 0.9em;">
-                    <input type="checkbox" id="vendor-movement-thirty"> 移動速度 30%
-                </label>
-                </div>
-
-                <!-- 武器ベース -->
-                <h3 style="color: var(--accent-primary); margin: 24px 0 16px 0; border-bottom: 2px solid var(--accent-primary); padding-bottom: 8px;">
-                武器ベース
-                </h3>
-                <p style="color: #FCA5A5; font-size: 0.85em; margin-bottom: 12px;">
-                選択した武器タイプは、ソケットやリンクに関係なく常にハイライトされます
-                </p>
-
-                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 8px;">
-                <label class="input-label" style="font-size: 0.9em;">
-                    <input type="checkbox" id="vendor-weapon-claw"> 鉤爪
-                </label>
-                <label class="input-label" style="font-size: 0.9em;">
-                    <input type="checkbox" id="vendor-weapon-dagger"> 短剣
-                </label>
-                <label class="input-label" style="font-size: 0.9em;">
-                    <input type="checkbox" id="vendor-weapon-wand"> ワンド
-                </label>
-                </div>
-
-                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 8px;">
-                <label class="input-label" style="font-size: 0.9em;">
-                    <input type="checkbox" id="vendor-weapon-oneHandSword"> 片手剣
-                </label>
-                <label class="input-label" style="font-size: 0.9em;">
-                    <input type="checkbox" id="vendor-weapon-thrustingSword"> 刺突剣
-                </label>
-                <label class="input-label" style="font-size: 0.9em;">
-                    <input type="checkbox" id="vendor-weapon-oneHandAxe"> 片手斧
-                </label>
-                </div>
-
-                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 8px;">
-                <label class="input-label" style="font-size: 0.9em;">
-                    <input type="checkbox" id="vendor-weapon-oneHandMace"> 片手メイス
-                </label>
-                <label class="input-label" style="font-size: 0.9em;">
-                    <input type="checkbox" id="vendor-weapon-runeDagger"> ルーンの短剣
-                </label>
-                <label class="input-label" style="font-size: 0.9em;">
-                    <input type="checkbox" id="vendor-weapon-sceptre"> セプター
-                </label>
-                </div>
-
-                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 8px;">
-                <label class="input-label" style="font-size: 0.9em;">
-                    <input type="checkbox" id="vendor-weapon-bow"> 弓
-                </label>
-                <label class="input-label" style="font-size: 0.9em;">
-                    <input type="checkbox" id="vendor-weapon-staff"> スタッフ
-                </label>
-                <label class="input-label" style="font-size: 0.9em;">
-                    <input type="checkbox" id="vendor-weapon-twoHandSword"> 両手剣
-                </label>
-                </div>
-
-                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px;">
-                <label class="input-label" style="font-size: 0.9em;">
-                    <input type="checkbox" id="vendor-weapon-twoHandAxe"> 両手斧
-                </label>
-                <label class="input-label" style="font-size: 0.9em;">
-                    <input type="checkbox" id="vendor-weapon-twoHandMace"> 両手メイス
-                </label>
-                <label class="input-label" style="font-size: 0.9em;">
-                    <input type="checkbox" id="vendor-weapon-warstaff"> ウォースタッフ
-                </label>
-                </div>
-            </div>
-        </div>
-
-<!-- ジェム選択セクション - 全幅で下部に移動 -->
-        <div style="margin-top: 40px; border-top: 2px solid var(--accent-primary); padding-top: 20px;">
-            <h3 style="color: var(--accent-primary); margin-bottom: 16px; text-align: center;">
-                ジェム選択
-            </h3>
-            
-            <div class="input-group" style="margin-bottom: 20px;">
-                <textarea 
-                id="gemSearch" 
-                placeholder="英語名でも検索可（改行、カンマで複数検索可能）&#10;pobb.inのジェム欄コピペ出来ます&#10;例: &#10;Poisonous Concoction&#10;Herald of Agony&#10;Faster Attacks" 
-                style="flex: 1; padding: 8px; height: 80px; resize: vertical; font-family: inherit;"
-                ></textarea>
-                <button onclick="document.getElementById('gemSearch').value = ''; filterGems();">検索クリア</button>
-                <button onclick="resetGemSelection()">ジェムをリセット</button>
-            </div>
-
-            <div id="gemListContainer" style="margin-top: 20px;">
-                <div style="color: var(--text-secondary); text-align: center; padding: 20px;">
-                    ジェムデータを読み込み中...
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 
         <!-- リンク集タブ -->
         <div id="linkContent" class="tab-content">

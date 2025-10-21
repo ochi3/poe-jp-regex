@@ -19,7 +19,25 @@ let vendorSettings = {
     claw: false, dagger: false, staff: false, wand: false,
     oneHandSword: false, thrustingSword: false, oneHandAxe: false, 
     oneHandMace: false, runeDagger: false, twoHandSword: false, 
-    twoHandAxe: false, twoHandMace: false, warstaff: false
+    twoHandAxe: false, twoHandMace: false, warstaff: false, shield: false
+  },
+  excludeWeapons: {
+    bow: false,
+    dagger: false,
+    claw: false,
+    wand: false,
+    oneHandSword: false,
+    thrustingSword: false,
+    oneHandAxe: false,
+    oneHandMace: false,
+    sceptre: false,
+    runeDagger: false,
+    twoHandSword: false,
+    twoHandAxe: false,
+    twoHandMace: false,
+    staff: false,
+    warstaff: false,
+    shield: false
   },
   selectedGems: []
 };
@@ -31,7 +49,7 @@ let selectedGems = [];
 const weaponMapping = {
   claw: '^鉤爪',
   dagger: '^短剣',
-  wand: 'wand',
+  wand: 'wand|horn',
   oneHandSword: '^片手剣',
   thrustingSword: '^刺突剣',
   oneHandAxe: '^片手斧',
@@ -43,7 +61,8 @@ const weaponMapping = {
   twoHandSword: '^両手剣',
   twoHandAxe: '^両手斧',
   twoHandMace: '^両手メイス',
-  warstaff: '^ウォースタッフ'
+  warstaff: '^ウォースタッフ',
+  shield: '^ブロック率'
 };
 
 function generateVendorRegex() {
@@ -117,7 +136,19 @@ function generateVendorRegex() {
     parts.push(settings.selectedGems.join('|'));
   }
 
-  return parts.join('|');
+  let regex = parts.join('|');
+
+  // 除外武器種の処理
+  const excludeWeapons = [];
+  Object.entries(settings.excludeWeapons).forEach(([key, value]) => {
+    if (value && weaponMapping[key]) excludeWeapons.push(weaponMapping[key]);
+  });
+
+  if (excludeWeapons.length > 0) {
+    regex += ` !.*(?:${excludeWeapons.join('|')})`;
+  }
+
+  return regex;
 }
 
 function updateVendorRegex() {
@@ -184,7 +215,26 @@ function resetVendorSettings() {
       claw: false, dagger: false, staff: false, wand: false,
       oneHandSword: false, thrustingSword: false, oneHandAxe: false,
       oneHandMace: false, runeDagger: false, twoHandSword: false,
-      twoHandAxe: false, twoHandMace: false, warstaff: false
+      twoHandAxe: false, twoHandMace: false, warstaff: false,
+      shield: false
+    },
+    excludeWeapons: {
+      bow: false,
+      dagger: false,
+      claw: false,
+      wand: false,
+      oneHandSword: false,
+      thrustingSword: false,
+      oneHandAxe: false,
+      oneHandMace: false,
+      sceptre: false,
+      runeDagger: false,
+      twoHandSword: false,
+      twoHandAxe: false,
+      twoHandMace: false,
+      staff: false,
+      warstaff: false,
+      shield: false
     },
     selectedGems: []
   };
@@ -220,6 +270,7 @@ function loadVendorSettings() {
           thirty: parsed.movement?.thirty || false
         },
         weapon: { ...vendorSettings.weapon, ...parsed.weapon },
+        excludeWeapons: { ...vendorSettings.excludeWeapons, ...parsed.excludeWeapons },
         selectedGems: parsed.selectedGems || []
       };
       applyVendorSettings();
@@ -257,6 +308,12 @@ function applyVendorSettings() {
     if (checkbox) checkbox.checked = value;
   });
 
+  // 除外武器種の適用
+  Object.entries(vendorSettings.excludeWeapons).forEach(([key, value]) => {
+    const checkbox = document.getElementById(`vendor-exclude-${key}`);
+    if (checkbox) checkbox.checked = value;
+  });
+
   selectedGems = vendorSettings.selectedGems || [];
   updateGemButtons();
   updateVendorRegex();
@@ -271,6 +328,9 @@ function handleVendorCheckboxChange(checkbox) {
   } else if (id.startsWith('weapon-')) {
     const weaponKey = id.replace('weapon-', '');
     vendorSettings.weapon[weaponKey] = checkbox.checked;
+  } else if (id.startsWith('exclude-')) {
+    const excludeKey = id.replace('exclude-', '');
+    vendorSettings.excludeWeapons[excludeKey] = checkbox.checked;
   } else if (id.startsWith('movement-')) {
     const moveKey = id.replace('movement-', '');
     vendorSettings.movement = vendorSettings.movement || {};
@@ -833,7 +893,6 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('hashchange', window.vendorHashChangeHandler);
   }
 });
-
 
 window.copyVendorRegex = copyVendorRegex;
 window.resetVendorSettings = resetVendorSettings;

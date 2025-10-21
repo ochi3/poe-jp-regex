@@ -723,6 +723,23 @@ function createDetailedView(profile, type) {
       });
       container.appendChild(colorsDiv);
     }
+
+    // 除外武器種の表示を追加
+    const enabledExcludeWeapons = Object.entries(settings.excludeWeapons || {})
+      .filter(([key, value]) => value)
+      .map(([key]) => key);
+    if (enabledExcludeWeapons.length > 0) {
+      const weaponNames = {
+        claw: '鉤爪', dagger: '短剣', wand: 'ワンド', oneHandSword: '片手剣',
+        thrustingSword: '刺突剣', oneHandAxe: '片手斧', oneHandMace: '片手メイス',
+        sceptre: 'セプター', runeDagger: 'ルーンの短剣', bow: '弓', staff: 'スタッフ',
+        twoHandSword: '両手剣', twoHandAxe: '両手斧', twoHandMace: '両手メイス',
+        warstaff: 'ウォースタッフ', shield: '盾'
+      };
+      const excludeWeaponDisplayNames = enabledExcludeWeapons.map(weapon => weaponNames[weapon] || weapon);
+      container.appendChild(createDetailRow('除外武器ベース', excludeWeaponDisplayNames.join(', ')));
+    }
+
     const linkSettings = [];
     if (settings.anyThreeLink) linkSettings.push('3リンク');
     if (settings.anyFourLink) linkSettings.push('4リンク');
