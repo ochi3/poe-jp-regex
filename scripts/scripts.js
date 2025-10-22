@@ -66,6 +66,15 @@ function addEffectItem(key, value) {
 
     const effectItem = document.createElement('div');
     effectItem.classList.add('effect-item');
+    
+    effectItem.addEventListener('click', function(e) {
+        if (e.target.tagName !== 'INPUT') {
+            checkbox.checked = !checkbox.checked;
+            const event = new Event('change', { bubbles: true });
+            checkbox.dispatchEvent(event);
+        }
+    });
+    
     if (value.tier > 1001) {
         effectItem.style.color = '#e0b8ee';
         effectItem.classList.add('t17-effect');
@@ -1376,4 +1385,88 @@ function extractModNamesFromRegex(regex) {
     });
     
     return modNames;
+}
+
+function copyUnidentified() {
+    const text = currentLanguage === 'ja' ? '未鑑定' : 'unid';
+    copyTextToClipboard(text);
+}
+
+function copyNormal() {
+    const text = currentLanguage === 'ja' ? 'ル$' : '"y: n"';
+    copyTextToClipboard(text);
+}
+
+function copyMagic() {
+    const text = currentLanguage === 'ja' ? 'ク$' : '"y: m"';
+    copyTextToClipboard(text);
+}
+
+function copyRare() {
+    const text = currentLanguage === 'ja' ? 'ア$' : '"y: r"';
+    copyTextToClipboard(text);
+}
+
+function copyTextToClipboard(text) {
+    navigator.clipboard.writeText(text)
+        .then(() => {
+            if (typeof showNotification === 'function') {
+                showNotification('コピーしました！');
+            } else {
+                alert('コピーしました！');
+            }
+        })
+        .catch(err => {
+            console.error('クリップボードへのコピーに失敗しました', err);
+            if (typeof showNotification === 'function') {
+                showNotification('❌ コピー失敗', true);
+            }
+        });
+}
+
+// 言語切り替え時にツールチップも更新
+function toggleLanguage() {
+    currentLanguage = currentLanguage === 'ja' ? 'en' : 'ja';
+    updateModList();
+    updateCombinedRegex();
+    updateTooltipContent(); // ツールチップ内容を更新
+}
+
+// 初期化時にツールチップを設定
+function initializeApplication() {
+    console.log('Initializing application...');
+    
+    const initialTab = window.location.hash.slice(1) || 'map';
+    const initialTabId = `${initialTab}Content`;
+    
+    console.log('Initial tab:', initialTab, 'Tab ID:', initialTabId);
+    
+    if (document.getElementById(initialTabId)) {
+        switchTab(initialTabId);
+    } else {
+        console.log('Defaulting to map tab');
+        switchTab('mapContent');
+        history.replaceState(null, '', '#map');
+    }
+
+    window.addEventListener('hashchange', handleHashChange);
+    
+    document.querySelectorAll('#sideMenu .nav-link').forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const tabId = this.dataset.tab;
+            console.log('Tab clicked:', tabId);
+            switchTab(tabId);
+        });
+    });
+
+    loadCheckboxState();
+    loadInputState();
+    loadModCheckboxState();
+    loadSearchModeState();
+    
+    updateModList();
+    updateCombinedRegex();
+    
+    console.log('Application initialized successfully');
 }
