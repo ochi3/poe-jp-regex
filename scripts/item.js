@@ -1,6 +1,3 @@
-// item.js - アイテムMod管理
-
-// アイテムMod用の変数
 let rawItemMods = [];
 let itemCheckedMods = new Set();
 let itemProfiles = {};
@@ -232,6 +229,8 @@ function updateSeparatedItemModLists() {
     return;
   }
   
+  const currentSearchTerm = document.getElementById('itemModSearch').value.toLowerCase();
+  
   prefixListDiv.innerHTML = '';
   suffixListDiv.innerHTML = '';
 
@@ -260,6 +259,11 @@ function updateSeparatedItemModLists() {
   }
   if (Object.keys(suffixGroups).length === 0) {
     suffixListDiv.innerHTML = '<div style="color: #888; text-align: center; padding: 20px;">Suffix Modがありません</div>';
+  }
+
+  if (currentSearchTerm) {
+    document.getElementById('itemModSearch').value = currentSearchTerm;
+    filterItemMods();
   }
 }
 
@@ -477,8 +481,10 @@ function updateCombinedItemRegex() {
   }
 }
 
+let currentItemSearchTerm = '';
+
 function filterItemMods() {
-  const term = document.getElementById('itemModSearch').value.toLowerCase();
+  currentItemSearchTerm = document.getElementById('itemModSearch').value.toLowerCase();
   const prefixGroups = document.querySelectorAll('#prefixModList .mod-group-item');
   const suffixGroups = document.querySelectorAll('#suffixModList .mod-group-item');
   
@@ -489,21 +495,21 @@ function filterItemMods() {
       const groupTitle = group.querySelector('.mod-group-header span:first-child').textContent.toLowerCase();
       const groupDesc = group.querySelector('.mod-group-desc').textContent.toLowerCase();
       
-      const isVisible = groupTitle.includes(term) || groupDesc.includes(term);
+      const isVisible = groupTitle.includes(currentItemSearchTerm) || groupDesc.includes(currentItemSearchTerm);
       group.style.display = isVisible ? 'block' : 'none';
       if (isVisible) anyVisible = true;
     });
   });
   
   const containers = [document.getElementById('prefixModList'), document.getElementById('suffixModList')];
-  if (!anyVisible && term !== '') {
+  if (!anyVisible && currentItemSearchTerm !== '') {
     containers.forEach(container => {
       const existingMsg = container.querySelector('.no-results-message');
       if (!existingMsg) {
         const message = document.createElement('div');
         message.className = 'no-results-message';
         message.style.cssText = 'color: #888; text-align: center; padding: 20px;';
-        message.textContent = `"${term}" に一致するModが見つかりません`;
+        message.textContent = `"${currentItemSearchTerm}" に一致するModが見つかりません`;
         container.appendChild(message);
       }
     });

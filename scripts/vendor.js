@@ -1,4 +1,6 @@
 let vendorInitialized = false;
+let vendorInitPromise = null;
+let vendorInitResolve = null;
 
 let vendorSettings = {
   colors: {
@@ -138,7 +140,6 @@ function generateVendorRegex() {
 
   let regex = parts.join('|');
 
-  // 除外武器種の処理
   const excludeWeapons = [];
   Object.entries(settings.excludeWeapons).forEach(([key, value]) => {
     if (value && weaponMapping[key]) excludeWeapons.push(weaponMapping[key]);
@@ -308,7 +309,6 @@ function applyVendorSettings() {
     if (checkbox) checkbox.checked = value;
   });
 
-  // 除外武器種の適用
   Object.entries(vendorSettings.excludeWeapons).forEach(([key, value]) => {
     const checkbox = document.getElementById(`vendor-exclude-${key}`);
     if (checkbox) checkbox.checked = value;
@@ -357,15 +357,31 @@ function setupVendorEventListeners() {
   setupGemSearch();
 }
 
-async function loadGemData() {
-  try {
-    const response = await fetch('gems/gems_regex.json');
-    gemData = await response.json();
-    displayGems();
-  } catch (error) {
-    console.error('ジェムデータの読み込みエラー:', error);
-    showNotification('ジェムデータの読み込みに失敗しました', true);
-  }
+function loadGemData() {
+  return new Promise((resolve, reject) => {
+    if (gemData && gemData.length > 0) {
+      resolve(gemData);
+      return;
+    }
+
+    fetch('gems/gems_regex.json')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
+      .then(data => {
+        gemData = data;
+        displayGems();
+        resolve(data);
+      })
+      .catch(error => {
+        console.error('ジェムデータの読み込みエラー:', error);
+        showNotification('ジェムデータの読み込みに失敗しました', true);
+        reject(error);
+      });
+  });
 }
 
 function displayGems() {
@@ -717,34 +733,41 @@ function getGemDisplayName(gemRegex) {
 }
 
 function loadVendorProfileDirectly(profileName) {
-  const profile = vendorProfiles[profileName];
-  if (!profile) {
-    showNotification('プロファイルが見つかりません', true);
-    return;
-  }
+  initializeVendor().then(() => {
+    const profile = vendorProfiles[profileName];
+    if (!profile) {
+      showNotification('プロファイルが見つかりません', true);
+      return;
+    }
 
-  try {
-    vendorSettings = JSON.parse(JSON.stringify(profile.settings));
-    selectedGems = vendorSettings.selectedGems || [];
-    applyVendorSettings();
-    
-    // プロファイル名を入力欄と選択リストに設定
-    const profileNameInput = document.getElementById('vendorProfileName');
-    const profileList = document.getElementById('vendorProfileList');
-    
-    if (profileNameInput) {
-      profileNameInput.value = profileName;
+    try {
+      vendorSettings = JSON.parse(JSON.stringify(profile.settings));
+      
+      selectedGems = vendorSettings.selectedGems || [];
+      if (profile.gemInfo) {
+        selectedGems = profile.gemInfo.map(gem => gem.regex);
+        vendorSettings.selectedGems = selectedGems;
+      }
+      
+      applyVendorSettings();
+      
+      const profileNameInput = document.getElementById('vendorProfileName');
+      const profileList = document.getElementById('vendorProfileList');
+      
+      if (profileNameInput) {
+        profileNameInput.value = profileName;
+      }
+      
+      if (profileList) {
+        profileList.value = profileName;
+      }
+      
+      showNotification(`"${profileName}" を読み込みました`);
+    } catch (error) {
+      console.error('ベンダープロファイル読み込みエラー:', error);
+      showNotification('ベンダープロファイルの読み込みに失敗しました', true);
     }
-    
-    if (profileList) {
-      profileList.value = profileName;
-    }
-    
-    showNotification(`"${profileName}" を読み込みました`);
-  } catch (error) {
-    console.error('ベンダープロファイル読み込みエラー:', error);
-    showNotification('ベンダープロファイルの読み込みに失敗しました', true);
-  }
+  });
 }
 
 // プロファイルからベンダーRegexを生成する関数
@@ -771,19 +794,25 @@ function generateVendorRegexFromProfile(profile) {
     console.error('Error generating vendor regex from profile:', error);
     return '(エラー: Regex生成失敗)';
   } finally {
-    // 元の設定に復元
     vendorSettings = originalSettings;
     selectedGems = originalSelectedGems;
   }
 }
 
 function initializeVendor() {
-  // 既に初期化済みの場合は何もしない
   if (vendorInitialized) {
-    return;
+    return Promise.resolve();
+  }
+  
+  if (vendorInitPromise) {
+    return vendorInitPromise;
   }
   
   console.log('Initializing vendor...');
+  
+  vendorInitPromise = new Promise((resolve) => {
+    vendorInitResolve = resolve;
+  });
   
   const savedProfiles = localStorage.getItem('vendorProfiles');
   if (savedProfiles) {
@@ -795,8 +824,7 @@ function initializeVendor() {
       vendorProfiles = {};
     }
   }
-  
-  // プロファイルリストのイベントリスナー - 一度だけ登録
+
   const profileList = document.getElementById('vendorProfileList');
   if (profileList && !profileList.hasEventListener) {
     profileList.addEventListener('change', function() {
@@ -807,73 +835,72 @@ function initializeVendor() {
         if (input) input.value = '';
       }
     });
-    profileList.hasEventListener = true; // 登録済みフラグ
+    profileList.hasEventListener = true;
   }
-  
-  // ボタンのイベントリスナー - 一度だけ登録
+
   const saveBtn = document.getElementById('saveVendorProfileBtn');
   if (saveBtn && !saveBtn.hasEventListener) {
     saveBtn.addEventListener('click', saveVendorProfile);
     saveBtn.hasEventListener = true;
   }
-  
+
   const deleteBtn = document.getElementById('deleteVendorProfileBtn');
   if (deleteBtn && !deleteBtn.hasEventListener) {
     deleteBtn.addEventListener('click', deleteVendorProfile);
     deleteBtn.hasEventListener = true;
   }
-  
+
   window.getGemDisplayName = getGemDisplayName;
   window.vendorSettings = vendorSettings;
   window.applyVendorSettings = applyVendorSettings;
   window.updateVendorRegex = updateVendorRegex;
   window.loadVendorProfileDirectly = loadVendorProfileDirectly;
   window.generateVendorRegexFromProfile = generateVendorRegexFromProfile;
-  
+
   loadVendorSettings();
   setupVendorEventListeners();
-  loadGemData();
-  updateVendorRegex();
-  
-  // 初期化完了フラグを設定
-  vendorInitialized = true;
-  console.log('Vendor initialized successfully');
+
+  loadGemData().then(() => {
+    updateVendorRegex();
+
+    vendorInitialized = true;
+    console.log('Vendor initialized successfully');
+
+    if (vendorInitResolve) {
+      vendorInitResolve();
+      vendorInitResolve = null;
+    }
+  }).catch(error => {
+    console.error('Vendor initialization failed:', error);
+    vendorInitialized = true;
+    if (vendorInitResolve) {
+      vendorInitResolve();
+      vendorInitResolve = null;
+    }
+  });
+
+  return vendorInitPromise;
 }
 
-// タブ表示時の初期化処理を修正
 function handleVendorTabActivation() {
   console.log('Vendor tab activated');
-  
-  // わずかな遅延を設けて確実に初期化
-  setTimeout(() => {
-    if (!vendorInitialized) {
-      initializeVendor();
-    } else {
-      // 既に初期化済みの場合はGemデータのみ更新
-      if (gemData.length === 0) {
-        loadGemData();
-      }
-      updateVendorRegex();
-    }
-  }, 50);
+  initializeVendor().catch(error => {
+    console.error('Vendor initialization error:', error);
+  });
 }
 
-// DOMContentLoaded イベントを修正
 document.addEventListener('DOMContentLoaded', function() {
   console.log('DOM loaded, setting up vendor tab listeners');
   
-  // ベンダータブのクリックイベント
   const vendorTab = document.querySelector('a[data-tab="vendorContent"]');
   if (vendorTab && !vendorTab.hasEventListener) {
     vendorTab.addEventListener('click', function(e) {
       console.log('Vendor tab clicked');
-      // タブ切り替えのデフォルト動作を待ってから初期化
       setTimeout(handleVendorTabActivation, 100);
     });
     vendorTab.hasEventListener = true;
   }
   
-  // 初期表示がベンダータブの場合
   const vendorContentElem = document.getElementById('vendorContent');
   if (window.location.hash === '#vendor' || 
       (vendorContentElem && vendorContentElem.style.display === 'block') ||
@@ -882,7 +909,6 @@ document.addEventListener('DOMContentLoaded', function() {
     setTimeout(handleVendorTabActivation, 200);
   }
   
-  // ハッシュ変更の監視（タブ切り替え）
   if (!window.vendorHashChangeHandler) {
     window.vendorHashChangeHandler = function() {
       if (window.location.hash === '#vendor') {

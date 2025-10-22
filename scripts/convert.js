@@ -1,6 +1,6 @@
 function convertRegex() {
   const engRegex = document.getElementById('engRegexInput').value;
-  let jpRegex = '';
+  let jpRegexParts = new Set();
   let details = [];
 
   // !確認
@@ -13,14 +13,15 @@ function convertRegex() {
     const trimmedPart = part.trim();
     for (const [key, value] of Object.entries(ModList)) {
       if (value.engRegex === trimmedPart) {
-        jpRegex += (jpRegex ? '|' : '') + value.Regex;
+        jpRegexParts.add(value.Regex);
         details.push(value.mod);
         break;
       }
     }
   });
 
-  //
+  let jpRegex = Array.from(jpRegexParts).join('|');
+
   if (isNegated) {
     jpRegex = `"!${jpRegex}"`;
   } else if (engRegex.startsWith('"') && engRegex.endsWith('"')) {

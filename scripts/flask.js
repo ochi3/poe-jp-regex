@@ -1,9 +1,6 @@
-// flask.js - フラスコMod管理
 
-// イベントリスナーが既に設定されているか追跡するフラグ
 let flaskEventListenersInitialized = false;
 
-// フラスコMod用の変数
 let rawFlaskMods = [];
 let flaskCheckedMods = new Set();
 let flaskProfiles = {};
@@ -11,7 +8,6 @@ let currentFlaskModalGroup = null;
 let flaskModalSelectedMods = new Set();
 window.rawFlaskMods = [];
 
-// ファイルマッピング
 const flaskFileMapping = {
   'utility': 'flask/utility_flask,flask,default.json',
   'life': 'flask/life_flask,flask,default.json', 
@@ -21,7 +17,6 @@ const flaskFileMapping = {
 
 // フラスコプロファイルリストの変更イベントを追加
 function setupFlaskProfileEventListeners() {
-  // 既に設定済みの場合は何もしない
   if (flaskEventListenersInitialized) return;
   
   const flaskProfileList = document.getElementById('flaskProfileList');
@@ -35,7 +30,6 @@ function setupFlaskProfileEventListeners() {
     });
   }
   
-  // フラグを設定済みに変更
   flaskEventListenersInitialized = true;
 }
 
@@ -143,6 +137,8 @@ function updateSeparatedFlaskModLists() {
     return;
   }
   
+  const currentSearchTerm = document.getElementById('flaskModSearch').value.toLowerCase();
+  
   prefixListDiv.innerHTML = '';
   suffixListDiv.innerHTML = '';
 
@@ -174,6 +170,11 @@ function updateSeparatedFlaskModLists() {
   
   if (Object.keys(suffixGroups).length === 0) {
     suffixListDiv.innerHTML = '<div style="color: #888; text-align: center; padding: 20px;">Suffix Modがありません</div>';
+  }
+
+  if (currentSearchTerm) {
+    document.getElementById('flaskModSearch').value = currentSearchTerm;
+    filterFlaskMods();
   }
 }
 
@@ -422,8 +423,10 @@ function updateCombinedFlaskRegex() {
   }
 }
 
+let currentFlaskSearchTerm = '';
+
 function filterFlaskMods() {
-  const term = document.getElementById('flaskModSearch').value.toLowerCase();
+  currentFlaskSearchTerm = document.getElementById('flaskModSearch').value.toLowerCase();
   const prefixGroups = document.querySelectorAll('#flaskPrefixModList .mod-group-item');
   const suffixGroups = document.querySelectorAll('#flaskSuffixModList .mod-group-item');
   
@@ -433,7 +436,7 @@ function filterFlaskMods() {
     const groupTitle = group.querySelector('.mod-group-header span:first-child').textContent.toLowerCase();
     const groupDesc = group.querySelector('.mod-group-desc').textContent.toLowerCase();
     
-    const isVisible = groupTitle.includes(term) || groupDesc.includes(term);
+    const isVisible = groupTitle.includes(currentFlaskSearchTerm) || groupDesc.includes(currentFlaskSearchTerm);
     group.style.display = isVisible ? 'block' : 'none';
     if (isVisible) anyVisible = true;
   });
@@ -442,7 +445,7 @@ function filterFlaskMods() {
     const groupTitle = group.querySelector('.mod-group-header span:first-child').textContent.toLowerCase();
     const groupDesc = group.querySelector('.mod-group-desc').textContent.toLowerCase();
     
-    const isVisible = groupTitle.includes(term) || groupDesc.includes(term);
+    const isVisible = groupTitle.includes(currentFlaskSearchTerm) || groupDesc.includes(currentFlaskSearchTerm);
     group.style.display = isVisible ? 'block' : 'none';
     if (isVisible) anyVisible = true;
   });
@@ -452,18 +455,18 @@ function filterFlaskMods() {
   
   const showNoResults = (container, type) => {
     const existingMsg = container.querySelector('.no-results-message');
-    if (!existingMsg && term !== '') {
+    if (!existingMsg && currentFlaskSearchTerm !== '') {
       const message = document.createElement('div');
       message.className = 'no-results-message';
       message.style.cssText = 'color: #888; text-align: center; padding: 20px;';
-      message.textContent = `"${term}" に一致する${type}Modが見つかりません`;
+      message.textContent = `"${currentFlaskSearchTerm}" に一致する${type}Modが見つかりません`;
       container.appendChild(message);
-    } else if (existingMsg && term === '') {
+    } else if (existingMsg && currentFlaskSearchTerm === '') {
       existingMsg.remove();
     }
   };
   
-  if (!anyVisible && term !== '') {
+  if (!anyVisible && currentFlaskSearchTerm !== '') {
     showNoResults(prefixContainer, 'Prefix');
     showNoResults(suffixContainer, 'Suffix');
   } else {
@@ -490,7 +493,7 @@ function copyFlaskRegex() {
         if (typeof showNotification === 'function') {
           showNotification('コピーしました！');
         } else {
-          alert('コピーしました！'); // フォールバック
+          alert('コピーしました！');
         }
       })
       .catch(err => {
@@ -625,7 +628,7 @@ function initializeFlaskMods() {
 
 document.addEventListener('DOMContentLoaded', function() {
   initializeFlaskMods();
-  setupFlaskProfileEventListeners(); // 初期化時に一度だけ設定
+  setupFlaskProfileEventListeners();
   
   const flaskTypeSelect = document.getElementById('flaskTypeSelect');
   if (flaskTypeSelect) {
@@ -643,7 +646,6 @@ document.addEventListener('DOMContentLoaded', function() {
   if (flaskTabLink) {
     flaskTabLink.addEventListener('click', function() {
       initializeFlaskMods();
-      // タブ切り替え時はイベントリスナーを再設定しない（フラグで制御）
     });
   }
 });

@@ -666,7 +666,7 @@ const originalModList = {
  "(T17) ユニークボスは取り憑かれている": {
    mod: "(T17) ユニークボスは取り憑かれている",
    engMod: "(T17) Unique Bosses are Possessed",
-   tier: 240,
+   tier: 1001,
    engRegex: "poss",
    Regex: "り憑",
    modTier17: true,
@@ -746,7 +746,7 @@ const originalModList = {
  "(T17) モンスターの移動スピードが#%増加する|モンスターのアタックスピードが#%増加する|モンスターのキャストスピードが%増加する": {
    mod: "(T17) モンスターの移動スピードが#%増加する|モンスターのアタックスピードが#%増加する|モンスターのキャストスピードが%増加する",
    engMod: "(T17) #% increased Monster Movement Speed|#% increased Monster Attack Speed|#% increased Monster Cast Speed",
-   tier: 607,
+   tier: 1001,
    engRegex: "r at",
    Regex: "ーのキ",
    modTier17: true,
