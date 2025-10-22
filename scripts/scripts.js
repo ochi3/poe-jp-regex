@@ -149,16 +149,23 @@ document.getElementById('rareCheckbox').addEventListener('change', () => {
 function updateCombinedRegex() {
     const itemQuantityValue = document.getElementById('itemQuantityInput').value;
     const packSizeValue = document.getElementById('packSizeInput').value;
-    const rarityValue = document.getElementById('rarityInput').value; // 新規追加
+    const rarityValue = document.getElementById('rarityInput').value;
     const ngModChecked = document.getElementById('ngModCheckbox').checked;
 
     let combinedResult = '';
     const effectResults = [];
 
+    const validCheckedMods = new Set();
+    
     checkedMods.forEach((key) => {
         const mod = ModList[key];
-        effectResults.push(currentLanguage === 'ja' ? mod.Regex : mod.engRegex);
+        if (mod) {
+            effectResults.push(currentLanguage === 'ja' ? mod.Regex : mod.engRegex);
+            validCheckedMods.add(key);
+        }
     });
+
+    checkedMods = validCheckedMods;
 
     let ModListResult = effectResults.length > 0 ? effectResults.join('|') : '';
 
@@ -759,8 +766,10 @@ function loadProfile() {
 
     // MODチェックボックス復元
     checkedMods.clear();
-    profile.mods.forEach(mod => {
-      if (ModList[mod]) checkedMods.add(mod);
+    Object.keys(state).forEach(id => {
+        if (state[id] && ModList[id]) {
+            checkedMods.add(id);
+        }
     });
 
     // プロファイル名を入力欄に表示
