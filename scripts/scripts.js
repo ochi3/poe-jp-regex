@@ -746,31 +746,36 @@ function loadProfile() {
     const profile = profiles[profileName];
 
     // 入力値復元
-    document.getElementById('itemQuantityInput').value = profile.settings.itemQuantity || '';
-    document.getElementById('packSizeInput').value = profile.settings.packSize || '';
-    document.getElementById('rarityInput').value = profile.settings.rarity || '';
-    document.getElementById('scarabInput').value = profile.settings.scarab || '';
-    document.getElementById('currencyInput').value = profile.settings.currency || '';
-    document.getElementById('mapInput').value = profile.settings.map || '';
+    document.getElementById('itemQuantityInput').value = profile.settings?.itemQuantity || '';
+    document.getElementById('packSizeInput').value = profile.settings?.packSize || '';
+    document.getElementById('rarityInput').value = profile.settings?.rarity || '';
+    document.getElementById('scarabInput').value = profile.settings?.scarab || '';
+    document.getElementById('currencyInput').value = profile.settings?.currency || '';
+    document.getElementById('mapInput').value = profile.settings?.map || '';
 
-    // チェックボックス状態復元
-    document.getElementById('ngModCheckbox').checked = profile.settings.ngModChecked;
-    document.getElementById('mapTierCheckbox').checked = profile.settings.mapTierChecked;
-    document.getElementById('normalCheckbox').checked = profile.settings.rarities.normal;
-    document.getElementById('magicCheckbox').checked = profile.settings.rarities.magic;
-    document.getElementById('rareCheckbox').checked = profile.settings.rarities.rare;
+    // チェックボックス状態復元（オプショナルチェイニングで安全に）
+    document.getElementById('ngModCheckbox').checked = profile.settings?.ngModChecked || false;
+    document.getElementById('mapTierCheckbox').checked = profile.settings?.mapTierChecked || false;
+    document.getElementById('normalCheckbox').checked = profile.settings?.rarities?.normal || false;
+    document.getElementById('magicCheckbox').checked = profile.settings?.rarities?.magic || false;
+    document.getElementById('rareCheckbox').checked = profile.settings?.rarities?.rare || false;
 
     // 検索モード
-    const searchMode = profile.settings.searchMode || 'any';
-    document.querySelector(`input[name="searchMode"][value="${searchMode}"]`).checked = true;
+    const searchMode = profile.settings?.searchMode || 'any';
+    const searchModeRadio = document.querySelector(`input[name="searchMode"][value="${searchMode}"]`);
+    if (searchModeRadio) {
+      searchModeRadio.checked = true;
+    }
 
-    // MODチェックボックス復元
+    // MODチェックボックス復元 - 存在するMODのみ
     checkedMods.clear();
-    Object.keys(state).forEach(id => {
-        if (state[id] && ModList[id]) {
-            checkedMods.add(id);
+    if (Array.isArray(profile.mods)) {
+      profile.mods.forEach(mod => {
+        if (ModList[mod]) {
+          checkedMods.add(mod);
         }
-    });
+      });
+    }
 
     // プロファイル名を入力欄に表示
     document.getElementById('profileName').value = profileName;
