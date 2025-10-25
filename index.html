@@ -165,15 +165,17 @@
             <div class="card">
                 <h2 class="section-header">英語Regex変換</h2>
                 <p style="color: var(--text-secondary); margin-bottom: 20px;">
-                    poe.reのRegexを参考にしています。<br>
-                    poe.reやPoEのアップデートで壊れる可能性があります。<br>
+                    poe.reの参考を辞めて、英文でRegex検索するようになりました。<br>
+                    テスト中なので、反応しないやつや、反応してしまうものもあるかもしれません。<br>
                     パックサイズ等は未対応です。
                 </p>
 
                 <div class="input-group">
                     <input type="text" id="engRegexInput" placeholder="例: tal d|non">
-                    <button onclick="convertRegex()">日本語に変換</button>
+                    <!-- <button onclick="convertRegex()">日本語に変換</button> -->
+                    <button onclick="convertRegexWithDetails()">日本語に変換</button>
                 </div>
+                
 
                 <div class="input-group" style="margin-top: 16px;">
                     <button onclick="applyConvertedToMapMods()">マップModに適用</button>
