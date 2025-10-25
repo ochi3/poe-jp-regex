@@ -5702,7 +5702,7 @@
     "classes": null,
     "quest": null,
     "is_support": true,
-    "regex": "ierce Su",
+    "regex": "Pierce",
     "eng": "Pierce Support"
   },
   {
@@ -9131,4 +9131,5 @@
     "regex": "ィ増加サ",
     "eng": "Item Rarity Support"
   }
+
 ]
