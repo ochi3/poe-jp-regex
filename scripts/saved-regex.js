@@ -481,7 +481,7 @@ function createProfileSummary(profile, type) {
     const modCount = (profile.mods || []).length;
     if (modCount > 0) parts.push(`${modCount}個のMod`);
     if (profile.flaskType) {
-      const typeNames = { utility: 'ユーティリティ', life: 'ライフ', mana: 'マナ', hybrid: 'ハイブリッド' };
+      const typeNames = { utility: 'ユーティリティ', life: 'ライフ', mana: 'マナ', hybrid: 'ハイブリッド', tincture: 'チンキ' };
       parts.push(typeNames[profile.flaskType] || profile.flaskType);
     }
   } else if (type === 'item') {
@@ -599,7 +599,7 @@ function createDetailedView(profile, type) {
     }
   } else if (type === 'flask') {
     if (profile.flaskType) {
-      const typeNames = { utility: 'ユーティリティフラスコ', life: 'ライフフラスコ', mana: 'マナフラスコ', hybrid: 'ハイブリッドフラスコ' };
+      const typeNames = { utility: 'ユーティリティフラスコ', life: 'ライフフラスコ', mana: 'マナフラスコ', hybrid: 'ハイブリッドフラスコ', tincture: 'チンキ' };
       const typeRow = createDetailRow('タイプ', typeNames[profile.flaskType] || profile.flaskType);
       container.appendChild(typeRow);
       const spacer = document.createElement('div');

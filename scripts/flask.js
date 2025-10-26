@@ -12,7 +12,8 @@ const flaskFileMapping = {
   'utility': 'flask/utility_flask,flask,default.json',
   'life': 'flask/life_flask,flask,default.json', 
   'mana': 'flask/mana_flask,flask,default.json', 
-  'hybrid': 'flask/hybrid_flask,flask,default.json'
+  'hybrid': 'flask/hybrid_flask,flask,default.json', 
+  'Tincture': 'flask/tincture.json'
 };
 
 // フラスコプロファイルリストの変更イベントを追加

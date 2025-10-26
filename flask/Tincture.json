@@ -1,0 +1,640 @@
+{
+  "bases": [
+    "Metadata/",
+    "Metadata/"
+  ],
+  "mods": {
+    "prefix": {
+      "TinctureEffect": [
+        {
+          "key": "TinctureEffect1",
+          "text": "効果が(11-13)%増加する",
+          "name": "薬草の",
+          "tag": "tincture",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 600
+        },
+        {
+          "key": "TinctureEffect2",
+          "text": "効果が(14-16)%増加する",
+          "name": "自然の",
+          "tag": "tincture",
+          "generation_type": "prefix",
+          "required_level": 35,
+          "weight": 600
+        },
+        {
+          "key": "TinctureEffect3",
+          "text": "効果が(17-19)%増加する",
+          "name": "薬効ある",
+          "tag": "tincture",
+          "generation_type": "prefix",
+          "required_level": 64,
+          "weight": 600
+        },
+        {
+          "key": "TinctureEffect4",
+          "text": "効果が(20-22)%増加する",
+          "name": "園芸の",
+          "tag": "tincture",
+          "generation_type": "prefix",
+          "required_level": 85,
+          "weight": 600
+        }
+      ],
+      "TinctureToxicityRate": [
+        {
+          "key": "TinctureToxicityRate1",
+          "text": "マナ燃焼レートが(17-15)%減少する",
+          "name": "維持された",
+          "tag": "tincture",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 1000
+        },
+        {
+          "key": "TinctureToxicityRate2",
+          "text": "マナ燃焼レートが(20-18)%減少する",
+          "name": "固く握った",
+          "tag": "tincture",
+          "generation_type": "prefix",
+          "required_level": 30,
+          "weight": 1000
+        },
+        {
+          "key": "TinctureToxicityRate3",
+          "text": "マナ燃焼レートが(23-21)%減少する",
+          "name": "粘り強い",
+          "tag": "tincture",
+          "generation_type": "prefix",
+          "required_level": 58,
+          "weight": 1000
+        },
+        {
+          "key": "TinctureToxicityRate4",
+          "text": "マナ燃焼レートが(26-24)%減少する",
+          "name": "我慢強い",
+          "tag": "tincture",
+          "generation_type": "prefix",
+          "required_level": 80,
+          "weight": 1000
+        }
+      ],
+      "TinctureCooldownRecovery": [
+        {
+          "key": "TinctureCooldownRecovery1",
+          "text": "クールダウン解消レートが(13-17)%増加する",
+          "name": "明快な",
+          "tag": "tincture",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 800
+        },
+        {
+          "key": "TinctureCooldownRecovery2",
+          "text": "クールダウン解消レートが(18-22)%増加する",
+          "name": "敏感な",
+          "tag": "tincture",
+          "generation_type": "prefix",
+          "required_level": 30,
+          "weight": 800
+        },
+        {
+          "key": "TinctureCooldownRecovery3",
+          "text": "クールダウン解消レートが(23-27)%増加する",
+          "name": "洞察力のある",
+          "tag": "tincture",
+          "generation_type": "prefix",
+          "required_level": 58,
+          "weight": 800
+        },
+        {
+          "key": "TinctureCooldownRecovery4",
+          "text": "クールダウン解消レートが(28-32)%増加する",
+          "name": "鋭敏な",
+          "tag": "tincture",
+          "generation_type": "prefix",
+          "required_level": 82,
+          "weight": 800
+        }
+      ],
+      "TinctureEffectFasterToxicity": [
+        {
+          "key": "TinctureEffectFasterToxicity1",
+          "text": "効果が35%増加する\nマナ燃焼レートが(47-51)%増加する",
+          "name": "強い",
+          "tag": "tincture",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 400
+        },
+        {
+          "key": "TinctureEffectFasterToxicity2",
+          "text": "効果が35%増加する\nマナ燃焼レートが(42-46)%増加する",
+          "name": "濃縮した",
+          "tag": "tincture",
+          "generation_type": "prefix",
+          "required_level": 49,
+          "weight": 400
+        },
+        {
+          "key": "TinctureEffectFasterToxicity3",
+          "text": "効果が35%増加する\nマナ燃焼レートが(37-41)%増加する",
+          "name": "凝縮された",
+          "tag": "tincture",
+          "generation_type": "prefix",
+          "required_level": 84,
+          "weight": 400
+        }
+      ],
+      "TinctureEffectSlowerToxicity": [
+        {
+          "key": "TinctureEffectSlowerToxicity1",
+          "text": "効果が(35-31)%減少する\nマナ燃焼レートが50%減少する",
+          "name": "薄い",
+          "tag": "tincture",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 400
+        },
+        {
+          "key": "TinctureEffectSlowerToxicity2",
+          "text": "効果が(30-26)%減少する\nマナ燃焼レートが50%減少する",
+          "name": "希釈された",
+          "tag": "tincture",
+          "generation_type": "prefix",
+          "required_level": 49,
+          "weight": 400
+        },
+        {
+          "key": "TinctureEffectSlowerToxicity3",
+          "text": "効果が(25-21)%減少する\nマナ燃焼レートが50%減少する",
+          "name": "配分された",
+          "tag": "tincture",
+          "generation_type": "prefix",
+          "required_level": 84,
+          "weight": 400
+        }
+      ]
+    },
+    "suffix": {
+      "TinctureIncreasedAilmentDuration": [
+        {
+          "key": "TinctureIncreasedAilmentDuration1",
+          "text": "近接武器アタックによる元素系状態異常の持続時間が(25-35)%増加する",
+          "name": "野生の",
+          "tag": "tincture",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 700
+        },
+        {
+          "key": "TinctureIncreasedAilmentDuration2",
+          "text": "近接武器アタックによる元素系状態異常の持続時間が(36-45)%増加する",
+          "name": "野蛮の",
+          "tag": "tincture",
+          "generation_type": "suffix",
+          "required_level": 42,
+          "weight": 700
+        },
+        {
+          "key": "TinctureIncreasedAilmentDuration3",
+          "text": "近接武器アタックによる元素系状態異常の持続時間が(46-55)%増加する",
+          "name": "蛮行の",
+          "tag": "tincture",
+          "generation_type": "suffix",
+          "required_level": 60,
+          "weight": 700
+        },
+        {
+          "key": "TinctureIncreasedAilmentDuration4",
+          "text": "近接武器アタックによる元素系状態異常の持続時間が(56-65)%増加する",
+          "name": "獣の",
+          "tag": "tincture",
+          "generation_type": "suffix",
+          "required_level": 82,
+          "weight": 700
+        }
+      ],
+      "TinctureDamageOverTimeMultiplier": [
+        {
+          "key": "TinctureDamageOverTimeMultiplier1",
+          "text": "近接武器によるアタックの継続ダメージ倍率 +(9-13)%",
+          "name": "辛辣さの",
+          "tag": "tincture",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 500
+        },
+        {
+          "key": "TinctureDamageOverTimeMultiplier2",
+          "text": "近接武器によるアタックの継続ダメージ倍率 +(14-18)%",
+          "name": "霧散の",
+          "tag": "tincture",
+          "generation_type": "suffix",
+          "required_level": 34,
+          "weight": 500
+        },
+        {
+          "key": "TinctureDamageOverTimeMultiplier3",
+          "text": "近接武器によるアタックの継続ダメージ倍率 +(19-23)%",
+          "name": "液状化の",
+          "tag": "tincture",
+          "generation_type": "suffix",
+          "required_level": 58,
+          "weight": 500
+        },
+        {
+          "key": "TinctureDamageOverTimeMultiplier4",
+          "text": "近接武器によるアタックの継続ダメージ倍率 +(24-28)%",
+          "name": "溶融の",
+          "tag": "tincture",
+          "generation_type": "suffix",
+          "required_level": 70,
+          "weight": 500
+        },
+        {
+          "key": "TinctureDamageOverTimeMultiplier5",
+          "text": "近接武器によるアタックの継続ダメージ倍率 +(29-33)%",
+          "name": "溶解の",
+          "tag": "tincture",
+          "generation_type": "suffix",
+          "required_level": 84,
+          "weight": 500
+        }
+      ],
+      "TinctureElementalPenetration": [
+        {
+          "key": "TinctureElementalPenetration1",
+          "text": "近接武器のダメージは元素耐性(5-7)%を突破する",
+          "name": "触媒の",
+          "tag": "tincture",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 500
+        },
+        {
+          "key": "TinctureElementalPenetration2",
+          "text": "近接武器のダメージは元素耐性(8-10)%を突破する",
+          "name": "注入の",
+          "tag": "tincture",
+          "generation_type": "suffix",
+          "required_level": 32,
+          "weight": 500
+        },
+        {
+          "key": "TinctureElementalPenetration3",
+          "text": "近接武器のダメージは元素耐性(11-13)%を突破する",
+          "name": "与力の",
+          "tag": "tincture",
+          "generation_type": "suffix",
+          "required_level": 60,
+          "weight": 500
+        },
+        {
+          "key": "TinctureElementalPenetration4",
+          "text": "近接武器のダメージは元素耐性(14-16)%を突破する",
+          "name": "解放の",
+          "tag": "tincture",
+          "generation_type": "suffix",
+          "required_level": 73,
+          "weight": 500
+        },
+        {
+          "key": "TinctureElementalPenetration5",
+          "text": "近接武器のダメージは元素耐性(17-19)%を突破する",
+          "name": "圧倒の",
+          "tag": "tincture",
+          "generation_type": "suffix",
+          "required_level": 85,
+          "weight": 500
+        }
+      ],
+      "TinctureCriticalStrikeMultiplier": [
+        {
+          "key": "TinctureCriticalStrikeMultiplier1",
+          "text": "近接武器のクリティカルダメージ倍率 +(9-13)%",
+          "name": "怒気の",
+          "tag": "tincture",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 500
+        },
+        {
+          "key": "TinctureCriticalStrikeMultiplier2",
+          "text": "近接武器のクリティカルダメージ倍率 +(14-18)%",
+          "name": "怒りの",
+          "tag": "tincture",
+          "generation_type": "suffix",
+          "required_level": 32,
+          "weight": 500
+        },
+        {
+          "key": "TinctureCriticalStrikeMultiplier3",
+          "text": "近接武器のクリティカルダメージ倍率 +(19-23)%",
+          "name": "激怒の",
+          "tag": "tincture",
+          "generation_type": "suffix",
+          "required_level": 60,
+          "weight": 500
+        },
+        {
+          "key": "TinctureCriticalStrikeMultiplier4",
+          "text": "近接武器のクリティカルダメージ倍率 +(24-28)%",
+          "name": "激昂の",
+          "tag": "tincture",
+          "generation_type": "suffix",
+          "required_level": 73,
+          "weight": 500
+        },
+        {
+          "key": "TinctureCriticalStrikeMultiplier5",
+          "text": "近接武器のクリティカルダメージ倍率 +(29-33)%",
+          "name": "憤怒の",
+          "tag": "tincture",
+          "generation_type": "suffix",
+          "required_level": 85,
+          "weight": 500
+        }
+      ],
+      "TinctureIncreasedAttackSpeed": [
+        {
+          "key": "TinctureIncreasedAttackSpeed1",
+          "text": "近接武器のアタックスピードが(15-19)%増加する",
+          "name": "技量の",
+          "tag": "tincture",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 800
+        },
+        {
+          "key": "TinctureIncreasedAttackSpeed2",
+          "text": "近接武器のアタックスピードが(20-24)%増加する",
+          "name": "余裕の",
+          "tag": "tincture",
+          "generation_type": "suffix",
+          "required_level": 65,
+          "weight": 800
+        },
+        {
+          "key": "TinctureIncreasedAttackSpeed3",
+          "text": "近接武器のアタックスピードが(25-29)%増加する",
+          "name": "卓越の",
+          "tag": "tincture",
+          "generation_type": "suffix",
+          "required_level": 85,
+          "weight": 800
+        }
+      ],
+      "TinctureDamageAgainstLowLife": [
+        {
+          "key": "TinctureDamageAgainstLowLife1",
+          "text": "低ライフ状態の敵に対する近接武器ダメージが(40-47)%増加する",
+          "name": "処刑の",
+          "tag": "tincture",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 600
+        },
+        {
+          "key": "TinctureDamageAgainstLowLife2",
+          "text": "低ライフ状態の敵に対する近接武器ダメージが(48-55)%増加する",
+          "name": "排除の",
+          "tag": "tincture",
+          "generation_type": "suffix",
+          "required_level": 28,
+          "weight": 600
+        },
+        {
+          "key": "TinctureDamageAgainstLowLife3",
+          "text": "低ライフ状態の敵に対する近接武器ダメージが(56-63)%増加する",
+          "name": "殲滅の",
+          "tag": "tincture",
+          "generation_type": "suffix",
+          "required_level": 47,
+          "weight": 600
+        },
+        {
+          "key": "TinctureDamageAgainstLowLife4",
+          "text": "低ライフ状態の敵に対する近接武器ダメージが(64-71)%増加する",
+          "name": "根絶の",
+          "tag": "tincture",
+          "generation_type": "suffix",
+          "required_level": 65,
+          "weight": 600
+        },
+        {
+          "key": "TinctureDamageAgainstLowLife5",
+          "text": "低ライフ状態の敵に対する近接武器ダメージが(72-79)%増加する",
+          "name": "暗殺の",
+          "tag": "tincture",
+          "generation_type": "suffix",
+          "required_level": 80,
+          "weight": 600
+        }
+      ],
+      "TinctureLifeGainedFromEnemyDeath": [
+        {
+          "key": "TinctureLifeGainedFromEnemyDeath1",
+          "text": "近接武器によりキルした敵1体ごとに(11-15)のライフを獲得する",
+          "name": "成功の",
+          "tag": "tincture",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 1000
+        },
+        {
+          "key": "TinctureLifeGainedFromEnemyDeath2",
+          "text": "近接武器によりキルした敵1体ごとに(16-20)のライフを獲得する",
+          "name": "戦勝の",
+          "tag": "tincture",
+          "generation_type": "suffix",
+          "required_level": 35,
+          "weight": 1000
+        },
+        {
+          "key": "TinctureLifeGainedFromEnemyDeath3",
+          "text": "近接武器によりキルした敵1体ごとに(21-25)のライフを獲得する",
+          "name": "勝利の",
+          "tag": "tincture",
+          "generation_type": "suffix",
+          "required_level": 62,
+          "weight": 1000
+        },
+        {
+          "key": "TinctureLifeGainedFromEnemyDeath4",
+          "text": "近接武器によりキルした敵1体ごとに(26-30)のライフを獲得する",
+          "name": "占領の",
+          "tag": "tincture",
+          "generation_type": "suffix",
+          "required_level": 80,
+          "weight": 1000
+        }
+      ],
+      "TinctureManaGainedFromEnemyDeath": [
+        {
+          "key": "TinctureManaGainedFromEnemyDeath1",
+          "text": "近接武器でキルした敵1体ごとに(2-3)のマナを獲得する",
+          "name": "吸収の",
+          "tag": "tincture",
+          "generation_type": "suffix",
+          "required_level": 38,
+          "weight": 1000
+        },
+        {
+          "key": "TinctureManaGainedFromEnemyDeath2",
+          "text": "近接武器でキルした敵1体ごとに(4-5)のマナを獲得する",
+          "name": "浸透の",
+          "tag": "tincture",
+          "generation_type": "suffix",
+          "required_level": 50,
+          "weight": 1000
+        },
+        {
+          "key": "TinctureManaGainedFromEnemyDeath3",
+          "text": "近接武器でキルした敵1体ごとに(6-8)のマナを獲得する",
+          "name": "摂食の",
+          "tag": "tincture",
+          "generation_type": "suffix",
+          "required_level": 68,
+          "weight": 1000
+        },
+        {
+          "key": "TinctureManaGainedFromEnemyDeath4",
+          "text": "近接武器でキルした敵1体ごとに(9-11)のマナを獲得する",
+          "name": "同化の",
+          "tag": "tincture",
+          "generation_type": "suffix",
+          "required_level": 82,
+          "weight": 1000
+        }
+      ],
+      "TinctureManaGainPerTarget": [
+        {
+          "key": "TinctureManaGainPerTarget1",
+          "text": "近接武器によりヒットした敵1体ごとに1のマナを獲得する",
+          "name": "取り込みの",
+          "tag": "tincture",
+          "generation_type": "suffix",
+          "required_level": 45,
+          "weight": 500
+        },
+        {
+          "key": "TinctureManaGainPerTarget2",
+          "text": "近接武器によりヒットした敵1体ごとに2のマナを獲得する",
+          "name": "吸収の",
+          "tag": "tincture",
+          "generation_type": "suffix",
+          "required_level": 68,
+          "weight": 500
+        },
+        {
+          "key": "TinctureManaGainPerTarget3",
+          "text": "近接武器によりヒットした敵1体ごとに3のマナを獲得する",
+          "name": "捕食の",
+          "tag": "tincture",
+          "generation_type": "suffix",
+          "required_level": 84,
+          "weight": 500
+        }
+      ],
+      "TinctureLifeGainPerTarget": [
+        {
+          "key": "TinctureLifeGainPerTarget1",
+          "text": "近接武器によりヒットした敵1体ごとに(2-3)のライフを獲得する",
+          "name": "活性化の",
+          "tag": "tincture",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 500
+        },
+        {
+          "key": "TinctureLifeGainPerTarget2",
+          "text": "近接武器によりヒットした敵1体ごとに(3-4)のライフを獲得する",
+          "name": "復元の",
+          "tag": "tincture",
+          "generation_type": "suffix",
+          "required_level": 50,
+          "weight": 500
+        },
+        {
+          "key": "TinctureLifeGainPerTarget3",
+          "text": "近接武器によりヒットした敵1体ごとに(5-7)のライフを獲得する",
+          "name": "再生の",
+          "tag": "tincture",
+          "generation_type": "suffix",
+          "required_level": 77,
+          "weight": 500
+        }
+      ],
+      "TinctureFlaskChargeIncrease": [
+        {
+          "key": "TinctureFlaskChargeIncrease1",
+          "text": "近接武器によるキルから獲得するフラスコチャージが(11-15)%増加する",
+          "name": "補給の",
+          "tag": "tincture",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 800
+        },
+        {
+          "key": "TinctureFlaskChargeIncrease2",
+          "text": "近接武器によるキルから獲得するフラスコチャージが(16-20)%増加する",
+          "name": "注ぎ足しの",
+          "tag": "tincture",
+          "generation_type": "suffix",
+          "required_level": 40,
+          "weight": 800
+        },
+        {
+          "key": "TinctureFlaskChargeIncrease3",
+          "text": "近接武器によるキルから獲得するフラスコチャージが(21-25)%増加する",
+          "name": "流し込みの",
+          "tag": "tincture",
+          "generation_type": "suffix",
+          "required_level": 72,
+          "weight": 800
+        },
+        {
+          "key": "TinctureFlaskChargeIncrease4",
+          "text": "近接武器によるキルから獲得するフラスコチャージが(26-30)%増加する",
+          "name": "溢流の",
+          "tag": "tincture",
+          "generation_type": "suffix",
+          "required_level": 85,
+          "weight": 800
+        }
+      ],
+      "TinctureIgnorePhysDR": [
+        {
+          "key": "TinctureIgnorePhysDR1",
+          "text": "近接武器は(30-39)%の確率で敵物理ダメージ軽減を無視する",
+          "name": "殴打の",
+          "tag": "tincture",
+          "generation_type": "suffix",
+          "required_level": 40,
+          "weight": 500
+        },
+        {
+          "key": "TinctureIgnorePhysDR2",
+          "text": "近接武器は(40-49)%の確率で敵物理ダメージ軽減を無視する",
+          "name": "潰滅の",
+          "tag": "tincture",
+          "generation_type": "suffix",
+          "required_level": 62,
+          "weight": 500
+        },
+        {
+          "key": "TinctureIgnorePhysDR3",
+          "text": "近接武器は(50-60)%の確率で敵物理ダメージ軽減を無視する",
+          "name": "圧倒の",
+          "tag": "tincture",
+          "generation_type": "suffix",
+          "required_level": 80,
+          "weight": 500
+        }
+      ]
+    }
+  }
+}
