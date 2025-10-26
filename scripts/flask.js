@@ -13,7 +13,7 @@ const flaskFileMapping = {
   'life': 'flask/life_flask,flask,default.json', 
   'mana': 'flask/mana_flask,flask,default.json', 
   'hybrid': 'flask/hybrid_flask,flask,default.json', 
-  'Tincture': 'flask/tincture.json'
+  'tincture': 'flask/tincture.json'
 };
 
 // フラスコプロファイルリストの変更イベントを追加
@@ -649,4 +649,5 @@ document.addEventListener('DOMContentLoaded', function() {
       initializeFlaskMods();
     });
   }
+
 });
