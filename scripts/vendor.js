@@ -140,17 +140,25 @@ function generateVendorRegex() {
 
   let regex = parts.join('|');
 
+  let mainRegex = parts.join('|');
+  let finalRegex = '';
+
   const excludeWeapons = [];
   Object.entries(settings.excludeWeapons).forEach(([key, value]) => {
     if (value && weaponMapping[key]) excludeWeapons.push(weaponMapping[key]);
   });
 
-  if (excludeWeapons.length > 0) {
-    regex += ` "!.*(?:${excludeWeapons.join('|')})"`;
+  if (mainRegex && excludeWeapons.length > 0) {
+    finalRegex = `"${mainRegex}" "!.*(?:${excludeWeapons.join('|')})"`;
+  } else if (mainRegex) {
+    finalRegex = `"${mainRegex}"`;
+  } else if (excludeWeapons.length > 0) {
+    finalRegex = `"!.*(?:${excludeWeapons.join('|')})"`;
   }
 
-  return regex;
+  return finalRegex;
 }
+
 
 function updateVendorRegex() {
   const regex = generateVendorRegex();
