@@ -649,5 +649,4 @@ document.addEventListener('DOMContentLoaded', function() {
       initializeFlaskMods();
     });
   }
-
 });

@@ -51,14 +51,14 @@ let selectedGems = [];
 const weaponMapping = {
   claw: '^鉤爪',
   dagger: '^短剣',
-  wand: 'wand|horn',
+  wand: ' wand|s horn',
   oneHandSword: '^片手剣',
   thrustingSword: '^刺突剣',
   oneHandAxe: '^片手斧',
   oneHandMace: '^片手メイス',
   sceptre: '^セプター',
   runeDagger: '^ルーンの短剣',
-  bow: 'bow',
+  bow: ' bow',
   staff: '^スタッフ',
   twoHandSword: '^両手剣',
   twoHandAxe: '^両手斧',
@@ -146,7 +146,7 @@ function generateVendorRegex() {
   });
 
   if (excludeWeapons.length > 0) {
-    regex += ` !.*(?:${excludeWeapons.join('|')})`;
+    regex += ` "!.*(?:${excludeWeapons.join('|')})"`;
   }
 
   return regex;
