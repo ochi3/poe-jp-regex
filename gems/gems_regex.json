@@ -679,6 +679,24 @@
     "eng": "Frost Wall"
   },
   {
+    "display_name": "ウォールオブフォース",
+    "id": "WallOfForce",
+    "color": "b",
+    "quest_reward": {
+      "act": 2,
+      "classes": [
+        "ウィッチ"
+      ],
+      "quest": "黒ずくめの侵入者"
+    },
+    "act": null,
+    "classes": null,
+    "quest": null,
+    "is_support": false,
+    "regex": "ォールオ",
+    "eng": "Wall of Force"
+  },
+  {
     "display_name": "フリージングパルス",
     "id": "FreezingPulse",
     "color": "b",
@@ -1309,7 +1327,7 @@
     "classes": null,
     "quest": null,
     "is_support": false,
-    "regex": "バーニン",
+    "regex": "ーニングア",
     "eng": "Burning Arrow of Vigour"
   },
   {
@@ -2080,7 +2098,7 @@
   {
     "display_name": "コンヴォケーション",
     "id": "Convocation",
-    "color": "b",
+    "color": "w",
     "quest_reward": null,
     "act": null,
     "classes": null,
@@ -2295,7 +2313,7 @@
     "classes": null,
     "quest": null,
     "is_support": false,
-    "regex": "ニングサ",
+    "regex": "ングサー",
     "eng": "Lightning Circle"
   },
   {
@@ -3222,7 +3240,7 @@
     "eng": "Infernal Sweep"
   },
   {
-    "display_name": "クリメーション",
+    "display_name": "クレメーション",
     "id": "CorpseEruption",
     "color": "g",
     "quest_reward": {
@@ -3237,7 +3255,7 @@
     "classes": null,
     "quest": null,
     "is_support": false,
-    "regex": "クリメー",
+    "regex": "クレメー",
     "eng": "Cremation of the Volcano"
   },
   {
@@ -5300,6 +5318,91 @@
     "eng": "Snipe"
   },
   {
+    "display_name": "コンフラグレーション",
+    "id": "Conflagration",
+    "color": "g",
+    "quest_reward": {
+      "act": 3,
+      "classes": [
+        "レンジャー"
+      ],
+      "quest": "腹心の部下を倒せ"
+    },
+    "act": null,
+    "classes": null,
+    "quest": null,
+    "is_support": false,
+    "regex": "コンフラ",
+    "eng": "[UNUSED] Conflagration Support"
+  },
+  {
+    "display_name": "キネティックレイン",
+    "id": "KineticRain",
+    "color": "b",
+    "quest_reward": {
+      "act": 3,
+      "classes": [
+        "ウィッチ"
+      ],
+      "quest": "腹心の部下を倒せ"
+    },
+    "act": null,
+    "classes": null,
+    "quest": null,
+    "is_support": false,
+    "regex": "ィックレ",
+    "eng": "Kinetic Rain of Impact"
+  },
+  {
+    "display_name": "ソマティックシェル",
+    "id": "SomaticShell",
+    "color": "b",
+    "quest_reward": {
+      "act": 3,
+      "classes": [
+        "ウィッチ"
+      ],
+      "quest": "腹心の部下を倒せ"
+    },
+    "act": null,
+    "classes": null,
+    "quest": null,
+    "is_support": false,
+    "regex": "ソマティ",
+    "eng": "Somatic Shell"
+  },
+  {
+    "display_name": "サンダーストーム",
+    "id": "Thunderstorm",
+    "color": "g",
+    "quest_reward": {
+      "act": 3,
+      "classes": [
+        "デュエリスト",
+        "レンジャー"
+      ],
+      "quest": "腹心の部下を倒せ"
+    },
+    "act": null,
+    "classes": null,
+    "quest": null,
+    "is_support": false,
+    "regex": "ンダース",
+    "eng": "Thunderstorm"
+  },
+  {
+    "display_name": "キネティックフューシレイド",
+    "id": "KineticFusillade",
+    "color": "b",
+    "quest_reward": null,
+    "act": null,
+    "classes": null,
+    "quest": null,
+    "is_support": false,
+    "regex": "ックフュ",
+    "eng": "Kinetic Fusillade"
+  },
+  {
     "display_name": "クイックステップ",
     "id": "Quickstep",
     "color": "w",
@@ -5334,6 +5437,198 @@
     "is_support": false,
     "regex": "奮起自動",
     "eng": "Autoexertion"
+  },
+  {
+    "display_name": "ハートオブフレイム",
+    "id": "Metadata/Items/Chayula/XophGraftGem1",
+    "color": "r",
+    "quest_reward": null,
+    "act": null,
+    "classes": null,
+    "quest": null,
+    "is_support": false,
+    "regex": "ハートオ",
+    "eng": "Heart of Flame"
+  },
+  {
+    "display_name": "ヒズバーニングメッセージ",
+    "id": "Metadata/Items/Chayula/XophGraftGem2",
+    "color": "r",
+    "quest_reward": null,
+    "act": null,
+    "classes": null,
+    "quest": null,
+    "is_support": false,
+    "regex": "ヒズバー",
+    "eng": "His Burning Message"
+  },
+  {
+    "display_name": "コールザパイア",
+    "id": "Metadata/Items/Chayula/XophGraftGem3",
+    "color": "r",
+    "quest_reward": null,
+    "act": null,
+    "classes": null,
+    "quest": null,
+    "is_support": false,
+    "regex": "コールザ",
+    "eng": "Call the Pyre"
+  },
+  {
+    "display_name": "グレイウィンドハウル",
+    "id": "Metadata/Items/Chayula/XophGraftGem4",
+    "color": "r",
+    "quest_reward": null,
+    "act": null,
+    "classes": null,
+    "quest": null,
+    "is_support": false,
+    "regex": "グレイウ",
+    "eng": "The Grey Wind Howls"
+  },
+  {
+    "display_name": "リターントゥダスト",
+    "id": "Metadata/Items/Chayula/UulNetolGraftGem1",
+    "color": "r",
+    "quest_reward": null,
+    "act": null,
+    "classes": null,
+    "quest": null,
+    "is_support": false,
+    "regex": "リターン",
+    "eng": "Return to Dust"
+  },
+  {
+    "display_name": "シーズザフレッシュ",
+    "id": "Metadata/Items/Chayula/UulNetolGraftGem2",
+    "color": "r",
+    "quest_reward": null,
+    "act": null,
+    "classes": null,
+    "quest": null,
+    "is_support": false,
+    "regex": "シーズザ",
+    "eng": "Seize the Flesh"
+  },
+  {
+    "display_name": "バイオレントデザイア",
+    "id": "Metadata/Items/Chayula/UulNetolGraftGem3",
+    "color": "r",
+    "quest_reward": null,
+    "act": null,
+    "classes": null,
+    "quest": null,
+    "is_support": false,
+    "regex": "バイオレ",
+    "eng": "Violent Desire"
+  },
+  {
+    "display_name": "テンダーエンブレイス",
+    "id": "Metadata/Items/Chayula/UulNetolGraftGem4",
+    "color": "r",
+    "quest_reward": null,
+    "act": null,
+    "classes": null,
+    "quest": null,
+    "is_support": false,
+    "regex": "テンダー",
+    "eng": "Tender Embrace"
+  },
+  {
+    "display_name": "リースドインザライト",
+    "id": "Metadata/Items/Chayula/EshGraftGem1",
+    "color": "b",
+    "quest_reward": null,
+    "act": null,
+    "classes": null,
+    "quest": null,
+    "is_support": false,
+    "regex": "リースド",
+    "eng": "Wreathed in Light"
+  },
+  {
+    "display_name": "グローイングシルエット",
+    "id": "Metadata/Items/Chayula/EshGraftGem2",
+    "color": "b",
+    "quest_reward": null,
+    "act": null,
+    "classes": null,
+    "quest": null,
+    "is_support": false,
+    "regex": "グローイ",
+    "eng": "Glowing Silhouette"
+  },
+  {
+    "display_name": "エナーヴェイティンググラスプ",
+    "id": "Metadata/Items/Chayula/EshGraftGem3",
+    "color": "b",
+    "quest_reward": null,
+    "act": null,
+    "classes": null,
+    "quest": null,
+    "is_support": false,
+    "regex": "エナーヴ",
+    "eng": "Enervating Grasp"
+  },
+  {
+    "display_name": "オーバーチャージドシニュー",
+    "id": "Metadata/Items/Chayula/EshGraftGem4",
+    "color": "b",
+    "quest_reward": null,
+    "act": null,
+    "classes": null,
+    "quest": null,
+    "is_support": false,
+    "regex": "ーバーチ",
+    "eng": "Overcharged Sinews"
+  },
+  {
+    "display_name": "ダンスインザホワイト",
+    "id": "Metadata/Items/Chayula/TulGraftGem1",
+    "color": "g",
+    "quest_reward": null,
+    "act": null,
+    "classes": null,
+    "quest": null,
+    "is_support": false,
+    "regex": "ダンスイ",
+    "eng": "Dance in the White"
+  },
+  {
+    "display_name": "ファオーリングクリスタル",
+    "id": "Metadata/Items/Chayula/TulGraftGem2",
+    "color": "g",
+    "quest_reward": null,
+    "act": null,
+    "classes": null,
+    "quest": null,
+    "is_support": false,
+    "regex": "ファオー",
+    "eng": "Falling Crystals"
+  },
+  {
+    "display_name": "グレートアバランチ",
+    "id": "Metadata/Items/Chayula/TulGraftGem3",
+    "color": "b",
+    "quest_reward": null,
+    "act": null,
+    "classes": null,
+    "quest": null,
+    "is_support": false,
+    "regex": "グレート",
+    "eng": "The Great Avalanche"
+  },
+  {
+    "display_name": "プリザービングスティルネス",
+    "id": "Metadata/Items/Chayula/TulGraftGem4",
+    "color": "g",
+    "quest_reward": null,
+    "act": null,
+    "classes": null,
+    "quest": null,
+    "is_support": false,
+    "regex": "プリザー",
+    "eng": "Preserving Stillness"
   },
   {
     "display_name": "プレイテストアタック",
@@ -5405,7 +5700,7 @@
     "eng": "Added Fire Damage Support"
   },
   {
-    "display_name": "旧: アタックスピードサポート",
+    "display_name": "アタックスピード増加サポート",
     "id": "FasterAttack",
     "color": "g",
     "quest_reward": {
@@ -5423,11 +5718,11 @@
     "classes": null,
     "quest": null,
     "is_support": true,
-    "regex": "クスピードサ",
+    "regex": "クスピード増",
     "eng": "Faster Attacks Support"
   },
   {
-    "display_name": "旧: 投射物追加（大）",
+    "display_name": "グレーター投射物追加サポート",
     "id": "GreaterMultipleProjectiles",
     "color": "g",
     "quest_reward": {
@@ -5447,11 +5742,11 @@
     "classes": null,
     "quest": null,
     "is_support": true,
-    "regex": "追加（大",
+    "regex": "ーター投",
     "eng": "Greater Multiple Projectiles Support"
   },
   {
-    "display_name": "旧: 投射物追加（小）サポート",
+    "display_name": "レッサー投射物追加サポート",
     "id": "LesserMultipleProjectiles",
     "color": "g",
     "quest_reward": {
@@ -5468,7 +5763,7 @@
     "classes": null,
     "quest": null,
     "is_support": true,
-    "regex": "追加（小",
+    "regex": "レッサー",
     "eng": "Lesser Multiple Projectiles Support"
   },
   {
@@ -5702,7 +5997,7 @@
     "classes": null,
     "quest": null,
     "is_support": true,
-    "regex": "Pierce",
+    "regex": "貫通サポ",
     "eng": "Pierce Support"
   },
   {
@@ -5743,7 +6038,7 @@
     "eng": "Melee Physical Damage Support"
   },
   {
-    "display_name": "旧: アイテム数量上昇サポート",
+    "display_name": "アイテム数量増加サポート",
     "id": "ItemQuantity",
     "color": "r",
     "quest_reward": null,
@@ -5755,7 +6050,7 @@
     "eng": "Item Quantity Support"
   },
   {
-    "display_name": "旧: アイテムレアリティ上昇サポート",
+    "display_name": "アイテムレアリティ増加サポート",
     "id": "ItemRarity",
     "color": "b",
     "quest_reward": null,
@@ -5767,7 +6062,7 @@
     "eng": "Item Rarity Support"
   },
   {
-    "display_name": "旧: キャストスピードサポート",
+    "display_name": "キャストスピード増加サポート",
     "id": "FasterCast",
     "color": "b",
     "quest_reward": {
@@ -5784,11 +6079,11 @@
     "classes": null,
     "quest": null,
     "is_support": true,
-    "regex": "トスピードサ",
+    "regex": "トスピード増",
     "eng": "Faster Casting Support"
   },
   {
-    "display_name": "旧: 効果濃縮サポート",
+    "display_name": "範囲ダメージ集中サポート",
     "id": "ConcentratedEffect",
     "color": "b",
     "quest_reward": {
@@ -5804,7 +6099,7 @@
     "classes": null,
     "quest": null,
     "is_support": true,
-    "regex": "効果濃縮",
+    "regex": "囲ダメージ集",
     "eng": "Concentrated Effect Support"
   },
   {
@@ -5933,7 +6228,7 @@
     "eng": "Elemental Damage with Attacks Support"
   },
   {
-    "display_name": "旧: 渇血サポート",
+    "display_name": "ブラッドラストサポート",
     "id": "Bloodlust",
     "color": "r",
     "quest_reward": null,
@@ -5941,7 +6236,7 @@
     "classes": null,
     "quest": null,
     "is_support": true,
-    "regex": "渇血サポ",
+    "regex": "ラッドラ",
     "eng": "Bloodlust Support"
   },
   {
@@ -5957,7 +6252,7 @@
     "eng": "Life Gain on Hit Support"
   },
   {
-    "display_name": "旧: 元素拡散サポート",
+    "display_name": "元素伝染サポート",
     "id": "ElementalProliferation",
     "color": "b",
     "quest_reward": {
@@ -5973,7 +6268,7 @@
     "classes": null,
     "quest": null,
     "is_support": true,
-    "regex": "元素拡散",
+    "regex": "元素伝染",
     "eng": "Elemental Proliferation Support"
   },
   {
@@ -6118,7 +6413,7 @@
     "eng": "Ballista Totem Support"
   },
   {
-    "display_name": "旧: 火耐性突破サポート",
+    "display_name": "火耐性貫通サポート",
     "id": "FirePenetration",
     "color": "r",
     "quest_reward": {
@@ -6135,11 +6430,11 @@
     "classes": null,
     "quest": null,
     "is_support": true,
-    "regex": "火耐性突",
+    "regex": "火耐性貫",
     "eng": "Fire Penetration Support"
   },
   {
-    "display_name": "旧: 冷気耐性突破サポート",
+    "display_name": "冷気耐性貫通サポート",
     "id": "ColdPenetration",
     "color": "g",
     "quest_reward": {
@@ -6156,11 +6451,11 @@
     "classes": null,
     "quest": null,
     "is_support": true,
-    "regex": "気耐性突",
+    "regex": "気耐性貫",
     "eng": "Cold Penetration Support"
   },
   {
-    "display_name": "旧: 雷耐性突破サポート",
+    "display_name": "雷耐性貫通サポート",
     "id": "LightningPenetration",
     "color": "b",
     "quest_reward": {
@@ -6177,11 +6472,11 @@
     "classes": null,
     "quest": null,
     "is_support": true,
-    "regex": "雷耐性突",
+    "regex": "雷耐性貫",
     "eng": "Lightning Penetration Support"
   },
   {
-    "display_name": "元素耐性突破サポート",
+    "display_name": "元素耐性貫通サポート",
     "id": "ElementalPenetration",
     "color": "b",
     "quest_reward": null,
@@ -6189,7 +6484,7 @@
     "classes": null,
     "quest": null,
     "is_support": true,
-    "regex": "素耐性突",
+    "regex": "素耐性貫",
     "eng": "Elemental Penetration Support"
   },
   {
@@ -6520,7 +6815,7 @@
     "eng": "Cast when Stunned Support"
   },
   {
-    "display_name": "改質サポート",
+    "display_name": "エンハンスサポート",
     "id": "AdditionalQuality",
     "color": "g",
     "quest_reward": null,
@@ -6528,11 +6823,11 @@
     "classes": null,
     "quest": null,
     "is_support": true,
-    "regex": "改質サポ",
+    "regex": "エンハン",
     "eng": "Enhance Support"
   },
   {
-    "display_name": "旧: 投射物強化サポート",
+    "display_name": "凶悪な投射物サポート",
     "id": "PhysicalProjectileAttackDamage",
     "color": "g",
     "quest_reward": {
@@ -6550,7 +6845,7 @@
     "classes": null,
     "quest": null,
     "is_support": true,
-    "regex": "投射物強",
+    "regex": "凶悪な投",
     "eng": "Vicious Projectiles Support"
   },
   {
@@ -6644,7 +6939,7 @@
     "eng": "Fortify Support"
   },
   {
-    "display_name": "旧: 氷傷サポート",
+    "display_name": "アイスバイトサポート",
     "id": "FrenzyChargeOnSlayingFrozenEnemy",
     "color": "g",
     "quest_reward": {
@@ -6660,11 +6955,11 @@
     "classes": null,
     "quest": null,
     "is_support": true,
-    "regex": "氷傷サポ",
+    "regex": "アイスバ",
     "eng": "Ice Bite Support"
   },
   {
-    "display_name": "旧: 低体温化サポート",
+    "display_name": "ハイポサーミアサポート",
     "id": "DamageAgainstChilled",
     "color": "g",
     "quest_reward": {
@@ -6680,7 +6975,7 @@
     "classes": null,
     "quest": null,
     "is_support": true,
-    "regex": "低体温化",
+    "regex": "ハイポサ",
     "eng": "Hypothermia Support"
   },
   {
@@ -6740,7 +7035,7 @@
     "eng": "Critical Strike Affliction Support"
   },
   {
-    "display_name": "旧: 虚空制御サポート",
+    "display_name": "ボイド操作サポート",
     "id": "VoidManipulation",
     "color": "g",
     "quest_reward": {
@@ -6756,7 +7051,7 @@
     "classes": null,
     "quest": null,
     "is_support": true,
-    "regex": "虚空制御",
+    "regex": "ボイド操",
     "eng": "Void Manipulation Support"
   },
   {
@@ -6834,7 +7129,7 @@
     "classes": null,
     "quest": null,
     "is_support": true,
-    "regex": "メージ集",
+    "regex": "素ダメージ集",
     "eng": "Elemental Focus Support"
   },
   {
@@ -6892,7 +7187,7 @@
     "eng": "Vaal Soul Harvesting"
   },
   {
-    "display_name": "旧: 発火拡散サポート",
+    "display_name": "発火伝染サポート",
     "id": "IgniteProliferation",
     "color": "b",
     "quest_reward": {
@@ -6906,7 +7201,7 @@
     "classes": null,
     "quest": null,
     "is_support": true,
-    "regex": "発火拡散",
+    "regex": "発火伝染",
     "eng": "Ignite Proliferation Support"
   },
   {
@@ -7001,7 +7296,7 @@
     "eng": "Decay Support"
   },
   {
-    "display_name": "旧: 効果増大サポート",
+    "display_name": "エフィカシーサポート",
     "id": "Efficacy",
     "color": "b",
     "quest_reward": {
@@ -7017,11 +7312,11 @@
     "classes": null,
     "quest": null,
     "is_support": true,
-    "regex": "効果増大",
+    "regex": "エフィカ",
     "eng": "Efficacy Support"
   },
   {
-    "display_name": "旧: 猛毒サポート",
+    "display_name": "凶悪な毒サポート",
     "id": "VileToxins",
     "color": "g",
     "quest_reward": {
@@ -7035,7 +7330,7 @@
     "classes": null,
     "quest": null,
     "is_support": true,
-    "regex": "猛毒サポ",
+    "regex": "凶悪な毒",
     "eng": "Vile Toxins Support"
   },
   {
@@ -7057,7 +7352,7 @@
     "eng": "Maim Support"
   },
   {
-    "display_name": "旧: 火刑サポート",
+    "display_name": "火炙りサポート",
     "id": "Immolate",
     "color": "b",
     "quest_reward": {
@@ -7072,7 +7367,7 @@
     "classes": null,
     "quest": null,
     "is_support": true,
-    "regex": "火刑サポ",
+    "regex": "火炙りサ",
     "eng": "Immolate Support"
   },
   {
@@ -7195,7 +7490,7 @@
     "eng": "Infused Channelling Support"
   },
   {
-    "display_name": "旧: 斉射サポート",
+    "display_name": "ボレーサポート",
     "id": "ParallelProjectiles",
     "color": "g",
     "quest_reward": {
@@ -7212,7 +7507,7 @@
     "classes": null,
     "quest": null,
     "is_support": true,
-    "regex": "斉射サポ",
+    "regex": "ボレーサ",
     "eng": "Volley Support"
   },
   {
@@ -7351,7 +7646,7 @@
     "eng": "Withering Touch Support"
   },
   {
-    "display_name": "旧: 酷寒サポート",
+    "display_name": "ボーンチルサポート",
     "id": "Bonechill",
     "color": "b",
     "quest_reward": {
@@ -7367,7 +7662,7 @@
     "classes": null,
     "quest": null,
     "is_support": true,
-    "regex": "酷寒サポ",
+    "regex": "ボーンチ",
     "eng": "Bonechill Support"
   },
   {
@@ -7431,7 +7726,7 @@
     "eng": "Intensify Support"
   },
   {
-    "display_name": "旧: 解放サポート",
+    "display_name": "アンリーシュサポート",
     "id": "HandcastAnticipation",
     "color": "b",
     "quest_reward": {
@@ -7448,7 +7743,7 @@
     "classes": null,
     "quest": null,
     "is_support": true,
-    "regex": "解放サポ",
+    "regex": "アンリー",
     "eng": "Unleash Support"
   },
   {
@@ -7550,25 +7845,7 @@
     "eng": "Rage Support"
   },
   {
-    "display_name": "旧: 暴食サポート",
-    "id": "FeedingFrenzy",
-    "color": "b",
-    "quest_reward": {
-      "act": 3,
-      "classes": [
-        "ウィッチ"
-      ],
-      "quest": "運命の定め"
-    },
-    "act": null,
-    "classes": null,
-    "quest": null,
-    "is_support": true,
-    "regex": "暴食サポ",
-    "eng": "Feeding Frenzy Support"
-  },
-  {
-    "display_name": "旧: 捕食者サポート",
+    "display_name": "プレデターサポート",
     "id": "Deathmark",
     "color": "b",
     "quest_reward": {
@@ -7582,11 +7859,11 @@
     "classes": null,
     "quest": null,
     "is_support": true,
-    "regex": "捕食者サ",
+    "regex": "プレデタ",
     "eng": "Predator Support"
   },
   {
-    "display_name": "旧: 夜刃サポート",
+    "display_name": "ナイトブレードサポート",
     "id": "Nightblade",
     "color": "g",
     "quest_reward": {
@@ -7600,7 +7877,7 @@
     "classes": null,
     "quest": null,
     "is_support": true,
-    "regex": "夜刃サポ",
+    "regex": "ナイトブ",
     "eng": "Nightblade Support"
   },
   {
@@ -7715,7 +7992,7 @@
     "eng": "Barrage Support"
   },
   {
-    "display_name": "旧: 斉射（大）サポート",
+    "display_name": "グレーターボレーサポート",
     "id": "GreaterVolley",
     "color": "g",
     "quest_reward": {
@@ -7732,11 +8009,11 @@
     "classes": null,
     "quest": null,
     "is_support": true,
-    "regex": "斉射（大",
+    "regex": "ーターボ",
     "eng": "Greater Volley Support"
   },
   {
-    "display_name": "アーチメイジサポート",
+    "display_name": "アークメイジサポート",
     "id": "Archmage",
     "color": "b",
     "quest_reward": {
@@ -7752,7 +8029,7 @@
     "classes": null,
     "quest": null,
     "is_support": true,
-    "regex": "アーチメ",
+    "regex": "アークメ",
     "eng": "Archmage Support"
   },
   {
@@ -7891,7 +8168,7 @@
     "eng": "Trinity Support"
   },
   {
-    "display_name": "旧: 飢血サポート",
+    "display_name": "ブラッドサーストサポート",
     "id": "Bloodthirst",
     "color": "r",
     "quest_reward": {
@@ -7907,7 +8184,7 @@
     "classes": null,
     "quest": null,
     "is_support": true,
-    "regex": "飢血サポ",
+    "regex": "ラッドサ",
     "eng": "Bloodthirst Support"
   },
   {
@@ -8000,7 +8277,7 @@
     "eng": "Focused Ballista Support"
   },
   {
-    "display_name": "旧: 斬首サポート",
+    "display_name": "首狩りサポート",
     "id": "Behead",
     "color": "r",
     "quest_reward": {
@@ -8015,7 +8292,7 @@
     "classes": null,
     "quest": null,
     "is_support": true,
-    "regex": "斬首サポ",
+    "regex": "首狩りサ",
     "eng": "Behead Support"
   },
   {
@@ -8061,7 +8338,7 @@
     "eng": "Eternal Blessing Support"
   },
   {
-    "display_name": "旧: 過充電サポート",
+    "display_name": "過剰感電サポート",
     "id": "Overcharge",
     "color": "b",
     "quest_reward": {
@@ -8075,7 +8352,7 @@
     "classes": null,
     "quest": null,
     "is_support": true,
-    "regex": "過充電サ",
+    "regex": "過剰感電",
     "eng": "Overcharge Support"
   },
   {
@@ -8091,7 +8368,7 @@
     "eng": "Cursed Ground Support"
   },
   {
-    "display_name": "旧: 呪術開花サポート",
+    "display_name": "呪術伝染サポート",
     "id": "HexBloom",
     "color": "b",
     "quest_reward": {
@@ -8105,7 +8382,7 @@
     "classes": null,
     "quest": null,
     "is_support": true,
-    "regex": "呪術開花",
+    "regex": "呪術伝染",
     "eng": "Hex Bloom Support"
   },
   {
@@ -8139,7 +8416,7 @@
     "eng": "Prismatic Burst Support"
   },
   {
-    "display_name": "旧: 外傷サポート",
+    "display_name": "トラウマサポート",
     "id": "Trauma",
     "color": "r",
     "quest_reward": {
@@ -8154,7 +8431,7 @@
     "classes": null,
     "quest": null,
     "is_support": true,
-    "regex": "外傷サポ",
+    "regex": "ラウマサ",
     "eng": "Trauma Support"
   },
   {
@@ -8176,7 +8453,7 @@
     "eng": "Spellblade Support"
   },
   {
-    "display_name": "貪りサポート",
+    "display_name": "捕食サポート",
     "id": "Devour",
     "color": "b",
     "quest_reward": {
@@ -8190,7 +8467,7 @@
     "classes": null,
     "quest": null,
     "is_support": true,
-    "regex": "貪りサポ",
+    "regex": "捕食サポ",
     "eng": "Devour Support"
   },
   {
@@ -8335,7 +8612,7 @@
     "eng": "Sadism Support"
   },
   {
-    "display_name": "制御火炎サポート",
+    "display_name": "発火制御サポート",
     "id": "ControlledBlaze",
     "color": "r",
     "quest_reward": {
@@ -8349,7 +8626,7 @@
     "classes": null,
     "quest": null,
     "is_support": true,
-    "regex": "制御火炎",
+    "regex": "発火制御",
     "eng": "Controlled Blaze Support"
   },
   {
@@ -8443,7 +8720,7 @@
     "eng": "Rupture Support"
   },
   {
-    "display_name": "旧: チャネリング集束サポート",
+    "display_name": "チャネリング集中サポート",
     "id": "FocusedChannelling",
     "color": "b",
     "quest_reward": {
@@ -8462,160 +8739,14 @@
     "eng": "Focused Channelling Support"
   },
   {
-    "display_name": "新: グレーター投射物追加",
-    "id": "GreaterMultipleProjectilesNew",
+    "display_name": "ウィンドバーストサポート",
+    "id": "Windburst",
     "color": "g",
-    "quest_reward": {
-      "act": 4,
-      "classes": [
-        "ウィッチ",
-        "テンプラー",
-        "マローダー",
-        "デュエリスト",
-        "レンジャー",
-        "シャドウ",
-        "サイオン"
-      ],
-      "quest": "永遠の悪夢"
-    },
-    "act": null,
-    "classes": null,
-    "quest": null,
-    "is_support": true,
-    "regex": "ーター投",
-    "eng": "Greater Multiple Projectiles Support"
-  },
-  {
-    "display_name": "新: ボイド操作",
-    "id": "VoidManipulation",
-    "color": "g",
-    "quest_reward": {
-      "act": 1,
-      "classes": [
-        "ウィッチ",
-        "レンジャー",
-        "シャドウ"
-      ],
-      "quest": "檻の中のけだもの"
-    },
-    "act": null,
-    "classes": null,
-    "quest": null,
-    "is_support": true,
-    "regex": "ボイド操",
-    "eng": "Void Manipulation Support"
-  },
-  {
-    "display_name": "新: 凶悪な毒サポート",
-    "id": "VileToxins",
-    "color": "g",
-    "quest_reward": {
-      "act": 4,
-      "classes": [
-        "シャドウ"
-      ],
-      "quest": "永遠の悪夢"
-    },
-    "act": null,
-    "classes": null,
-    "quest": null,
-    "is_support": true,
-    "regex": "悪な毒サ",
-    "eng": "Vile Toxins Support"
-  },
-  {
-    "display_name": "新: アンリーシュサポート",
-    "id": "HandcastAnticipation",
-    "color": "b",
-    "quest_reward": {
-      "act": 4,
-      "classes": [
-        "ウィッチ",
-        "テンプラー",
-        "シャドウ",
-        "サイオン"
-      ],
-      "quest": "永遠の悪夢"
-    },
-    "act": null,
-    "classes": null,
-    "quest": null,
-    "is_support": true,
-    "regex": "ーシュサ",
-    "eng": "Unleash Support"
-  },
-  {
-    "display_name": "新: 凶悪な投射物サポート",
-    "id": "PhysicalProjectileAttackDamage",
-    "color": "g",
-    "quest_reward": {
-      "act": 2,
-      "classes": [
-        "デュエリスト",
-        "レンジャー",
-        "サイオン",
-        "マローダー",
-        "マローダー"
-      ],
-      "quest": "鋭利なものと残酷なもの"
-    },
-    "act": null,
-    "classes": null,
-    "quest": null,
-    "is_support": true,
-    "regex": "悪な投射",
-    "eng": "Vicious Projectiles Support"
-  },
-  {
-    "display_name": "新: ボレーサポート",
-    "id": "ParallelProjectiles",
-    "color": "g",
-    "quest_reward": {
-      "act": 1,
-      "classes": [
-        "デュエリスト",
-        "レンジャー",
-        "シャドウ",
-        "サイオン"
-      ],
-      "quest": "慈善活動"
-    },
-    "act": null,
-    "classes": null,
-    "quest": null,
-    "is_support": true,
-    "regex": "レーサポ",
-    "eng": "Volley Support"
-  },
-  {
-    "display_name": "ナイトブレードサポート",
-    "id": "Nightblade",
-    "color": "g",
-    "quest_reward": {
-      "act": 2,
-      "classes": [
-        "シャドウ"
-      ],
-      "quest": "鋭利なものと残酷なもの"
-    },
-    "act": null,
-    "classes": null,
-    "quest": null,
-    "is_support": true,
-    "regex": "イトブレー",
-    "eng": "Nightblade Support"
-  },
-  {
-    "display_name": "新: 雷耐性貫通サポート",
-    "id": "LightningPenetration",
-    "color": "b",
     "quest_reward": {
       "act": 3,
       "classes": [
-        "ウィッチ",
-        "テンプラー",
-        "シャドウ",
-        "サイオン"
+        "デュエリスト",
+        "レンジャー"
       ],
       "quest": "運命の定め"
     },
@@ -8623,253 +8754,12 @@
     "classes": null,
     "quest": null,
     "is_support": true,
-    "regex": "雷耐性貫",
-    "eng": "Lightning Penetration Support"
+    "regex": "ィンドバ",
+    "eng": "Windburst Support"
   },
   {
-    "display_name": "新: レッサー投射物追加（小）サポート",
-    "id": "LesserMultipleProjectiles",
-    "color": "g",
-    "quest_reward": {
-      "act": 1,
-      "classes": [
-        "デュエリスト",
-        "レンジャー",
-        "シャドウ",
-        "サイオン"
-      ],
-      "quest": "檻の中のけだもの"
-    },
-    "act": null,
-    "classes": null,
-    "quest": null,
-    "is_support": true,
-    "regex": "追加（小",
-    "eng": "Lesser Multiple Projectiles Support"
-  },
-  {
-    "display_name": "新: 火炙りサポート",
-    "id": "Immolate",
-    "color": "b",
-    "quest_reward": {
-      "act": 4,
-      "classes": [
-        "ウィッチ",
-        "サイオン"
-      ],
-      "quest": "永遠の悪夢"
-    },
-    "act": null,
-    "classes": null,
-    "quest": null,
-    "is_support": true,
-    "regex": "火炙りサ",
-    "eng": "Immolate Support"
-  },
-  {
-    "display_name": "新: 元素伝染サポート",
-    "id": "ElementalProliferation",
-    "color": "b",
-    "quest_reward": {
-      "act": 1,
-      "classes": [
-        "ウィッチ",
-        "シャドウ",
-        "サイオン"
-      ],
-      "quest": "慈善活動"
-    },
-    "act": null,
-    "classes": null,
-    "quest": null,
-    "is_support": true,
-    "regex": "素伝染サ",
-    "eng": "Elemental Proliferation Support"
-  },
-  {
-    "display_name": "新: 発火伝染サポート",
-    "id": "IgniteProliferation",
-    "color": "b",
-    "quest_reward": {
-      "act": 4,
-      "classes": [
-        "テンプラー"
-      ],
-      "quest": "永遠の悪夢"
-    },
-    "act": null,
-    "classes": null,
-    "quest": null,
-    "is_support": true,
-    "regex": "火伝染サ",
-    "eng": "Ignite Proliferation Support"
-  },
-  {
-    "display_name": "新: アイスバイトサポート",
-    "id": "FrenzyChargeOnSlayingFrozenEnemy",
-    "color": "g",
-    "quest_reward": {
-      "act": 3,
-      "classes": [
-        "レンジャー",
-        "シャドウ",
-        "サイオン"
-      ],
-      "quest": "運命の定め"
-    },
-    "act": null,
-    "classes": null,
-    "quest": null,
-    "is_support": true,
-    "regex": "バイトサ",
-    "eng": "Ice Bite Support"
-  },
-  {
-    "display_name": "新: ハイポサーミアサポート",
-    "id": "DamageAgainstChilled",
-    "color": "g",
-    "quest_reward": {
-      "act": 3,
-      "classes": [
-        "デュエリスト",
-        "レンジャー",
-        "ウィッチ"
-      ],
-      "quest": "運命の定め"
-    },
-    "act": null,
-    "classes": null,
-    "quest": null,
-    "is_support": true,
-    "regex": "ーミアサ",
-    "eng": "Hypothermia Support"
-  },
-  {
-    "display_name": "新: グレーターボレーサポート",
-    "id": "GreaterVolley",
-    "color": "g",
-    "quest_reward": {
-      "act": 4,
-      "classes": [
-        "デュエリスト",
-        "レンジャー",
-        "シャドウ",
-        "サイオン"
-      ],
-      "quest": "永遠の悪夢"
-    },
-    "act": null,
-    "classes": null,
-    "quest": null,
-    "is_support": true,
-    "regex": "ーターボ",
-    "eng": "Greater Volley Support"
-  },
-  {
-    "display_name": "新: 火耐性貫通サポート",
-    "id": "FirePenetration",
-    "color": "r",
-    "quest_reward": {
-      "act": 3,
-      "classes": [
-        "ウィッチ",
-        "テンプラー",
-        "サイオン",
-        "マローダー"
-      ],
-      "quest": "運命の定め"
-    },
-    "act": null,
-    "classes": null,
-    "quest": null,
-    "is_support": true,
-    "regex": "火耐性貫",
-    "eng": "Fire Penetration Support"
-  },
-  {
-    "display_name": "新: 狂乱の餌付けサポート",
-    "id": "FeedingFrenzy",
-    "color": "b",
-    "quest_reward": {
-      "act": 3,
-      "classes": [
-        "ウィッチ"
-      ],
-      "quest": "運命の定め"
-    },
-    "act": null,
-    "classes": null,
-    "quest": null,
-    "is_support": true,
-    "regex": "餌付けサ",
-    "eng": "Feeding Frenzy Support"
-  },
-  {
-    "display_name": "新: キャストスピード増加サポート",
-    "id": "FasterCast",
-    "color": "b",
-    "quest_reward": {
-      "act": 2,
-      "classes": [
-        "ウィッチ",
-        "テンプラー",
-        "シャドウ",
-        "サイオン"
-      ],
-      "quest": "鋭利なものと残酷なもの"
-    },
-    "act": null,
-    "classes": null,
-    "quest": null,
-    "is_support": true,
-    "regex": "トスピード増加サ",
-    "eng": "Faster Casting Support"
-  },
-  {
-    "display_name": "新: アタックスピード増加サポート",
-    "id": "FasterAttack",
-    "color": "g",
-    "quest_reward": {
-      "act": 1,
-      "classes": [
-        "マローダー",
-        "デュエリスト",
-        "レンジャー",
-        "シャドウ",
-        "サイオン"
-      ],
-      "quest": "檻の中のけだもの"
-    },
-    "act": null,
-    "classes": null,
-    "quest": null,
-    "is_support": true,
-    "regex": "クスピード増加サ",
-    "eng": "Faster Attacks Support"
-  },
-  {
-    "display_name": "新: エフィカシーサポート",
-    "id": "Efficacy",
-    "color": "b",
-    "quest_reward": {
-      "act": 1,
-      "classes": [
-        "ウィッチ",
-        "ウィッチ",
-        "ウィッチ"
-      ],
-      "quest": "檻の中のけだもの"
-    },
-    "act": null,
-    "classes": null,
-    "quest": null,
-    "is_support": true,
-    "regex": "カシーサ",
-    "eng": "Efficacy Support"
-  },
-  {
-    "display_name": "新: プレデターサポート",
-    "id": "Deathmark",
+    "display_name": "キネティックインスタビリティサポート",
+    "id": "KineticInstability",
     "color": "b",
     "quest_reward": {
       "act": 2,
@@ -8882,124 +8772,12 @@
     "classes": null,
     "quest": null,
     "is_support": true,
-    "regex": "レデターサ",
-    "eng": "Predator Support"
+    "regex": "ィックイ",
+    "eng": "Kinetic Instability Support"
   },
   {
-    "display_name": "新: 範囲ダメージ集中サポート",
-    "id": "ConcentratedEffect",
-    "color": "b",
-    "quest_reward": {
-      "act": 2,
-      "classes": [
-        "ウィッチ",
-        "テンプラー",
-        "サイオン"
-      ],
-      "quest": "鋭利なものと残酷なもの"
-    },
-    "act": null,
-    "classes": null,
-    "quest": null,
-    "is_support": true,
-    "regex": "ジ集中サ",
-    "eng": "Concentrated Effect Support"
-  },
-  {
-    "display_name": "新: 冷気耐性貫通サポート",
-    "id": "ColdPenetration",
-    "color": "g",
-    "quest_reward": {
-      "act": 3,
-      "classes": [
-        "ウィッチ",
-        "テンプラー",
-        "シャドウ",
-        "サイオン"
-      ],
-      "quest": "運命の定め"
-    },
-    "act": null,
-    "classes": null,
-    "quest": null,
-    "is_support": true,
-    "regex": "気耐性貫",
-    "eng": "Cold Penetration Support"
-  },
-  {
-    "display_name": "新: ボーンチルサポート",
-    "id": "Bonechill",
-    "color": "b",
-    "quest_reward": {
-      "act": 4,
-      "classes": [
-        "ウィッチ",
-        "シャドウ",
-        "ウィッチ"
-      ],
-      "quest": "永遠の悪夢"
-    },
-    "act": null,
-    "classes": null,
-    "quest": null,
-    "is_support": true,
-    "regex": "ンチルサ",
-    "eng": "Bonechill Support"
-  },
-  {
-    "display_name": "新: ブラッドラストサポート",
-    "id": "Bloodlust",
-    "color": "r",
-    "quest_reward": null,
-    "act": null,
-    "classes": null,
-    "quest": null,
-    "is_support": true,
-    "regex": "ラストサ",
-    "eng": "Bloodlust Support"
-  },
-  {
-    "display_name": "新: ブラッドサポート",
-    "id": "Bloodthirst",
-    "color": "r",
-    "quest_reward": {
-      "act": 3,
-      "classes": [
-        "マローダー",
-        "デュエリスト",
-        "サイオン"
-      ],
-      "quest": "運命の定め"
-    },
-    "act": null,
-    "classes": null,
-    "quest": null,
-    "is_support": true,
-    "regex": "ラッドサ",
-    "eng": "Bloodthirst Support"
-  },
-  {
-    "display_name": "新: 首狩りサポート",
-    "id": "Behead",
-    "color": "r",
-    "quest_reward": {
-      "act": 4,
-      "classes": [
-        "マローダー",
-        "デュエリスト"
-      ],
-      "quest": "永遠の悪夢"
-    },
-    "act": null,
-    "classes": null,
-    "quest": null,
-    "is_support": true,
-    "regex": "首狩りサ",
-    "eng": "Behead Support"
-  },
-  {
-    "display_name": "新: 過剰感電サポート",
-    "id": "Overcharge",
+    "display_name": "リビングライトニングサポート",
+    "id": "LivingLightning",
     "color": "b",
     "quest_reward": {
       "act": 2,
@@ -9012,124 +8790,7 @@
     "classes": null,
     "quest": null,
     "is_support": true,
-    "regex": "剰感電サ",
-    "eng": "Overcharge Support"
-  },
-  {
-    "display_name": "新: 呪術伝染サポート",
-    "id": "HexBloom",
-    "color": "b",
-    "quest_reward": {
-      "act": 4,
-      "classes": [
-        "ウィッチ"
-      ],
-      "quest": "永遠の悪夢"
-    },
-    "act": null,
-    "classes": null,
-    "quest": null,
-    "is_support": true,
-    "regex": "術伝染サ",
-    "eng": "Hex Bloom Support"
-  },
-  {
-    "display_name": "新: 捕食サポート",
-    "id": "Devour",
-    "color": "b",
-    "quest_reward": {
-      "act": 1,
-      "classes": [
-        "ウィッチ"
-      ],
-      "quest": "檻の中のけだもの"
-    },
-    "act": null,
-    "classes": null,
-    "quest": null,
-    "is_support": true,
-    "regex": "捕食サポ",
-    "eng": "Devour Support"
-  },
-  {
-    "display_name": "新: 発火制御サポート",
-    "id": "ControlledBlaze",
-    "color": "r",
-    "quest_reward": {
-      "act": 3,
-      "classes": [
-        "マローダー"
-      ],
-      "quest": "運命の定め"
-    },
-    "act": null,
-    "classes": null,
-    "quest": null,
-    "is_support": true,
-    "regex": "火制御サ",
-    "eng": "Controlled Blaze Support"
-  },
-  {
-    "display_name": "新: チャネリング集中サポート",
-    "id": "FocusedChannelling",
-    "color": "b",
-    "quest_reward": {
-      "act": 3,
-      "classes": [
-        "ウィッチ",
-        "シャドウ"
-      ],
-      "quest": "運命の定め"
-    },
-    "act": null,
-    "classes": null,
-    "quest": null,
-    "is_support": true,
-    "regex": "リング集",
-    "eng": "Focused Channelling Support"
-  },
-  {
-    "display_name": "新: トラウマサポート",
-    "id": "Trauma",
-    "color": "r",
-    "quest_reward": {
-      "act": 4,
-      "classes": [
-        "マローダー",
-        "デュエリスト"
-      ],
-      "quest": "永遠の悪夢"
-    },
-    "act": null,
-    "classes": null,
-    "quest": null,
-    "is_support": true,
-    "regex": "ラウマサ",
-    "eng": "Trauma Support"
-  },
-  {
-    "display_name": "新: アイテム数量増加サポート",
-    "id": "ItemQuantity",
-    "color": "r",
-    "quest_reward": null,
-    "act": null,
-    "classes": null,
-    "quest": null,
-    "is_support": true,
-    "regex": "量増加サ",
-    "eng": "Item Quantity Support"
-  },
-  {
-    "display_name": "新: アイテムレアリティ増加サポート",
-    "id": "ItemRarity",
-    "color": "b",
-    "quest_reward": null,
-    "act": null,
-    "classes": null,
-    "quest": null,
-    "is_support": true,
-    "regex": "ィ増加サ",
-    "eng": "Item Rarity Support"
+    "regex": "リビング",
+    "eng": "Living Lightning Support"
   }
-
 ]
