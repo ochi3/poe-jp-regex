@@ -29,7 +29,7 @@
     "quest": null,
     "is_support": false,
     "regex": "アイスノ",
-    "eng": "Ice Nova of Deep Freeze"
+    "eng": "Ice Nova"
   },
   {
     "display_name": "アイスファイヤー",
@@ -62,7 +62,7 @@
     "quest": null,
     "is_support": false,
     "regex": "リープス",
-    "eng": "Leap Slam of Groundbreaking"
+    "eng": "Leap Slam"
   },
   {
     "display_name": "リップタイド",
@@ -115,7 +115,7 @@
     "quest": null,
     "is_support": false,
     "regex": "フラリィ",
-    "eng": "Blade Flurry of Incision"
+    "eng": "Blade Flurry"
   },
   {
     "display_name": "スウィープ",
@@ -176,7 +176,7 @@
     "quest": null,
     "is_support": false,
     "regex": "グラウン",
-    "eng": "Ground Slam of Earthshaking"
+    "eng": "Ground Slam"
   },
   {
     "display_name": "クリーヴ",
@@ -194,7 +194,7 @@
     "quest": null,
     "is_support": false,
     "regex": "クリーヴ",
-    "eng": "Cleave of Rage"
+    "eng": "Cleave"
   },
   {
     "display_name": "シールドチャージ",
@@ -246,7 +246,7 @@
     "quest": null,
     "is_support": false,
     "regex": "ダブルス",
-    "eng": "Double Strike of Momentum"
+    "eng": "Double Strike"
   },
   {
     "display_name": "ラセレイト",
@@ -264,7 +264,7 @@
     "quest": null,
     "is_support": false,
     "regex": "ラセレイ",
-    "eng": "Lacerate of Haemorrhage"
+    "eng": "Lacerate"
   },
   {
     "display_name": "エレメンタルヒット",
@@ -282,7 +282,7 @@
     "quest": null,
     "is_support": false,
     "regex": "ンタルヒ",
-    "eng": "Elemental Hit of the Spectrum"
+    "eng": "Elemental Hit"
   },
   {
     "display_name": "イモータルコール",
@@ -306,7 +306,7 @@
     "quest": null,
     "is_support": false,
     "regex": "デュアル",
-    "eng": "Dual Strike of Ambidexterity"
+    "eng": "Dual Strike"
   },
   {
     "display_name": "ワーリングブレード",
@@ -346,7 +346,7 @@
     "quest": null,
     "is_support": false,
     "regex": "フレンジ",
-    "eng": "Frenzy of Onslaught"
+    "eng": "Frenzy"
   },
   {
     "display_name": "デトネートデッド",
@@ -365,7 +365,7 @@
     "quest": null,
     "is_support": false,
     "regex": "デトネー",
-    "eng": "Detonate Dead of Chain Reaction"
+    "eng": "Detonate Dead"
   },
   {
     "display_name": "ヴォラタイルデッド",
@@ -384,7 +384,7 @@
     "quest": null,
     "is_support": false,
     "regex": "ヴォラタ",
-    "eng": "Volatile Dead of Seething"
+    "eng": "Volatile Dead"
   },
   {
     "display_name": "アンアース",
@@ -421,7 +421,7 @@
     "quest": null,
     "is_support": false,
     "regex": "プリット",
-    "eng": "Split Arrow of Splitting"
+    "eng": "Split Arrow"
   },
   {
     "display_name": "コールドスナップ",
@@ -440,7 +440,7 @@
     "quest": null,
     "is_support": false,
     "regex": "コールド",
-    "eng": "Cold Snap of Power"
+    "eng": "Cold Snap"
   },
   {
     "display_name": "ゾンビ蘇生",
@@ -458,7 +458,7 @@
     "quest": null,
     "is_support": false,
     "regex": "ゾンビ蘇",
-    "eng": "Raise Zombie of Falling"
+    "eng": "Raise Zombie"
   },
   {
     "display_name": "コースティックアロー",
@@ -476,7 +476,7 @@
     "quest": null,
     "is_support": false,
     "regex": "コーステ",
-    "eng": "Caustic Arrow of Poison"
+    "eng": "Caustic Arrow"
   },
   {
     "display_name": "ダメージインフュージョン",
@@ -532,7 +532,7 @@
     "quest": null,
     "is_support": false,
     "regex": "チャスフ",
-    "eng": "Righteous Fire of Arcane Devotion"
+    "eng": "Righteous Fire"
   },
   {
     "display_name": "ファイヤーウェポン",
@@ -556,7 +556,7 @@
     "quest": null,
     "is_support": false,
     "regex": "ディスチ",
-    "eng": "Discharge of Misery"
+    "eng": "Discharge"
   },
   {
     "display_name": "ポータル",
@@ -592,7 +592,7 @@
     "quest": null,
     "is_support": false,
     "regex": "フリッカ",
-    "eng": "Flicker Strike of Power"
+    "eng": "Flicker Strike"
   },
   {
     "display_name": "スパーク",
@@ -604,7 +604,7 @@
     "quest": null,
     "is_support": false,
     "regex": "スパーク",
-    "eng": "Spark of Unpredictability"
+    "eng": "Spark"
   },
   {
     "display_name": "アイススピアー",
@@ -616,7 +616,7 @@
     "quest": null,
     "is_support": false,
     "regex": "アイスス",
-    "eng": "Ice Spear of Splitting"
+    "eng": "Ice Spear"
   },
   {
     "display_name": "スペクター蘇生",
@@ -634,7 +634,7 @@
     "quest": null,
     "is_support": false,
     "regex": "スペクタ",
-    "eng": "Raise Spectre of Transience"
+    "eng": "Raise Spectre"
   },
   {
     "display_name": "インファーナルブロウ",
@@ -652,7 +652,7 @@
     "quest": null,
     "is_support": false,
     "regex": "ナルブロ",
-    "eng": "Infernal Blow of Immolation"
+    "eng": "Infernal Blow"
   },
   {
     "display_name": "グレイシャルハンマー",
@@ -664,7 +664,7 @@
     "quest": null,
     "is_support": false,
     "regex": "シャルハ",
-    "eng": "Glacial Hammer of Shattering"
+    "eng": "Glacial Hammer"
   },
   {
     "display_name": "フロストウォール",
@@ -755,7 +755,7 @@
     "quest": null,
     "is_support": false,
     "regex": "ヴァイパ",
-    "eng": "Viper Strike of the Mamba"
+    "eng": "Viper Strike"
   },
   {
     "display_name": "フェーズラン",
@@ -984,7 +984,7 @@
     "quest": null,
     "is_support": false,
     "regex": "スケルト",
-    "eng": "Summon Skeletons of Mages"
+    "eng": "Summon Skeletons"
   },
   {
     "display_name": "ヘビーストライク",
@@ -996,7 +996,7 @@
     "quest": null,
     "is_support": false,
     "regex": "ヘビース",
-    "eng": "Heavy Strike of Trarthus"
+    "eng": "Heavy Strike"
   },
   {
     "display_name": "ドミネイティングブロウ",
@@ -1015,7 +1015,7 @@
     "quest": null,
     "is_support": false,
     "regex": "ドミネイ",
-    "eng": "Dominating Blow of Inspiring"
+    "eng": "Dominating Blow"
   },
   {
     "display_name": "レインオブアロー",
@@ -1035,7 +1035,7 @@
     "quest": null,
     "is_support": false,
     "regex": "レインオ",
-    "eng": "Rain of Arrows of Saturation"
+    "eng": "Rain of Arrows"
   },
   {
     "display_name": "ファイヤーストーム",
@@ -1054,7 +1054,7 @@
     "quest": null,
     "is_support": false,
     "regex": "イヤース",
-    "eng": "Firestorm of Pelting"
+    "eng": "Firestorm"
   },
   {
     "display_name": "ライトニングストライク",
@@ -1072,7 +1072,7 @@
     "quest": null,
     "is_support": false,
     "regex": "ニングスト",
-    "eng": "Lightning Strike of Arcing"
+    "eng": "Lightning Strike"
   },
   {
     "display_name": "テンペストシールド",
@@ -1114,7 +1114,7 @@
     "quest": null,
     "is_support": false,
     "regex": "パワーサ",
-    "eng": "Power Siphon of the Archmage"
+    "eng": "Power Siphon"
   },
   {
     "display_name": "パンクチャー",
@@ -1133,7 +1133,7 @@
     "quest": null,
     "is_support": false,
     "regex": "パンクチ",
-    "eng": "Puncture of Shanking"
+    "eng": "Puncture"
   },
   {
     "display_name": "ライトニングアロー",
@@ -1151,7 +1151,7 @@
     "quest": null,
     "is_support": false,
     "regex": "トニングア",
-    "eng": "Lightning Arrow of Electrocution"
+    "eng": "Lightning Arrow"
   },
   {
     "display_name": "ヘイスト",
@@ -1328,7 +1328,7 @@
     "quest": null,
     "is_support": false,
     "regex": "ーニングア",
-    "eng": "Burning Arrow of Vigour"
+    "eng": "Burning Arrow"
   },
   {
     "display_name": "クラリティ",
@@ -1409,7 +1409,7 @@
     "quest": null,
     "is_support": false,
     "regex": "アイシク",
-    "eng": "Icicle Mine of Sabotage"
+    "eng": "Icicle Mine"
   },
   {
     "display_name": "コンヴァージョントラップ",
@@ -1441,7 +1441,7 @@
     "quest": null,
     "is_support": false,
     "regex": "ベアトラ",
-    "eng": "Bear Trap of Skewers"
+    "eng": "Bear Trap"
   },
   {
     "display_name": "ファイヤートラップ",
@@ -1459,7 +1459,7 @@
     "quest": null,
     "is_support": false,
     "regex": "イヤート",
-    "eng": "Fire Trap of Blasting"
+    "eng": "Fire Trap"
   },
   {
     "display_name": "デコイトーテム",
@@ -1509,7 +1509,7 @@
     "quest": null,
     "is_support": false,
     "regex": "イシリア",
-    "eng": "Ethereal Knives of the Massacre"
+    "eng": "Ethereal Knives"
   },
   {
     "display_name": "アイスショット",
@@ -1527,7 +1527,7 @@
     "quest": null,
     "is_support": false,
     "regex": "アイスシ",
-    "eng": "Ice Shot of Penetration"
+    "eng": "Ice Shot"
   },
   {
     "display_name": "クリーピングフロスト",
@@ -1563,7 +1563,7 @@
     "quest": null,
     "is_support": false,
     "regex": "アーク",
-    "eng": "Arc of Oscillating"
+    "eng": "Arc"
   },
   {
     "display_name": "アークティックアーマー",
@@ -1593,7 +1593,7 @@
     "quest": null,
     "is_support": false,
     "regex": "ーリーフ",
-    "eng": "Holy Flame Totem of Ire"
+    "eng": "Holy Flame Totem"
   },
   {
     "display_name": "フラマビリティ",
@@ -1687,7 +1687,7 @@
     "quest": null,
     "is_support": false,
     "regex": "インシネ",
-    "eng": "Incinerate of Venting"
+    "eng": "Incinerate"
   },
   {
     "display_name": "サイクロン",
@@ -1707,7 +1707,7 @@
     "quest": null,
     "is_support": false,
     "regex": "サイクロ",
-    "eng": "Cyclone of Tumult"
+    "eng": "Cyclone"
   },
   {
     "display_name": "シーリングボンド",
@@ -1744,7 +1744,7 @@
     "quest": null,
     "is_support": false,
     "regex": "リーヴ",
-    "eng": "Reave of Refraction"
+    "eng": "Reave"
   },
   {
     "display_name": "ライトニングトラップ",
@@ -1762,7 +1762,7 @@
     "quest": null,
     "is_support": false,
     "regex": "トニングト",
-    "eng": "Lightning Trap of Sparking"
+    "eng": "Lightning Trap"
   },
   {
     "display_name": "スモークマイン",
@@ -1793,7 +1793,7 @@
     "quest": null,
     "is_support": false,
     "regex": "メイトガ",
-    "eng": "Animate Guardian of Smiting"
+    "eng": "Animate Guardian"
   },
   {
     "display_name": "スペクトラルシールドスロー",
@@ -1811,7 +1811,7 @@
     "quest": null,
     "is_support": false,
     "regex": "トラルシ",
-    "eng": "Spectral Shield Throw of Trarthus"
+    "eng": "Spectral Shield Throw"
   },
   {
     "display_name": "スペクトラルスロー",
@@ -1823,7 +1823,7 @@
     "quest": null,
     "is_support": false,
     "regex": "ラルスロ",
-    "eng": "Spectral Throw of Trarthus"
+    "eng": "Spectral Throw"
   },
   {
     "display_name": "アニメイトウェポン",
@@ -1835,7 +1835,7 @@
     "quest": null,
     "is_support": false,
     "regex": "メイトウ",
-    "eng": "Animate Weapon of Ranged Arms"
+    "eng": "Animate Weapon"
   },
   {
     "display_name": "ピュリティオブファイヤー",
@@ -1889,7 +1889,7 @@
     "quest": null,
     "is_support": false,
     "regex": "トームコ",
-    "eng": "Storm Call of Trarthus"
+    "eng": "Storm Call"
   },
   {
     "display_name": "フレイムブラスト",
@@ -1909,7 +1909,7 @@
     "quest": null,
     "is_support": false,
     "regex": "レイムブ",
-    "eng": "Flameblast of Contraction"
+    "eng": "Flameblast"
   },
   {
     "display_name": "バラージ",
@@ -1940,7 +1940,7 @@
     "quest": null,
     "is_support": false,
     "regex": "ボールラ",
-    "eng": "Ball Lightning of Static"
+    "eng": "Ball Lightning"
   },
   {
     "display_name": "ヴォーテックスマイン",
@@ -1982,7 +1982,7 @@
     "quest": null,
     "is_support": false,
     "regex": "ジングス",
-    "eng": "Summon Raging Spirit of Enormity"
+    "eng": "Summon Raging Spirit"
   },
   {
     "display_name": "フレイムサージ",
@@ -1994,7 +1994,7 @@
     "quest": null,
     "is_support": false,
     "regex": "レイムサ",
-    "eng": "Flame Surge of Combusting"
+    "eng": "Flame Surge"
   },
   {
     "display_name": "デセクレート",
@@ -2072,7 +2072,7 @@
     "quest": null,
     "is_support": false,
     "regex": "シャルカ",
-    "eng": "Glacial Cascade of the Fissure"
+    "eng": "Glacial Cascade"
   },
   {
     "display_name": "モルテンストライク",
@@ -2093,7 +2093,7 @@
     "quest": null,
     "is_support": false,
     "regex": "ルテンス",
-    "eng": "Molten Strike of the Zenith"
+    "eng": "Molten Strike"
   },
   {
     "display_name": "コンヴォケーション",
@@ -2135,7 +2135,7 @@
     "quest": null,
     "is_support": false,
     "regex": "パイロク",
-    "eng": "Pyroclast Mine of Sabotage"
+    "eng": "Pyroclast Mine"
   },
   {
     "display_name": "トルネードショット",
@@ -2154,7 +2154,7 @@
     "quest": null,
     "is_support": false,
     "regex": "ネードシ",
-    "eng": "Tornado Shot of Cloudburst"
+    "eng": "Tornado Shot"
   },
   {
     "display_name": "ヘラルドオブアッシュ",
@@ -2302,7 +2302,7 @@
     "quest": null,
     "is_support": false,
     "regex": "ニングテ",
-    "eng": "Lightning Tendrils of Escalation"
+    "eng": "Lightning Tendrils"
   },
   {
     "display_name": "ライトニングサークル",
@@ -2344,7 +2344,7 @@
     "quest": null,
     "is_support": false,
     "regex": "ィックブ",
-    "eng": "Kinetic Blast of Clustering"
+    "eng": "Kinetic Blast"
   },
   {
     "display_name": "タッチオブゴッド",
@@ -2376,7 +2376,7 @@
     "quest": null,
     "is_support": false,
     "regex": "リンクア",
-    "eng": "Blink Arrow of Prismatic Clones"
+    "eng": "Blink Arrow"
   },
   {
     "display_name": "ミラーアロー",
@@ -2394,7 +2394,7 @@
     "quest": null,
     "is_support": false,
     "regex": "ミラーア",
-    "eng": "Mirror Arrow of Prismatic Clones"
+    "eng": "Mirror Arrow"
   },
   {
     "display_name": "グレイシャルシールドスワイプ",
@@ -2549,7 +2549,7 @@
     "quest": null,
     "is_support": false,
     "regex": "カオスゴ",
-    "eng": "Summon Chaos Golem of the Maelström"
+    "eng": "Summon Chaos Golem"
   },
   {
     "display_name": "アイスゴーレム召喚",
@@ -2573,7 +2573,7 @@
     "quest": null,
     "is_support": false,
     "regex": "アイスゴ",
-    "eng": "Summon Ice Golem of Shattering"
+    "eng": "Summon Ice Golem"
   },
   {
     "display_name": "フレイムゴーレム召喚",
@@ -2597,7 +2597,7 @@
     "quest": null,
     "is_support": false,
     "regex": "レイムゴ",
-    "eng": "Summon Flame Golem of the Meteor"
+    "eng": "Summon Flame Golem"
   },
   {
     "display_name": "ライトニングゴーレム召喚",
@@ -2621,7 +2621,7 @@
     "quest": null,
     "is_support": false,
     "regex": "ニングゴ",
-    "eng": "Summon Lightning Golem of Hordes"
+    "eng": "Summon Lightning Golem"
   },
   {
     "display_name": "アイスクラッシュ",
@@ -2642,7 +2642,7 @@
     "quest": null,
     "is_support": false,
     "regex": "アイスク",
-    "eng": "Ice Crash of Cadence"
+    "eng": "Ice Crash"
   },
   {
     "display_name": "ラリイングクライ",
@@ -2699,7 +2699,7 @@
     "quest": null,
     "is_support": false,
     "regex": "レイムダ",
-    "eng": "Flame Dash of Return"
+    "eng": "Flame Dash"
   },
   {
     "display_name": "ヴィジラントストライク",
@@ -2738,7 +2738,7 @@
     "quest": null,
     "is_support": false,
     "regex": "ストブレ",
-    "eng": "Frost Blades of Katabasis"
+    "eng": "Frost Blades"
   },
   {
     "display_name": "ローリングマグマ",
@@ -2775,7 +2775,7 @@
     "quest": null,
     "is_support": false,
     "regex": "イルドス",
-    "eng": "Wild Strike of Extremes"
+    "eng": "Wild Strike"
   },
   {
     "display_name": "アイストラップ",
@@ -2787,7 +2787,7 @@
     "quest": null,
     "is_support": false,
     "regex": "アイスト",
-    "eng": "Ice Trap of Hollowness"
+    "eng": "Ice Trap"
   },
   {
     "display_name": "ブラストレイン",
@@ -2806,7 +2806,7 @@
     "quest": null,
     "is_support": false,
     "regex": "ラストレ",
-    "eng": "Blast Rain of Trarthus"
+    "eng": "Blast Rain"
   },
   {
     "display_name": "ガルヴァニックアロー",
@@ -2825,7 +2825,7 @@
     "quest": null,
     "is_support": false,
     "regex": "ニックア",
-    "eng": "Galvanic Arrow of Surging"
+    "eng": "Galvanic Arrow"
   },
   {
     "display_name": "スタティックテザー",
@@ -2875,7 +2875,7 @@
     "quest": null,
     "is_support": false,
     "regex": "ブレード",
-    "eng": "Blade Vortex of the Scythe"
+    "eng": "Blade Vortex"
   },
   {
     "display_name": "新ブレードヴォーテックス",
@@ -2907,7 +2907,7 @@
     "quest": null,
     "is_support": false,
     "regex": "ストボム",
-    "eng": "Frost Bomb of Forthcoming"
+    "eng": "Frost Bomb"
   },
   {
     "display_name": "シージバリスタ",
@@ -2925,7 +2925,7 @@
     "quest": null,
     "is_support": false,
     "regex": "シージバ",
-    "eng": "Siege Ballista of Trarthus"
+    "eng": "Siege Ballista"
   },
   {
     "display_name": "オーブオブストーム",
@@ -2968,7 +2968,7 @@
     "quest": null,
     "is_support": false,
     "regex": "トーンゴ",
-    "eng": "Summon Stone Golem of Safeguarding"
+    "eng": "Summon Stone Golem"
   },
   {
     "display_name": "ライチャスライトニング",
@@ -2998,7 +2998,7 @@
     "quest": null,
     "is_support": false,
     "regex": "アースク",
-    "eng": "Earthquake of Amplification"
+    "eng": "Earthquake"
   },
   {
     "display_name": "コンテージョン",
@@ -3017,7 +3017,7 @@
     "quest": null,
     "is_support": false,
     "regex": "コンテー",
-    "eng": "Contagion of Transference"
+    "eng": "Contagion"
   },
   {
     "display_name": "ウィザー",
@@ -3054,7 +3054,7 @@
     "quest": null,
     "is_support": false,
     "regex": "ブライト",
-    "eng": "Blight of Atrophy"
+    "eng": "Blight"
   },
   {
     "display_name": "エッセンスドレイン",
@@ -3073,7 +3073,7 @@
     "quest": null,
     "is_support": false,
     "regex": "エッセン",
-    "eng": "Essence Drain of Wickedness"
+    "eng": "Essence Drain"
   },
   {
     "display_name": "シャドウブレード",
@@ -3139,7 +3139,7 @@
     "quest": null,
     "is_support": false,
     "regex": "サンダー",
-    "eng": "Sunder of Trarthus"
+    "eng": "Sunder"
   },
   {
     "display_name": "フロストボルト",
@@ -3169,7 +3169,7 @@
     "quest": null,
     "is_support": false,
     "regex": "ヴォーテ",
-    "eng": "Vortex of Projection"
+    "eng": "Vortex"
   },
   {
     "display_name": "エレメンタルプロジェクタイル",
@@ -3193,7 +3193,7 @@
     "quest": null,
     "is_support": false,
     "regex": "ダークパ",
-    "eng": "Dark Pact of Trarthus"
+    "eng": "Dark Pact"
   },
   {
     "display_name": "スコーチングレイ",
@@ -3213,7 +3213,7 @@
     "quest": null,
     "is_support": false,
     "regex": "スコーチ",
-    "eng": "Scorching Ray of Immolation"
+    "eng": "Scorching Ray"
   },
   {
     "display_name": "チャネリングスケルトン召喚",
@@ -3256,7 +3256,7 @@
     "quest": null,
     "is_support": false,
     "regex": "クレメー",
-    "eng": "Cremation of the Volcano"
+    "eng": "Cremation"
   },
   {
     "display_name": "ボディスワップ",
@@ -3274,7 +3274,7 @@
     "quest": null,
     "is_support": false,
     "regex": "ボディス",
-    "eng": "Bodyswap of Sacrifice"
+    "eng": "Bodyswap"
   },
   {
     "display_name": "スペクトラルスピニングウェポン",
@@ -3305,7 +3305,7 @@
     "quest": null,
     "is_support": false,
     "regex": "テクトニ",
-    "eng": "Tectonic Slam of Cataclysm"
+    "eng": "Tectonic Slam"
   },
   {
     "display_name": "ヴァルネラビリティ",
@@ -3355,7 +3355,7 @@
     "quest": null,
     "is_support": false,
     "regex": "ーシブト",
-    "eng": "Explosive Trap of Magnitude"
+    "eng": "Explosive Trap"
   },
   {
     "display_name": "サイフォニングトラップ",
@@ -3409,7 +3409,7 @@
     "quest": null,
     "is_support": false,
     "regex": "ングスパ",
-    "eng": "Lightning Spire Trap of Overloading"
+    "eng": "Lightning Spire Trap"
   },
   {
     "display_name": "サイズミックトラップ",
@@ -3427,7 +3427,7 @@
     "quest": null,
     "is_support": false,
     "regex": "ミックト",
-    "eng": "Seismic Trap of Swells"
+    "eng": "Seismic Trap"
   },
   {
     "display_name": "コンセクレイテッドパス",
@@ -3445,7 +3445,7 @@
     "quest": null,
     "is_support": false,
     "regex": "コンセク",
-    "eng": "Consecrated Path of Endurance"
+    "eng": "Consecrated Path"
   },
   {
     "display_name": "スマイト",
@@ -3463,7 +3463,7 @@
     "quest": null,
     "is_support": false,
     "regex": "スマイト",
-    "eng": "Smite of Divine Judgement"
+    "eng": "Smite"
   },
   {
     "display_name": "スカージアロー",
@@ -3481,7 +3481,7 @@
     "quest": null,
     "is_support": false,
     "regex": "スカージ",
-    "eng": "Scourge Arrow of Menace"
+    "eng": "Scourge Arrow"
   },
   {
     "display_name": "トキシックレイン",
@@ -3499,7 +3499,7 @@
     "quest": null,
     "is_support": false,
     "regex": "トキシッ",
-    "eng": "Toxic Rain of Withering"
+    "eng": "Toxic Rain"
   },
   {
     "display_name": "ホーリーレリック召喚",
@@ -3517,7 +3517,7 @@
     "quest": null,
     "is_support": false,
     "regex": "ーリーレ",
-    "eng": "Summon Holy Relic of Conviction"
+    "eng": "Summon Holy Relic"
   },
   {
     "display_name": "ウィンターオーブ",
@@ -3559,7 +3559,7 @@
     "quest": null,
     "is_support": false,
     "regex": "ランシン",
-    "eng": "Lancing Steel of Spraying"
+    "eng": "Lancing Steel"
   },
   {
     "display_name": "ストームブランド",
@@ -3577,7 +3577,7 @@
     "quest": null,
     "is_support": false,
     "regex": "ムブラン",
-    "eng": "Storm Brand of Indecision"
+    "eng": "Storm Brand"
   },
   {
     "display_name": "ウォーバナー",
@@ -3631,7 +3631,7 @@
     "quest": null,
     "is_support": false,
     "regex": "シャタリ",
-    "eng": "Shattering Steel of Ammunition"
+    "eng": "Shattering Steel"
   },
   {
     "display_name": "アルマゲドンブランド",
@@ -3649,7 +3649,7 @@
     "quest": null,
     "is_support": false,
     "regex": "アルマゲ",
-    "eng": "Armageddon Brand of Recall"
+    "eng": "Armageddon Brand"
   },
   {
     "display_name": "ブランドリコール",
@@ -3685,7 +3685,7 @@
     "quest": null,
     "is_support": false,
     "regex": "ピュリフ",
-    "eng": "Purifying Flame of Revelations"
+    "eng": "Purifying Flame"
   },
   {
     "display_name": "ソウルレンド",
@@ -3705,7 +3705,7 @@
     "quest": null,
     "is_support": false,
     "regex": "ソウルレ",
-    "eng": "Soulrend of the Spiral"
+    "eng": "Soulrend"
   },
   {
     "display_name": "ベイン",
@@ -3725,7 +3725,7 @@
     "quest": null,
     "is_support": false,
     "regex": "ベイン",
-    "eng": "Bane of Condemnation"
+    "eng": "Bane"
   },
   {
     "display_name": "ウェーブオブコンヴィクション",
@@ -3743,7 +3743,7 @@
     "quest": null,
     "is_support": false,
     "regex": "ェーブオ",
-    "eng": "Wave of Conviction of Trarthus"
+    "eng": "Wave of Conviction"
   },
   {
     "display_name": "ゼロトリー",
@@ -3782,7 +3782,7 @@
     "quest": null,
     "is_support": false,
     "regex": "ァインア",
-    "eng": "Divine Ire of Disintegration"
+    "eng": "Divine Ire"
   },
   {
     "display_name": "マレヴォレンス",
@@ -3859,7 +3859,7 @@
     "quest": null,
     "is_support": false,
     "regex": "レードス",
-    "eng": "Bladestorm of Uncertainty"
+    "eng": "Bladestorm"
   },
   {
     "display_name": "ブラッドアンドサンド",
@@ -3913,7 +3913,7 @@
     "quest": null,
     "is_support": false,
     "regex": "パーフォ",
-    "eng": "Perforate of Bloodshed"
+    "eng": "Perforate"
   },
   {
     "display_name": "チェーンフック",
@@ -3931,7 +3931,7 @@
     "quest": null,
     "is_support": false,
     "regex": "ェーンフ",
-    "eng": "Chain Hook of Trarthus"
+    "eng": "Chain Hook"
   },
   {
     "display_name": "フロストブリンク",
@@ -3952,7 +3952,7 @@
     "quest": null,
     "is_support": false,
     "regex": "ストブリ",
-    "eng": "Frostblink of Wintry Blast"
+    "eng": "Frostblink"
   },
   {
     "display_name": "プレシジョン",
@@ -4047,7 +4047,7 @@
     "quest": null,
     "is_support": false,
     "regex": "キャリオ",
-    "eng": "Summon Carrion Golem of Scavenging"
+    "eng": "Summon Carrion Golem"
   },
   {
     "display_name": "ウィザリングステップ",
@@ -4174,7 +4174,7 @@
     "quest": null,
     "is_support": false,
     "regex": "シュラプ",
-    "eng": "Shrapnel Ballista of Steel"
+    "eng": "Shrapnel Ballista"
   },
   {
     "display_name": "エンスネアリングアロー",
@@ -4210,7 +4210,7 @@
     "quest": null,
     "is_support": false,
     "regex": "アーティ",
-    "eng": "Artillery Ballista of Focus Fire"
+    "eng": "Artillery Ballista"
   },
   {
     "display_name": "アーケインクローク",
@@ -4249,7 +4249,7 @@
     "quest": null,
     "is_support": false,
     "regex": "ームバイ",
-    "eng": "Stormbind of Teleportation"
+    "eng": "Stormbind"
   },
   {
     "display_name": "キネティックボルト",
@@ -4267,7 +4267,7 @@
     "quest": null,
     "is_support": false,
     "regex": "ィックボ",
-    "eng": "Kinetic Bolt of Fragmentation"
+    "eng": "Kinetic Bolt"
   },
   {
     "display_name": "ブレードブラスト",
@@ -4285,7 +4285,7 @@
     "quest": null,
     "is_support": false,
     "regex": "レードブ",
-    "eng": "Blade Blast of Dagger Detonation"
+    "eng": "Blade Blast"
   },
   {
     "display_name": "スペルスリンガー",
@@ -4396,7 +4396,7 @@
     "quest": null,
     "is_support": false,
     "regex": "ペナンス",
-    "eng": "Penance Brand of Conduction"
+    "eng": "Penance Brand"
   },
   {
     "display_name": "ウィンタータイドブランド",
@@ -4435,7 +4435,7 @@
     "quest": null,
     "is_support": false,
     "regex": "アースシ",
-    "eng": "Earthshatter of Prominence"
+    "eng": "Earthshatter"
   },
   {
     "display_name": "ジェネラルズクライ",
@@ -4492,8 +4492,8 @@
     "classes": null,
     "quest": null,
     "is_support": false,
-    "regex": "ヴォイド",
-    "eng": "Void Sphere of Rending"
+    "regex": "ォイドス",
+    "eng": "Void Sphere"
   },
   {
     "display_name": "クラックリングランス",
@@ -4511,7 +4511,7 @@
     "quest": null,
     "is_support": false,
     "regex": "クラック",
-    "eng": "Crackling Lance of Disintegration"
+    "eng": "Crackling Lance"
   },
   {
     "display_name": "フロストシールド",
@@ -4551,7 +4551,7 @@
     "quest": null,
     "is_support": false,
     "regex": "プリッテ",
-    "eng": "Splitting Steel of Ammunition"
+    "eng": "Splitting Steel"
   },
   {
     "display_name": "シギルオブパワー",
@@ -4609,7 +4609,7 @@
     "quest": null,
     "is_support": false,
     "regex": "ヘックス",
-    "eng": "Hexblast of Havoc"
+    "eng": "Hexblast"
   },
   {
     "display_name": "フレイマブルショット",
@@ -4694,7 +4694,7 @@
     "quest": null,
     "is_support": false,
     "regex": "イグザン",
-    "eng": "Exsanguinate of Transmission"
+    "eng": "Exsanguinate"
   },
   {
     "display_name": "コラプティングフィーバー",
@@ -4818,7 +4818,7 @@
     "quest": null,
     "is_support": false,
     "regex": "レイジヴ",
-    "eng": "Rage Vortex of Berserking"
+    "eng": "Rage Vortex"
   },
   {
     "display_name": "スペクトラルヘリックス",
@@ -4836,7 +4836,7 @@
     "quest": null,
     "is_support": false,
     "regex": "トラルヘ",
-    "eng": "Spectral Helix of Trarthus"
+    "eng": "Spectral Helix"
   },
   {
     "display_name": "バトルメイジズクライ",
@@ -4873,7 +4873,7 @@
     "quest": null,
     "is_support": false,
     "regex": "アブソル",
-    "eng": "Absolution of Inspiring"
+    "eng": "Absolution"
   },
   {
     "display_name": "フォビドゥンライト",
@@ -4885,7 +4885,7 @@
     "quest": null,
     "is_support": false,
     "regex": "フォビド",
-    "eng": "Forbidden Rite of Soul Sacrifice"
+    "eng": "Forbidden Rite"
   },
   {
     "display_name": "アンブッシュ",
@@ -4934,7 +4934,7 @@
     "quest": null,
     "is_support": false,
     "regex": "レードト",
-    "eng": "Blade Trap of Laceration"
+    "eng": "Blade Trap"
   },
   {
     "display_name": "ストームレイン",
@@ -4952,7 +4952,7 @@
     "quest": null,
     "is_support": false,
     "regex": "トームレ",
-    "eng": "Storm Rain of the Fence"
+    "eng": "Storm Rain"
   },
   {
     "display_name": "シールドクラッシュ",
@@ -4970,7 +4970,7 @@
     "quest": null,
     "is_support": false,
     "regex": "ールドク",
-    "eng": "Shield Crush of the Chieftain"
+    "eng": "Shield Crush"
   },
   {
     "display_name": "ブラッドオファリング",
@@ -5000,7 +5000,7 @@
     "quest": null,
     "is_support": false,
     "regex": "リーパー",
-    "eng": "Summon Reaper of Eviscerating"
+    "eng": "Summon Reaper"
   },
   {
     "display_name": "ボーンシャッター",
@@ -5012,7 +5012,7 @@
     "quest": null,
     "is_support": false,
     "regex": "ボーンシ",
-    "eng": "Boneshatter of Carnage"
+    "eng": "Boneshatter"
   },
   {
     "display_name": "エクスプローシブコンコクション",
@@ -5030,7 +5030,7 @@
     "quest": null,
     "is_support": false,
     "regex": "ーシブコ",
-    "eng": "Explosive Concoction of Destruction"
+    "eng": "Explosive Concoction"
   },
   {
     "display_name": "アイオブウィンター",
@@ -5048,7 +5048,7 @@
     "quest": null,
     "is_support": false,
     "regex": "アイオブ",
-    "eng": "Eye of Winter of Transience"
+    "eng": "Eye of Winter"
   },
   {
     "display_name": "ポイゾナスコンコクション",
@@ -5066,7 +5066,7 @@
     "quest": null,
     "is_support": false,
     "regex": "ポイゾナ",
-    "eng": "Poisonous Concoction of Bouncing"
+    "eng": "Poisonous Concoction"
   },
   {
     "display_name": "テンポラルリフト",
@@ -5103,7 +5103,7 @@
     "quest": null,
     "is_support": false,
     "regex": "トルネー",
-    "eng": "Tornado of Elemental Turbulence"
+    "eng": "Tornado"
   },
   {
     "display_name": "エナジーブレード",
@@ -5223,7 +5223,7 @@
     "quest": null,
     "is_support": false,
     "regex": "ニングコ",
-    "eng": "Lightning Conduit of the Heavens"
+    "eng": "Lightning Conduit"
   },
   {
     "display_name": "ガルヴァニックフィールド",
@@ -5241,7 +5241,7 @@
     "quest": null,
     "is_support": false,
     "regex": "クフィー",
-    "eng": "Galvanic Field of Intensity"
+    "eng": "Galvanic Field"
   },
   {
     "display_name": "アルケミストの呪印",
@@ -5279,7 +5279,7 @@
     "quest": null,
     "is_support": false,
     "regex": "ヴォルカ",
-    "eng": "Volcanic Fissure of Snaking"
+    "eng": "Volcanic Fissure"
   },
   {
     "display_name": "フローズンリージョン",
@@ -5297,7 +5297,7 @@
     "quest": null,
     "is_support": false,
     "regex": "フローズ",
-    "eng": "Frozen Legion of Rallying"
+    "eng": "Frozen Legion"
   },
   {
     "display_name": "スナイプ",
@@ -5333,7 +5333,7 @@
     "quest": null,
     "is_support": false,
     "regex": "コンフラ",
-    "eng": "[UNUSED] Conflagration Support"
+    "eng": "Conflagration"
   },
   {
     "display_name": "キネティックレイン",
@@ -5351,7 +5351,7 @@
     "quest": null,
     "is_support": false,
     "regex": "ィックレ",
-    "eng": "Kinetic Rain of Impact"
+    "eng": "Kinetic Rain"
   },
   {
     "display_name": "ソマティックシェル",
@@ -6849,7 +6849,7 @@
     "eng": "Vicious Projectiles Support"
   },
   {
-    "display_name": "啓発サポート",
+    "display_name": "エンライテンサポート",
     "id": "AdditionalXP",
     "color": "b",
     "quest_reward": null,
@@ -6857,7 +6857,7 @@
     "classes": null,
     "quest": null,
     "is_support": true,
-    "regex": "啓発サポ",
+    "regex": "エンライ",
     "eng": "Enlighten Support"
   },
   {
@@ -7035,7 +7035,7 @@
     "eng": "Critical Strike Affliction Support"
   },
   {
-    "display_name": "ボイド操作サポート",
+    "display_name": "ヴォイド操作サポート",
     "id": "VoidManipulation",
     "color": "g",
     "quest_reward": {
@@ -7051,7 +7051,7 @@
     "classes": null,
     "quest": null,
     "is_support": true,
-    "regex": "ボイド操",
+    "regex": "ォイド操",
     "eng": "Void Manipulation Support"
   },
   {
