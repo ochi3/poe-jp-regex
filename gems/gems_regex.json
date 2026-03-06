@@ -4302,7 +4302,7 @@
     "classes": null,
     "quest": null,
     "is_support": false,
-    "regex": "スペルス",
+    "regex": "スペルスリ",
     "eng": "Spellslinger"
   },
   {
@@ -8794,3 +8794,4 @@
     "eng": "Living Lightning Support"
   }
 ]
+
