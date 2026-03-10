@@ -1056,7 +1056,7 @@ const originalModList = {
    modTier17: true,
  },
  "(T17) 味方に影響する、プレイヤースキルによるオーラは敵にも影響する": {
-   mod: "味方に影響する、プレイヤースキルによるオーラは敵にも影響する",
+   mod: "(T17) 味方に影響する、プレイヤースキルによるオーラは敵にも影響する",
    engMod: "(T17) Auras from Player Skills which affect Allies also affect Enemies",
    tier: 1500,
    engRegex: "emi",
@@ -1064,7 +1064,7 @@ const originalModList = {
    modTier17: true,
  },
  "(T17) エリアのレアモンスターは死亡時に一時的に生き返る": {
-   mod: "エリアのレアモンスターは死亡時に一時的に生き返る",
+   mod: "(T17) エリアのレアモンスターは死亡時に一時的に生き返る",
    engMod: "(T17) Rare monsters in area Temporarily Revive on death",
    tier: 1190,
    engRegex: "Revi",
@@ -1072,7 +1072,7 @@ const originalModList = {
    modTier17: true,
  },
  "(T17) エリアの移動する呪印領域がパッチ状に存在し、ランダムな呪印を付与する": {
-   mod: "エリアの移動する呪印領域がパッチ状に存在し、ランダムな呪印を付与する",
+   mod: "(T17) エリアの移動する呪印領域がパッチ状に存在し、ランダムな呪印を付与する",
    engMod: "(T17) Area contains patches of moving Marked Ground, inflicting random Marks",
    tier: 1190,
    engRegex: "nd,",
@@ -1080,5 +1080,6 @@ const originalModList = {
    modTier17: true,
  },
 };
+
 
 
