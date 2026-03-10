@@ -651,8 +651,7 @@ const originalModList = {
    mod: "(T17) モンスターのダメージが#%増加する",
    engMod: "(T17) #% increased Monster Damage",
    tier: 1111,
-   engRegex: "r damage$
-",
+   engRegex: "r damage$",
    Regex: "ターのダ.*増",
    modTier17: true,
  },
@@ -1081,3 +1080,5 @@ const originalModList = {
    modTier17: true,
  },
 };
+
+
