@@ -1079,5 +1079,6 @@ const originalModList = {
     engRegex: "nd,",
     Regex: "し、ラ",
     modTier17: true,
-  },
+  }
 };
+
