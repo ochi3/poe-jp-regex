@@ -242,17 +242,17 @@ function generateExtraRegex() {
     let extraRegex = [];
 
     if (scarabValue) {
-        const scarabRegex = getFixedRangeRegex(scarabValue, currentLanguage === 'ja' ? 'ラベ:.*' : 're s.*');
+        const scarabRegex = getFixedRangeRegex(scarabValue, currentLanguage === 'ja' ? 'ラベ量が上昇:.*' : 're s.*');
         extraRegex.push(scarabRegex);
     }
 
     if (currencyValue) {
-        const currencyRegex = getFixedRangeRegex(currencyValue, currentLanguage === 'ja' ? 'シー:.*' : 're cur.*');
+        const currencyRegex = getFixedRangeRegex(currencyValue, currentLanguage === 'ja' ? 'シー量が上昇:.*' : 're cur.*');
         extraRegex.push(currencyRegex);
     }
 
     if (mapValue) {
-        const mapRegex = getFixedRangeRegex(mapValue, currentLanguage === 'ja' ? 'ップ:.*' : 're maps.*');
+        const mapRegex = getFixedRangeRegex(mapValue, currentLanguage === 'ja' ? 'ップ量が上昇:.*' : 're maps.*');
         extraRegex.push(mapRegex);
     }
 
@@ -1469,4 +1469,5 @@ function initializeApplication() {
     updateCombinedRegex();
     
     console.log('Application initialized successfully');
+
 }
