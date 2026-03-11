@@ -1048,7 +1048,7 @@ const originalModList = {
    modTier17: true,
  },
  "(T17) プレイヤーはリーチによるライフ、マナおよびエナジーシールドの最大合計回復量が(50–60)%減少する": {
-   mod: "プレイヤーはリーチによるライフ、マナおよびエナジーシールドの最大合計回復量が(50–60)%減少する",
+   mod: "(T17) プレイヤーはリーチによるライフ、マナおよびエナジーシールドの最大合計回復量が(50–60)%減少する",
    engMod: "(T17) Players have (50-60)% reduced Maximum total Life, Mana and Energy Shield Recovery per second from Leech",
    tier: 1190,
    engRegex: "tota",
@@ -1079,7 +1079,20 @@ const originalModList = {
    Regex: "し、ラ",
    modTier17: true,
  },
+ "(T17) プレイヤーは適用されるフラスコの効果が40%低下する": {
+   mod: "(T17) プレイヤーは適用されるフラスコの効果が40%低下する",
+   engMod: "(T17) Players have 40% less effect of Flasks applied to them",
+   tier: 1190,
+   engRegex: "ppl,",
+   Regex: "るフ",
+   modTier17: true,
+ },
+ "(T17) エリアにはラビリンスの罠が出現する": {
+   mod: "(T17) エリアにはラビリンスの罠が出現する",
+   engMod: "(T17) Area contains Labyrinth Hazards",
+   tier: 1190,
+   engRegex: "Lab,",
+   Regex: "の罠",
+   modTier17: true,
+ },
 };
-
-
-
