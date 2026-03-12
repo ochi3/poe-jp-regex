@@ -38,7 +38,7 @@
             Twitter <a href="https://x.com/ochi3c" style="color: var(--accent-primary);">@ochi3c</a>
         </h4>
         <h4>不具合等ありましたらご連絡ください。</h4>
-        <h4>Change log<br>26/03/10<br>カレンシー、マップ、スカラベ量の対応、新MOD追加<br><br>25/10/21<br>ベンダー(ACT用)更新、ワンドと弓の修正。チェック付けていた方は確認してください。<br><br>25/10/21<br>ベンダー(ACT用)追加<br><br>25/10/17<br>いろいろ追加<br><br>25/09/19<br>200以上の数値に対応、レアリティの追加<br><br>25/07/02<br>チェックボックスバグ修正<br><br>25/06/27<br>数値Regex仕様変更<br><br>25/06/05<br>文字数制限50→250<br></h4>
+        <h4>Change log<br>26/03/12<br>トレードリンク機能追加<br>欲しいMod検索モード(Any/All)追加<br><br>26/03/10<br>カレンシー、マップ、スカラベ量の対応、新MOD追加<br><br>25/10/21<br>ベンダー(ACT用)更新、ワンドと弓の修正<br><br>25/10/17<br>いろいろ追加<br><br>25/09/19<br>200以上の数値に対応、レアリティの追加<br><br>25/07/02<br>チェックボックスバグ修正<br><br>25/06/05<br>文字数制限50→250<br></h4>
     </div>
 
     <div id="contentArea">
@@ -60,29 +60,26 @@
                 
                 <div class="input-group">
                     <button onclick="copyToClipboard()">コピー</button>
+                    <button class="btn-primary-highlight" id="tradeLinkBtn" onclick="generateTradeLink()">トレードリンク</button>
+                    <!-- <button class="secondary-btn" id="copyTradeLinkBtn" onclick="copyTradeLink()">リンクをコピー(デバッグ)</button> -->
+                    <button class="btn-secondary-highlight" id="tradeSettingsBtn" onclick="toggleTradeSettings()">設定</button>
+                        <div class="button-with-info" style="margin-left: -5px;">
+                            <div class="info-icon">New</div>
+                            <div class="info-tooltip">
+                                <strong>トレードリンク機能を追加</strong>
+                                Regexに合ったトレードリンクを生成できます。<br>
+                            </div>
+                        </div>
                     <button onclick="resetAll()">リセット</button>
+                    <div style="width: 24px;"></div> <!-- Spacer -->
                     <button onclick="toggleLanguage()">日本語 / English</button>
                     <span id="charCount" class="char-count"></span>
                 </div>
 
                 <div class="input-group">
-                    <button onclick="copyUnidentified()">未鑑定</button>
-                    <button onclick="copyNormal()">ノーマル</button>
-                    <button onclick="copyMagic()">マジック</button>
-                    <button onclick="copyRare()">レア</button>
-                    <div class="button-with-info">
-                        <div class="info-icon">New</div>
-                        <div class="info-tooltip">
-                            <strong>マップ作成の下準備に</strong>
-                            ボタンに書かれている文字をコピーします。<br>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="input-group">
                     <label class="input-label">
                         数量:
-                        <input type="number" id="itemQuantityInput" onchange="updateCombinedRegex()">
+                        <input type="number" id="itemQuantityInput" oninput="updateCombinedRegex()">
                     </label>
                     <label class="input-label">
                         パックサイズ:
@@ -97,15 +94,15 @@
                 <div class="input-group">
                     <label class="input-label">
                         スカラベ:
-                        <input type="number" id="scarabInput">
+                        <input type="number" id="scarabInput" oninput="updateCombinedRegex()">
                     </label>
                     <label class="input-label">
                         カレンシー:
-                        <input type="number" id="currencyInput">
+                        <input type="number" id="currencyInput" oninput="updateCombinedRegex()">
                     </label>
                     <label class="input-label">
                         マップ:
-                        <input type="number" id="mapInput">
+                        <input type="number" id="mapInput" oninput="updateCombinedRegex()">
                     </label>
                     <label class="input-label">
                         <input type="radio" name="searchMode" id="searchAllRadio" value="all" checked>
@@ -115,6 +112,20 @@
                         <input type="radio" name="searchMode" id="searchAnyRadio" value="any">
                         どれか
                     </label>
+                </div>
+
+                <div class="input-group">
+                    <button onclick="copyUnidentified()">未鑑定</button>
+                    <button onclick="copyNormal()">ノーマル</button>
+                    <button onclick="copyMagic()">マジック</button>
+                    <button onclick="copyRare()">レア</button>
+                    <div class="button-with-info" style="margin-left: -5px;">
+                        <div class="info-icon">!</div>
+                        <div class="info-tooltip">
+                            <strong>マップ作成の下準備に</strong>
+                            ボタンに書かれている文字をコピーします。<br>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="input-group">
@@ -128,17 +139,18 @@
                         <input type="checkbox" id="rareCheckbox" value="rare"> レア
                     </label>
                 </div>
-                <div class="input-group">
-                    <label class="input-label">
-                        <input type="checkbox" id="ngModCheckbox" onchange="updateCombinedRegex()" checked> NG mod
-                    </label>
-                    <div class="button-with-info">
-                        <div class="info-icon">i</div>
-                        <div class="info-tooltip">
-                            <strong>NG MOD</strong>
-                            選択したMODが付いているマップがハイライトされません。<br>光っているマップ=実行できるマップになります。
-                        </div>
+                <div class="input-group" style="font-size: 0.9em; color: var(--text-secondary); background: rgba(255,255,255,0.05); padding: 8px 12px; border-radius: 6px;">
+                    <div>
+                        <span style="color: var(--accent-red); font-weight: bold;">左クリック</span>: NG Mod (赤) / 
+                        <span style="color: var(--accent-primary); font-weight: bold;">右クリック</span>: 欲しい Mod (緑)
                     </div>
+                </div>
+                <div class="input-group" style="display: none;">
+                    <label class="input-label">
+                        <input type="checkbox" id="ngModCheckbox" checked> NG mod
+                    </label>
+                </div>
+                <div class="input-group">
                     <label class="input-label">
                         <input type="checkbox" id="mapTierCheckbox" onchange="updateModList()"> T17 mod
                     </label>
@@ -149,6 +161,9 @@
                             Tier17やメモリーマップで付くMODが表示されます。<br>
                         </div>
                     </div>
+                    <label class="input-label">
+                        <input type="checkbox" id="showModDetailsCheckbox" onchange="toggleModDetails()" checked> 詳細表示
+                    </label>
                 </div>
 
                 <input type="text" id="effectSearch" placeholder="Modを検索..." oninput="filterEffects()" style="margin-top: 16px;">
@@ -258,11 +273,10 @@
                         <option value="">-- プロファイル選択 --</option>
                     </select>
                 </div>
-
                 <div class="output-area" id="combinedItemRegexOutput"></div>
                 <div class="input-group">
-                    <button onclick="copyItemRegex()">コピー</button>
-                    <button onclick="resetItemMods()">リセット</button>
+                    <button id="copyRegexBtn" onclick="copyRegex()">コピー</button>
+                    <button onclick="resetMapMods()">リセット</button>
                     <span id="itemCharCount" class="char-count"></span>
                 </div>
 
@@ -465,7 +479,7 @@
                     </div>
 
                     <div class="half-width">
-                        <h3 style="color: var(--accent-primary); margin-bottom: 16px; border-bottom: 2px solid var(--accent-primary); padding-bottom: 8px;">
+                        <h3 style="color: var(--accent-primary); margin: 24px 0 16px 0; border-bottom: 2px solid var(--accent-primary); padding-bottom: 8px;">
                             リンクカラー (2L)
                         </h3>
                         
@@ -766,7 +780,8 @@
         </div>
     </div>
 
-    <script src="scripts/modList.js"></script>
+    <script src="scripts/map_mods.js"></script>
+    <script src="scripts/trade_link.js"></script>
     <script src="scripts/beastlist.js"></script>
     <script src="scripts/convert.js"></script>
     <script src="scripts/scripts.js"></script>
@@ -775,21 +790,85 @@
     <script src="scripts/saved-regex.js"></script>
     <script src="scripts/vendor.js"></script>
 
-    <script>
-        // タブ切り替え
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                
-                document.querySelectorAll('.tab-content').forEach(tab => tab.style.display = 'none');
-                document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
-                
-                const tabId = link.getAttribute('data-tab');
-                document.getElementById(tabId).style.display = 'block';
-                link.classList.add('active');
-            });
-        });
-    </script>
+
+    <!-- トレード設定サイドパネル -->
+    <div id="tradeSettingsPanel" class="side-panel">
+        <div class="side-panel-content">
+            <div class="side-panel-header">
+                <h3>トレード詳細設定</h3>
+                <button class="close-btn" onclick="toggleTradeSettings()">×</button>
+            </div>
+            <div class="settings-group">
+                <label>リーグ:</label>
+                <select id="leagueSelect" onchange="onLeagueSelectChange()" style="width: 100%; margin-bottom: 6px;">
+                    <option value="Mirage">Mirage</option>
+                    <option value="Hardcore Mirage">Hardcore Mirage</option>
+                    <option value="Ruthless Mirage">Ruthless Mirage</option>
+                    <option value="HC Ruthless Mirage">HC Ruthless Mirage</option>
+                    <option value="Standard">Standard</option>
+                    <option value="Hardcore">Hardcore</option>
+                    <option value="Ruthless">Ruthless</option>
+                    <option value="Hardcore Ruthless">Hardcore Ruthless</option>
+                    <option value="__custom__">その他（手入力）</option>
+                </select>
+                <input type="text" id="leagueInput" placeholder="リーグ名を入力" onchange="saveTradeSettings()" style="display: none;">
+            </div>
+            <div class="settings-group">
+                <label>トレード方法:</label>
+                <select id="tradeMethodSelect" onchange="saveTradeSettings()">
+                    <option value="any">全て</option>
+                    <option value="available">インスタントバイアウトおよび対面トレード</option>
+                    <option value="securable">インスタントバイアウト</option>
+                    <option value="onlineleague">対面トレード (リーグにオンライン)</option>
+                    <option value="online">対面トレード (オンライン)</option>
+                </select>
+            </div>
+            <div class="settings-group">
+                <label>マップティア:</label>
+                <div style="display: flex; gap: 10px; align-items: center;">
+                    <input type="number" id="mapTierMinInput" placeholder="Min" min="1" max="17" value="16" onchange="saveTradeSettings()" style="width: 70px;">
+                    <span>~</span>
+                    <input type="number" id="mapTierMaxInput" placeholder="Max" min="1" max="17" value="16" onchange="saveTradeSettings()" style="width: 70px;">
+                </div>
+            </div>
+            <div class="settings-group">
+                <label>バイアウト価格:</label>
+                <div style="display: flex; gap: 10px; align-items: center; margin-bottom: 5px;">
+                    <select id="buyoutPriceSelect" onchange="saveTradeSettings()" style="flex: 1;">
+                        <option value="">カオスオーブ同等物</option>
+                        <option value="chaos_divine">カオスまたは神のオーブ</option>
+                        <option value="chaos">カオスオーブ</option>
+                        <option value="divine">神のオーブ</option>
+                    </select>
+                </div>
+                <div style="display: flex; gap: 10px; align-items: center;">
+                    <input type="number" id="buyoutPriceMinInput" placeholder="Min" min="0" onchange="saveTradeSettings()" style="width: 70px;">
+                    <span>~</span>
+                    <input type="number" id="buyoutPriceMaxInput" placeholder="Max" min="0" onchange="saveTradeSettings()" style="width: 70px;">
+                </div>
+            </div>
+            <div class="settings-group">
+                <label>最低モッド数:</label>
+                <input type="number" id="minModCountInput" placeholder="0" min="0" max="17" onchange="saveTradeSettings()">
+            </div>
+            <div class="settings-group">
+                <label>欲しいModの検索モード:</label>
+                <select id="wantedModModeSelect" onchange="saveTradeSettings()">
+                    <option value="any">いずれか一つ以上 (Any)</option>
+                    <option value="all">全てを含む (All)</option>
+                </select>
+            </div>
+            <div class="settings-group" style="display: flex; align-items: center; margin-top: 15px;">
+                <label class="input-label" style="display: flex; align-items: center; gap: 8px; margin: 0; cursor: pointer; white-space: nowrap;">
+                    <input type="checkbox" id="memoryMapCheckbox" onchange="saveTradeSettings()" style="margin: 0;"> 
+                    <span>メモリーマップ</span>
+                </label>
+            </div>
+            <div style="margin-top: 20px;">
+                <button onclick="toggleTradeSettings()" class="primary-btn">閉じる</button>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

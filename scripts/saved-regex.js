@@ -157,43 +157,61 @@ function generateRegexFromProfile(profile, type) {
 } 
 
 function generateMapRegexFromProfile(profile) {
-  const originalCheckedMods = new Set(checkedMods);
+  const originalCheckedMods = new Map(checkedMods);
   const originalInputState = {
-    itemQuantity: document.getElementById('itemQuantityInput').value,
-    packSize: document.getElementById('packSizeInput').value,
-    rarity: document.getElementById('rarityInput').value,
-    scarab: document.getElementById('scarabInput').value,
-    currency: document.getElementById('currencyInput').value,
-    map: document.getElementById('mapInput').value
+    itemQuantity: document.getElementById('itemQuantityInput')?.value || '',
+    packSize: document.getElementById('packSizeInput')?.value || '',
+    rarity: document.getElementById('rarityInput')?.value || '',
+    scarab: document.getElementById('scarabInput')?.value || '',
+    currency: document.getElementById('currencyInput')?.value || '',
+    map: document.getElementById('mapInput')?.value || ''
   };
   const originalCheckboxState = {
-    ngModChecked: document.getElementById('ngModCheckbox').checked,
-    mapTierChecked: document.getElementById('mapTierCheckbox').checked,
-    normalChecked: document.getElementById('normalCheckbox').checked,
-    magicChecked: document.getElementById('magicCheckbox').checked,
-    rareChecked: document.getElementById('rareCheckbox').checked
+    mapTierChecked: document.getElementById('mapTierCheckbox')?.checked || false,
+    normalChecked: document.getElementById('normalCheckbox')?.checked || false,
+    magicChecked: document.getElementById('magicCheckbox')?.checked || false,
+    rareChecked: document.getElementById('rareCheckbox')?.checked || false
   };
   const originalSearchMode = document.querySelector('input[name="searchMode"]:checked')?.value;
 
   try {
     checkedMods.clear();
-    (profile.mods || []).forEach(mod => checkedMods.add(mod));
+    if (profile.mods) {
+      if (Array.isArray(profile.mods)) {
+        // Array format: either [[id, state], ...] (from Array.from(Map)) or [id, ...] (old format)
+        profile.mods.forEach(mod => {
+          if (Array.isArray(mod)) {
+            // New format: [id, state]
+            const [id, state] = mod;
+            if (id) checkedMods.set(id, state || 'ng');
+          } else if (typeof mod === 'string') {
+            // Old format: just the mod id
+            checkedMods.set(mod, 'ng');
+          }
+        });
+      } else if (typeof profile.mods === 'object') {
+        // Object/Map format: { id: state, ... }
+        Object.entries(profile.mods).forEach(([mod, state]) => checkedMods.set(mod, state));
+      }
+    }
 
-    document.getElementById('itemQuantityInput').value = profile.settings.itemQuantity || '';
-    document.getElementById('packSizeInput').value = profile.settings.packSize || '';
-    document.getElementById('rarityInput').value = profile.settings.rarity || '';
-    document.getElementById('scarabInput').value = profile.settings.scarab || '';
-    document.getElementById('currencyInput').value = profile.settings.currency || '';
-    document.getElementById('mapInput').value = profile.settings.map || '';
+    if (profile.settings) {
+      const settings = profile.settings;
+      if (document.getElementById('itemQuantityInput')) document.getElementById('itemQuantityInput').value = settings.itemQuantity || '';
+      if (document.getElementById('packSizeInput')) document.getElementById('packSizeInput').value = settings.packSize || '';
+      if (document.getElementById('rarityInput')) document.getElementById('rarityInput').value = settings.rarity || '';
+      if (document.getElementById('scarabInput')) document.getElementById('scarabInput').value = settings.scarab || '';
+      if (document.getElementById('currencyInput')) document.getElementById('currencyInput').value = settings.currency || '';
+      if (document.getElementById('mapInput')) document.getElementById('mapInput').value = settings.map || '';
 
-    document.getElementById('ngModCheckbox').checked = profile.settings.ngModChecked || false;
-    document.getElementById('mapTierCheckbox').checked = profile.settings.mapTierChecked || false;
-    document.getElementById('normalCheckbox').checked = profile.settings.rarities?.normal || false;
-    document.getElementById('magicCheckbox').checked = profile.settings.rarities?.magic || false;
-    document.getElementById('rareCheckbox').checked = profile.settings.rarities?.rare || false;
+      if (document.getElementById('mapTierCheckbox')) document.getElementById('mapTierCheckbox').checked = settings.mapTierChecked || false;
+      if (document.getElementById('normalCheckbox')) document.getElementById('normalCheckbox').checked = settings.rarities?.normal || false;
+      if (document.getElementById('magicCheckbox')) document.getElementById('magicCheckbox').checked = settings.rarities?.magic || false;
+      if (document.getElementById('rareCheckbox')) document.getElementById('rareCheckbox').checked = settings.rarities?.rare || false;
 
-    const searchModeRadio = document.querySelector(`input[name="searchMode"][value="${profile.settings.searchMode || 'any'}"]`);
-    if (searchModeRadio) searchModeRadio.checked = true;
+      const searchModeRadio = document.querySelector(`input[name="searchMode"][value="${settings.searchMode || 'any'}"]`);
+      if (searchModeRadio) searchModeRadio.checked = true;
+    }
 
     updateCombinedRegex();
     const regex = document.getElementById('combinedRegexOutput').textContent;
@@ -201,20 +219,19 @@ function generateMapRegexFromProfile(profile) {
 
   } finally {
     checkedMods.clear();
-    originalCheckedMods.forEach(mod => checkedMods.add(mod));
+    originalCheckedMods.forEach((state, mod) => checkedMods.set(mod, state));
 
-    document.getElementById('itemQuantityInput').value = originalInputState.itemQuantity;
-    document.getElementById('packSizeInput').value = originalInputState.packSize;
-    document.getElementById('rarityInput').value = originalInputState.rarity;
-    document.getElementById('scarabInput').value = originalInputState.scarab;
-    document.getElementById('currencyInput').value = originalInputState.currency;
-    document.getElementById('mapInput').value = originalInputState.map;
+    if (document.getElementById('itemQuantityInput')) document.getElementById('itemQuantityInput').value = originalInputState.itemQuantity;
+    if (document.getElementById('packSizeInput')) document.getElementById('packSizeInput').value = originalInputState.packSize;
+    if (document.getElementById('rarityInput')) document.getElementById('rarityInput').value = originalInputState.rarity;
+    if (document.getElementById('scarabInput')) document.getElementById('scarabInput').value = originalInputState.scarab;
+    if (document.getElementById('currencyInput')) document.getElementById('currencyInput').value = originalInputState.currency;
+    if (document.getElementById('mapInput')) document.getElementById('mapInput').value = originalInputState.map;
 
-    document.getElementById('ngModCheckbox').checked = originalCheckboxState.ngModChecked;
-    document.getElementById('mapTierCheckbox').checked = originalCheckboxState.mapTierChecked;
-    document.getElementById('normalCheckbox').checked = originalCheckboxState.normalChecked;
-    document.getElementById('magicCheckbox').checked = originalCheckboxState.magicChecked;
-    document.getElementById('rareCheckbox').checked = originalCheckboxState.rareChecked;
+    if (document.getElementById('mapTierCheckbox')) document.getElementById('mapTierCheckbox').checked = originalCheckboxState.mapTierChecked;
+    if (document.getElementById('normalCheckbox')) document.getElementById('normalCheckbox').checked = originalCheckboxState.normalChecked;
+    if (document.getElementById('magicCheckbox')) document.getElementById('magicCheckbox').checked = originalCheckboxState.magicChecked;
+    if (document.getElementById('rareCheckbox')) document.getElementById('rareCheckbox').checked = originalCheckboxState.rareChecked;
 
     const originalSearchModeRadio = document.querySelector(`input[name="searchMode"][value="${originalSearchMode || 'any'}"]`);
     if (originalSearchModeRadio) originalSearchModeRadio.checked = true;
@@ -472,7 +489,10 @@ function createProfileSummary(profile, type) {
   const parts = [];
 
   if (type === 'map') {
-    const modCount = (profile.mods || []).length;
+    let modCount = 0;
+    if (profile.mods) {
+      modCount = Array.isArray(profile.mods) ? profile.mods.length : Object.keys(profile.mods).length;
+    }
     if (modCount > 0) parts.push(`${modCount}個のMod`);
     const settings = profile.settings || {};
     if (settings.itemQuantity) parts.push(`数量${settings.itemQuantity}%`);
@@ -575,10 +595,31 @@ function createDetailedView(profile, type) {
       rows.forEach(row => settingsDiv.appendChild(row));
       if (rows.length > 0) container.appendChild(settingsDiv);
     }
-    if (profile.mods && profile.mods.length > 0) {
+    
+    let modsToProcess = []; // [{id, state}, ...]
+    if (profile.mods) {
+      if (Array.isArray(profile.mods)) {
+        profile.mods.forEach(mod => {
+          if (Array.isArray(mod)) {
+            // [[id, state], ...] format (from Array.from(Map))
+            modsToProcess.push({ id: mod[0], state: mod[1] || 'ng' });
+          } else if (typeof mod === 'string') {
+            // Old format: just id
+            modsToProcess.push({ id: mod, state: 'ng' });
+          }
+        });
+      } else if (typeof profile.mods === 'object') {
+        // { id: state } object format
+        Object.entries(profile.mods).forEach(([id, state]) => {
+          modsToProcess.push({ id, state });
+        });
+      }
+    }
+
+    if (modsToProcess.length > 0) {
       const modList = document.createElement('div');
       modList.style.cssText = 'display: grid; gap: 4px;';
-      profile.mods.forEach(modKey => {
+      modsToProcess.forEach(({ id: modKey, state: modState }) => {
         const mod = ModList[modKey];
         if (mod) {
           const modItem = document.createElement('div');
@@ -586,7 +627,7 @@ function createDetailedView(profile, type) {
             background: #2a2a2a;
             padding: 6px 8px;
             border-radius: 3px;
-            border-left: 3px solid ${mod.tier > 750 ? '#ed4c4c' : mod.tier > 500 ? '#F87171' : '#FCA5A5'};
+            border-left: 3px solid ${modState === 'wanted' ? '#4CAF50' : (mod.tier > 750 ? '#ed4c4c' : mod.tier > 500 ? '#F87171' : '#FCA5A5')};
           `;
           modItem.innerHTML = `
             <div style="color: #FFF; font-size: 0.8em; margin-bottom: 2px;">${mod.mod}</div>
@@ -862,7 +903,6 @@ function createDetailRow(label, value) {
 }
 
 function loadSavedProfile(name, type, tabId) {
-  console.log(`Loading saved profile: ${name}, type: ${type}, tab: ${tabId}`);
   switchTab(tabId);
   
   window.scrollTo(0, 0);

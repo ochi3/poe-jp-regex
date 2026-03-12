@@ -1,7 +1,6 @@
-let ModList = {...originalModList};
-
+let ModList = {...mapModList};
 let currentLanguage = 'ja';
-let checkedMods = new Set();
+let checkedMods = new Map(); // id -> 'ng' or 'wanted'
 let checkedBeasts = new Set();
 
 function toggleLanguage() {
@@ -10,69 +9,82 @@ function toggleLanguage() {
     updateCombinedRegex();
 }
 
-function updateModList() {
-    const ModListDiv = document.getElementById('ModList');
-    ModListDiv.innerHTML = '';
+// Mod名の#プレースホルダーを実際の値で置換して表示
+function formatModText(text, value) {
+    if (!value) return text;
 
-    const isT17 = document.getElementById('mapTierCheckbox').checked;
+    const textParts = text.split('|');
+    const valueParts = value.split('|');
 
-    const selectedMods = [];
-    const unselectedMods = [];
-
-    Object.entries(ModList)
-        .filter(([key, value]) => !(!isT17 && value.modTier17))
-        .forEach(([key, value]) => {
-            if (checkedMods.has(key)) {
-                selectedMods.push([key, value]);
-            } else {
-                unselectedMods.push([key, value]);
-            }
-        });
-
-    selectedMods.sort(([keyA, valueA], [keyB, valueB]) => valueB.tier - valueA.tier);
-    
-    unselectedMods.sort(([keyA, valueA], [keyB, valueB]) => valueB.tier - valueA.tier);
-
-    const sortedModList = [...selectedMods, ...unselectedMods];
-
-    sortedMods.forEach(([key, value]) => {
-        addEffectItem(key, value);
+    const result = textParts.map((part, i) => {
+        const v = valueParts[i] !== undefined ? valueParts[i] : valueParts[0];
+        if (!v || v === '1') return part;
+        return part
+            .replace(/\(##\)/g, `(${v})`)
+            .replace(/##/g, v)
+            .replace(/#/g, v);
     });
 
-    addModCheckboxEventListeners();
+    return result.join('\n');
 }
 
 function addEffectItem(key, value) {
     const ModListDiv = document.getElementById('ModList');
+    
     const checkbox = document.createElement('input');
     checkbox.type = 'checkbox';
     checkbox.value = key;
     checkbox.id = key;
+    checkbox.style.display = 'none'; // Will be hidden by CSS too
     checkbox.checked = checkedMods.has(key);
-    checkbox.onchange = function() {
-        if (this.checked) {
-            checkedMods.add(key);
-        } else {
-            checkedMods.delete(key);
-        }
-        saveModCheckboxState();
-        updateCombinedRegex();
-        updateModList();
-    };
 
-    const labelElem = document.createElement('label');
-    labelElem.htmlFor = key;
-    labelElem.textContent = currentLanguage === 'ja' ? value.mod : value.engMod;
+    const textSpan = document.createElement('span');
+    textSpan.classList.add('mod-text');
+    const rawText = currentLanguage === 'ja' ? value.mod : value.engMod;
+    textSpan.textContent = formatModText(rawText, value.value);
 
     const effectItem = document.createElement('div');
     effectItem.classList.add('effect-item');
     
+    // Set initial state class
+    if (checkedMods.get(key) === 'ng') {
+        effectItem.classList.add('ng');
+    } else if (checkedMods.get(key) === 'wanted') {
+        effectItem.classList.add('wanted');
+    }
+
+    // click -> NG
     effectItem.addEventListener('click', function(e) {
-        if (e.target.tagName !== 'INPUT') {
-            checkbox.checked = !checkbox.checked;
-            const event = new Event('change', { bubbles: true });
-            checkbox.dispatchEvent(event);
+        e.preventDefault();
+        const currentState = checkedMods.get(key);
+        if (currentState === 'ng') {
+            checkedMods.delete(key);
+            this.classList.remove('ng');
+        } else {
+            checkedMods.set(key, 'ng');
+            this.classList.remove('wanted');
+            this.classList.add('ng');
         }
+        saveModCheckboxState();
+        updateCombinedRegex();
+        updateModList();
+    });
+
+    // right click -> Wanted
+    effectItem.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+        const currentState = checkedMods.get(key);
+        if (currentState === 'wanted') {
+            checkedMods.delete(key);
+            this.classList.remove('wanted');
+        } else {
+            checkedMods.set(key, 'wanted');
+            this.classList.remove('ng');
+            this.classList.add('wanted');
+        }
+        saveModCheckboxState();
+        updateCombinedRegex();
+        updateModList();
     });
     
     if (value.tier > 1001) {
@@ -90,8 +102,77 @@ function addEffectItem(key, value) {
         effectItem.style.color = 'white';
     }
 
-    effectItem.appendChild(checkbox);
-    effectItem.appendChild(labelElem);
+    const label = document.createElement('label');
+    label.classList.add('mod-label');
+    label.htmlFor = key;
+    label.style.display = 'flex';
+    label.style.alignItems = 'center';
+    label.style.width = '100%';
+    label.style.cursor = 'pointer';
+
+    label.appendChild(checkbox);
+    label.appendChild(textSpan);
+
+    effectItem.appendChild(label);
+
+    // Add metadata badges
+    const badgeContainer = document.createElement('div');
+    badgeContainer.classList.add('badge-container');
+
+    const typeBadge = document.createElement('span');
+    typeBadge.classList.add('badge', 'type-badge');
+    if (value.type === 'Prefix') {
+        typeBadge.style.backgroundColor = 'var(--accent-red)';
+        typeBadge.textContent = 'P';
+    } else {
+        typeBadge.style.backgroundColor = 'var(--accent-blue)';
+        typeBadge.textContent = 'S';
+    }
+    badgeContainer.appendChild(typeBadge);
+
+    if (value["map_item_drop_quantity_+%"]) {
+        const qtyBadge = document.createElement('span');
+        qtyBadge.classList.add('badge', 'qty-badge');
+        qtyBadge.textContent = `数量 ${value["map_item_drop_quantity_+%"]}`;
+        badgeContainer.appendChild(qtyBadge);
+    }
+    if (value["map_item_drop_rarity_+%"]) {
+        const rarityBadge = document.createElement('span');
+        rarityBadge.classList.add('badge', 'rarity-badge');
+        rarityBadge.textContent = `レア ${value["map_item_drop_rarity_+%"]}`;
+        badgeContainer.appendChild(rarityBadge);
+    }
+    if (value["map_pack_size_+%"]) {
+        const packBadge = document.createElement('span');
+        packBadge.classList.add('badge', 'pack-badge');
+        packBadge.textContent = `パック ${value["map_pack_size_+%"]}`;
+        badgeContainer.appendChild(packBadge);
+    }
+    if (value["map_map_item_drop_chance_+%_final_from_uber_mod"]) {
+        const mapBadge = document.createElement('span');
+        mapBadge.classList.add('badge', 'map-badge');
+        mapBadge.textContent = `マップ ${value["map_map_item_drop_chance_+%_final_from_uber_mod"]}`;
+        badgeContainer.appendChild(mapBadge);
+    }
+    if (value["map_currency_drop_chance_+%_final_from_uber_mod"]) {
+        const currBadge = document.createElement('span');
+        currBadge.classList.add('badge', 'currency-badge');
+        currBadge.textContent = `カレンシー ${value["map_currency_drop_chance_+%_final_from_uber_mod"]}`;
+        badgeContainer.appendChild(currBadge);
+    }
+    if (value["map_scarab_drop_chance_+%_final_from_uber_mod"]) {
+        const scarabBadge = document.createElement('span');
+        scarabBadge.classList.add('badge', 'scarab-badge');
+        scarabBadge.textContent = `スカラベ ${value["map_scarab_drop_chance_+%_final_from_uber_mod"]}`;
+        badgeContainer.appendChild(scarabBadge);
+    }
+
+    const showDetails = document.getElementById('showModDetailsCheckbox') ? document.getElementById('showModDetailsCheckbox').checked : true;
+    if (!showDetails) {
+        badgeContainer.classList.add('hidden');
+    }
+
+    effectItem.appendChild(badgeContainer);
     ModListDiv.appendChild(effectItem);
 }
 
@@ -154,27 +235,41 @@ function updateCombinedRegex() {
     const ngModChecked = document.getElementById('ngModCheckbox').checked;
 
     let combinedResult = '';
-    const effectResults = [];
+    const ngResults = [];
+    const wantedResults = [];
 
-    const validCheckedMods = new Set();
+    const validCheckedMods = new Map();
     
-    checkedMods.forEach((key) => {
+    checkedMods.forEach((state, key) => {
         const mod = ModList[key];
         if (mod) {
-            effectResults.push(currentLanguage === 'ja' ? mod.Regex : mod.engRegex);
-            validCheckedMods.add(key);
+            const regex = currentLanguage === 'ja' ? mod.Regex : mod.engRegex;
+            if (state === 'ng') {
+                ngResults.push(regex);
+            } else {
+                wantedResults.push(regex);
+            }
+            validCheckedMods.set(key, state);
         }
     });
 
     checkedMods = validCheckedMods;
 
-    const uniqueEffectResults = [...new Set(effectResults)];
+    const uniqueNg = [...new Set(ngResults)];
+    const uniqueWanted = [...new Set(wantedResults)];
     
-    let ModListResult = uniqueEffectResults.length > 0 ? uniqueEffectResults.join('|') : '';
+    let ngString = uniqueNg.length > 0 ? `"!${uniqueNg.join('|')}"` : '';
+    let wantedString = uniqueWanted.length > 0 ? `"${uniqueWanted.join('|')}"` : '';
 
-    if (ModListResult && ngModChecked) {
-        ModListResult = `"!${ModListResult}"`;
+    let ModListResult = '';
+    if (ngString && wantedString) {
+        ModListResult = `${ngString} ${wantedString}`;
+    } else if (ngString) {
+        ModListResult = ngString;
+    } else if (wantedString) {
+        ModListResult = wantedString;
     }
+    
     document.getElementById('ModListResult').textContent = ModListResult;
 
     if (itemQuantityValue) {
@@ -242,17 +337,17 @@ function generateExtraRegex() {
     let extraRegex = [];
 
     if (scarabValue) {
-        const scarabRegex = getFixedRangeRegex(scarabValue, currentLanguage === 'ja' ? 'ラベ量が上昇:.*' : 're s.*');
+        const scarabRegex = getFixedRangeRegex(scarabValue, currentLanguage === 'ja' ? 'ラベ量.*' : 're s.*');
         extraRegex.push(scarabRegex);
     }
 
     if (currencyValue) {
-        const currencyRegex = getFixedRangeRegex(currencyValue, currentLanguage === 'ja' ? 'シー量が上昇:.*' : 're cur.*');
+        const currencyRegex = getFixedRangeRegex(currencyValue, currentLanguage === 'ja' ? 'シー量.*' : 're cur.*');
         extraRegex.push(currencyRegex);
     }
 
     if (mapValue) {
-        const mapRegex = getFixedRangeRegex(mapValue, currentLanguage === 'ja' ? 'ップ量が上昇:.*' : 're maps.*');
+        const mapRegex = getFixedRangeRegex(mapValue, currentLanguage === 'ja' ? 'ップ量.*' : 're maps.*');
         extraRegex.push(mapRegex);
     }
 
@@ -317,7 +412,7 @@ function resetAll() {
 
     checkedMods.clear();
 
-    document.querySelectorAll('#ModList input[type=checkbox]').forEach(checkbox => checkbox.checked = false);
+    updateModList();
 
     localStorage.removeItem('searchModeState');
     localStorage.removeItem('inputState');
@@ -328,7 +423,7 @@ function resetAll() {
     localStorage.removeItem('magicChecked');
     localStorage.removeItem('rareChecked');
 
-    ModList = {...originalModList};
+    ModList = {...mapModList};
     checkedMods.clear();
     updateModList();
     updateCombinedRegex();
@@ -454,44 +549,6 @@ function handleHashChange() {
     }
 }
 
-function initializeApplication() {
-    console.log('Initializing application...');
-    
-    const initialTab = window.location.hash.slice(1) || 'map';
-    const initialTabId = `${initialTab}Content`;
-    
-    console.log('Initial tab:', initialTab, 'Tab ID:', initialTabId);
-    
-    if (document.getElementById(initialTabId)) {
-        switchTab(initialTabId);
-    } else {
-        console.log('Defaulting to map tab');
-        switchTab('mapContent');
-        history.replaceState(null, '', '#map');
-    }
-
-    window.addEventListener('hashchange', handleHashChange);
-    
-    document.querySelectorAll('#sideMenu .nav-link').forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const tabId = this.dataset.tab;
-            console.log('Tab clicked:', tabId);
-            switchTab(tabId);
-        });
-    });
-
-    loadCheckboxState();
-    loadInputState();
-    loadModCheckboxState();
-    loadSearchModeState();
-    
-    updateModList();
-    updateCombinedRegex();
-    
-    console.log('Application initialized successfully');
-}
-
 function initializeTooltips() {
     document.querySelectorAll('.effect-item').forEach(item => {
         const tooltip = item.querySelector('.tooltip');
@@ -523,27 +580,13 @@ function loadCheckboxState() {
 }
 
 function saveModCheckboxState() {
-    const checkboxes = document.querySelectorAll('#ModList input[type=checkbox]');
-    const state = {};
-    checkboxes.forEach(checkbox => {
-        state[checkbox.id] = checkbox.checked;
-    });
+    if (!checkedMods) return;
+    const state = Object.fromEntries(checkedMods);
     localStorage.setItem('modCheckboxState', JSON.stringify(state));
 }
 
 function addModCheckboxEventListeners() {
-    const checkboxes = document.querySelectorAll('#ModList input[type=checkbox]');
-    checkboxes.forEach(checkbox => {
-        checkbox.addEventListener('change', () => {
-            if (checkbox.checked) {
-                checkedMods.add(checkbox.value);
-            } else {
-                checkedMods.delete(checkbox.value);
-            }
-            updateCombinedRegex();
-            saveModCheckboxState();
-        });
-    });
+    // No longer using checkbox events, selection is handled via effect-item clicks
 }
 
 function updateModList() {
@@ -555,24 +598,33 @@ function updateModList() {
 
     const isT17 = document.getElementById('mapTierCheckbox').checked;
 
-    const selectedMods = [];
-    const unselectedMods = [];
-
-    Object.entries(ModList)
+    const sortedModList = Object.entries(ModList)
         .filter(([key, value]) => !(value.modTier17 && !isT17))
-        .forEach(([key, value]) => {
-            if (checkedMods.has(key)) {
-                selectedMods.push([key, value]);
-            } else {
-                unselectedMods.push([key, value]);
+        .sort(([keyA, valueA], [keyB, valueB]) => {
+            const stateA = checkedMods.get(keyA) || 'none';
+            const stateB = checkedMods.get(keyB) || 'none';
+
+            // 1. Selection State Priority (Checked > None)
+            if (stateA !== 'none' && stateB === 'none') return -1;
+            if (stateA === 'none' && stateB !== 'none') return 1;
+
+            if (stateA !== 'none' && stateB !== 'none') {
+                // 2. Mod State Priority (NG > Wanted)
+                if (stateA === 'ng' && stateB === 'wanted') return -1;
+                if (stateA === 'wanted' && stateB === 'ng') return 1;
             }
+
+            // 3. Tier (Highest first)
+            if (valueB.tier !== valueA.tier) {
+                return valueB.tier - valueA.tier;
+            }
+
+            // 4. Type (Prefix > Suffix)
+            if (valueA.type === 'Prefix' && valueB.type === 'Suffix') return -1;
+            if (valueA.type === 'Suffix' && valueB.type === 'Prefix') return 1;
+
+            return 0;
         });
-
-    selectedMods.sort(([keyA, valueA], [keyB, valueB]) => valueB.tier - valueA.tier);
-    
-    unselectedMods.sort(([keyA, valueA], [keyB, valueB]) => valueB.tier - valueA.tier);
-
-    const sortedModList = [...selectedMods, ...unselectedMods];
 
     sortedModList.forEach(([key, value]) => {
         addEffectItem(key, value);
@@ -586,21 +638,37 @@ function updateModList() {
     }
 }
 
-function loadModCheckboxState() {
-    const state = JSON.parse(localStorage.getItem('modCheckboxState') || '{}');
-    const checkboxes = document.querySelectorAll('#ModList input[type=checkbox]');
-    checkboxes.forEach(checkbox => {
-        checkbox.checked = state[checkbox.id] || false;
-        checkbox.dispatchEvent(new Event('change')); 
-    });
-
-    // チェックボックスの状態をcheckedModsに反映
-    checkedMods.clear();
-    Object.keys(state).forEach(id => {
-        if (state[id]) {
-            checkedMods.add(id);
+function toggleModDetails() {
+    const showDetails = document.getElementById('showModDetailsCheckbox').checked;
+    localStorage.setItem('showModDetails', showDetails);
+    
+    document.querySelectorAll('.badge-container').forEach(container => {
+        if (showDetails) {
+            container.classList.remove('hidden');
+        } else {
+            container.classList.add('hidden');
         }
     });
+}
+
+function loadModDetailsState() {
+    const showDetails = localStorage.getItem('showModDetails') !== 'false'; // Default to true
+    document.getElementById('showModDetailsCheckbox').checked = showDetails;
+}
+
+function loadModCheckboxState() {
+    const saved = localStorage.getItem('modCheckboxState');
+    if (saved) {
+        try {
+            const state = JSON.parse(saved);
+            checkedMods = new Map(Object.entries(state));
+        } catch (e) {
+            console.error('Failed to load modCheckboxState', e);
+            checkedMods = new Map();
+        }
+    } else {
+        checkedMods = new Map();
+    }
 }
 
 function saveInputState() {
@@ -673,7 +741,7 @@ function saveProfile() {
   if (!validateInputs()) return;
 
   profiles[profileName] = {
-    mods: Array.from(checkedMods),
+    mods: Array.from(checkedMods), // Store as [[id, state], ...]
     settings: {
       itemQuantity: document.getElementById('itemQuantityInput').value,
       packSize: document.getElementById('packSizeInput').value,
@@ -744,9 +812,14 @@ function loadProfile() {
     // MODチェックボックス復元 - 存在するMODのみ
     checkedMods.clear();
     if (Array.isArray(profile.mods)) {
-      profile.mods.forEach(mod => {
-        if (ModList[mod]) {
-          checkedMods.add(mod);
+      profile.mods.forEach(modData => {
+        // Handle both old Set-based profiles ([id, ...]) and new Map-based ([[id, state], ...])
+        if (Array.isArray(modData)) {
+            const [id, state] = modData;
+            if (ModList[id]) checkedMods.set(id, state);
+        } else {
+            // Backward compatibility for old profiles (treated as 'ng' by default)
+            if (ModList[modData]) checkedMods.set(modData, 'ng');
         }
       });
     }
@@ -754,9 +827,7 @@ function loadProfile() {
     // プロファイル名を入力欄に表示
     document.getElementById('profileName').value = profileName;
 
-    localStorage.setItem('modCheckboxState', JSON.stringify(
-      Object.fromEntries([...checkedMods].map(mod => [mod, true]))
-    ));
+    saveModCheckboxState();
 
     updateModList();
     updateCombinedRegex();
@@ -827,89 +898,10 @@ function validateInputs() {
   return true;
 }
 
-// 初期化処理
-document.addEventListener('DOMContentLoaded', () => {
-  document.getElementById('profileList').addEventListener('change', function() {
-    if (this.value) {
-      loadProfile();
-      document.getElementById('profileName').value = this.value;
-    }
-  });
-
-  const savedProfiles = localStorage.getItem('poeProfiles');
-  if (savedProfiles) {
-    profiles = JSON.parse(savedProfiles);
-    updateProfileList();
-  }
-
-  document.getElementById('searchAllRadio').addEventListener('change', updateSearchMode);
-  document.getElementById('searchAnyRadio').addEventListener('change', updateSearchMode);
-
-  document.getElementById('normalCheckbox').addEventListener('change', () => {
-    saveSearchModeState();
-    updateCombinedRegex();
-  });
-  document.getElementById('magicCheckbox').addEventListener('change', () => {
-    saveSearchModeState();
-    updateCombinedRegex();
-  });
-  document.getElementById('rareCheckbox').addEventListener('change', () => {
-    saveSearchModeState();
-    updateCombinedRegex();
-  });
-
-  const inputFields = [
-    'itemQuantityInput',
-    'packSizeInput',
-    'rarityInput',
-    'scarabInput',
-    'currencyInput',
-    'mapInput'
-  ];
-
-  inputFields.forEach(fieldId => {
-    const field = document.getElementById(fieldId);
-    field.addEventListener('input', () => {
-      saveInputState();
-      updateCombinedRegex();
-    });
-  });
-
-  initializeApplication();
-  
-  initializeTooltips();
-});
-
-// プロファイル削除
-function deleteProfile() {
-  const profileName = document.getElementById('profileList').value;
-  if (!profileName || !confirm(`${profileName}を削除しますか？`)) return;
-
-  delete profiles[profileName];
-  localStorage.setItem('poeProfiles', JSON.stringify(profiles));
-  updateProfileList();
+// フィルターリセット (例として残す、または削除検討)
+function resetFilterSettings() {
+    resetAll();
 }
-
-// プロファイルリスト更新
-function updateProfileList() {
-  const select = document.getElementById('profileList');
-  select.innerHTML = '<option value="">-- プロファイル選択 --</option>';
-
-  Object.keys(profiles).forEach(name => {
-    const option = document.createElement('option');
-    option.value = name;
-    option.textContent = name;
-    select.appendChild(option);
-  });
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-  const savedProfiles = localStorage.getItem('poeProfiles');
-  if (savedProfiles) {
-    profiles = JSON.parse(savedProfiles);
-    updateProfileList();
-  }
-});
 
 function exportProfiles() {
   const data = JSON.stringify(profiles);
@@ -1339,7 +1331,7 @@ function applyConvertedToMapMods() {
     const matchedMods = findModsFromJpRegex(jpRegexOutput);
     
     matchedMods.forEach(modKey => {
-        checkedMods.add(modKey);
+        checkedMods.set(modKey, 'ng');
     });
 
     updateModList();
@@ -1424,27 +1416,31 @@ function copyTextToClipboard(text) {
         });
 }
 
-// 言語切り替え時にツールチップも更新
-function toggleLanguage() {
-    currentLanguage = currentLanguage === 'ja' ? 'en' : 'ja';
-    updateModList();
-    updateCombinedRegex();
-    updateTooltipContent(); // ツールチップ内容を更新
+// End of file cleanup
+
+
+// プロファイルをlocalStorageから読み込む
+function loadProfiles() {
+    const saved = localStorage.getItem('poeProfiles');
+    if (saved) {
+        try {
+            profiles = JSON.parse(saved);
+            updateProfileList();
+        } catch (e) {
+            console.error('プロファイルの読み込みエラー:', e);
+            profiles = {};
+        }
+    }
 }
 
 // 初期化時にツールチップを設定
 function initializeApplication() {
-    console.log('Initializing application...');
-    
     const initialTab = window.location.hash.slice(1) || 'map';
     const initialTabId = `${initialTab}Content`;
-    
-    console.log('Initial tab:', initialTab, 'Tab ID:', initialTabId);
     
     if (document.getElementById(initialTabId)) {
         switchTab(initialTabId);
     } else {
-        console.log('Defaulting to map tab');
         switchTab('mapContent');
         history.replaceState(null, '', '#map');
     }
@@ -1455,19 +1451,135 @@ function initializeApplication() {
         link.addEventListener('click', function(e) {
             e.preventDefault();
             const tabId = this.dataset.tab;
-            console.log('Tab clicked:', tabId);
             switchTab(tabId);
         });
     });
 
+    // Load states
+    loadProfiles();
     loadCheckboxState();
     loadInputState();
     loadModCheckboxState();
     loadSearchModeState();
+    loadModDetailsState();
     
+    // Wire up metadata toggle
+    const detailCheckbox = document.getElementById('showModDetailsCheckbox');
+    if (detailCheckbox) {
+        detailCheckbox.addEventListener('change', toggleModDetails);
+    }
+    
+    initializeTooltips();
     updateModList();
     updateCombinedRegex();
-    
-    console.log('Application initialized successfully');
-
 }
+
+// Start the app
+document.addEventListener('DOMContentLoaded', initializeApplication);
+
+
+// セレクトが変わったときの処理
+function onLeagueSelectChange() {
+    const select = document.getElementById('leagueSelect');
+    const customInput = document.getElementById('leagueInput');
+    if (select.value === '__custom__') {
+        customInput.style.display = '';
+        customInput.focus();
+    } else {
+        customInput.style.display = 'none';
+    }
+    saveTradeSettings();
+}
+
+// 実際に使うリーグ名を取得する
+function getLeagueName() {
+    const select = document.getElementById('leagueSelect');
+    if (select.value === '__custom__') {
+        return document.getElementById('leagueInput').value.trim() || 'Mirage';
+    }
+    return select.value;
+}
+
+function saveTradeSettings() {
+    const league = getLeagueName();
+    const leagueIsCustom = document.getElementById('leagueSelect').value === '__custom__';
+    const method = document.getElementById('tradeMethodSelect').value;
+    const minModCount = document.getElementById('minModCountInput').value;
+    const memoryMap = document.getElementById('memoryMapCheckbox').checked;
+    const mapTierMin = document.getElementById('mapTierMinInput').value;
+    const mapTierMax = document.getElementById('mapTierMaxInput').value;
+    const buyoutPrice = document.getElementById('buyoutPriceSelect').value;
+    const buyoutPriceMin = document.getElementById('buyoutPriceMinInput').value;
+    const buyoutPriceMax = document.getElementById('buyoutPriceMaxInput').value;
+    const wantedMode = document.getElementById('wantedModModeSelect').value;
+
+    localStorage.setItem('poeTradeLeague', league);
+    localStorage.setItem('poeTradeLeagueIsCustom', leagueIsCustom);
+    localStorage.setItem('poeTradeMethod', method);
+    localStorage.setItem('poeTradeMinModCount', minModCount);
+    localStorage.setItem('poeTradeMemoryMap', memoryMap);
+    localStorage.setItem('poeTradeMapTierMin', mapTierMin);
+    localStorage.setItem('poeTradeMapTierMax', mapTierMax);
+    localStorage.setItem('poeTradeBuyoutPrice', buyoutPrice);
+    localStorage.setItem('poeTradeBuyoutPriceMin', buyoutPriceMin);
+    localStorage.setItem('poeTradeBuyoutPriceMax', buyoutPriceMax);
+    localStorage.setItem('poeTradeWantedMode', wantedMode);
+}
+
+function loadTradeSettings() {
+    const league = localStorage.getItem('poeTradeLeague') || "Mirage";
+    const leagueIsCustom = localStorage.getItem('poeTradeLeagueIsCustom') === 'true';
+    let method = localStorage.getItem('poeTradeMethod');
+    if (method === null) method = "securable";
+    let minModCount = localStorage.getItem('poeTradeMinModCount');
+    if (minModCount === null) minModCount = "8";
+    const memoryMap = localStorage.getItem('poeTradeMemoryMap') === 'true';
+    const mapTierMin = localStorage.getItem('poeTradeMapTierMin') || "16";
+    const mapTierMax = localStorage.getItem('poeTradeMapTierMax') || "16";
+    const buyoutPrice = localStorage.getItem('poeTradeBuyoutPrice') || "";
+    const buyoutPriceMin = localStorage.getItem('poeTradeBuyoutPriceMin') || "";
+    const buyoutPriceMax = localStorage.getItem('poeTradeBuyoutPriceMax') || "";
+    const wantedMode = localStorage.getItem('poeTradeWantedMode') || "any";
+
+    const select = document.getElementById('leagueSelect');
+    const customInput = document.getElementById('leagueInput');
+
+    if (leagueIsCustom) {
+        select.value = '__custom__';
+        customInput.style.display = '';
+        customInput.value = league;
+    } else {
+        // 保存されたリーグがセレクトの選択肢にあればそれを選択
+        const hasOption = Array.from(select.options).some(opt => opt.value === league);
+        if (hasOption) {
+            select.value = league;
+            customInput.style.display = 'none';
+        } else {
+            select.value = '__custom__';
+            customInput.style.display = '';
+            customInput.value = league;
+        }
+    }
+
+    document.getElementById('tradeMethodSelect').value = method;
+    document.getElementById('minModCountInput').value = minModCount;
+    document.getElementById('memoryMapCheckbox').checked = memoryMap;
+    document.getElementById('mapTierMinInput').value = mapTierMin;
+    document.getElementById('mapTierMaxInput').value = mapTierMax;
+    document.getElementById('buyoutPriceSelect').value = buyoutPrice;
+    document.getElementById('buyoutPriceMinInput').value = buyoutPriceMin;
+    document.getElementById('buyoutPriceMaxInput').value = buyoutPriceMax;
+    document.getElementById('wantedModModeSelect').value = wantedMode;
+}
+
+function toggleTradeSettings() {
+    const panel = document.getElementById('tradeSettingsPanel');
+    panel.classList.toggle('open');
+}
+
+// Ensure loadTradeSettings is called on window load
+const originalOnLoad = window.onload;
+window.onload = function() {
+    if (originalOnLoad) originalOnLoad();
+    loadTradeSettings();
+};

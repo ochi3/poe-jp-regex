@@ -235,6 +235,25 @@ button:active {
     transform: translateY(0);
 }
 
+button.btn-primary-highlight {
+    background: #5c9e47; /* slightly softer green/gold accent */
+    border: 1px solid #75ba5f;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+button.btn-primary-highlight:hover {
+    background: #6ab552;
+}
+
+button.btn-secondary-highlight {
+    background: var(--bg-tertiary);
+    color: var(--accent-primary);
+    border: 1px solid var(--border-color);
+}
+button.btn-secondary-highlight:hover {
+    background: var(--bg-input);
+    border-color: var(--accent-primary);
+}
+
 /* ========================================
    Output Area
    ======================================== */
@@ -424,7 +443,37 @@ button:active {
 /* ========================================
    Mod Items
    ======================================== */
-.effect-item,
+.effect-item {
+    padding: 12px;
+    margin: 8px 0;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+    position: relative !important; /* Fix for absolute children */
+    overflow: visible !important;
+}
+
+.mod-group.effect-item {
+    padding: 12px;
+    margin: 8px 0;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex !important; /* Force flex for horizontal layout */
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    gap: 12px !important;
+    text-align: left !important;
+    position: relative !important;
+}
+
 .mod-group-item {
     padding: 12px;
     margin: 8px 0;
@@ -433,13 +482,72 @@ button:active {
     border-radius: 6px;
     cursor: pointer;
     transition: all 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    text-align: left;
 }
+
+.effect-item input[type="checkbox"] {
+    margin-top: 4px;
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+}
+
+.mod-text {
+    flex: 1 !important;
+    text-align: left !important;
+    line-height: 1.4 !important;
+    align-self: center !important;
+    padding-right: 460px !important; /* Reserve more space to prevent overlap with multi-badges */
+    overflow-wrap: break-word !important;
+}
+
+.badge-container {
+    position: absolute !important;
+    right: 12px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    display: flex !important;
+    flex-direction: row-reverse !important;
+    flex-wrap: nowrap !important;
+    justify-content: flex-start !important;
+    gap: 6px !important;
+    max-width: 450px !important; /* Increased significantly to prevent wrapping */
+    pointer-events: none !important;
+    z-index: 5 !important;
+}
+
+.badge-container.hidden {
+    display: none !important;
+}
+
+
 
 .effect-item:hover,
 .mod-group-item:hover {
     background: var(--bg-input);
     transform: translateY(-2px);
     box-shadow: 0 4px 8px var(--shadow);
+}
+
+.effect-item.ng {
+    background: rgba(231, 76, 60, 0.15) !important;
+    border: 1px solid var(--accent-red) !important;
+}
+
+.effect-item.wanted {
+    background: rgba(76, 175, 80, 0.15) !important;
+    border: 1px solid var(--accent-primary) !important;
+}
+
+.effect-item input[type="checkbox"] {
+    display: none !important;
+}
+
+.effect-item .mod-label {
+    padding-left: 0 !important;
 }
 
 .mod-group-item.prefix {
@@ -449,6 +557,30 @@ button:active {
 .mod-group-item.suffix {
     border-left: 4px solid var(--accent-blue);
 }
+
+.badge-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 4px;
+    margin-left: 30px; /* Offset to align with text under checkbox */
+}
+
+.badge {
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: bold;
+    color: white;
+}
+
+.type-badge { background: #555; }
+.qty-badge { background: #a54242; }
+.rarity-badge { background: #a58242; }
+.pack-badge { background: #42a5a5; }
+.map-badge { background: #4264a5; }
+.currency-badge { background: #a5a542; }
+.scarab-badge { background: #a542a5; }
 
 .mod-group-item.selected {
     background: rgba(76, 175, 80, 0.2);
@@ -945,4 +1077,92 @@ button:active {
     opacity: 1;
     visibility: visible;
     transform: translateX(-50%) translateY(-4px);
+}
+
+/* ========================================
+   Side Panel (Advanced Settings)
+   ======================================== */
+.side-panel {
+    position: fixed;
+    top: 0;
+    right: -360px; /* Hidden by default */
+    width: 360px;
+    height: 100vh;
+    background: var(--bg-secondary);
+    border-left: 1px solid var(--border-color);
+    box-shadow: -5px 0 15px rgba(0,0,0,0.5);
+    z-index: 1000;
+    transition: right 0.3s ease;
+    overflow-y: auto;
+}
+
+.side-panel.open {
+    right: 0;
+}
+
+.side-panel-content {
+    padding: 32px 24px;
+}
+
+.side-panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 16px;
+}
+
+.side-panel-header h3 {
+    color: var(--accent-primary);
+    margin: 0;
+    font-size: 20px;
+}
+
+.close-btn {
+    background: none !important;
+    border: none !important;
+    color: var(--text-secondary) !important;
+    font-size: 32px !important;
+    cursor: pointer !important;
+    padding: 0 !important;
+    line-height: 1 !important;
+}
+
+.close-btn:hover {
+    color: var(--text-primary) !important;
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+.settings-group {
+    margin-bottom: 24px;
+}
+
+.settings-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.settings-group input,
+.settings-group select {
+    width: 100%;
+    background: var(--bg-input);
+}
+
+.settings-hint {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-top: 6px;
+    font-style: italic;
+}
+
+.primary-btn {
+    width: 100%;
+    margin-top: 16px;
+    padding: 12px;
+    font-size: 15px;
 }
