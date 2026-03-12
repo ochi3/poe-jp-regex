@@ -458,6 +458,10 @@ button.btn-secondary-highlight:hover {
     overflow: visible !important;
 }
 
+.effect-item.hidden {
+    display: none !important;
+}
+
 .mod-group.effect-item {
     padding: 12px;
     margin: 8px 0;

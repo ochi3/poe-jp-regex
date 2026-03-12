@@ -11,6 +11,7 @@ function toggleLanguage() {
 
 // Mod名の#プレースホルダーを実際の値で置換して表示
 function formatModText(text, value) {
+    if (!text) return text || '';
     if (!value) return text;
 
     const textParts = text.split('|');
@@ -45,6 +46,7 @@ function addEffectItem(key, value) {
 
     const effectItem = document.createElement('div');
     effectItem.classList.add('effect-item');
+    effectItem.dataset.modKey = key;  // キーをdata属性に保持 (htmlForより確実)
     
     // Set initial state class
     if (checkedMods.get(key) === 'ng') {
@@ -494,22 +496,30 @@ let currentSearchTerm = '';
 function filterEffects() {
     currentSearchTerm = document.getElementById('effectSearch').value.toLowerCase();
     const ModListDiv = document.getElementById('ModList');
-
     const effects = ModListDiv.getElementsByClassName('effect-item');
     const terms = currentSearchTerm.split(/\s+/).filter(t => t);
 
     for (let i = 0; i < effects.length; i++) {
-        const label = effects[i].getElementsByTagName('label')[0];
-        const mod = ModList[label.htmlFor];
-        const searchTargets = currentLanguage === 'ja' ? [mod.mod, mod.engMod] : [mod.engMod, mod.mod];
+        if (terms.length === 0) {
+            effects[i].classList.remove('hidden');
+            continue;
+        }
+
+        const textSpan = effects[i].querySelector('.mod-text');
+        const displayedText = textSpan ? textSpan.textContent.toLowerCase() : '';
+
+        const modKey = effects[i].dataset.modKey;
+        const mod = modKey ? ModList[modKey] : null;
+        const rawJa = mod ? (mod.mod || '') : '';
+        const rawEn = mod ? (mod.engMod || '') : '';
 
         const match = terms.every(term =>
-            searchTargets.some(target =>
-                target.toLowerCase().includes(term)
-            )
+            displayedText.includes(term) ||
+            rawJa.toLowerCase().includes(term) ||
+            rawEn.toLowerCase().includes(term)
         );
 
-        effects[i].style.display = match ? '' : 'none';
+        effects[i].classList.toggle('hidden', !match);
     }
 }
 
