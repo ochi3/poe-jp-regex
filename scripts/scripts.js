@@ -1594,3 +1594,80 @@ window.onload = function() {
     if (originalOnLoad) originalOnLoad();
     loadTradeSettings();
 };
+
+// 要望・不具合報告
+const FEEDBACK_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSdrlylmOp34bzayRTtuW19QyO9sRhV1BD0y_kUUnL8Mn5vHtQ/formResponse";
+const FEEDBACK_ENTRY_ID = "entry.386755920";
+let isFeedbackSubmitting = false;
+
+function openFeedbackModal() {
+    const modal = document.getElementById('feedbackModal');
+    // 状態をリセット
+    document.getElementById('feedbackFormContainer').style.display = 'block';
+    document.getElementById('feedbackFooterButtons').style.display = 'block';
+    document.getElementById('feedbackSuccessMessage').style.display = 'none';
+    document.getElementById('feedbackCloseButton').style.display = 'none';
+    document.getElementById('feedbackText').value = '';
+    
+    modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+}
+
+function closeFeedbackModal() {
+    const modal = document.getElementById('feedbackModal');
+    modal.style.display = 'none';
+    document.body.style.overflow = '';
+    isFeedbackSubmitting = false;
+}
+
+function submitFeedback() {
+    const text = document.getElementById('feedbackText').value.trim();
+    if (!text) {
+        alert("内容を入力してください。");
+        return;
+    }
+
+    if (isFeedbackSubmitting) return;
+    isFeedbackSubmitting = true;
+
+    // 直接送信するための隠しフォームを作成
+    const form = document.createElement('form');
+    form.action = FEEDBACK_FORM_URL;
+    form.method = 'POST';
+    form.target = 'hidden_iframe';
+    form.style.display = 'none';
+
+    const input = document.createElement('input');
+    input.name = FEEDBACK_ENTRY_ID;
+    input.value = text;
+    form.appendChild(input);
+
+    document.body.appendChild(form);
+    form.submit();
+    document.body.removeChild(form);
+}
+
+function onFeedbackSubmitted() {
+    if (!isFeedbackSubmitting) return;
+    
+    // 表示の切り替え
+    document.getElementById('feedbackFormContainer').style.display = 'none';
+    document.getElementById('feedbackFooterButtons').style.display = 'none';
+    document.getElementById('feedbackSuccessMessage').style.display = 'block';
+    document.getElementById('feedbackCloseButton').style.display = 'block';
+}
+
+// モーダルの外側をクリックして閉じる
+window.onclick = function(event) {
+    const feedbackModal = document.getElementById('feedbackModal');
+    const flaskModal = document.getElementById('flaskModGroupModal');
+    const itemModal = document.getElementById('itemModGroupModal');
+    
+    if (event.target === feedbackModal) {
+        closeFeedbackModal();
+    } else if (event.target === flaskModal) {
+        closeFlaskModal();
+    } else if (event.target === itemModal) {
+        closeItemModal();
+    }
+};

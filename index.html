@@ -37,8 +37,8 @@
             Discord @ochi3c<br>
             Twitter <a href="https://x.com/ochi3c" style="color: var(--accent-primary);">@ochi3c</a>
         </h4>
-        <h4>不具合等ありましたらご連絡ください。</h4>
-        <h4>Change log<br>26/03/12<br>トレードリンク機能追加<br>欲しいMod検索モード(Any/All)追加<br><br>26/03/10<br>カレンシー、マップ、スカラベ量の対応、新MOD追加<br><br>25/10/21<br>ベンダー(ACT用)更新、ワンドと弓の修正<br><br>25/10/17<br>いろいろ追加<br><br>25/09/19<br>200以上の数値に対応、レアリティの追加<br><br>25/07/02<br>チェックボックスバグ修正<br><br>25/06/05<br>文字数制限50→250<br></h4>
+        <button onclick="openFeedbackModal()" style="width: 100%; margin-bottom: 16px; background: var(--bg-tertiary); color: var(--accent-primary); border: 1px solid var(--border-color);">要望・不具合を送信</button>
+        <h4>Change log<br>26/03/15<br>ビースト価格自動更新機能追加<br>要望・不具合報告機能追加<br><br>26/03/12<br>トレードリンク機能追加<br>modの詳細を追加<br><br>26/03/10<br>カレンシー、マップ、スカラベ量の対応、新MOD追加<br><br>25/10/21<br>ベンダー(ACT用)更新、ワンドと弓の修正<br><br>25/10/17<br>いろいろ追加<br><br>25/09/19<br>200以上の数値に対応、レアリティの追加<br><br>25/07/02<br>チェックボックスバグ修正<br><br>25/06/05<br>文字数制限50→250<br></h4>
     </div>
 
     <div id="contentArea">
@@ -869,6 +869,46 @@
             </div>
         </div>
     </div>
+
+    <!-- モーダル: 要望・不具合報告 -->
+    <div id="feedbackModal" class="modal">
+        <div class="modal-content" style="max-width: 600px;">
+            <div class="modal-header">
+                <h3>要望・不具合報告</h3>
+                <span onclick="closeFeedbackModal()" class="modal-close">&times;</span>
+            </div>
+            
+            <div id="feedbackFormContainer">
+                <p style="font-size: 14px; margin-bottom: 12px; color: var(--text-secondary);">
+                    不具合の報告や、機能追加の要望など、お気軽にお送りください。<br>
+                    Googleフォーラムを使用しています。
+                </p>
+                <div class="settings-group">
+                    <label style="display: block; margin-bottom: 8px;">内容:</label>
+                    <textarea id="feedbackText" rows="6" placeholder="こちらに詳細を入力してください..." style="width: 100%; resize: vertical; min-height: 150px;"></textarea>
+                </div>
+            </div>
+
+            <div id="feedbackSuccessMessage" style="display: none; text-align: center; padding: 40px 0;">
+                <div style="font-size: 48px; color: var(--accent-primary); margin-bottom: 16px;">✓</div>
+                <h3 style="margin-bottom: 8px;">送信完了</h3>
+                <p style="color: var(--text-secondary);">貴重なご意見ありがとうございました！</p>
+            </div>
+
+            <div class="modal-footer">
+                <div id="feedbackFooterButtons" style="display: flex; gap: 10px; justify-content: flex-end;">
+                    <button onclick="submitFeedback()" class="primary-btn">送信する</button>
+                    <button onclick="closeFeedbackModal()" style="background: #333; color: #fff;">キャンセル</button>
+                </div>
+                <div id="feedbackCloseButton" style="display: none; text-align: right;">
+                    <button onclick="closeFeedbackModal()">閉じる</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- フォーム送信時の中継用(画面遷移防止) -->
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="onFeedbackSubmitted()"></iframe>
 </body>
 
 </html>
