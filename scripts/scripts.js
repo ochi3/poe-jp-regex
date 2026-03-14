@@ -930,8 +930,8 @@ function importProfiles(event) {
 }
 
 // ビースト
-let beastSortColumn = null;
-let beastSortDirection = 'asc';
+let beastSortColumn = 'price';
+let beastSortDirection = 'desc';
 
 // ビーストリストのレンダリング（ソート機能追加）
 function renderbeastlist() {
@@ -1224,6 +1224,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
   loadBeastCheckboxState();
   renderbeastlist();
+  updateSortIcons(); // 初期ソート状態のアイコンを表示
   updateBeastRegex();
 
   const savedBeastProfiles = localStorage.getItem('beastProfiles');

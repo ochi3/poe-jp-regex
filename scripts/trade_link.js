@@ -20,20 +20,25 @@ function buildTradeUrl() {
 
     checkedMods.forEach((state, jpModName) => {
         const modInfo = mapModList[jpModName];
-        if (modInfo && modInfo.tradeStatId) {
-            const statObj = {
-                id: modInfo.tradeStatId,
-                disabled: false
-            };
-            
+        if (!modInfo) return;
+
+        // tradeStatIds（配列）を使用
+        const ids = modInfo.tradeStatIds || [];
+
+        if (ids.length === 0) {
+            console.warn(`No tradeStatIds found for: ${jpModName}`);
+            return;
+        }
+
+        ids.forEach(id => {
+            if (!id) return; // 空文字のIDは無視
+            const statObj = { id, disabled: false };
             if (state === 'ng') {
                 notStats.push(statObj);
             } else {
                 wantedStats.push(statObj);
             }
-        } else if (modInfo) {
-            console.warn(`No tradeStatId found for: ${jpModName}`);
-        }
+        });
     });
 
     const stats = []; // General AND stats (like Mod Count, Memory Map)

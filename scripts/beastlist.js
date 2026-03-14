@@ -4,91 +4,91 @@ const beastlist = {
     family: "深海",
     effect: "アイテムを変換：覚醒サポートジェムのロールを再生成する",
     regex: "ド・ウ",
-    chaosValue: "84"
+    chaosValue: "8"
   },
   "ブラック・モリガン": {
     engName: "Black Mórrigan",
     family: "原生林",
     effect: "アイテムを修正：可能な限り最大リンク数にする",
     regex: "リガ",
-    chaosValue: "50"
+    chaosValue: "120"
   },
   "クレイシアンのキメラル": {
     engName: "Craicic Chimeral",
     family: "深海",
     effect: "インプリントを作成: マジックアイテム",
     regex: "ンのキ",
-    chaosValue: "50"
+    chaosValue: "60"
   },
   "ワイルド・ブリスル・マトロン": {
     engName: "Wild Bristle Matron",
     family: "原生林",
     effect: "アイテムのモッドを変化: 非ユニークアイテムにクラフトメタモッドを追加",
     regex: "ル・マ",
-    chaosValue: "69"
+    chaosValue: "251.1"
   },
   "ビビッド・ヴァルチャー": {
     engName: "Vivid Vulture",
     family: "砂漠",
     effect: "アイテムを変換: シンセシス暗黙モッドをリロール",
     regex: "ド・ヴ",
-    chaosValue: "32"
+    chaosValue: "465"
   },
   "ワイルド・ヘリオン・アルファ": {
     engName: "Wild Hellion Alpha",
     family: "原生林",
     effect: "アイテムのモッドを変化: 見つめる者の目のモッドをリロール。最大ライフ、マナおよびエナジーシールドのモッドはリロールできない",
     regex: "ド・ヘリ",
-    chaosValue: "44"
+    chaosValue: "162.9"
   },
   "ワイルド・ブランブルバック": {
     engName: "Wild Brambleback",
     family: "原生林",
     effect: "アイテムを変換: コラプト状態でない覚醒のジェムのレベルを1上げる",
     regex: "ド・ブラ",
-    chaosValue: "17.7"
+    chaosValue: "34.5"
   },
   "平原の始祖、ファルウル": {
     engName: "Farrul, First of the Plains",
     family: "原生林",
     effect: "アイテムにアスペクトスキルを追加: 猫のアスペクト",
     regex: "祖、ファ",
-    chaosValue: "15"
+    chaosValue: "50"
   },
   "フィヌムスのプレイグドアラクニド": {
     engName: "Fenumal Plagued Arachnid",
     family: "洞窟",
     effect: "アイテムをスプリット: それぞれ半分のモッドを持つ2個のアイテムにスプリット",
     regex: "のプレ",
-    chaosValue: "7.58"
+    chaosValue: "19"
   },
   "プライマル・クリストコーラー": {
     engName: "Primal Cystcaller",
     family: "原生林",
     effect: "アトラスクラフトを獲得: キラックミッションを5個獲得 ミッションの色は赤ビーストのレベルに基づく",
     regex: "ル・クリ",
-    chaosValue: "5"
+    chaosValue: "6"
   },
   "夜の始祖、フィヌムス": {
     engName: "Fenumus, First of the Night",
     family: "洞窟",
     effect: "アイテムにアスペクトスキルを追加: 蜘蛛のアスペクト",
     regex: "祖、フィ",
-    chaosValue: "14"
+    chaosValue: "28"
   },
   "空の始祖、サカワル": {
     engName: "Saqawal, First of the Sky",
     family: "砂漠",
     effect: "アイテムにアスペクトスキルを追加: 鳥のアスペクト",
     regex: "祖、サカ",
-    chaosValue: "2"
+    chaosValue: "4"
   },
   "深海の始祖、クレイシアン": {
     engName: "Craiceann, First of the Deep",
     family: "深海",
     effect: "アイテムにアスペクトスキルを追加: 蟹のアスペクト",
     regex: "祖、ク",
-    chaosValue: "7.4"
+    chaosValue: "15"
   },
   "プライマル・レックス・メイトリアーク": {
     engName: "Primal Rhex Matriarch",
@@ -109,28 +109,28 @@ const beastlist = {
     family: "深海",
     effect: "アイテムを変化: 可能な最大リンク数\nカレンシーアイテムを作成: 結合のオーブ\nカレンシーアイテムを作成: 連結のオーブ2個",
     regex: "アンの砂",
-    chaosValue: "1"
+    chaosValue: "3"
   },
   "ファルウルのタイガー・アルファ": {
     engName: "Farric Tiger Alpha",
     family: "原生林",
     effect: "ポータルを開く: ファルウルの巣穴",
     regex: "ルのタイ",
-    chaosValue: "3"
+    chaosValue: "4"
   },
   "サカワルのレックス": {
     engName: "Saqawine Rhex",
     family: "砂漠",
     effect: "ポータルを開く: サカワルのねぐら",
     regex: "ルのレッ",
-    chaosValue: "0.59"
+    chaosValue: "1"
   },
   "ファルウルのウルフ・アルファ": {
     engName: "Farric Wolf Alpha",
     family: "原生林",
     effect: "アイテムのモッドを変化: プレフィックスを1つ追加し、ランダムなサフィックスを1つ削除 レアアイテムにのみ適用可能",
     regex: "ルフ・ア",
-    chaosValue: "1"
+    chaosValue: "2"
   },
   "クレイシアンのタカアシガニ": {
     engName: "Craicic Spider Crab",
@@ -144,14 +144,14 @@ const beastlist = {
     family: "深海",
     effect: "マップをコラプト: 基礎品質30%を付与\nマップをコラプト: ダブルコラプト",
     regex: "ンの臣",
-    chaosValue: "1"
+    chaosValue: "4"
   },
   "ファルウルのリンクス・アルファ": {
     engName: "Farric Lynx Alpha",
     family: "原生林",
     effect: "アイテムのモッドを変化: サフィックスを1つ追加し、ランダムなプレフィックスを1つ削除",
     regex: "ルのリ",
-    chaosValue: "1"
+    chaosValue: "2"
   },
   "クレイシアンの口": {
     engName: "Craicic Maw",
@@ -172,14 +172,14 @@ const beastlist = {
     family: "深海",
     effect: "アトラスクラフトを獲得: 無料の各マップクラフトオプションを1ずつ獲得",
     regex: "ル・クラ",
-    chaosValue: "1"
+    chaosValue: "4"
   },
   "ファルウルのフロストヘリオン・アルファ": {
     engName: "Farric Frost Hellion Alpha",
     family: "原生林",
     effect: "アイテムを変換: アミュレットをタリスマンに変換 インフルエンスアイテムには適用できない\nカレンシーアイテムを作成: 地平のオーブ3個",
     regex: "ルのフロ",
-    chaosValue: "0.59"
+    chaosValue: "1"
   },
   "サカワルのヴァルチャー": {
     engName: "Saqawine Vulture",
@@ -193,35 +193,35 @@ const beastlist = {
     family: "原生林",
     effect: "アイテムを作成: レベル21コラプト状態ジェム",
     regex: "ルのピッ",
-    chaosValue: "0.59"
+    chaosValue: "1"
   },
   "サカワルのロア": {
     engName: "Saqawine Rhoa",
     family: "砂漠",
     effect: "カレンシーアイテムを作成: 色彩のオーブ8個",
     regex: "ルのロア",
-    chaosValue: "0.59"
+    chaosValue: "1"
   },
   "フィヌムスのスコーピオン": {
     engName: "Fenumal Scorpion",
     family: "洞窟",
     effect: "ユニークアイテムを変換: 他のユニークアイテムに変換\nマップをコラプト: ダブルコラプト",
     regex: "スのスコ",
-    chaosValue: "0.59"
+    chaosValue: "1"
   },
   "サカワルのブラッドヴァイパー": {
     engName: "Saqawine Blood Viper",
     family: "砂漠",
     effect: "ユニークアイテムを作成: 剣または斧\nアイテムのモッドを変化: エルダーアイテムにモッドを追加",
     regex: "ルのブラ",
-    chaosValue: "0.59"
+    chaosValue: "1"
   },
   "ファルウルのエイプ": {
     engName: "Farric Ape",
     family: "原生林",
     effect: "ユニークアイテムを作成: ベルト",
     regex: "ルのエイ",
-    chaosValue: "0.59"
+    chaosValue: "1"
   },
   "クレイシアンのサベージクラブ": {
     engName: "Craicic Savage Crab",
@@ -242,111 +242,111 @@ const beastlist = {
     family: "原生林",
     effect: "ユニークアイテムを作成: 鎧",
     regex: "のウルサ",
-    chaosValue: "0.24"
+    chaosValue: "1"
   },
   "フィヌムスの女王": {
     engName: "Fenumal Queen",
     family: "洞窟",
     effect: "ユニークアイテムを作成: スタッフ\nアイテムのモッドを変化: リディーマーアイテムにモッドを追加",
     regex: "スの女王",
-    chaosValue: "0.38"
+    chaosValue: "1"
   },
   "ファルウルのゴライアス": {
     engName: "Farric Goliath",
     family: "原生林",
     effect: "ユニークアイテムを作成: 弓\nアイテムのモッドを変化: クルセイダーアイテムにモッドを追加",
     regex: "ルのゴラ",
-    chaosValue: "0.57"
+    chaosValue: "1"
   },
   "フィヌムスのデヴァワラー": {
     engName: "Fenumal Devourer",
     family: "洞窟",
     effect: "ユニークアイテムを作成: 盾または矢筒\nアイテムのモッドを変化: シェイパーアイテムにモッドを追加",
     regex: "スのデヴ",
-    chaosValue: "0.59"
+    chaosValue: "1"
   },
   "クレイシアンのウォッチャー": {
     engName: "Craicic Watcher",
     family: "深海",
     effect: "ユニークアイテムを作成: 鉤爪または短剣\nアイテムのモッドを変化: ハンターアイテムにモッドを追加",
     regex: "ンのウォ",
-    chaosValue: "0.59"
+    chaosValue: "1"
   },
   "サカワルのキメラル": {
     engName: "Saqawine Chimeral",
     family: "砂漠",
     effect: "カレンシーアイテムを作成: ランダムなカレンシー10個",
     regex: "ルのキメ",
-    chaosValue: "0.59"
+    chaosValue: "1"
   },
   "ファルウルのマグマ・ハウンド": {
     engName: "Farric Magma Hound",
     family: "原生林",
     effect: "アイテムを作成: 品質23%コラプト状態ジェム",
     regex: "ルのマグ",
-    chaosValue: "0.59"
+    chaosValue: "1"
   },
   "ファルウルのタウロス": {
     engName: "Farric Taurus",
     family: "原生林",
     effect: "ユニークアイテムを作成: マップ",
     regex: "ルのタウ",
-    chaosValue: "0.55"
+    chaosValue: "1"
   },
   "クレイシアンのイカ": {
     engName: "Craicic Squid",
     family: "深海",
     effect: "レアアイテムを作成: タリスマン",
     regex: "ンのイカ",
-    chaosValue: "0.38"
+    chaosValue: "1"
   },
   "クレイシアンのシールドクラブ": {
     engName: "Craicic Shield Crab",
     family: "深海",
     effect: "カレンシーアイテムを作成: 宝飾職人のオーブ4個\nカレンシーアイテムを作成: 連結のオーブ2個\nアイテムを変化: 可能な最大ソケット数",
     regex: "ンのシー",
-    chaosValue: "0.59"
+    chaosValue: "1"
   },
   "フィヌムスのウィドウ": {
     engName: "Fenumal Widow",
     family: "洞窟",
     effect: "ユニークアイテムを作成: 手袋",
     regex: "スのウィ",
-    chaosValue: "0.24"
+    chaosValue: "1"
   },
   "ファルウルのフレイムヘリオン・アルファ": {
     engName: "Farric Flame Hellion Alpha",
     family: "原生林",
     effect: "ユニークアイテムを作成: 指輪",
     regex: "ルのフレ",
-    chaosValue: "0.56"
+    chaosValue: "1"
   },
   "ファルウルのチーフテン": {
     engName: "Farric Chieftain",
     family: "原生林",
     effect: "ユニークアイテムを作成: アミュレット",
     regex: "ウルのチ",
-    chaosValue: "0.28"
+    chaosValue: "1"
   },
   "ファリック・ゴートマン": {
     engName: "Farric Goatman",
     family: "原生林",
     effect: "ユニークアイテムを作成: フラスコ",
     regex: "ク・ゴー",
-    chaosValue: "0.27"
+    chaosValue: "1"
   },
   "フィヌムスのスクラブラー": {
     engName: "Fenumal Scrabbler",
     family: "洞窟",
     effect: "ユニークアイテムを作成: ワンドアイテムのモッドを変化: ウォーロードアイテムにモッドを追加",
     regex: "スのスク",
-    chaosValue: "0.59"
+    chaosValue: "1"
   },
   "ファルウルのガルガンチュア": {
     engName: "Farric Gargantuan",
     family: "原生林",
     effect: "ユニークアイテムを作成: 兜 カレンシーアイテムを作成: 地平のオーブ3個",
     regex: "ルのガル",
-    chaosValue: "0.57"
+    chaosValue: "1"
   }
 };

@@ -7,11 +7,9 @@ const mapModList = {
     "type": "Prefix",
     "weight": 1000,
     "tier": 9,
-    "engRegex": "ms$",
-    "Regex": "数のト",
-    "tradeStatIds": [
-      "explicit.stat_1000591322"
-    ],
+    "engRegex": "tot",
+    "Regex": "数の",
+    "tradeStatId": "explicit.stat_1000591322",
     "map_item_drop_quantity_+%": 10,
     "map_item_drop_rarity_+%": 6,
     "map_pack_size_+%": 4,
@@ -29,9 +27,7 @@ const mapModList = {
     "tier": 1,
     "engRegex": "nu",
     "Regex": "アモ.*数",
-    "tradeStatIds": [
-      "explicit.stat_3793155082"
-    ],
+    "tradeStatId": "explicit.stat_3793155082",
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
@@ -49,9 +45,7 @@ const mapModList = {
     "tier": 0,
     "engRegex": "d mag",
     "Regex": "マ.*増",
-    "tradeStatIds": [
-      "explicit.stat_3873704640"
-    ],
+    "tradeStatId": "explicit.stat_3873704640",
     "map_item_drop_quantity_+%": 10,
     "map_item_drop_rarity_+%": 6,
     "map_pack_size_+%": 4,
@@ -69,9 +63,7 @@ const mapModList = {
     "tier": 4,
     "engRegex": "eto",
     "Regex": "スケ",
-    "tradeStatIds": [
-      "explicit.stat_45546355"
-    ],
+    "tradeStatId": "explicit.stat_45546355",
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
@@ -87,11 +79,9 @@ const mapModList = {
     "type": "Prefix",
     "weight": 150,
     "tier": 4,
-    "engRegex": "goa",
+    "engRegex": "oa",
     "Regex": "トマ",
-    "tradeStatIds": [
-      "explicit.stat_1813544255"
-    ],
+    "tradeStatId": "explicit.stat_1813544255",
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
@@ -109,9 +99,7 @@ const mapModList = {
     "tier": 4,
     "engRegex": "itc",
     "Regex": "ーウ",
-    "tradeStatIds": [
-      "explicit.stat_25085466"
-    ],
+    "tradeStatId": "explicit.stat_25085466",
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
@@ -129,9 +117,7 @@ const mapModList = {
     "tier": 4,
     "engRegex": "by un",
     "Regex": "デッ",
-    "tradeStatIds": [
-      "explicit.stat_808491979"
-    ],
+    "tradeStatId": "explicit.stat_808491979",
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
@@ -149,9 +135,7 @@ const mapModList = {
     "tier": 4,
     "engRegex": "rang",
     "Regex": "離",
-    "tradeStatIds": [
-      "explicit.stat_645841425"
-    ],
+    "tradeStatId": "explicit.stat_645841425",
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
@@ -169,9 +153,7 @@ const mapModList = {
     "tier": 4,
     "engRegex": "nim",
     "Regex": "動物",
-    "tradeStatIds": [
-      "explicit.stat_4198346809"
-    ],
+    "tradeStatId": "explicit.stat_4198346809",
     "map_item_drop_quantity_+%": 16,
     "map_item_drop_rarity_+%": 9,
     "map_pack_size_+%": 6,
@@ -189,9 +171,7 @@ const mapModList = {
     "tier": 4,
     "engRegex": "emons",
     "Regex": "デー",
-    "tradeStatIds": [
-      "explicit.stat_3916182167"
-    ],
+    "tradeStatId": "explicit.stat_3916182167",
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
@@ -209,9 +189,7 @@ const mapModList = {
     "tier": 4,
     "engRegex": "hum",
     "Regex": "マノ",
-    "tradeStatIds": [
-      "explicit.stat_2651141461"
-    ],
+    "tradeStatId": "explicit.stat_2651141461",
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
@@ -227,11 +205,9 @@ const mapModList = {
     "type": "Prefix",
     "weight": 150,
     "tier": 4,
-    "engRegex": "laris",
+    "engRegex": "unari",
     "Regex": "ラリ",
-    "tradeStatIds": [
-      "explicit.stat_2457517302"
-    ],
+    "tradeStatId": "explicit.stat_2457517302",
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
@@ -247,11 +223,9 @@ const mapModList = {
     "type": "Prefix",
     "weight": 150,
     "tier": 4,
-    "engRegex": "unari",
+    "engRegex": "laris",
     "Regex": "ナリ",
-    "tradeStatIds": [
-      "explicit.stat_3134632618"
-    ],
+    "tradeStatId": "explicit.stat_3134632618",
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
@@ -269,9 +243,7 @@ const mapModList = {
     "tier": 4,
     "engRegex": "osts",
     "Regex": "ース",
-    "tradeStatIds": [
-      "explicit.stat_3516340048"
-    ],
+    "tradeStatId": "explicit.stat_3516340048",
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
@@ -289,9 +261,7 @@ const mapModList = {
     "tier": 4,
     "engRegex": "cul",
     "Regex": "タヴ",
-    "tradeStatIds": [
-      "explicit.stat_4252630904"
-    ],
+    "tradeStatId": "explicit.stat_4252630904",
     "map_item_drop_quantity_+%": 16,
     "map_item_drop_rarity_+%": 9,
     "map_pack_size_+%": 6,
@@ -309,9 +279,7 @@ const mapModList = {
     "tier": 8,
     "engRegex": "ety",
     "Regex": "の種",
-    "tradeStatIds": [
-      "explicit.stat_3561450806"
-    ],
+    "tradeStatId": "explicit.stat_3561450806",
     "map_item_drop_quantity_+%": 10,
     "map_item_drop_rarity_+%": 6,
     "map_pack_size_+%": 4,
@@ -329,9 +297,7 @@ const mapModList = {
     "tier": 380,
     "engRegex": "' s",
     "Regex": "連鎖す",
-    "tradeStatIds": [
-      "explicit.stat_3183973644"
-    ],
+    "tradeStatId": "explicit.stat_3183973644",
     "map_item_drop_quantity_+%": 16,
     "map_item_drop_rarity_+%": 9,
     "map_pack_size_+%": 6,
@@ -349,9 +315,7 @@ const mapModList = {
     "tier": 150,
     "engRegex": "re he",
     "Regex": "フを持",
-    "tradeStatIds": [
-      "explicit.stat_4154059009"
-    ],
+    "tradeStatId": "explicit.stat_4154059009",
     "map_item_drop_quantity_+%": 16,
     "map_item_drop_rarity_+%": 9,
     "map_pack_size_+%": 6,
@@ -369,9 +333,7 @@ const mapModList = {
     "tier": 390,
     "engRegex": "son o",
     "Regex": "に毒を",
-    "tradeStatIds": [
-      "explicit.stat_3350803563"
-    ],
+    "tradeStatId": "explicit.stat_3350803563",
     "map_item_drop_quantity_+%": 16,
     "map_item_drop_rarity_+%": 9,
     "map_pack_size_+%": 6,
@@ -389,9 +351,7 @@ const mapModList = {
     "tier": 150,
     "engRegex": "ot i",
     "Regex": "は曝",
-    "tradeStatIds": [
-      "explicit.stat_1026390635"
-    ],
+    "tradeStatId": "explicit.stat_1026390635",
     "map_item_drop_quantity_+%": 10,
     "map_item_drop_rarity_+%": 6,
     "map_pack_size_+%": 4,
@@ -409,9 +369,7 @@ const mapModList = {
     "tier": 90,
     "engRegex": "two",
     "Regex": "体の",
-    "tradeStatIds": [
-      "explicit.stat_799271621"
-    ],
+    "tradeStatId": "explicit.stat_799271621",
     "map_item_drop_quantity_+%": 19,
     "map_item_drop_rarity_+%": 11,
     "map_pack_size_+%": 7,
@@ -429,10 +387,7 @@ const mapModList = {
     "tier": 100,
     "engRegex": "r li",
     "Regex": "ンを受",
-    "tradeStatIds": [
-      "explicit.stat_1041951480",
-      "explicit.stat_95249895"
-    ],
+    "tradeStatId": "explicit.stat_1041951480",
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
@@ -450,9 +405,7 @@ const mapModList = {
     "tier": 440,
     "engRegex": "oj",
     "Regex": "放つ",
-    "tradeStatIds": [
-      "explicit.stat_1309819744"
-    ],
+    "tradeStatId": "explicit.stat_1309819744",
     "map_item_drop_quantity_+%": 19,
     "map_item_drop_rarity_+%": 11,
     "map_pack_size_+%": 7,
@@ -470,9 +423,7 @@ const mapModList = {
     "tier": 400,
     "engRegex": "e \\\\d+% increased ar",
     "Regex": "ターの効",
-    "tradeStatIds": [
-      "explicit.stat_1708461270"
-    ],
+    "tradeStatId": "explicit.stat_1708461270",
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
@@ -490,10 +441,7 @@ const mapModList = {
     "tier": 500,
     "engRegex": "tip",
     "Regex": "ジ倍",
-    "tradeStatIds": [
-      "explicit.stat_2753083623",
-      "explicit.stat_57326096"
-    ],
+    "tradeStatId": "explicit.stat_2753083623",
     "map_item_drop_quantity_+%": 16,
     "map_item_drop_rarity_+%": 9,
     "map_pack_size_+%": 6,
@@ -511,9 +459,7 @@ const mapModList = {
     "tier": 150,
     "engRegex": "uct",
     "Regex": "ジ軽",
-    "tradeStatIds": [
-      "explicit.stat_839186746"
-    ],
+    "tradeStatId": "explicit.stat_839186746",
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
@@ -531,9 +477,7 @@ const mapModList = {
     "tier": 100,
     "engRegex": "r li",
     "Regex": "ラ.*上",
-    "tradeStatIds": [
-      "explicit.stat_95249895"
-    ],
+    "tradeStatId": "explicit.stat_95249895",
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
@@ -551,9 +495,7 @@ const mapModList = {
     "tier": 370,
     "engRegex": "r damage$",
     "Regex": "ターのダ.*増",
-    "tradeStatIds": [
-      "explicit.stat_1890519597"
-    ],
+    "tradeStatId": "explicit.stat_1890519597",
     "map_item_drop_quantity_+%": 19,
     "map_item_drop_rarity_+%": 11,
     "map_pack_size_+%": 7,
@@ -571,9 +513,7 @@ const mapModList = {
     "tier": 450,
     "engRegex": "fire$",
     "Regex": "加火",
-    "tradeStatIds": [
-      "explicit.stat_1497673356"
-    ],
+    "tradeStatId": "explicit.stat_1497673356",
     "map_item_drop_quantity_+%": 16,
     "map_item_drop_rarity_+%": 9,
     "map_pack_size_+%": 6,
@@ -591,9 +531,7 @@ const mapModList = {
     "tier": 450,
     "engRegex": "old$",
     "Regex": "加冷",
-    "tradeStatIds": [
-      "explicit.stat_3448216135"
-    ],
+    "tradeStatId": "explicit.stat_3448216135",
     "map_item_drop_quantity_+%": 16,
     "map_item_drop_rarity_+%": 9,
     "map_pack_size_+%": 6,
@@ -611,9 +549,7 @@ const mapModList = {
     "tier": 450,
     "engRegex": "as l",
     "Regex": "加雷",
-    "tradeStatIds": [
-      "explicit.stat_3416853625"
-    ],
+    "tradeStatId": "explicit.stat_3416853625",
     "map_item_drop_quantity_+%": 16,
     "map_item_drop_rarity_+%": 9,
     "map_pack_size_+%": 6,
@@ -631,10 +567,7 @@ const mapModList = {
     "tier": 455,
     "engRegex": "hered",
     "Regex": "に衰",
-    "tradeStatIds": [
-      "explicit.stat_1840747977",
-      "explicit.stat_3044826007"
-    ],
+    "tradeStatId": "explicit.stat_1840747977",
     "map_item_drop_quantity_+%": 16,
     "map_item_drop_rarity_+%": 9,
     "map_pack_size_+%": 6,
@@ -652,11 +585,7 @@ const mapModList = {
     "tier": 420,
     "engRegex": "r at",
     "Regex": "ーのキ",
-    "tradeStatIds": [
-      "explicit.stat_2306522833",
-      "explicit.stat_1913583994",
-      "explicit.stat_2488361432"
-    ],
+    "tradeStatId": "explicit.stat_2306522833",
     "map_item_drop_quantity_+%": 19,
     "map_item_drop_rarity_+%": 11,
     "map_pack_size_+%": 7,
@@ -674,9 +603,7 @@ const mapModList = {
     "tier": 1000,
     "engRegex": "f ph",
     "Regex": "理.*%を反",
-    "tradeStatIds": [
-      "explicit.stat_3464419871"
-    ],
+    "tradeStatId": "explicit.stat_3464419871",
     "map_item_drop_quantity_+%": 10,
     "map_item_drop_rarity_+%": 6,
     "map_pack_size_+%": 4,
@@ -694,9 +621,7 @@ const mapModList = {
     "tier": 1000,
     "engRegex": "tal d",
     "Regex": "素.*反",
-    "tradeStatIds": [
-      "explicit.stat_2764017512"
-    ],
+    "tradeStatId": "explicit.stat_2764017512",
     "map_item_drop_quantity_+%": 10,
     "map_item_drop_rarity_+%": 6,
     "map_pack_size_+%": 4,
@@ -714,9 +639,7 @@ const mapModList = {
     "tier": 650,
     "engRegex": "s rec",
     "Regex": "復レ",
-    "tradeStatIds": [
-      "explicit.stat_4181072906"
-    ],
+    "tradeStatId": "explicit.stat_4181072906",
     "map_item_drop_quantity_+%": 16,
     "map_item_drop_rarity_+%": 9,
     "map_pack_size_+%": 6,
@@ -734,9 +657,7 @@ const mapModList = {
     "tier": 310,
     "engRegex": "f bur",
     "Regex": "は燃焼",
-    "tradeStatIds": [
-      "explicit.stat_133340941"
-    ],
+    "tradeStatId": "explicit.stat_133340941",
     "map_item_drop_quantity_+%": 10,
     "map_item_drop_rarity_+%": 6,
     "map_pack_size_+%": 4,
@@ -754,9 +675,7 @@ const mapModList = {
     "tier": 310,
     "engRegex": "hil",
     "Regex": "は冷却",
-    "tradeStatIds": [
-      "explicit.stat_349586058"
-    ],
+    "tradeStatId": "explicit.stat_349586058",
     "map_item_drop_quantity_+%": 10,
     "map_item_drop_rarity_+%": 6,
     "map_pack_size_+%": 4,
@@ -774,9 +693,7 @@ const mapModList = {
     "tier": 310,
     "engRegex": "ked",
     "Regex": "電領",
-    "tradeStatIds": [
-      "explicit.stat_3246076198"
-    ],
+    "tradeStatId": "explicit.stat_3246076198",
     "map_item_drop_quantity_+%": 10,
     "map_item_drop_rarity_+%": 6,
     "map_pack_size_+%": 4,
@@ -794,9 +711,7 @@ const mapModList = {
     "tier": 310,
     "engRegex": "s of d",
     "Regex": "は冒涜",
-    "tradeStatIds": [
-      "explicit.stat_3577222856"
-    ],
+    "tradeStatId": "explicit.stat_3577222856",
     "map_item_drop_quantity_+%": 10,
     "map_item_drop_rarity_+%": 6,
     "map_pack_size_+%": 4,
@@ -814,9 +729,7 @@ const mapModList = {
     "tier": 360,
     "engRegex": "h el",
     "Regex": "ルウ",
-    "tradeStatIds": [
-      "explicit.stat_558910024"
-    ],
+    "tradeStatId": "explicit.stat_558910024",
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
@@ -834,9 +747,7 @@ const mapModList = {
     "tier": 360,
     "engRegex": "h vu",
     "Regex": "ラビ",
-    "tradeStatIds": [
-      "explicit.stat_1366534040"
-    ],
+    "tradeStatId": "explicit.stat_1366534040",
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
@@ -854,9 +765,7 @@ const mapModList = {
     "tier": 360,
     "engRegex": "eble$",
     "Regex": "ンフ",
-    "tradeStatIds": [
-      "explicit.stat_4103440490"
-    ],
+    "tradeStatId": "explicit.stat_4103440490",
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
@@ -874,9 +783,7 @@ const mapModList = {
     "tier": 360,
     "engRegex": "h tem",
     "Regex": "ンポ",
-    "tradeStatIds": [
-      "explicit.stat_2326202293"
-    ],
+    "tradeStatId": "explicit.stat_2326202293",
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
@@ -894,9 +801,7 @@ const mapModList = {
     "tier": 700,
     "engRegex": "gen",
     "Regex": "動回",
-    "tradeStatIds": [
-      "explicit.stat_1910157106"
-    ],
+    "tradeStatId": "explicit.stat_1910157106",
     "map_item_drop_quantity_+%": 16,
     "map_item_drop_rarity_+%": 9,
     "map_pack_size_+%": 6,
@@ -914,9 +819,7 @@ const mapModList = {
     "tier": 980,
     "engRegex": "o al",
     "Regex": "性の最",
-    "tradeStatIds": [
-      "explicit.stat_3376488707"
-    ],
+    "tradeStatId": "explicit.stat_3376488707",
     "map_item_drop_quantity_+%": 19,
     "map_item_drop_rarity_+%": 11,
     "map_pack_size_+%": 7,
@@ -934,10 +837,7 @@ const mapModList = {
     "tier": 420,
     "engRegex": "d at",
     "Regex": "ユ.*ピ",
-    "tradeStatIds": [
-      "explicit.stat_124877078",
-      "explicit.stat_2109106920"
-    ],
+    "tradeStatId": "explicit.stat_124877078",
     "map_item_drop_quantity_+%": 16,
     "map_item_drop_rarity_+%": 9,
     "map_pack_size_+%": 6,
@@ -955,10 +855,7 @@ const mapModList = {
     "tier": 400,
     "engRegex": "d li",
     "Regex": "ユ.*範",
-    "tradeStatIds": [
-      "explicit.stat_1959158336",
-      "explicit.stat_3040667106"
-    ],
+    "tradeStatId": "explicit.stat_1959158336",
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
@@ -974,11 +871,9 @@ const mapModList = {
     "type": "Suffix",
     "weight": 600,
     "tier": 600,
-    "engRegex": "eche",
+    "engRegex": "eec",
     "Regex": "ーチで",
-    "tradeStatIds": [
-      "explicit.stat_1140978125"
-    ],
+    "tradeStatId": "explicit.stat_1140978125",
     "map_item_drop_quantity_+%": 16,
     "map_item_drop_rarity_+%": 9,
     "map_pack_size_+%": 6,
@@ -996,9 +891,7 @@ const mapModList = {
     "tier": 150,
     "engRegex": "ail",
     "Regex": "系状",
-    "tradeStatIds": [
-      "explicit.stat_322206271"
-    ],
+    "tradeStatId": "explicit.stat_322206271",
     "map_item_drop_quantity_+%": 10,
     "map_item_drop_rarity_+%": 6,
     "map_pack_size_+%": 4,
@@ -1016,9 +909,7 @@ const mapModList = {
     "tier": 250,
     "engRegex": "kes",
     "Regex": "クか",
-    "tradeStatIds": [
-      "explicit.stat_337935900"
-    ],
+    "tradeStatId": "explicit.stat_337935900",
     "map_item_drop_quantity_+%": 10,
     "map_item_drop_rarity_+%": 6,
     "map_pack_size_+%": 4,
@@ -1036,9 +927,7 @@ const mapModList = {
     "tier": 210,
     "engRegex": "ask",
     "Regex": "コチ",
-    "tradeStatIds": [
-      "explicit.stat_2549889921"
-    ],
+    "tradeStatId": "explicit.stat_2549889921",
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
@@ -1056,9 +945,7 @@ const mapModList = {
     "tier": 363,
     "engRegex": "rses",
     "Regex": "いの効",
-    "tradeStatIds": [
-      "explicit.stat_3796523155"
-    ],
+    "tradeStatId": "explicit.stat_3796523155",
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
@@ -1076,9 +963,7 @@ const mapModList = {
     "tier": 98,
     "engRegex": "te,",
     "Regex": "、凍",
-    "tradeStatIds": [
-      "explicit.stat_2553656203"
-    ],
+    "tradeStatId": "explicit.stat_2553656203",
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
@@ -1096,9 +981,7 @@ const mapModList = {
     "tier": 4,
     "engRegex": "bom",
     "Regex": "ミネ",
-    "tradeStatIds": [
-      "explicit.stat_2961018200"
-    ],
+    "tradeStatId": "explicit.stat_2961018200",
     "map_item_drop_quantity_+%": 16,
     "map_item_drop_rarity_+%": 9,
     "map_pack_size_+%": 6,
@@ -1116,11 +999,7 @@ const mapModList = {
     "tier": 89,
     "engRegex": "elo",
     "Regex": "は挑",
-    "tradeStatIds": [
-      "explicit.stat_2758454849",
-      "explicit.stat_777421120",
-      "explicit.stat_1106651798"
-    ],
+    "tradeStatId": "explicit.stat_2758454849",
     "map_item_drop_quantity_+%": 10,
     "map_item_drop_rarity_+%": 6,
     "map_pack_size_+%": 4,
@@ -1138,9 +1017,7 @@ const mapModList = {
     "tier": 99,
     "engRegex": "lw",
     "Regex": "り発",
-    "tradeStatIds": [
-      "explicit.stat_816367946"
-    ],
+    "tradeStatId": "explicit.stat_816367946",
     "map_item_drop_quantity_+%": 10,
     "map_item_drop_rarity_+%": 6,
     "map_pack_size_+%": 4,
@@ -1158,10 +1035,7 @@ const mapModList = {
     "tier": 100,
     "engRegex": "r el",
     "Regex": "性 +",
-    "tradeStatIds": [
-      "explicit.stat_365540634",
-      "explicit.stat_1054098949"
-    ],
+    "tradeStatId": "explicit.stat_365540634",
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
@@ -1179,9 +1053,7 @@ const mapModList = {
     "tier": 390,
     "engRegex": "on,",
     "Regex": "で毒、",
-    "tradeStatIds": [
-      "explicit.stat_144665660"
-    ],
+    "tradeStatId": "explicit.stat_144665660",
     "map_item_drop_quantity_+%": 10,
     "map_item_drop_rarity_+%": 6,
     "map_pack_size_+%": 4,
@@ -1199,10 +1071,7 @@ const mapModList = {
     "tier": 295,
     "engRegex": "ur$",
     "Regex": "ク率が",
-    "tradeStatIds": [
-      "explicit.stat_3729221884",
-      "explicit.stat_272758639"
-    ],
+    "tradeStatId": "explicit.stat_3729221884",
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
@@ -1220,10 +1089,7 @@ const mapModList = {
     "tier": 365,
     "engRegex": "prev",
     "Regex": "を抑",
-    "tradeStatIds": [
-      "explicit.stat_286947568",
-      "explicit.stat_1588049749"
-    ],
+    "tradeStatId": "explicit.stat_1588049749",
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
@@ -1241,9 +1107,7 @@ const mapModList = {
     "tier": 60,
     "engRegex": "ss are",
     "Regex": "範.*低",
-    "tradeStatIds": [
-      "explicit.stat_2312028586"
-    ],
+    "tradeStatId": "explicit.stat_2312028586",
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
@@ -1259,11 +1123,9 @@ const mapModList = {
     "type": "Suffix",
     "weight": 800,
     "tier": 80,
-    "engRegex": "mum f",
+    "engRegex": "zy c",
     "Regex": "にフレ",
-    "tradeStatIds": [
-      "explicit.stat_1742567045"
-    ],
+    "tradeStatId": "explicit.stat_1742567045",
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
@@ -1279,11 +1141,9 @@ const mapModList = {
     "type": "Suffix",
     "weight": 800,
     "tier": 80,
-    "engRegex": "e charge o",
+    "engRegex": "an en",
     "Regex": "にエ",
-    "tradeStatIds": [
-      "explicit.stat_687813731"
-    ],
+    "tradeStatId": "explicit.stat_687813731",
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
@@ -1299,11 +1159,9 @@ const mapModList = {
     "type": "Suffix",
     "weight": 800,
     "tier": 80,
-    "engRegex": "mum p",
+    "engRegex": "a pow",
     "Regex": "パ.*時",
-    "tradeStatIds": [
-      "explicit.stat_406353061"
-    ],
+    "tradeStatId": "explicit.stat_406353061",
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
@@ -1321,9 +1179,7 @@ const mapModList = {
     "tier": 98,
     "engRegex": "' at",
     "Regex": "で串",
-    "tradeStatIds": [
-      "explicit.stat_1541224187"
-    ],
+    "tradeStatId": "explicit.stat_1541224187",
     "map_item_drop_quantity_+%": 16,
     "map_item_drop_rarity_+%": 9,
     "map_pack_size_+%": 6,
@@ -1341,9 +1197,7 @@ const mapModList = {
     "tier": 290,
     "engRegex": "o su",
     "Regex": "ジ抑",
-    "tradeStatIds": [
-      "explicit.stat_2138205941"
-    ],
+    "tradeStatId": "explicit.stat_2138205941",
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
@@ -1361,9 +1215,7 @@ const mapModList = {
     "tier": 240,
     "engRegex": "m li",
     "Regex": "加最",
-    "tradeStatIds": [
-      "explicit.stat_2887760183"
-    ],
+    "tradeStatId": "explicit.stat_2887760183",
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
@@ -1381,9 +1233,7 @@ const mapModList = {
     "tier": 90,
     "engRegex": "poss",
     "Regex": "り憑",
-    "tradeStatIds": [
-      "explicit.stat_2588474575"
-    ],
+    "tradeStatId": "explicit.stat_2588474575",
     "map_item_drop_quantity_+%": 16,
     "map_item_drop_rarity_+%": 9,
     "map_pack_size_+%": 6,
@@ -1401,9 +1251,7 @@ const mapModList = {
     "tier": 50,
     "engRegex": "s bli",
     "Regex": "に盲",
-    "tradeStatIds": [
-      "explicit.stat_1629869774"
-    ],
+    "tradeStatId": "explicit.stat_1629869774",
     "map_item_drop_quantity_+%": 10,
     "map_item_drop_rarity_+%": 6,
     "map_pack_size_+%": 4,
@@ -1421,9 +1269,7 @@ const mapModList = {
     "tier": 50,
     "engRegex": "aim",
     "Regex": "に重",
-    "tradeStatIds": [
-      "explicit.stat_4164174520"
-    ],
+    "tradeStatId": "explicit.stat_4164174520",
     "map_item_drop_quantity_+%": 10,
     "map_item_drop_rarity_+%": 6,
     "map_pack_size_+%": 4,
@@ -1441,9 +1287,7 @@ const mapModList = {
     "tier": 50,
     "engRegex": "hind",
     "Regex": "に阻",
-    "tradeStatIds": [
-      "explicit.stat_962720646"
-    ],
+    "tradeStatId": "explicit.stat_962720646",
     "map_item_drop_quantity_+%": 10,
     "map_item_drop_rarity_+%": 6,
     "map_pack_size_+%": 4,
@@ -1461,9 +1305,7 @@ const mapModList = {
     "tier": 80,
     "engRegex": "er,",
     "Regex": "盗む",
-    "tradeStatIds": [
-      "explicit.stat_3222482040"
-    ],
+    "tradeStatId": "explicit.stat_3222482040",
     "map_item_drop_quantity_+%": 10,
     "map_item_drop_rarity_+%": 6,
     "map_pack_size_+%": 4,
@@ -1481,9 +1323,7 @@ const mapModList = {
     "tier": 310,
     "engRegex": "nsecrate",
     "Regex": "状に神",
-    "tradeStatIds": [
-      "explicit.stat_1948962470"
-    ],
+    "tradeStatId": "explicit.stat_1948962470",
     "map_item_drop_quantity_+%": 10,
     "map_item_drop_rarity_+%": 6,
     "map_pack_size_+%": 4,
@@ -1501,9 +1341,7 @@ const mapModList = {
     "tier": 94,
     "engRegex": "coo",
     "Regex": "ン解",
-    "tradeStatIds": [
-      "explicit.stat_941368244"
-    ],
+    "tradeStatId": "explicit.stat_941368244",
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
@@ -1521,9 +1359,7 @@ const mapModList = {
     "tier": 96,
     "engRegex": "fs",
     "Regex": "イ.*速",
-    "tradeStatIds": [
-      "explicit.stat_1217583941"
-    ],
+    "tradeStatId": "explicit.stat_1217583941",
     "map_item_drop_quantity_+%": 10,
     "map_item_drop_rarity_+%": 6,
     "map_pack_size_+%": 4,
@@ -1541,9 +1377,7 @@ const mapModList = {
     "tier": 990,
     "engRegex": "non",
     "Regex": "ーラ",
-    "tradeStatIds": [
-      "explicit.stat_2450628570"
-    ],
+    "tradeStatId": "explicit.stat_2450628570",
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
@@ -1561,9 +1395,7 @@ const mapModList = {
     "tier": 85,
     "engRegex": "s ac",
     "Regex": "命.*低",
-    "tradeStatIds": [
-      "explicit.stat_3667574329"
-    ],
+    "tradeStatId": "explicit.stat_3667574329",
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
@@ -1581,10 +1413,7 @@ const mapModList = {
     "tier": 1639,
     "engRegex": "lid",
     "Regex": "に連",
-    "tradeStatIds": [
-      "explicit.stat_3183973644",
-      "explicit.stat_2753403220"
-    ],
+    "tradeStatId": "explicit.stat_3183973644",
     "map_item_drop_quantity_+%": 16,
     "map_item_drop_rarity_+%": 56,
     "map_pack_size_+%": 6,
@@ -1600,12 +1429,9 @@ const mapModList = {
     "type": "Suffix",
     "weight": 100,
     "tier": 1287,
-    "engRegex": "mum p",
+    "engRegex": "a pow",
     "Regex": "パ.*時",
-    "tradeStatIds": [
-      "explicit.stat_406353061",
-      "explicit.stat_1103106414"
-    ],
+    "tradeStatId": "explicit.stat_1103106414",
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
@@ -1623,10 +1449,7 @@ const mapModList = {
     "tier": 1288,
     "engRegex": "mum f",
     "Regex": "大フ",
-    "tradeStatIds": [
-      "explicit.stat_1742567045",
-      "explicit.stat_3900284865"
-    ],
+    "tradeStatId": "explicit.stat_3900284865",
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
@@ -1644,10 +1467,7 @@ const mapModList = {
     "tier": 1209,
     "engRegex": "m end",
     "Regex": "にエ",
-    "tradeStatIds": [
-      "explicit.stat_4067268731",
-      "explicit.stat_3707756896"
-    ],
+    "tradeStatId": "explicit.stat_4067268731",
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
@@ -1665,9 +1485,7 @@ const mapModList = {
     "tier": 1111,
     "engRegex": "o al",
     "Regex": "性の最",
-    "tradeStatIds": [
-      "explicit.stat_3376488707"
-    ],
+    "tradeStatId": "explicit.stat_3376488707",
     "map_item_drop_quantity_+%": 19,
     "map_item_drop_rarity_+%": 11,
     "map_pack_size_+%": 20,
@@ -1685,10 +1503,7 @@ const mapModList = {
     "tier": 1644,
     "engRegex": "tiles$",
     "Regex": "ターの効",
-    "tradeStatIds": [
-      "explicit.stat_1309819744",
-      "explicit.stat_1708461270"
-    ],
+    "tradeStatId": "explicit.stat_1309819744",
     "map_item_drop_quantity_+%": 19,
     "map_item_drop_rarity_+%": 56,
     "map_pack_size_+%": 7,
@@ -1704,12 +1519,9 @@ const mapModList = {
     "type": "Suffix",
     "weight": 100,
     "tier": 1111,
-    "engRegex": "lier",
+    "engRegex": "tip",
     "Regex": "ジ倍",
-    "tradeStatIds": [
-      "explicit.stat_57326096",
-      "explicit.stat_2753083623"
-    ],
+    "tradeStatId": "explicit.stat_57326096",
     "map_item_drop_quantity_+%": 16,
     "map_item_drop_rarity_+%": 56,
     "map_pack_size_+%": 6,
@@ -1727,11 +1539,7 @@ const mapModList = {
     "tier": 1605,
     "engRegex": "son$",
     "Regex": "に毒を",
-    "tradeStatIds": [
-      "explicit.stat_3350803563",
-      "explicit.stat_134839587",
-      "explicit.stat_3555807120"
-    ],
+    "tradeStatId": "explicit.stat_3350803563",
     "map_item_drop_quantity_+%": 16,
     "map_item_drop_rarity_+%": 49,
     "map_pack_size_+%": 6,
@@ -1749,9 +1557,7 @@ const mapModList = {
     "tier": 1111,
     "engRegex": "r damage$",
     "Regex": "ターのダ.*増",
-    "tradeStatIds": [
-      "explicit.stat_1890519597"
-    ],
+    "tradeStatId": "explicit.stat_1890519597",
     "map_item_drop_quantity_+%": 19,
     "map_item_drop_rarity_+%": 56,
     "map_pack_size_+%": 7,
@@ -1767,11 +1573,9 @@ const mapModList = {
     "type": "Prefix",
     "weight": 100,
     "tier": 1111,
-    "engRegex": "of m",
+    "engRegex": "m li",
     "Regex": "加最",
-    "tradeStatIds": [
-      "explicit.stat_2887760183"
-    ],
+    "tradeStatId": "explicit.stat_2887760183",
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
@@ -1786,12 +1590,10 @@ const mapModList = {
     "value": "1",
     "type": "Prefix",
     "weight": 50,
-    "tier": 1110,
+    "tier": 1001,
     "engRegex": "poss",
     "Regex": "り憑",
-    "tradeStatIds": [
-      "explicit.stat_2588474575"
-    ],
+    "tradeStatId": "explicit.stat_2588474575",
     "map_item_drop_quantity_+%": 16,
     "map_item_drop_rarity_+%": 56,
     "map_pack_size_+%": 6,
@@ -1809,9 +1611,7 @@ const mapModList = {
     "tier": 1111,
     "engRegex": "o su",
     "Regex": "ジ抑",
-    "tradeStatIds": [
-      "explicit.stat_2138205941"
-    ],
+    "tradeStatId": "explicit.stat_2138205941",
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
@@ -1822,16 +1622,14 @@ const mapModList = {
   },
   "(T17) モンスターのアタックダメージブロック確率 +#%": {
     "mod": "(T17) モンスターのアタックダメージブロック確率 +#%",
-    "engMod": "(T17) Monsters have +#% Chance to Block Attack Damage",
+    "engMod": "(T17) Monsters have +#% Chance to Block Attack Damage|#% more Currency found in Area",
     "value": "50",
     "type": "Prefix",
     "weight": 60,
     "tier": 1303,
     "engRegex": "k at",
     "Regex": "ジブ",
-    "tradeStatIds": [
-      "explicit.stat_881836292"
-    ],
+    "tradeStatId": "explicit.stat_881836292",
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
@@ -1849,9 +1647,7 @@ const mapModList = {
     "tier": 1190,
     "engRegex": "tota",
     "Regex": "チによ",
-    "tradeStatIds": [
-      "explicit.stat_2946888410"
-    ],
+    "tradeStatId": "explicit.stat_2946888410",
     "map_item_drop_quantity_+%": 16,
     "map_item_drop_rarity_+%": 49,
     "map_pack_size_+%": 6,
@@ -1862,17 +1658,14 @@ const mapModList = {
   },
   "(T17) モンスターは物理ダメージの#%を反射する|モンスターは元素ダメージの#%を反射する": {
     "mod": "(T17) モンスターは物理ダメージの#%を反射する|モンスターは元素ダメージの#%を反射する",
-    "engMod": "(T17) Monsters reflect #% of Physical Damage|Monsters reflect #% of Elemental Damage",
+    "engMod": "(T17) Monsters reflect #% of Physical Damage|Monsters reflect #% of Elemental Damage|#% more Currency found in Area",
     "value": "20|20",
     "type": "Prefix",
     "weight": 40,
     "tier": 2202,
     "engRegex": "f ph",
     "Regex": "素.*反",
-    "tradeStatIds": [
-      "explicit.stat_3464419871",
-      "explicit.stat_2764017512"
-    ],
+    "tradeStatId": "explicit.stat_3464419871",
     "map_item_drop_quantity_+%": 10,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
@@ -1890,11 +1683,7 @@ const mapModList = {
     "tier": 1556,
     "engRegex": "vu",
     "Regex": "ラビ",
-    "tradeStatIds": [
-      "explicit.stat_1366534040",
-      "explicit.stat_2326202293",
-      "explicit.stat_558910024"
-    ],
+    "tradeStatId": "explicit.stat_1366534040",
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 11,
     "map_pack_size_+%": 6,
@@ -1912,9 +1701,7 @@ const mapModList = {
     "tier": 1111,
     "engRegex": "ss are",
     "Regex": "範.*低",
-    "tradeStatIds": [
-      "explicit.stat_2312028586"
-    ],
+    "tradeStatId": "explicit.stat_2312028586",
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 69,
     "map_pack_size_+%": 5,
@@ -1932,9 +1719,7 @@ const mapModList = {
     "tier": 1111,
     "engRegex": "kes",
     "Regex": "クか",
-    "tradeStatIds": [
-      "explicit.stat_337935900"
-    ],
+    "tradeStatId": "explicit.stat_337935900",
     "map_item_drop_quantity_+%": 10,
     "map_item_drop_rarity_+%": 56,
     "map_pack_size_+%": 5,
@@ -1945,16 +1730,14 @@ const mapModList = {
   },
   "(T17) モンスターのライフが(##)%上昇する": {
     "mod": "(T17) モンスターのライフが(##)%上昇する",
-    "engMod": "(T17) (##)% more Monster Life",
+    "engMod": "(T17) (##)% more Monster Life|#% more Currency found in Area",
     "value": "90-100",
     "type": "Prefix",
     "weight": 100,
     "tier": 1111,
     "engRegex": "r li",
     "Regex": "ラ.*上",
-    "tradeStatIds": [
-      "explicit.stat_95249895"
-    ],
+    "tradeStatId": "explicit.stat_95249895",
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
@@ -1972,10 +1755,7 @@ const mapModList = {
     "tier": 1231,
     "engRegex": "fier$",
     "Regex": "はモ",
-    "tradeStatIds": [
-      "explicit.stat_2550456553",
-      "explicit.stat_3793155082"
-    ],
+    "tradeStatId": "explicit.stat_2550456553",
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
@@ -1993,9 +1773,7 @@ const mapModList = {
     "tier": 1277,
     "engRegex": "ff$",
     "Regex": "フを",
-    "tradeStatIds": [
-      "explicit.stat_872972810"
-    ],
+    "tradeStatId": "explicit.stat_872972810",
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
@@ -2013,9 +1791,7 @@ const mapModList = {
     "tier": 1203,
     "engRegex": "pin",
     "Regex": "に束",
-    "tradeStatIds": [
-      "explicit.stat_1751584857"
-    ],
+    "tradeStatId": "explicit.stat_1751584857",
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
@@ -2033,9 +1809,7 @@ const mapModList = {
     "tier": 1186,
     "engRegex": "vola",
     "Regex": "ラタ",
-    "tradeStatIds": [
-      "explicit.stat_1706239920"
-    ],
+    "tradeStatId": "explicit.stat_1706239920",
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 11,
     "map_pack_size_+%": 5,
@@ -2053,9 +1827,7 @@ const mapModList = {
     "tier": 1663,
     "engRegex": "ment$",
     "Regex": "な元",
-    "tradeStatIds": [
-      "explicit.stat_4062840317"
-    ],
+    "tradeStatId": "explicit.stat_4062840317",
     "map_item_drop_quantity_+%": 16,
     "map_item_drop_rarity_+%": 71,
     "map_pack_size_+%": 6,
@@ -2073,9 +1845,7 @@ const mapModList = {
     "tier": 1666,
     "engRegex": "ra c",
     "Regex": "沌ダ",
-    "tradeStatIds": [
-      "explicit.stat_1840747977"
-    ],
+    "tradeStatId": "explicit.stat_1840747977",
     "map_item_drop_quantity_+%": 16,
     "map_item_drop_rarity_+%": 46,
     "map_pack_size_+%": 6,
@@ -2090,14 +1860,10 @@ const mapModList = {
     "value": "35-45|35-45|25-30",
     "type": "Prefix",
     "weight": 100,
-    "tier": 1110,
+    "tier": 420,
     "engRegex": "r at",
     "Regex": "ーのキ",
-    "tradeStatIds": [
-      "explicit.stat_2488361432",
-      "explicit.stat_1913583994",
-      "explicit.stat_2306522833"
-    ],
+    "tradeStatId": "explicit.stat_2488361432",
     "map_item_drop_quantity_+%": 19,
     "map_item_drop_rarity_+%": 56,
     "map_pack_size_+%": 7,
@@ -2108,16 +1874,14 @@ const mapModList = {
   },
   "(T17) プレイヤーは血塗れのノコギリに襲われる": {
     "mod": "(T17) プレイヤーは血塗れのノコギリに襲われる",
-    "engMod": "(T17) Players are assaulted by Bloodstained Sawblades",
+    "engMod": "(T17) Players are assaulted by Bloodstained Sawblades|#% more Currency found in Area",
     "value": "1",
     "type": "Prefix",
     "weight": 50,
     "tier": 1194,
     "engRegex": "wb",
     "Regex": "血塗",
-    "tradeStatIds": [
-      "explicit.stat_3052102815",
-    ],
+    "tradeStatId": "explicit.stat_3052102815",
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
@@ -2135,11 +1899,7 @@ const mapModList = {
     "tier": 1314,
     "engRegex": "tun",
     "Regex": "礎値",
-    "tradeStatIds": [
-      "explicit.stat_1041951480",
-      "explicit.stat_2758454849",
-      "explicit.stat_777421120"
-    ],
+    "tradeStatId": "explicit.stat_1041951480",
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
@@ -2150,16 +1910,14 @@ const mapModList = {
   },
   "(T17) プレイヤーはフラスコを使用した時に隕石の対象となる": {
     "mod": "(T17) プレイヤーはフラスコを使用した時に隕石の対象となる",
-    "engMod": "(T17) Players are targeted by a Meteor when they use a Flask",
+    "engMod": "(T17) Players are targeted by a Meteor when they use a Flask|#% more Currency found in Area",
     "value": "100",
     "type": "Suffix",
     "weight": 50,
     "tier": 1403,
     "engRegex": "get",
     "Regex": "に隕",
-    "tradeStatIds": [
-      "explicit.stat_4102870672",
-    ],
+    "tradeStatId": "explicit.stat_4102870672",
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
@@ -2177,9 +1935,7 @@ const mapModList = {
     "tier": 1191,
     "engRegex": "efe",
     "Regex": "御力",
-    "tradeStatIds": [
-      "explicit.stat_943960754"
-    ],
+    "tradeStatId": "explicit.stat_943960754",
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
@@ -2197,9 +1953,7 @@ const mapModList = {
     "tier": 1224,
     "engRegex": "wni",
     "Regex": "は溺",
-    "tradeStatIds": [
-      "explicit.stat_25225034"
-    ],
+    "tradeStatId": "explicit.stat_25225034",
     "map_item_drop_quantity_+%": 16,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 20,
@@ -2208,7 +1962,7 @@ const mapModList = {
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
     "modTier17": true
   },
-  "(T17) モンスターの物理ダメージ軽減率 +#%|モンスターの元素耐性 +#%|モンスターの混沌耐性 +#%": {
+  "(T17) ※モンスターの物理ダメージ軽減率 +#%|モンスターの元素耐性 +#%|モンスターの混沌耐性 +#%": {
     "mod": "(T17) モンスターの物理ダメージ軽減率 +#%|モンスターの元素耐性 +#%|モンスターの混沌耐性 +#%",
     "engMod": "(T17) +#% Monster Physical Damage Reduction|+#% Monster Elemental Resistances|+#% Monster Chaos Resistance",
     "value": "50|55|35",
@@ -2217,11 +1971,7 @@ const mapModList = {
     "tier": 1378,
     "engRegex": "uct",
     "Regex": "ジ軽",
-    "tradeStatIds": [
-      "explicit.stat_839186746",
-      "explicit.stat_1054098949",
-      "explicit.stat_365540634"
-    ],
+    "tradeStatId": "explicit.stat_839186746",
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
@@ -2239,10 +1989,7 @@ const mapModList = {
     "tier": 1225,
     "engRegex": "hock$",
     "Regex": "、凍",
-    "tradeStatIds": [
-      "explicit.stat_2553656203",
-      "explicit.stat_2919181457"
-    ],
+    "tradeStatId": "explicit.stat_2919181457",
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
@@ -2258,11 +2005,9 @@ const mapModList = {
     "type": "Suffix",
     "weight": 60,
     "tier": 1111,
-    "engRegex": "^buf",
+    "engRegex": "fs",
     "Regex": "イ.*速",
-    "tradeStatIds": [
-      "explicit.stat_1217583941"
-    ],
+    "tradeStatId": "explicit.stat_1217583941",
     "map_item_drop_quantity_+%": 10,
     "map_item_drop_rarity_+%": 6,
     "map_pack_size_+%": 4,
@@ -2280,9 +2025,7 @@ const mapModList = {
     "tier": 1216,
     "engRegex": "net",
     "Regex": "通す",
-    "tradeStatIds": [
-      "explicit.stat_1898978455"
-    ],
+    "tradeStatId": "explicit.stat_1898978455",
     "map_item_drop_quantity_+%": 19,
     "map_item_drop_rarity_+%": 72,
     "map_pack_size_+%": 6,
@@ -2300,9 +2043,7 @@ const mapModList = {
     "tier": 1221,
     "engRegex": "acl",
     "Regex": "な触",
-    "tradeStatIds": [
-      "explicit.stat_1943574423"
-    ],
+    "tradeStatId": "explicit.stat_1943574423",
     "map_item_drop_quantity_+%": 16,
     "map_item_drop_rarity_+%": 11,
     "map_pack_size_+%": 20,
@@ -2320,9 +2061,7 @@ const mapModList = {
     "tier": 1184,
     "engRegex": "hap",
     "Regex": "に触",
-    "tradeStatIds": [
-      "explicit.stat_2931889194"
-    ],
+    "tradeStatId": "explicit.stat_2931889194",
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 11,
     "map_pack_size_+%": 20,
@@ -2340,9 +2079,7 @@ const mapModList = {
     "tier": 1217,
     "engRegex": "yn",
     "Regex": "スボ",
-    "tradeStatIds": [
-      "explicit.stat_4150353141"
-    ],
+    "tradeStatId": "explicit.stat_4150353141",
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 20,
@@ -2353,16 +2090,14 @@ const mapModList = {
   },
   "(T17) モンスターに対するデバフは#%速く消える": {
     "mod": "(T17) モンスターに対するデバフは#%速く消える",
-    "engMod": "(T17) Debuffs on Monsters expire #% faster",
+    "engMod": "(T17) Debuffs on Monsters expire #% faster|#% more Currency found in Area",
     "value": "100",
     "type": "Suffix",
     "weight": 40,
     "tier": 1314,
     "engRegex": "deb",
     "Regex": "ス.*速",
-    "tradeStatIds": [
-      "explicit.stat_1200027417"
-    ],
+    "tradeStatId": "explicit.stat_1200027417",
     "map_item_drop_quantity_+%": 16,
     "map_item_drop_rarity_+%": 12,
     "map_pack_size_+%": 6,
@@ -2380,9 +2115,7 @@ const mapModList = {
     "tier": 1222,
     "engRegex": "rune",
     "Regex": "は灼",
-    "tradeStatIds": [
-      "explicit.stat_2073168229"
-    ],
+    "tradeStatId": "explicit.stat_2073168229",
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 20,
@@ -2400,9 +2133,7 @@ const mapModList = {
     "tier": 1183,
     "engRegex": "mav",
     "Regex": "干渉す",
-    "tradeStatIds": [
-      "explicit.stat_1594156261"
-    ],
+    "tradeStatId": "explicit.stat_1594156261",
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 20,
@@ -2420,9 +2151,7 @@ const mapModList = {
     "tier": 1226,
     "engRegex": "fra",
     "Regex": "亡時",
-    "tradeStatIds": [
-      "explicit.stat_3097694855"
-    ],
+    "tradeStatId": "explicit.stat_3097694855",
     "map_item_drop_quantity_+%": 19,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
@@ -2437,12 +2166,10 @@ const mapModList = {
     "value": "1",
     "type": "Suffix",
     "weight": 50,
-    "tier": 2201,
-    "engRegex": "^au",
+    "tier": 1500,
+    "engRegex": "emi",
     "Regex": "ラは敵",
-    "tradeStatIds": [
-      "explicit.stat_2156372077"
-    ],
+    "tradeStatId": "explicit.stat_2156372077",
     "map_item_drop_quantity_+%": 16,
     "map_item_drop_rarity_+%": 54,
     "map_pack_size_+%": 5,
@@ -2458,11 +2185,9 @@ const mapModList = {
     "type": "Suffix",
     "weight": 50,
     "tier": 1190,
-    "engRegex": "ril",
+    "engRegex": "Revi",
     "Regex": "的に生",
-    "tradeStatIds": [
-      "explicit.stat_1593763475"
-    ],
+    "tradeStatId": "explicit.stat_1593763475",
     "map_item_drop_quantity_+%": 16,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 17,
@@ -2478,11 +2203,9 @@ const mapModList = {
     "type": "Prefix",
     "weight": 50,
     "tier": 1190,
-    "engRegex": "byr",
+    "engRegex": "Lab,",
     "Regex": "の罠",
-    "tradeStatIds": [
-      "explicit.stat_2577650864"
-    ],
+    "tradeStatId": "explicit.stat_2577650864",
     "map_item_drop_quantity_+%": 19,
     "map_item_drop_rarity_+%": 54,
     "map_pack_size_+%": 5,
@@ -2493,16 +2216,14 @@ const mapModList = {
   },
   "(T17) プレイヤーは適用されるフラスコの効果が#%低下する": {
     "mod": "(T17) プレイヤーは適用されるフラスコの効果が#%低下する",
-    "engMod": "(T17) Players have #% less effect of Flasks applied to them",
+    "engMod": "(T17) Players have #% less effect of Flasks applied to them|#% more Currency found in Area",
     "value": "40",
     "type": "Prefix",
     "weight": 50,
-    "tier": 2200,
-    "engRegex": "sks",
+    "tier": 1190,
+    "engRegex": "ppl,",
     "Regex": "るフ",
-    "tradeStatIds": [
-      "explicit.stat_1207482628"
-    ],
+    "tradeStatId": "explicit.stat_1207482628",
     "map_item_drop_quantity_+%": 16,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
@@ -2518,11 +2239,9 @@ const mapModList = {
     "type": "Suffix",
     "weight": 50,
     "tier": 1190,
-    "engRegex": "ovi",
+    "engRegex": "nd,",
     "Regex": "し、ラ",
-    "tradeStatIds": [
-      "explicit.stat_2796704737"
-    ],
+    "tradeStatId": "explicit.stat_2796704737",
     "map_item_drop_quantity_+%": 16,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
