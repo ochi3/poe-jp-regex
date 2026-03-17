@@ -4,42 +4,42 @@ const beastlist = {
     family: "深海",
     effect: "アイテムを変換：覚醒サポートジェムのロールを再生成する",
     regex: "ド・ウ",
-    chaosValue: "12.9"
+    chaosValue: "7"
   },
   "ブラック・モリガン": {
     engName: "Black Mórrigan",
     family: "原生林",
     effect: "アイテムを修正：可能な限り最大リンク数にする",
     regex: "リガ",
-    chaosValue: "210"
+    chaosValue: "130"
   },
   "クレイシアンのキメラル": {
     engName: "Craicic Chimeral",
     family: "深海",
     effect: "インプリントを作成: マジックアイテム",
     regex: "ンのキ",
-    chaosValue: "109"
+    chaosValue: "130"
   },
   "ワイルド・ブリスル・マトロン": {
     engName: "Wild Bristle Matron",
     family: "原生林",
     effect: "アイテムのモッドを変化: 非ユニークアイテムにクラフトメタモッドを追加",
     regex: "ル・マ",
-    chaosValue: "332.5"
+    chaosValue: "290"
   },
   "ビビッド・ヴァルチャー": {
     engName: "Vivid Vulture",
     family: "砂漠",
     effect: "アイテムを変換: シンセシス暗黙モッドをリロール",
     regex: "ド・ヴ",
-    chaosValue: "625.6"
+    chaosValue: "552"
   },
   "ワイルド・ヘリオン・アルファ": {
     engName: "Wild Hellion Alpha",
     family: "原生林",
     effect: "アイテムのモッドを変化: 見つめる者の目のモッドをリロール。最大ライフ、マナおよびエナジーシールドのモッドはリロールできない",
     regex: "ド・ヘリ",
-    chaosValue: "225"
+    chaosValue: "200"
   },
   "ワイルド・ブランブルバック": {
     engName: "Wild Brambleback",
@@ -53,42 +53,42 @@ const beastlist = {
     family: "原生林",
     effect: "アイテムにアスペクトスキルを追加: 猫のアスペクト",
     regex: "祖、ファ",
-    chaosValue: "40.3"
+    chaosValue: "44"
   },
   "フィヌムスのプレイグドアラクニド": {
     engName: "Fenumal Plagued Arachnid",
     family: "洞窟",
     effect: "アイテムをスプリット: それぞれ半分のモッドを持つ2個のアイテムにスプリット",
     regex: "のプレ",
-    chaosValue: "30"
+    chaosValue: "60"
   },
   "プライマル・クリストコーラー": {
     engName: "Primal Cystcaller",
     family: "原生林",
     effect: "アトラスクラフトを獲得: キラックミッションを5個獲得 ミッションの色は赤ビーストのレベルに基づく",
     regex: "ル・クリ",
-    chaosValue: "9"
+    chaosValue: "10"
   },
   "夜の始祖、フィヌムス": {
     engName: "Fenumus, First of the Night",
     family: "洞窟",
     effect: "アイテムにアスペクトスキルを追加: 蜘蛛のアスペクト",
     regex: "祖、フィ",
-    chaosValue: "29"
+    chaosValue: "30.4"
   },
   "空の始祖、サカワル": {
     engName: "Saqawal, First of the Sky",
     family: "砂漠",
     effect: "アイテムにアスペクトスキルを追加: 鳥のアスペクト",
     regex: "祖、サカ",
-    chaosValue: "4"
+    chaosValue: "5"
   },
   "深海の始祖、クレイシアン": {
     engName: "Craiceann, First of the Deep",
     family: "深海",
     effect: "アイテムにアスペクトスキルを追加: 蟹のアスペクト",
     regex: "祖、ク",
-    chaosValue: "21"
+    chaosValue: "80"
   },
   "プライマル・レックス・メイトリアーク": {
     engName: "Primal Rhex Matriarch",
