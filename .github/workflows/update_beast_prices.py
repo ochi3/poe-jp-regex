@@ -10,7 +10,7 @@ NINJA_API_BASE = "https://poe.ninja/api/data/itemoverview?league={league}&type=B
 BEAST_LIST_PATH = os.path.join(os.path.dirname(__file__), "..", "..", "scripts", "beastlist.js")
 # extract_map_mods.py と同じ User-Agent を使用
 USER_AGENT = 'PoE-JP-Regex-Tool/1.0 (contact: user)'
-DEFAULT_LEAGUE = "Standard" # 取得失敗時のフォールバック
+DEFAULT_LEAGUE = "Mirage" # 取得失敗時のフォールバック
 
 def get_current_league():
     try:
