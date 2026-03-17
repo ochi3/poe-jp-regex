@@ -1,15 +1,15 @@
 /**
- * Generate a PoE Trade site link for selected map mods
+ * 選択されたマップMod用のPoEトレードサイトリンクを生成
  */
 function buildTradeUrl() {
-    // Get settings from UI
+    // UIから設定を取得
     const league = (typeof getLeagueName === 'function' ? getLeagueName() : null)
         || document.getElementById('leagueInput')?.value
         || "Mirage";
     let tradeMethod = document.getElementById('tradeMethodSelect').value || "any";
     let minModCount = parseInt(document.getElementById('minModCountInput').value) || 0;
     
-    // Get selected mods from checkedMods Set
+    // checkedModsから選択されたModを取得
     if ((!checkedMods || checkedMods.size === 0) && notStats.length === 0 && !document.getElementById('memoryMapCheckbox').checked && !parseInt(document.getElementById('minModCountInput').value) && !document.getElementById('itemQuantityInput').value && !document.getElementById('packSizeInput').value && !document.getElementById('rarityInput').value && !document.getElementById('scarabInput').value && !document.getElementById('currencyInput').value && !document.getElementById('mapInput').value) {
         alert("検索条件を一つ以上指定してください。");
         return null;
@@ -41,9 +41,9 @@ function buildTradeUrl() {
         });
     });
 
-    const stats = []; // General AND stats (like Mod Count, Memory Map)
+    const stats = []; // 一般的なAND条件（Mod数、メモリーマップなど）
 
-    // Build query object
+    // クエリィオブジェクトを構築
     const query = {
         status: {
             option: tradeMethod
@@ -51,7 +51,7 @@ function buildTradeUrl() {
         stats: []
     };
 
-    // Add Mod Count condition
+    // Mod数の条件を追加
     if (minModCount > 0) {
         stats.push({
             id: "pseudo.pseudo_number_of_affix_mods",
@@ -60,7 +60,7 @@ function buildTradeUrl() {
         });
     }
 
-    // Add Memory Map condition
+    // メモリーマップの条件を追加
     if (document.getElementById('memoryMapCheckbox').checked) {
         stats.push({
             id: "implicit.stat_2696470877",
@@ -68,14 +68,14 @@ function buildTradeUrl() {
         });
     }
 
-    // Add general Map pseudo stats from inputs
+    // 入力値から一般的なマップの擬似ステータスを追加（数量、パックサイズなど）
     const scarabInput = parseInt(document.getElementById('scarabInput').value);
     const currencyInput = parseInt(document.getElementById('currencyInput').value);
     const mapDropInput = parseInt(document.getElementById('mapInput').value);
     const isSearchAny = document.getElementById('searchAnyRadio').checked;
 
     if (isSearchAny && (scarabInput > 0 || currencyInput > 0 || mapDropInput > 0)) {
-        // Group them into a count search with min: 1
+        // count検索としてグループ化（最小 1）
         const anyStats = [];
         if (scarabInput > 0) anyStats.push({ id: "pseudo.pseudo_map_more_scarab_drops", value: { min: scarabInput }, disabled: false });
         if (currencyInput > 0) anyStats.push({ id: "pseudo.pseudo_map_more_currency_drops", value: { min: currencyInput }, disabled: false });
@@ -87,22 +87,22 @@ function buildTradeUrl() {
             filters: anyStats
         });
     } else {
-        // Normal AND search behavior
+        // 通常のAND検索動作
         if (scarabInput > 0) stats.push({ id: "pseudo.pseudo_map_more_scarab_drops", value: { min: scarabInput }, disabled: false });
         if (currencyInput > 0) stats.push({ id: "pseudo.pseudo_map_more_currency_drops", value: { min: currencyInput }, disabled: false });
         if (mapDropInput > 0) stats.push({ id: "pseudo.pseudo_map_more_map_drops", value: { min: mapDropInput }, disabled: false });
     }
 
-    // Add combined stats group if not empty
+    // 空でなければ結合された統計グループを追加
     if (stats.length > 0) {
-        // Standard AND search
+        // 標準的なAND検索
         query.stats.push({
             type: "and",
             filters: stats
         });
     }
 
-    // Add NOT stats group
+    // NOT統計グループを追加（NG Mod）
     if (notStats.length > 0) {
         query.stats.push({
             type: "not",
@@ -110,17 +110,17 @@ function buildTradeUrl() {
         });
     }
 
-    // Add Wanted stats group
+    // Wanted（希望）統計グループを追加
     if (wantedStats.length > 0) {
         const wantedMode = document.getElementById('wantedModModeSelect').value;
         if (wantedMode === 'all') {
-            // Match ALL (AND search)
+            // 全てに一致 (AND検索)
             query.stats.push({
                 type: "and",
                 filters: wantedStats
             });
         } else {
-            // Match ANY (OR search behavior of regex)
+            // いずれかに一致 (RegexのようなOR検索)
             query.stats.push({
                 type: "count",
                 value: { min: 1 },
@@ -137,7 +137,7 @@ function buildTradeUrl() {
 
     const filters = {};
     
-    // Advanced filters (Price)
+    // 詳細フィルタ（価格）
     if (buyoutPrice || buyoutPriceMin > 0 || buyoutPriceMax > 0) {
         const priceObj = {};
         if (buyoutPrice) priceObj.option = buyoutPrice;
@@ -151,7 +151,7 @@ function buildTradeUrl() {
         };
     }
 
-    // Item category (Map) and Default Filters (Rarity, Foil)
+    // アイテムカテゴリ（マップ）とデフォルトフィルタ（レアリティ、フォイル）
     filters.type_filters = {
         filters: {
             category: { option: "map" },
@@ -165,7 +165,7 @@ function buildTradeUrl() {
         }
     };
 
-    // Map Tier & Value filters
+    // マップ層と値のフィルタ
     const iiq = parseInt(document.getElementById('itemQuantityInput').value);
     const packsize = parseInt(document.getElementById('packSizeInput').value);
     const iir = parseInt(document.getElementById('rarityInput').value);
@@ -187,7 +187,7 @@ function buildTradeUrl() {
         if (iir > 0) filters.map_filters.filters.map_iir = { min: iir };
     }
 
-    // Assign filters to the query object
+    // フィルタをクエリオブジェクトに割り当て
     Object.assign(query, { filters: filters });
 
     const queryJson = JSON.stringify({ query: query, sort: { price: "asc" } });

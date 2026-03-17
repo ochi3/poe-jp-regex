@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <!-- Google tag (gtag.js) -->
+    <!-- Google タグ (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-BV04ELTZSP"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -25,10 +25,13 @@
         <nav>
             <a href="#map" class="nav-link active" data-tab="mapContent">マップMod</a>
             <a href="#trans" class="nav-link" data-tab="transContent">英語Regex変換</a>
-            <a href="#flask" class="nav-link" data-tab="flaskContent">フラスコMod</a>
-            <a href="#item" class="nav-link" data-tab="itemContent">リコンビMod</a>
             <a href="#vender" class="nav-link" data-tab="vendorContent">ベンダー(ACT用)</a>
+            <a href="#scarab" class="nav-link" data-tab="scarabContent">スカラベ</a>
             <a href="#beast" class="nav-link" data-tab="beastContent">ビースト</a>
+            <a href="#tattoo" class="nav-link" data-tab="tattooContent">タトゥー</a>
+            <a href="#runegraft" class="nav-link" data-tab="runegraftContent">ルーングラフト</a>
+            <a href="#item" class="nav-link" data-tab="itemContent">リコンビMod</a>
+            <a href="#flask" class="nav-link" data-tab="flaskContent">フラスコMod</a>
             <a href="#saved" class="nav-link" data-tab="savedContent">保存済みRegex</a>
             <a href="#link" class="nav-link" data-tab="linkContent">リンク集</a>
         </nav>
@@ -38,7 +41,7 @@
             Twitter <a href="https://x.com/ochi3c" style="color: var(--accent-primary);">@ochi3c</a>
         </h4>
         <button onclick="openFeedbackModal()" style="width: 100%; margin-bottom: 16px; background: var(--bg-tertiary); color: var(--accent-primary); border: 1px solid var(--border-color);">要望・不具合を送信</button>
-        <h4>Change log<br>26/03/17<br>ビースト名前修正<br><br>26/03/15<br>ビースト価格自動更新機能追加<br>要望・不具合報告機能追加<br><br>26/03/12<br>トレードリンク機能追加<br>modの詳細を追加<br><br>26/03/10<br>カレンシー、マップ、スカラベ量の対応、新MOD追加<br><br>25/10/21<br>ベンダー(ACT用)更新、ワンドと弓の修正<br><br>25/10/17<br>いろいろ追加<br><br>25/09/19<br>200以上の数値に対応、レアリティの追加<br><br>25/07/02<br>チェックボックスバグ修正<br><br>25/06/05<br>文字数制限50→250<br></h4>
+        <h4>Change log<br>26/03/18<br>スカラベ、タトゥー、ルーングラフトRegexの追加<br><br>26/03/17<br>ビースト名前修正<br><br>26/03/15<br>ビースト価格自動更新機能追加<br>要望・不具合報告機能追加<br><br>26/03/12<br>トレードリンク機能追加<br>modの詳細を追加<br><br>26/03/10<br>カレンシー、マップ、スカラベ量の対応、新MOD追加<br><br>25/10/21<br>ベンダー(ACT用)更新、ワンドと弓の修正<br><br>25/10/17<br>いろいろ追加<br><br>25/09/19<br>200以上の数値に対応、レアリティの追加<br><br>25/07/02<br>チェックボックスバグ修正<br><br>25/06/05<br>文字数制限50→250<br></h4>
     </div>
 
     <div id="contentArea">
@@ -51,7 +54,7 @@
                     <button onclick="saveProfile()">保存</button>
                     <button onclick="loadProfile()">読み込み</button>
                     <button onclick="deleteProfile()">削除</button>
-                    <select id="profileList" class="large-input">
+                    <select id="profileList" class="large-input" onchange="loadProfile()">
                         <option value="">-- プロファイル選択 --</option>
                     </select>
                 </div>
@@ -71,8 +74,8 @@
                             </div>
                         </div>
                     <button onclick="resetAll()">リセット</button>
-                    <div style="width: 24px;"></div> <!-- Spacer -->
-                    <button onclick="toggleLanguage()">日本語 / English</button>
+                    <div style="width: 24px;"></div> <!-- スペーサー -->
+                    <button id="mapLangToggle" onclick="toggleLanguage()">Language: JP</button>
                     <span id="charCount" class="char-count"></span>
                 </div>
 
@@ -211,11 +214,11 @@
                 </div>
 
                 <div class="input-group">
-                    <input type="text" id="flaskProfileName" placeholder="プロファイル名を入力" class="large-input">
+                    <input type="text" id="flaskProfileName" placeholder="プロファイル名を入力してください。" class="large-input">
                     <button onclick="saveFlaskProfile()">保存</button>
                     <button onclick="loadFlaskProfile()">読み込み</button>
                     <button onclick="deleteFlaskProfile()">削除</button>
-                    <select id="flaskProfileList" class="large-input">
+                    <select id="flaskProfileList" class="large-input" onchange="loadFlaskProfile()">
                         <option value="">-- プロファイル選択 --</option>
                     </select>
                 </div>
@@ -265,11 +268,11 @@
                 </div>
 
                 <div class="input-group">
-                    <input type="text" id="itemProfileName" placeholder="プロファイル名を入力" class="large-input">
+                    <input type="text" id="itemProfileName" placeholder="プロファイル名を入力してください。" class="large-input">
                     <button onclick="saveItemProfile()">保存</button>
                     <button onclick="loadItemProfile()">読み込み</button>
                     <button onclick="deleteItemProfile()">削除</button>
-                    <select id="itemProfileList" class="large-input">
+                    <select id="itemProfileList" class="large-input" onchange="loadItemProfile()">
                         <option value="">-- プロファイル選択 --</option>
                     </select>
                 </div>
@@ -323,7 +326,7 @@
                     <button onclick="saveBeastProfile()">保存</button>
                     <button onclick="loadBeastProfile()">読み込み</button>
                     <button onclick="deleteBeastProfile()">削除</button>
-                    <select id="beastProfileList" class="large-input">
+                    <select id="beastProfileList" class="large-input" onchange="loadBeastProfile()">
                         <option value="">-- プロファイル選択 --</option>
                     </select>
                 </div>
@@ -335,7 +338,14 @@
                     <span id="beastCharCount" class="char-count"></span>
                 </div>
 
-                <input type="text" id="beastSearch" placeholder="ビーストを検索..." oninput="filterBeasts()">
+                <div class="input-group">
+                    <div style="display: flex; align-items: center; gap: 8px;">
+                        <button class="btn-secondary-highlight" onclick="bulkSelectBeasts()">一括選択</button>
+                        <input type="number" id="beastBulkThreshold" placeholder="10" value="10" style="width: 70px;" oninput="saveInputState()">
+                        <span style="font-size: 14px; color: var(--text-secondary);">c以上を</span>
+                    </div>
+                    <input type="text" id="beastSearch" placeholder="ビーストを検索..." oninput="filterBeasts()" style="flex: 1;">
+                </div>
                 
                 <div class="table-container" style="margin-top: 20px;">
                     <div class="beast-header">
@@ -346,6 +356,138 @@
                         <div class="beast-col-effect" data-column="effect" style="cursor: pointer;">レシピ</div>
                     </div>
                     <div id="beastlistContainer" class="beast-list"></div>
+                </div>
+            </div>
+        </div>
+        <!-- スカラベ-->
+        <div id="scarabContent" class="tab-content">
+            <div class="card">
+                <h2 class="section-header">スカラベ検索</h2>
+                
+                <div class="input-group">
+                    <input type="text" id="scarabProfileName" placeholder="プロファイル名を入力してください。" class="large-input">
+                    <button onclick="saveScarabProfile()">保存</button>
+                    <button onclick="loadScarabProfile()">読み込み</button>
+                    <button onclick="deleteScarabProfile()">削除</button>
+                    <select id="scarabProfileList" class="large-input" onchange="loadScarabProfile()">
+                        <option value="">-- プロファイル選択 --</option>
+                    </select>
+                </div>
+
+                <div class="output-area" id="scarabRegexOutput"></div>
+                <div class="input-group">
+                    <button onclick="copyScarabRegex()">コピー</button>
+                    <button onclick="resetScarabSelection()">リセット</button>
+                    <button id="scarabLangToggle" onclick="toggleLanguage()">Language: JP</button>
+                    <span id="scarabCharCount" class="char-count"></span>
+                </div>
+
+                <div class="input-group">
+                    <div style="display: flex; align-items: center; gap: 8px;">
+                        <button class="btn-secondary-highlight" onclick="bulkSelectScarabs()">一括選択</button>
+                        <input type="number" id="scarabBulkThreshold" placeholder="10" value="10" style="width: 70px;" oninput="saveInputState()">
+                        <span style="font-size: 14px; color: var(--text-secondary);">c以上を</span>
+                    </div>
+                    <input type="text" id="scarabSearch" placeholder="スカラベを検索..." oninput="filterScarabs()" style="flex: 1;">
+                </div>
+                
+                <div class="table-container" style="margin-top: 20px;">
+                    <div class="scarab-header">
+                        <div class="beast-col-select" style="cursor: default;">選択</div>
+                        <div class="beast-col-price" data-column="price" onclick="sortScarabs('price')" style="cursor: pointer;">価格</div>
+                        <div class="beast-col-name" data-column="name" onclick="sortScarabs('name')" style="cursor: pointer;">スカラベ名</div>
+                        <div style="width: 0; padding: 0; visibility: hidden;"></div>
+                        <div class="beast-col-effect" data-column="description" onclick="sortScarabs('description')" style="cursor: pointer;">効果</div>
+                    </div>
+                    <div id="scarablistContainer" class="beast-list"></div>
+                </div>
+            </div>
+        </div>
+        <!-- タトゥー-->
+        <div id="tattooContent" class="tab-content">
+            <div class="card">
+                <h2 class="section-header">タトゥー検索</h2>
+                
+                <div class="input-group">
+                    <input type="text" id="tattooProfileName" placeholder="プロファイル名を入力してください。" class="large-input">
+                    <button onclick="saveTattooProfile()">保存</button>
+                    <button onclick="loadTattooProfile()">読み込み</button>
+                    <button onclick="deleteTattooProfile()">削除</button>
+                    <select id="tattooProfileList" class="large-input" onchange="loadTattooProfile()">
+                        <option value="">-- プロファイル選択 --</option>
+                    </select>
+                </div>
+
+                <div class="output-area" id="tattooRegexOutput"></div>
+                <div class="input-group">
+                    <button onclick="copyTattooRegex()">コピー</button>
+                    <button onclick="resetTattooSelection()">リセット</button>
+                    <button id="tattooLangToggle" onclick="toggleLanguage()">Language: JP</button>
+                    <span id="tattooCharCount" class="char-count"></span>
+                </div>
+
+                <div class="input-group">
+                    <div style="display: flex; align-items: center; gap: 8px;">
+                        <button class="btn-secondary-highlight" onclick="bulkSelectTattoos()">一括選択</button>
+                        <input type="number" id="tattooBulkThreshold" placeholder="10" value="10" style="width: 70px;" oninput="saveInputState()">
+                        <span style="font-size: 14px; color: var(--text-secondary);">c以上を</span>
+                    </div>
+                    <input type="text" id="tattooSearch" placeholder="タトゥーを検索..." oninput="filterTattoos()" style="flex: 1;">
+                </div>
+                
+                <div class="table-container" style="margin-top: 20px;">
+                    <div class="tattoo-header">
+                        <div class="beast-col-select" style="cursor: default;">選択</div>
+                        <div class="beast-col-price" data-column="price" onclick="sortTattoos('price')" style="cursor: pointer;">価格</div>
+                        <div class="beast-col-name" data-column="name" onclick="sortTattoos('name')" style="cursor: pointer;">タトゥー名</div>
+                        <div style="width: 0; padding: 0; visibility: hidden;"></div>
+                        <div class="beast-col-effect" data-column="description" onclick="sortTattoos('description')" style="cursor: pointer;">効果</div>
+                    </div>
+                    <div id="tattoolistContainer" class="beast-list"></div>
+                </div>
+            </div>
+        </div>
+        <!-- ルーングラフト-->
+        <div id="runegraftContent" class="tab-content">
+            <div class="card">
+                <h2 class="section-header">ルーングラフト検索</h2>
+                
+                <div class="input-group">
+                    <input type="text" id="runegraftProfileName" placeholder="プロファイル名を入力してください。" class="large-input">
+                    <button onclick="saveRunegraftProfile()">保存</button>
+                    <button onclick="loadRunegraftProfile()">読み込み</button>
+                    <button onclick="deleteRunegraftProfile()">削除</button>
+                    <select id="runegraftProfileList" class="large-input" onchange="loadRunegraftProfile()">
+                        <option value="">-- プロファイル選択 --</option>
+                    </select>
+                </div>
+
+                <div class="output-area" id="runegraftRegexOutput"></div>
+                <div class="input-group">
+                    <button onclick="copyRunegraftRegex()">コピー</button>
+                    <button onclick="resetRunegraftSelection()">リセット</button>
+                    <button id="runegraftLangToggle" onclick="toggleLanguage()">Language: JP</button>
+                    <span id="runegraftCharCount" class="char-count"></span>
+                </div>
+
+                <div class="input-group">
+                    <div style="display: flex; align-items: center; gap: 8px;">
+                        <button class="btn-secondary-highlight" onclick="bulkSelectRunegrafts()">一括選択</button>
+                        <input type="number" id="runegraftBulkThreshold" placeholder="10" value="10" style="width: 70px;" oninput="saveInputState()">
+                        <span style="font-size: 14px; color: var(--text-secondary);">c以上を</span>
+                    </div>
+                    <input type="text" id="runegraftSearch" placeholder="ルーングラフトを検索..." oninput="filterRunegrafts()" style="flex: 1;">
+                </div>
+                
+                <div class="table-container" style="margin-top: 20px;">
+                    <div class="runegraft-header">
+                        <div class="beast-col-select" style="cursor: default;">選択</div>
+                        <div class="beast-col-price" data-column="price" onclick="sortRunegrafts('price')" style="cursor: pointer;">価格</div>
+                        <div class="beast-col-name" data-column="name" onclick="sortRunegrafts('name')" style="cursor: pointer;">ルーングラフト名</div>
+                        <div style="width: 0; padding: 0; visibility: hidden;"></div>
+                        <div class="beast-col-effect" data-column="description" onclick="sortRunegrafts('description')" style="cursor: pointer;">効果</div>
+                    </div>
+                    <div id="runegraftlistContainer" class="beast-list"></div>
                 </div>
             </div>
         </div>
@@ -374,7 +516,7 @@
                     <button onclick="saveVendorProfile()">保存</button>
                     <button onclick="loadVendorProfile()">読み込み</button>
                     <button onclick="deleteVendorProfile()">削除</button>
-                    <select id="vendorProfileList" class="large-input">
+                    <select id="vendorProfileList" class="large-input" onchange="loadVendorProfile()">
                         <option value="">-- プロファイル選択 --</option>
                     </select>
                 </div>
@@ -783,6 +925,9 @@
     <script src="scripts/map_mods.js"></script>
     <script src="scripts/trade_link.js"></script>
     <script src="scripts/beastlist.js"></script>
+    <script src="scripts/scarablist.js"></script>
+    <script src="scripts/tattoolist.js"></script>
+    <script src="scripts/runegraftlist.js"></script>
     <script src="scripts/convert.js"></script>
     <script src="scripts/scripts.js"></script>
     <script src="scripts/flask.js"></script>

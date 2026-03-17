@@ -1,12 +1,50 @@
 let ModList = {...mapModList};
 let currentLanguage = 'ja';
-let checkedMods = new Map(); // id -> 'ng' or 'wanted'
+let checkedMods = new Map(); // id -> 'ng' または 'wanted'
 let checkedBeasts = new Set();
+let checkedScarabs = new Set();
+let checkedTattoos = new Set();
+let checkedRunegrafts = new Set();
+
+let scarabSortColumn = 'price';
+let scarabSortDirection = 'desc';
+let tattooSortColumn = 'price';
+let tattooSortDirection = 'desc';
+let runegraftSortColumn = 'price';
+let runegraftSortDirection = 'desc';
+
+let scarabProfiles = {};
+let tattooProfiles = {};
+let runegraftProfiles = {};
 
 function toggleLanguage() {
     currentLanguage = currentLanguage === 'ja' ? 'en' : 'ja';
     updateModList();
     updateCombinedRegex();
+    renderscarablist();
+    rendertattoolist();
+    renderrunegraftlist();
+    updateScarabRegex();
+    updateTattooRegex();
+    updateRunegraftRegex();
+    
+    // 切り替えボタンのテキストを更新
+    const mapLangToggle = document.getElementById('mapLangToggle');
+    if (mapLangToggle) {
+        mapLangToggle.textContent = `Language: ${currentLanguage.toUpperCase()}`;
+    }
+    const scarabLangToggle = document.getElementById('scarabLangToggle');
+    if (scarabLangToggle) {
+        scarabLangToggle.textContent = `Language: ${currentLanguage.toUpperCase()}`;
+    }
+    const tattooLangToggle = document.getElementById('tattooLangToggle');
+    if (tattooLangToggle) {
+        tattooLangToggle.textContent = `Language: ${currentLanguage.toUpperCase()}`;
+    }
+    const runegraftLangToggle = document.getElementById('runegraftLangToggle');
+    if (runegraftLangToggle) {
+        runegraftLangToggle.textContent = `Language: ${currentLanguage.toUpperCase()}`;
+    }
 }
 
 // Mod名の#プレースホルダーを実際の値で置換して表示
@@ -36,7 +74,7 @@ function addEffectItem(key, value) {
     checkbox.type = 'checkbox';
     checkbox.value = key;
     checkbox.id = key;
-    checkbox.style.display = 'none'; // Will be hidden by CSS too
+    checkbox.style.display = 'none'; // CSSでも非表示になります
     checkbox.checked = checkedMods.has(key);
 
     const textSpan = document.createElement('span');
@@ -46,16 +84,16 @@ function addEffectItem(key, value) {
 
     const effectItem = document.createElement('div');
     effectItem.classList.add('effect-item');
-    effectItem.dataset.modKey = key;  // キーをdata属性に保持 (htmlForより確実)
+    effectItem.dataset.modKey = key;  // キーをdata属性に保持
     
-    // Set initial state class
+    // 初期状態のクラスを設定
     if (checkedMods.get(key) === 'ng') {
         effectItem.classList.add('ng');
     } else if (checkedMods.get(key) === 'wanted') {
         effectItem.classList.add('wanted');
     }
 
-    // click -> NG
+    // 左クリック -> NG
     effectItem.addEventListener('click', function(e) {
         e.preventDefault();
         const currentState = checkedMods.get(key);
@@ -72,7 +110,7 @@ function addEffectItem(key, value) {
         updateModList();
     });
 
-    // right click -> Wanted
+    // 右クリック -> Wanted
     effectItem.addEventListener('contextmenu', function(e) {
         e.preventDefault();
         const currentState = checkedMods.get(key);
@@ -89,6 +127,7 @@ function addEffectItem(key, value) {
         updateModList();
     });
     
+    // ティアによる色分け
     if (value.tier > 1001) {
         effectItem.style.color = '#e0b8ee';
         effectItem.classList.add('t17-effect');
@@ -117,7 +156,7 @@ function addEffectItem(key, value) {
 
     effectItem.appendChild(label);
 
-    // Add metadata badges
+    // メタデータバッジ (数量、パックサイズなど)
     const badgeContainer = document.createElement('div');
     badgeContainer.classList.add('badge-container');
 
@@ -461,7 +500,6 @@ function getFixedRangeRegex(num, basePattern, optimize = false) {
       const d0 = quant / 100;
       numberRegex = `[${d0}-9]..`;
     } else {
-      // 非キリのいい数字（例: 500）は詳細なマッチ
       const str = quant.toString();
       const d0 = parseInt(str[0]);
       const d1 = parseInt(str[1] || 0);
@@ -596,7 +634,7 @@ function saveModCheckboxState() {
 }
 
 function addModCheckboxEventListeners() {
-    // No longer using checkbox events, selection is handled via effect-item clicks
+    // 選択イベントリスナー（現状はeffect-itemのクリックで処理）
 }
 
 function updateModList() {
@@ -614,22 +652,21 @@ function updateModList() {
             const stateA = checkedMods.get(keyA) || 'none';
             const stateB = checkedMods.get(keyB) || 'none';
 
-            // 1. Selection State Priority (Checked > None)
+            // 1. 選択済みを優先
             if (stateA !== 'none' && stateB === 'none') return -1;
             if (stateA === 'none' && stateB !== 'none') return 1;
 
             if (stateA !== 'none' && stateB !== 'none') {
-                // 2. Mod State Priority (NG > Wanted)
+                // 2. NGをWantedより優先
                 if (stateA === 'ng' && stateB === 'wanted') return -1;
                 if (stateA === 'wanted' && stateB === 'ng') return 1;
             }
 
-            // 3. Tier (Highest first)
+            // 3. ティア順 (高い順)
             if (valueB.tier !== valueA.tier) {
                 return valueB.tier - valueA.tier;
             }
 
-            // 4. Type (Prefix > Suffix)
             if (valueA.type === 'Prefix' && valueB.type === 'Suffix') return -1;
             if (valueA.type === 'Suffix' && valueB.type === 'Prefix') return 1;
 
@@ -662,7 +699,7 @@ function toggleModDetails() {
 }
 
 function loadModDetailsState() {
-    const showDetails = localStorage.getItem('showModDetails') !== 'false'; // Default to true
+    const showDetails = localStorage.getItem('showModDetails') !== 'false'; // デフォルトは表示
     document.getElementById('showModDetailsCheckbox').checked = showDetails;
 }
 
@@ -688,7 +725,11 @@ function saveInputState() {
         rarity: document.getElementById('rarityInput').value,
         scarab: document.getElementById('scarabInput').value,
         currency: document.getElementById('currencyInput').value,
-        map: document.getElementById('mapInput').value
+        map: document.getElementById('mapInput').value,
+        beastBulkThreshold: document.getElementById('beastBulkThreshold').value,
+        scarabBulkThreshold: document.getElementById('scarabBulkThreshold').value,
+        tattooBulkThreshold: document.getElementById('tattooBulkThreshold').value,
+        runegraftBulkThreshold: document.getElementById('runegraftBulkThreshold').value
     };
     localStorage.setItem('inputState', JSON.stringify(state));
 }
@@ -701,6 +742,10 @@ function loadInputState() {
     document.getElementById('scarabInput').value = state.scarab || '';
     document.getElementById('currencyInput').value = state.currency || '';
     document.getElementById('mapInput').value = state.map || '';
+    document.getElementById('beastBulkThreshold').value = state.beastBulkThreshold || '10';
+    document.getElementById('scarabBulkThreshold').value = state.scarabBulkThreshold || '10';
+    document.getElementById('tattooBulkThreshold').value = state.tattooBulkThreshold || '10';
+    document.getElementById('runegraftBulkThreshold').value = state.runegraftBulkThreshold || '10';
 }
 
 document.getElementById('ngModCheckbox').addEventListener('change', saveCheckboxState);
@@ -751,7 +796,7 @@ function saveProfile() {
   if (!validateInputs()) return;
 
   profiles[profileName] = {
-    mods: Array.from(checkedMods), // Store as [[id, state], ...]
+    mods: Array.from(checkedMods), // [[id, state], ...] の形式で保存
     settings: {
       itemQuantity: document.getElementById('itemQuantityInput').value,
       packSize: document.getElementById('packSizeInput').value,
@@ -823,12 +868,12 @@ function loadProfile() {
     checkedMods.clear();
     if (Array.isArray(profile.mods)) {
       profile.mods.forEach(modData => {
-        // Handle both old Set-based profiles ([id, ...]) and new Map-based ([[id, state], ...])
+        // 旧バージョンのSet形式プロファイルと現在のMap形式の互換性を維持
         if (Array.isArray(modData)) {
             const [id, state] = modData;
             if (ModList[id]) checkedMods.set(id, state);
         } else {
-            // Backward compatibility for old profiles (treated as 'ng' by default)
+            // 以前のプロパティ形式の互換性 (デフォルトで 'ng' として扱う)
             if (ModList[modData]) checkedMods.set(modData, 'ng');
         }
       });
@@ -908,7 +953,7 @@ function validateInputs() {
   return true;
 }
 
-// フィルターリセット (例として残す、または削除検討)
+// フィルターリセット
 function resetFilterSettings() {
     resetAll();
 }
@@ -1124,6 +1169,29 @@ function loadBeastCheckboxState() {
   if (saved) {
     checkedBeasts = new Set(JSON.parse(saved));
   }
+}
+
+function bulkSelectBeasts() {
+    const thresholdInput = document.getElementById('beastBulkThreshold');
+    if (!thresholdInput) return;
+    const threshold = parseFloat(thresholdInput.value);
+    if (isNaN(threshold)) return;
+
+    // 現在の選択をリセット
+    checkedBeasts.clear();
+
+    // しきい値以上の全てのビーストを選択
+    Object.entries(beastlist).forEach(([name, data]) => {
+        const price = parseFloat(data.chaosValue);
+        if (!isNaN(price) && price >= threshold) {
+            checkedBeasts.add(name);
+        }
+    });
+
+    // UIと状態を更新
+    renderbeastlist();
+    saveBeastCheckboxState();
+    updateBeastRegex();
 }
 
 let beastProfiles = {}
@@ -1427,7 +1495,7 @@ function copyTextToClipboard(text) {
         });
 }
 
-// End of file cleanup
+// ユーティリティ関数
 
 
 // プロファイルをlocalStorageから読み込む
@@ -1466,7 +1534,7 @@ function initializeApplication() {
         });
     });
 
-    // Load states
+    // 各種状態を読み込み
     loadProfiles();
     loadCheckboxState();
     loadInputState();
@@ -1474,7 +1542,7 @@ function initializeApplication() {
     loadSearchModeState();
     loadModDetailsState();
     
-    // Wire up metadata toggle
+    // メタデータ切り替えを接続
     const detailCheckbox = document.getElementById('showModDetailsCheckbox');
     if (detailCheckbox) {
         detailCheckbox.addEventListener('change', toggleModDetails);
@@ -1485,7 +1553,7 @@ function initializeApplication() {
     updateCombinedRegex();
 }
 
-// Start the app
+// アプリケーションを開始
 document.addEventListener('DOMContentLoaded', initializeApplication);
 
 
@@ -1588,7 +1656,6 @@ function toggleTradeSettings() {
     panel.classList.toggle('open');
 }
 
-// Ensure loadTradeSettings is called on window load
 const originalOnLoad = window.onload;
 window.onload = function() {
     if (originalOnLoad) originalOnLoad();
@@ -1671,3 +1738,908 @@ window.onclick = function(event) {
         closeItemModal();
     }
 };
+// スカラベ関連ロジック
+function renderscarablist() {
+  const container = document.getElementById('scarablistContainer');
+  if (!container) return;
+  container.innerHTML = '';
+  
+  let scarabs = Object.entries(scarablist);
+  
+  if (scarabSortColumn) {
+    scarabs.sort((a, b) => {
+      const [nameA, dataA] = a;
+      const [nameB, dataB] = b;
+      let valueA, valueB;
+      
+      switch (scarabSortColumn) {
+        case 'price':
+          valueA = parseFloat(dataA.chaosValue);
+          valueB = parseFloat(dataB.chaosValue);
+          break;
+        case 'name':
+          valueA = nameA;
+          valueB = nameB;
+          break;
+        case 'description':
+          valueA = currentLanguage === 'ja' ? dataA.description : dataA.enDescription;
+          valueB = currentLanguage === 'ja' ? dataB.description : dataB.enDescription;
+          break;
+        default:
+          return 0;
+      }
+      
+      let comparison = 0;
+      if (typeof valueA === 'number') {
+        comparison = valueA - valueB;
+      } else {
+        comparison = valueA.localeCompare(valueB);
+      }
+      
+      return scarabSortDirection === 'asc' ? comparison : -comparison;
+    });
+  }
+
+  // 0cのアイテムを除外
+  scarabs = scarabs.filter(([name, data]) => parseFloat(data.chaosValue) > 0);
+
+  scarabs.forEach(([name, data]) => {
+    const scarabItem = document.createElement('div');
+    scarabItem.className = 'scarab-item';
+    scarabItem.dataset.engName = data.engName;
+    
+    scarabItem.addEventListener('click', function(e) {
+      if (e.target.tagName !== 'INPUT') {
+        const checkbox = scarabItem.querySelector('input');
+        checkbox.checked = !checkbox.checked;
+        const event = new Event('change', { bubbles: true });
+        checkbox.dispatchEvent(event);
+      }
+    });
+    
+    const displayName = currentLanguage === 'ja' ? name : data.engName;
+    const displayDesc = currentLanguage === 'ja' ? data.description : data.enDescription;
+    
+    scarabItem.innerHTML = `
+      <div class="scarab-select">
+        <input type="checkbox" id="scarab-${name}" value="${name}">
+      </div>
+      <div class="scarab-price">${data.chaosValue}</div>
+      <div class="scarab-name">${displayName}</div>
+      <div style="width: 0; padding: 0; visibility: hidden;"></div>
+      <div class="scarab-effect">${displayDesc}</div>
+    `;
+
+    const checkbox = scarabItem.querySelector('input');
+    checkbox.checked = checkedScarabs.has(name);
+    checkbox.addEventListener('change', function() {
+      if (this.checked) {
+        checkedScarabs.add(name);
+      } else {
+        checkedScarabs.delete(name);
+      }
+      updateScarabRegex();
+      saveScarabCheckboxState();
+    });
+    
+    container.appendChild(scarabItem);
+  });
+}
+
+function sortScarabs(column) {
+  if (scarabSortColumn === column) {
+    scarabSortDirection = scarabSortDirection === 'asc' ? 'desc' : 'asc';
+  } else {
+    scarabSortColumn = column;
+    scarabSortDirection = 'asc';
+  }
+  updateScarabSortIcons();
+  renderscarablist();
+}
+
+function updateScarabSortIcons() {
+  const headers = document.querySelectorAll('#scarabContent .scarab-header > div');
+  headers.forEach(header => {
+    header.innerHTML = header.innerHTML.replace(/ ↑| ↓/g, '');
+    if (header.dataset.column === scarabSortColumn) {
+      header.innerHTML += scarabSortDirection === 'asc' ? ' ↓' : ' ↑';
+    }
+  });
+}
+
+function updateScarabRegex() {
+  const selectedRegexes = Array.from(checkedScarabs).map(name => {
+    const item = scarablist[name];
+    return currentLanguage === 'en' ? (item.enRegex || item.regex) : item.regex;
+  });
+  const regex = selectedRegexes.join('|');
+  
+  document.getElementById('scarabRegexOutput').textContent = regex;
+  
+  const charCount = regex.length;
+  const charCountElement = document.getElementById('scarabCharCount');
+  charCountElement.textContent = `文字数: ${charCount}`;
+  
+  if (charCount > 250) {
+    charCountElement.style.color = 'red';
+    charCountElement.textContent += ' (250文字を超えています)';
+  } else {
+    charCountElement.style.color = '';
+  }
+}
+
+function resetScarabSelection() {
+  checkedScarabs.clear();
+  document.querySelectorAll('#scarablistContainer input[type="checkbox"]').forEach(checkbox => {
+    checkbox.checked = false;
+  });
+  updateScarabRegex();
+  saveScarabCheckboxState();
+}
+
+function bulkSelectScarabs() {
+    const thresholdInput = document.getElementById('scarabBulkThreshold');
+    if (!thresholdInput) return;
+    const threshold = parseFloat(thresholdInput.value);
+    if (isNaN(threshold)) return;
+
+    checkedScarabs.clear();
+    Object.entries(scarablist).forEach(([name, data]) => {
+        const price = parseFloat(data.chaosValue);
+        if (!isNaN(price) && price >= threshold) {
+            checkedScarabs.add(name);
+        }
+    });
+
+    renderscarablist();
+    saveScarabCheckboxState();
+    updateScarabRegex();
+}
+
+function copyScarabRegex() {
+  const regex = document.getElementById('scarabRegexOutput').textContent;
+  if (regex) {
+    copyTextToClipboard(regex);
+  }
+}
+
+function filterScarabs() {
+  const term = document.getElementById('scarabSearch').value.toLowerCase();
+  
+  document.querySelectorAll('#scarablistContainer .scarab-item').forEach(item => {
+    const japaneseName = item.querySelector('.scarab-name').textContent.toLowerCase();
+    const englishName = scarablist[japaneseName]?.engName.toLowerCase() || '';
+    const description = item.querySelector('.scarab-effect').textContent.toLowerCase();
+    
+    const match = 
+      japaneseName.includes(term) || 
+      englishName.includes(term) || 
+      description.includes(term);
+    
+    item.style.display = match ? 'flex' : 'none';
+  });
+}
+
+function saveScarabCheckboxState() {
+  const state = Array.from(checkedScarabs);
+  localStorage.setItem('scarabCheckboxState', JSON.stringify(state));
+}
+
+function loadScarabCheckboxState() {
+  const saved = localStorage.getItem('scarabCheckboxState');
+  if (saved) {
+    try {
+      checkedScarabs = new Set(JSON.parse(saved));
+    } catch (e) {
+      console.error('scarabCheckboxState 読み込みエラー:', e);
+      checkedScarabs = new Set();
+    }
+  }
+}
+
+function saveScarabProfile() {
+  const profileName = document.getElementById('scarabProfileName').value.trim();
+  if (!profileName) {
+    showNotification('プロファイル名を入力してください', true);
+    return;
+  }
+
+  if (scarabProfiles[profileName] && !confirm(`${profileName} は既に存在します。上書きしますか？`)) {
+    return;
+  }
+
+  scarabProfiles[profileName] = {
+    scarabs: Array.from(checkedScarabs),
+    timestamp: Date.now()
+  };
+
+  localStorage.setItem('scarabProfiles', JSON.stringify(scarabProfiles));
+  updateScarabProfileList();
+  saveScarabCheckboxState();
+
+  showNotification(`"${profileName}" を保存しました`);
+  document.getElementById('scarabProfileName').value = '';
+}
+
+function loadScarabProfile() {
+  const profileName = document.getElementById('scarabProfileList').value;
+  if (!profileName || !scarabProfiles[profileName]) {
+    showNotification('プロファイルを選択してください', true);
+    return;
+  }
+
+  try {
+    const profile = scarabProfiles[profileName];
+    checkedScarabs.clear();
+    profile.scarabs.forEach(scarab => {
+      if (scarablist[scarab]) checkedScarabs.add(scarab);
+    });
+    document.getElementById('scarabProfileName').value = profileName;
+    renderscarablist();
+    updateScarabRegex();
+    saveScarabCheckboxState();
+    showNotification(`"${profileName}" を読み込みました`);
+  } catch (error) {
+    console.error('スカラベプロファイル読み込みエラー:', error);
+    showNotification('プロファイルの読み込みに失敗しました', true);
+  }
+}
+
+function deleteScarabProfile() {
+  const profileName = document.getElementById('scarabProfileList').value;
+  if (!profileName || !scarabProfiles[profileName]) {
+    showNotification('削除するプロファイルを選択してください', true);
+    return;
+  }
+
+  if (confirm(`本当に "${profileName}" を完全に削除しますか？\nこの操作は元に戻せません！`)) {
+    delete scarabProfiles[profileName];
+    localStorage.setItem('scarabProfiles', JSON.stringify(scarabProfiles));
+    updateScarabProfileList();
+    showNotification(`"${profileName}" を削除しました`);
+  }
+}
+
+function updateScarabProfileList() {
+  const select = document.getElementById('scarabProfileList');
+  if (!select) return;
+  const currentValue = select.value;
+  select.innerHTML = '<option value="">-- プロファイル選択 --</option>';
+  Object.keys(scarabProfiles).sort().forEach(name => {
+    const option = document.createElement('option');
+    option.value = name;
+    option.textContent = name;
+    option.selected = (name === currentValue);
+    select.appendChild(option);
+  });
+}
+
+// --- タトゥー関連ロジック ---
+function rendertattoolist() {
+  const container = document.getElementById('tattoolistContainer');
+  if (!container) return;
+  container.innerHTML = '';
+  
+  let Tattoos = Object.entries(tattoolist);
+  
+  if (tattooSortColumn) {
+    Tattoos.sort((a, b) => {
+      const [nameA, dataA] = a;
+      const [nameB, dataB] = b;
+      let valueA, valueB;
+      
+      switch (tattooSortColumn) {
+        case 'price':
+          valueA = parseFloat(dataA.chaosValue);
+          valueB = parseFloat(dataB.chaosValue);
+          break;
+        case 'name':
+          valueA = nameA;
+          valueB = nameB;
+          break;
+        case 'description':
+          valueA = currentLanguage === 'ja' ? dataA.description : dataA.enDescription;
+          valueB = currentLanguage === 'ja' ? dataB.description : dataB.enDescription;
+          break;
+        default:
+          return 0;
+      }
+      
+      let comparison = 0;
+      if (typeof valueA === 'number') {
+        comparison = valueA - valueB;
+      } else {
+        comparison = valueA.localeCompare(valueB);
+      }
+      
+      return tattooSortDirection === 'asc' ? comparison : -comparison;
+    });
+  }
+
+  // 0cのアイテムを除外
+  Tattoos = Tattoos.filter(([name, data]) => parseFloat(data.chaosValue) > 0);
+
+  Tattoos.forEach(([name, data]) => {
+    const tattooItem = document.createElement('div');
+    tattooItem.className = 'scarab-item';
+    tattooItem.dataset.engName = data.engName;
+    
+    tattooItem.addEventListener('click', function(e) {
+      if (e.target.tagName !== 'INPUT') {
+        const checkbox = tattooItem.querySelector('input');
+        checkbox.checked = !checkbox.checked;
+        const event = new Event('change', { bubbles: true });
+        checkbox.dispatchEvent(event);
+      }
+    });
+    
+    const displayName = currentLanguage === 'ja' ? name : data.engName;
+    const displayDesc = currentLanguage === 'ja' ? data.description : data.enDescription;
+    
+    tattooItem.innerHTML = `
+      <div class="scarab-select">
+        <input type="checkbox" id="tattoo-${name}" value="${name}">
+      </div>
+      <div class="scarab-price">${data.chaosValue}</div>
+      <div class="scarab-name">${displayName}</div>
+      <div style="width: 0; padding: 0; visibility: hidden;"></div>
+      <div class="scarab-effect">${displayDesc}</div>
+    `;
+
+    const checkbox = tattooItem.querySelector('input');
+    checkbox.checked = checkedTattoos.has(name);
+    checkbox.addEventListener('change', function() {
+      if (this.checked) {
+        checkedTattoos.add(name);
+      } else {
+        checkedTattoos.delete(name);
+      }
+      updateTattooRegex();
+      saveTattooCheckboxState();
+    });
+    
+    container.appendChild(tattooItem);
+  });
+}
+
+function sortTattoos(column) {
+  if (tattooSortColumn === column) {
+    tattooSortDirection = tattooSortDirection === 'asc' ? 'desc' : 'asc';
+  } else {
+    tattooSortColumn = column;
+    tattooSortDirection = 'asc';
+  }
+  updateTattooSortIcons();
+  rendertattoolist();
+}
+
+function updateTattooSortIcons() {
+  const headers = document.querySelectorAll('#tattooContent .tattoo-header > div');
+  headers.forEach(header => {
+    header.innerHTML = header.innerHTML.replace(/ ↑| ↓/g, '');
+    if (header.dataset.column === tattooSortColumn) {
+      header.innerHTML += tattooSortDirection === 'asc' ? ' ↓' : ' ↑';
+    }
+  });
+}
+
+function updateTattooRegex() {
+  const selectedRegexes = Array.from(checkedTattoos).map(name => {
+    const item = tattoolist[name];
+    return currentLanguage === 'en' ? (item.enRegex || item.regex) : item.regex;
+  });
+  const regex = selectedRegexes.join('|');
+  
+  document.getElementById('tattooRegexOutput').textContent = regex;
+  
+  const charCount = regex.length;
+  const charCountElement = document.getElementById('tattooCharCount');
+  charCountElement.textContent = `文字数: ${charCount}`;
+  
+  if (charCount > 250) {
+    charCountElement.style.color = 'red';
+    charCountElement.textContent += ' (250文字を超えています)';
+  } else {
+    charCountElement.style.color = '';
+  }
+}
+
+function resetTattooSelection() {
+  checkedTattoos.clear();
+  document.querySelectorAll('#tattoolistContainer input[type="checkbox"]').forEach(checkbox => {
+    checkbox.checked = false;
+  });
+  updateTattooRegex();
+  saveTattooCheckboxState();
+}
+
+function bulkSelectTattoos() {
+    const thresholdInput = document.getElementById('tattooBulkThreshold');
+    if (!thresholdInput) return;
+    const threshold = parseFloat(thresholdInput.value);
+    if (isNaN(threshold)) return;
+
+    checkedTattoos.clear();
+    Object.entries(tattoolist).forEach(([name, data]) => {
+        const price = parseFloat(data.chaosValue);
+        if (!isNaN(price) && price >= threshold) {
+            checkedTattoos.add(name);
+        }
+    });
+
+    rendertattoolist();
+    saveTattooCheckboxState();
+    updateTattooRegex();
+}
+
+function copyTattooRegex() {
+  const regex = document.getElementById('tattooRegexOutput').textContent;
+  if (regex) {
+    copyTextToClipboard(regex);
+  }
+}
+
+function filterTattoos() {
+  const term = document.getElementById('tattooSearch').value.toLowerCase();
+  
+  document.querySelectorAll('#tattoolistContainer .scarab-item').forEach(item => {
+    const japaneseName = item.querySelector('.scarab-name').textContent.toLowerCase();
+    const englishName = tattoolist[japaneseName]?.engName.toLowerCase() || '';
+    const description = item.querySelector('.scarab-effect').textContent.toLowerCase();
+    
+    const match = 
+      japaneseName.includes(term) || 
+      englishName.includes(term) || 
+      description.includes(term);
+    
+    item.style.display = match ? 'flex' : 'none';
+  });
+}
+
+function saveTattooCheckboxState() {
+  const state = Array.from(checkedTattoos);
+  localStorage.setItem('tattooCheckboxState', JSON.stringify(state));
+}
+
+function loadTattooCheckboxState() {
+  const saved = localStorage.getItem('tattooCheckboxState');
+  if (saved) {
+    try {
+      checkedTattoos = new Set(JSON.parse(saved));
+    } catch (e) {
+      console.error('tattooCheckboxState 読み込みエラー:', e);
+      checkedTattoos = new Set();
+    }
+  }
+}
+
+function saveTattooProfile() {
+  const profileName = document.getElementById('tattooProfileName').value.trim();
+  if (!profileName) {
+    showNotification('プロファイル名を入力してください', true);
+    return;
+  }
+
+  if (tattooProfiles[profileName] && !confirm(`${profileName} は既に存在します。上書きしますか？`)) {
+    return;
+  }
+
+  tattooProfiles[profileName] = {
+    tattoos: Array.from(checkedTattoos),
+    timestamp: Date.now()
+  };
+
+  localStorage.setItem('tattooProfiles', JSON.stringify(tattooProfiles));
+  updateTattooProfileList();
+  saveTattooCheckboxState();
+
+  showNotification(`"${profileName}" を保存しました`);
+  document.getElementById('tattooProfileName').value = '';
+}
+
+function loadTattooProfile() {
+  const profileName = document.getElementById('tattooProfileList').value;
+  if (!profileName || !tattooProfiles[profileName]) {
+    showNotification('プロファイルを選択してください', true);
+    return;
+  }
+
+  try {
+    const profile = tattooProfiles[profileName];
+    checkedTattoos.clear();
+    profile.tattoos.forEach(tattoo => {
+      if (tattoolist[tattoo]) checkedTattoos.add(tattoo);
+    });
+    document.getElementById('tattooProfileName').value = profileName;
+    rendertattoolist();
+    updateTattooRegex();
+    saveTattooCheckboxState();
+    showNotification(`"${profileName}" を読み込みました`);
+  } catch (error) {
+    console.error('タトゥープロファイル読み込みエラー:', error);
+    showNotification('プロファイルの読み込みに失敗しました', true);
+  }
+}
+
+function deleteTattooProfile() {
+  const profileName = document.getElementById('tattooProfileList').value;
+  if (!profileName || !tattooProfiles[profileName]) {
+    showNotification('削除するプロファイルを選択してください', true);
+    return;
+  }
+
+  if (confirm(`本当に "${profileName}" を完全に削除しますか？\nこの操作は元に戻せません！`)) {
+    delete tattooProfiles[profileName];
+    localStorage.setItem('tattooProfiles', JSON.stringify(tattooProfiles));
+    updateTattooProfileList();
+    showNotification(`"${profileName}" を削除しました`);
+  }
+}
+
+function updateTattooProfileList() {
+  const select = document.getElementById('tattooProfileList');
+  if (!select) return;
+  const currentValue = select.value;
+  select.innerHTML = '<option value="">-- プロファイル選択 --</option>';
+  Object.keys(tattooProfiles).sort().forEach(name => {
+    const option = document.createElement('option');
+    option.value = name;
+    option.textContent = name;
+    option.selected = (name === currentValue);
+    select.appendChild(option);
+  });
+}
+
+// --- ルーングラフト関連ロジック ---
+function renderrunegraftlist() {
+  const container = document.getElementById('runegraftlistContainer');
+  if (!container) return;
+  container.innerHTML = '';
+  
+  let Runegrafts = Object.entries(runegraftlist);
+  
+  if (runegraftSortColumn) {
+    Runegrafts.sort((a, b) => {
+      const [nameA, dataA] = a;
+      const [nameB, dataB] = b;
+      let valueA, valueB;
+      
+      switch (runegraftSortColumn) {
+        case 'price':
+          valueA = parseFloat(dataA.chaosValue);
+          valueB = parseFloat(dataB.chaosValue);
+          break;
+        case 'name':
+          valueA = nameA;
+          valueB = nameB;
+          break;
+        case 'description':
+          valueA = currentLanguage === 'ja' ? dataA.description : dataA.enDescription;
+          valueB = currentLanguage === 'ja' ? dataB.description : dataB.enDescription;
+          break;
+        default:
+          return 0;
+      }
+      
+      let comparison = 0;
+      if (typeof valueA === 'number') {
+        comparison = valueA - valueB;
+      } else {
+        comparison = valueA.localeCompare(valueB);
+      }
+      
+      return runegraftSortDirection === 'asc' ? comparison : -comparison;
+    });
+  }
+
+  // 0cのアイテムを除外
+  Runegrafts = Runegrafts.filter(([name, data]) => parseFloat(data.chaosValue) > 0);
+
+  Runegrafts.forEach(([name, data]) => {
+    const runegraftItem = document.createElement('div');
+    runegraftItem.className = 'scarab-item';
+    runegraftItem.dataset.engName = data.engName;
+    
+    runegraftItem.addEventListener('click', function(e) {
+      if (e.target.tagName !== 'INPUT') {
+        const checkbox = runegraftItem.querySelector('input');
+        checkbox.checked = !checkbox.checked;
+        const event = new Event('change', { bubbles: true });
+        checkbox.dispatchEvent(event);
+      }
+    });
+    
+    const displayName = currentLanguage === 'ja' ? name : data.engName;
+    const displayDesc = currentLanguage === 'ja' ? data.description : data.enDescription;
+    
+    runegraftItem.innerHTML = `
+      <div class="scarab-select">
+        <input type="checkbox" id="runegraft-${name}" value="${name}">
+      </div>
+      <div class="scarab-price">${data.chaosValue}</div>
+      <div class="scarab-name">${displayName}</div>
+      <div style="width: 0; padding: 0; visibility: hidden;"></div>
+      <div class="scarab-effect">${displayDesc}</div>
+    `;
+
+    const checkbox = runegraftItem.querySelector('input');
+    checkbox.checked = checkedRunegrafts.has(name);
+    checkbox.addEventListener('change', function() {
+      if (this.checked) {
+        checkedRunegrafts.add(name);
+      } else {
+        checkedRunegrafts.delete(name);
+      }
+      updateRunegraftRegex();
+      saveRunegraftCheckboxState();
+    });
+    
+    container.appendChild(runegraftItem);
+  });
+}
+
+function sortRunegrafts(column) {
+  if (runegraftSortColumn === column) {
+    runegraftSortDirection = runegraftSortDirection === 'asc' ? 'desc' : 'asc';
+  } else {
+    runegraftSortColumn = column;
+    runegraftSortDirection = 'asc';
+  }
+  updateRunegraftSortIcons();
+  renderrunegraftlist();
+}
+
+function updateRunegraftSortIcons() {
+  const headers = document.querySelectorAll('#runegraftContent .runegraft-header > div');
+  headers.forEach(header => {
+    header.innerHTML = header.innerHTML.replace(/ ↑| ↓/g, '');
+    if (header.dataset.column === runegraftSortColumn) {
+      header.innerHTML += runegraftSortDirection === 'asc' ? ' ↓' : ' ↑';
+    }
+  });
+}
+
+function updateRunegraftRegex() {
+  const selectedRegexes = Array.from(checkedRunegrafts).map(name => {
+    const item = runegraftlist[name];
+    return currentLanguage === 'en' ? (item.enRegex || item.regex) : item.regex;
+  });
+  const regex = selectedRegexes.join('|');
+  
+  document.getElementById('runegraftRegexOutput').textContent = regex;
+  
+  const charCount = regex.length;
+  const charCountElement = document.getElementById('runegraftCharCount');
+  charCountElement.textContent = `文字数: ${charCount}`;
+  
+  if (charCount > 250) {
+    charCountElement.style.color = 'red';
+    charCountElement.textContent += ' (250文字を超えています)';
+  } else {
+    charCountElement.style.color = '';
+  }
+}
+
+function resetRunegraftSelection() {
+  checkedRunegrafts.clear();
+  document.querySelectorAll('#runegraftlistContainer input[type="checkbox"]').forEach(checkbox => {
+    checkbox.checked = false;
+  });
+  updateRunegraftRegex();
+  saveRunegraftCheckboxState();
+}
+
+function bulkSelectRunegrafts() {
+    const thresholdInput = document.getElementById('runegraftBulkThreshold');
+    if (!thresholdInput) return;
+    const threshold = parseFloat(thresholdInput.value);
+    if (isNaN(threshold)) return;
+
+    checkedRunegrafts.clear();
+    Object.entries(runegraftlist).forEach(([name, data]) => {
+        const price = parseFloat(data.chaosValue);
+        if (!isNaN(price) && price >= threshold) {
+            checkedRunegrafts.add(name);
+        }
+    });
+
+    renderrunegraftlist();
+    saveRunegraftCheckboxState();
+    updateRunegraftRegex();
+}
+
+function copyRunegraftRegex() {
+  const regex = document.getElementById('runegraftRegexOutput').textContent;
+  if (regex) {
+    copyTextToClipboard(regex);
+  }
+}
+
+function filterRunegrafts() {
+  const term = document.getElementById('runegraftSearch').value.toLowerCase();
+  
+  document.querySelectorAll('#runegraftlistContainer .scarab-item').forEach(item => {
+    const japaneseName = item.querySelector('.scarab-name').textContent.toLowerCase();
+    const englishName = runegraftlist[japaneseName]?.engName.toLowerCase() || '';
+    const description = item.querySelector('.scarab-effect').textContent.toLowerCase();
+    
+    const match = 
+      japaneseName.includes(term) || 
+      englishName.includes(term) || 
+      description.includes(term);
+    
+    item.style.display = match ? 'flex' : 'none';
+  });
+}
+
+function saveRunegraftCheckboxState() {
+  const state = Array.from(checkedRunegrafts);
+  localStorage.setItem('runegraftCheckboxState', JSON.stringify(state));
+}
+
+function loadRunegraftCheckboxState() {
+  const saved = localStorage.getItem('runegraftCheckboxState');
+  if (saved) {
+    try {
+      checkedRunegrafts = new Set(JSON.parse(saved));
+    } catch (e) {
+      console.error('runegraftCheckboxState 読み込みエラー:', e);
+      checkedRunegrafts = new Set();
+    }
+  }
+}
+
+function saveRunegraftProfile() {
+  const profileName = document.getElementById('runegraftProfileName').value.trim();
+  if (!profileName) {
+    showNotification('プロファイル名を入力してください', true);
+    return;
+  }
+
+  if (runegraftProfiles[profileName] && !confirm(`${profileName} は既に存在します。上書きしますか？`)) {
+    return;
+  }
+
+  runegraftProfiles[profileName] = {
+    runegrafts: Array.from(checkedRunegrafts),
+    timestamp: Date.now()
+  };
+
+  localStorage.setItem('runegraftProfiles', JSON.stringify(runegraftProfiles));
+  updateRunegraftProfileList();
+  saveRunegraftCheckboxState();
+
+  showNotification(`"${profileName}" を保存しました`);
+  document.getElementById('runegraftProfileName').value = '';
+}
+
+function loadRunegraftProfile() {
+  const profileName = document.getElementById('runegraftProfileList').value;
+  if (!profileName || !runegraftProfiles[profileName]) {
+    showNotification('プロファイルを選択してください', true);
+    return;
+  }
+
+  try {
+    const profile = runegraftProfiles[profileName];
+    checkedRunegrafts.clear();
+    profile.runegrafts.forEach(runegraft => {
+      if (runegraftlist[runegraft]) checkedRunegrafts.add(runegraft);
+    });
+    document.getElementById('runegraftProfileName').value = profileName;
+    renderrunegraftlist();
+    updateRunegraftRegex();
+    saveRunegraftCheckboxState();
+    showNotification(`"${profileName}" を読み込みました`);
+  } catch (error) {
+    console.error('ルーングラフトプロファイル読み込みエラー:', error);
+    showNotification('プロファイルの読み込みに失敗しました', true);
+  }
+}
+
+function deleteRunegraftProfile() {
+  const profileName = document.getElementById('runegraftProfileList').value;
+  if (!profileName || !runegraftProfiles[profileName]) {
+    showNotification('削除するプロファイルを選択してください', true);
+    return;
+  }
+
+  if (confirm(`本当に "${profileName}" を完全に削除しますか？\nこの操作は元に戻せません！`)) {
+    delete runegraftProfiles[profileName];
+    localStorage.setItem('runegraftProfiles', JSON.stringify(runegraftProfiles));
+    updateRunegraftProfileList();
+    showNotification(`"${profileName}" を削除しました`);
+  }
+}
+
+function updateRunegraftProfileList() {
+  const select = document.getElementById('runegraftProfileList');
+  if (!select) return;
+  const currentValue = select.value;
+  select.innerHTML = '<option value="">-- プロファイル選択 --</option>';
+  Object.keys(runegraftProfiles).sort().forEach(name => {
+    const option = document.createElement('option');
+    option.value = name;
+    option.textContent = name;
+    option.selected = (name === currentValue);
+    select.appendChild(option);
+  });
+}
+
+function initializeApplication() {
+    const initialTab = window.location.hash.slice(1) || 'map';
+    const initialTabId = `${initialTab}Content`;
+    
+    if (document.getElementById(initialTabId)) {
+        switchTab(initialTabId);
+    } else {
+        switchTab('mapContent');
+        history.replaceState(null, '', '#map');
+    }
+
+    window.addEventListener('hashchange', handleHashChange);
+    
+    document.querySelectorAll('#sideMenu .nav-link').forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const tabId = this.dataset.tab;
+            switchTab(tabId);
+        });
+    });
+
+    // 各種状態を読み込み
+    loadProfiles();
+    loadCheckboxState();
+    loadInputState();
+    loadModCheckboxState();
+    loadSearchModeState();
+    loadModDetailsState();
+    
+    loadScarabCheckboxState();
+    renderscarablist();
+    updateScarabSortIcons();
+    updateScarabRegex();
+
+    loadTattooCheckboxState();
+    rendertattoolist();
+    updateTattooSortIcons();
+    updateTattooRegex();
+
+    loadRunegraftCheckboxState();
+    renderrunegraftlist();
+    updateRunegraftSortIcons();
+    updateRunegraftRegex();
+
+    // 各カテゴリのプロファイルを読み込み
+    const savedScarabProfiles = localStorage.getItem('scarabProfiles');
+    if (savedScarabProfiles) scarabProfiles = JSON.parse(savedScarabProfiles) || {};
+    updateScarabProfileList();
+
+    const savedTattooProfiles = localStorage.getItem('tattooProfiles');
+    if (savedTattooProfiles) tattooProfiles = JSON.parse(savedTattooProfiles) || {};
+    updateTattooProfileList();
+
+    const savedRunegraftProfiles = localStorage.getItem('runegraftProfiles');
+    if (savedRunegraftProfiles) runegraftProfiles = JSON.parse(savedRunegraftProfiles) || {};
+    updateRunegraftProfileList();
+
+    // プロファイル選択時のイベントリスナーを設定
+    const scarabProfileSelect = document.getElementById('scarabProfileList');
+    if (scarabProfileSelect) scarabProfileSelect.addEventListener('change', function() { if (this.value) loadScarabProfile(); });
+    
+    const tattooProfileSelect = document.getElementById('tattooProfileList');
+    if (tattooProfileSelect) tattooProfileSelect.addEventListener('change', function() { if (this.value) loadTattooProfile(); });
+
+    const runegraftProfileSelect = document.getElementById('runegraftProfileList');
+    if (runegraftProfileSelect) runegraftProfileSelect.addEventListener('change', function() { if (this.value) loadRunegraftProfile(); });
+    
+    // 詳細表示の切り替えイベントを設定
+    const detailCheckbox = document.getElementById('showModDetailsCheckbox');
+    if (detailCheckbox) {
+        detailCheckbox.addEventListener('change', toggleModDetails);
+    }
+    
+    initializeTooltips();
+    updateModList();
+    updateCombinedRegex();
+}

@@ -118,6 +118,11 @@ function getAllProfiles() {
     allProfiles.push({ name, profile, type: 'beast', tabId: 'beastContent', timestamp: profile.timestamp || 0 });
   });
 
+  const scarabProfiles = JSON.parse(localStorage.getItem('scarabProfiles') || '{}');
+  Object.entries(scarabProfiles).forEach(([name, profile]) => {
+    allProfiles.push({ name, profile, type: 'scarab', tabId: 'scarabContent', timestamp: profile.timestamp || 0 });
+  });
+
   return allProfiles;
 }
 
@@ -126,7 +131,8 @@ const typeConfig = {
   flask: { label: 'フラスコ', color: '#9B59B6', icon: '' },
   item: { label: 'アイテム', color: '#3498DB', icon: '' },
   vendor: { label: 'ベンダー', color: '#F39C12', icon: '' },
-  beast: { label: 'ビースト', color: '#1ABC9C', icon: '' }
+  beast: { label: 'ビースト', color: '#1ABC9C', icon: '' },
+  scarab: { label: 'スカラベ', color: '#D35400', icon: '' }
 };
 
 function generateRegexFromProfile(profile, type) {
@@ -149,6 +155,16 @@ function generateRegexFromProfile(profile, type) {
     const regexes = beasts.map(beastName => {
       const beast = beastlist[beastName];
       return beast ? beast.regex : null;
+    }).filter(regex => regex !== null);
+    
+    return regexes.join('|') || '(空のRegex)';
+  } else if (type === 'scarab') {
+    const scarabNames = (profile.scarabs || []);
+    if (scarabNames.length === 0) return '(空のRegex)';
+    
+    const regexes = scarabNames.map(name => {
+      const item = scarablist[name];
+      return item ? item.regex : null;
     }).filter(regex => regex !== null);
     
     return regexes.join('|') || '(空のRegex)';
@@ -178,19 +194,15 @@ function generateMapRegexFromProfile(profile) {
     checkedMods.clear();
     if (profile.mods) {
       if (Array.isArray(profile.mods)) {
-        // Array format: either [[id, state], ...] (from Array.from(Map)) or [id, ...] (old format)
         profile.mods.forEach(mod => {
           if (Array.isArray(mod)) {
-            // New format: [id, state]
             const [id, state] = mod;
             if (id) checkedMods.set(id, state || 'ng');
           } else if (typeof mod === 'string') {
-            // Old format: just the mod id
             checkedMods.set(mod, 'ng');
           }
         });
       } else if (typeof profile.mods === 'object') {
-        // Object/Map format: { id: state, ... }
         Object.entries(profile.mods).forEach(([mod, state]) => checkedMods.set(mod, state));
       }
     }
@@ -526,6 +538,9 @@ function createProfileSummary(profile, type) {
       const gemNames = [];
       const maxDisplay = 2;
       for (let i = 0; i < Math.min(gemCount, maxDisplay); i++) {
+       // 保存されたRegex内の現在の言語は異なる可能性がありますが、
+      // 混合クライアントの場合はデフォルトとして日本語を使用するか、
+      // または enRegex を使用すべきか判断を試みます。;
         const gemRegex = settings.selectedGems[i];
         let displayName = gemRegex;
         if (profile.gemInfo) {
@@ -544,6 +559,9 @@ function createProfileSummary(profile, type) {
   } else if (type === 'beast') {
     const beastCount = (profile.beasts || []).length;
     if (beastCount > 0) parts.push(`${beastCount}個のビースト`);
+  } else if (type === 'scarab') {
+    const scarabCount = (profile.scarabs || []).length;
+    if (scarabCount > 0) parts.push(`${scarabCount}個のスカラベ`);
   }
 
   return parts.length > 0 ? parts.join(' | ') : '';
@@ -596,20 +614,17 @@ function createDetailedView(profile, type) {
       if (rows.length > 0) container.appendChild(settingsDiv);
     }
     
-    let modsToProcess = []; // [{id, state}, ...]
+    let modsToProcess = [];
     if (profile.mods) {
       if (Array.isArray(profile.mods)) {
         profile.mods.forEach(mod => {
           if (Array.isArray(mod)) {
-            // [[id, state], ...] format (from Array.from(Map))
             modsToProcess.push({ id: mod[0], state: mod[1] || 'ng' });
           } else if (typeof mod === 'string') {
-            // Old format: just id
             modsToProcess.push({ id: mod, state: 'ng' });
           }
         });
       } else if (typeof profile.mods === 'object') {
-        // { id: state } object format
         Object.entries(profile.mods).forEach(([id, state]) => {
           modsToProcess.push({ id, state });
         });
@@ -941,6 +956,9 @@ function loadSavedProfile(name, type, tabId) {
       } else if (type === 'beast') {
         document.getElementById('beastProfileList').value = name;
         loadBeastProfile();
+      } else if (type === 'scarab') {
+        document.getElementById('scarabProfileList').value = name;
+        loadScarabProfile();
       }
       const tabContent = document.getElementById(tabId);
       if (tabContent) {
@@ -1521,6 +1539,29 @@ function hookSaveProfiles() {
       }, 100);
     };
     window.saveBeastProfile._hooked = true;
+  }
+
+  const originalScarabSave = window.saveScarabProfile;
+  if (originalScarabSave && typeof originalScarabSave === 'function' && !originalScarabSave._hooked) {
+    window.saveScarabProfile = function() {
+      const profileName = document.getElementById('scarabProfileName')?.value.trim() || '';
+      originalScarabSave.apply(this, arguments);
+      setTimeout(() => {
+        try {
+          const profiles = JSON.parse(localStorage.getItem('scarabProfiles') || '{}');
+          Object.keys(profiles).forEach(key => {
+            if (!profiles[key].timestamp) profiles[key].timestamp = Date.now();
+          });
+          localStorage.setItem('scarabProfiles', JSON.stringify(profiles));
+          
+          if (profileName) addProfileToTop(profileName, 'scarab');
+          updateSavedRegexDisplay();
+        } catch (e) {
+          console.error('タイムスタンプ追加エラー:', e);
+        }
+      }, 100);
+    };
+    window.saveScarabProfile._hooked = true;
   }
 }
 
