@@ -52,12 +52,16 @@ function buildTradeUrl() {
     };
 
     // Mod数の条件を追加
-    if (minModCount > 0) {
-        stats.push({
+    const maxModCount = parseInt(document.getElementById('maxModCountInput').value);
+    if (minModCount > 0 || maxModCount > 0) {
+        const modCountFilter = {
             id: "pseudo.pseudo_number_of_affix_mods",
-            value: { min: minModCount },
+            value: {},
             disabled: false
-        });
+        };
+        if (minModCount > 0) modCountFilter.value.min = minModCount;
+        if (maxModCount > 0) modCountFilter.value.max = maxModCount;
+        stats.push(modCountFilter);
     }
 
     // メモリーマップの条件を追加
@@ -151,7 +155,9 @@ function buildTradeUrl() {
         };
     }
 
-    // アイテムカテゴリ（マップ）とデフォルトフィルタ（レアリティ、フォイル）
+    // アイテムカテゴリ（マップ）とデフォルトフィルタ（レアリティ、フォイル、コラプト）
+    const corruptedStatus = document.getElementById('corruptedStatusSelect').value;
+
     filters.type_filters = {
         filters: {
             category: { option: "map" },
@@ -164,6 +170,10 @@ function buildTradeUrl() {
             foil_variation: { option: "none" }
         }
     };
+
+    if (corruptedStatus !== "") {
+        filters.misc_filters.filters.corrupted = { option: corruptedStatus };
+    }
 
     // マップ層と値のフィルタ
     const iiq = parseInt(document.getElementById('itemQuantityInput').value);

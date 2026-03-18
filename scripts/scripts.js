@@ -19,6 +19,9 @@ let runegraftProfiles = {};
 
 function toggleLanguage() {
     currentLanguage = currentLanguage === 'ja' ? 'en' : 'ja';
+    localStorage.setItem('poeLanguage', currentLanguage);
+    updateLanguageUI();
+    
     updateModList();
     updateCombinedRegex();
     renderscarablist();
@@ -27,24 +30,36 @@ function toggleLanguage() {
     updateScarabRegex();
     updateTattooRegex();
     updateRunegraftRegex();
+}
+
+/**
+ * 言語設定を読み込み、UIを更新する
+ */
+function loadLanguageState() {
+    const savedLanguage = localStorage.getItem('poeLanguage');
+    if (savedLanguage === 'ja' || savedLanguage === 'en') {
+        currentLanguage = savedLanguage;
+    }
+    updateLanguageUI();
+}
+
+/**
+ * 言語切り替えボタンのテキストを現在の言語に合わせて更新
+ */
+function updateLanguageUI() {
+    const toggles = [
+        'mapLangToggle',
+        'scarabLangToggle',
+        'tattooLangToggle',
+        'runegraftLangToggle'
+    ];
     
-    // 切り替えボタンのテキストを更新
-    const mapLangToggle = document.getElementById('mapLangToggle');
-    if (mapLangToggle) {
-        mapLangToggle.textContent = `Language: ${currentLanguage.toUpperCase()}`;
-    }
-    const scarabLangToggle = document.getElementById('scarabLangToggle');
-    if (scarabLangToggle) {
-        scarabLangToggle.textContent = `Language: ${currentLanguage.toUpperCase()}`;
-    }
-    const tattooLangToggle = document.getElementById('tattooLangToggle');
-    if (tattooLangToggle) {
-        tattooLangToggle.textContent = `Language: ${currentLanguage.toUpperCase()}`;
-    }
-    const runegraftLangToggle = document.getElementById('runegraftLangToggle');
-    if (runegraftLangToggle) {
-        runegraftLangToggle.textContent = `Language: ${currentLanguage.toUpperCase()}`;
-    }
+    toggles.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) {
+            el.textContent = `Language: ${currentLanguage.toUpperCase()}`;
+        }
+    });
 }
 
 // Mod名の#プレースホルダーを実際の値で置換して表示
@@ -1527,45 +1542,6 @@ function loadProfiles() {
 }
 
 // 初期化時にツールチップを設定
-function initializeApplication() {
-    const initialTab = window.location.hash.slice(1) || 'map';
-    const initialTabId = `${initialTab}Content`;
-    
-    if (document.getElementById(initialTabId)) {
-        switchTab(initialTabId);
-    } else {
-        switchTab('mapContent');
-        history.replaceState(null, '', '#map');
-    }
-
-    window.addEventListener('hashchange', handleHashChange);
-    
-    document.querySelectorAll('#sideMenu .nav-link').forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const tabId = this.dataset.tab;
-            switchTab(tabId);
-        });
-    });
-
-    // 各種状態を読み込み
-    loadProfiles();
-    loadCheckboxState();
-    loadInputState();
-    loadModCheckboxState();
-    loadSearchModeState();
-    loadModDetailsState();
-    
-    // メタデータ切り替えを接続
-    const detailCheckbox = document.getElementById('showModDetailsCheckbox');
-    if (detailCheckbox) {
-        detailCheckbox.addEventListener('change', toggleModDetails);
-    }
-    
-    initializeTooltips();
-    updateModList();
-    updateCombinedRegex();
-}
 
 // アプリケーションを開始
 document.addEventListener('DOMContentLoaded', initializeApplication);
@@ -1598,6 +1574,8 @@ function saveTradeSettings() {
     const leagueIsCustom = document.getElementById('leagueSelect').value === '__custom__';
     const method = document.getElementById('tradeMethodSelect').value;
     const minModCount = document.getElementById('minModCountInput').value;
+    const maxModCount = document.getElementById('maxModCountInput').value;
+    const corruptedStatus = document.getElementById('corruptedStatusSelect').value;
     const memoryMap = document.getElementById('memoryMapCheckbox').checked;
     const mapTierMin = document.getElementById('mapTierMinInput').value;
     const mapTierMax = document.getElementById('mapTierMaxInput').value;
@@ -1610,6 +1588,8 @@ function saveTradeSettings() {
     localStorage.setItem('poeTradeLeagueIsCustom', leagueIsCustom);
     localStorage.setItem('poeTradeMethod', method);
     localStorage.setItem('poeTradeMinModCount', minModCount);
+    localStorage.setItem('poeTradeMaxModCount', maxModCount);
+    localStorage.setItem('poeTradeCorruptedStatus', corruptedStatus);
     localStorage.setItem('poeTradeMemoryMap', memoryMap);
     localStorage.setItem('poeTradeMapTierMin', mapTierMin);
     localStorage.setItem('poeTradeMapTierMax', mapTierMax);
@@ -1626,6 +1606,11 @@ function loadTradeSettings() {
     if (method === null) method = "securable";
     let minModCount = localStorage.getItem('poeTradeMinModCount');
     if (minModCount === null) minModCount = "8";
+    let maxModCount = localStorage.getItem('poeTradeMaxModCount');
+    if (maxModCount === null) maxModCount = "8";
+    let corruptedStatus = localStorage.getItem('poeTradeCorruptedStatus');
+    if (corruptedStatus === null) corruptedStatus = "";
+
     const memoryMap = localStorage.getItem('poeTradeMemoryMap') === 'true';
     const mapTierMin = localStorage.getItem('poeTradeMapTierMin') || "16";
     const mapTierMax = localStorage.getItem('poeTradeMapTierMax') || "16";
@@ -1656,6 +1641,8 @@ function loadTradeSettings() {
 
     document.getElementById('tradeMethodSelect').value = method;
     document.getElementById('minModCountInput').value = minModCount;
+    document.getElementById('maxModCountInput').value = maxModCount;
+    document.getElementById('corruptedStatusSelect').value = corruptedStatus;
     document.getElementById('memoryMapCheckbox').checked = memoryMap;
     document.getElementById('mapTierMinInput').value = mapTierMin;
     document.getElementById('mapTierMaxInput').value = mapTierMax;
@@ -2671,6 +2658,7 @@ function initializeApplication() {
         detailCheckbox.addEventListener('change', toggleModDetails);
     }
     
+    loadLanguageState();
     initializeTooltips();
     updateModList();
     updateCombinedRegex();
