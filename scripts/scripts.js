@@ -1090,7 +1090,7 @@ function updateSortIcons() {
   headers.forEach(header => {
     header.innerHTML = header.innerHTML.replace(/ ↑| ↓/g, '');
     if (header.dataset.column === beastSortColumn) {
-      header.innerHTML += beastSortDirection === 'asc' ? ' ↓' : ' ↑';
+      header.innerHTML += beastSortDirection === 'asc' ? ' ↑' : ' ↓';
     }
   });
 }
@@ -1856,7 +1856,7 @@ function updateScarabSortIcons() {
   headers.forEach(header => {
     header.innerHTML = header.innerHTML.replace(/ ↑| ↓/g, '');
     if (header.dataset.column === scarabSortColumn) {
-      header.innerHTML += scarabSortDirection === 'asc' ? ' ↓' : ' ↑';
+      header.innerHTML += scarabSortDirection === 'asc' ? ' ↑' : ' ↓';
     }
   });
 }
@@ -2138,7 +2138,7 @@ function updateTattooSortIcons() {
   headers.forEach(header => {
     header.innerHTML = header.innerHTML.replace(/ ↑| ↓/g, '');
     if (header.dataset.column === tattooSortColumn) {
-      header.innerHTML += tattooSortDirection === 'asc' ? ' ↓' : ' ↑';
+      header.innerHTML += tattooSortDirection === 'asc' ? ' ↑' : ' ↓';
     }
   });
 }
@@ -2420,7 +2420,7 @@ function updateRunegraftSortIcons() {
   headers.forEach(header => {
     header.innerHTML = header.innerHTML.replace(/ ↑| ↓/g, '');
     if (header.dataset.column === runegraftSortColumn) {
-      header.innerHTML += runegraftSortDirection === 'asc' ? ' ↓' : ' ↑';
+      header.innerHTML += runegraftSortDirection === 'asc' ? ' ↑' : ' ↓';
     }
   });
 }
