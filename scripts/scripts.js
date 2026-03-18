@@ -1090,7 +1090,7 @@ function updateSortIcons() {
 // ビーストRegex更新
 function updateBeastRegex() {
   const selectedRegexes = Array.from(checkedBeasts).map(name => beastlist[name].regex);
-  const regex = selectedRegexes.join('|');
+  const regex = selectedRegexes.length > 0 ? `"${selectedRegexes.join('|')}"` : '';
   
   document.getElementById('beastRegexOutput').textContent = regex;
   
@@ -1852,7 +1852,7 @@ function updateScarabRegex() {
     const item = scarablist[name];
     return currentLanguage === 'en' ? (item.enRegex || item.regex) : item.regex;
   });
-  const regex = selectedRegexes.join('|');
+  const regex = selectedRegexes.length > 0 ? `"${selectedRegexes.join('|')}"` : '';
   
   document.getElementById('scarabRegexOutput').textContent = regex;
   
@@ -2128,7 +2128,7 @@ function updateTattooRegex() {
     const item = tattoolist[name];
     return currentLanguage === 'en' ? (item.enRegex || item.regex) : item.regex;
   });
-  const regex = selectedRegexes.join('|');
+  const regex = selectedRegexes.length > 0 ? `"${selectedRegexes.join('|')}"` : '';
   
   document.getElementById('tattooRegexOutput').textContent = regex;
   
@@ -2404,7 +2404,7 @@ function updateRunegraftRegex() {
     const item = runegraftlist[name];
     return currentLanguage === 'en' ? (item.enRegex || item.regex) : item.regex;
   });
-  const regex = selectedRegexes.join('|');
+  const regex = selectedRegexes.length > 0 ? `"${selectedRegexes.join('|')}"` : '';
   
   document.getElementById('runegraftRegexOutput').textContent = regex;
   

@@ -29,7 +29,7 @@ const runegraftlist = {
     "enDescription": "",
     "chaosValue": "15.99",
     "regex": "闘士",
-    "enRegex": "50%"
+    "enRegex": "e Co"
   },
   "左手のルーングラフト": {
     "engName": "Runegraft of the Sinistral",
@@ -45,7 +45,7 @@ const runegraftlist = {
     "enDescription": "",
     "chaosValue": "15.56",
     "regex": "束縛",
-    "enRegex": " Bou"
+    "enRegex": "e B"
   },
   "時の歪みのルーングラフト": {
     "engName": "Runegraft of the Warp",
@@ -125,7 +125,7 @@ const runegraftlist = {
     "enDescription": "",
     "chaosValue": "22.97",
     "regex": "裏切",
-    "enRegex": "15%"
+    "enRegex": "f Tr"
   },
   "暴飲のルーングラフト": {
     "engName": "Runegraft of Quaffing",
@@ -157,7 +157,7 @@ const runegraftlist = {
     "enDescription": "",
     "chaosValue": "16.68",
     "regex": "ウィ",
-    "enRegex": "fe s"
+    "enRegex": "he Wi"
   },
   "ノヴァマークのルーングラフト": {
     "engName": "Runegraft of the Novamark",
@@ -181,7 +181,7 @@ const runegraftlist = {
     "enDescription": "",
     "chaosValue": "18.89",
     "regex": "宝飾",
-    "enRegex": "Two"
+    "enRegex": "ew"
   },
   "安定性のルーングラフト": {
     "engName": "Runegraft of Stability",
@@ -213,7 +213,7 @@ const runegraftlist = {
     "enDescription": "",
     "chaosValue": "14.07",
     "regex": "神聖",
-    "enRegex": "ons"
+    "enRegex": "f Cons"
   },
   "怒りのルーングラフト": {
     "engName": "Runegraft of Fury",
@@ -229,7 +229,7 @@ const runegraftlist = {
     "enDescription": "",
     "chaosValue": "18.56",
     "regex": "鼓舞",
-    "enRegex": " Ra"
+    "enRegex": "f Ra"
   },
   "ロットブラッドのルーングラフト": {
     "engName": "Runegraft of Rotblood",
@@ -245,7 +245,7 @@ const runegraftlist = {
     "enDescription": "",
     "chaosValue": "16.43",
     "regex": "与の",
-    "enRegex": "e I"
+    "enRegex": "e Im"
   },
   "俊敏のルーングラフト": {
     "engName": "Runegraft of the Agile",
@@ -253,7 +253,7 @@ const runegraftlist = {
     "enDescription": "",
     "chaosValue": "15.26",
     "regex": "俊敏",
-    "enRegex": " Ag"
+    "enRegex": "e Agi"
   },
   "苦難のルーングラフト": {
     "engName": "Runegraft of Suffering",
@@ -261,7 +261,7 @@ const runegraftlist = {
     "enDescription": "",
     "chaosValue": "14.48",
     "regex": "苦難",
-    "enRegex": " Su"
+    "enRegex": "f Su"
   },
   "スペルバウンドのルーングラフト": {
     "engName": "Runegraft of the Spellbound",
@@ -269,7 +269,7 @@ const runegraftlist = {
     "enDescription": "",
     "chaosValue": "15.86",
     "regex": "ペルバ",
-    "enRegex": " Sp"
+    "enRegex": "e Sp"
   },
   "回復のルーングラフト": {
     "engName": "Runegraft of Resurgence",

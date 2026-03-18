@@ -29,7 +29,7 @@ const tattoolist = {
     "enDescription": "",
     "chaosValue": "280.6",
     "regex": "フのウ",
-    "enRegex": "o I"
+    "enRegex": "u Warm"
   },
   "ナマフの木彫り師のタトゥー": {
     "engName": "Tattoo of the Ngamahu Woodcarver",
@@ -173,7 +173,7 @@ const tattoolist = {
     "enDescription": "",
     "chaosValue": "2.73",
     "regex": "ライの戦",
-    "enRegex": "r 6"
+    "enRegex": "ai W"
   },
   "ロンゴクライの蛮人のタトゥー": {
     "engName": "Tattoo of the Rongokurai Brute",
@@ -397,7 +397,7 @@ const tattoolist = {
     "enDescription": "",
     "chaosValue": "65.14",
     "regex": "ラの戦",
-    "enRegex": " 3%"
+    "enRegex": "3% I"
   },
   "ヒネコラの死の番人のタトゥー": {
     "engName": "Tattoo of the Hinekora Deathwarden",
@@ -413,7 +413,7 @@ const tattoolist = {
     "enDescription": "",
     "chaosValue": "14.82",
     "regex": "ラのシ",
-    "enRegex": "heab"
+    "enRegex": "ra Sh"
   },
   "ヒネコラの語り部のタトゥー": {
     "engName": "Tattoo of the Hinekora Storyteller",
@@ -429,7 +429,7 @@ const tattoolist = {
     "enDescription": "",
     "chaosValue": "173",
     "regex": "ラのウ",
-    "enRegex": "ns "
+    "enRegex": "ra Warm"
   },
   "タウハヌクの忠誠のタトゥー": {
     "engName": "Loyalty Tattoo of Tawhanuku",
@@ -533,7 +533,7 @@ const tattoolist = {
     "enDescription": "",
     "chaosValue": "561.6",
     "regex": "のシー",
-    "enRegex": "ck A"
+    "enRegex": "mako Sh"
   },
   "ヴァラコのシャーマンのタトゥー": {
     "engName": "Tattoo of the Valako Shaman",
@@ -725,7 +725,7 @@ const tattoolist = {
     "enDescription": "",
     "chaosValue": "2056",
     "regex": "精神",
-    "enRegex": "30 t"
+    "enRegex": "e M"
   },
   "魂の旅のタトゥー": {
     "engName": "Journey Tattoo of the Soul",
