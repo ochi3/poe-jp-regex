@@ -4,91 +4,91 @@ const beastlist = {
     "family": "深海",
     "effect": "アイテムを変換：覚醒サポートジェムのロールを再生成する",
     "regex": "ド・ウ",
-    "chaosValue": "10"
+    "chaosValue": "9"
   },
   "ブラック・モリガン": {
     "engName": "Black Mórrigan",
     "family": "原生林",
     "effect": "アイテムを修正：可能な限り最大リンク数にする",
     "regex": "リガ",
-    "chaosValue": "136"
+    "chaosValue": "145"
   },
   "クレイシアンのキメラル": {
     "engName": "Craicic Chimeral",
     "family": "深海",
     "effect": "インプリントを作成: マジックアイテム",
     "regex": "ンのキ",
-    "chaosValue": "95"
+    "chaosValue": "104"
   },
   "ワイルド・ブリスル・マトロン": {
     "engName": "Wild Bristle Matron",
     "family": "原生林",
     "effect": "アイテムのモッドを変化: 非ユニークアイテムにクラフトメタモッドを追加",
     "regex": "ル・マ",
-    "chaosValue": "269"
+    "chaosValue": "246"
   },
   "ビビッド・ヴァルチャー": {
     "engName": "Vivid Vulture",
     "family": "砂漠",
     "effect": "アイテムを変換: シンセシス暗黙モッドをリロール",
     "regex": "ド・ヴ",
-    "chaosValue": "508"
+    "chaosValue": "465"
   },
   "ワイルド・ヘリオン・アルファ": {
     "engName": "Wild Hellion Alpha",
     "family": "原生林",
     "effect": "アイテムのモッドを変化: 見つめる者の目のモッドをリロール。最大ライフ、マナおよびエナジーシールドのモッドはリロールできない",
     "regex": "ド・ヘリ",
-    "chaosValue": "185"
+    "chaosValue": "180"
   },
   "ワイルド・ブランブルバック": {
     "engName": "Wild Brambleback",
     "family": "原生林",
     "effect": "アイテムを変換: コラプト状態でない覚醒のジェムのレベルを1上げる",
     "regex": "ド・ブラ",
-    "chaosValue": "37.5"
+    "chaosValue": "44"
   },
   "平原の始祖、ファルウル": {
     "engName": "Farrul, First of the Plains",
     "family": "原生林",
     "effect": "アイテムにアスペクトスキルを追加: 猫のアスペクト",
     "regex": "祖、ファ",
-    "chaosValue": "60"
+    "chaosValue": "48"
   },
   "フィヌムスのプレイグドアラクニド": {
     "engName": "Fenumal Plagued Arachnid",
     "family": "洞窟",
     "effect": "アイテムをスプリット: それぞれ半分のモッドを持つ2個のアイテムにスプリット",
     "regex": "のプレ",
-    "chaosValue": "50"
+    "chaosValue": "70"
   },
   "プライマル・クリストコーラー": {
     "engName": "Primal Cystcaller",
     "family": "原生林",
     "effect": "アトラスクラフトを獲得: キラックミッションを5個獲得 ミッションの色は赤ビーストのレベルに基づく",
     "regex": "ル・クリ",
-    "chaosValue": "10"
+    "chaosValue": "12"
   },
   "夜の始祖、フィヌムス": {
     "engName": "Fenumus, First of the Night",
     "family": "洞窟",
     "effect": "アイテムにアスペクトスキルを追加: 蜘蛛のアスペクト",
     "regex": "祖、フィ",
-    "chaosValue": "52"
+    "chaosValue": "53"
   },
   "空の始祖、サカワル": {
     "engName": "Saqawal, First of the Sky",
     "family": "砂漠",
     "effect": "アイテムにアスペクトスキルを追加: 鳥のアスペクト",
     "regex": "祖、サカ",
-    "chaosValue": "6"
+    "chaosValue": "8"
   },
   "深海の始祖、クレイシアン": {
     "engName": "Craiceann, First of the Deep",
     "family": "深海",
     "effect": "アイテムにアスペクトスキルを追加: 蟹のアスペクト",
     "regex": "祖、ク",
-    "chaosValue": "44"
+    "chaosValue": "43"
   },
   "プライマル・レックス・メイトリアーク": {
     "engName": "Primal Rhex Matriarch",
@@ -102,7 +102,7 @@ const beastlist = {
     "family": "洞窟",
     "effect": "ポータルを開く: フィヌムスの巣",
     "regex": "スのハイ",
-    "chaosValue": "2"
+    "chaosValue": "1.8"
   },
   "クレイシアンの砂のスピッター": {
     "engName": "Craicic Sand Spitter",
@@ -130,7 +130,7 @@ const beastlist = {
     "family": "原生林",
     "effect": "アイテムのモッドを変化: プレフィックスを1つ追加し、ランダムなサフィックスを1つ削除 レアアイテムにのみ適用可能",
     "regex": "ルフ・ア",
-    "chaosValue": "2.1"
+    "chaosValue": "2"
   },
   "クレイシアンのタカアシガニ": {
     "engName": "Craicic Spider Crab",
@@ -144,7 +144,7 @@ const beastlist = {
     "family": "深海",
     "effect": "マップをコラプト: 基礎品質30%を付与\nマップをコラプト: ダブルコラプト",
     "regex": "ンの臣",
-    "chaosValue": "6"
+    "chaosValue": "5"
   },
   "ファルウルのリンクス・アルファ": {
     "engName": "Farric Lynx Alpha",
@@ -172,7 +172,7 @@ const beastlist = {
     "family": "深海",
     "effect": "アトラスクラフトを獲得: 無料の各マップクラフトオプションを1ずつ獲得",
     "regex": "ル・クラ",
-    "chaosValue": "15"
+    "chaosValue": "14"
   },
   "ファルウルのフロストヘリオン・アルファ": {
     "engName": "Farric Frost Hellion Alpha",
