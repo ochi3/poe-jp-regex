@@ -727,9 +727,13 @@ function saveInputState() {
         currency: document.getElementById('currencyInput').value,
         map: document.getElementById('mapInput').value,
         beastBulkThreshold: document.getElementById('beastBulkThreshold').value,
+        beastBulkThresholdMax: document.getElementById('beastBulkThresholdMax').value,
         scarabBulkThreshold: document.getElementById('scarabBulkThreshold').value,
+        scarabBulkThresholdMax: document.getElementById('scarabBulkThresholdMax').value,
         tattooBulkThreshold: document.getElementById('tattooBulkThreshold').value,
-        runegraftBulkThreshold: document.getElementById('runegraftBulkThreshold').value
+        tattooBulkThresholdMax: document.getElementById('tattooBulkThresholdMax').value,
+        runegraftBulkThreshold: document.getElementById('runegraftBulkThreshold').value,
+        runegraftBulkThresholdMax: document.getElementById('runegraftBulkThresholdMax').value
     };
     localStorage.setItem('inputState', JSON.stringify(state));
 }
@@ -743,9 +747,13 @@ function loadInputState() {
     document.getElementById('currencyInput').value = state.currency || '';
     document.getElementById('mapInput').value = state.map || '';
     document.getElementById('beastBulkThreshold').value = state.beastBulkThreshold || '10';
+    document.getElementById('beastBulkThresholdMax').value = state.beastBulkThresholdMax || '';
     document.getElementById('scarabBulkThreshold').value = state.scarabBulkThreshold || '10';
+    document.getElementById('scarabBulkThresholdMax').value = state.scarabBulkThresholdMax || '';
     document.getElementById('tattooBulkThreshold').value = state.tattooBulkThreshold || '10';
+    document.getElementById('tattooBulkThresholdMax').value = state.tattooBulkThresholdMax || '';
     document.getElementById('runegraftBulkThreshold').value = state.runegraftBulkThreshold || '10';
+    document.getElementById('runegraftBulkThresholdMax').value = state.runegraftBulkThresholdMax || '';
 }
 
 document.getElementById('ngModCheckbox').addEventListener('change', saveCheckboxState);
@@ -1173,18 +1181,24 @@ function loadBeastCheckboxState() {
 
 function bulkSelectBeasts() {
     const thresholdInput = document.getElementById('beastBulkThreshold');
+    const thresholdMaxInput = document.getElementById('beastBulkThresholdMax');
     if (!thresholdInput) return;
     const threshold = parseFloat(thresholdInput.value);
-    if (isNaN(threshold)) return;
+    const thresholdMax = thresholdMaxInput ? parseFloat(thresholdMaxInput.value) : NaN;
+    if (isNaN(threshold) && isNaN(thresholdMax)) return;
 
     // 現在の選択をリセット
     checkedBeasts.clear();
 
-    // しきい値以上の全てのビーストを選択
+    // 指定範囲内の全てのビーストを選択
     Object.entries(beastlist).forEach(([name, data]) => {
         const price = parseFloat(data.chaosValue);
-        if (!isNaN(price) && price >= threshold) {
-            checkedBeasts.add(name);
+        if (!isNaN(price)) {
+            const matchMin = isNaN(threshold) || price >= threshold;
+            const matchMax = isNaN(thresholdMax) || price <= thresholdMax;
+            if (matchMin && matchMax) {
+                checkedBeasts.add(name);
+            }
         }
     });
 
@@ -1879,15 +1893,21 @@ function resetScarabSelection() {
 
 function bulkSelectScarabs() {
     const thresholdInput = document.getElementById('scarabBulkThreshold');
+    const thresholdMaxInput = document.getElementById('scarabBulkThresholdMax');
     if (!thresholdInput) return;
     const threshold = parseFloat(thresholdInput.value);
-    if (isNaN(threshold)) return;
+    const thresholdMax = thresholdMaxInput ? parseFloat(thresholdMaxInput.value) : NaN;
+    if (isNaN(threshold) && isNaN(thresholdMax)) return;
 
     checkedScarabs.clear();
     Object.entries(scarablist).forEach(([name, data]) => {
         const price = parseFloat(data.chaosValue);
-        if (!isNaN(price) && price >= threshold) {
-            checkedScarabs.add(name);
+        if (!isNaN(price)) {
+            const matchMin = isNaN(threshold) || price >= threshold;
+            const matchMax = isNaN(thresholdMax) || price <= thresholdMax;
+            if (matchMin && matchMax) {
+                checkedScarabs.add(name);
+            }
         }
     });
 
@@ -2155,15 +2175,21 @@ function resetTattooSelection() {
 
 function bulkSelectTattoos() {
     const thresholdInput = document.getElementById('tattooBulkThreshold');
+    const thresholdMaxInput = document.getElementById('tattooBulkThresholdMax');
     if (!thresholdInput) return;
     const threshold = parseFloat(thresholdInput.value);
-    if (isNaN(threshold)) return;
+    const thresholdMax = thresholdMaxInput ? parseFloat(thresholdMaxInput.value) : NaN;
+    if (isNaN(threshold) && isNaN(thresholdMax)) return;
 
     checkedTattoos.clear();
     Object.entries(tattoolist).forEach(([name, data]) => {
         const price = parseFloat(data.chaosValue);
-        if (!isNaN(price) && price >= threshold) {
-            checkedTattoos.add(name);
+        if (!isNaN(price)) {
+            const matchMin = isNaN(threshold) || price >= threshold;
+            const matchMax = isNaN(thresholdMax) || price <= thresholdMax;
+            if (matchMin && matchMax) {
+                checkedTattoos.add(name);
+            }
         }
     });
 
@@ -2431,15 +2457,21 @@ function resetRunegraftSelection() {
 
 function bulkSelectRunegrafts() {
     const thresholdInput = document.getElementById('runegraftBulkThreshold');
+    const thresholdMaxInput = document.getElementById('runegraftBulkThresholdMax');
     if (!thresholdInput) return;
     const threshold = parseFloat(thresholdInput.value);
-    if (isNaN(threshold)) return;
+    const thresholdMax = thresholdMaxInput ? parseFloat(thresholdMaxInput.value) : NaN;
+    if (isNaN(threshold) && isNaN(thresholdMax)) return;
 
     checkedRunegrafts.clear();
     Object.entries(runegraftlist).forEach(([name, data]) => {
         const price = parseFloat(data.chaosValue);
-        if (!isNaN(price) && price >= threshold) {
-            checkedRunegrafts.add(name);
+        if (!isNaN(price)) {
+            const matchMin = isNaN(threshold) || price >= threshold;
+            const matchMax = isNaN(thresholdMax) || price <= thresholdMax;
+            if (matchMin && matchMax) {
+                checkedRunegrafts.add(name);
+            }
         }
     });
 

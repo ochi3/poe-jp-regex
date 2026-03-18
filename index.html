@@ -318,7 +318,7 @@
         <!-- ビースト-->
         <div id="beastContent" class="tab-content">
             <div class="card">
-                <h2 class="section-header">ビースト検索</h2>
+                <h2 class="section-header">ビースト</h2>
                 
                 <!-- プロファイル管理セクションを追加 -->
                 <div class="input-group">
@@ -342,7 +342,9 @@
                     <div style="display: flex; align-items: center; gap: 8px;">
                         <button class="btn-secondary-highlight" onclick="bulkSelectBeasts()">一括選択</button>
                         <input type="number" id="beastBulkThreshold" placeholder="10" value="10" style="width: 70px;" oninput="saveInputState()">
-                        <span style="font-size: 14px; color: var(--text-secondary);">c以上</span>
+                        <span style="font-size: 14px; color: var(--text-secondary);">〜</span>
+                        <input type="number" id="beastBulkThresholdMax" placeholder="max" style="width: 70px;" oninput="saveInputState()">
+                        <span style="font-size: 14px; color: var(--text-secondary);"></span>
                     </div>
                     <input type="text" id="beastSearch" placeholder="ビーストを検索..." oninput="filterBeasts()" style="flex: 1;">
                 </div>
@@ -362,7 +364,7 @@
         <!-- スカラベ-->
         <div id="scarabContent" class="tab-content">
             <div class="card">
-                <h2 class="section-header">スカラベ検索</h2>
+                <h2 class="section-header">スカラベ</h2>
                 
                 <div class="input-group">
                     <input type="text" id="scarabProfileName" placeholder="プロファイル名を入力してください。" class="large-input">
@@ -386,7 +388,9 @@
                     <div style="display: flex; align-items: center; gap: 8px;">
                         <button class="btn-secondary-highlight" onclick="bulkSelectScarabs()">一括選択</button>
                         <input type="number" id="scarabBulkThreshold" placeholder="10" value="10" style="width: 70px;" oninput="saveInputState()">
-                        <span style="font-size: 14px; color: var(--text-secondary);">c以上</span>
+                        <span style="font-size: 14px; color: var(--text-secondary);">〜</span>
+                        <input type="number" id="scarabBulkThresholdMax" placeholder="max" style="width: 70px;" oninput="saveInputState()">
+                        <span style="font-size: 14px; color: var(--text-secondary);"></span>
                     </div>
                     <input type="text" id="scarabSearch" placeholder="スカラベを検索..." oninput="filterScarabs()" style="flex: 1;">
                 </div>
@@ -406,7 +410,7 @@
         <!-- タトゥー-->
         <div id="tattooContent" class="tab-content">
             <div class="card">
-                <h2 class="section-header">タトゥー検索</h2>
+                <h2 class="section-header">タトゥー</h2>
                 
                 <div class="input-group">
                     <input type="text" id="tattooProfileName" placeholder="プロファイル名を入力してください。" class="large-input">
@@ -430,7 +434,9 @@
                     <div style="display: flex; align-items: center; gap: 8px;">
                         <button class="btn-secondary-highlight" onclick="bulkSelectTattoos()">一括選択</button>
                         <input type="number" id="tattooBulkThreshold" placeholder="10" value="10" style="width: 70px;" oninput="saveInputState()">
-                        <span style="font-size: 14px; color: var(--text-secondary);">c以上</span>
+                        <span style="font-size: 14px; color: var(--text-secondary);">〜</span>
+                        <input type="number" id="tattooBulkThresholdMax" placeholder="max" style="width: 70px;" oninput="saveInputState()">
+                        <span style="font-size: 14px; color: var(--text-secondary);"></span>
                     </div>
                     <input type="text" id="tattooSearch" placeholder="タトゥーを検索..." oninput="filterTattoos()" style="flex: 1;">
                 </div>
@@ -450,7 +456,7 @@
         <!-- ルーングラフト-->
         <div id="runegraftContent" class="tab-content">
             <div class="card">
-                <h2 class="section-header">ルーングラフト検索</h2>
+                <h2 class="section-header">ルーングラフト</h2>
                 
                 <div class="input-group">
                     <input type="text" id="runegraftProfileName" placeholder="プロファイル名を入力してください。" class="large-input">
@@ -474,7 +480,9 @@
                     <div style="display: flex; align-items: center; gap: 8px;">
                         <button class="btn-secondary-highlight" onclick="bulkSelectRunegrafts()">一括選択</button>
                         <input type="number" id="runegraftBulkThreshold" placeholder="10" value="10" style="width: 70px;" oninput="saveInputState()">
-                        <span style="font-size: 14px; color: var(--text-secondary);">c以上</span>
+                        <span style="font-size: 14px; color: var(--text-secondary);">〜</span>
+                        <input type="number" id="runegraftBulkThresholdMax" placeholder="max" style="width: 70px;" oninput="saveInputState()">
+                        <span style="font-size: 14px; color: var(--text-secondary);"></span>
                     </div>
                     <input type="text" id="runegraftSearch" placeholder="ルーングラフトを検索..." oninput="filterRunegrafts()" style="flex: 1;">
                 </div>
