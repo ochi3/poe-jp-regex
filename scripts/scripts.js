@@ -1,5 +1,7 @@
 let ModList = {...mapModList};
-let currentLanguage = 'ja';
+let currentLanguage = localStorage.getItem('poeLanguage') || 'ja';
+if (currentLanguage !== 'ja' && currentLanguage !== 'en') currentLanguage = 'ja';
+
 let checkedMods = new Map(); // id -> 'ng' または 'wanted'
 let checkedBeasts = new Set();
 let checkedScarabs = new Set();
@@ -27,7 +29,9 @@ function toggleLanguage() {
     renderscarablist();
     rendertattoolist();
     renderrunegraftlist();
+    renderbeastlist();
     updateScarabRegex();
+    updateBeastRegex();
     updateTattooRegex();
     updateRunegraftRegex();
 }
@@ -50,6 +54,7 @@ function updateLanguageUI() {
     const toggles = [
         'mapLangToggle',
         'scarabLangToggle',
+        'beastLangToggle',
         'tattooLangToggle',
         'runegraftLangToggle'
     ];
@@ -1063,12 +1068,14 @@ function renderbeastlist() {
       }
     });
     
+    const displayName = currentLanguage === 'ja' ? name : data.engName;
+    
     beastItem.innerHTML = `
       <div class="beast-select">
         <input type="checkbox" id="beast-${name}" value="${name}">
       </div>
       <div class="beast-price">${data.chaosValue}</div>
-      <div class="beast-name">${name}</div>
+      <div class="beast-name">${displayName}</div>
       <div class="beast-family">${data.family}</div>
       <div class="beast-effect">${data.effect}</div>
     `;
@@ -1115,7 +1122,10 @@ function updateSortIcons() {
 
 // ビーストRegex更新
 function updateBeastRegex() {
-  const selectedRegexes = Array.from(checkedBeasts).map(name => beastlist[name].regex);
+  const selectedRegexes = Array.from(checkedBeasts).map(name => {
+    const data = beastlist[name];
+    return (currentLanguage === 'en' && data.enRegex) ? data.enRegex : data.regex;
+  });
   const regex = selectedRegexes.length > 0 ? `"${selectedRegexes.join('|')}"` : '';
   
   document.getElementById('beastRegexOutput').textContent = regex;
@@ -2589,6 +2599,7 @@ function updateRunegraftProfileList() {
 }
 
 function initializeApplication() {
+    loadLanguageState();
     const initialTab = window.location.hash.slice(1) || 'map';
     const initialTabId = `${initialTab}Content`;
     
@@ -2661,7 +2672,6 @@ function initializeApplication() {
         detailCheckbox.addEventListener('change', toggleModDetails);
     }
     
-    loadLanguageState();
     initializeTooltips();
     updateModList();
     updateCombinedRegex();
