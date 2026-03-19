@@ -11,42 +11,42 @@ const beastlist = {
     "family": "原生林",
     "effect": "アイテムを修正：可能な限り最大リンク数にする",
     "regex": "リガ",
-    "chaosValue": "99"
+    "chaosValue": "119"
   },
   "クレイシアンのキメラル": {
     "engName": "Craicic Chimeral",
     "family": "深海",
     "effect": "インプリントを作成: マジックアイテム",
     "regex": "ンのキ",
-    "chaosValue": "110"
+    "chaosValue": "120"
   },
   "ワイルド・ブリスル・マトロン": {
     "engName": "Wild Bristle Matron",
     "family": "原生林",
     "effect": "アイテムのモッドを変化: 非ユニークアイテムにクラフトメタモッドを追加",
     "regex": "ル・マ",
-    "chaosValue": "130.5"
+    "chaosValue": "190.8"
   },
   "ビビッド・ヴァルチャー": {
     "engName": "Vivid Vulture",
     "family": "砂漠",
     "effect": "アイテムを変換: シンセシス暗黙モッドをリロール",
     "regex": "ド・ヴ",
-    "chaosValue": "580"
+    "chaosValue": "585"
   },
   "ワイルド・ヘリオン・アルファ": {
     "engName": "Wild Hellion Alpha",
     "family": "原生林",
     "effect": "アイテムのモッドを変化: 見つめる者の目のモッドをリロール。最大ライフ、マナおよびエナジーシールドのモッドはリロールできない",
     "regex": "ド・ヘリ",
-    "chaosValue": "135"
+    "chaosValue": "155"
   },
   "ワイルド・ブランブルバック": {
     "engName": "Wild Brambleback",
     "family": "原生林",
     "effect": "アイテムを変換: コラプト状態でない覚醒のジェムのレベルを1上げる",
     "regex": "ド・ブラ",
-    "chaosValue": "42.72"
+    "chaosValue": "49.4"
   },
   "平原の始祖、ファルウル": {
     "engName": "Farrul, First of the Plains",
@@ -60,21 +60,21 @@ const beastlist = {
     "family": "洞窟",
     "effect": "アイテムをスプリット: それぞれ半分のモッドを持つ2個のアイテムにスプリット",
     "regex": "のプレ",
-    "chaosValue": "49.3"
+    "chaosValue": "56.2"
   },
   "プライマル・クリストコーラー": {
     "engName": "Primal Cystcaller",
     "family": "原生林",
     "effect": "アトラスクラフトを獲得: キラックミッションを5個獲得 ミッションの色は赤ビーストのレベルに基づく",
     "regex": "ル・クリ",
-    "chaosValue": "7"
+    "chaosValue": "5"
   },
   "夜の始祖、フィヌムス": {
     "engName": "Fenumus, First of the Night",
     "family": "洞窟",
     "effect": "アイテムにアスペクトスキルを追加: 蜘蛛のアスペクト",
     "regex": "祖、フィ",
-    "chaosValue": "48"
+    "chaosValue": "42.5"
   },
   "空の始祖、サカワル": {
     "engName": "Saqawal, First of the Sky",
@@ -88,7 +88,7 @@ const beastlist = {
     "family": "深海",
     "effect": "アイテムにアスペクトスキルを追加: 蟹のアスペクト",
     "regex": "祖、ク",
-    "chaosValue": "35"
+    "chaosValue": "30.5"
   },
   "プライマル・レックス・メイトリアーク": {
     "engName": "Primal Rhex Matriarch",
@@ -102,7 +102,7 @@ const beastlist = {
     "family": "洞窟",
     "effect": "ポータルを開く: フィヌムスの巣",
     "regex": "スのハイ",
-    "chaosValue": "2"
+    "chaosValue": "1"
   },
   "クレイシアンの砂のスピッター": {
     "engName": "Craicic Sand Spitter",
@@ -144,7 +144,7 @@ const beastlist = {
     "family": "深海",
     "effect": "マップをコラプト: 基礎品質30%を付与\nマップをコラプト: ダブルコラプト",
     "regex": "ンの臣",
-    "chaosValue": "4.29"
+    "chaosValue": "3"
   },
   "ファルウルのリンクス・アルファ": {
     "engName": "Farric Lynx Alpha",
@@ -158,14 +158,14 @@ const beastlist = {
     "family": "深海",
     "effect": "アイテムのモッドを変更：シェイパーアイテムにモッドを追加\nエルダーアイテムにモッドを追加\nリディーマーアイテムにモッドを追加\nハンターアイテムにモッドを追加\nクルセイダーアイテムにモッドを追加\nウォーロードアイテムにモッドを追加",
     "regex": "ンの口",
-    "chaosValue": "1"
+    "chaosValue": "1.9"
   },
   "ビビッド・アブバララック": {
     "engName": "Vivid Abberarach",
     "family": "洞窟",
     "effect": "アイテムを作成: シェイパーの守護者、エルダーの守護者または征服者のマップ",
     "regex": "ド・アブ",
-    "chaosValue": "1"
+    "chaosValue": "1.5"
   },
   "プライマル・クラッシュクロー": {
     "engName": "Primal Crushclaw",
