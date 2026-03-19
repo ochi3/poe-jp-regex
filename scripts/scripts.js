@@ -1046,6 +1046,9 @@ function renderbeastlist() {
     });
   }
 
+  // 0cのアイテムを除外
+  beasts = beasts.filter(([name, data]) => parseFloat(data.chaosValue) > 0);
+
   beasts.forEach(([name, data]) => {
     const beastItem = document.createElement('div');
     beastItem.className = 'beast-item';
@@ -1211,7 +1214,7 @@ function bulkSelectBeasts() {
         if (!isNaN(price)) {
             const matchMin = isNaN(threshold) || price >= threshold;
             const matchMax = isNaN(thresholdMax) || price <= thresholdMax;
-            if (matchMin && matchMax) {
+            if (matchMin && matchMax && price > 0) {
                 checkedBeasts.add(name);
             }
         }
@@ -1892,7 +1895,7 @@ function bulkSelectScarabs() {
         if (!isNaN(price)) {
             const matchMin = isNaN(threshold) || price >= threshold;
             const matchMax = isNaN(thresholdMax) || price <= thresholdMax;
-            if (matchMin && matchMax) {
+            if (matchMin && matchMax && price > 0) {
                 checkedScarabs.add(name);
             }
         }
@@ -2174,7 +2177,7 @@ function bulkSelectTattoos() {
         if (!isNaN(price)) {
             const matchMin = isNaN(threshold) || price >= threshold;
             const matchMax = isNaN(thresholdMax) || price <= thresholdMax;
-            if (matchMin && matchMax) {
+            if (matchMin && matchMax && price > 0) {
                 checkedTattoos.add(name);
             }
         }
@@ -2456,7 +2459,7 @@ function bulkSelectRunegrafts() {
         if (!isNaN(price)) {
             const matchMin = isNaN(threshold) || price >= threshold;
             const matchMax = isNaN(thresholdMax) || price <= thresholdMax;
-            if (matchMin && matchMax) {
+            if (matchMin && matchMax && price > 0) {
                 checkedRunegrafts.add(name);
             }
         }

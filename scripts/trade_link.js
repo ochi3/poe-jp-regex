@@ -18,6 +18,16 @@ function buildTradeUrl() {
     const notStats = [];
     const wantedStats = [];
 
+    // デフォルトで否定するステータスを追加 (T17/Guardian/Conqueror mods)
+    const defaultNotStatIds = [
+        "implicit.stat_2563183002", // Map contains #'s Citadel
+        "implicit.stat_3624393862", // Map is occupied by #
+        "implicit.stat_1792283443"  // Area is influenced by #
+    ];
+    defaultNotStatIds.forEach(id => {
+        notStats.push({ id, disabled: false });
+    });
+
     checkedMods.forEach((state, jpModName) => {
         const modInfo = mapModList[jpModName];
         if (!modInfo) return;
@@ -203,7 +213,8 @@ function buildTradeUrl() {
     const queryJson = JSON.stringify({ query: query, sort: { price: "asc" } });
     const encodedQuery = encodeURIComponent(queryJson);
     
-    return `https://jp.pathofexile.com/trade/search/${encodeURIComponent(league)}?q=${encodedQuery}`;
+    const baseUrl = currentLanguage === 'en' ? 'www.pathofexile.com' : 'jp.pathofexile.com';
+    return `https://${baseUrl}/trade/search/${encodeURIComponent(league)}?q=${encodedQuery}`;
 }
 
 function generateTradeLink() {
