@@ -4,35 +4,35 @@ const beastlist = {
     "family": "深海",
     "effect": "アイテムを変換：覚醒サポートジェムのロールを再生成する",
     "regex": "ド・ウ",
-    "chaosValue": "6"
+    "chaosValue": "9.2"
   },
   "ブラック・モリガン": {
     "engName": "Black Mórrigan",
     "family": "原生林",
     "effect": "アイテムを修正：可能な限り最大リンク数にする",
     "regex": "リガ",
-    "chaosValue": "119.8"
+    "chaosValue": "103.2"
   },
   "クレイシアンのキメラル": {
     "engName": "Craicic Chimeral",
     "family": "深海",
     "effect": "インプリントを作成: マジックアイテム",
     "regex": "ンのキ",
-    "chaosValue": "109.5"
+    "chaosValue": "120"
   },
   "ワイルド・ブリスル・マトロン": {
     "engName": "Wild Bristle Matron",
     "family": "原生林",
     "effect": "アイテムのモッドを変化: 非ユニークアイテムにクラフトメタモッドを追加",
     "regex": "ル・マ",
-    "chaosValue": "199"
+    "chaosValue": "219"
   },
   "ビビッド・ヴァルチャー": {
     "engName": "Vivid Vulture",
     "family": "砂漠",
     "effect": "アイテムを変換: シンセシス暗黙モッドをリロール",
     "regex": "ド・ヴ",
-    "chaosValue": "530"
+    "chaosValue": "675"
   },
   "ワイルド・ヘリオン・アルファ": {
     "engName": "Wild Hellion Alpha",
@@ -46,7 +46,7 @@ const beastlist = {
     "family": "原生林",
     "effect": "アイテムを変換: コラプト状態でない覚醒のジェムのレベルを1上げる",
     "regex": "ド・ブラ",
-    "chaosValue": "45"
+    "chaosValue": "33"
   },
   "平原の始祖、ファルウル": {
     "engName": "Farrul, First of the Plains",
@@ -60,14 +60,14 @@ const beastlist = {
     "family": "洞窟",
     "effect": "アイテムをスプリット: それぞれ半分のモッドを持つ2個のアイテムにスプリット",
     "regex": "のプレ",
-    "chaosValue": "55"
+    "chaosValue": "63"
   },
   "プライマル・クリストコーラー": {
     "engName": "Primal Cystcaller",
     "family": "原生林",
     "effect": "アトラスクラフトを獲得: キラックミッションを5個獲得 ミッションの色は赤ビーストのレベルに基づく",
     "regex": "ル・クリ",
-    "chaosValue": "7"
+    "chaosValue": "8"
   },
   "夜の始祖、フィヌムス": {
     "engName": "Fenumus, First of the Night",
@@ -81,14 +81,14 @@ const beastlist = {
     "family": "砂漠",
     "effect": "アイテムにアスペクトスキルを追加: 鳥のアスペクト",
     "regex": "祖、サカ",
-    "chaosValue": "34.54"
+    "chaosValue": "43.3"
   },
   "深海の始祖、クレイシアン": {
     "engName": "Craiceann, First of the Deep",
     "family": "深海",
     "effect": "アイテムにアスペクトスキルを追加: 蟹のアスペクト",
     "regex": "祖、ク",
-    "chaosValue": "45"
+    "chaosValue": "40"
   },
   "プライマル・レックス・メイトリアーク": {
     "engName": "Primal Rhex Matriarch",
@@ -102,21 +102,21 @@ const beastlist = {
     "family": "洞窟",
     "effect": "ポータルを開く: フィヌムスの巣",
     "regex": "スのハイ",
-    "chaosValue": "3"
+    "chaosValue": "2"
   },
   "クレイシアンの砂のスピッター": {
     "engName": "Craicic Sand Spitter",
     "family": "深海",
     "effect": "アイテムを変化: 可能な最大リンク数\nカレンシーアイテムを作成: 結合のオーブ\nカレンシーアイテムを作成: 連結のオーブ2個",
     "regex": "アンの砂",
-    "chaosValue": "2"
+    "chaosValue": "1"
   },
   "ファルウルのタイガー・アルファ": {
     "engName": "Farric Tiger Alpha",
     "family": "原生林",
     "effect": "ポータルを開く: ファルウルの巣穴",
     "regex": "ルのタイ",
-    "chaosValue": "3"
+    "chaosValue": "4"
   },
   "サカワルのレックス": {
     "engName": "Saqawine Rhex",
@@ -130,7 +130,7 @@ const beastlist = {
     "family": "原生林",
     "effect": "アイテムのモッドを変化: プレフィックスを1つ追加し、ランダムなサフィックスを1つ削除 レアアイテムにのみ適用可能",
     "regex": "ルフ・ア",
-    "chaosValue": "3"
+    "chaosValue": "2"
   },
   "クレイシアンのタカアシガニ": {
     "engName": "Craicic Spider Crab",
@@ -172,7 +172,7 @@ const beastlist = {
     "family": "深海",
     "effect": "アトラスクラフトを獲得: 無料の各マップクラフトオプションを1ずつ獲得",
     "regex": "ル・クラ",
-    "chaosValue": "10"
+    "chaosValue": "11.2"
   },
   "ファルウルのフロストヘリオン・アルファ": {
     "engName": "Farric Frost Hellion Alpha",
@@ -256,7 +256,7 @@ const beastlist = {
     "family": "原生林",
     "effect": "ユニークアイテムを作成: 弓\nアイテムのモッドを変化: クルセイダーアイテムにモッドを追加",
     "regex": "ルのゴラ",
-    "chaosValue": "0.84"
+    "chaosValue": "1"
   },
   "フィヌムスのデヴァワラー": {
     "engName": "Fenumal Devourer",
@@ -326,14 +326,14 @@ const beastlist = {
     "family": "原生林",
     "effect": "ユニークアイテムを作成: アミュレット",
     "regex": "ウルのチ",
-    "chaosValue": "0.97"
+    "chaosValue": "1"
   },
   "ファルウルのゴートマン": {
     "engName": "Farric Goatman",
     "family": "原生林",
     "effect": "ユニークアイテムを作成: フラスコ",
     "regex": "ルのゴー",
-    "chaosValue": "0.94"
+    "chaosValue": "1"
   },
   "フィヌムスのスクラブラー": {
     "engName": "Fenumal Scrabbler",

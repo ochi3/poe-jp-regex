@@ -3,7 +3,7 @@ const tattoolist = {
     "engName": "Tattoo of the Ngamahu Firewalker",
     "description": "火耐性 +6%",
     "enDescription": "",
-    "chaosValue": "151.1",
+    "chaosValue": "160.7",
     "regex": "火歩",
     "enRegex": "u f"
   },
@@ -11,7 +11,7 @@ const tattoolist = {
     "engName": "Tattoo of the Ngamahu Shaman",
     "description": "受ける発火の持続時間が10%減少する",
     "enDescription": "",
-    "chaosValue": "24.17",
+    "chaosValue": "22.96",
     "regex": "フのシ",
     "enRegex": "u s"
   },
@@ -19,7 +19,7 @@ const tattoolist = {
     "engName": "Tattoo of the Ngamahu Warrior",
     "description": "火ダメージが5%増加する",
     "enDescription": "",
-    "chaosValue": "23.52",
+    "chaosValue": "23.45",
     "regex": "フの戦",
     "enRegex": "d Fi"
   },
@@ -27,7 +27,7 @@ const tattoolist = {
     "engName": "Tattoo of the Ngamahu Warmonger",
     "description": "5%の確率で敵を発火させる",
     "enDescription": "",
-    "chaosValue": "235.4",
+    "chaosValue": "257.1",
     "regex": "フのウ",
     "enRegex": "u Warm"
   },
@@ -35,7 +35,7 @@ const tattoolist = {
     "engName": "Tattoo of the Ngamahu Woodcarver",
     "description": "トーテムのライフが5%増加する",
     "enDescription": "",
-    "chaosValue": "23.93",
+    "chaosValue": "23.16",
     "regex": "木彫",
     "enRegex": "woo"
   },
@@ -59,7 +59,7 @@ const tattoolist = {
     "engName": "Tattoo of the Kitava Blood Drinker",
     "description": "アタックダメージの0.5%をライフとしてリーチする",
     "enDescription": "",
-    "chaosValue": "1.22",
+    "chaosValue": "1.02",
     "regex": "血飲",
     "enRegex": "dri"
   },
@@ -67,7 +67,7 @@ const tattoolist = {
     "engName": "Tattoo of the Kitava Rebel",
     "description": "10%の確率で出血を無効化する",
     "enDescription": "",
-    "chaosValue": "2.69",
+    "chaosValue": "3.93",
     "regex": "反逆",
     "enRegex": "Reb"
   },
@@ -75,7 +75,7 @@ const tattoolist = {
     "engName": "Tattoo of the Kitava Warrior",
     "description": "物理ダメージが5%増加する",
     "enDescription": "",
-    "chaosValue": "2.37",
+    "chaosValue": "2.45",
     "regex": "ァの戦",
     "enRegex": "Phy"
   },
@@ -83,7 +83,7 @@ const tattoolist = {
     "engName": "Tattoo of the Kitava Heart Eater",
     "description": "キリングブローは4%の確率で死体を消費し最大ライフの10%を回復する",
     "enDescription": "",
-    "chaosValue": "1.58",
+    "chaosValue": "2.65",
     "regex": "心臓",
     "enRegex": "hea"
   },
@@ -91,7 +91,7 @@ const tattoolist = {
     "engName": "Tattoo of the Kitava Shaman",
     "description": "アタックは5%の確率で出血を付与する",
     "enDescription": "",
-    "chaosValue": "32.64",
+    "chaosValue": "29.36",
     "regex": "ァのシ",
     "enRegex": "cau"
   },
@@ -115,7 +115,7 @@ const tattoolist = {
     "engName": "Tattoo of the Tukohama Shaman",
     "description": "毎秒ライフの0.3%を自動回復する",
     "enDescription": "",
-    "chaosValue": "4.26",
+    "chaosValue": "3.97",
     "regex": "マのシ",
     "enRegex": "0.3"
   },
@@ -123,7 +123,7 @@ const tattoolist = {
     "engName": "Tattoo of the Tukohama Warrior",
     "description": "スタンを与えた近接ヒットは5%の確率で堅牢化する",
     "enDescription": "",
-    "chaosValue": "0.9075",
+    "chaosValue": "0.9819",
     "regex": "マの戦",
     "enRegex": "ify"
   },
@@ -131,7 +131,7 @@ const tattoolist = {
     "engName": "Tattoo of the Tukohama Brawler",
     "description": "ヒット時に10%の確率で敵をノックバックする",
     "enDescription": "",
-    "chaosValue": "0.9894",
+    "chaosValue": "0.8474",
     "regex": "喧嘩",
     "enRegex": "bra"
   },
@@ -139,7 +139,7 @@ const tattoolist = {
     "engName": "Tattoo of the Tukohama Warmonger",
     "description": "近接ダメージが5%増加する",
     "enDescription": "",
-    "chaosValue": "2.77",
+    "chaosValue": "2.98",
     "regex": "マのウォーモ",
     "enRegex": "d me"
   },
@@ -147,7 +147,7 @@ const tattoolist = {
     "engName": "Tattoo of the Tukohama Warcaller",
     "description": "ウォークライクールダウン解消レートが8%増加する",
     "enDescription": "",
-    "chaosValue": "17.5",
+    "chaosValue": "18.7",
     "regex": "ーコ",
     "enRegex": "rca"
   },
@@ -171,7 +171,7 @@ const tattoolist = {
     "engName": "Tattoo of the Rongokurai Warrior",
     "description": "アーマーが6%増加する",
     "enDescription": "",
-    "chaosValue": "3.8",
+    "chaosValue": "6.12",
     "regex": "ライの戦",
     "enRegex": "ai W"
   },
@@ -179,7 +179,7 @@ const tattoolist = {
     "engName": "Tattoo of the Rongokurai Brute",
     "description": "スタン閾値が10%増加する",
     "enDescription": "",
-    "chaosValue": "3.16",
+    "chaosValue": "3.04",
     "regex": "蛮人",
     "enRegex": "bru"
   },
@@ -187,7 +187,7 @@ const tattoolist = {
     "engName": "Tattoo of the Rongokurai Goliath",
     "description": "敵に対するスタンの持続時間が10%増加する",
     "enDescription": "",
-    "chaosValue": "3.29",
+    "chaosValue": "3.01",
     "regex": "ゴラ",
     "enRegex": "gol"
   },
@@ -195,7 +195,7 @@ const tattoolist = {
     "engName": "Tattoo of the Rongokurai Turtle",
     "description": "クリティカルストライクから受ける追加ダメージが5%減少する",
     "enDescription": "",
-    "chaosValue": "128.9",
+    "chaosValue": "139",
     "regex": "イの亀",
     "enRegex": "extr"
   },
@@ -203,7 +203,7 @@ const tattoolist = {
     "engName": "Tattoo of the Rongokurai Guard",
     "description": "ガードスキルの持続時間が6%増加する",
     "enDescription": "",
-    "chaosValue": "5.47",
+    "chaosValue": "5.6",
     "regex": "衛兵",
     "enRegex": "gua"
   },
@@ -227,7 +227,7 @@ const tattoolist = {
     "engName": "Tattoo of the Tasalio Bladedancer",
     "description": "アタックはヒット時に5%の確率で敵に重傷を付与する",
     "enDescription": "",
-    "chaosValue": "1.1",
+    "chaosValue": "1.11",
     "regex": "ブレ",
     "enRegex": "cer"
   },
@@ -235,7 +235,7 @@ const tattoolist = {
     "engName": "Tattoo of the Tasalio Tideshifter",
     "description": "10%の確率でスタンを無効化する",
     "enDescription": "",
-    "chaosValue": "3.25",
+    "chaosValue": "3.17",
     "regex": "タイ",
     "enRegex": "tid"
   },
@@ -243,7 +243,7 @@ const tattoolist = {
     "engName": "Tattoo of the Tasalio Shaman",
     "description": "スペルによるヒット時に5%の確率で敵を阻害する",
     "enDescription": "",
-    "chaosValue": "0.7576",
+    "chaosValue": "0.8568",
     "regex": "オのシ",
     "enRegex": "to H"
   },
@@ -251,7 +251,7 @@ const tattoolist = {
     "engName": "Tattoo of the Tasalio Warrior",
     "description": "アタックによるヒット時に5%の確率で敵を盲目にする",
     "enDescription": "",
-    "chaosValue": "6.48",
+    "chaosValue": "6.36",
     "regex": "オの戦",
     "enRegex": "bli"
   },
@@ -259,7 +259,7 @@ const tattoolist = {
     "engName": "Tattoo of the Tasalio Scout",
     "description": "呪印の効果が4%増加する",
     "enDescription": "",
-    "chaosValue": "10.01",
+    "chaosValue": "9.28",
     "regex": "オの偵",
     "enRegex": "rks"
   },
@@ -283,7 +283,7 @@ const tattoolist = {
     "engName": "Tattoo of the Arohongui Moonwarden",
     "description": "冷気耐性 +6%",
     "enDescription": "",
-    "chaosValue": "23.3",
+    "chaosValue": "22.67",
     "regex": "監視",
     "enRegex": "Moo"
   },
@@ -291,7 +291,7 @@ const tattoolist = {
     "engName": "Tattoo of the Arohongui Scout",
     "description": "10%の確率で冷却を無効化する 10%の確率で凍結を無効化する",
     "enDescription": "",
-    "chaosValue": "22.34",
+    "chaosValue": "22.97",
     "regex": "イの偵",
     "enRegex": "led"
   },
@@ -299,7 +299,7 @@ const tattoolist = {
     "engName": "Tattoo of the Arohongui Warrior",
     "description": "冷気ダメージが5%増加する",
     "enDescription": "",
-    "chaosValue": "22.27",
+    "chaosValue": "21.01",
     "regex": "グイの戦",
     "enRegex": "d Co"
   },
@@ -307,7 +307,7 @@ const tattoolist = {
     "engName": "Tattoo of the Arohongui Warmonger",
     "description": "5%の確率で敵を凍結させる",
     "enDescription": "",
-    "chaosValue": "21.66",
+    "chaosValue": "21.25",
     "regex": "イのウ",
     "enRegex": "Fre"
   },
@@ -315,7 +315,7 @@ const tattoolist = {
     "engName": "Tattoo of the Arohongui Shaman",
     "description": "プレイヤーに対するヘラルドのバフの効果が5%増加する",
     "enDescription": "",
-    "chaosValue": "601.8",
+    "chaosValue": "620.4",
     "regex": "イのシ",
     "enRegex": "ald"
   },
@@ -339,7 +339,7 @@ const tattoolist = {
     "engName": "Tattoo of the Ramako Scout",
     "description": "回避力が6%増加する",
     "enDescription": "",
-    "chaosValue": "26.75",
+    "chaosValue": "25.67",
     "regex": "マコの偵",
     "enRegex": "Eva"
   },
@@ -347,7 +347,7 @@ const tattoolist = {
     "engName": "Tattoo of the Ramako Archer",
     "description": "グローバル命中力が5%増加する",
     "enDescription": "",
-    "chaosValue": "27.66",
+    "chaosValue": "26.43",
     "regex": "射手",
     "enRegex": "acc"
   },
@@ -355,7 +355,7 @@ const tattoolist = {
     "engName": "Tattoo of the Ramako Sniper",
     "description": "投射物スピードが5%増加する",
     "enDescription": "",
-    "chaosValue": "34.85",
+    "chaosValue": "30.96",
     "regex": "狙撃",
     "enRegex": "Sni"
   },
@@ -363,7 +363,7 @@ const tattoolist = {
     "engName": "Tattoo of the Ramako Fleetfoot",
     "description": "移動スピードが2%増加する",
     "enDescription": "",
-    "chaosValue": "124.4",
+    "chaosValue": "144.7",
     "regex": "俊足",
     "enRegex": "fle"
   },
@@ -371,7 +371,7 @@ const tattoolist = {
     "engName": "Tattoo of the Ramako Shaman",
     "description": "プレイヤーが移動している間のライフ自動回復レートが10%増加する",
     "enDescription": "",
-    "chaosValue": "555.6",
+    "chaosValue": "539",
     "regex": "マコのシ",
     "enRegex": "ppr"
   },
@@ -395,7 +395,7 @@ const tattoolist = {
     "engName": "Tattoo of the Hinekora Warrior",
     "description": "最大エナジーシールドが3%増加する",
     "enDescription": "",
-    "chaosValue": "58.57",
+    "chaosValue": "56.67",
     "regex": "ラの戦",
     "enRegex": "3% I"
   },
@@ -403,7 +403,7 @@ const tattoolist = {
     "engName": "Tattoo of the Hinekora Deathwarden",
     "description": "プレイヤーに対する呪いの効果が6%減少する",
     "enDescription": "",
-    "chaosValue": "14.48",
+    "chaosValue": "13.73",
     "regex": "番人",
     "enRegex": "thw"
   },
@@ -411,7 +411,7 @@ const tattoolist = {
     "engName": "Tattoo of the Hinekora Shaman",
     "description": "マナ自動回復レートが8%増加する",
     "enDescription": "",
-    "chaosValue": "15.74",
+    "chaosValue": "12.81",
     "regex": "ラのシ",
     "enRegex": "ra Sh"
   },
@@ -419,7 +419,7 @@ const tattoolist = {
     "engName": "Tattoo of the Hinekora Storyteller",
     "description": "混沌耐性 +3%",
     "enDescription": "",
-    "chaosValue": "139.4",
+    "chaosValue": "130.3",
     "regex": "語り",
     "enRegex": "s res"
   },
@@ -427,7 +427,7 @@ const tattoolist = {
     "engName": "Tattoo of the Hinekora Warmonger",
     "description": "ミニオンの最大ライフが5%増加する",
     "enDescription": "",
-    "chaosValue": "155.3",
+    "chaosValue": "146",
     "regex": "ラのウ",
     "enRegex": "ra Warm"
   },
@@ -451,7 +451,7 @@ const tattoolist = {
     "engName": "Tattoo of the Tawhoa Naturalist",
     "description": "フラスコによるライフ回復量が8%増加する",
     "enDescription": "",
-    "chaosValue": "4.13",
+    "chaosValue": "5.08",
     "regex": "自然",
     "enRegex": "nat"
   },
@@ -459,7 +459,7 @@ const tattoolist = {
     "engName": "Tattoo of the Tawhoa Scout",
     "description": "10%の確率で毒を無効化する",
     "enDescription": "",
-    "chaosValue": "4.35",
+    "chaosValue": "4.4",
     "regex": "アの偵",
     "enRegex": "g p"
   },
@@ -467,7 +467,7 @@ const tattoolist = {
     "engName": "Tattoo of the Tawhoa Warrior",
     "description": "混沌ダメージが5%増加する",
     "enDescription": "",
-    "chaosValue": "4.03",
+    "chaosValue": "5.09",
     "regex": "アの戦",
     "enRegex": "oa w"
   },
@@ -475,7 +475,7 @@ const tattoolist = {
     "engName": "Tattoo of the Tawhoa Herbalist",
     "description": "フラスコ効果の持続時間が4%増加する",
     "enDescription": "",
-    "chaosValue": "9.13",
+    "chaosValue": "7.29",
     "regex": "薬草",
     "enRegex": "erb"
   },
@@ -483,7 +483,7 @@ const tattoolist = {
     "engName": "Tattoo of the Tawhoa Shaman",
     "description": "ヒット時に5%の確率で敵に毒を付与する",
     "enDescription": "",
-    "chaosValue": "142.2",
+    "chaosValue": "164",
     "regex": "アシ",
     "enRegex": "o p"
   },
@@ -507,7 +507,7 @@ const tattoolist = {
     "engName": "Tattoo of the Valako Stormrider",
     "description": "雷耐性 +6%",
     "enDescription": "",
-    "chaosValue": "21.4",
+    "chaosValue": "19.15",
     "regex": "のスト",
     "enRegex": "orm"
   },
@@ -515,7 +515,7 @@ const tattoolist = {
     "engName": "Tattoo of the Valako Scout",
     "description": "プレイヤーに対する感電の効果が10%減少する",
     "enDescription": "",
-    "chaosValue": "19.86",
+    "chaosValue": "16.96",
     "regex": "ラコの偵",
     "enRegex": "f Sh"
   },
@@ -523,7 +523,7 @@ const tattoolist = {
     "engName": "Tattoo of the Valako Warrior",
     "description": "雷ダメージが5%増加する",
     "enDescription": "",
-    "chaosValue": "19.78",
+    "chaosValue": "16.47",
     "regex": "コの戦",
     "enRegex": "g d"
   },
@@ -531,7 +531,7 @@ const tattoolist = {
     "engName": "Tattoo of the Valako Shieldbearer",
     "description": "アタックブロック率 +1%",
     "enDescription": "",
-    "chaosValue": "538.2",
+    "chaosValue": "535.5",
     "regex": "のシー",
     "enRegex": "mako Sh"
   },
@@ -539,7 +539,7 @@ const tattoolist = {
     "engName": "Tattoo of the Valako Shaman",
     "description": "5%の確率で敵を感電させる",
     "enDescription": "",
-    "chaosValue": "20.37",
+    "chaosValue": "18.23",
     "regex": "ァラコのシャ",
     "enRegex": "to Sh"
   },
@@ -715,7 +715,7 @@ const tattoolist = {
     "engName": "Journey Tattoo of the Body",
     "description": "割り当てられた肉体の旅のタトゥー1個ごとに最大ライフ +25",
     "enDescription": "",
-    "chaosValue": "38.93",
+    "chaosValue": "38.67",
     "regex": "肉体",
     "enRegex": "25 t"
   },
@@ -723,7 +723,7 @@ const tattoolist = {
     "engName": "Journey Tattoo of the Mind",
     "description": "割り当てられた精神の旅のタトゥー1個ごとに最大マナ +30",
     "enDescription": "",
-    "chaosValue": "2870",
+    "chaosValue": "3061",
     "regex": "精神",
     "enRegex": "e M"
   },
@@ -731,7 +731,7 @@ const tattoolist = {
     "engName": "Journey Tattoo of the Soul",
     "description": "割り当てられた魂の旅のタトゥー1個ごとに最大エナジーシールド +40",
     "enDescription": "",
-    "chaosValue": "340.5",
+    "chaosValue": "248.1",
     "regex": "魂の旅",
     "enRegex": "40 t"
   },
