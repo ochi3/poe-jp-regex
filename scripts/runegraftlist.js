@@ -11,7 +11,7 @@ const runegraftlist = {
     "engName": "Runegraft of the River",
     "description": "低ライフ時になった時に20%の確率でフルライフまで回復する",
     "enDescription": "",
-    "chaosValue": "20.33",
+    "chaosValue": "19.83",
     "regex": "川のル",
     "enRegex": "Riv"
   },
@@ -19,7 +19,7 @@ const runegraftlist = {
     "engName": "Runegraft of the Fortress",
     "description": "能力値が10%減少する グローバル防御力が40%増加する",
     "enDescription": "",
-    "chaosValue": "701.9",
+    "chaosValue": "679.3",
     "regex": "要塞",
     "enRegex": "Def"
   },
@@ -27,7 +27,7 @@ const runegraftlist = {
     "engName": "Runegraft of the Combatant",
     "description": "ライフの残りパーセントがプレイヤーより多い敵に対するアタックダメージが50%増加する",
     "enDescription": "",
-    "chaosValue": "18.8",
+    "chaosValue": "20.57",
     "regex": "闘士",
     "enRegex": "e Co"
   },
@@ -35,7 +35,7 @@ const runegraftlist = {
     "engName": "Runegraft of the Sinistral",
     "description": "オフハンドのアタックスピードが10%上昇する",
     "enDescription": "",
-    "chaosValue": "19.66",
+    "chaosValue": "19.98",
     "regex": "左手",
     "enRegex": "Sin"
   },
@@ -43,7 +43,7 @@ const runegraftlist = {
     "engName": "Runegraft of the Bound",
     "description": "装備中の靴から得られるボーナスが20%減少する 装備中の手袋から得られるボーナスが20%増加する",
     "enDescription": "",
-    "chaosValue": "19.77",
+    "chaosValue": "21.16",
     "regex": "束縛",
     "enRegex": "e B"
   },
@@ -59,7 +59,7 @@ const runegraftlist = {
     "engName": "Runegraft of the Soulwick",
     "description": "毎秒1のヴァールソウルを獲得する",
     "enDescription": "",
-    "chaosValue": "24.77",
+    "chaosValue": "25.05",
     "regex": "灯火",
     "enRegex": "1 V"
   },
@@ -67,7 +67,7 @@ const runegraftlist = {
     "engName": "Runegraft of Bellows",
     "description": "直近プレイヤーがウォークライをしていなければウォークライスピードが100%増加する",
     "enDescription": "",
-    "chaosValue": "19.67",
+    "chaosValue": "19.54",
     "regex": "怒号",
     "enRegex": "100"
   },
@@ -75,7 +75,7 @@ const runegraftlist = {
     "engName": "Runegraft of Gemcraft",
     "description": "全ての希少以外のサポートジェムのレベル +1",
     "enDescription": "",
-    "chaosValue": "57.32",
+    "chaosValue": "59.05",
     "regex": "ジェ",
     "enRegex": "Gem"
   },
@@ -83,7 +83,7 @@ const runegraftlist = {
     "engName": "Runegraft of Blasphemy",
     "description": "ヒット時に30%の確率で呪い状態でない敵にランダムな呪術で呪う",
     "enDescription": "",
-    "chaosValue": "20.2",
+    "chaosValue": "20.62",
     "regex": "冒涜",
     "enRegex": "Hex"
   },
@@ -115,7 +115,7 @@ const runegraftlist = {
     "engName": "Runegraft of Time",
     "description": "スキル使用時に20%の確率でクールダウン使用回数を消費しない",
     "enDescription": "",
-    "chaosValue": "20.76",
+    "chaosValue": "19.97",
     "regex": "時のル",
     "enRegex": "a C"
   },
@@ -123,7 +123,7 @@ const runegraftlist = {
     "engName": "Runegraft of Treachery",
     "description": "スキルのリザーブ効率が15%増加する 味方に影響するプレイヤーのスキルによるオーラは敵にも影響する",
     "enDescription": "",
-    "chaosValue": "25.05",
+    "chaosValue": "25.71",
     "regex": "裏切",
     "enRegex": "f Tr"
   },
@@ -131,7 +131,7 @@ const runegraftlist = {
     "engName": "Runegraft of Quaffing",
     "description": "フラスコによるマナ回復量が25%減少する 即時ではないフラスコによるマナ回復はライフも回復する",
     "enDescription": "",
-    "chaosValue": "19.73",
+    "chaosValue": "19.61",
     "regex": "暴飲",
     "enRegex": "25%"
   },
@@ -139,7 +139,7 @@ const runegraftlist = {
     "engName": "Runegraft of Restitching",
     "description": "クリティカルストライクから受けたダメージの40%をライフとして回収する",
     "enDescription": "",
-    "chaosValue": "20.36",
+    "chaosValue": "21.16",
     "regex": "縫合",
     "enRegex": "ken"
   },
@@ -147,7 +147,7 @@ const runegraftlist = {
     "engName": "Runegraft of Loyalty",
     "description": "プレイヤーに付与される元素系状態異常は40%の確率で代わりに近くのミニオン1体に付与される",
     "enDescription": "",
-    "chaosValue": "19.75",
+    "chaosValue": "16.4",
     "regex": "忠誠",
     "enRegex": "Loy"
   },
@@ -155,7 +155,7 @@ const runegraftlist = {
     "engName": "Runegraft of the Witchmark",
     "description": "スペルはプレイヤーの最大ライフの2%と同量の追加混沌ダメージを与える スペルはライフの+8%をコストとする",
     "enDescription": "",
-    "chaosValue": "20.45",
+    "chaosValue": "18.12",
     "regex": "ウィ",
     "enRegex": "he Wi"
   },
@@ -163,7 +163,7 @@ const runegraftlist = {
     "engName": "Runegraft of the Novamark",
     "description": "ノヴァスペルはもし可能ならばプレイヤーの周囲の代わりに呪印を付与した敵にキャストされる",
     "enDescription": "",
-    "chaosValue": "18.87",
+    "chaosValue": "20.14",
     "regex": "ノヴ",
     "enRegex": "Nov"
   },
@@ -171,7 +171,7 @@ const runegraftlist = {
     "engName": "Runegraft of Refraction",
     "description": "放たれる投射物が最大で1個になる 投射物は分岐する 投射物は追加で1回連鎖する",
     "enDescription": "",
-    "chaosValue": "20.65",
+    "chaosValue": "19.14",
     "regex": "屈折",
     "enRegex": "Ref"
   },
@@ -179,7 +179,7 @@ const runegraftlist = {
     "engName": "Runegraft of the Jeweller",
     "description": "装備中の両手武器にある未リンクのソケットごとにダメージが10%増加する",
     "enDescription": "",
-    "chaosValue": "19.8",
+    "chaosValue": "19.98",
     "regex": "宝飾",
     "enRegex": "ew"
   },
@@ -187,7 +187,7 @@ const runegraftlist = {
     "engName": "Runegraft of Stability",
     "description": "幸運または不幸の効果が代わりに退屈なものになる",
     "enDescription": "",
-    "chaosValue": "29.56",
+    "chaosValue": "29.75",
     "regex": "安定",
     "enRegex": "Luc"
   },
@@ -203,7 +203,7 @@ const runegraftlist = {
     "engName": "Runegraft of the Angler",
     "description": "釣り竿を装備中に全てのヒットはクリティカルストライクになる",
     "enDescription": "",
-    "chaosValue": "3629",
+    "chaosValue": "3872",
     "regex": "釣り",
     "enRegex": "Rod"
   },
@@ -211,7 +211,7 @@ const runegraftlist = {
     "engName": "Runegraft of Consecration",
     "description": "プレイヤーが生成する神聖領域はプレイヤーおよび味方にマナ自動回復レート30%増加を付与する",
     "enDescription": "",
-    "chaosValue": "18.47",
+    "chaosValue": "18.42",
     "regex": "神聖",
     "enRegex": "f Cons"
   },
@@ -219,7 +219,7 @@ const runegraftlist = {
     "engName": "Runegraft of Fury",
     "description": "ライフフラスコを使用した時に憤怒を3獲得する",
     "enDescription": "",
-    "chaosValue": "20.31",
+    "chaosValue": "18.37",
     "regex": "怒り",
     "enRegex": "f F"
   },
@@ -227,7 +227,7 @@ const runegraftlist = {
     "engName": "Runegraft of Rallying",
     "description": "バナーを設置することで消費した勇猛5ごとに1の堅牢化を獲得する",
     "enDescription": "",
-    "chaosValue": "19.95",
+    "chaosValue": "20.84",
     "regex": "鼓舞",
     "enRegex": "f Ra"
   },
@@ -235,7 +235,7 @@ const runegraftlist = {
     "engName": "Runegraft of Rotblood",
     "description": "プレイヤーにより毒を付与された敵はそれが与える物理ダメージの10%が混沌ダメージに変換される",
     "enDescription": "",
-    "chaosValue": "44.92",
+    "chaosValue": "49.72",
     "regex": "ロッ",
     "enRegex": " Ro"
   },
@@ -243,7 +243,7 @@ const runegraftlist = {
     "engName": "Runegraft of the Imbued",
     "description": "プレイヤーがフラスコの影響を受けていない時プレイヤーに適用されるチンキの効果が30%増加する",
     "enDescription": "",
-    "chaosValue": "19",
+    "chaosValue": "20.56",
     "regex": "与の",
     "enRegex": "e Im"
   },
@@ -251,7 +251,7 @@ const runegraftlist = {
     "engName": "Runegraft of the Agile",
     "description": "プレイヤーに対する身躱しの効果は最初の2秒間代わりに増える",
     "enDescription": "",
-    "chaosValue": "19.8",
+    "chaosValue": "19.49",
     "regex": "俊敏",
     "enRegex": "e Agi"
   },
@@ -259,7 +259,7 @@ const runegraftlist = {
     "engName": "Runegraft of Suffering",
     "description": "プレイヤーが状態異常の影響を受けている時にプレイヤーが付与した同じ状態異常のダメージが50%増加する",
     "enDescription": "",
-    "chaosValue": "19.9",
+    "chaosValue": "20.2",
     "regex": "苦難",
     "enRegex": "f Su"
   },
@@ -267,7 +267,7 @@ const runegraftlist = {
     "engName": "Runegraft of the Spellbound",
     "description": "スペルはプレイヤーの装備中の両手武器の物理ダメージの30%と同量の追加スペルダメージを持つ",
     "enDescription": "",
-    "chaosValue": "19.88",
+    "chaosValue": "19.94",
     "regex": "ペルバ",
     "enRegex": "e Sp"
   },
@@ -275,7 +275,7 @@ const runegraftlist = {
     "engName": "Runegraft of Resurgence",
     "description": "アーケインサージはプレイヤーに対してライフ自動回復レート15%増加も付与する",
     "enDescription": "",
-    "chaosValue": "20.1",
+    "chaosValue": "19.55",
     "regex": "回復の",
     "enRegex": "esu"
   },
@@ -283,7 +283,7 @@ const runegraftlist = {
     "engName": "Runegraft of Connection",
     "description": "リンクスキルは範囲が50%増加する",
     "enDescription": "",
-    "chaosValue": "19.85",
+    "chaosValue": "19.37",
     "regex": "接続",
     "enRegex": "onn"
   }
