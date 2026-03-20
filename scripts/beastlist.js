@@ -5,7 +5,7 @@ const beastlist = {
     "effect": "アイテムを変換：覚醒サポートジェムのロールを再生成する",
     "regex": "ド・ウ",
     "enRegex": "id w",
-    "chaosValue": "7"
+    "chaosValue": "5"
   },
   "ブラック・モリガン": {
     "engName": "Black Mórrigan",
@@ -13,7 +13,7 @@ const beastlist = {
     "effect": "アイテムを修正：可能な限り最大リンク数にする",
     "regex": "リガ",
     "enRegex": "k m",
-    "chaosValue": "82.4"
+    "chaosValue": "77"
   },
   "クレイシアンのキメラル": {
     "engName": "Craicic Chimeral",
@@ -21,7 +21,7 @@ const beastlist = {
     "effect": "インプリントを作成: マジックアイテム",
     "regex": "ンのキ",
     "enRegex": "cic c",
-    "chaosValue": "118"
+    "chaosValue": "110"
   },
   "ワイルド・ブリスル・マトロン": {
     "engName": "Wild Bristle Matron",
@@ -29,7 +29,7 @@ const beastlist = {
     "effect": "アイテムのモッドを変化: 非ユニークアイテムにクラフトメタモッドを追加",
     "regex": "ル・マ",
     "enRegex": "le m",
-    "chaosValue": "135"
+    "chaosValue": "124.7"
   },
   "ビビッド・ヴァルチャー": {
     "engName": "Vivid Vulture",
@@ -37,7 +37,7 @@ const beastlist = {
     "effect": "アイテムを変換: シンセシス暗黙モッドをリロール",
     "regex": "ド・ヴ",
     "enRegex": "id v",
-    "chaosValue": "613"
+    "chaosValue": "640"
   },
   "ワイルド・ヘリオン・アルファ": {
     "engName": "Wild Hellion Alpha",
@@ -45,7 +45,7 @@ const beastlist = {
     "effect": "アイテムのモッドを変化: 見つめる者の目のモッドをリロール。最大ライフ、マナおよびエナジーシールドのモッドはリロールできない",
     "regex": "ド・ヘリ",
     "enRegex": "ld h",
-    "chaosValue": "139"
+    "chaosValue": "135"
   },
   "ワイルド・ブランブルバック": {
     "engName": "Wild Brambleback",
@@ -53,7 +53,7 @@ const beastlist = {
     "effect": "アイテムを変換: コラプト状態でない覚醒のジェムのレベルを1上げる",
     "regex": "ド・ブラ",
     "enRegex": "d bra",
-    "chaosValue": "42.1"
+    "chaosValue": "40.5"
   },
   "平原の始祖、ファルウル": {
     "engName": "Farrul, First of the Plains",
@@ -61,7 +61,7 @@ const beastlist = {
     "effect": "アイテムにアスペクトスキルを追加: 猫のアスペクト",
     "regex": "祖、ファ",
     "enRegex": "ul, f",
-    "chaosValue": "45.1"
+    "chaosValue": "58"
   },
   "フィヌムスのプレイグドアラクニド": {
     "engName": "Fenumal Plagued Arachnid",
@@ -69,7 +69,7 @@ const beastlist = {
     "effect": "アイテムをスプリット: それぞれ半分のモッドを持つ2個のアイテムにスプリット",
     "regex": "のプレ",
     "enRegex": "l pla",
-    "chaosValue": "39.5"
+    "chaosValue": "30"
   },
   "プライマル・クリストコーラー": {
     "engName": "Primal Cystcaller",
@@ -85,7 +85,7 @@ const beastlist = {
     "effect": "アイテムにアスペクトスキルを追加: 蜘蛛のアスペクト",
     "regex": "祖、フィ",
     "enRegex": "s, f",
-    "chaosValue": "44.6"
+    "chaosValue": "49.6"
   },
   "空の始祖、サカワル": {
     "engName": "Saqawal, First of the Sky",
@@ -93,7 +93,7 @@ const beastlist = {
     "effect": "アイテムにアスペクトスキルを追加: 鳥のアスペクト",
     "regex": "祖、サカ",
     "enRegex": "al, f",
-    "chaosValue": "20"
+    "chaosValue": "15"
   },
   "深海の始祖、クレイシアン": {
     "engName": "Craiceann, First of the Deep",
@@ -117,7 +117,7 @@ const beastlist = {
     "effect": "ポータルを開く: フィヌムスの巣",
     "regex": "スのハイ",
     "enRegex": "l hy",
-    "chaosValue": "1.96"
+    "chaosValue": "1"
   },
   "クレイシアンの砂のスピッター": {
     "engName": "Craicic Sand Spitter",
@@ -133,7 +133,7 @@ const beastlist = {
     "effect": "ポータルを開く: ファルウルンの巣穴",
     "regex": "ルのタイ",
     "enRegex": "c ti",
-    "chaosValue": "3"
+    "chaosValue": "5"
   },
   "サカワルのレックス": {
     "engName": "Saqawine Rhex",
@@ -173,7 +173,7 @@ const beastlist = {
     "effect": "アイテムのモッドを変化: サフィックスを1つ追加し、ランダムなプレフィックスを1つ削除",
     "regex": "ルのリ",
     "enRegex": "c l",
-    "chaosValue": "1"
+    "chaosValue": "1.4"
   },
   "クレイシアンの口": {
     "engName": "Craicic Maw",
@@ -197,7 +197,7 @@ const beastlist = {
     "effect": "アトラスクラフトを獲得: 無料の各マップクラフトオプションを1ずつ獲得",
     "regex": "ル・クラ",
     "enRegex": "l cru",
-    "chaosValue": "17"
+    "chaosValue": "20"
   },
   "ファルウルのフロストヘリオン・アルファ": {
     "engName": "Farric Frost Hellion Alpha",
