@@ -1820,6 +1820,7 @@ function renderscarablist() {
       </div>
       <div class="scarab-price">${data.chaosValue}</div>
       <div class="scarab-name">${displayName}</div>
+      <div style="width: 0; padding: 0; visibility: hidden;"></div>
       <div class="scarab-effect">${displayDesc}</div>
     `;
 
