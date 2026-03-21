@@ -3,6 +3,7 @@ const scarablist = {
     "engName": "Rusted Breach Scarab",
     "description": "エリアにブリーチが追加される。",
     "enDescription": "Area contains an additional Breach",
+    "attribute": "",
     "chaosValue": "0",
     "regex": "びたブリ",
     "enRegex": "ted Br"
@@ -11,6 +12,7 @@ const scarablist = {
     "engName": "Polished Breach Scarab",
     "description": "エリアにブリーチが追加される。\r\nエリアに出現するブリーチにはブリーチボスの閉じた手が追加で1個出現する",
     "enDescription": "Area contains an additional Breach\r\nBreaches in Area contain an additional Breach Boss' Clasped Hand",
+    "attribute": "",
     "chaosValue": "0",
     "regex": "あるブリ",
     "enRegex": "hed Br"
@@ -19,6 +21,7 @@ const scarablist = {
     "engName": "Gilded Breach Scarab",
     "description": "エリアにブリーチが追加される。\r\nエリアに出現するブリーチにはブリーチボスの閉じた手が追加で1個出現する\r\nブリーチの手は二倍のブリーチのスプリンターをドロップする",
     "enDescription": "Area contains an additional Breach\r\nBreaches in Area contain an additional Breach Boss' Clasped Hand\r\nBreach Hands in Area drop double Breach Splinters",
+    "attribute": "",
     "chaosValue": "0",
     "regex": "色のブリ",
     "enRegex": "ded Br"
@@ -27,6 +30,7 @@ const scarablist = {
     "engName": "Winged Breach Scarab",
     "description": "エリアにブリーチが2個追加される。\r\nエリアに出現するブリーチにはブリーチボスの閉じた手が追加で1個出現する\r\nブリーチの手は二倍のブリーチのスプリンターをドロップする",
     "enDescription": "Area contains 2 additional Breaches\r\nBreaches in Area contain an additional Breach Boss' Clasped Hand\r\nBreach Hands in Area drop double Breach Splinters",
+    "attribute": "",
     "chaosValue": "0",
     "regex": "えたブリ",
     "enRegex": "ged Br"
@@ -35,7 +39,12 @@ const scarablist = {
     "engName": "Breach Scarab of the Hive",
     "description": "エリアにブリーチハイヴエンカウンターが出現する",
     "enDescription": "Area contains a Breach Hive",
+<<<<<<< Updated upstream
     "chaosValue": "0.3734",
+=======
+    "attribute": "",
+    "chaosValue": "0.381",
+>>>>>>> Stashed changes
     "regex": "ヴのブ",
     "enRegex": "gd"
   },
@@ -43,6 +52,7 @@ const scarablist = {
     "engName": "Breach Scarab of the Dreamer",
     "description": "エリアのブリーチには常にチャユラのものとなる",
     "enDescription": "Breaches in Area will always belong to Chayula",
+    "attribute": "",
     "chaosValue": "0",
     "regex": "夢見",
     "enRegex": "eam"
@@ -51,7 +61,12 @@ const scarablist = {
     "engName": "Breach Scarab of Instability",
     "description": "エリアに不安定なブリーチエンカウンターが追加で2個出現する",
     "enDescription": "Area contains 2 additional Unstable Breaches",
+<<<<<<< Updated upstream
     "chaosValue": "8.51",
+=======
+    "attribute": "",
+    "chaosValue": "7.95",
+>>>>>>> Stashed changes
     "regex": "定性",
     "enRegex": "arp"
   },
@@ -59,7 +74,12 @@ const scarablist = {
     "engName": "Breach Scarab of the Marshal",
     "description": "エリアの不安定なブリーチにボスが出現する\r\nエリアのブリーチハイブはハイヴフォトレスに繋がる",
     "enDescription": "Unstable Breaches in Area contain a Boss\r\nBreach Hives in Area lead to a Hive Fortress",
+<<<<<<< Updated upstream
     "chaosValue": "0.8516",
+=======
+    "attribute": "",
+    "chaosValue": "0.6574",
+>>>>>>> Stashed changes
     "regex": "元帥",
     "enRegex": "nw"
   },
@@ -67,7 +87,12 @@ const scarablist = {
     "engName": "Breach Scarab of the Incensed Swarm",
     "description": "エリアのエイリスのスキルはハイヴを激怒させ\nウェーブが進むごとに難易度が上がり報酬がよくなる",
     "enDescription": "Ailith's skills in Area instead enrage the Hive, increasing the Difficulty\nand Reward of subsequent waves",
+<<<<<<< Updated upstream
     "chaosValue": "2.98",
+=======
+    "attribute": "",
+    "chaosValue": "2.46",
+>>>>>>> Stashed changes
     "regex": "激昂",
     "enRegex": "h'"
   },
@@ -75,7 +100,12 @@ const scarablist = {
     "engName": "Breach Scarab of Resonant Cascade",
     "description": "エリアの不安定なブリーチは既に開いた不安定なブリーチごとに10%速くなる\nエリアの不安定なブリーチのモンスターは既に開いた不安定なブリーチごとに難易度が上がり報酬がよくなる",
     "enDescription": "Unstable Breaches in Areas are 10% faster for each Unstable Breach already opened\nMonsters from Unstable Breaches in Areas have increased Difficulty and Reward for\neach Unstable Breach already opened",
+<<<<<<< Updated upstream
     "chaosValue": "91.53",
+=======
+    "attribute": "",
+    "chaosValue": "92.86",
+>>>>>>> Stashed changes
     "regex": "共鳴",
     "enRegex": "lr"
   },
@@ -83,6 +113,7 @@ const scarablist = {
     "engName": "Rusted Cartography Scarab",
     "description": "エリアでのマップ獲得量が20%増加する。",
     "enDescription": "20% increased Maps found in Area",
+    "attribute": "",
     "chaosValue": "0",
     "regex": "びた地",
     "enRegex": "sted C"
@@ -91,6 +122,7 @@ const scarablist = {
     "engName": "Polished Cartography Scarab",
     "description": "エリアでのマップ獲得量が35%増加する。",
     "enDescription": "35% increased Maps found in Area",
+    "attribute": "",
     "chaosValue": "0",
     "regex": "る地",
     "enRegex": "hed C"
@@ -99,6 +131,7 @@ const scarablist = {
     "engName": "Gilded Cartography Scarab",
     "description": "エリアでのマップ獲得量が50%増加する。",
     "enDescription": "50% increased Maps found in Area",
+    "attribute": "",
     "chaosValue": "0",
     "regex": "色の地",
     "enRegex": "ded C"
@@ -107,6 +140,7 @@ const scarablist = {
     "engName": "Winged Cartography Scarab",
     "description": "エリアでのマップ獲得量が85%増加する。",
     "enDescription": "85% increased Maps found in Area",
+    "attribute": "",
     "chaosValue": "0",
     "regex": "えた地",
     "enRegex": "ged C"
@@ -115,7 +149,12 @@ const scarablist = {
     "engName": "Cartography Scarab of Escalation",
     "description": "エリアが影響を受けているマップモッド数ごとにエリアでのマップ獲得量が10%増加する",
     "enDescription": "10% increased Maps found in Area for each Map Modifier affecting Area",
+<<<<<<< Updated upstream
     "chaosValue": "0.4444",
+=======
+    "attribute": "",
+    "chaosValue": "0.4256",
+>>>>>>> Stashed changes
     "regex": "増大",
     "enRegex": "thr"
   },
@@ -123,7 +162,12 @@ const scarablist = {
     "engName": "Cartography Scarab of Risk",
     "description": "エリアはランダムなモッドを追加で2個持つ",
     "enDescription": "Area has 2 additional random Modifiers",
+<<<<<<< Updated upstream
     "chaosValue": "96.59",
+=======
+    "attribute": "",
+    "chaosValue": "92.64",
+>>>>>>> Stashed changes
     "regex": "クの地",
     "enRegex": "efl"
   },
@@ -131,6 +175,7 @@ const scarablist = {
     "engName": "Cartography Scarab of Singularity",
     "description": "マップの最終ボスはユニークマップをドロップする",
     "enDescription": "A Unique Map will drop from the Final Map Boss",
+    "attribute": "",
     "chaosValue": "0",
     "regex": "特異",
     "enRegex": "ngu"
@@ -139,7 +184,12 @@ const scarablist = {
     "engName": "Cartography Scarab of Corruption",
     "description": "エリアで見つかるユニークでないマップはモッドを8個持つコラプト状態となる",
     "enDescription": "Non-Unique Maps found in Area are Corrupted with 8 Modifiers",
+<<<<<<< Updated upstream
     "chaosValue": "0.7094",
+=======
+    "attribute": "",
+    "chaosValue": "0.8176",
+>>>>>>> Stashed changes
     "regex": "れの地",
     "enRegex": "tw"
   },
@@ -147,7 +197,12 @@ const scarablist = {
     "engName": "Cartography Scarab of the Multitude",
     "description": "エリアにはドロップするマップが300%増加した高難易度で見返りの\n大きいモンスターが追加で8から12パック出現する",
     "enDescription": "Area contains 8 to 12 additional packs of\nDifficult and Rewarding Monsters which drop 300% increased Maps",
+<<<<<<< Updated upstream
     "chaosValue": "0.4685",
+=======
+    "attribute": "",
+    "chaosValue": "0.4635",
+>>>>>>> Stashed changes
     "regex": "群衆",
     "enRegex": "izo"
   },
@@ -155,6 +210,7 @@ const scarablist = {
     "engName": "Rusted Reliquary Scarab",
     "description": "エリアでのユニークアイテム獲得量が50%増加する",
     "enDescription": "50% increased Unique Items found in Area",
+    "attribute": "",
     "chaosValue": "0",
     "regex": "びた遺",
     "enRegex": "ted R"
@@ -163,6 +219,7 @@ const scarablist = {
     "engName": "Polished Reliquary Scarab",
     "description": "エリアでのユニークアイテム獲得量が100%増加する",
     "enDescription": "100% increased Unique Items found in Area",
+    "attribute": "",
     "chaosValue": "0",
     "regex": "る遺",
     "enRegex": "hed R"
@@ -171,6 +228,7 @@ const scarablist = {
     "engName": "Gilded Reliquary Scarab",
     "description": "エリアでのユニークアイテム獲得量が150%増加する",
     "enDescription": "150% increased Unique Items found in Area",
+    "attribute": "",
     "chaosValue": "0",
     "regex": "色の遺",
     "enRegex": "lded R"
@@ -179,6 +237,7 @@ const scarablist = {
     "engName": "Winged Reliquary Scarab",
     "description": "エリアでのユニークアイテム獲得量が250%増加する",
     "enDescription": "250% increased Unique Items found in Area",
+    "attribute": "",
     "chaosValue": "0",
     "regex": "えた遺",
     "enRegex": "ged R"
@@ -187,7 +246,12 @@ const scarablist = {
     "engName": "Titanic Scarab",
     "description": "ユニークモンスターはパックサイズが1%増加するごとにタフネス、ダメージ、ドロップするアイテムレアリティと数量が1%増加する",
     "enDescription": "Unique Monsters have 1% increased Toughness, Damage, Rarity and Quantity of items dropped per 1% increased Pack Size of Area",
+<<<<<<< Updated upstream
     "chaosValue": "0.3934",
+=======
+    "attribute": "",
+    "chaosValue": "0.387",
+>>>>>>> Stashed changes
     "regex": "^タ",
     "enRegex": "nam"
   },
@@ -195,7 +259,12 @@ const scarablist = {
     "engName": "Titanic Scarab of Treasures",
     "description": "エリアのユニークモンスターは追加で1個の報酬持つ\nエリアのユニークモンスターのタフネスが30%増加する",
     "enDescription": "Unique Monsters in Area have an additional Reward\nUnique Monsters in Area have 30% increased Toughness",
+<<<<<<< Updated upstream
     "chaosValue": "0.3713",
+=======
+    "attribute": "",
+    "chaosValue": "0.4166",
+>>>>>>> Stashed changes
     "regex": "宝のタ",
     "enRegex": "gree"
   },
@@ -203,7 +272,12 @@ const scarablist = {
     "engName": "Titanic Scarab of Legend",
     "description": "エリアのユニークモンスターはモンスターモッドを追加で4個持つ",
     "enDescription": "Unique Monsters in Area have 4 additional Monster Modifiers",
+<<<<<<< Updated upstream
     "chaosValue": "0.6853",
+=======
+    "attribute": "",
+    "chaosValue": "0.6558",
+>>>>>>> Stashed changes
     "regex": "伝説",
     "enRegex": "ccu"
   },
@@ -211,6 +285,7 @@ const scarablist = {
     "engName": "Rusted Bestiary Scarab",
     "description": "エリアにアイナーが追加される。\r\nエリアに赤ビーストが追加される。",
     "enDescription": "Area contains Einhar\r\nArea contains an additional Red Beast",
+    "attribute": "",
     "chaosValue": "0",
     "regex": "びたベ",
     "enRegex": "ted Be"
@@ -219,6 +294,7 @@ const scarablist = {
     "engName": "Polished Bestiary Scarab",
     "description": "エリアにアイナーが追加される。\r\nエリアに赤ビーストが2体追加される。",
     "enDescription": "Area contains Einhar\r\nArea contains 2 additional Red Beasts",
+    "attribute": "",
     "chaosValue": "0",
     "regex": "るベ",
     "enRegex": "hed Be"
@@ -227,6 +303,7 @@ const scarablist = {
     "engName": "Gilded Bestiary Scarab",
     "description": "エリアにアイナーが追加される。\r\nエリアに赤ビーストが3体追加される。",
     "enDescription": "Area contains Einhar\r\nArea contains 3 additional Red Beasts",
+    "attribute": "",
     "chaosValue": "0",
     "regex": "色のベ",
     "enRegex": "ded Be"
@@ -235,6 +312,7 @@ const scarablist = {
     "engName": "Winged Bestiary Scarab",
     "description": "エリアにアイナーが追加される。\r\nエリアに赤ビーストが5体追加される。",
     "enDescription": "Area contains Einhar\r\nArea contains 5 additional Red Beasts",
+    "attribute": "",
     "chaosValue": "0",
     "regex": "えたベ",
     "enRegex": "ged Be"
@@ -243,6 +321,7 @@ const scarablist = {
     "engName": "Farric Lure",
     "description": "エリアにアイナーが追加される。\r\nエリアにワイルド由来の赤ビーストが4体追加される。\r\nベスティアリースカラベと同時に使用できない。",
     "enDescription": "Area contains Einhar\r\nArea contains 4 additional Red Beasts from The Wilds\r\nCannot be used alongside a Bestiary Scarab",
+    "attribute": "",
     "chaosValue": "0",
     "regex": "獣のエ",
     "enRegex": "Far"
@@ -251,6 +330,7 @@ const scarablist = {
     "engName": "Saqawine Lure",
     "description": "エリアにアイナーが追加される。\r\nエリアにサンド由来の赤ビーストが4体追加される。\r\nベスティアリースカラベと同時に使用できない。",
     "enDescription": "Area contains Einhar\r\nArea contains 4 additional Red Beasts from The Sands\r\nCannot be used alongside a Bestiary Scarab",
+    "attribute": "",
     "chaosValue": "0",
     "regex": "鳥のエ",
     "enRegex": "Saq"
@@ -259,6 +339,7 @@ const scarablist = {
     "engName": "Fenumal Lure",
     "description": "エリアにアイナーが追加される。\r\nエリアにキャバーン由来の赤ビーストが4体追加される。\r\nベスティアリースカラベと同時に使用できない。",
     "enDescription": "Area contains Einhar\r\nArea contains 4 additional Red Beasts from The Caverns\r\nCannot be used alongside a Bestiary Scarab",
+    "attribute": "",
     "chaosValue": "0",
     "regex": "蜘蛛",
     "enRegex": "Fen"
@@ -267,6 +348,7 @@ const scarablist = {
     "engName": "Craicic Lure",
     "description": "エリアにアイナーが追加される。\r\nエリアにディープ由来の赤ビーストが4体追加される。\r\nベスティアリースカラベと同時に使用できない。",
     "enDescription": "Area contains Einhar\r\nArea contains 4 additional Red Beasts from The Deep\r\nCannot be used alongside a Bestiary Scarab",
+    "attribute": "",
     "chaosValue": "0",
     "regex": "カニ",
     "enRegex": "Cra"
@@ -275,7 +357,12 @@ const scarablist = {
     "engName": "Bestiary Scarab",
     "description": "エリアにアイナーが出現する",
     "enDescription": "Area contains Einhar",
+<<<<<<< Updated upstream
     "chaosValue": "0.371",
+=======
+    "attribute": "",
+    "chaosValue": "0.3818",
+>>>>>>> Stashed changes
     "regex": "^ベ",
     "enRegex": "stm"
   },
@@ -283,7 +370,12 @@ const scarablist = {
     "engName": "Bestiary Scarab of the Herd",
     "description": "エリアにアイナーが出現する場合にエリアに赤ビーストが5体追加される",
     "enDescription": "Area contains 5 additional Red Beasts if it contains Einhar",
+<<<<<<< Updated upstream
     "chaosValue": "1.13",
+=======
+    "attribute": "",
+    "chaosValue": "1.04",
+>>>>>>> Stashed changes
     "regex": "れのベ",
     "enRegex": "ram"
   },
@@ -291,7 +383,12 @@ const scarablist = {
     "engName": "Bestiary Scarab of Duplicating",
     "description": "エリアで捕獲したビーストのコピーを生成する",
     "enDescription": "Create a copy of Beasts captured in Area",
+<<<<<<< Updated upstream
     "chaosValue": "1.58",
+=======
+    "attribute": "",
+    "chaosValue": "1.45",
+>>>>>>> Stashed changes
     "regex": "製のベ",
     "enRegex": "at'"
   },
@@ -299,6 +396,7 @@ const scarablist = {
     "engName": "Bestiary Scarab of the Shadowed Crow",
     "description": "エリアにアイナーが出現する場合にエリアに黒のモリガンが追加される",
     "enDescription": "Area contains The Black Mórrigan if it contains Einhar",
+    "attribute": "",
     "chaosValue": "0",
     "regex": "影の鴉",
     "enRegex": "had"
@@ -307,6 +405,7 @@ const scarablist = {
     "engName": "Rusted Shaper Scarab",
     "description": "マップエリアにシェイパーインフルエンスを追加する。\r\nエリアでのレアシェイパーアイテム獲得量が30%上昇する。",
     "enDescription": "Adds Shaper Influence outcome to Map Area\r\n30% more Rare Shaper Items found in Area",
+    "attribute": "",
     "chaosValue": "0",
     "regex": "びたシ",
     "enRegex": "ted Sh"
@@ -315,6 +414,7 @@ const scarablist = {
     "engName": "Polished Shaper Scarab",
     "description": "マップエリアにシェイパーインフルエンスを追加する。\r\nエリアでのレアシェイパーアイテム獲得量が60%上昇する。",
     "enDescription": "Adds Shaper Influence outcome to Map Area\r\n60% more Rare Shaper Items found in Area",
+    "attribute": "",
     "chaosValue": "0",
     "regex": "るシ",
     "enRegex": "hed Sh"
@@ -323,6 +423,7 @@ const scarablist = {
     "engName": "Gilded Shaper Scarab",
     "description": "マップエリアにシェイパーインフルエンスを追加する。\r\nエリアでのレアシェイパーアイテム獲得量が90%上昇する。",
     "enDescription": "Adds Shaper Influence outcome to Map Area\r\n90% more Rare Shaper Items found in Area",
+    "attribute": "",
     "chaosValue": "0",
     "regex": "色のシ",
     "enRegex": "ded Sh"
@@ -331,6 +432,7 @@ const scarablist = {
     "engName": "Winged Shaper Scarab",
     "description": "マップエリアにシェイパーインフルエンスを追加する。\r\nエリアでのレアシェイパーアイテム獲得量が150%上昇する。",
     "enDescription": "Adds Shaper Influence outcome to Map Area\r\n150% more Rare Shaper Items found in Area",
+    "attribute": "",
     "chaosValue": "0",
     "regex": "えたシ",
     "enRegex": "ged Sh"
@@ -339,6 +441,7 @@ const scarablist = {
     "engName": "Rusted Elder Scarab",
     "description": "マップエリアにエルダーインフルエンスを追加する。\r\nエリアでのレアエルダーアイテム獲得量が30%上昇する。",
     "enDescription": "Adds Elder Influence outcome to Map Area\r\n30% more Rare Elder Items found in Area",
+    "attribute": "",
     "chaosValue": "0",
     "regex": "びたエル",
     "enRegex": "ted El"
@@ -347,6 +450,7 @@ const scarablist = {
     "engName": "Polished Elder Scarab",
     "description": "マップエリアにエルダーインフルエンスを追加する。\r\nエリアでのレアエルダーアイテム獲得量が60%上昇する。",
     "enDescription": "Adds Elder Influence outcome to Map Area\r\n60% more Rare Elder Items found in Area",
+    "attribute": "",
     "chaosValue": "0",
     "regex": "るエル",
     "enRegex": "hed El"
@@ -355,6 +459,7 @@ const scarablist = {
     "engName": "Gilded Elder Scarab",
     "description": "マップエリアにエルダーインフルエンスを追加する。\r\nエリアでのレアエルダーアイテム獲得量が90%上昇する。",
     "enDescription": "Adds Elder Influence outcome to Map Area\r\n90% more Rare Elder Items found in Area",
+    "attribute": "",
     "chaosValue": "0",
     "regex": "色のエル",
     "enRegex": "ded El"
@@ -363,6 +468,7 @@ const scarablist = {
     "engName": "Winged Elder Scarab",
     "description": "マップエリアにエルダーインフルエンスを追加する。\r\nエリアでのレアエルダーアイテム獲得量が150%上昇する。",
     "enDescription": "Adds Elder Influence outcome to Map Area\r\n150% more Rare Elder Items found in Area",
+    "attribute": "",
     "chaosValue": "0",
     "regex": "えたエル",
     "enRegex": "ged El"
@@ -371,7 +477,12 @@ const scarablist = {
     "engName": "Influencing Scarab of the Shaper",
     "description": "マップエリアにシェイパーインフルエンスを追加する",
     "enDescription": "Adds Shaper Influence outcome to Area",
+<<<<<<< Updated upstream
     "chaosValue": "0.3773",
+=======
+    "attribute": "",
+    "chaosValue": "0.3801",
+>>>>>>> Stashed changes
     "regex": "パーのイ",
     "enRegex": "awai"
   },
@@ -379,7 +490,12 @@ const scarablist = {
     "engName": "Influencing Scarab of the Elder",
     "description": "マップエリアにエルダーインフルエンスを追加する",
     "enDescription": "Adds Elder Influence outcome to Area",
+<<<<<<< Updated upstream
     "chaosValue": "0.3835",
+=======
+    "attribute": "",
+    "chaosValue": "0.3715",
+>>>>>>> Stashed changes
     "regex": "ダーのイ",
     "enRegex": "voi"
   },
@@ -387,7 +503,12 @@ const scarablist = {
     "engName": "Influencing Scarab of Hordes",
     "description": "エリアのインフルエンスモンスターパックのパックサイズが40%増加する",
     "enDescription": "Influenced Monster Packs in Area have 40% increased Pack Size",
+<<<<<<< Updated upstream
     "chaosValue": "0.4589",
+=======
+    "attribute": "",
+    "chaosValue": "0.5041",
+>>>>>>> Stashed changes
     "regex": "れのイ",
     "enRegex": "idea"
   },
@@ -395,7 +516,12 @@ const scarablist = {
     "engName": "Influencing Scarab of Interference",
     "description": "マップボスはランダムなシェイパーガーディアン、エルダーガーディアン、征服者またはシンセシスボスを1体伴う\r\nティア14+のマップでだけ使用できる",
     "enDescription": "A Map Boss is accompanied by a random Shaper Guardian, Elder Guardian, Conqueror or Synthesis Boss\r\nCan only be used with Tier 14+ Maps",
+<<<<<<< Updated upstream
     "chaosValue": "0.4796",
+=======
+    "attribute": "",
+    "chaosValue": "0.4935",
+>>>>>>> Stashed changes
     "regex": "干渉",
     "enRegex": "nq"
   },
@@ -403,6 +529,7 @@ const scarablist = {
     "engName": "Rusted Sulphite Scarab",
     "description": "エリアにニコが追加される\r\nマップの所有者が得るサルファイトの量が20%上昇する",
     "enDescription": "Area contains Niko\r\nMap owner gains 20% more Sulphite",
+    "attribute": "",
     "chaosValue": "0",
     "regex": "びたサ",
     "enRegex": "ted Su"
@@ -411,6 +538,7 @@ const scarablist = {
     "engName": "Polished Sulphite Scarab",
     "description": "エリアにニコが追加される\r\nマップの所有者が得るサルファイトの量が40%上昇する",
     "enDescription": "Area contains Niko\r\nMap owner gains 40% more Sulphite",
+    "attribute": "",
     "chaosValue": "0",
     "regex": "あるサ",
     "enRegex": "hed Su"
@@ -419,6 +547,7 @@ const scarablist = {
     "engName": "Gilded Sulphite Scarab",
     "description": "エリアにニコが追加される\r\nマップの所有者が得るサルファイトの量が60%上昇する",
     "enDescription": "Area contains Niko\r\nMap owner gains 60% more Sulphite",
+    "attribute": "",
     "chaosValue": "0",
     "regex": "色のサ",
     "enRegex": "ded Su"
@@ -427,6 +556,7 @@ const scarablist = {
     "engName": "Winged Sulphite Scarab",
     "description": "エリアにニコが追加される\r\nマップの所有者が得るサルファイトの量が100%上昇する",
     "enDescription": "Area contains Niko\r\nMap owner gains 100% more Sulphite",
+    "attribute": "",
     "chaosValue": "0",
     "regex": "えたサ",
     "enRegex": "ged Su"
@@ -435,7 +565,12 @@ const scarablist = {
     "engName": "Sulphite Scarab",
     "description": "エリアにニコが出現する",
     "enDescription": "Area contains Niko",
+<<<<<<< Updated upstream
     "chaosValue": "0.3927",
+=======
+    "attribute": "",
+    "chaosValue": "0.3976",
+>>>>>>> Stashed changes
     "regex": "ニコ",
     "enRegex": "ko"
   },
@@ -443,6 +578,7 @@ const scarablist = {
     "engName": "Sulphite Scarab of Greed",
     "description": "マップの所有者が得るサルファイトの量が150%上昇する",
     "enDescription": "Map owner gains 150% more Sulphite",
+    "attribute": "",
     "chaosValue": "0",
     "regex": "貪欲",
     "enRegex": "Gre"
@@ -451,7 +587,12 @@ const scarablist = {
     "engName": "Sulphite Scarab of Fumes",
     "description": "エリアで見つかるサルファイトは激怒の煙霧を放つ\n激怒の煙霧の影響を受けているモンスターのアイテム数量が50%増加する\nマップのサルファイトはアズライト鉱山のモンスターにより守られている",
     "enDescription": "Sulphite found in Map Area releases Enraging Fumes\nMonsters affected by Enraging Fumes have 50% increased Item Quantity\nSulphite in your maps is guarded by Monsters from the Azurite Mine",
+<<<<<<< Updated upstream
     "chaosValue": "0.4413",
+=======
+    "attribute": "",
+    "chaosValue": "0.4701",
+>>>>>>> Stashed changes
     "regex": "瘴気",
     "enRegex": "k,"
   },
@@ -459,6 +600,7 @@ const scarablist = {
     "engName": "Rusted Divination Scarab",
     "description": "エリアでの占いカード獲得量が50%上昇する",
     "enDescription": "50% more Divination Cards found in Area",
+    "attribute": "",
     "chaosValue": "0",
     "regex": "びた占",
     "enRegex": "ted D"
@@ -467,6 +609,7 @@ const scarablist = {
     "engName": "Polished Divination Scarab",
     "description": "エリアでの占いカード獲得量が100%上昇する",
     "enDescription": "100% more Divination Cards found in Area",
+    "attribute": "",
     "chaosValue": "0",
     "regex": "ある占",
     "enRegex": "hed D"
@@ -475,6 +618,7 @@ const scarablist = {
     "engName": "Gilded Divination Scarab",
     "description": "エリアでの占いカード獲得量が150%上昇する",
     "enDescription": "150% more Divination Cards found in Area",
+    "attribute": "",
     "chaosValue": "0",
     "regex": "色の占",
     "enRegex": "ded D"
@@ -483,6 +627,7 @@ const scarablist = {
     "engName": "Winged Divination Scarab",
     "description": "エリアでの占いカード獲得量が250%上昇する",
     "enDescription": "250% more Divination Cards found in Area",
+    "attribute": "",
     "chaosValue": "0",
     "regex": "えた占",
     "enRegex": "ged D"
@@ -491,7 +636,12 @@ const scarablist = {
     "engName": "Divination Scarab of The Cloister",
     "description": "エリアにはドゥードリに敬虔なモンスターが追加で8から12パック出現する\nドゥードリに敬虔なモンスターはスタックデッキをドロップする確率を追加で1%持つ",
     "enDescription": "Area contains 8 to 12 additional packs of Doedre's Devoted\nDoedre's Devoted have 1% additional chance to drop a Stacked Deck",
+<<<<<<< Updated upstream
     "chaosValue": "1.47",
+=======
+    "attribute": "",
+    "chaosValue": "1.29",
+>>>>>>> Stashed changes
     "regex": "学院",
     "enRegex": "loi"
   },
@@ -499,6 +649,10 @@ const scarablist = {
     "engName": "Divination Scarab of Plenty",
     "description": "エリアには占いカードをドロップする確率が1000%増加した\n占いに触れられしマジックモンスターパックが6から10パック追加で出現する",
     "enDescription": "Area contains 6 to 10 additional Packs of Divination Touched Magic Monsters that\nhave 1000% increased chance to drop Divination Cards",
+<<<<<<< Updated upstream
+=======
+    "attribute": "",
+>>>>>>> Stashed changes
     "chaosValue": "1.19",
     "regex": "富な占",
     "enRegex": "usa"
@@ -507,7 +661,12 @@ const scarablist = {
     "engName": "Divination Scarab of Pilfering",
     "description": "エリアでドロップする占いカードはマップの最終ボスに盗まれる\nマップの最終ボスは盗んだ占いカードが多いほど\n難易度が上昇しダメージが増加する\nマップの最終ボスを倒した時に盗んだすべての占いカードを複製する",
     "enDescription": "Divination Cards which drop in Area are stolen by a Final Map Boss\nThat Final Map Boss becomes more Difficult and deals\nincreased Damage the more Divination Cards they have stolen\nThat Final Map Boss duplicates all stolen Divination Cards when defeated",
+<<<<<<< Updated upstream
     "chaosValue": "9.64",
+=======
+    "attribute": "",
+    "chaosValue": "10.49",
+>>>>>>> Stashed changes
     "regex": "窃盗",
     "enRegex": "sei"
   },
@@ -515,6 +674,7 @@ const scarablist = {
     "engName": "Rusted Torment Scarab",
     "description": "エリアは拷問された幽霊が追加で3体彷徨っている",
     "enDescription": "Area is haunted by 3 additional Tormented Spirits",
+    "attribute": "",
     "chaosValue": "0",
     "regex": "びたト",
     "enRegex": "sted T"
@@ -523,6 +683,7 @@ const scarablist = {
     "engName": "Polished Torment Scarab",
     "description": "エリアは拷問された幽霊が追加で5体彷徨っている",
     "enDescription": "Area is haunted by 5 additional Tormented Spirits",
+    "attribute": "",
     "chaosValue": "0",
     "regex": "るト",
     "enRegex": "hed T"
@@ -531,6 +692,7 @@ const scarablist = {
     "engName": "Gilded Torment Scarab",
     "description": "エリアは拷問された幽霊が追加で7体彷徨っている",
     "enDescription": "Area is haunted by 7 additional Tormented Spirits",
+    "attribute": "",
     "chaosValue": "0",
     "regex": "色のト",
     "enRegex": "lded T"
@@ -539,6 +701,7 @@ const scarablist = {
     "engName": "Winged Torment Scarab",
     "description": "エリアは拷問された幽霊が追加で12体彷徨っている",
     "enDescription": "Area is haunted by 12 additional Tormented Spirits",
+    "attribute": "",
     "chaosValue": "0",
     "regex": "えたト",
     "enRegex": "ged T"
@@ -547,7 +710,12 @@ const scarablist = {
     "engName": "Torment Scarab",
     "description": "エリアは拷問された幽霊が追加で4体彷徨っている\nエリアの拷問された幽霊は憑りつかれたモンスターが倒された時に10%の確率で解放され\n新たに憑りつかれたモンスターを掘り出す",
     "enDescription": "Area is haunted by 4 additional Tormented Spirits\nTormented Spirits in Area have a 10% chance to\nbe set free when Possessed Monsters are slain\n and dig up a Possessed Monster",
+<<<<<<< Updated upstream
     "chaosValue": "0.3676",
+=======
+    "attribute": "",
+    "chaosValue": "0.3622",
+>>>>>>> Stashed changes
     "regex": "^ト",
     "enRegex": "rim"
   },
@@ -555,7 +723,12 @@ const scarablist = {
     "engName": "Torment Scarab of Peculiarity",
     "description": "エリアの拷問された幽霊はありふれていない種類に置き換わる",
     "enDescription": "Tormented Spirits in Area are replaced with unusual variants",
+<<<<<<< Updated upstream
     "chaosValue": "0.3679",
+=======
+    "attribute": "",
+    "chaosValue": "0.3739",
+>>>>>>> Stashed changes
     "regex": "異様",
     "enRegex": "e!"
   },
@@ -563,6 +736,7 @@ const scarablist = {
     "engName": "Torment Scarab of Release",
     "description": "エリアの拷問された幽霊は25%の確率で\n憑依したモンスターが死亡した際に解き放たれる",
     "enDescription": "Tormented Spirits in Area have a 25% chance to\nbe set free when Possessed Monsters are slain",
+    "attribute": "",
     "chaosValue": "0",
     "regex": "放のト",
     "enRegex": "f Rel"
@@ -571,7 +745,12 @@ const scarablist = {
     "engName": "Torment Scarab of Possession",
     "description": "エリアのレアモンスターは4分の1の確率で最大3体の拷問された幽霊に憑依されている",
     "enDescription": "Rare Monsters in Area have a quarter chance to be Possessed by up to 3 Tormented Spirits",
+<<<<<<< Updated upstream
     "chaosValue": "0.3313",
+=======
+    "attribute": "",
+    "chaosValue": "0.3813",
+>>>>>>> Stashed changes
     "regex": "依のト",
     "enRegex": "e ne"
   },
@@ -579,6 +758,7 @@ const scarablist = {
     "engName": "Rusted Ambush Scarab",
     "description": "エリアにストロングボックスが3個追加される",
     "enDescription": "Area contains 3 additional Strongboxes",
+    "attribute": "",
     "chaosValue": "0",
     "regex": "びたアン",
     "enRegex": "ted Am"
@@ -587,6 +767,7 @@ const scarablist = {
     "engName": "Polished Ambush Scarab",
     "description": "エリアにストロングボックスが4個追加される",
     "enDescription": "Area contains 4 additional Strongboxes",
+    "attribute": "",
     "chaosValue": "0",
     "regex": "るアン",
     "enRegex": "hed Am"
@@ -595,6 +776,7 @@ const scarablist = {
     "engName": "Gilded Ambush Scarab",
     "description": "エリアにストロングボックスが5個追加される",
     "enDescription": "Area contains 5 additional Strongboxes",
+    "attribute": "",
     "chaosValue": "0",
     "regex": "色のアン",
     "enRegex": "ded Am"
@@ -603,6 +785,7 @@ const scarablist = {
     "engName": "Winged Ambush Scarab",
     "description": "エリアにストロングボックスが9個追加される",
     "enDescription": "Area contains 9 additional Strongboxes",
+    "attribute": "",
     "chaosValue": "0",
     "regex": "えたアン",
     "enRegex": "ged Am"
@@ -611,7 +794,12 @@ const scarablist = {
     "engName": "Ambush Scarab",
     "description": "エリアにストロングボックスが4個追加される",
     "enDescription": "Area contains 4 additional Strongboxes",
+<<<<<<< Updated upstream
     "chaosValue": "0.5894",
+=======
+    "attribute": "",
+    "chaosValue": "0.585",
+>>>>>>> Stashed changes
     "regex": "^アン",
     "enRegex": "u'"
   },
@@ -619,7 +807,12 @@ const scarablist = {
     "engName": "Ambush Scarab of Hidden Compartments",
     "description": "エリアのストロングボックスは15%の確率で再度開けられる",
     "enDescription": "15% Chance for Strongboxes in Area to be openable again",
+<<<<<<< Updated upstream
     "chaosValue": "0.5753",
+=======
+    "attribute": "",
+    "chaosValue": "0.4409",
+>>>>>>> Stashed changes
     "regex": "隠し",
     "enRegex": "bv"
   },
@@ -627,7 +820,12 @@ const scarablist = {
     "engName": "Ambush Scarab of Potency",
     "description": "エリアのストロングボックス上の明示モッドの効果が75%増加する",
     "enDescription": "75% Increased effect of Explicit Modifiers on Strongboxes in Area",
+<<<<<<< Updated upstream
     "chaosValue": "0.6553",
+=======
+    "attribute": "",
+    "chaosValue": "0.5081",
+>>>>>>> Stashed changes
     "regex": "有効",
     "enRegex": "loc"
   },
@@ -635,7 +833,12 @@ const scarablist = {
     "engName": "Ambush Scarab of Containment",
     "description": "エリアに複数のストロングボックスが追加される\nエリアの生物が待ち伏せしている",
     "enDescription": "Area contains many additional Strongboxes\nArea's inhabitants are lying in ambush",
+<<<<<<< Updated upstream
     "chaosValue": "300.7",
+=======
+    "attribute": "",
+    "chaosValue": "316.7",
+>>>>>>> Stashed changes
     "regex": "格納",
     "enRegex": "urk"
   },
@@ -643,7 +846,12 @@ const scarablist = {
     "engName": "Ambush Scarab of Discernment",
     "description": "エリアのストロングボックスはよりレアな種類になる可能性が高くなる",
     "enDescription": "Strongboxes in Area are more likely to be rarer varieties",
+<<<<<<< Updated upstream
     "chaosValue": "0.8233",
+=======
+    "attribute": "",
+    "chaosValue": "0.8615",
+>>>>>>> Stashed changes
     "regex": "眼識",
     "enRegex": "kee"
   },
@@ -651,6 +859,7 @@ const scarablist = {
     "engName": "Rusted Harbinger Scarab",
     "description": "エリアにハービンジャーが2体追加される。",
     "enDescription": "Area contains 2 additional Harbingers",
+    "attribute": "",
     "chaosValue": "0",
     "regex": "びたハ",
     "enRegex": "sted H"
@@ -659,6 +868,7 @@ const scarablist = {
     "engName": "Polished Harbinger Scarab",
     "description": "エリアにハービンジャーが3体追加される。",
     "enDescription": "Area contains 3 additional Harbingers",
+    "attribute": "",
     "chaosValue": "0",
     "regex": "るハ",
     "enRegex": "hed H"
@@ -667,6 +877,7 @@ const scarablist = {
     "engName": "Gilded Harbinger Scarab",
     "description": "エリアにハービンジャーが4体追加される。",
     "enDescription": "Area contains 4 additional Harbingers",
+    "attribute": "",
     "chaosValue": "0",
     "regex": "色のハ",
     "enRegex": "ded H"
@@ -675,6 +886,7 @@ const scarablist = {
     "engName": "Winged Harbinger Scarab",
     "description": "エリアにハービンジャーが7体追加される。",
     "enDescription": "Area contains 7 additional Harbingers",
+    "attribute": "",
     "chaosValue": "0",
     "regex": "えたハ",
     "enRegex": "ged H"
@@ -683,6 +895,7 @@ const scarablist = {
     "engName": "Harbinger Scarab",
     "description": "エリアにハービンジャーが3体追加される",
     "enDescription": "Area contains 3 additional Harbingers",
+    "attribute": "",
     "chaosValue": "0",
     "regex": "ハ.*ビ",
     "enRegex": "carab"
@@ -691,6 +904,7 @@ const scarablist = {
     "engName": "Harbinger Scarab of Obelisks",
     "description": "エリアのハービンジャーは強化されたオベリスクをスポーンする\n強化されたオベリスクは倒した時にカレンシーのシャードをドロップする",
     "enDescription": "Harbingers in Area spawn Empowered Obelisks\nEmpowered Obelisks drop Currency Shards when defeated",
+    "attribute": "",
     "chaosValue": "0",
     "regex": "クのハ",
     "enRegex": "f Ob"
@@ -699,6 +913,7 @@ const scarablist = {
     "engName": "Harbinger Scarab of Regency",
     "description": "エリアのハービンジャーは50%の確率で強力なハービンジャーボスに置き換わる",
     "enDescription": "Harbingers in Area have a 50% chance to be replaced by a powerful Harbinger Boss",
+    "attribute": "",
     "chaosValue": "0",
     "regex": "摂政",
     "enRegex": "Reg"
@@ -707,6 +922,7 @@ const scarablist = {
     "engName": "Harbinger Scarab of Warhoards",
     "description": "エリアのハービンジャーがドロップするカレンシーのシャードは複製される",
     "enDescription": "Currency shards dropped by Harbingers in Area are duplicated",
+    "attribute": "",
     "chaosValue": "0",
     "regex": "ドのハ",
     "enRegex": "arh"
@@ -715,6 +931,7 @@ const scarablist = {
     "engName": "Rusted Expedition Scarab",
     "description": "エリアにエクスペディションエンカウンターが追加される。",
     "enDescription": "Area contains an additional Expedition Encounter",
+    "attribute": "",
     "chaosValue": "0",
     "regex": "びたエク",
     "enRegex": "ted Ex"
@@ -723,6 +940,7 @@ const scarablist = {
     "engName": "Polished Expedition Scarab",
     "description": "エリアにエクスペディションエンカウンターが追加される。\r\nエリア内のルーニックモンスターの目印の数が25%増加する。\r\n爆発物の数が20%増加する。",
     "enDescription": "Area contains an additional Expedition Encounter\r\nArea contains 25% increased number of Runic Monster Markers\r\n20% increased number of Explosives",
+    "attribute": "",
     "chaosValue": "0",
     "regex": "るエク",
     "enRegex": "hed Ex"
@@ -731,6 +949,7 @@ const scarablist = {
     "engName": "Gilded Expedition Scarab",
     "description": "エリアにエクスペディションエンカウンターが追加される。\r\nエリア内のルーニックモンスターの目印の数が50%増加する。\r\n爆発物の数が20%増加する。",
     "enDescription": "Area contains an additional Expedition Encounter\r\nArea contains 50% increased number of Runic Monster Markers\r\n20% increased number of Explosives",
+    "attribute": "",
     "chaosValue": "0",
     "regex": "色のエク",
     "enRegex": "ded Ex"
@@ -739,6 +958,7 @@ const scarablist = {
     "engName": "Winged Expedition Scarab",
     "description": "エリアにエクスペディションエンカウンターが追加される。\r\nエリア内のルーニックモンスターの目印の数が50%増加する。\r\n爆発物の数が20%増加する。\r\nエリア内のレムナントは追加のサフィックスを持つ。",
     "enDescription": "Area contains an additional Expedition Encounter\r\nArea contains 50% increased number of Runic Monster Markers\r\n20% increased number of Explosives\r\nRemnants in area have an additional Suffix",
+    "attribute": "",
     "chaosValue": "0",
     "regex": "えたエク",
     "enRegex": "ged Ex"
@@ -747,7 +967,12 @@ const scarablist = {
     "engName": "Expedition Scarab",
     "description": "エリアにエクスペディションエンカウンターが出現する",
     "enDescription": "Area contains an Expedition Encounter",
+<<<<<<< Updated upstream
     "chaosValue": "0.3552",
+=======
+    "attribute": "",
+    "chaosValue": "0.3734",
+>>>>>>> Stashed changes
     "regex": "にエク.*出",
     "enRegex": "cro"
   },
@@ -755,7 +980,12 @@ const scarablist = {
     "engName": "Expedition Scarab of Runefinding",
     "description": "エリアのエクスペディションエンカウンターの\nルーニックモンスターの目印の数が100%増加する",
     "enDescription": "Expedition Encounters in Area have 100% increased\nnumber of Runic Monster Markers",
+<<<<<<< Updated upstream
     "chaosValue": "0.5177",
+=======
+    "attribute": "",
+    "chaosValue": "0.5018",
+>>>>>>> Stashed changes
     "regex": "ン探",
     "enRegex": "urn"
   },
@@ -763,7 +993,12 @@ const scarablist = {
     "engName": "Expedition Scarab of Verisium Powder",
     "description": "エリアのエクスペディションエンカウンターの爆発物の数が50%増加する\n爆発物の半径が80%増加する",
     "enDescription": "Expedition Encounters in Area have 50% increased number of Explosives\n80% increased Explosive Radius",
+<<<<<<< Updated upstream
     "chaosValue": "0.741",
+=======
+    "attribute": "",
+    "chaosValue": "0.5187",
+>>>>>>> Stashed changes
     "regex": "ェリ",
     "enRegex": "f V"
   },
@@ -771,7 +1006,12 @@ const scarablist = {
     "engName": "Expedition Scarab of Infusion",
     "description": "エリアで見つかるログブックは常に4個の暗黙モッドを持つ\nエクスペディションモンスターは起爆されたレムナントの数ごとに難易度と報酬の増加を獲得する",
     "enDescription": "Logbooks found in Area always have 4 Implicits\nExpedition Monsters gain increased Difficulty and Reward for each Remnant detonated",
+<<<<<<< Updated upstream
     "chaosValue": "0.4369",
+=======
+    "attribute": "",
+    "chaosValue": "0.5688",
+>>>>>>> Stashed changes
     "regex": "注入",
     "enRegex": "nfu"
   },
@@ -779,7 +1019,12 @@ const scarablist = {
     "engName": "Expedition Scarab of Archaeology",
     "description": "エリアのエクスペディションエンカウンターのレムナントはサフィックスおよびプレフィックスを追加で2個持つ",
     "enDescription": "Remnants in Expedition Encounters in Area have 2 additional Suffixes and Prefixes",
+<<<<<<< Updated upstream
     "chaosValue": "0.405",
+=======
+    "attribute": "",
+    "chaosValue": "0.5064",
+>>>>>>> Stashed changes
     "regex": "考古",
     "enRegex": "sd"
   },
@@ -787,6 +1032,7 @@ const scarablist = {
     "engName": "Rusted Legion Scarab",
     "description": "エリアにリージョンエンカウンターが追加される。",
     "enDescription": "Area contains an additional Legion Encounter",
+    "attribute": "",
     "chaosValue": "0",
     "regex": "びたリ",
     "enRegex": "ted L"
@@ -795,6 +1041,7 @@ const scarablist = {
     "engName": "Polished Legion Scarab",
     "description": "エリアにリージョンエンカウンターが追加される。\r\n各リージョンにウォーホードが追加される。",
     "enDescription": "Area contains an additional Legion Encounter\r\nEach Legion contains a War Hoard",
+    "attribute": "",
     "chaosValue": "0",
     "regex": "るリ",
     "enRegex": "hed L"
@@ -803,6 +1050,7 @@ const scarablist = {
     "engName": "Gilded Legion Scarab",
     "description": "エリアにリージョンエンカウンターが追加される。\r\n各リージョンにウォーホードが追加される。\r\n各リージョンは将軍を伴う。",
     "enDescription": "Area contains an additional Legion Encounter\r\nEach Legion contains a War Hoard\r\nEach Legion is accompanied by a General",
+    "attribute": "",
     "chaosValue": "0",
     "regex": "色のリ",
     "enRegex": "ded L"
@@ -811,6 +1059,7 @@ const scarablist = {
     "engName": "Winged Legion Scarab",
     "description": "エリアにリージョンエンカウンターが2つ追加される。\r\n各リージョンにウォーホードが追加される。\r\n各リージョンは将軍を伴う。",
     "enDescription": "Area contains 2 additional Legion Encounters\r\nEach Legion contains a War Hoard\r\nEach Legion is accompanied by a General",
+    "attribute": "",
     "chaosValue": "0",
     "regex": "えたリ",
     "enRegex": "ged L"
@@ -819,7 +1068,12 @@ const scarablist = {
     "engName": "Legion Scarab",
     "description": "エリアにリージョンエンカウンターが追加される",
     "enDescription": "Area contains an additional Legion Encounter",
+<<<<<<< Updated upstream
     "chaosValue": "0.3943",
+=======
+    "attribute": "",
+    "chaosValue": "0.5165",
+>>>>>>> Stashed changes
     "regex": "にリ.*追",
     "enRegex": "arr"
   },
@@ -827,7 +1081,12 @@ const scarablist = {
     "engName": "Legion Scarab of Officers",
     "description": "エリアのリージョンファクションには下士官が追加で5体出現する",
     "enDescription": "Legion Factions in Area have 5 additional Sergeants",
+<<<<<<< Updated upstream
     "chaosValue": "0.6133",
+=======
+    "attribute": "",
+    "chaosValue": "0.6453",
+>>>>>>> Stashed changes
     "regex": "将校",
     "enRegex": "gea"
   },
@@ -835,7 +1094,12 @@ const scarablist = {
     "engName": "Legion Scarab of Treasures",
     "description": "エリアのリージョンチェストは破壊されて静止状態から抜け出した時に20%の確率で\nそれが解放したリージョンモンスターにその報酬を分配する\n報酬を獲得したリージョンモンスターは難易度が増加する",
     "enDescription": "Legion Chests in Area have a 20% chance to spread their Rewards\n to Legion Monsters they release from stasis when they are broken out\nLegion Monsters that have gained Rewards have increased Difficulty",
+<<<<<<< Updated upstream
     "chaosValue": "0.6616",
+=======
+    "attribute": "",
+    "chaosValue": "0.7094",
+>>>>>>> Stashed changes
     "regex": "宝のリ",
     "enRegex": "hoa"
   },
@@ -843,6 +1107,7 @@ const scarablist = {
     "engName": "Legion Scarab of The Sekhema",
     "description": "エリアのリージョンエンカウンターには常にマラケスファクションが含まれる",
     "enDescription": "Legion Encounters in Area always contain the Maraketh Faction",
+    "attribute": "",
     "chaosValue": "0",
     "regex": "セケ",
     "enRegex": "Sek"
@@ -851,7 +1116,12 @@ const scarablist = {
     "engName": "Legion Scarab of Eternal Conflict",
     "description": "エリアのリージョンモンスターは静止状態から複数回抜け出すことができる\nリージョンモンスターは解放されるたびに難易度および報酬が増加する",
     "enDescription": "Legion Monsters in Area can be broken out of Stasis multiple times\nLegion Monsters in Area gain increased Difficulty and Reward for each time they are broken out",
+<<<<<<< Updated upstream
     "chaosValue": "18.33",
+=======
+    "attribute": "",
+    "chaosValue": "17.11",
+>>>>>>> Stashed changes
     "regex": "悠久",
     "enRegex": "rni"
   },
@@ -859,6 +1129,7 @@ const scarablist = {
     "engName": "Rusted Ultimatum Scarab",
     "description": "エリアにアルティメイタムエンカウンターが追加される。",
     "enDescription": "Area contains an Ultimatum Encounter",
+    "attribute": "",
     "chaosValue": "0",
     "regex": "びたアル",
     "enRegex": "ted U"
@@ -867,6 +1138,7 @@ const scarablist = {
     "engName": "Polished Ultimatum Scarab",
     "description": "エリアにアルティメイタムエンカウンターが追加される。\r\nアルティメイタムモンスターの経験値が100％増加する。",
     "enDescription": "Area contains an Ultimatum Encounter\r\nUltimatum Monsters grant 100% increased Experience",
+    "attribute": "",
     "chaosValue": "0",
     "regex": "あるアル",
     "enRegex": "hed U"
@@ -875,6 +1147,7 @@ const scarablist = {
     "engName": "Gilded Ultimatum Scarab",
     "description": "エリアにアルティメイタムエンカウンターが追加される。\r\nアルティメイタムモンスターの経験値が100％増加する。\r\nアルティメイタムエンカウンターでは追加のラウンドを1回完了したとみなして報酬が得られる。",
     "enDescription": "Area contains an Ultimatum Encounter\r\nUltimatum Monsters grant 100% increased Experience\r\nUltimatum Encounters grant rewards as though you completed an additional Round",
+    "attribute": "",
     "chaosValue": "0",
     "regex": "色のアル",
     "enRegex": "ded U"
@@ -883,6 +1156,7 @@ const scarablist = {
     "engName": "Winged Ultimatum Scarab",
     "description": "エリアにアルティメイタムエンカウンターが追加される。\r\nアルティメイタムモンスターの経験値が100％増加する。\r\nアルティメイタムエンカウンターでは追加のラウンドを2回完了したとみなして報酬が得られる。",
     "enDescription": "Area contains an Ultimatum Encounter\r\nUltimatum Monsters grant 200% increased Experience\r\nUltimatum Encounters grant rewards as though you completed 2 additional Rounds",
+    "attribute": "",
     "chaosValue": "0",
     "regex": "えたアル",
     "enRegex": "ged U"
@@ -891,6 +1165,7 @@ const scarablist = {
     "engName": "Rusted Blight Scarab",
     "description": "エリアにブライトエンカウンターが追加される。",
     "enDescription": "Area contains a Blight Encounter",
+    "attribute": "",
     "chaosValue": "0",
     "regex": "びたブラ",
     "enRegex": "ted Bl"
@@ -899,6 +1174,7 @@ const scarablist = {
     "engName": "Polished Blight Scarab",
     "description": "エリアにブライトエンカウンターが追加される。\r\nブライトにボスが1体追加される。",
     "enDescription": "Area contains a Blight Encounter\r\nBlight Encounters contain an additional Blight Boss",
+    "attribute": "",
     "chaosValue": "0",
     "regex": "るブラ",
     "enRegex": "hed Bl"
@@ -907,6 +1183,7 @@ const scarablist = {
     "engName": "Gilded Blight Scarab",
     "description": "エリアにブライトエンカウンターが追加される。\r\nブライトにボスが1体追加される。\r\n50%の確率でブライトチェストに追加の報酬が含まれる。",
     "enDescription": "Area contains a Blight Encounter\r\nBlight Encounters contain an additional Blight Boss\r\n50% chance for Blight Chests to contain an additional Reward",
+    "attribute": "",
     "chaosValue": "0",
     "regex": "色のブラ",
     "enRegex": "ded Bl"
@@ -915,6 +1192,7 @@ const scarablist = {
     "engName": "Winged Blight Scarab",
     "description": "エリアにブライトエンカウンターが追加される。\r\nブライトにボスが1体追加される。\r\n50%の確率でブライトチェストに追加の報酬が含まれる。\r\nブライトのレーンに報酬チェストが追加される。",
     "enDescription": "Area contains a Blight Encounter\r\nBlight Encounters contain an additional Blight Boss\r\n50% chance for Blight Chests to contain an additional Reward\r\nLanes of Blight Encounters in Areas have an additional Reward Chest",
+    "attribute": "",
     "chaosValue": "0",
     "regex": "えたブラ",
     "enRegex": "ged Bl"
@@ -923,6 +1201,7 @@ const scarablist = {
     "engName": "Rusted Abyss Scarab",
     "description": "エリアにアビスが追加される。",
     "enDescription": "Area contains an additional Abyss",
+    "attribute": "",
     "chaosValue": "0",
     "regex": "びたアビ",
     "enRegex": "ted Ab"
@@ -931,6 +1210,7 @@ const scarablist = {
     "engName": "Polished Abyss Scarab",
     "description": "エリアにアビスが追加される。\r\nエリア内のアビスから出現するモンスターの量が50%増加する。",
     "enDescription": "Area contains an additional Abyss\r\nAbysses in Area spawn 50% increased Monsters",
+    "attribute": "",
     "chaosValue": "0",
     "regex": "るアビ",
     "enRegex": "hed Ab"
@@ -939,6 +1219,7 @@ const scarablist = {
     "engName": "Gilded Abyss Scarab",
     "description": "エリアにアビスが追加される。\r\nエリア内のアビスから出現するモンスターの量は50%増加する。\r\nエリア内のアビスの深淵に繋がらないアビスはスティギアンスパイアに繋がる。",
     "enDescription": "Area contains an additional Abyss\r\nAbysses in Area spawn 50% increased Monsters\r\nAbysses in Area that do not lead to an Abyssal Depths lead to a Stygian Spire",
+    "attribute": "",
     "chaosValue": "0",
     "regex": "色のアビ",
     "enRegex": "ded Ab"
@@ -947,6 +1228,7 @@ const scarablist = {
     "engName": "Winged Abyss Scarab",
     "description": "エリアにアビスが2個追加される。\r\nエリア内のアビスから出現するモンスターの量は50%増加する。\r\nエリア内のアビスの深淵に繋がらないアビスはスティギアンスパイアに繋がる。",
     "enDescription": "Area contains 2 additional Abysses\r\nAbysses in Area spawn 50% increased Monsters\r\nAbysses in Area that do not lead to an Abyssal Depths lead to a Stygian Spire",
+    "attribute": "",
     "chaosValue": "0",
     "regex": "えたアビ",
     "enRegex": "ged Ab"
@@ -955,7 +1237,12 @@ const scarablist = {
     "engName": "Abyss Scarab",
     "description": "エリアにアビスが追加される",
     "enDescription": "Area contains an additional Abyss",
+<<<<<<< Updated upstream
     "chaosValue": "0.4631",
+=======
+    "attribute": "",
+    "chaosValue": "0.4551",
+>>>>>>> Stashed changes
     "regex": "アにアビ.*追",
     "enRegex": "uls"
   },
@@ -963,7 +1250,12 @@ const scarablist = {
     "engName": "Abyss Scarab of Multitudes",
     "description": "エリアのアビスがスポーンするモンスターの数が50%増加する",
     "enDescription": "Abysses in Area spawn 50% increased Monsters",
+<<<<<<< Updated upstream
     "chaosValue": "0.3732",
+=======
+    "attribute": "",
+    "chaosValue": "0.4412",
+>>>>>>> Stashed changes
     "regex": "多数",
     "enRegex": "cea"
   },
@@ -971,7 +1263,12 @@ const scarablist = {
     "engName": "Abyss Scarab of Edifice",
     "description": "アビスの深淵に繋がらないアビスはスティギアンスパイアに繋がる\nアビスの深淵に繋がらない、またはアビスの宝箱をスポーンさせないエリアのアビスの穴は小型スティギアンスパイアをスポーンさせる",
     "enDescription": "Abysses in Area that do not lead to an Abyssal Depths lead to a Stygian Spire\nAbyss pits in Area that do not lead to an Abyssal Depths or spawn an Abyssal Trove will spawn Minor Stygian Spires",
+<<<<<<< Updated upstream
     "chaosValue": "0.3566",
+=======
+    "attribute": "",
+    "chaosValue": "0.4156",
+>>>>>>> Stashed changes
     "regex": "殿堂",
     "enRegex": "gha"
   },
@@ -979,7 +1276,12 @@ const scarablist = {
     "engName": "Abyss Scarab of Descending",
     "description": "エリアにアビスの深淵が出現する",
     "enDescription": "Area contains an Abyssal Depths",
+<<<<<<< Updated upstream
     "chaosValue": "0.4727",
+=======
+    "attribute": "",
+    "chaosValue": "0.4802",
+>>>>>>> Stashed changes
     "regex": "降下",
     "enRegex": "desc"
   },
@@ -987,7 +1289,12 @@ const scarablist = {
     "engName": "Abyss Scarab of Profound Depth",
     "description": "エリアのアビスのモンスターはそのアビスが既に開いた穴の数ごとに難易度と報酬が増加する",
     "enDescription": "Monsters from Abysses in Areas have increased Difficulty and Reward for\neach prior Pit in that Abyss",
+<<<<<<< Updated upstream
     "chaosValue": "1.22",
+=======
+    "attribute": "",
+    "chaosValue": "1.31",
+>>>>>>> Stashed changes
     "regex": "深き",
     "enRegex": "g,"
   },
@@ -995,7 +1302,12 @@ const scarablist = {
     "engName": "Anarchy Scarab",
     "description": "エリアにローグエグザイルが5体追加される",
     "enDescription": "Area contains 5 additional Rogue Exiles",
+<<<<<<< Updated upstream
     "chaosValue": "0.3574",
+=======
+    "attribute": "",
+    "chaosValue": "0.3809",
+>>>>>>> Stashed changes
     "regex": "にロ",
     "enRegex": "it'"
   },
@@ -1003,7 +1315,12 @@ const scarablist = {
     "engName": "Anarchy Scarab of Gigantification",
     "description": "エリアのはぐれローグエグザイルは30%の確率でローグジャイアントに置き換わる",
     "enDescription": "Wild Rogue Exiles in Area have a 30% chance to be replaced with a Rogue Giant",
+<<<<<<< Updated upstream
     "chaosValue": "0.3548",
+=======
+    "attribute": "",
+    "chaosValue": "0.3584",
+>>>>>>> Stashed changes
     "regex": "巨大",
     "enRegex": "wt"
   },
@@ -1011,7 +1328,12 @@ const scarablist = {
     "engName": "Anarchy Scarab of Partnership",
     "description": "エリアのはぐれローグエグザイルは50%の確率でペアで出現する",
     "enDescription": "Wild Rogue Exiles in Area have a 50% chance to appear in pairs",
+<<<<<<< Updated upstream
     "chaosValue": "0.3477",
+=======
+    "attribute": "",
+    "chaosValue": "0.3592",
+>>>>>>> Stashed changes
     "regex": "協力",
     "enRegex": "tn"
   },
@@ -1019,7 +1341,12 @@ const scarablist = {
     "engName": "Anarchy Scarab of the Exceptional",
     "description": "エリアに卓越したローグエグザイルが追加で1体出現する",
     "enDescription": "Area contains an additional Exceptional Rogue Exile",
+<<<<<<< Updated upstream
     "chaosValue": "0.3485",
+=======
+    "attribute": "",
+    "chaosValue": "0.4328",
+>>>>>>> Stashed changes
     "regex": "越のア",
     "enRegex": "xce"
   },
@@ -1027,7 +1354,12 @@ const scarablist = {
     "engName": "Essence Scarab",
     "description": "エリアにエッセンスに囚われたモンスターが追加で3体出現する",
     "enDescription": "Area contains 3 additional Imprisoned Monsters",
+<<<<<<< Updated upstream
     "chaosValue": "0.4174",
+=======
+    "attribute": "",
+    "chaosValue": "0.4252",
+>>>>>>> Stashed changes
     "regex": "エッ.*で",
     "enRegex": "saf"
   },
@@ -1035,7 +1367,12 @@ const scarablist = {
     "engName": "Essence Scarab of Ascent",
     "description": "エリアで見つかるエッセンスは1ティア高くなる",
     "enDescription": "Essences found in Area are a tier higher",
+<<<<<<< Updated upstream
     "chaosValue": "0.7082",
+=======
+    "attribute": "",
+    "chaosValue": "0.6922",
+>>>>>>> Stashed changes
     "regex": "向上",
     "enRegex": "cet"
   },
@@ -1043,7 +1380,12 @@ const scarablist = {
     "engName": "Essence Scarab of Stability",
     "description": "エリアでのエッセンスのコラプト化は\nエッセンスをアップグレードまたは変換のみが結果となる",
     "enDescription": "Corrupting an Essence in Area can only result in\nupgrading or transforming Essences",
+<<<<<<< Updated upstream
     "chaosValue": "0.3801",
+=======
+    "attribute": "",
+    "chaosValue": "0.3881",
+>>>>>>> Stashed changes
     "regex": "定のエ",
     "enRegex": "ool"
   },
@@ -1051,7 +1393,12 @@ const scarablist = {
     "engName": "Essence Scarab of Calcification",
     "description": "エリアに始めから生息しているすべてのレアモンスターはエッセンスに囚われている",
     "enDescription": "Rare monsters that are natural inhabitants of the Area are imprisoned by Essences",
+<<<<<<< Updated upstream
     "chaosValue": "45.55",
+=======
+    "attribute": "",
+    "chaosValue": "39.97",
+>>>>>>> Stashed changes
     "regex": "硬化",
     "enRegex": "lc"
   },
@@ -1059,7 +1406,12 @@ const scarablist = {
     "engName": "Essence Scarab of Adaptation",
     "description": "エリア内で解き放たれた囚われたモンスターはエリア内の他の囚われたモンスターにランダムなエッセンスモッドを一つ付与する\nエリアのエッセンスに囚われたモンスターはエッセンスモッドごとに難易度と報酬が増加する",
     "enDescription": "Imprisoned Monsters released in Areas grant a random Essence Modifier to another Imprisoned Monster in the Area\nImprisoned Monsters in Areas have increased Difficulty and Reward for\neach Essence Modifier",
+<<<<<<< Updated upstream
     "chaosValue": "14.13",
+=======
+    "attribute": "",
+    "chaosValue": "13.69",
+>>>>>>> Stashed changes
     "regex": "適応",
     "enRegex": "tti"
   },
@@ -1067,7 +1419,12 @@ const scarablist = {
     "engName": "Domination Scarab",
     "description": "エリアにシュラインが3個追加される",
     "enDescription": "Area contains 3 additional Shrines",
+<<<<<<< Updated upstream
     "chaosValue": "0.6458",
+=======
+    "attribute": "",
+    "chaosValue": "0.6756",
+>>>>>>> Stashed changes
     "regex": "^ドミ",
     "enRegex": "sim"
   },
@@ -1075,7 +1432,12 @@ const scarablist = {
     "engName": "Domination Scarab of Apparitions",
     "description": "エリアに幻影のシュラインが追加で2個出現する",
     "enDescription": "Area contains 2 additional Apparition Shrines",
+<<<<<<< Updated upstream
     "chaosValue": "0.3631",
+=======
+    "attribute": "",
+    "chaosValue": "0.3627",
+>>>>>>> Stashed changes
     "regex": "影のド",
     "enRegex": "adn"
   },
@@ -1083,7 +1445,12 @@ const scarablist = {
     "engName": "Domination Scarab of Evolution",
     "description": "エリアに進化のシュラインが追加で1個出現する",
     "enDescription": "Area contains an additional Evolving Shrine",
+<<<<<<< Updated upstream
     "chaosValue": "0.3871",
+=======
+    "attribute": "",
+    "chaosValue": "0.3864",
+>>>>>>> Stashed changes
     "regex": "化のド",
     "enRegex": "rif"
   },
@@ -1091,7 +1458,12 @@ const scarablist = {
     "engName": "Domination Scarab of Terrors",
     "description": "エリアのシュラインは追加のアトラスボスに守られている\n最終ボスに対するモッドはこれらアトラスボスにも適用される",
     "enDescription": "Shrines in Area are guarded by an Atlas Boss\nModifiers to the Final Map Boss also apply to these Atlas Bosses",
+<<<<<<< Updated upstream
     "chaosValue": "70.46",
+=======
+    "attribute": "",
+    "chaosValue": "71.08",
+>>>>>>> Stashed changes
     "regex": "恐怖",
     "enRegex": "tev"
   },
@@ -1099,7 +1471,12 @@ const scarablist = {
     "engName": "Ritual Scarab of Selectiveness",
     "description": "エリアのリチュアルの祭壇での恩寵のリロールは最初の2回はコストが無くなる\nエリアのリチュアルの祭壇での恩寵のリロールを追加で2回行える",
     "enDescription": "Rerolling Favours at Ritual Altars in Area has no cost the first 2 times\nRitual Altars in Area allow rerolling Favours 2 additional times",
+<<<<<<< Updated upstream
     "chaosValue": "0.5543",
+=======
+    "attribute": "",
+    "chaosValue": "0.617",
+>>>>>>> Stashed changes
     "regex": "選択",
     "enRegex": "pic"
   },
@@ -1107,7 +1484,12 @@ const scarablist = {
     "engName": "Ritual Scarab of Wisps",
     "description": "エリアのリチュアルの祭壇は原生林のウィスプをスポーンする\n原生林のウィスプは周囲のプレイヤーに獲得トリビュート100%増加を付与する",
     "enDescription": "Ritual Altars in Area spawn a Wildwood Wisp\nWildwood Wisps grant 100% increased Tribute Gained to nearby Players",
+<<<<<<< Updated upstream
     "chaosValue": "0.8257",
+=======
+    "attribute": "",
+    "chaosValue": "0.4759",
+>>>>>>> Stashed changes
     "regex": "プのリ",
     "enRegex": "rus"
   },
@@ -1115,7 +1497,12 @@ const scarablist = {
     "engName": "Ritual Scarab of Abundance",
     "description": "エリアのリチュアルが与える恩寵の数が100%増加する",
     "enDescription": "Rituals in Area offer 100% increased Favours",
+<<<<<<< Updated upstream
     "chaosValue": "5.7",
+=======
+    "attribute": "",
+    "chaosValue": "6.2",
+>>>>>>> Stashed changes
     "regex": "富なリ",
     "enRegex": "abu"
   },
@@ -1123,7 +1510,12 @@ const scarablist = {
     "engName": "Ritual Scarab of Corpses",
     "description": "エリアのリチュアルにレアのアイテム化された死体のモンスターが追加で1体出現する",
     "enDescription": "Rituals in Area contain an additional Rare Itemised Corpse Monster",
+<<<<<<< Updated upstream
     "chaosValue": "0.7183",
+=======
+    "attribute": "",
+    "chaosValue": "0.5729",
+>>>>>>> Stashed changes
     "regex": "体のリ",
     "enRegex": "pup"
   },
@@ -1131,7 +1523,12 @@ const scarablist = {
     "engName": "Harvest Scarab",
     "description": "エリアに聖なる木立が出現する",
     "enDescription": "Area contains the Sacred Grove",
+<<<<<<< Updated upstream
     "chaosValue": "0.4154",
+=======
+    "attribute": "",
+    "chaosValue": "0.3834",
+>>>>>>> Stashed changes
     "regex": "木.*が出",
     "enRegex": "val"
   },
@@ -1139,7 +1536,12 @@ const scarablist = {
     "engName": "Harvest Scarab of Doubling",
     "description": "エリアのハーベストモンスターがドロップするライフフォースは複製される\nエリアのハーベストモンスターのライフが100%上昇する",
     "enDescription": "Lifeforce dropped by Harvest Monsters in Area is duplicated\nHarvest Monsters in Area have 100% more Life",
+<<<<<<< Updated upstream
     "chaosValue": "2.1",
+=======
+    "attribute": "",
+    "chaosValue": "2.15",
+>>>>>>> Stashed changes
     "regex": "倍増",
     "enRegex": "aso"
   },
@@ -1147,7 +1549,12 @@ const scarablist = {
     "engName": "Harvest Scarab of Cornucopia",
     "description": "エリアに聖なる木立が含まれる場合に可能であれば各タイプのティア4のシードが最大で追加で1個出現する",
     "enDescription": "If Area contains the Sacred Grove, it will contain up to 1 additional Tier 4 seed of each type, if possible",
+<<<<<<< Updated upstream
     "chaosValue": "95.53",
+=======
+    "attribute": "",
+    "chaosValue": "91.96",
+>>>>>>> Stashed changes
     "regex": "豊作",
     "enRegex": "rnu"
   },
@@ -1155,7 +1562,12 @@ const scarablist = {
     "engName": "Incursion Scarab",
     "description": "エリアにアルヴァが出現する",
     "enDescription": "Area contains Alva",
+<<<<<<< Updated upstream
     "chaosValue": "0.3739",
+=======
+    "attribute": "",
+    "chaosValue": "0.3787",
+>>>>>>> Stashed changes
     "regex": "ヴァ",
     "enRegex": "aa"
   },
@@ -1163,7 +1575,12 @@ const scarablist = {
     "engName": "Incursion Scarab of Invasion",
     "description": "エリアにインカージョンモンスターパックが追加で12-16個出現する",
     "enDescription": "Area contains 12 to 16 additional packs of Incursion Monsters",
+<<<<<<< Updated upstream
     "chaosValue": "0.3558",
+=======
+    "attribute": "",
+    "chaosValue": "0.3698",
+>>>>>>> Stashed changes
     "regex": "^侵入",
     "enRegex": "ed,"
   },
@@ -1171,7 +1588,12 @@ const scarablist = {
     "engName": "Incursion Scarab of Champions",
     "description": "エリアでのインカージョンは35%の確率ですべてのモンスターが最低でもマジックとなる\nエリアのインカージョンのパックサイズが15%増加する",
     "enDescription": "Incursions in Area have a 35% chance for all Monsters to be at least Magic\nIncursions in Area have 15% increased Pack Size",
+<<<<<<< Updated upstream
     "chaosValue": "0.436",
+=======
+    "attribute": "",
+    "chaosValue": "0.4078",
+>>>>>>> Stashed changes
     "regex": "王者",
     "enRegex": "tz"
   },
@@ -1179,7 +1601,12 @@ const scarablist = {
     "engName": "Incursion Scarab of Timelines",
     "description": "エリアで倒した最後のアーキテクトはアイテム化された寺院をドロップする\nエリアでドロップしたアイテム化した寺院は現在の寺院のレイアウトに基づいて生成されるが、部屋のティアはランダムとなる",
     "enDescription": "Final Architect slain in Area will drop an Itemised Temple\n Itemised Temples dropped in Area are generated based on current Temple layout, but with randomised room tiers",
+<<<<<<< Updated upstream
     "chaosValue": "7.24",
+=======
+    "attribute": "",
+    "chaosValue": "5.5",
+>>>>>>> Stashed changes
     "regex": "界線",
     "enRegex": "h,"
   },
@@ -1187,7 +1614,12 @@ const scarablist = {
     "engName": "Betrayal Scarab",
     "description": "エリアにジュンが出現する",
     "enDescription": "Area contains Jun",
+<<<<<<< Updated upstream
     "chaosValue": "0.3635",
+=======
+    "attribute": "",
+    "chaosValue": "0.3587",
+>>>>>>> Stashed changes
     "regex": "にジ",
     "enRegex": "pay"
   },
@@ -1195,7 +1627,12 @@ const scarablist = {
     "engName": "Betrayal Scarab of the Allflame",
     "description": "エリアのオールフレイムの残り火に置き換えられるモンスターパックの数が75%増加する",
     "enDescription": "75% Increased number of Monster Packs Substituted by Allflame Embers in Area",
+<<<<<<< Updated upstream
     "chaosValue": "0.3579",
+=======
+    "attribute": "",
+    "chaosValue": "0.3677",
+>>>>>>> Stashed changes
     "regex": "ムのビ",
     "enRegex": "fear"
   },
@@ -1203,7 +1640,12 @@ const scarablist = {
     "engName": "Betrayal Scarab of Reinforcements",
     "description": "エリアのイモータルシンジケートメンバーが増援を伴う確率が50%増加する",
     "enDescription": "Immortal Syndicate Members in Area have 50% increased chance to be accompanied by reinforcements",
+<<<<<<< Updated upstream
     "chaosValue": "0.7682",
+=======
+    "attribute": "",
+    "chaosValue": "0.6911",
+>>>>>>> Stashed changes
     "regex": "援のビ",
     "enRegex": "mov"
   },
@@ -1211,7 +1653,12 @@ const scarablist = {
     "engName": "Betrayal Scarab of Unbreaking",
     "description": "エリアで尋問されたイモータルシンジケートの対象は50%の確率で\n尋問が完了してもランクを失わない",
     "enDescription": "Interrogated Immortal Syndicate targets in Area have a 50% chance to\nnot lose Rank upon completing Interrogation",
+<<<<<<< Updated upstream
     "chaosValue": "1.62",
+=======
+    "attribute": "",
+    "chaosValue": "1.68",
+>>>>>>> Stashed changes
     "regex": "階級",
     "enRegex": "nb"
   },
@@ -1219,7 +1666,12 @@ const scarablist = {
     "engName": "Beyond Scarab",
     "description": "エリアで敵同士が近くにいる状態で倒すとこの世界の外からモンスターを呼び寄せる",
     "enDescription": "Slaying enemies close together in Area can attract monsters from Beyond this realm",
+<<<<<<< Updated upstream
     "chaosValue": "0.3707",
+=======
+    "attribute": "",
+    "chaosValue": "0.3891",
+>>>>>>> Stashed changes
     "regex": "^ビヨ",
     "enRegex": "wal"
   },
@@ -1227,6 +1679,7 @@ const scarablist = {
     "engName": "Beyond Scarab of Corruption",
     "description": "エリアのビヨンドデーモンがドロップするアイテムはコラプト状態となる",
     "enDescription": "Items dropped by Beyond Demons in Area are Corrupted",
+    "attribute": "",
     "chaosValue": "0",
     "regex": "れのビ",
     "enRegex": "ption"
@@ -1235,7 +1688,12 @@ const scarablist = {
     "engName": "Beyond Scarab of Haemophilia",
     "description": "エリアのビヨンドポータルのマージ半径が50%増加する\nエリアでビヨンドレアモンスターを倒したキャラクターは30%の確率でそのモッドを20秒間獲得する",
     "enDescription": "Beyond Portals in Area have 50% increased Merging Radius\nCharacters that Kill Beyond Rare Monsters in Area have a 30% chance to gain their Modifiers for 20 seconds",
+<<<<<<< Updated upstream
     "chaosValue": "0.3512",
+=======
+    "attribute": "",
+    "chaosValue": "0.3653",
+>>>>>>> Stashed changes
     "regex": "血友",
     "enRegex": "beg"
   },
@@ -1243,7 +1701,12 @@ const scarablist = {
     "engName": "Beyond Scarab of Resurgence",
     "description": "エリアでスポーンしたビヨンドボスは他のファクションのビヨンドボスを伴う\nエリアのビヨンドボスがドロップする汚染されたカレンシーが20%増加する\nエリアのビヨンドポータルがユニークボスをスポーンする確率が30%増加する",
     "enDescription": "Beyond Bosses Spawned in Area are accompanied by Beyond Bosses of other Factions\nBeyond Bosses in Area drop 20% increased Tainted Currency\nBeyond Portals in Area have 30% increased chance to spawn a Unique Boss",
+<<<<<<< Updated upstream
     "chaosValue": "0.8382",
+=======
+    "attribute": "",
+    "chaosValue": "0.623",
+>>>>>>> Stashed changes
     "regex": "復活",
     "enRegex": "ung"
   },
@@ -1251,7 +1714,12 @@ const scarablist = {
     "engName": "Beyond Scarab of the Invasion",
     "description": "エリアで倒したレアおよびユニークモンスターはビヨンドポータルを追加で8から12個生成する",
     "enDescription": "Rare and Unique Monsters slain in Area create 8 to 12 additional Beyond Portals",
+<<<<<<< Updated upstream
     "chaosValue": "0.6445",
+=======
+    "attribute": "",
+    "chaosValue": "0.8607",
+>>>>>>> Stashed changes
     "regex": "侵略",
     "enRegex": "lmo"
   },
@@ -1259,7 +1727,12 @@ const scarablist = {
     "engName": "Ultimatum Scarab",
     "description": "エリアにアルティメイタムエンカウンターが出現する",
     "enDescription": "Area contains an Ultimatum Encounter",
+<<<<<<< Updated upstream
     "chaosValue": "0.351",
+=======
+    "attribute": "",
+    "chaosValue": "0.3543",
+>>>>>>> Stashed changes
     "regex": "ルテ.*出",
     "enRegex": "req"
   },
@@ -1267,7 +1740,12 @@ const scarablist = {
     "engName": "Ultimatum Scarab of Bribing",
     "description": "アルティメイタムモンスターが付与する経験値が150%増加する\nアルティメイタムエンカウンターは追加のラウンドを2回完了したと仮定して報酬を付与する",
     "enDescription": "Ultimatum Monsters grant 150% increased Experience\nUltimatum Encounters grant rewards as though you completed 2 additional Rounds",
+<<<<<<< Updated upstream
     "chaosValue": "0.4898",
+=======
+    "attribute": "",
+    "chaosValue": "0.4863",
+>>>>>>> Stashed changes
     "regex": "賄賂",
     "enRegex": "dg"
   },
@@ -1275,7 +1753,12 @@ const scarablist = {
     "engName": "Ultimatum Scarab of Dueling",
     "description": "エリアのアルティメイタムエンカウンターは可能であれば常にユニークボスに至る",
     "enDescription": "Ultimatum Encounters in Area will always lead to a Unique Boss if possible",
+<<<<<<< Updated upstream
     "chaosValue": "1.54",
+=======
+    "attribute": "",
+    "chaosValue": "1.34",
+>>>>>>> Stashed changes
     "regex": "決闘",
     "enRegex": "cto"
   },
@@ -1283,7 +1766,12 @@ const scarablist = {
     "engName": "Ultimatum Scarab of Catalysing",
     "description": "エリアのアルティメイタムエンカウンターはマップ所有者への報酬として\nカタリストのみを報酬として提示する",
     "enDescription": "Ultimatum Encounters in Area will only offer Catalysts\nas Rewards to the Map Owner",
+<<<<<<< Updated upstream
     "chaosValue": "163.6",
+=======
+    "attribute": "",
+    "chaosValue": "155.9",
+>>>>>>> Stashed changes
     "regex": "触媒",
     "enRegex": "egr"
   },
@@ -1291,7 +1779,12 @@ const scarablist = {
     "engName": "Ultimatum Scarab of Inscription",
     "description": "エリアのカタリストを報酬として提示するアルティメイタムエンカウンターは\n代わりに刻印されたアルティメイタムをマップ所有者への報酬として提示する",
     "enDescription": "Ultimatum Encounter rewards in Area offering Catalysts\nwill offer Inscribed Ultimatums to the Map Owner instead",
+<<<<<<< Updated upstream
     "chaosValue": "0.6768",
+=======
+    "attribute": "",
+    "chaosValue": "0.6127",
+>>>>>>> Stashed changes
     "regex": "印のア",
     "enRegex": "nsc"
   },
@@ -1299,7 +1792,12 @@ const scarablist = {
     "engName": "Delirium Scarab",
     "description": "エリアにデリリウムの鏡が出現する",
     "enDescription": "Area contains a Mirror of Delirium",
+<<<<<<< Updated upstream
     "chaosValue": "0.3872",
+=======
+    "attribute": "",
+    "chaosValue": "0.452",
+>>>>>>> Stashed changes
     "regex": "^デ",
     "enRegex": "uo"
   },
@@ -1307,7 +1805,12 @@ const scarablist = {
     "engName": "Delirium Scarab of Mania",
     "description": "エリアのデリリウム報酬メーターは100%早く貯まる\nエリアのデリリウムは、鏡からの距離に基づいて50%早く増加する",
     "enDescription": "Delirium Reward Meters fill 100% faster in Area\nDelirium in Area increases 50% faster with distance from the mirror",
+<<<<<<< Updated upstream
     "chaosValue": "0.86",
+=======
+    "attribute": "",
+    "chaosValue": "0.7358",
+>>>>>>> Stashed changes
     "regex": "躁病",
     "enRegex": "y'"
   },
@@ -1315,7 +1818,12 @@ const scarablist = {
     "engName": "Delirium Scarab of Paranoia",
     "description": "エリアのデリリウムエンカウンターは報酬タイプを追加で2個生成する",
     "enDescription": "Delirium Encounters in Area generate 2 additional Reward types",
+<<<<<<< Updated upstream
     "chaosValue": "13.83",
+=======
+    "attribute": "",
+    "chaosValue": "13.42",
+>>>>>>> Stashed changes
     "regex": "偏執",
     "enRegex": "noi"
   },
@@ -1323,7 +1831,12 @@ const scarablist = {
     "engName": "Delirium Scarab of Neuroses",
     "description": "エリアのデリリウムエンカウンターはすべてのユニークデリリウムボスが出現する\nエリアのデリリウム報酬タイプはユニークデリリウムボスを1体倒した時にカウントが+1される\nティア11+マップにのみ使用できる",
     "enDescription": "Delirium Encounters in Area contain all Unique Delirium Bosses\nDelirium Reward Types in Area gain +1 to count on defeating a Unique Delirium Boss\nCan only be used with Tier 11+ Maps",
+<<<<<<< Updated upstream
     "chaosValue": "0.751",
+=======
+    "attribute": "",
+    "chaosValue": "0.7316",
+>>>>>>> Stashed changes
     "regex": "神経",
     "enRegex": "eu"
   },
@@ -1331,7 +1844,12 @@ const scarablist = {
     "engName": "Delirium Scarab of Delusions",
     "description": "エリアで見つかるマップはデリリウムの層を持つ",
     "enDescription": "Maps found in Area have layers of Delirium",
+<<<<<<< Updated upstream
     "chaosValue": "0.4197",
+=======
+    "attribute": "",
+    "chaosValue": "0.4255",
+>>>>>>> Stashed changes
     "regex": "妄想",
     "enRegex": "lk"
   },
@@ -1339,7 +1857,12 @@ const scarablist = {
     "engName": "Blight Scarab",
     "description": "エリアにブライトエンカウンターが出現する",
     "enDescription": "Area contains a Blight Encounter",
+<<<<<<< Updated upstream
     "chaosValue": "0.3675",
+=======
+    "attribute": "",
+    "chaosValue": "0.394",
+>>>>>>> Stashed changes
     "regex": "にブラ.*出",
     "enRegex": "ndr"
   },
@@ -1347,6 +1870,7 @@ const scarablist = {
     "engName": "Blight Scarab of Bounty",
     "description": "エリアのブライトチェストは20%の確率で再度開けられる",
     "enDescription": "Blight Chests in Area have a 20% chance to be openable again",
+    "attribute": "",
     "chaosValue": "0",
     "regex": "報奨",
     "enRegex": "Bou"
@@ -1355,7 +1879,12 @@ const scarablist = {
     "engName": "Blight Scarab of the Blightheart",
     "description": "エリアのブライトエンカウンターはブライトチェストが1個出現する\nエリアのブライトエンカウンターは敵のウェーブを追加でスポーンする\nエリアのブライトチェストはブライトモンスターを倒すごとにより大きく成長し、高報酬となる",
     "enDescription": "Blight Encounters in Area have one Blighted Chest\nBlight Encounters in Area spawn additional waves of Enemies\nBlighted Chests in Area grow larger and more\nrewarding the more Blighted Enemies are slain",
+<<<<<<< Updated upstream
     "chaosValue": "0.5988",
+=======
+    "attribute": "",
+    "chaosValue": "0.5333",
+>>>>>>> Stashed changes
     "regex": "トハ",
     "enRegex": "yc"
   },
@@ -1363,7 +1892,12 @@ const scarablist = {
     "engName": "Blight Scarab of Blooming",
     "description": "エリアのブライトエンカウンターはユニークボスが最大追加で3体出現する\nブライトエンカウンターのユニークの敵はライフが100%増加する\nエリアで見つかるティア14+ブライトマップは代わりにブライト荒廃マップとしてドロップする",
     "enDescription": "Blight Encounters in Area have up to 3 additional Unique Bosses\nUnique enemies in Blight Encounters have 100% increased life\nTier 14+ Blighted Maps found in Area drop as Blight-Ravaged Maps instead",
+<<<<<<< Updated upstream
     "chaosValue": "5.61",
+=======
+    "attribute": "",
+    "chaosValue": "5.79",
+>>>>>>> Stashed changes
     "regex": "開花",
     "enRegex": "t-"
   },
@@ -1371,7 +1905,12 @@ const scarablist = {
     "engName": "Blight Scarab of Invigoration",
     "description": "エリアの各エンパワーリングタワーは範囲内のブライトモンスターに難易度と報酬の増加を付与する",
     "enDescription": "Each Empowering Tower in Areas grants Blighted Monsters in\nrange increased Difficulty and Reward",
+<<<<<<< Updated upstream
     "chaosValue": "2.07",
+=======
+    "attribute": "",
+    "chaosValue": "2.25",
+>>>>>>> Stashed changes
     "regex": "活性",
     "enRegex": "pol"
   },
@@ -1379,7 +1918,12 @@ const scarablist = {
     "engName": "Kalguuran Scarab",
     "description": "エリアに鉱床が追加で2個出現する",
     "enDescription": "Area contains 2 additional Ore Deposits",
+<<<<<<< Updated upstream
     "chaosValue": "1.88",
+=======
+    "attribute": "",
+    "chaosValue": "1.96",
+>>>>>>> Stashed changes
     "regex": "^カル",
     "enRegex": "vei"
   },
@@ -1387,7 +1931,12 @@ const scarablist = {
     "engName": "Kalguuran Scarab of Guarded Riches",
     "description": "エリアの鉱床を守るモンスターは最低でもマジックとなる",
     "enDescription": "Monsters guarding Ore Deposits in Area are at least Magic",
+<<<<<<< Updated upstream
     "chaosValue": "0.4816",
+=======
+    "attribute": "",
+    "chaosValue": "0.4346",
+>>>>>>> Stashed changes
     "regex": "た富",
     "enRegex": "gg"
   },
@@ -1395,7 +1944,12 @@ const scarablist = {
     "engName": "Kalguuran Scarab of Refinement",
     "description": "エリアの鉱床は、鉱石をマークする代わり製錬された延べ棒を与える",
     "enDescription": "Ore Deposits in Area grant Smelted Bars instead of Marking Ore",
+<<<<<<< Updated upstream
     "chaosValue": "29.33",
+=======
+    "attribute": "",
+    "chaosValue": "27.82",
+>>>>>>> Stashed changes
     "regex": "精錬",
     "enRegex": "ne,"
   },
@@ -1403,7 +1957,12 @@ const scarablist = {
     "engName": "Kalguuran Scarab of Enriching",
     "description": "鉱床を守っているモンスターの難易度および報酬が増加し\nエリアで完了した鉱石エンカウンターの数ごとに\n鉱床の鉱石量が15%増加する",
     "enDescription": "Monsters guarding Ore Deposits have increased Difficulty and\nReward and Ore Deposits contain 15% increased Ore\nfor each Ore Deposit completed in Area ",
+<<<<<<< Updated upstream
     "chaosValue": "0.6956",
+=======
+    "attribute": "",
+    "chaosValue": "0.7045",
+>>>>>>> Stashed changes
     "regex": "富裕",
     "enRegex": "nri"
   },
@@ -1411,7 +1970,12 @@ const scarablist = {
     "engName": "Scarab of Monstrous Lineage",
     "description": "マジックパックサイズが40%増加する",
     "enDescription": "40% increased Magic Pack Size",
+<<<<<<< Updated upstream
     "chaosValue": "1.1",
+=======
+    "attribute": "",
+    "chaosValue": "1.13",
+>>>>>>> Stashed changes
     "regex": "怪物",
     "enRegex": "eag"
   },
@@ -1419,7 +1983,12 @@ const scarablist = {
     "engName": "Scarab of Adversaries",
     "description": "エリアにミラー状態のレアモンスターを伴うパックが追加で4個出現する",
     "enDescription": "Area contains 4 additional Packs with Mirrored Rare Monsters",
+<<<<<<< Updated upstream
     "chaosValue": "0.5348",
+=======
+    "attribute": "",
+    "chaosValue": "0.4338",
+>>>>>>> Stashed changes
     "regex": "敵対",
     "enRegex": "dv"
   },
@@ -1427,7 +1996,12 @@ const scarablist = {
     "engName": "Scarab of Divinity",
     "description": "エリアの追加レアモンスター最大3体はパンテオンに触れられている\nパンテオンに触れられたモンスターによってスポーンした幻影は与えるダメージが100%増加する",
     "enDescription": "Up to 3 additional Rare Monsters in Area will be Pantheon-Touched\nApparitions spawned by Pantheon-Touched Monsters deal 100% increased damage",
+<<<<<<< Updated upstream
     "chaosValue": "0.3615",
+=======
+    "attribute": "",
+    "chaosValue": "0.3644",
+>>>>>>> Stashed changes
     "regex": "神性",
     "enRegex": "-T"
   },
@@ -1435,6 +2009,7 @@ const scarablist = {
     "engName": "Scarab of Hunted Traitors",
     "description": "エリアに追われている裏切り者が出現する",
     "enDescription": "Area contains Hunted Traitors",
+    "attribute": "",
     "chaosValue": "0",
     "regex": "り者のス",
     "enRegex": "unf"
@@ -1443,7 +2018,12 @@ const scarablist = {
     "engName": "Scarab of Stability",
     "description": "エリアに通ずるポータルは50%の確率で使用時に消費されない",
     "enDescription": "Portals to Area have a 50% chance to not be consumed on use",
+<<<<<<< Updated upstream
     "chaosValue": "0.3864",
+=======
+    "attribute": "",
+    "chaosValue": "0.4161",
+>>>>>>> Stashed changes
     "regex": "定のス",
     "enRegex": "g!"
   },
@@ -1451,6 +2031,7 @@ const scarablist = {
     "engName": "Scarab of the Commander",
     "description": "マップ完了時にキラックミッションを追加で1個付与する",
     "enDescription": "Grants an additional Kirac Mission on Map Completion",
+    "attribute": "",
     "chaosValue": "0",
     "regex": "指揮",
     "enRegex": "omm"
@@ -1459,6 +2040,7 @@ const scarablist = {
     "engName": "Scarab of Evolution",
     "description": "エリアの10パックのモンスターパックはマジックにアップグレードされる",
     "enDescription": "10 Monster Packs in Area are upgraded to Magic",
+    "attribute": "",
     "chaosValue": "0",
     "regex": "化のス",
     "enRegex": "ution"
@@ -1467,7 +2049,12 @@ const scarablist = {
     "engName": "Scarab of Wisps",
     "description": "エリアのモンスターは一定確率で2000体の原生林のウィスプにより強化される",
     "enDescription": "Monsters in Area have a chance to be Empowered by 2000 Wildwood Wisps",
+<<<<<<< Updated upstream
     "chaosValue": "5.92",
+=======
+    "attribute": "",
+    "chaosValue": "5.5",
+>>>>>>> Stashed changes
     "regex": "プのス",
     "enRegex": "y 2"
   },
@@ -1475,7 +2062,12 @@ const scarablist = {
     "engName": "Scarab of the Sinistral",
     "description": "エリアのプレフィックスモッドの効果が100%増加する\nエリアのサフィックスモッドの効果がなくなる",
     "enDescription": "100% increased effect of Area Prefix Modifiers\nArea Suffix Modifiers have no effect",
+<<<<<<< Updated upstream
     "chaosValue": "0.8806",
+=======
+    "attribute": "",
+    "chaosValue": "0.8672",
+>>>>>>> Stashed changes
     "regex": "左側",
     "enRegex": "sini"
   },
@@ -1483,7 +2075,12 @@ const scarablist = {
     "engName": "Scarab of the Dextral",
     "description": "エリアのサフィックスモッドの効果が100%増加する\nエリアのプレフィックスモッドの効果がなくなる",
     "enDescription": "100% increased effect of Area Suffix Modifiers\nArea Prefix Modifiers have no effect",
+<<<<<<< Updated upstream
     "chaosValue": "0.8398",
+=======
+    "attribute": "",
+    "chaosValue": "0.7782",
+>>>>>>> Stashed changes
     "regex": "右側",
     "enRegex": "xt"
   },
@@ -1491,7 +2088,12 @@ const scarablist = {
     "engName": "Scarab of Radiant Storms",
     "description": "燦爛のテンペストが出現する",
     "enDescription": "Area contains a Resplendent Tempest",
+<<<<<<< Updated upstream
     "chaosValue": "0.5041",
+=======
+    "attribute": "",
+    "chaosValue": "0.6586",
+>>>>>>> Stashed changes
     "regex": "^輝く",
     "enRegex": "cac"
   },
@@ -1499,7 +2101,12 @@ const scarablist = {
     "engName": "Horned Scarab of Bloodlines",
     "description": "エリアのマジックモンスターが150%増加する\nエリアのマジックモンスターはモッドを追加で1個持つ",
     "enDescription": "Area has 150% increased Magic Monsters\nMagic Monsters in area have an additional Modifier",
+<<<<<<< Updated upstream
     "chaosValue": "518.9",
+=======
+    "attribute": "",
+    "chaosValue": "512.5",
+>>>>>>> Stashed changes
     "regex": "血統",
     "enRegex": "urv"
   },
@@ -1507,7 +2114,12 @@ const scarablist = {
     "engName": "Horned Scarab of Nemeses",
     "description": "エリアのレアモンスターはモッドを追加で2個持つ",
     "enDescription": "Rare Monsters in Area have 2 additional Modifiers",
+<<<<<<< Updated upstream
     "chaosValue": "0.3941",
+=======
+    "attribute": "",
+    "chaosValue": "0.4064",
+>>>>>>> Stashed changes
     "regex": "宿敵",
     "enRegex": "tig"
   },
@@ -1515,7 +2127,12 @@ const scarablist = {
     "engName": "Horned Scarab of Preservation",
     "description": "他のスカラベは使用時に消費されない",
     "enDescription": "Other Scarabs are not consumed on use",
+<<<<<<< Updated upstream
     "chaosValue": "259",
+=======
+    "attribute": "",
+    "chaosValue": "245.6",
+>>>>>>> Stashed changes
     "regex": "保存",
     "enRegex": "rva"
   },
@@ -1523,7 +2140,12 @@ const scarablist = {
     "engName": "Horned Scarab of Awakening",
     "description": "ティア16+のエリアにランダムなメイヴェンの招待状のボスが出現する",
     "enDescription": "Tier 16+ Areas contain the Bosses from a random Maven Invitation",
+<<<<<<< Updated upstream
     "chaosValue": "54.34",
+=======
+    "attribute": "",
+    "chaosValue": "52.3",
+>>>>>>> Stashed changes
     "regex": "覚醒",
     "enRegex": "nyt"
   },
@@ -1531,7 +2153,12 @@ const scarablist = {
     "engName": "Horned Scarab of Tradition",
     "description": "エリアのすべてのレアおよびユニークモンスターは\n報酬モッドによって変換されたアイテムをドロップする",
     "enDescription": "All Rare and Unique Monsters in Area have dropped items\ntransformed by a Reward Modifier",
+<<<<<<< Updated upstream
     "chaosValue": "2.76",
+=======
+    "attribute": "",
+    "chaosValue": "2.27",
+>>>>>>> Stashed changes
     "regex": "伝統",
     "enRegex": "ges"
   },
@@ -1539,7 +2166,12 @@ const scarablist = {
     "engName": "Horned Scarab of Glittering",
     "description": "エリアのプレイヤーのアイテムレアリティは\n倒したモンスターごとに増加し、最大400%まで増加し、時間経過で減少する。",
     "enDescription": "Players in Area gain increased Item Rarity for each Monster\nslain, up to 400%, decaying over time",
+<<<<<<< Updated upstream
     "chaosValue": "3.33",
+=======
+    "attribute": "",
+    "chaosValue": "2.99",
+>>>>>>> Stashed changes
     "regex": "輝け",
     "enRegex": "%,"
   },
@@ -1547,7 +2179,12 @@ const scarablist = {
     "engName": "Horned Scarab of Pandemonium",
     "description": "エリアのモンスターパックは15%の確率でランダムなアトラスボスに置き換わる\nマップ最終ボスに対するモッドはこれらボスにも適用される",
     "enDescription": "Monster packs in Area have a 15% chance to be replaced by a random Atlas Boss\nModifiers to the Final Map Boss also apply to these Atlas Bosses",
+<<<<<<< Updated upstream
     "chaosValue": "38.76",
+=======
+    "attribute": "",
+    "chaosValue": "36.61",
+>>>>>>> Stashed changes
     "regex": "伏魔",
     "enRegex": "pun"
   }

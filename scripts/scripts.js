@@ -1189,7 +1189,7 @@ function filterBeasts() {
       family.includes(term) || 
       effect.includes(term);
     
-    item.style.display = match ? 'flex' : 'none';
+    item.style.display = match ? '' : 'none';
   });
 }
 
@@ -1820,7 +1820,6 @@ function renderscarablist() {
       </div>
       <div class="scarab-price">${data.chaosValue}</div>
       <div class="scarab-name">${displayName}</div>
-      <div style="width: 0; padding: 0; visibility: hidden;"></div>
       <div class="scarab-effect">${displayDesc}</div>
     `;
 
@@ -1936,7 +1935,7 @@ function filterScarabs() {
       englishName.includes(term) || 
       description.includes(term);
     
-    item.style.display = match ? 'flex' : 'none';
+    item.style.display = match ? '' : 'none';
   });
 }
 
@@ -2057,6 +2056,10 @@ function rendertattoolist() {
           valueA = nameA;
           valueB = nameB;
           break;
+        case 'attribute':
+          valueA = String(dataA.attribute || '');
+          valueB = String(dataB.attribute || '');
+          break;
         case 'description':
           valueA = currentLanguage === 'ja' ? dataA.description : dataA.enDescription;
           valueB = currentLanguage === 'ja' ? dataB.description : dataB.enDescription;
@@ -2081,8 +2084,12 @@ function rendertattoolist() {
 
   Tattoos.forEach(([name, data]) => {
     const tattooItem = document.createElement('div');
-    tattooItem.className = 'scarab-item';
+    tattooItem.className = 'tattoo-item';
+    tattooItem.dataset.jaName = name;
     tattooItem.dataset.engName = data.engName;
+    tattooItem.dataset.attribute = data.attribute || '';
+    tattooItem.dataset.description = data.description || '';
+    tattooItem.dataset.enDescription = data.enDescription || '';
     
     tattooItem.addEventListener('click', function(e) {
       if (e.target.tagName !== 'INPUT') {
@@ -2102,7 +2109,7 @@ function rendertattoolist() {
       </div>
       <div class="scarab-price">${data.chaosValue}</div>
       <div class="scarab-name">${displayName}</div>
-      <div style="width: 0; padding: 0; visibility: hidden;"></div>
+      <div class="scarab-attribute ${data.attribute ? data.attribute.toLowerCase() : ''}">${data.attribute || ''}</div>
       <div class="scarab-effect">${displayDesc}</div>
     `;
 
@@ -2208,17 +2215,21 @@ function copyTattooRegex() {
 function filterTattoos() {
   const term = document.getElementById('tattooSearch').value.toLowerCase();
   
-  document.querySelectorAll('#tattoolistContainer .scarab-item').forEach(item => {
-    const japaneseName = item.querySelector('.scarab-name').textContent.toLowerCase();
-    const englishName = tattoolist[japaneseName]?.engName.toLowerCase() || '';
-    const description = item.querySelector('.scarab-effect').textContent.toLowerCase();
+  document.querySelectorAll('#tattoolistContainer .tattoo-item').forEach(item => {
+    const jaName = (item.dataset.jaName || '').toLowerCase();
+    const enName = (item.dataset.engName || '').toLowerCase();
+    const attribute = (item.dataset.attribute || '').toLowerCase();
+    const jaDesc = (item.dataset.description || '').toLowerCase();
+    const enDesc = (item.dataset.enDescription || '').toLowerCase();
     
     const match = 
-      japaneseName.includes(term) || 
-      englishName.includes(term) || 
-      description.includes(term);
+      jaName.includes(term) || 
+      enName.includes(term) || 
+      attribute.includes(term) ||
+      jaDesc.includes(term) ||
+      enDesc.includes(term);
     
-    item.style.display = match ? 'flex' : 'none';
+    item.style.display = match ? '' : 'none';
   });
 }
 
@@ -2339,6 +2350,10 @@ function renderrunegraftlist() {
           valueA = nameA;
           valueB = nameB;
           break;
+        case 'attribute':
+          valueA = String(dataA.attribute || '');
+          valueB = String(dataB.attribute || '');
+          break;
         case 'description':
           valueA = currentLanguage === 'ja' ? dataA.description : dataA.enDescription;
           valueB = currentLanguage === 'ja' ? dataB.description : dataB.enDescription;
@@ -2363,8 +2378,12 @@ function renderrunegraftlist() {
 
   Runegrafts.forEach(([name, data]) => {
     const runegraftItem = document.createElement('div');
-    runegraftItem.className = 'scarab-item';
+    runegraftItem.className = 'runegraft-item';
+    runegraftItem.dataset.jaName = name;
     runegraftItem.dataset.engName = data.engName;
+    runegraftItem.dataset.attribute = data.attribute || '';
+    runegraftItem.dataset.description = data.description || '';
+    runegraftItem.dataset.enDescription = data.enDescription || '';
     
     runegraftItem.addEventListener('click', function(e) {
       if (e.target.tagName !== 'INPUT') {
@@ -2384,7 +2403,7 @@ function renderrunegraftlist() {
       </div>
       <div class="scarab-price">${data.chaosValue}</div>
       <div class="scarab-name">${displayName}</div>
-      <div style="width: 0; padding: 0; visibility: hidden;"></div>
+      <div class="scarab-attribute ${data.attribute ? data.attribute.toLowerCase() : ''}">${data.attribute || ''}</div>
       <div class="scarab-effect">${displayDesc}</div>
     `;
 
@@ -2490,17 +2509,21 @@ function copyRunegraftRegex() {
 function filterRunegrafts() {
   const term = document.getElementById('runegraftSearch').value.toLowerCase();
   
-  document.querySelectorAll('#runegraftlistContainer .scarab-item').forEach(item => {
-    const japaneseName = item.querySelector('.scarab-name').textContent.toLowerCase();
-    const englishName = runegraftlist[japaneseName]?.engName.toLowerCase() || '';
-    const description = item.querySelector('.scarab-effect').textContent.toLowerCase();
+  document.querySelectorAll('#runegraftlistContainer .runegraft-item').forEach(item => {
+    const jaName = (item.dataset.jaName || '').toLowerCase();
+    const enName = (item.dataset.engName || '').toLowerCase();
+    const attribute = (item.dataset.attribute || '').toLowerCase();
+    const jaDesc = (item.dataset.description || '').toLowerCase();
+    const enDesc = (item.dataset.enDescription || '').toLowerCase();
     
     const match = 
-      japaneseName.includes(term) || 
-      englishName.includes(term) || 
-      description.includes(term);
+      jaName.includes(term) || 
+      enName.includes(term) || 
+      attribute.includes(term) ||
+      jaDesc.includes(term) ||
+      enDesc.includes(term);
     
-    item.style.display = match ? 'flex' : 'none';
+    item.style.display = match ? '' : 'none';
   });
 }
 

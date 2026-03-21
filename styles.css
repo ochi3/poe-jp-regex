@@ -378,7 +378,9 @@ button.btn-secondary-highlight:hover {
 
 .beast-col-select,
 .beast-item > div:nth-child(1),
-.scarab-item > div:nth-child(1) {
+.scarab-item > div:nth-child(1),
+.tattoo-item > div:nth-child(1),
+.runegraft-item > div:nth-child(1) {
     text-align: center;
     display: flex;
     align-items: center;
@@ -387,7 +389,9 @@ button.btn-secondary-highlight:hover {
 
 .beast-col-price,
 .beast-item > div:nth-child(2),
-.scarab-item > div:nth-child(2) {
+.scarab-item > div:nth-child(2),
+.tattoo-item > div:nth-child(2),
+.runegraft-item > div:nth-child(2) {
     text-align: center;
     font-weight: bold;
     color: var(--accent-primary);
@@ -398,7 +402,9 @@ button.btn-secondary-highlight:hover {
 
 .beast-col-name,
 .beast-item > div:nth-child(3),
-.scarab-item > div:nth-child(3) {
+.scarab-item > div:nth-child(3),
+.tattoo-item > div:nth-child(3),
+.runegraft-item > div:nth-child(3) {
     color: var(--accent-gold);
     font-weight: bold;
     white-space: nowrap;
@@ -407,11 +413,22 @@ button.btn-secondary-highlight:hover {
 }
 
 .beast-col-family,
-.beast-item > div:nth-child(4) {
-    color: var(--text-secondary);
+.beast-col-attribute,
+.beast-item > div:nth-child(4),
+.tattoo-item > div:nth-child(4),
+.runegraft-item > div:nth-child(4) {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.beast-col-family,
+.beast-item > div:nth-child(4) {
+    color: var(--text-secondary);
 }
 
 .beast-col-effect,
@@ -464,7 +481,7 @@ button.btn-secondary-highlight:hover {
     background: var(--bg-tertiary);
 }
 
-.scarab-item > div {
+.scarab-item > div, .tattoo-item > div, .runegraft-item > div {
     padding: 0 8px;
     overflow: hidden;
 }
@@ -483,9 +500,10 @@ button.btn-secondary-highlight:hover {
 /* ========================================
    タトゥー & ルーングラフトテーブル
    ======================================== */
-.tattoo-header, .runegraft-header {
+.tattoo-header, .tattoo-item,
+.runegraft-header, .runegraft-item {
     display: grid;
-    grid-template-columns: 60px 100px 280px 0px 1fr;
+    grid-template-columns: 60px 100px 280px 100px 1fr;
     background: var(--bg-tertiary);
     font-weight: bold;
     padding: 12px 8px;
@@ -502,6 +520,22 @@ button.btn-secondary-highlight:hover {
 .tattoo-header > div:hover, .runegraft-header > div:hover {
     background: var(--bg-input);
     border-radius: 4px;
+}
+
+.scarab-attribute.str {
+    color: var(--accent-red);
+}
+
+.scarab-attribute.dex {
+    color: var(--accent-primary);
+}
+
+.scarab-attribute.int {
+    color: var(--accent-blue);
+}
+
+.scarab-attribute.all {
+    color: var(--accent-gold);
 }
 
 /* ========================================
@@ -1271,3 +1305,6 @@ button.btn-secondary-highlight:hover {
     padding: 12px;
     font-size: 15px;
 }
+
+.tattoo-item, .runegraft-item { background: transparent; font-weight: normal; transition: background 0.2s ease; }
+.tattoo-item:hover, .runegraft-item:hover { background: var(--bg-tertiary); }
