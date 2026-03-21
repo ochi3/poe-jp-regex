@@ -81,37 +81,37 @@
                 <div class="input-group">
                     <label class="input-label">
                         数量:
-                        <input type="number" id="itemQuantityInput" oninput="updateCombinedRegex()">
+                        <input type="number" id="itemQuantityInput" oninput="updateCombinedRegex(); saveInputState()">
                     </label>
                     <label class="input-label">
                         パックサイズ:
-                        <input type="number" id="packSizeInput" oninput="updateCombinedRegex()">
+                        <input type="number" id="packSizeInput" oninput="updateCombinedRegex(); saveInputState()">
                     </label>
                     <label class="input-label">
                         レアリティ:
-                        <input type="number" id="rarityInput" oninput="updateCombinedRegex()">
+                        <input type="number" id="rarityInput" oninput="updateCombinedRegex(); saveInputState()">
                     </label>
                 </div>
 
                 <div class="input-group">
                     <label class="input-label">
                         スカラベ:
-                        <input type="number" id="scarabInput" oninput="updateCombinedRegex()">
+                        <input type="number" id="scarabInput" oninput="updateCombinedRegex(); saveInputState()">
                     </label>
                     <label class="input-label">
                         カレンシー:
-                        <input type="number" id="currencyInput" oninput="updateCombinedRegex()">
+                        <input type="number" id="currencyInput" oninput="updateCombinedRegex(); saveInputState()">
                     </label>
                     <label class="input-label">
                         マップ:
-                        <input type="number" id="mapInput" oninput="updateCombinedRegex()">
+                        <input type="number" id="mapInput" oninput="updateCombinedRegex(); saveInputState()">
                     </label>
                     <label class="input-label">
-                        <input type="radio" name="searchMode" id="searchAllRadio" value="all" checked>
+                        <input type="radio" name="searchMode" id="searchAllRadio" value="all" checked onchange="updateSearchMode(); saveSearchModeState()">
                         全て値以上
                     </label>
                     <label class="input-label">
-                        <input type="radio" name="searchMode" id="searchAnyRadio" value="any">
+                        <input type="radio" name="searchMode" id="searchAnyRadio" value="any" onchange="updateSearchMode(); saveSearchModeState()">
                         どれか
                     </label>
                 </div>
@@ -278,7 +278,7 @@
                 <div class="output-area" id="combinedItemRegexOutput"></div>
                 <div class="input-group">
                     <button id="copyRegexBtn" onclick="copyRegex()">コピー</button>
-                    <button onclick="resetMapMods()">リセット</button>
+                    <button onclick="resetItemMods()">リセット</button>
                     <span id="itemCharCount" class="char-count"></span>
                 </div>
 

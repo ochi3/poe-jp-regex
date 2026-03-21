@@ -13,7 +13,11 @@ const beastlist = {
     "effect": "アイテムを修正：可能な限り最大リンク数にする",
     "regex": "リガ",
     "enRegex": "k m",
+<<<<<<< Updated upstream
     "chaosValue": "137"
+=======
+    "chaosValue": "142.8"
+>>>>>>> Stashed changes
   },
   "クレイシアンのキメラル": {
     "engName": "Craicic Chimeral",
@@ -21,7 +25,11 @@ const beastlist = {
     "effect": "インプリントを作成: マジックアイテム",
     "regex": "ンのキ",
     "enRegex": "cic c",
+<<<<<<< Updated upstream
     "chaosValue": "115"
+=======
+    "chaosValue": "117.3"
+>>>>>>> Stashed changes
   },
   "ワイルド・ブリスル・マトロン": {
     "engName": "Wild Bristle Matron",
@@ -29,7 +37,11 @@ const beastlist = {
     "effect": "アイテムのモッドを変化: 非ユニークアイテムにクラフトメタモッドを追加",
     "regex": "ル・マ",
     "enRegex": "le m",
+<<<<<<< Updated upstream
     "chaosValue": "150"
+=======
+    "chaosValue": "161"
+>>>>>>> Stashed changes
   },
   "ビビッド・ヴァルチャー": {
     "engName": "Vivid Vulture",
@@ -45,7 +57,11 @@ const beastlist = {
     "effect": "アイテムのモッドを変化: 見つめる者の目のモッドをリロール。最大ライフ、マナおよびエナジーシールドのモッドはリロールできない",
     "regex": "ド・ヘリ",
     "enRegex": "ld h",
+<<<<<<< Updated upstream
     "chaosValue": "145"
+=======
+    "chaosValue": "140"
+>>>>>>> Stashed changes
   },
   "ワイルド・ブランブルバック": {
     "engName": "Wild Brambleback",
@@ -53,7 +69,11 @@ const beastlist = {
     "effect": "アイテムを変換: コラプト状態でない覚醒のジェムのレベルを1上げる",
     "regex": "ド・ブラ",
     "enRegex": "d bra",
+<<<<<<< Updated upstream
     "chaosValue": "34"
+=======
+    "chaosValue": "35"
+>>>>>>> Stashed changes
   },
   "平原の始祖、ファルウル": {
     "engName": "Farrul, First of the Plains",
@@ -61,7 +81,11 @@ const beastlist = {
     "effect": "アイテムにアスペクトスキルを追加: 猫のアスペクト",
     "regex": "祖、ファ",
     "enRegex": "ul, f",
+<<<<<<< Updated upstream
     "chaosValue": "58"
+=======
+    "chaosValue": "55"
+>>>>>>> Stashed changes
   },
   "フィヌムスのプレイグドアラクニド": {
     "engName": "Fenumal Plagued Arachnid",
@@ -69,7 +93,11 @@ const beastlist = {
     "effect": "アイテムをスプリット: それぞれ半分のモッドを持つ2個のアイテムにスプリット",
     "regex": "のプレ",
     "enRegex": "l pla",
+<<<<<<< Updated upstream
     "chaosValue": "55"
+=======
+    "chaosValue": "54.5"
+>>>>>>> Stashed changes
   },
   "プライマル・クリストコーラー": {
     "engName": "Primal Cystcaller",
@@ -77,7 +105,7 @@ const beastlist = {
     "effect": "アトラスクラフトを獲得: キラックミッションを5個獲得 ミッションの色は赤ビーストのレベルに基づく",
     "regex": "ル・クリ",
     "enRegex": " cy",
-    "chaosValue": "7"
+    "chaosValue": "5"
   },
   "夜の始祖、フィヌムス": {
     "engName": "Fenumus, First of the Night",
@@ -85,7 +113,11 @@ const beastlist = {
     "effect": "アイテムにアスペクトスキルを追加: 蜘蛛のアスペクト",
     "regex": "祖、フィ",
     "enRegex": "s, f",
+<<<<<<< Updated upstream
     "chaosValue": "46"
+=======
+    "chaosValue": "48"
+>>>>>>> Stashed changes
   },
   "空の始祖、サカワル": {
     "engName": "Saqawal, First of the Sky",
@@ -101,7 +133,11 @@ const beastlist = {
     "effect": "アイテムにアスペクトスキルを追加: 蟹のアスペクト",
     "regex": "祖、ク",
     "enRegex": "n, f",
+<<<<<<< Updated upstream
     "chaosValue": "34"
+=======
+    "chaosValue": "40"
+>>>>>>> Stashed changes
   },
   "プライマル・レックス・メイトリアーク": {
     "engName": "Primal Rhex Matriarch",
@@ -165,7 +201,11 @@ const beastlist = {
     "effect": "マップをコラプト: 基礎品質30%を付与\nマップをコラプト: ダブルコラプト",
     "regex": "ンの臣",
     "enRegex": "c v",
+<<<<<<< Updated upstream
     "chaosValue": "8"
+=======
+    "chaosValue": "4.85"
+>>>>>>> Stashed changes
   },
   "ファルウルのリンクス・アルファ": {
     "engName": "Farric Lynx Alpha",
@@ -197,7 +237,11 @@ const beastlist = {
     "effect": "アトラスクラフトを獲得: 無料の各マップクラフトオプションを1ずつ獲得",
     "regex": "ル・クラ",
     "enRegex": "l cru",
+<<<<<<< Updated upstream
     "chaosValue": "19"
+=======
+    "chaosValue": "15"
+>>>>>>> Stashed changes
   },
   "ファルウルのフロストヘリオン・アルファ": {
     "engName": "Farric Frost Hellion Alpha",
@@ -373,7 +417,7 @@ const beastlist = {
     "effect": "ユニークアイテムを作成: アミュレット",
     "regex": "ウルのチ",
     "enRegex": "rric c",
-    "chaosValue": "1"
+    "chaosValue": "0.88"
   },
   "ファルウルのゴートマン": {
     "engName": "Farric Goatman",
