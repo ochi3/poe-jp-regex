@@ -501,22 +501,34 @@ function getFixedRangeRegex(num, basePattern, optimize = false) {
   }
 
   if (quant <= 9) {
+    // 1桁: [x-9]
     numberRegex = `[${quant}-9]`;
   } else if (quant === 100) {
+    // ちょうど100: \d.. (先頭\dで制約、後ろ2桁は.)
     return `"${basePattern}\\d..%"`;
   } else if (quant < 100) {
+    // 2桁: 末尾桁は . に
     const str = quant.toString();
     const d0 = str[0];
     const d1 = str[1] || '0';
     if (d1 === '0') {
-      numberRegex = `[${d0}-9].|\\d..`;
+      // 10, 20, 30 など: [d0-9]. | \d.. (d0=9のときは 9. | \d.. → ただし100+の\d..に含まれるので 9. のみ)
+      if (d0 === '9') {
+        numberRegex = `9.|\\d..`;
+      } else {
+        numberRegex = `[${d0}-9].|\\d..`;
+      }
     } else if (d0 === '9') {
+      // 91, 95 など: 9[d1-9] | \d..
       numberRegex = `${d0}[${d1}-9]|\\d..`;
     } else {
+      // 一般: d0[d1-9] | [d0+1-9]. | \d..
       numberRegex = `${d0}[${d1}-9]|[${Number(d0) + 1}-9].|\\d..`;
     }
   } else if (quant < 1000) {
+    // 3桁
     if (quant % 100 === 0) {
+      // 200, 300 など: [d0-9]..
       const d0 = quant / 100;
       numberRegex = `[${d0}-9]..`;
     } else {
@@ -526,23 +538,31 @@ function getFixedRangeRegex(num, basePattern, optimize = false) {
       const d2 = parseInt(str[2] || 0);
       let parts = [];
 
-      // d0より大きい（例: 6-9xx for 500）
-      if (d0 < 9) {
-        parts.push(`[${d0 + 1}-9]\\d\\d`);
+      if (d2 === 0) {
+        // 末桁が0: d0[d1-9]. | [d0+1-9]..
+        if (d1 < 9) {
+          parts.push(`${d0}[${d1}-9].`);
+        } else {
+          parts.push(`${d0}9.`);
+        }
+        if (d0 < 9) {
+          parts.push(`[${d0 + 1}-9]..`);
+        }
+      } else {
+        // 一般: [d0+1-9].. | d0[d1+1-9]. | d0d1[d2-9]
+        if (d0 < 9) {
+          parts.push(`[${d0 + 1}-9]..`);
+        }
+        if (d1 < 9) {
+          parts.push(`${d0}[${d1 + 1}-9].`);
+        }
+        parts.push(`${d0}${d1}[${d2}-9]`);
       }
-
-      // d0で、d1より大きい（例: 51x-59x for 500）
-      if (d1 < 9) {
-        parts.push(`${d0}[${d1 + 1}-9]\\d`);
-      }
-
-      // d0 d1で、d2以上（例: 500-509 for 500）
-      parts.push(`${d0}${d1}[${d2}-9]`);
 
       numberRegex = parts.join('|');
     }
   } else {
-    // 1000以上（稀だが、すべてにマッチ）
+    // 1000以上
     numberRegex = `\\d{4,}%`;
   }
 
