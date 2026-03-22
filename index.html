@@ -984,21 +984,17 @@
                     <input type="number" id="mapTierMaxInput" placeholder="Max" min="1" max="17" value="16" onchange="saveTradeSettings()" style="width: 70px;">
                 </div>
             </div>
-            <div class="settings-group">
-                <label>バイアウト価格:</label>
-                <div style="display: flex; gap: 10px; align-items: center; margin-bottom: 5px;">
-                    <select id="buyoutPriceSelect" onchange="saveTradeSettings()" style="flex: 1;">
-                        <option value="">カオスオーブ同等物</option>
-                        <option value="chaos_divine">カオスまたは神のオーブ</option>
-                        <option value="chaos">カオスオーブ</option>
-                        <option value="divine">神のオーブ</option>
-                    </select>
-                </div>
-                <div style="display: flex; gap: 10px; align-items: center;">
-                    <input type="number" id="buyoutPriceMinInput" placeholder="Min" min="0" onchange="saveTradeSettings()" style="width: 70px;">
-                    <span>~</span>
-                    <input type="number" id="buyoutPriceMaxInput" placeholder="Max" min="0" onchange="saveTradeSettings()" style="width: 70px;">
-                </div>
+            <div class="settings-group" style="display: flex; gap: 16px; align-items: center; margin-top: 10px;">
+                <label class="input-label" style="display: flex; align-items: center; gap: 8px; margin: 0; cursor: pointer; white-space: nowrap;">
+                    <input type="checkbox" id="memoryMapCheckbox" style="margin: 0;"
+                        onchange="if(this.checked) document.getElementById('nightmareMapCheckbox').checked = false; saveTradeSettings();">
+                    <span>メモリーマップ</span>
+                </label>
+                <label class="input-label" style="display: flex; align-items: center; gap: 8px; margin: 0; cursor: pointer; white-space: nowrap;">
+                    <input type="checkbox" id="nightmareMapCheckbox" style="margin: 0;"
+                        onchange="if(this.checked) document.getElementById('memoryMapCheckbox').checked = false; saveTradeSettings();">
+                    <span>ナイトメアマップ</span>
+                </label>
             </div>
             <div class="settings-group">
                 <label>モッド数:</label>
@@ -1023,15 +1019,26 @@
                     <option value="all">全てを含む (All)</option>
                 </select>
             </div>
-            <div class="settings-group" style="display: flex; align-items: center; margin-top: 15px;">
-                <label class="input-label" style="display: flex; align-items: center; gap: 8px; margin: 0; cursor: pointer; white-space: nowrap;">
-                    <input type="checkbox" id="memoryMapCheckbox" onchange="saveTradeSettings()" style="margin: 0;"> 
-                    <span>メモリーマップ</span>
-                </label>
+            <div class="settings-group">
+                <label>バイアウト価格:</label>
+                <div style="display: flex; gap: 10px; align-items: center; margin-bottom: 5px;">
+                    <select id="buyoutPriceSelect" onchange="saveTradeSettings()" style="flex: 1;">
+                        <option value="">カオスオーブ同等物</option>
+                        <option value="chaos_divine">カオスまたは神のオーブ</option>
+                        <option value="chaos">カオスオーブ</option>
+                        <option value="divine">神のオーブ</option>
+                    </select>
+                </div>
+                <div style="display: flex; gap: 10px; align-items: center;">
+                    <input type="number" id="buyoutPriceMinInput" placeholder="Min" min="0" onchange="saveTradeSettings()" style="width: 70px;">
+                    <span>~</span>
+                    <input type="number" id="buyoutPriceMaxInput" placeholder="Max" min="0" onchange="saveTradeSettings()" style="width: 70px;">
+                </div>
             </div>
             <div style="margin-top: 20px;">
                 <button onclick="toggleTradeSettings()" class="primary-btn">閉じる</button>
             </div>
+
         </div>
     </div>
 

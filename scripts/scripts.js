@@ -1610,6 +1610,7 @@ function saveTradeSettings() {
     const maxModCount = document.getElementById('maxModCountInput').value;
     const corruptedStatus = document.getElementById('corruptedStatusSelect').value;
     const memoryMap = document.getElementById('memoryMapCheckbox').checked;
+    const nightmareMap = document.getElementById('nightmareMapCheckbox').checked;
     const mapTierMin = document.getElementById('mapTierMinInput').value;
     const mapTierMax = document.getElementById('mapTierMaxInput').value;
     const buyoutPrice = document.getElementById('buyoutPriceSelect').value;
@@ -1624,6 +1625,7 @@ function saveTradeSettings() {
     localStorage.setItem('poeTradeMaxModCount', maxModCount);
     localStorage.setItem('poeTradeCorruptedStatus', corruptedStatus);
     localStorage.setItem('poeTradeMemoryMap', memoryMap);
+    localStorage.setItem('poeTradeNightmareMap', nightmareMap);
     localStorage.setItem('poeTradeMapTierMin', mapTierMin);
     localStorage.setItem('poeTradeMapTierMax', mapTierMax);
     localStorage.setItem('poeTradeBuyoutPrice', buyoutPrice);
@@ -1645,6 +1647,7 @@ function loadTradeSettings() {
     if (corruptedStatus === null) corruptedStatus = "";
 
     const memoryMap = localStorage.getItem('poeTradeMemoryMap') === 'true';
+    const nightmareMap = localStorage.getItem('poeTradeNightmareMap') === 'true';
     const mapTierMin = localStorage.getItem('poeTradeMapTierMin') || "16";
     const mapTierMax = localStorage.getItem('poeTradeMapTierMax') || "16";
     const buyoutPrice = localStorage.getItem('poeTradeBuyoutPrice') || "";
@@ -1677,6 +1680,7 @@ function loadTradeSettings() {
     document.getElementById('maxModCountInput').value = maxModCount;
     document.getElementById('corruptedStatusSelect').value = corruptedStatus;
     document.getElementById('memoryMapCheckbox').checked = memoryMap;
+    document.getElementById('nightmareMapCheckbox').checked = nightmareMap;
     document.getElementById('mapTierMinInput').value = mapTierMin;
     document.getElementById('mapTierMaxInput').value = mapTierMax;
     document.getElementById('buyoutPriceSelect').value = buyoutPrice;

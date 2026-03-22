@@ -5,7 +5,7 @@ const beastlist = {
     "effect": "アイテムを変換：覚醒サポートジェムのロールを再生成する",
     "regex": "ド・ウ",
     "enRegex": "id w",
-    "chaosValue": "9"
+    "chaosValue": "8"
   },
   "ブラック・モリガン": {
     "engName": "Black Mórrigan",
@@ -13,7 +13,7 @@ const beastlist = {
     "effect": "アイテムを修正：可能な限り最大リンク数にする",
     "regex": "リガ",
     "enRegex": "k m",
-    "chaosValue": "185"
+    "chaosValue": "160"
   },
   "クレイシアンのキメラル": {
     "engName": "Craicic Chimeral",
@@ -21,7 +21,7 @@ const beastlist = {
     "effect": "インプリントを作成: マジックアイテム",
     "regex": "ンのキ",
     "enRegex": "cic c",
-    "chaosValue": "180"
+    "chaosValue": "144.1"
   },
   "ワイルド・ブリスル・マトロン": {
     "engName": "Wild Bristle Matron",
@@ -29,7 +29,7 @@ const beastlist = {
     "effect": "アイテムのモッドを変化: 非ユニークアイテムにクラフトメタモッドを追加",
     "regex": "ル・マ",
     "enRegex": "le m",
-    "chaosValue": "186"
+    "chaosValue": "160"
   },
   "ビビッド・ヴァルチャー": {
     "engName": "Vivid Vulture",
@@ -37,7 +37,7 @@ const beastlist = {
     "effect": "アイテムを変換: シンセシス暗黙モッドをリロール",
     "regex": "ド・ヴ",
     "enRegex": "id v",
-    "chaosValue": "550"
+    "chaosValue": "640"
   },
   "ワイルド・ヘリオン・アルファ": {
     "engName": "Wild Hellion Alpha",
@@ -45,7 +45,7 @@ const beastlist = {
     "effect": "アイテムのモッドを変化: 見つめる者の目のモッドをリロール。最大ライフ、マナおよびエナジーシールドのモッドはリロールできない",
     "regex": "ド・ヘリ",
     "enRegex": "ld h",
-    "chaosValue": "130"
+    "chaosValue": "139"
   },
   "ワイルド・ブランブルバック": {
     "engName": "Wild Brambleback",
@@ -53,7 +53,7 @@ const beastlist = {
     "effect": "アイテムを変換: コラプト状態でない覚醒のジェムのレベルを1上げる",
     "regex": "ド・ブラ",
     "enRegex": "d bra",
-    "chaosValue": "34.7"
+    "chaosValue": "29"
   },
   "平原の始祖、ファルウル": {
     "engName": "Farrul, First of the Plains",
@@ -61,7 +61,7 @@ const beastlist = {
     "effect": "アイテムにアスペクトスキルを追加: 猫のアスペクト",
     "regex": "祖、ファ",
     "enRegex": "ul, f",
-    "chaosValue": "55"
+    "chaosValue": "50"
   },
   "フィヌムスのプレイグドアラクニド": {
     "engName": "Fenumal Plagued Arachnid",
@@ -69,7 +69,7 @@ const beastlist = {
     "effect": "アイテムをスプリット: それぞれ半分のモッドを持つ2個のアイテムにスプリット",
     "regex": "のプレ",
     "enRegex": "l pla",
-    "chaosValue": "58"
+    "chaosValue": "45"
   },
   "プライマル・クリストコーラー": {
     "engName": "Primal Cystcaller",
@@ -77,7 +77,7 @@ const beastlist = {
     "effect": "アトラスクラフトを獲得: キラックミッションを5個獲得 ミッションの色は赤ビーストのレベルに基づく",
     "regex": "ル・クリ",
     "enRegex": " cy",
-    "chaosValue": "7"
+    "chaosValue": "6"
   },
   "夜の始祖、フィヌムス": {
     "engName": "Fenumus, First of the Night",
@@ -85,7 +85,7 @@ const beastlist = {
     "effect": "アイテムにアスペクトスキルを追加: 蜘蛛のアスペクト",
     "regex": "祖、フィ",
     "enRegex": "s, f",
-    "chaosValue": "45"
+    "chaosValue": "40.9"
   },
   "空の始祖、サカワル": {
     "engName": "Saqawal, First of the Sky",
@@ -133,7 +133,7 @@ const beastlist = {
     "effect": "ポータルを開く: ファルウルンの巣穴",
     "regex": "ルのタイ",
     "enRegex": "c ti",
-    "chaosValue": "4.4"
+    "chaosValue": "5"
   },
   "サカワルのレックス": {
     "engName": "Saqawine Rhex",
@@ -165,7 +165,7 @@ const beastlist = {
     "effect": "マップをコラプト: 基礎品質30%を付与\nマップをコラプト: ダブルコラプト",
     "regex": "ンの臣",
     "enRegex": "c v",
-    "chaosValue": "4"
+    "chaosValue": "2"
   },
   "ファルウルのリンクス・アルファ": {
     "engName": "Farric Lynx Alpha",
@@ -173,7 +173,7 @@ const beastlist = {
     "effect": "アイテムのモッドを変化: サフィックスを1つ追加し、ランダムなプレフィックスを1つ削除",
     "regex": "ルのリ",
     "enRegex": "c l",
-    "chaosValue": "2"
+    "chaosValue": "1"
   },
   "クレイシアンの口": {
     "engName": "Craicic Maw",
@@ -197,7 +197,7 @@ const beastlist = {
     "effect": "アトラスクラフトを獲得: 無料の各マップクラフトオプションを1ずつ獲得",
     "regex": "ル・クラ",
     "enRegex": "l cru",
-    "chaosValue": "15"
+    "chaosValue": "13.1"
   },
   "ファルウルのフロストヘリオン・アルファ": {
     "engName": "Farric Frost Hellion Alpha",
@@ -229,7 +229,7 @@ const beastlist = {
     "effect": "カレンシーアイテムを作成: 色彩のオーブ8個",
     "regex": "ルのロア",
     "enRegex": "ine rho",
-    "chaosValue": "1"
+    "chaosValue": "0.92"
   },
   "フィヌムスのスコーピオン": {
     "engName": "Fenumal Scorpion",
@@ -245,7 +245,7 @@ const beastlist = {
     "effect": "ユニークアイテムを作成: 剣または斧\nアイテムのモッドを変化: エルダーアイテムにモッドを追加",
     "regex": "ルのブラ",
     "enRegex": "ne b",
-    "chaosValue": "1"
+    "chaosValue": "0.85"
   },
   "ファルウルのエイプ": {
     "engName": "Farric Ape",
@@ -261,7 +261,7 @@ const beastlist = {
     "effect": "ユニークアイテムを作成: アイテム\nアイテムのモッドを変化: レアマップにモッドを追加",
     "regex": "ンのサベ",
     "enRegex": "c sav",
-    "chaosValue": "0.85"
+    "chaosValue": "0.82"
   },
   "サカワルのコブラ": {
     "engName": "Saqawine Cobra",
@@ -277,7 +277,7 @@ const beastlist = {
     "effect": "ユニークアイテムを作成: 鎧",
     "regex": "のウルサ",
     "enRegex": "c u",
-    "chaosValue": "1"
+    "chaosValue": "0.9"
   },
   "フィヌムスの女王": {
     "engName": "Fenumal Queen",
@@ -293,7 +293,7 @@ const beastlist = {
     "effect": "ユニークアイテムを作成: 弓\nアイテムのモッドを変化: クルセイダーアイテムにモッドを追加",
     "regex": "ルのゴラ",
     "enRegex": "c gol",
-    "chaosValue": "1"
+    "chaosValue": "0.89"
   },
   "フィヌムスのデヴァワラー": {
     "engName": "Fenumal Devourer",
@@ -301,7 +301,7 @@ const beastlist = {
     "effect": "ユニークアイテムを作成: 盾または矢筒\nアイテムのモッドを変化: シェイパーアイテムにモッドを追加",
     "regex": "スのデヴ",
     "enRegex": "mal d",
-    "chaosValue": "1"
+    "chaosValue": "0.96"
   },
   "クレイシアンのウォッチャー": {
     "engName": "Craicic Watcher",
@@ -309,7 +309,7 @@ const beastlist = {
     "effect": "ユニークアイテムを作成: 鉤爪または短剣\nアイテムのモッドを変化: ハンターアイテムにモッドを追加",
     "regex": "ンのウォ",
     "enRegex": "c wa",
-    "chaosValue": "0.89"
+    "chaosValue": "0.85"
   },
   "サカワルのキメラル": {
     "engName": "Saqawine Chimeral",
@@ -333,7 +333,7 @@ const beastlist = {
     "effect": "ユニークアイテムを作成: マップ",
     "regex": "ルのタウ",
     "enRegex": "ic ta",
-    "chaosValue": "1"
+    "chaosValue": "0.95"
   },
   "クレイシアンのイカ": {
     "engName": "Craicic Squid",
@@ -341,7 +341,7 @@ const beastlist = {
     "effect": "レアアイテムを作成: タリスマン",
     "regex": "ンのイカ",
     "enRegex": " sq",
-    "chaosValue": "1"
+    "chaosValue": "0.9"
   },
   "クレイシアンのシールドクラブ": {
     "engName": "Craicic Shield Crab",
@@ -349,7 +349,7 @@ const beastlist = {
     "effect": "カレンシーアイテムを作成: 宝飾職人のオーブ4個\nカレンシーアイテムを作成: 連結のオーブ2個\nアイテムを変化: 可能な最大ソケット数",
     "regex": "ンのシー",
     "enRegex": "c sh",
-    "chaosValue": "1"
+    "chaosValue": "0.8"
   },
   "フィヌムスのウィドウ": {
     "engName": "Fenumal Widow",
@@ -373,7 +373,7 @@ const beastlist = {
     "effect": "ユニークアイテムを作成: アミュレット",
     "regex": "ウルのチ",
     "enRegex": "rric c",
-    "chaosValue": "1"
+    "chaosValue": "0.9"
   },
   "ファルウルのゴートマン": {
     "engName": "Farric Goatman",
@@ -381,7 +381,7 @@ const beastlist = {
     "effect": "ユニークアイテムを作成: フラスコ",
     "regex": "ルのゴー",
     "enRegex": "c goa",
-    "chaosValue": "1"
+    "chaosValue": "0.8"
   },
   "フィヌムスのスクラブラー": {
     "engName": "Fenumal Scrabbler",
@@ -389,7 +389,7 @@ const beastlist = {
     "effect": "ユニークアイテムを作成: ワンドアイテムのモッドを変化: ウォーロードアイテムにモッドを追加",
     "regex": "スのスク",
     "enRegex": "l scr",
-    "chaosValue": "1"
+    "chaosValue": "0.97"
   },
   "ファルウルのガルガンチュア": {
     "engName": "Farric Gargantuan",
@@ -397,6 +397,6 @@ const beastlist = {
     "effect": "ユニークアイテムを作成: 兜 カレンシーアイテムを作成: 地平のオーブ3個",
     "regex": "ルのガル",
     "enRegex": "c ga",
-    "chaosValue": "0.79"
+    "chaosValue": "1"
   }
 };

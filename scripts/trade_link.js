@@ -8,15 +8,15 @@ function buildTradeUrl() {
         || "Mirage";
     let tradeMethod = document.getElementById('tradeMethodSelect').value || "any";
     let minModCount = parseInt(document.getElementById('minModCountInput').value) || 0;
-    
-    // checkedModsから選択されたModを取得
-    if ((!checkedMods || checkedMods.size === 0) && notStats.length === 0 && !document.getElementById('memoryMapCheckbox').checked && !parseInt(document.getElementById('minModCountInput').value) && !document.getElementById('itemQuantityInput').value && !document.getElementById('packSizeInput').value && !document.getElementById('rarityInput').value && !document.getElementById('scarabInput').value && !document.getElementById('currencyInput').value && !document.getElementById('mapInput').value) {
-        alert("検索条件を一つ以上指定してください。");
-        return null;
-    }
 
     const notStats = [];
     const wantedStats = [];
+
+    // checkedModsから選択されたModを取得
+    if ((!checkedMods || checkedMods.size === 0) && notStats.length === 0 && !document.getElementById('memoryMapCheckbox').checked && !document.getElementById('nightmareMapCheckbox').checked && !parseInt(document.getElementById('minModCountInput').value) && !document.getElementById('itemQuantityInput').value && !document.getElementById('packSizeInput').value && !document.getElementById('rarityInput').value && !document.getElementById('scarabInput').value && !document.getElementById('currencyInput').value && !document.getElementById('mapInput').value) {
+        alert("検索条件を一つ以上指定してください。");
+        return null;
+    }
 
     // デフォルトで否定するステータスを追加 (T17/Guardian/Conqueror mods)
     const defaultNotStatIds = [
@@ -60,6 +60,11 @@ function buildTradeUrl() {
         },
         stats: []
     };
+
+    // ナイトメアマップの条件を追加
+    if (document.getElementById('nightmareMapCheckbox').checked) {
+        query.type = currentLanguage === 'en' ? "Nightmare Map" : "ナイトメアマップ";
+    }
 
     // Mod数の条件を追加
     const maxModCount = parseInt(document.getElementById('maxModCountInput').value);
