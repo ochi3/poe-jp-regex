@@ -20,7 +20,7 @@ const originalModList = {
    engMod: "Players have #% reduced effect of Non-Curse Auras from Skills",
    tier: 990,
    engRegex: "non",
-   Regex: "ーラ",
+   Regex: "ラの",
    modTier17: false,
  },
  "プレイヤーの全ての耐性の最大値 (-12–-9)%": {
