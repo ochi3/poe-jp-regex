@@ -1540,7 +1540,7 @@ const mapModList = {
     "weight": 800,
     "tier": 990,
     "engRegex": "non",
-    "Regex": "ーラ",
+    "Regex": "ラの",
     "tradeStatIds": [
       "explicit.stat_2450628570"
     ],
