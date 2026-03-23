@@ -2,15 +2,15 @@ const beastlist = {
   "ビビッド・ウォッチャー": {
     "engName": "Vivid Watcher",
     "family": "深海",
-    "effect": "アイテムを変換：覚醒サポートジェムのロールを再生成する",
+    "effect": "希少サポートジェムを捧げる: 高レベル、高品質のサポートジェム3個",
     "regex": "ド・ウ",
     "enRegex": "id w",
     "chaosValue": "9"
   },
-  "ブラック・モリガン": {
+  "黒のモリガン": {
     "engName": "Black Mórrigan",
     "family": "原生林",
-    "effect": "アイテムを修正：可能な限り最大リンク数にする",
+    "effect": "アイテムを変化: 可能な最大リンク数",
     "regex": "リガ",
     "enRegex": "k m",
     "chaosValue": "200"
@@ -42,7 +42,7 @@ const beastlist = {
   "ワイルド・ヘリオン・アルファ": {
     "engName": "Wild Hellion Alpha",
     "family": "原生林",
-    "effect": "アイテムのモッドを変化: 見つめる者の目のモッドをリロール。最大ライフ、マナおよびエナジーシールドのモッドはリロールできない",
+    "effect": "アイテムのモッドを変化: ウォッチャーズアイのモッドをリロール",
     "regex": "ド・ヘリ",
     "enRegex": "ld h",
     "chaosValue": "168.2"
@@ -50,7 +50,7 @@ const beastlist = {
   "ワイルド・ブランブルバック": {
     "engName": "Wild Brambleback",
     "family": "原生林",
-    "effect": "アイテムを変換: コラプト状態でない覚醒のジェムのレベルを1上げる",
+    "effect": "アイテムを変換: 希少サポートジェムに500m経験値追加する",
     "regex": "ド・ブラ",
     "enRegex": "d bra",
     "chaosValue": "24"
@@ -74,7 +74,7 @@ const beastlist = {
   "プライマル・クリストコーラー": {
     "engName": "Primal Cystcaller",
     "family": "原生林",
-    "effect": "アトラスクラフトを獲得: キラックミッションを5個獲得 ミッションの色は赤ビーストのレベルに基づく",
+    "effect": "アイテムを作成: ナイトメアマップ",
     "regex": "ル・クリ",
     "enRegex": " cy",
     "chaosValue": "3"
@@ -130,7 +130,7 @@ const beastlist = {
   "ファルウルのタイガー・アルファ": {
     "engName": "Farric Tiger Alpha",
     "family": "原生林",
-    "effect": "ポータルを開く: ファルウルンの巣穴",
+    "effect": "ポータルを開く: ファルウルの巣穴",
     "regex": "ルのタイ",
     "enRegex": "c ti",
     "chaosValue": "4"
@@ -146,7 +146,7 @@ const beastlist = {
   "ファルウルのウルフ・アルファ": {
     "engName": "Farric Wolf Alpha",
     "family": "原生林",
-    "effect": "アイテムのモッドを変化: プレフィックスを1つ追加し、ランダムなサフィックスを1つ削除 レアアイテムにのみ適用可能",
+    "effect": "アイテムのモッドを変化: プレフィックスを1つ追加し、ランダムなサフィックスを1つ削除",
     "regex": "ルフ・ア",
     "enRegex": "f a",
     "chaosValue": "2"
@@ -162,7 +162,7 @@ const beastlist = {
   "クレイシアンの臣下": {
     "engName": "Craicic Vassal",
     "family": "深海",
-    "effect": "マップをコラプト: 基礎品質30%を付与\nマップをコラプト: ダブルコラプト",
+    "effect": "マップをコラプト: 暗黙モッドを1個付与\nマップをコラプト: ダブルコラプト",
     "regex": "ンの臣",
     "enRegex": "c v",
     "chaosValue": "3.6"
@@ -194,7 +194,7 @@ const beastlist = {
   "プライマル・クラッシュクロー": {
     "engName": "Primal Crushclaw",
     "family": "深海",
-    "effect": "アトラスクラフトを獲得: 無料の各マップクラフトオプションを1ずつ獲得",
+    "effect": "アイテムを作成: 貴重なスカラベ",
     "regex": "ル・クラ",
     "enRegex": "l cru",
     "chaosValue": "12"
@@ -394,7 +394,7 @@ const beastlist = {
   "ファルウルのガルガンチュア": {
     "engName": "Farric Gargantuan",
     "family": "原生林",
-    "effect": "ユニークアイテムを作成: 兜 カレンシーアイテムを作成: 地平のオーブ3個",
+    "effect": "ユニークアイテムを作成: 兜\nカレンシーアイテムを作成: 解除のオーブ3個",
     "regex": "ルのガル",
     "enRegex": "c ga",
     "chaosValue": "1"
