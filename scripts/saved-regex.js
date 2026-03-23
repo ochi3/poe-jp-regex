@@ -58,10 +58,7 @@ function updateSavedRegexDisplay() {
 
   const sortedProfiles = restoreSortOrder(allProfiles);
   
-  // コンテナを非表示にしてから内容を更新
-  container.style.opacity = '0';
-  container.style.transition = 'opacity 0.2s ease';
-  
+  // 内容を更新
   container.innerHTML = '';
 
   const cardsContainer = document.createElement('div');
@@ -81,11 +78,7 @@ function updateSavedRegexDisplay() {
       const typeFilter = document.getElementById('typeFilter');
       if (typeFilter) {
         applyFilters();
-      } else {
-        container.style.opacity = '1';
       }
-    } else {
-      container.style.opacity = '1';
     }
   }, 50);
 }
@@ -123,6 +116,16 @@ function getAllProfiles() {
     allProfiles.push({ name, profile, type: 'scarab', tabId: 'scarabContent', timestamp: profile.timestamp || 0 });
   });
 
+  const tattooProfiles = JSON.parse(localStorage.getItem('tattooProfiles') || '{}');
+  Object.entries(tattooProfiles).forEach(([name, profile]) => {
+    allProfiles.push({ name, profile, type: 'tattoo', tabId: 'tattooContent', timestamp: profile.timestamp || 0 });
+  });
+
+  const runegraftProfiles = JSON.parse(localStorage.getItem('runegraftProfiles') || '{}');
+  Object.entries(runegraftProfiles).forEach(([name, profile]) => {
+    allProfiles.push({ name, profile, type: 'runegraft', tabId: 'runegraftContent', timestamp: profile.timestamp || 0 });
+  });
+
   return allProfiles;
 }
 
@@ -132,7 +135,9 @@ const typeConfig = {
   item: { label: 'アイテム', color: '#3498DB', icon: '' },
   vendor: { label: 'ベンダー', color: '#F39C12', icon: '' },
   beast: { label: 'ビースト', color: '#1ABC9C', icon: '' },
-  scarab: { label: 'スカラベ', color: '#D35400', icon: '' }
+  scarab: { label: 'スカラベ', color: '#D35400', icon: '' },
+  tattoo: { label: 'タトゥー', color: '#8E44AD', icon: '' },
+  runegraft: { label: 'ルーングラフト', color: '#2C3E50', icon: '' }
 };
 
 function generateRegexFromProfile(profile, type) {
@@ -152,9 +157,11 @@ function generateRegexFromProfile(profile, type) {
     const beasts = (profile.beasts || []);
     if (beasts.length === 0) return '(空のRegex)';
     
+    const isEn = typeof currentLanguage !== 'undefined' && currentLanguage === 'en';
     const regexes = beasts.map(beastName => {
       const beast = beastlist[beastName];
-      return beast ? beast.regex : null;
+      if (!beast) return null;
+      return isEn ? (beast.enRegex || beast.regex) : beast.regex;
     }).filter(regex => regex !== null);
     
     return regexes.join('|') || '(空のRegex)';
@@ -162,9 +169,35 @@ function generateRegexFromProfile(profile, type) {
     const scarabNames = (profile.scarabs || []);
     if (scarabNames.length === 0) return '(空のRegex)';
     
+    const isEn = typeof currentLanguage !== 'undefined' && currentLanguage === 'en';
     const regexes = scarabNames.map(name => {
       const item = scarablist[name];
-      return item ? item.regex : null;
+      if (!item) return null;
+      return isEn ? (item.enRegex || item.regex) : item.regex;
+    }).filter(regex => regex !== null);
+    
+    return regexes.join('|') || '(空のRegex)';
+  } else if (type === 'tattoo') {
+    const tattooNames = (profile.tattoos || []);
+    if (tattooNames.length === 0) return '(空のRegex)';
+    
+    const isEn = typeof currentLanguage !== 'undefined' && currentLanguage === 'en';
+    const regexes = tattooNames.map(name => {
+      const item = tattoolist[name];
+      if (!item) return null;
+      return isEn ? (item.enRegex || item.regex) : item.regex;
+    }).filter(regex => regex !== null);
+    
+    return regexes.join('|') || '(空のRegex)';
+  } else if (type === 'runegraft') {
+    const runegraftNames = (profile.runegrafts || []);
+    if (runegraftNames.length === 0) return '(空のRegex)';
+    
+    const isEn = typeof currentLanguage !== 'undefined' && currentLanguage === 'en';
+    const regexes = runegraftNames.map(name => {
+      const item = runegraftlist[name];
+      if (!item) return null;
+      return isEn ? (item.enRegex || item.regex) : item.regex;
     }).filter(regex => regex !== null);
     
     return regexes.join('|') || '(空のRegex)';
@@ -252,6 +285,37 @@ function generateMapRegexFromProfile(profile) {
   }
 }
 
+function calcMapModTotals(profile) {
+  // profile.modsからmapModListを参照して合計値を計算
+  let totalCurrency = 0, totalPackSize = 0, totalQuantity = 0;
+  let totalRarity = 0, totalScarab = 0, totalMap = 0;
+  
+  if (!profile.mods) return { totalCurrency, totalPackSize, totalQuantity, totalRarity, totalScarab, totalMap };
+  
+  const modsToProcess = [];
+  if (Array.isArray(profile.mods)) {
+    profile.mods.forEach(mod => {
+      if (Array.isArray(mod)) modsToProcess.push(mod[0]); // [id, state] 形式
+      else if (typeof mod === 'string') modsToProcess.push(mod);
+    });
+  } else if (typeof profile.mods === 'object') {
+    Object.keys(profile.mods).forEach(key => modsToProcess.push(key));
+  }
+  
+  modsToProcess.forEach(key => {
+    const mod = (typeof mapModList !== 'undefined' ? mapModList : {})[key];
+    if (!mod) return;
+    totalCurrency += Number(mod['map_currency_drop_chance_+%_final_from_uber_mod'] || 0);
+    totalPackSize += Number(mod['map_pack_size_+%'] || 0);
+    totalQuantity += Number(mod['map_item_drop_quantity_+%'] || 0);
+    totalRarity += Number(mod['map_item_drop_rarity_+%'] || 0);
+    totalScarab += Number(mod['map_scarab_drop_chance_+%_final_from_uber_mod'] || 0);
+    totalMap += Number(mod['map_map_item_drop_chance_+%_final_from_uber_mod'] || 0);
+  });
+  
+  return { totalCurrency, totalPackSize, totalQuantity, totalRarity, totalScarab, totalMap };
+}
+
 function createSortableProfileCard(name, profile, type, tabId) {
   const card = createProfileCard(name, profile, type, tabId);
   card.draggable = true;
@@ -259,6 +323,23 @@ function createSortableProfileCard(name, profile, type, tabId) {
   card.dataset.profileName = name;
   card.dataset.profileType = type;
   card.dataset.timestamp = profile.timestamp || Date.now();
+
+  if (type === 'map') {
+    const settings = profile.settings || {};
+    card.dataset.totalQuantity = settings.itemQuantity || 0;
+    card.dataset.totalPackSize = settings.packSize || 0;
+    card.dataset.totalRarity = settings.rarity || 0;
+    card.dataset.totalScarab = settings.scarab || 0;
+    card.dataset.totalCurrency = settings.currency || 0;
+    card.dataset.totalMap = settings.map || 0;
+  } else {
+    card.dataset.totalQuantity = 0;
+    card.dataset.totalPackSize = 0;
+    card.dataset.totalRarity = 0;
+    card.dataset.totalScarab = 0;
+    card.dataset.totalCurrency = 0;
+    card.dataset.totalMap = 0;
+  }
   
   const title = card.querySelector('.profile-card-title') || card.querySelector('.title-area span:nth-child(2)');
   if (title) title.classList.add('profile-card-title');
@@ -373,7 +454,40 @@ function createProfileCard(name, profile, type, tabId) {
   
   titleArea.appendChild(typeLabel);
   titleArea.appendChild(title);
-  if (summary) titleArea.appendChild(summarySpan);
+  
+  if (type === 'map') {
+    const settings = profile.settings || {};
+    const badgeContainer = document.createElement('div');
+    badgeContainer.style.cssText = 'display: flex; gap: 4px; margin-left: 10px; flex-wrap: wrap;';
+    
+    const isEn = typeof currentLanguage !== 'undefined' ? currentLanguage === 'en' : false;
+    const badgeConfigs = [
+      { label: isEn ? 'Quality' : '数量', value: settings.itemQuantity, color: '#a54242' },
+      { label: isEn ? 'Pack' : 'パック', value: settings.packSize, color: '#42a5a5' },
+      { label: isEn ? 'Rarity' : 'レア', value: settings.rarity, color: '#a58242' },
+      { label: isEn ? 'Scarab' : 'スカラベ', value: settings.scarab, color: '#a542a5' },
+      { label: isEn ? 'Currency' : 'カレンシー', value: settings.currency, color: '#a5a542' },
+      { label: isEn ? 'Map' : 'マップ', value: settings.map, color: '#4264a5' }
+    ];
+    
+    badgeConfigs.forEach(b => {
+      if (b.value && b.value > 0) {
+        const badge = document.createElement('span');
+        badge.style.cssText = `background: ${b.color}; color: white; padding: 1px 6px; border-radius: 10px; font-size: 0.65em; font-weight: bold;`;
+        badge.textContent = `${b.label} ${b.value}`;
+        badgeContainer.appendChild(badge);
+      }
+    });
+    titleArea.appendChild(badgeContainer);
+  } else {
+    const summary = createProfileSummary(profile, type);
+    if (summary) {
+      const summarySpan = document.createElement('span');
+      summarySpan.style.cssText = 'color: #888; font-size: 0.7em; margin-left: auto;';
+      summarySpan.textContent = summary;
+      titleArea.appendChild(summarySpan);
+    }
+  }
   
   const deleteBtn = document.createElement('button');
   deleteBtn.textContent = '×';
@@ -586,56 +700,87 @@ function createDetailedView(profile, type) {
   const container = document.createElement('div');
   container.style.cssText = 'padding: 10px; background: #1e1e1e; border-radius: 4px;';
 
+  const isEn = typeof currentLanguage !== 'undefined' && currentLanguage === 'en';
+
   if (type === 'map') {
     const settings = profile.settings || {};
+
+    // MOD合計値サマリーバッジ (6項目対応)
+    const totals = calcMapModTotals(profile);
+    const summaryRow = document.createElement('div');
+    summaryRow.style.cssText = 'display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 10px;';
+
+    const makeSummaryBadge = (label, value, color) => {
+      const badge = document.createElement('span');
+      badge.style.cssText = `
+        background: ${color}22;
+        border: 1px solid ${color};
+        color: ${color};
+        padding: 3px 10px;
+        border-radius: 12px;
+        font-size: 0.8em;
+        font-weight: bold;
+      `;
+      badge.textContent = `${label} ${value}`;
+      return badge;
+    };
+
+    if (settings.itemQuantity > 0) summaryRow.appendChild(makeSummaryBadge(isEn ? 'Quality' : '数量', settings.itemQuantity, '#a54242'));
+    if (settings.packSize > 0) summaryRow.appendChild(makeSummaryBadge(isEn ? 'Pack' : 'パック', settings.packSize, '#42a5a5'));
+    if (settings.rarity > 0) summaryRow.appendChild(makeSummaryBadge(isEn ? 'Rarity' : 'レア', settings.rarity, '#a58242'));
+    if (settings.scarab > 0) summaryRow.appendChild(makeSummaryBadge(isEn ? 'Scarab' : 'スカラベ', settings.scarab, '#a542a5'));
+    if (settings.currency > 0) summaryRow.appendChild(makeSummaryBadge(isEn ? 'Currency' : 'カレンシー', settings.currency, '#a5a542'));
+    if (settings.map > 0) summaryRow.appendChild(makeSummaryBadge(isEn ? 'Map' : 'マップ', settings.map, '#4264a5'));
+
+    if (summaryRow.childNodes.length > 0) {
+      container.appendChild(summaryRow);
+    }
+
     if (Object.keys(settings).length > 0) {
       const settingsDiv = document.createElement('div');
       settingsDiv.style.cssText = 'margin-bottom: 12px;';
       const rows = [];
-      if (settings.itemQuantity) rows.push(createDetailRow('数量', `${settings.itemQuantity}%`));
-      if (settings.packSize) rows.push(createDetailRow('パックサイズ', `${settings.packSize}%`));
-      if (settings.rarity) rows.push(createDetailRow('レアリティ', `${settings.rarity}%`));
-      if (settings.scarab) rows.push(createDetailRow('スカラベ', `${settings.scarab}%`));
-      if (settings.currency) rows.push(createDetailRow('カレンシー', `${settings.currency}%`));
-      if (settings.map) rows.push(createDetailRow('マップ', `${settings.map}%`));
+      if (settings.itemQuantity) rows.push(createDetailRow(isEn ? 'Min Quality' : '数量', `${settings.itemQuantity}%`));
+      if (settings.packSize) rows.push(createDetailRow(isEn ? 'Min Pack' : 'パックサイズ', `${settings.packSize}%`));
+      if (settings.rarity) rows.push(createDetailRow(isEn ? 'Min Rarity' : 'レアリティ', `${settings.rarity}%`));
+      if (settings.scarab) rows.push(createDetailRow(isEn ? 'Min Scarab' : 'スカラベ', `${settings.scarab}%`));
+      if (settings.currency) rows.push(createDetailRow(isEn ? 'Min Currency' : 'カレンシー', `${settings.currency}%`));
+      if (settings.map) rows.push(createDetailRow(isEn ? 'Min Map' : 'マップ', `${settings.map}%`));
+      
       const rarities = [];
-      if (settings.rarities?.normal) rarities.push('ノーマル');
-      if (settings.rarities?.magic) rarities.push('マジック');
-      if (settings.rarities?.rare) rarities.push('レア');
-      if (rarities.length > 0) rows.push(createDetailRow('レアリティフィルタ', rarities.join(', ')));
+      if (settings.rarities?.normal) rarities.push(isEn ? 'Normal' : 'ノーマル');
+      if (settings.rarities?.magic) rarities.push(isEn ? 'Magic' : 'マジック');
+      if (settings.rarities?.rare) rarities.push(isEn ? 'Rare' : 'レア');
+      if (rarities.length > 0) rows.push(createDetailRow(isEn ? 'Rarity Filter' : 'レアリティフィルタ', rarities.join(', ')));
+      
       if (settings.searchMode) {
-        rows.push(createDetailRow('検索モード', settings.searchMode === 'all' ? '全て値以上' : 'どれか'));
+        rows.push(createDetailRow(isEn ? 'Search Mode' : '検索モード', settings.searchMode === 'all' ? (isEn ? 'All' : '全て値以上') : (isEn ? 'Any' : 'どれか')));
       }
       const options = [];
-      if (settings.ngModChecked) options.push('NG mod');
-      if (settings.mapTierChecked) options.push('T17 mod');
-      if (options.length > 0) rows.push(createDetailRow('オプション', options.join(', ')));
+      if (settings.ngModChecked) options.push(isEn ? 'NG mod' : 'NG mod');
+      if (settings.mapTierChecked) options.push(isEn ? 'T17 mod' : 'T17 mod');
+      if (options.length > 0) rows.push(createDetailRow(isEn ? 'Options' : 'オプション', options.join(', ')));
+      
       rows.forEach(row => settingsDiv.appendChild(row));
       if (rows.length > 0) container.appendChild(settingsDiv);
     }
     
-    let modsToProcess = [];
     if (profile.mods) {
-      if (Array.isArray(profile.mods)) {
-        profile.mods.forEach(mod => {
-          if (Array.isArray(mod)) {
-            modsToProcess.push({ id: mod[0], state: mod[1] || 'ng' });
-          } else if (typeof mod === 'string') {
-            modsToProcess.push({ id: mod, state: 'ng' });
-          }
-        });
-      } else if (typeof profile.mods === 'object') {
-        Object.entries(profile.mods).forEach(([id, state]) => {
-          modsToProcess.push({ id, state });
-        });
-      }
-    }
-
-    if (modsToProcess.length > 0) {
       const modList = document.createElement('div');
       modList.style.cssText = 'display: grid; gap: 4px;';
+      
+      const modsToProcess = [];
+      if (Array.isArray(profile.mods)) {
+        profile.mods.forEach(mod => {
+          if (Array.isArray(mod)) modsToProcess.push({ id: mod[0], state: mod[1] || 'ng' }); // [id, state] format
+          else if (typeof mod === 'string') modsToProcess.push({ id: mod, state: 'ng' });
+        });
+      } else if (typeof profile.mods === 'object') {
+        Object.entries(profile.mods).forEach(([id, state]) => modsToProcess.push({ id, state }));
+      }
+
       modsToProcess.forEach(({ id: modKey, state: modState }) => {
-        const mod = ModList[modKey];
+        const mod = (typeof mapModList !== 'undefined' ? mapModList : ModList)[modKey];
         if (mod) {
           const modItem = document.createElement('div');
           modItem.style.cssText = `
@@ -644,19 +789,20 @@ function createDetailedView(profile, type) {
             border-radius: 3px;
             border-left: 3px solid ${modState === 'wanted' ? '#4CAF50' : (mod.tier > 750 ? '#ed4c4c' : mod.tier > 500 ? '#F87171' : '#FCA5A5')};
           `;
+          const primaryText = isEn ? (mod.engMod || mod.mod) : mod.mod;
+          const secondaryText = isEn ? mod.mod : (mod.engMod || '');
           modItem.innerHTML = `
-            <div style="color: #FFF; font-size: 0.8em; margin-bottom: 2px;">${mod.mod}</div>
-            <div style="color: #888; font-size: 0.7em;">${mod.engMod}</div>
+            <div style="color: #FFF; font-size: 0.8em; margin-bottom: 2px;">${typeof formatModText === 'function' ? formatModText(primaryText, mod.value) : primaryText}</div>
+            <div style="color: #888; font-size: 0.7em;">${typeof formatModText === 'function' ? formatModText(secondaryText, mod.value) : secondaryText}</div>
           `;
           modList.appendChild(modItem);
         }
       });
       container.appendChild(modList);
     }
-  } else if (type === 'flask') {
-    if (profile.flaskType) {
-      const typeNames = { utility: 'ユーティリティフラスコ', life: 'ライフフラスコ', mana: 'マナフラスコ', hybrid: 'ハイブリッドフラスコ', tincture: 'チンキ' };
-      const typeRow = createDetailRow('タイプ', typeNames[profile.flaskType] || profile.flaskType);
+  } else if (type === 'flask' || type === 'item') {
+    if (profile.flaskType || profile.itemType) {
+      const typeRow = createDetailRow(isEn ? 'Type' : 'タイプ', profile.flaskType || profile.itemType);
       container.appendChild(typeRow);
       const spacer = document.createElement('div');
       spacer.style.cssText = 'height: 8px;';
@@ -665,23 +811,13 @@ function createDetailedView(profile, type) {
     if (profile.mods && profile.mods.length > 0) {
       const modList = document.createElement('div');
       modList.style.cssText = 'display: grid; gap: 4px;';
-      let flaskModsData = [];
-      try {
-        if (window.rawFlaskMods && window.rawFlaskMods.length > 0) {
-          flaskModsData = window.rawFlaskMods;
-        } else if (window.flaskModsData) {
-          flaskModsData = window.flaskModsData;
-        } else {
-          const flaskData = localStorage.getItem('flaskModsData');
-          if (flaskData) flaskModsData = JSON.parse(flaskData);
-        }
-      } catch (e) {
-        console.error('フラスコMODデータの取得エラー:', e);
-      }
+      
+      const modsData = type === 'flask' ? (window.rawFlaskMods || []) : (window.rawItemMods || []);
+
       profile.mods.forEach(modName => {
         let displayText = modName;
-        if (flaskModsData.length > 0) {
-          const mod = flaskModsData.find(m => m.name === modName);
+        if (modsData.length > 0) {
+          const mod = modsData.find(m => m.name === modName);
           if (mod) displayText = `${mod.name}　${mod.text}`;
         }
         const modItem = document.createElement('div');
@@ -689,51 +825,7 @@ function createDetailedView(profile, type) {
           background: #2a2a2a;
           padding: 6px 8px;
           border-radius: 3px;
-          border-left: 3px solid #9B59B6;
-          color: #FFF;
-          font-size: 0.8em;
-        `;
-        modItem.textContent = displayText;
-        modList.appendChild(modItem);
-      });
-      container.appendChild(modList);
-    }
-  } else if (type === 'item') {
-    if (profile.itemType) {
-      const typeRow = createDetailRow('タイプ', profile.itemType);
-      container.appendChild(typeRow);
-      const spacer = document.createElement('div');
-      spacer.style.cssText = 'height: 8px;';
-      container.appendChild(spacer);
-    }
-    if (profile.mods && profile.mods.length > 0) {
-      const modList = document.createElement('div');
-      modList.style.cssText = 'display: grid; gap: 4px;';
-      let itemModsData = [];
-      try {
-        if (window.rawItemMods && window.rawItemMods.length > 0) {
-          itemModsData = window.rawItemMods;
-        } else if (window.itemModsData) {
-          itemModsData = window.itemModsData;
-        } else {
-          const itemData = localStorage.getItem('itemModsData');
-          if (itemData) itemModsData = JSON.parse(itemData);
-        }
-      } catch (e) {
-        console.error('アイテムMODデータの取得エラー:', e);
-      }
-      profile.mods.forEach(modName => {
-        let displayText = modName;
-        if (itemModsData.length > 0) {
-          const mod = itemModsData.find(m => m.name === modName);
-          if (mod) displayText = `${mod.name}　${mod.text}`;
-        }
-        const modItem = document.createElement('div');
-        modItem.style.cssText = `
-          background: #2a2a2a;
-          padding: 6px 8px;
-          border-radius: 3px;
-          border-left: 3px solid #3498DB;
+          border-left: 3px solid ${type === 'flask' ? '#9B59B6' : '#3498DB'};
           color: #FFF;
           font-size: 0.8em;
         `;
@@ -751,7 +843,7 @@ function createDetailedView(profile, type) {
       const colorsDiv = document.createElement('div');
       colorsDiv.style.cssText = 'margin-bottom: 12px;';
       const colorTitle = document.createElement('div');
-      colorTitle.textContent = 'カラー設定:';
+      colorTitle.textContent = isEn ? 'Color Settings:' : 'カラー設定:';
       colorTitle.style.cssText = 'color: #AAA; font-size: 0.8em; margin-bottom: 8px;';
       colorsDiv.appendChild(colorTitle);
       enabledColors.forEach(colorKey => {
@@ -780,12 +872,17 @@ function createDetailedView(profile, type) {
       container.appendChild(colorsDiv);
     }
 
-    // 除外武器種の表示を追加
     const enabledExcludeWeapons = Object.entries(settings.excludeWeapons || {})
       .filter(([key, value]) => value)
       .map(([key]) => key);
     if (enabledExcludeWeapons.length > 0) {
-      const weaponNames = {
+      const weaponNames = isEn ? {
+        claw: 'Claw', dagger: 'Dagger', wand: 'Wand', oneHandSword: '1H Sword',
+        thrustingSword: 'Thrusting Sword', oneHandAxe: '1H Axe', oneHandMace: '1H Mace',
+        sceptre: 'Sceptre', runeDagger: 'Rune Dagger', bow: 'Bow', staff: 'Staff',
+        twoHandSword: '2H Sword', twoHandAxe: '2H Axe', twoHandMace: '2H Mace',
+        warstaff: 'Warstaff', shield: 'Shield'
+      } : {
         claw: '鉤爪', dagger: '短剣', wand: 'ワンド', oneHandSword: '片手剣',
         thrustingSword: '刺突剣', oneHandAxe: '片手斧', oneHandMace: '片手メイス',
         sceptre: 'セプター', runeDagger: 'ルーンの短剣', bow: '弓', staff: 'スタッフ',
@@ -793,110 +890,76 @@ function createDetailedView(profile, type) {
         warstaff: 'ウォースタッフ', shield: '盾'
       };
       const excludeWeaponDisplayNames = enabledExcludeWeapons.map(weapon => weaponNames[weapon] || weapon);
-      container.appendChild(createDetailRow('除外武器ベース', excludeWeaponDisplayNames.join(', ')));
+      container.appendChild(createDetailRow(isEn ? 'Excluded Weapons' : '除外武器ベース', excludeWeaponDisplayNames.join(', ')));
     }
 
     const linkSettings = [];
-    if (settings.anyThreeLink) linkSettings.push('3リンク');
-    if (settings.anyFourLink) linkSettings.push('4リンク');
-    if (settings.anyFiveLink) linkSettings.push('5リンク');
-    if (settings.anySixLink) linkSettings.push('6リンク');
-    if (settings.anySixSocket) linkSettings.push('6ソケット');
-    if (linkSettings.length > 0) container.appendChild(createDetailRow('リンク設定', linkSettings.join(', ')));
+    if (settings.anyThreeLink) linkSettings.push(isEn ? '3-Link' : '3リンク');
+    if (settings.anyFourLink) linkSettings.push(isEn ? '4-Link' : '4リンク');
+    if (settings.anyFiveLink) linkSettings.push(isEn ? '5-Link' : '5リンク');
+    if (settings.anySixLink) linkSettings.push(isEn ? '6-Link' : '6リンク');
+    if (settings.anySixSocket) linkSettings.push(isEn ? '6-Socket' : '6ソケット');
+    if (linkSettings.length > 0) container.appendChild(createDetailRow(isEn ? 'Links' : 'リンク設定', linkSettings.join(', ')));
     const movementSettings = [];
     if (settings.movement?.ten) movementSettings.push('10%');
     if (settings.movement?.fifteen) movementSettings.push('15%');
     if (settings.movement?.twenty) movementSettings.push('20%');
     if (settings.movement?.twentyfive) movementSettings.push('25%');
     if (settings.movement?.thirty) movementSettings.push('30%');
-    if (movementSettings.length > 0) container.appendChild(createDetailRow('移動速度', movementSettings.join(', ')));
+    if (movementSettings.length > 0) container.appendChild(createDetailRow(isEn ? 'MS' : '移動速度', movementSettings.join(', ')));
     const enabledWeapons = Object.entries(settings.weapon || {})
       .filter(([key, value]) => value)
       .map(([key]) => key);
     if (enabledWeapons.length > 0) {
-      const weaponNames = {
+      const weaponNames = isEn ? {
+        claw: 'Claw', dagger: 'Dagger', wand: 'Wand', oneHandSword: '1H Sword',
+        thrustingSword: 'Thrusting Sword', oneHandAxe: '1H Axe', oneHandMace: '1H Mace',
+        sceptre: 'Sceptre', runeDagger: 'Rune Dagger', bow: 'Bow', staff: 'Staff',
+        twoHandSword: '2H Sword', twoHandAxe: '2H Axe', twoHandMace: '2H Mace', warstaff: 'Warstaff'
+      } : {
         claw: '鉤爪', dagger: '短剣', wand: 'ワンド', oneHandSword: '片手剣',
         thrustingSword: '刺突剣', oneHandAxe: '片手斧', oneHandMace: '片手メイス',
         sceptre: 'セプター', runeDagger: 'ルーンの短剣', bow: '弓', staff: 'スタッフ',
         twoHandSword: '両手剣', twoHandAxe: '両手斧', twoHandMace: '両手メイス', warstaff: 'ウォースタッフ'
       };
       const weaponDisplayNames = enabledWeapons.map(weapon => weaponNames[weapon] || weapon);
-      container.appendChild(createDetailRow('武器ベース', weaponDisplayNames.join(', ')));
+      container.appendChild(createDetailRow(isEn ? 'Weapon Bases' : '武器ベース', weaponDisplayNames.join(', ')));
     }
-    const selectedGems = settings.selectedGems || [];
-    if (selectedGems.length > 0) {
-      const gemList = document.createElement('div');
-      gemList.style.cssText = 'margin-top: 12px;';
-      const gemTitle = document.createElement('div');
-      gemTitle.textContent = '選択されたジェム:';
-      gemTitle.style.cssText = 'color: #AAA; font-size: 0.8em; margin-bottom: 8px;';
-      gemList.appendChild(gemTitle);
-      selectedGems.forEach(gemRegex => {
-        const gemItem = document.createElement('div');
-        gemItem.style.cssText = `
-          background: #2a2a2a;
-          padding: 6px 8px;
-          border-radius: 3px;
-          border-left: 3px solid #F39C12;
-          color: #FFF;
-          font-size: 0.8em;
-          margin-bottom: 4px;
-          word-break: break-word;
-        `;
-        let displayName = gemRegex;
-        if (profile.gemInfo) {
-          const gemInfo = profile.gemInfo.find(g => g.regex === gemRegex);
-          if (gemInfo && gemInfo.display_name) displayName = gemInfo.display_name;
-        }
-        if (displayName === gemRegex && profile.gemDisplayNames) {
-          const gemDisplayInfo = profile.gemDisplayNames.find(g => g.regex === gemRegex);
-          if (gemDisplayInfo && gemDisplayInfo.displayName) displayName = gemDisplayInfo.displayName;
-        }
-        if (displayName === gemRegex && typeof window.getGemDisplayName === 'function') {
-          displayName = window.getGemDisplayName(gemRegex);
-        }
-        gemItem.textContent = displayName;
-        if (displayName !== gemRegex) gemItem.title = `Regex: ${gemRegex}`;
-        gemList.appendChild(gemItem);
-      });
-      container.appendChild(gemList);
-    }
-  } else if (type === 'beast') {
-    if (profile.beasts && profile.beasts.length > 0) {
-      const beastList = document.createElement('div');
-      beastList.style.cssText = 'display: grid; gap: 4px;';
-      profile.beasts.forEach(beastName => {
-        const beast = beastlist && beastlist[beastName];
-        if (beast) {
-          const beastItem = document.createElement('div');
-          beastItem.style.cssText = `
+  } else if (type === 'beast' || type === 'scarab' || type === 'tattoo' || type === 'runegraft') {
+    const modItems = profile.beasts || profile.scarabs || profile.tattoos || profile.runegrafts || [];
+    if (modItems.length > 0) {
+      const list = document.createElement('div');
+      list.style.cssText = 'display: grid; gap: 4px;';
+      const dataList = type === 'beast' ? beastlist : (type === 'scarab' ? scarablist : (type === 'tattoo' ? tattoolist : runegraftlist));
+      const stripeColor = type === 'beast' ? '#1ABC9C' : (type === 'scarab' ? '#D35400' : (type === 'tattoo' ? '#8E44AD' : '#2C3E50'));
+
+      modItems.forEach(name => {
+        const item = dataList && dataList[name];
+        if (item) {
+          const itemDiv = document.createElement('div');
+          itemDiv.style.cssText = `
             background: #2a2a2a;
             padding: 6px 8px;
             border-radius: 3px;
-            border-left: 3px solid #1ABC9C;
+            border-left: 3px solid ${stripeColor};
             color: #FFF;
             font-size: 0.8em;
           `;
-          beastItem.innerHTML = `
-            <div style="color: #FFF; font-size: 0.8em; margin-bottom: 2px;">${beastName}</div>
-            <div style="color: #888; font-size: 0.7em;">${beast.family || ''} - ${beast.effect || ''}</div>
+          const displayName = isEn ? (item.engName || name) : name;
+          const displayDesc = isEn ? (item.enDescription || item.description || item.effect || '') : (item.description || item.effect || '');
+          itemDiv.innerHTML = `
+            <div style="color: #FFF; font-size: 0.8em; margin-bottom: 2px;">${displayName}</div>
+            <div style="color: #888; font-size: 0.7em;">${displayDesc}${type === 'beast' && item.family ? ' - ' + item.family : ''}</div>
           `;
-          beastList.appendChild(beastItem);
+          list.appendChild(itemDiv);
         } else {
           const unknownItem = document.createElement('div');
-          unknownItem.style.cssText = `
-            background: #2a2a2a;
-            padding: 6px 8px;
-            border-radius: 3px;
-            border-left: 3px solid #1ABC9C;
-            color: #FFF;
-            font-size: 0.8em;
-          `;
-          unknownItem.textContent = beastName;
-          beastList.appendChild(unknownItem);
+          unknownItem.style.cssText = `background: #2a2a2a; padding: 6px 8px; border-radius: 3px; border-left: 3px solid ${stripeColor}; color: #FFF; font-size: 0.8em;`;
+          unknownItem.textContent = name;
+          list.appendChild(unknownItem);
         }
       });
-      container.appendChild(beastList);
+      container.appendChild(list);
     }
   }
 
@@ -959,6 +1022,12 @@ function loadSavedProfile(name, type, tabId) {
       } else if (type === 'scarab') {
         document.getElementById('scarabProfileList').value = name;
         loadScarabProfile();
+      } else if (type === 'tattoo') {
+        document.getElementById('tattooProfileList').value = name;
+        loadTattooProfile();
+      } else if (type === 'runegraft') {
+        document.getElementById('runegraftProfileList').value = name;
+        loadRunegraftProfile();
       }
       const tabContent = document.getElementById(tabId);
       if (tabContent) {
@@ -1011,6 +1080,9 @@ function deleteSavedProfile(name, type) {
   else if (type === 'item') storageKey = 'itemProfiles';
   else if (type === 'vendor') storageKey = 'vendorProfiles';
   else if (type === 'beast') storageKey = 'beastProfiles';
+  else if (type === 'scarab') storageKey = 'scarabProfiles';
+  else if (type === 'tattoo') storageKey = 'tattooProfiles';
+  else if (type === 'runegraft') storageKey = 'runegraftProfiles';
 
   try {
     const profiles = JSON.parse(localStorage.getItem(storageKey) || '{}');
@@ -1034,6 +1106,15 @@ function deleteSavedProfile(name, type) {
     } else if (type === 'beast') {
       window.beastProfiles = profiles;
       if (typeof updateBeastProfileList === 'function') updateBeastProfileList();
+    } else if (type === 'scarab') {
+      window.scarabProfiles = profiles;
+      if (typeof updateScarabProfileList === 'function') updateScarabProfileList();
+    } else if (type === 'tattoo') {
+      window.tattooProfiles = profiles;
+      if (typeof updateTattooProfileList === 'function') updateTattooProfileList();
+    } else if (type === 'runegraft') {
+      window.runegraftProfiles = profiles;
+      if (typeof updateRunegraftProfileList === 'function') updateRunegraftProfileList();
     }
 
     updateSavedRegexDisplay();
@@ -1077,6 +1158,9 @@ function addFilterControls() {
     <option value="item">アイテム</option>
     <option value="vendor">ベンダー</option>
     <option value="beast">ビースト</option>
+    <option value="scarab">スカラベ</option>
+    <option value="tattoo">タトゥー</option>
+    <option value="runegraft">ルーングラフト</option>
   `;
   typeFilter.style.cssText = `
     padding: 8px 12px;
@@ -1095,6 +1179,12 @@ function addFilterControls() {
     <option value="oldest">更新日時（古い順）</option>
     <option value="name_asc">名前（昇順）</option>
     <option value="name_desc">名前（降順）</option>
+    <option value="quantity_desc">数量（多い順）</option>
+    <option value="packsize_desc">パックサイズ（多い順）</option>
+    <option value="rarity_desc">レアリティ（多い順）</option>
+    <option value="scarab_desc">スカラベ（多い順）</option>
+    <option value="currency_desc">カレンシー（多い順）</option>
+    <option value="maps_desc">マップ（多い順）</option>
   `;
   sortFilter.style.cssText = `
     padding: 8px 12px;
@@ -1210,6 +1300,18 @@ function sortCards(cards, sortType) {
         return (a.dataset.profileName || '').localeCompare(b.dataset.profileName || '');
       case 'name_desc':
         return (b.dataset.profileName || '').localeCompare(a.dataset.profileName || '');
+      case 'currency_desc':
+        return Number(b.dataset.totalCurrency || 0) - Number(a.dataset.totalCurrency || 0);
+      case 'packsize_desc':
+        return Number(b.dataset.totalPackSize || 0) - Number(a.dataset.totalPackSize || 0);
+      case 'quantity_desc':
+        return Number(b.dataset.totalQuantity || 0) - Number(a.dataset.totalQuantity || 0);
+      case 'rarity_desc':
+        return Number(b.dataset.totalRarity || 0) - Number(a.dataset.totalRarity || 0);
+      case 'scarab_desc':
+        return Number(b.dataset.totalScarab || 0) - Number(a.dataset.totalScarab || 0);
+      case 'maps_desc':
+        return Number(b.dataset.totalMap || 0) - Number(a.dataset.totalMap || 0);
       case 'custom':
         return 0;
       default:

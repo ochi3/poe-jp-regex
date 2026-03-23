@@ -34,6 +34,11 @@ function toggleLanguage() {
     updateBeastRegex();
     updateTattooRegex();
     updateRunegraftRegex();
+    // 保存済み一覧が表示中なら再描画
+    const savedContent = document.getElementById('savedContent');
+    if (savedContent && savedContent.style.display !== 'none') {
+        if (typeof updateSavedRegexDisplay === 'function') updateSavedRegexDisplay();
+    }
 }
 
 /**
@@ -51,20 +56,10 @@ function loadLanguageState() {
  * 言語切り替えボタンのテキストを現在の言語に合わせて更新
  */
 function updateLanguageUI() {
-    const toggles = [
-        'mapLangToggle',
-        'scarabLangToggle',
-        'beastLangToggle',
-        'tattooLangToggle',
-        'runegraftLangToggle'
-    ];
-    
-    toggles.forEach(id => {
-        const el = document.getElementById(id);
-        if (el) {
-            el.textContent = `Language: ${currentLanguage.toUpperCase()}`;
-        }
-    });
+    const btn = document.getElementById('globalLangToggle');
+    if (btn) {
+        btn.textContent = `Language: ${currentLanguage.toUpperCase()}`;
+    }
 }
 
 // Mod名の#プレースホルダーを実際の値で置換して表示

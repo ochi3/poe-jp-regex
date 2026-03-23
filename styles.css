@@ -98,6 +98,7 @@ nav {
     flex: 1;
     padding: 16px;
     width: 100%;
+    position: relative;
 }
 
 .tab-content {
@@ -786,7 +787,7 @@ button.btn-secondary-highlight:hover {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.85);
-    z-index: 1000;
+    z-index: 2000;
     align-items: center;
     justify-content: center;
 }
@@ -1230,7 +1231,7 @@ button.btn-secondary-highlight:hover {
     background: var(--bg-secondary);
     border-left: 1px solid var(--border-color);
     box-shadow: -5px 0 15px rgba(0,0,0,0.5);
-    z-index: 1000;
+    z-index: 2000;
     transition: right 0.3s ease;
     overflow-y: auto;
 }
