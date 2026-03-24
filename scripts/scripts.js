@@ -1141,7 +1141,7 @@ function updateBeastRegex() {
     const data = beastlist[name];
     return (currentLanguage === 'en' && data.enRegex) ? data.enRegex : data.regex;
   });
-  const regex = selectedRegexes.length > 0 ? `"${selectedRegexes.join('|')}"` : '';
+  const regex = selectedRegexes.length > 0 ? selectedRegexes.join('|') : '';
   
   document.getElementById('beastRegexOutput').textContent = regex;
   
