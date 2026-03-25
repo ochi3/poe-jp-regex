@@ -530,7 +530,7 @@ const mapModList = {
     "weight": 1000,
     "tier": 100,
     "engRegex": "r li",
-    "Regex": "ラ.*上",
+    "Regex": "フが.*上",
     "tradeStatIds": [
       "explicit.stat_95249895"
     ],
@@ -1951,7 +1951,7 @@ const mapModList = {
     "weight": 100,
     "tier": 1111,
     "engRegex": "r li",
-    "Regex": "ラ.*上",
+    "Regex": "フが.*上",
     "tradeStatIds": [
       "explicit.stat_95249895"
     ],
