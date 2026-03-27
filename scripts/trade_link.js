@@ -242,3 +242,26 @@ function copyTradeLink() {
             });
     }
 }
+
+/**
+ * 独自のトレード検索IDを使用してリンクを開く。
+ * リーグ設定は getLeagueName() から動的に取得される。
+ * @param {string} queryId トレードサイトの検索ID（URLの末尾部分）
+ */
+function openCustomTrade(queryId) {
+    // リーグ名を取得
+    const league = (typeof getLeagueName === 'function' ? getLeagueName() : null)
+        || document.getElementById('leagueInput')?.value
+        || document.getElementById('leagueSelect')?.value
+        || "Mirage";
+    
+    // 現在の言語設定に基づいてベースURLを選択
+    const baseUrl = (typeof currentLanguage !== 'undefined' && currentLanguage === 'en') 
+        ? 'www.pathofexile.com' 
+        : 'jp.pathofexile.com';
+    
+    // クエリIDが空の場合は検索トップを開く
+    const tradeUrl = `https://${baseUrl}/trade/search/${encodeURIComponent(league)}${queryId ? '/' + queryId : ''}`;
+    
+    window.open(tradeUrl, '_blank');
+}
