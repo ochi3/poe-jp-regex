@@ -833,7 +833,7 @@ const mapModList = {
     "weight": 1000,
     "tier": 360,
     "engRegex": "h vu",
-    "Regex": "ラビ",
+    "Regex": "ネラ",
     "tradeStatIds": [
       "explicit.stat_1366534040"
     ],
@@ -1889,7 +1889,7 @@ const mapModList = {
     "weight": 60,
     "tier": 1556,
     "engRegex": "vu",
-    "Regex": "ラビ",
+    "Regex": "ネラ",
     "tradeStatIds": [
       "explicit.stat_1366534040",
       "explicit.stat_2326202293",
