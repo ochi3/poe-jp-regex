@@ -232,56 +232,7 @@ function addEffectItem(key, value) {
     ModListDiv.appendChild(effectItem);
 }
 
-function generateRarityRegex() {
-    const normalChecked = document.getElementById('normalCheckbox').checked;
-    const magicChecked = document.getElementById('magicCheckbox').checked;
-    const rareChecked = document.getElementById('rareCheckbox').checked;
 
-    const rarities = {
-        ja: [],
-        en: []
-    };
-
-    if (normalChecked) {
-        rarities.ja.push('ル');
-        rarities.en.push('n');
-    }
-    if (magicChecked) {
-        rarities.ja.push('ク');
-        rarities.en.push('m');
-    }
-    if (rareChecked) {
-        rarities.ja.push('ア');
-        rarities.en.push('r');
-    }
-
-    const currentRarities = rarities[currentLanguage];
-
-    if (currentRarities.length === 0 || currentRarities.length === 3) {
-        return '';
-    } else if (currentRarities.length === 1) {
-        return currentLanguage === 'ja'
-            ? `${currentRarities[0]}\$`
-            : `"y: ${currentRarities[0]}"`;
-    } else {
-        return currentLanguage === 'ja'
-            ? `(${currentRarities.join('|')})\$`
-            : `"y: (${currentRarities.join('|')})"`;
-    }
-}
-
-document.getElementById('normalCheckbox').addEventListener('change', () => {
-    saveSearchModeState();
-    updateCombinedRegex();
-});
-document.getElementById('magicCheckbox').addEventListener('change', () => {
-    saveSearchModeState();
-    updateCombinedRegex();
-});
-document.getElementById('rareCheckbox').addEventListener('change', () => {
-    saveSearchModeState();
-    updateCombinedRegex();
-});
 
 
 function updateCombinedRegex() {
@@ -348,21 +299,11 @@ function updateCombinedRegex() {
         combinedResult += ` ${extraRegex}`;
     }
 
-    const rarityRegex = generateRarityRegex();
-
-    if (currentLanguage === 'ja') {
-        if (rarityRegex && ModListResult) {
-            combinedResult = `${ModListResult}|${rarityRegex}${combinedResult}`.trim();
-        } else if (rarityRegex) {
-            combinedResult = `${rarityRegex}${combinedResult}`.trim();
-        } else if (ModListResult) {
+    if (ModListResult) {
+        if (currentLanguage === 'ja') {
             combinedResult = `${ModListResult}${combinedResult}`.trim();
-        }
-    } else {
-        if (ModListResult) {
-            combinedResult = `${ModListResult} ${rarityRegex} ${combinedResult}`.trim();
         } else {
-            combinedResult = `${rarityRegex} ${combinedResult}`.trim();
+            combinedResult = `${ModListResult} ${combinedResult}`.trim();
         }
     }
 
@@ -885,9 +826,9 @@ function saveSearchModeState() {
     const state = {
         searchMode: document.querySelector('input[name="searchMode"]:checked')?.value || 'any',
         rarityChecked: {
-            normal: document.getElementById('normalCheckbox').checked,
-            magic: document.getElementById('magicCheckbox').checked,
-            rare: document.getElementById('rareCheckbox').checked
+            normal: document.getElementById('normalCheckbox')?.checked || false,
+            magic: document.getElementById('magicCheckbox')?.checked || false,
+            rare: document.getElementById('rareCheckbox')?.checked || false
         }
     };
     localStorage.setItem('searchModeState', JSON.stringify(state));
@@ -902,9 +843,9 @@ function loadSearchModeState() {
         searchModeRadio.checked = true;
     }
     
-    document.getElementById('normalCheckbox').checked = state.rarityChecked?.normal || false;
-    document.getElementById('magicCheckbox').checked = state.rarityChecked?.magic || false;
-    document.getElementById('rareCheckbox').checked = state.rarityChecked?.rare || false;
+    if (document.getElementById('normalCheckbox')) document.getElementById('normalCheckbox').checked = state.rarityChecked?.normal || false;
+    if (document.getElementById('magicCheckbox')) document.getElementById('magicCheckbox').checked = state.rarityChecked?.magic || false;
+    if (document.getElementById('rareCheckbox')) document.getElementById('rareCheckbox').checked = state.rarityChecked?.rare || false;
     
     searchAllMode = searchMode === 'all';
 }
@@ -938,9 +879,9 @@ function saveProfile() {
       ngModChecked: document.getElementById('ngModCheckbox').checked,
       mapTierChecked: document.getElementById('mapTierCheckbox').checked,
       rarities: {
-        normal: document.getElementById('normalCheckbox').checked,
-        magic: document.getElementById('magicCheckbox').checked,
-        rare: document.getElementById('rareCheckbox').checked
+        normal: document.getElementById('normalCheckbox')?.checked || false,
+        magic: document.getElementById('magicCheckbox')?.checked || false,
+        rare: document.getElementById('rareCheckbox')?.checked || false
       }
     }
   };
@@ -983,9 +924,9 @@ function loadProfile() {
     // チェックボックス状態復元（オプショナルチェイニングで安全に）
     document.getElementById('ngModCheckbox').checked = profile.settings?.ngModChecked || false;
     document.getElementById('mapTierCheckbox').checked = profile.settings?.mapTierChecked || false;
-    document.getElementById('normalCheckbox').checked = profile.settings?.rarities?.normal || false;
-    document.getElementById('magicCheckbox').checked = profile.settings?.rarities?.magic || false;
-    document.getElementById('rareCheckbox').checked = profile.settings?.rarities?.rare || false;
+    if (document.getElementById('normalCheckbox')) document.getElementById('normalCheckbox').checked = profile.settings?.rarities?.normal || false;
+    if (document.getElementById('magicCheckbox')) document.getElementById('magicCheckbox').checked = profile.settings?.rarities?.magic || false;
+    if (document.getElementById('rareCheckbox')) document.getElementById('rareCheckbox').checked = profile.settings?.rarities?.rare || false;
 
     // 検索モード
     const searchMode = profile.settings?.searchMode || 'any';
@@ -1620,6 +1561,16 @@ function copyMagic() {
 
 function copyRare() {
     const text = currentLanguage === 'ja' ? 'ア$' : '"y: r"';
+    copyTextToClipboard(text);
+}
+
+function copyCorrupted() {
+    const text = currentLanguage === 'ja' ? 'コラプト' : 'pted';
+    copyTextToClipboard(text);
+}
+
+function copyNonCorrupted() {
+    const text = currentLanguage === 'ja' ? '!コラプト' : '!pted';
     copyTextToClipboard(text);
 }
 

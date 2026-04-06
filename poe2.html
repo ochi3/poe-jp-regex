@@ -159,6 +159,8 @@
                     <button onclick="copyNormal()">ノーマル</button>
                     <button onclick="copyMagic()">マジック</button>
                     <button onclick="copyRare()">レア</button>
+                    <button onclick="copyCorrupted()">コラプト</button>
+                    <button onclick="copyNonCorrupted()">ノンコラ</button>
                     <div class="button-with-info" style="margin-left: -5px;">
                         <div class="info-icon">
                             !
@@ -174,14 +176,6 @@
                     <label class="input-label">
                         <input id="packAdditionCheckbox" onchange="updateCombinedRegex(); saveInputState()" type="checkbox"/>
                         パック追加
-                    </label>
-                    <label class="input-label">
-                        <input id="corruptedCheckbox" onchange="updateCombinedRegex(); saveInputState()" type="checkbox"/>
-                        コラプト
-                    </label>
-                    <label class="input-label">
-                        <input id="nonCorruptedCheckbox" onchange="updateCombinedRegex(); saveInputState()" type="checkbox"/>
-                        ノンコラ
                     </label>
                 </div>
                 <div class="input-group" style="display: none;">

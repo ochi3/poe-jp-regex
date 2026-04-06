@@ -459,12 +459,6 @@ function generateExtraRegex() {
     if (document.getElementById('packAdditionCheckbox')?.checked) {
         finalResult.push('が追.*ク出');
     }
-    if (document.getElementById('corruptedCheckbox')?.checked) {
-        finalResult.push('コラ');
-    }
-    if (document.getElementById('nonCorruptedCheckbox')?.checked) {
-        finalResult.push('!コラ');
-    }
 
     return finalResult.join(' ');
 }
@@ -929,8 +923,6 @@ function loadInputState() {
         'waystoneInput': state.waystone || '',
         'deliriumInput': state.delirium || '',
         'packAdditionCheckbox': state.packAddition || false,
-        'corruptedCheckbox': state.corrupted || false,
-        'nonCorruptedCheckbox': state.nonCorrupted || false,
         'beastBulkThreshold': state.beastBulkThreshold || '10',
         'beastBulkThresholdMax': state.beastBulkThresholdMax || '',
         'scarabBulkThreshold': state.scarabBulkThreshold || '10',
@@ -1013,8 +1005,6 @@ function saveProfile() {
       rareMonster: document.getElementById('rareMonsterInput')?.value || '',
       magicMonster: document.getElementById('magicMonsterInput')?.value || '',
       packAddition: document.getElementById('packAdditionCheckbox')?.checked || false,
-      corrupted: document.getElementById('corruptedCheckbox')?.checked || false,
-      nonCorrupted: document.getElementById('nonCorruptedCheckbox')?.checked || false,
       searchMode: document.querySelector('input[name="searchMode"]:checked')?.value || 'any',
       ngModChecked: document.getElementById('ngModCheckbox').checked,
       mapTierChecked: document.getElementById('mapTierCheckbox')?.checked || false,
@@ -1067,8 +1057,6 @@ function loadProfile() {
     if (document.getElementById('magicMonsterInput')) document.getElementById('magicMonsterInput').value = profile.settings?.magicMonster || '';
 
     if (document.getElementById('packAdditionCheckbox')) document.getElementById('packAdditionCheckbox').checked = profile.settings?.packAddition || false;
-    if (document.getElementById('corruptedCheckbox')) document.getElementById('corruptedCheckbox').checked = profile.settings?.corrupted || false;
-    if (document.getElementById('nonCorruptedCheckbox')) document.getElementById('nonCorruptedCheckbox').checked = profile.settings?.nonCorrupted || false;
 
     // チェックボックス状態復元（オプショナルチェイニングで安全に）
     document.getElementById('ngModCheckbox').checked = profile.settings?.ngModChecked || false;
@@ -1714,6 +1702,16 @@ function copyMagic() {
 
 function copyRare() {
     const text = currentLanguage === 'ja' ? 'ア$' : '"y: r"';
+    copyTextToClipboard(text);
+}
+
+function copyCorrupted() {
+    const text = currentLanguage === 'ja' ? 'コラプト' : 'pted';
+    copyTextToClipboard(text);
+}
+
+function copyNonCorrupted() {
+    const text = currentLanguage === 'ja' ? '!コラプト' : '!pted';
     copyTextToClipboard(text);
 }
 
