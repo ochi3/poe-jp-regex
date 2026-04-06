@@ -1,0 +1,1120 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <!-- Google タグ (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BV04ELTZSP"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-BV04ELTZSP');
+    </script>
+    <meta name="google-site-verification" content="M679Lx1mttxZau0-nYyXDgG72YyGkistNw9JxAOYAk8" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1024, initial-scale=1.0">
+    <meta name="description" content="PoEのRegexを日本語で作成するツール。マップmod、英語Regex変換">
+    <meta name="keywords" content="path of exile, gaming, action rpg, regex, PoE, Regex, 日本語, マップmod">
+    <title>PoE JP Regex</title>
+    <link rel="stylesheet" href="styles.css?v=2">
+</head>
+<body>
+    <div id="sideMenu">
+        <h3>PoE JP Regex <span style="font-size: 0.6em; opacity: 0.8; margin-left: 8px;">3.28</span></h3>
+        <div style="display: flex; gap: 8px; margin-top: 10px; margin-bottom: 10px;">
+            <a href="poe1" style="flex: 1; text-align: center; padding: 3px; background: var(--accent-primary); border: 1px solid var(--accent-primary); border-radius: 4px; color: #000; text-decoration: none; font-weight: bold;">PoE 1</a>
+            <a href="poe2" style="flex: 1; text-align: center; padding: 3px; background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: 4px; color: var(--text-primary); text-decoration: none;">PoE 2</a>
+        </div>
+
+        <nav>
+            <a href="#map" class="nav-link active" data-tab="mapContent">マップMod</a>
+            <a href="#trans" class="nav-link" data-tab="transContent">英語Regex変換</a>
+            <a href="#vender" class="nav-link" data-tab="vendorContent">ベンダー(ACT用)</a>
+            <a href="#scarab" class="nav-link" data-tab="scarabContent">スカラベ</a>
+            <a href="#beast" class="nav-link" data-tab="beastContent">ビースト</a>
+            <a href="#tattoo" class="nav-link" data-tab="tattooContent">タトゥー</a>
+            <a href="#runegraft" class="nav-link" data-tab="runegraftContent">ルーングラフト</a>
+            <a href="#item" class="nav-link" data-tab="itemContent">リコンビMod</a>
+            <a href="#flask" class="nav-link" data-tab="flaskContent">フラスコMod</a>
+            <a href="#saved" class="nav-link" data-tab="savedContent">保存済みRegex</a>
+            <a href="#trade" class="nav-link" data-tab="tradeContent">トレードリンク集</a>
+            <a href="#link" class="nav-link" data-tab="linkContent">リンク集</a>
+        </nav>
+
+        <h4 style="margin-top: 32px;">
+            Discord @ochi3c<br>
+            Twitter <a href="https://x.com/ochi3c" style="color: var(--accent-primary);">@ochi3c</a>
+        </h4>
+        <button onclick="openFeedbackModal()" style="width: 100%; margin-bottom: 16px; background: var(--bg-tertiary); color: var(--accent-primary); border: 1px solid var(--border-color);">要望・不具合を送信</button>
+        <h4>Change log<br>26/03/25<br>モンスターのライフMod修正<br><br>26/03/24<br>ビーストRegex修正<br><br>26/03/24<br>Regex、ビーストレシピ修正<br><br>26/03/23<br>Regex一覧変更、Languageボタンの位置変更<br><br>26/03/22<br>数値Regex最適化、ルーンタトゥータグ追加<br><br>26/03/19<br>トレードリンクからガデマップを弾くようになりました。<br><br>英語のトレードリンクを作成できるようになりました。<br><br>スカラベ一括選択時下限を0にすると古いスカラベも選択されていたものを修正<br><br>26/03/19<br>トレードリンクの設定追加(コラプト、モッド数)<br>英語設定の維持<br><br>26/03/18<br>スカラベ、タトゥー、ルーングラフトRegexの追加<br><br>26/03/17<br>ビースト名前修正<br><br>26/03/15<br>ビースト価格自動更新機能追加<br>要望・不具合報告機能追加<br><br>26/03/12<br>トレードリンク機能追加<br>modの詳細を追加<br><br>26/03/10<br>カレンシー、マップ、スカラベ量の対応、新MOD追加<br><br>25/10/21<br>ベンダー(ACT用)更新、ワンドと弓の修正<br><br>25/10/17<br>いろいろ追加<br><br>25/09/19<br>200以上の数値に対応、レアリティの追加<br><br>25/07/02<br>チェックボックスバグ修正<br><br>25/06/05<br>文字数制限50→250<br></h4>
+    </div>
+
+    <div id="contentArea">
+        <!-- グローバル言語切り替えボタン -->
+        <div id="globalLangToggleContainer" style="position: absolute; top: 16px; right: 24px; z-index: 1001;">
+            <button id="globalLangToggle" onclick="toggleLanguage()" style="background: var(--bg-secondary); color: var(--accent-primary); border: 1px solid var(--border-color); padding: 8px 16px; border-radius: 8px; font-weight: bold; box-shadow: 0 4px 12px rgba(0,0,0,0.5);">Language: JA</button>
+        </div>
+        <!-- マップModタブ -->
+        <div id="mapContent" class="tab-content">
+            <div class="card">
+                <h2 class="section-header">マップMod Regex</h2>
+                <div class="input-group">
+                    <input type="text" id="profileName" placeholder="プロファイル名を入力してください。" class="large-input">
+                    <button onclick="saveProfile()">保存</button>
+                    <button onclick="loadProfile()">読み込み</button>
+                    <button onclick="deleteProfile()">削除</button>
+                    <select id="profileList" class="large-input" onchange="loadProfile()">
+                        <option value="">-- プロファイル選択 --</option>
+                    </select>
+                </div>
+
+                <div class="output-area" id="combinedRegexOutput"></div>
+                
+                <div class="input-group">
+                    <button onclick="copyToClipboard()">コピー</button>
+                    <button class="btn-primary-highlight" id="tradeLinkBtn" onclick="generateTradeLink()">トレードリンク</button>
+                    <!-- <button class="secondary-btn" id="copyTradeLinkBtn" onclick="copyTradeLink()">リンクをコピー(デバッグ)</button> -->
+                    <button class="btn-secondary-highlight" id="tradeSettingsBtn" onclick="toggleTradeSettings()">設定</button>
+                        <div class="button-with-info" style="margin-left: -5px;">
+                            <div class="info-icon">New</div>
+                            <div class="info-tooltip">
+                                <strong>トレードリンク機能を追加</strong>
+                                Regexに合ったトレードリンクを生成できます。<br>
+                            </div>
+                        </div>
+                    <button onclick="resetAll()">リセット</button>
+                    <div style="width: 24px;"></div> <!-- スペーサー -->
+                    <span id="charCount" class="char-count"></span>
+                </div>
+
+                <div class="input-group">
+                    <label class="input-label">
+                        数量:
+                        <input type="number" id="itemQuantityInput" oninput="updateCombinedRegex(); saveInputState()">
+                    </label>
+                    <label class="input-label">
+                        パックサイズ:
+                        <input type="number" id="packSizeInput" oninput="updateCombinedRegex(); saveInputState()">
+                    </label>
+                    <label class="input-label">
+                        レアリティ:
+                        <input type="number" id="rarityInput" oninput="updateCombinedRegex(); saveInputState()">
+                    </label>
+                </div>
+
+                <div class="input-group">
+                    <label class="input-label">
+                        スカラベ:
+                        <input type="number" id="scarabInput" oninput="updateCombinedRegex(); saveInputState()">
+                    </label>
+                    <label class="input-label">
+                        カレンシー:
+                        <input type="number" id="currencyInput" oninput="updateCombinedRegex(); saveInputState()">
+                    </label>
+                    <label class="input-label">
+                        マップ:
+                        <input type="number" id="mapInput" oninput="updateCombinedRegex(); saveInputState()">
+                    </label>
+                    <label class="input-label">
+                        <input type="radio" name="searchMode" id="searchAllRadio" value="all" checked onchange="updateSearchMode(); saveSearchModeState()">
+                        全て値以上
+                    </label>
+                    <label class="input-label">
+                        <input type="radio" name="searchMode" id="searchAnyRadio" value="any" onchange="updateSearchMode(); saveSearchModeState()">
+                        どれか
+                    </label>
+                </div>
+
+                <div class="input-group">
+                    <button onclick="copyUnidentified()">未鑑定</button>
+                    <button onclick="copyNormal()">ノーマル</button>
+                    <button onclick="copyMagic()">マジック</button>
+                    <button onclick="copyRare()">レア</button>
+                    <div class="button-with-info" style="margin-left: -5px;">
+                        <div class="info-icon">!</div>
+                        <div class="info-tooltip">
+                            <strong>マップ作成の下準備に</strong>
+                            ボタンに書かれている文字をコピーします。<br>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label class="input-label">
+                        <input type="checkbox" id="normalCheckbox" value="normal"> ノーマル
+                    </label>
+                    <label class="input-label">
+                        <input type="checkbox" id="magicCheckbox" value="magic"> マジック
+                    </label>
+                    <label class="input-label">
+                        <input type="checkbox" id="rareCheckbox" value="rare"> レア
+                    </label>
+                </div>
+                <div class="input-group" style="display: none;">
+                    <label class="input-label">
+                        <input type="checkbox" id="ngModCheckbox" checked> NG mod
+                    </label>
+                </div>
+                <div class="input-group">
+                    <label class="input-label">
+                        <input type="checkbox" id="mapTierCheckbox" onchange="updateModList()"> T17 mod
+                    </label>
+                    <div class="button-with-info">
+                        <div class="info-icon">i</div>
+                        <div class="info-tooltip">
+                            <strong>T17 MOD</strong>
+                            Tier17やメモリーマップで付くMODが表示されます。<br>
+                        </div>
+                    </div>
+                    <label class="input-label">
+                        <input type="checkbox" id="showModDetailsCheckbox" onchange="toggleModDetails()" checked> 詳細表示
+                    </label>
+                </div>
+                <div class="input-group" style="font-size: 0.9em; color: var(--text-secondary); background: rgba(255,255,255,0.05); padding: 8px 12px; border-radius: 6px;">
+                    <div>
+                        <span style="color: var(--accent-red); font-weight: bold;">左クリック</span>: NG Mod (赤) / 
+                        <span style="color: var(--accent-primary); font-weight: bold;">右クリック</span>: 欲しい Mod (緑)
+                    </div>
+                </div>
+
+                <input type="text" id="effectSearch" placeholder="Modを検索..." oninput="filterEffects()" style="margin-top: 16px;">
+                <div id="ModListResult" style="display: none;"></div>
+                <div id="ModList" style="margin-top: 16px;"></div>
+            </div>
+        </div>
+
+        <!-- 英語Regex変換タブ -->
+        <div id="transContent" class="tab-content">
+            <div class="card">
+                <h2 class="section-header">英語Regex変換</h2>
+                <p style="color: var(--text-secondary); margin-bottom: 20px;">
+                    poe.reの参考を辞めて、英文でRegex検索するようになりました。<br>
+                    テスト中なので、反応しないやつや、反応してしまうものもあるかもしれません。<br>
+                    パックサイズ等は未対応です。
+                </p>
+
+                <div class="input-group">
+                    <input type="text" id="engRegexInput" placeholder="例: tal d|non">
+                    <!-- <button onclick="convertRegex()">日本語に変換</button> -->
+                    <button onclick="convertRegexWithDetails()">日本語に変換</button>
+                </div>
+                
+
+                <div class="input-group" style="margin-top: 16px;">
+                    <button onclick="applyConvertedToMapMods()">マップModに適用</button>
+                </div>
+
+                <div class="output-area" id="jpRegexOutput"></div>
+                <button onclick="copyJpRegex()">コピー</button>
+                
+                <h3 style="margin-top: 24px; margin-bottom: 12px;">Mod一覧</h3>
+                <ul id="detailsList" style="list-style-position: inside;"></ul>
+            </div>
+        </div>
+
+        <!-- フラスコModタブ -->
+        <div id="flaskContent" class="tab-content">
+            <div class="card">
+                <h2 class="section-header">フラスコMod Regex</h2>
+                
+                <div id="flaskModLoadingStatus" style="display: none; margin-bottom: 15px; padding: 10px; background: var(--bg-tertiary); border-radius: 8px;">
+                    フラスコModデータを読み込み中...
+                </div>
+
+                <div class="input-group">
+                    <input type="text" id="flaskProfileName" placeholder="プロファイル名を入力してください。" class="large-input">
+                    <button onclick="saveFlaskProfile()">保存</button>
+                    <button onclick="loadFlaskProfile()">読み込み</button>
+                    <button onclick="deleteFlaskProfile()">削除</button>
+                    <select id="flaskProfileList" class="large-input" onchange="loadFlaskProfile()">
+                        <option value="">-- プロファイル選択 --</option>
+                    </select>
+                </div>
+
+                <div class="output-area" id="combinedFlaskRegexOutput"></div>
+                <div class="input-group">
+                    <button onclick="copyFlaskRegex()">コピー</button>
+                    <button onclick="resetFlaskMods()">リセット</button>
+                    <span id="flaskCharCount" class="char-count"></span>
+                </div>
+
+                <div class="input-group">
+                    <label class="input-label">
+                        フラスコタイプ:
+                        <select id="flaskTypeSelect" onchange="loadFlaskMods()">
+                            <option value="utility">ユーティリティフラスコ</option>
+                            <option value="life">ライフフラスコ</option>
+                            <option value="mana">マナフラスコ</option>
+                            <option value="hybrid">ハイブリッドフラスコ</option>
+                            <option value="tincture">チンキ</option>
+                        </select>
+                    </label>
+                </div>
+
+                <input type="text" id="flaskModSearch" placeholder="Modを検索..." oninput="filterFlaskMods()">
+
+                <div class="two-columns" style="margin-top: 20px;">
+                    <div class="column">
+                        <h3 class="prefix-header">Prefix</h3>
+                        <div id="flaskPrefixModList" class="mod-list-container"></div>
+                    </div>
+                    <div class="column">
+                        <h3 class="suffix-header">Suffix</h3>
+                        <div id="flaskSuffixModList" class="mod-list-container"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- アイテムModタブ -->
+        <div id="itemContent" class="tab-content">
+            <div class="card">
+                <h2 class="section-header">リコンビMod Regex</h2>
+                
+                <div id="itemModLoadingStatus" style="display: none; margin-bottom: 15px; padding: 10px; background: var(--bg-tertiary); border-radius: 8px;">
+                    アイテムModデータを読み込み中...
+                </div>
+
+                <div class="input-group">
+                    <input type="text" id="itemProfileName" placeholder="プロファイル名を入力してください。" class="large-input">
+                    <button onclick="saveItemProfile()">保存</button>
+                    <button onclick="loadItemProfile()">読み込み</button>
+                    <button onclick="deleteItemProfile()">削除</button>
+                    <select id="itemProfileList" class="large-input" onchange="loadItemProfile()">
+                        <option value="">-- プロファイル選択 --</option>
+                    </select>
+                </div>
+                <div class="output-area" id="combinedItemRegexOutput"></div>
+                <div class="input-group">
+                    <button id="copyRegexBtn" onclick="copyItemRegex()">コピー</button>
+                    <button onclick="resetItemMods()">リセット</button>
+                    <span id="itemCharCount" class="char-count"></span>
+                </div>
+
+                <div class="input-group">
+                    <select id="categorySelect">
+                        <option value="">-- カテゴリを選択 --</option>
+                        <option value="oneHanded">片手武器</option>
+                        <option value="twoHanded">両手武器</option>
+                        <option value="accessory">宝飾品</option>
+                        <option value="gloves">手袋</option>
+                        <option value="boots">靴</option>
+                        <option value="body">鎧</option>
+                        <option value="helmet">兜</option>
+                        <option value="offhand">オフハンド</option>
+                    </select>
+                    <select id="itemTypeSelect" onchange="loadItemMods()">
+                        <option value="">-- まずカテゴリを選んでください --</option>
+                    </select>
+                </div>
+
+                <input type="text" id="itemModSearch" placeholder="Modを検索...⚠️マジックアイテムしか反応しません。ベースによって付くMODが違う可能性があります" oninput="filterItemMods()">
+
+                <div class="two-columns" style="margin-top: 20px;">
+                    <div class="column">
+                        <h3 class="prefix-header">Prefix</h3>
+                        <div id="prefixModList" class="mod-list-container"></div>
+                    </div>
+                    <div class="column">
+                        <h3 class="suffix-header">Suffix</h3>
+                        <div id="suffixModList" class="mod-list-container"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ビースト-->
+        <div id="beastContent" class="tab-content">
+            <div class="card">
+                <h2 class="section-header">ビースト</h2>
+                
+                <!-- プロファイル管理セクションを追加 -->
+                <div class="input-group">
+                    <input type="text" id="beastProfileName" placeholder="プロファイル名を入力してください。" class="large-input">
+                    <button onclick="saveBeastProfile()">保存</button>
+                    <button onclick="loadBeastProfile()">読み込み</button>
+                    <button onclick="deleteBeastProfile()">削除</button>
+                    <select id="beastProfileList" class="large-input" onchange="loadBeastProfile()">
+                        <option value="">-- プロファイル選択 --</option>
+                    </select>
+                </div>
+
+                <div class="output-area" id="beastRegexOutput"></div>
+                <div class="input-group">
+                    <button onclick="copyBeastRegex()">コピー</button>
+                    <button onclick="resetBeastSelection()">リセット</button>
+                    <span id="beastCharCount" class="char-count"></span>
+                </div>
+
+                <div class="input-group">
+                    <div style="display: flex; align-items: center; gap: 8px;">
+                        <button class="btn-secondary-highlight" onclick="bulkSelectBeasts()">一括選択</button>
+                        <input type="number" id="beastBulkThreshold" placeholder="10" value="10" style="width: 70px;" oninput="saveInputState()">
+                        <span style="font-size: 14px; color: var(--text-secondary);">〜</span>
+                        <input type="number" id="beastBulkThresholdMax" placeholder="max" style="width: 70px;" oninput="saveInputState()">
+                        <span style="font-size: 14px; color: var(--text-secondary);"></span>
+                    </div>
+                    <input type="text" id="beastSearch" placeholder="ビーストを検索..." oninput="filterBeasts()" style="flex: 1;">
+                </div>
+                
+                <div class="table-container" style="margin-top: 20px;">
+                    <div class="beast-header">
+                        <div class="beast-col-select" style="cursor: default;">選択</div>
+                        <div class="beast-col-price" data-column="price" style="cursor: pointer;">価格</div>
+                        <div class="beast-col-name" data-column="name" style="cursor: pointer;">ビースト名</div>
+                        <div class="beast-col-family" data-column="family" style="cursor: pointer;">ファミリー</div>
+                        <div class="beast-col-effect" data-column="effect" style="cursor: pointer;">レシピ</div>
+                    </div>
+                    <div id="beastlistContainer" class="beast-list"></div>
+                </div>
+            </div>
+        </div>
+        <!-- スカラベ-->
+        <div id="scarabContent" class="tab-content">
+            <div class="card">
+                <h2 class="section-header">スカラベ</h2>
+                
+                <div class="input-group">
+                    <input type="text" id="scarabProfileName" placeholder="プロファイル名を入力してください。" class="large-input">
+                    <button onclick="saveScarabProfile()">保存</button>
+                    <button onclick="loadScarabProfile()">読み込み</button>
+                    <button onclick="deleteScarabProfile()">削除</button>
+                    <select id="scarabProfileList" class="large-input" onchange="loadScarabProfile()">
+                        <option value="">-- プロファイル選択 --</option>
+                    </select>
+                </div>
+
+                <div class="output-area" id="scarabRegexOutput"></div>
+                <div class="input-group">
+                    <button onclick="copyScarabRegex()">コピー</button>
+                    <button onclick="resetScarabSelection()">リセット</button>
+                    <span id="scarabCharCount" class="char-count"></span>
+                </div>
+
+                <div class="input-group">
+                    <div style="display: flex; align-items: center; gap: 8px;">
+                        <button class="btn-secondary-highlight" onclick="bulkSelectScarabs()">一括選択</button>
+                        <input type="number" id="scarabBulkThreshold" placeholder="10" value="10" style="width: 70px;" oninput="saveInputState()">
+                        <span style="font-size: 14px; color: var(--text-secondary);">〜</span>
+                        <input type="number" id="scarabBulkThresholdMax" placeholder="max" style="width: 70px;" oninput="saveInputState()">
+                        <span style="font-size: 14px; color: var(--text-secondary);"></span>
+                    </div>
+                    <input type="text" id="scarabSearch" placeholder="スカラベを検索..." oninput="filterScarabs()" style="flex: 1;">
+                </div>
+                
+                <div class="table-container" style="margin-top: 20px;">
+                    <div class="scarab-header">
+                        <div class="beast-col-select" style="cursor: default;">選択</div>
+                        <div class="beast-col-price" data-column="price" onclick="sortScarabs('price')" style="cursor: pointer;">価格</div>
+                        <div class="beast-col-name" data-column="name" onclick="sortScarabs('name')" style="cursor: pointer;">スカラベ名</div>
+                        <div style="width: 0; padding: 0; visibility: hidden;"></div>
+                        <div class="beast-col-effect" data-column="description" onclick="sortScarabs('description')" style="cursor: pointer;">効果</div>
+                    </div>
+                    <div id="scarablistContainer" class="beast-list"></div>
+                </div>
+            </div>
+        </div>
+        <!-- タトゥー-->
+        <div id="tattooContent" class="tab-content">
+            <div class="card">
+                <h2 class="section-header">タトゥー</h2>
+                
+                <div class="input-group">
+                    <input type="text" id="tattooProfileName" placeholder="プロファイル名を入力してください。" class="large-input">
+                    <button onclick="saveTattooProfile()">保存</button>
+                    <button onclick="loadTattooProfile()">読み込み</button>
+                    <button onclick="deleteTattooProfile()">削除</button>
+                    <select id="tattooProfileList" class="large-input" onchange="loadTattooProfile()">
+                        <option value="">-- プロファイル選択 --</option>
+                    </select>
+                </div>
+
+                <div class="output-area" id="tattooRegexOutput"></div>
+                <div class="input-group">
+                    <button onclick="copyTattooRegex()">コピー</button>
+                    <button onclick="resetTattooSelection()">リセット</button>
+                    <span id="tattooCharCount" class="char-count"></span>
+                </div>
+
+                <div class="input-group">
+                    <div style="display: flex; align-items: center; gap: 8px;">
+                        <button class="btn-secondary-highlight" onclick="bulkSelectTattoos()">一括選択</button>
+                        <input type="number" id="tattooBulkThreshold" placeholder="10" value="10" style="width: 70px;" oninput="saveInputState()">
+                        <span style="font-size: 14px; color: var(--text-secondary);">〜</span>
+                        <input type="number" id="tattooBulkThresholdMax" placeholder="max" style="width: 70px;" oninput="saveInputState()">
+                        <span style="font-size: 14px; color: var(--text-secondary);"></span>
+                    </div>
+                    <input type="text" id="tattooSearch" placeholder="タトゥーを検索..." oninput="filterTattoos()" style="flex: 1;">
+                </div>
+                
+                <div class="table-container" style="margin-top: 20px;">
+                    <div class="tattoo-header">
+                        <div class="beast-col-select" style="cursor: default;">選択</div>
+                        <div class="beast-col-price" data-column="price" onclick="sortTattoos('price')" style="cursor: pointer;">価格</div>
+                        <div class="beast-col-name" data-column="name" onclick="sortTattoos('name')" style="cursor: pointer;">タトゥー名</div>
+                        <div class="beast-col-attribute" data-column="attribute" onclick="sortTattoos('attribute')" style="cursor: pointer;">タグ</div>
+                        <div class="beast-col-effect" data-column="description" onclick="sortTattoos('description')" style="cursor: pointer;">効果</div>
+                    </div>
+                    <div id="tattoolistContainer" class="beast-list"></div>
+                </div>
+            </div>
+        </div>
+        <!-- ルーングラフト-->
+        <div id="runegraftContent" class="tab-content">
+            <div class="card">
+                <h2 class="section-header">ルーングラフト</h2>
+                
+                <div class="input-group">
+                    <input type="text" id="runegraftProfileName" placeholder="プロファイル名を入力してください。" class="large-input">
+                    <button onclick="saveRunegraftProfile()">保存</button>
+                    <button onclick="loadRunegraftProfile()">読み込み</button>
+                    <button onclick="deleteRunegraftProfile()">削除</button>
+                    <select id="runegraftProfileList" class="large-input" onchange="loadRunegraftProfile()">
+                        <option value="">-- プロファイル選択 --</option>
+                    </select>
+                </div>
+
+                <div class="output-area" id="runegraftRegexOutput"></div>
+                <div class="input-group">
+                    <button onclick="copyRunegraftRegex()">コピー</button>
+                    <button onclick="resetRunegraftSelection()">リセット</button>
+                    <span id="runegraftCharCount" class="char-count"></span>
+                </div>
+
+                <div class="input-group">
+                    <div style="display: flex; align-items: center; gap: 8px;">
+                        <button class="btn-secondary-highlight" onclick="bulkSelectRunegrafts()">一括選択</button>
+                        <input type="number" id="runegraftBulkThreshold" placeholder="10" value="10" style="width: 70px;" oninput="saveInputState()">
+                        <span style="font-size: 14px; color: var(--text-secondary);">〜</span>
+                        <input type="number" id="runegraftBulkThresholdMax" placeholder="max" style="width: 70px;" oninput="saveInputState()">
+                        <span style="font-size: 14px; color: var(--text-secondary);"></span>
+                    </div>
+                    <input type="text" id="runegraftSearch" placeholder="ルーングラフトを検索..." oninput="filterRunegrafts()" style="flex: 1;">
+                </div>
+                
+                <div class="table-container" style="margin-top: 20px;">
+                    <div class="runegraft-header">
+                        <div class="beast-col-select" style="cursor: default;">選択</div>
+                        <div class="beast-col-price" data-column="price" onclick="sortRunegrafts('price')" style="cursor: pointer;">価格</div>
+                        <div class="beast-col-name" data-column="name" onclick="sortRunegrafts('name')" style="cursor: pointer;">ルーングラフト名</div>
+                        <div class="beast-col-attribute" data-column="attribute" onclick="sortRunegrafts('attribute')" style="cursor: pointer;">タグ</div>
+                        <div class="beast-col-effect" data-column="description" onclick="sortRunegrafts('description')" style="cursor: pointer;">効果</div>
+                    </div>
+                    <div id="runegraftlistContainer" class="beast-list"></div>
+                </div>
+            </div>
+        </div>
+        <!-- 保存済みRegexタブ -->
+        <div id="savedContent" class="tab-content">
+            <div class="card">
+                <h2 class="section-header">保存済みRegex一覧</h2>
+                
+                <div style="display: flex; gap: 8px; align-items: center; margin-bottom: 8px;">
+                    <input type="text" id="savedRegexSearch" placeholder="Regexを検索...ドラッグ&ドロップで並び替えできます" style="flex: 1; margin-bottom: 0;">
+                </div>
+                
+                <div id="savedRegexList" style="margin-top: 20px;">
+                    <div style="color: var(--text-secondary); text-align: center; padding: 40px;">
+                        保存されたRegexがありません
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ベンダーRegexタブ -->
+        <div id="vendorContent" class="tab-content">
+            <div class="card">
+                <h2 class="section-header">ベンダー(ACT用) Regex</h2>
+                <!-- プロファイル管理 -->
+                <div class="input-group">
+                    <input type="text" id="vendorProfileName" placeholder="プロファイル名を入力してください。" class="large-input">
+                    <button onclick="saveVendorProfile()">保存</button>
+                    <button onclick="loadVendorProfile()">読み込み</button>
+                    <button onclick="deleteVendorProfile()">削除</button>
+                    <select id="vendorProfileList" class="large-input" onchange="loadVendorProfile()">
+                        <option value="">-- プロファイル選択 --</option>
+                    </select>
+                </div>
+
+                <div class="output-area" id="vendorRegexOutput"></div>
+                <div class="input-group">
+                    <button onclick="copyVendorRegex()">コピー</button>
+                    <button onclick="resetVendorSettings()">リセット</button>
+                    <span id="vendorCharCount" class="char-count"></span>
+                </div>
+
+                <div class="three-columns" style="margin-top: 30px;">
+                    <div class="half-width">
+                        <h3 style="color: var(--accent-primary); margin-bottom: 16px; border-bottom: 2px solid var(--accent-primary); padding-bottom: 8px;">
+                            リンクカラー (3L)
+                        </h3>
+                        
+                        <div style="margin-bottom: 12px;">
+                            <label class="input-label">
+                                <input type="checkbox" id="vendor-color-rrA"> 🔴-🔴-⚪
+                            </label>
+                        </div>
+                        <div style="margin-bottom: 12px;">
+                            <label class="input-label">
+                                <input type="checkbox" id="vendor-color-ggA"> 🟢-🟢-⚪
+                            </label>
+                        </div>
+                        <div style="margin-bottom: 12px;">
+                            <label class="input-label">
+                                <input type="checkbox" id="vendor-color-bbA"> 🔵-🔵-⚪
+                            </label>
+                        </div>
+
+                        <div style="margin-top: 16px; margin-bottom: 8px;">
+                            <label class="input-label">
+                                <input type="checkbox" id="vendor-color-rrr"> 🔴-🔴-🔴
+                            </label>
+                        </div>
+                        <div style="margin-bottom: 8px;">
+                            <label class="input-label">
+                                <input type="checkbox" id="vendor-color-rrg"> 🔴-🔴-🟢
+                            </label>
+                        </div>
+                        <div style="margin-bottom: 8px;">
+                            <label class="input-label">
+                                <input type="checkbox" id="vendor-color-rrb"> 🔴-🔴-🔵
+                            </label>
+                        </div>
+
+                        <div style="margin-top: 16px; margin-bottom: 8px;">
+                            <label class="input-label">
+                                <input type="checkbox" id="vendor-color-ggg"> 🟢-🟢-🟢
+                            </label>
+                        </div>
+                        <div style="margin-bottom: 8px;">
+                            <label class="input-label">
+                                <input type="checkbox" id="vendor-color-ggr"> 🟢-🟢-🔴
+                            </label>
+                        </div>
+                        <div style="margin-bottom: 8px;">
+                            <label class="input-label">
+                                <input type="checkbox" id="vendor-color-ggb"> 🟢-🟢-🔵
+                            </label>
+                        </div>
+
+                        <div style="margin-top: 16px; margin-bottom: 8px;">
+                            <label class="input-label">
+                                <input type="checkbox" id="vendor-color-bbb"> 🔵-🔵-🔵
+                            </label>
+                        </div>
+                        <div style="margin-bottom: 8px;">
+                            <label class="input-label">
+                                <input type="checkbox" id="vendor-color-bbr"> 🔵-🔵-🔴
+                            </label>
+                        </div>
+                        <div style="margin-bottom: 8px;">
+                            <label class="input-label">
+                                <input type="checkbox" id="vendor-color-bbg"> 🔵-🔵-🟢
+                            </label>
+                        </div>
+
+                        <div style="margin-top: 16px; margin-bottom: 8px;">
+                            <label class="input-label">
+                                <input type="checkbox" id="vendor-color-rgb"> 🔴-🟢-🔵
+                            </label>
+                        </div>
+                        <div style="margin-bottom: 8px;">
+                            <label class="input-label">
+                                <input type="checkbox" id="vendor-color-raa"> 🔴-⚪-⚪
+                            </label>
+                        </div>
+                        <div style="margin-bottom: 8px;">
+                            <label class="input-label">
+                                <input type="checkbox" id="vendor-color-gaa"> 🟢-⚪-⚪
+                            </label>
+                        </div>
+                        <div style="margin-bottom: 8px;">
+                            <label class="input-label">
+                                <input type="checkbox" id="vendor-color-baa"> 🔵-⚪-⚪
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="half-width">
+                        <h3 style="color: var(--accent-primary); margin: 24px 0 16px 0; border-bottom: 2px solid var(--accent-primary); padding-bottom: 8px;">
+                            リンクカラー (2L)
+                        </h3>
+                        
+                        <div style="margin-bottom: 8px;">
+                            <label class="input-label">
+                                <input type="checkbox" id="vendor-color-rr"> 🔴-🔴
+                            </label>
+                        </div>
+                        <div style="margin-bottom: 8px;">
+                            <label class="input-label">
+                                <input type="checkbox" id="vendor-color-gg"> 🟢-🟢
+                            </label>
+                        </div>
+                        <div style="margin-bottom: 8px;">
+                            <label class="input-label">
+                                <input type="checkbox" id="vendor-color-bb"> 🔵-🔵
+                            </label>
+                        </div>
+
+                        <div style="margin-top: 16px; margin-bottom: 8px;">
+                            <label class="input-label">
+                                <input type="checkbox" id="vendor-color-rb"> 🔴-🔵
+                            </label>
+                        </div>
+                        <div style="margin-bottom: 8px;">
+                            <label class="input-label">
+                                <input type="checkbox" id="vendor-color-gr"> 🟢-🔴
+                            </label>
+                        </div>
+                        <div style="margin-bottom: 8px;">
+                            <label class="input-label">
+                                <input type="checkbox" id="vendor-color-bg"> 🔵-🟢
+                            </label>
+                        </div>
+
+                        <h3 style="color: var(--accent-primary); margin: 24px 0 16px 0; border-bottom: 2px solid var(--accent-primary); padding-bottom: 8px;">
+                            任意リンク
+                        </h3>
+                        
+                        <div style="margin-bottom: 8px;">
+                            <label class="input-label">
+                                <input type="checkbox" id="vendor-anyThreeLink"> ⚪-⚪-⚪ (3リンク)
+                            </label>
+                        </div>
+                        <div style="margin-bottom: 8px;">
+                            <label class="input-label">
+                                <input type="checkbox" id="vendor-anyFourLink"> ⚪-⚪-⚪-⚪ (4リンク)
+                            </label>
+                        </div>
+                        <div style="margin-bottom: 8px;">
+                            <label class="input-label">
+                                <input type="checkbox" id="vendor-anyFiveLink"> ⚪-⚪-⚪-⚪-⚪ (5リンク)
+                            </label>
+                        </div>
+                        <div style="margin-bottom: 8px;">
+                            <label class="input-label">
+                                <input type="checkbox" id="vendor-anySixLink"> 6リンク (Any)
+                            </label>
+                        </div>
+                        <div style="margin-bottom: 8px;">
+                            <label class="input-label">
+                                <input type="checkbox" id="vendor-anySixSocket"> 6ソケット (Any)
+                            </label>
+                        </div>
+                        <h3 style="color: var(--accent-primary); margin-bottom: 16px; border-bottom: 2px solid var(--accent-primary); padding-bottom: 8px;">
+                            移動速度
+                        </h3>
+                        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 8px;">
+                        <label class="input-label" style="font-size: 0.9em;">
+                            <input type="checkbox" id="vendor-movement-ten"> 10%
+                        </label>
+                        <label class="input-label" style="font-size: 0.9em;">
+                            <input type="checkbox" id="vendor-movement-fifteen"> 15%
+                        </label>
+                        <label class="input-label" style="font-size: 0.9em;">
+                            <input type="checkbox" id="vendor-movement-twenty"> 20%
+                        </label>
+                        <label class="input-label" style="font-size: 0.9em;">
+                            <input type="checkbox" id="vendor-movement-twentyfive"> 25%
+                        </label>
+                        <label class="input-label" style="font-size: 0.9em;">
+                            <input type="checkbox" id="vendor-movement-thirty"> 30%
+                        </label>
+                        </div>
+
+                    </div>
+
+                    <div>
+                        <!-- 武器ベース -->
+                        <h3 style="color: var(--accent-primary); margin-bottom: 16px; border-bottom: 2px solid var(--accent-primary); padding-bottom: 8px;">
+                        武器ベース
+                        </h3>
+                        <p style="color: #FCA5A5; font-size: 0.85em; margin-bottom: 12px;">
+                        選択した武器タイプは、ソケットやリンクに関係なく常にハイライトされます
+                        </p>
+
+                        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-bottom: 8px;">
+                        <label class="input-label" style="font-size: 0.9em;">
+                            <input type="checkbox" id="vendor-weapon-claw"> 鉤爪
+                        </label>
+                        <label class="input-label" style="font-size: 0.9em;">
+                            <input type="checkbox" id="vendor-weapon-dagger"> 短剣
+                        </label>
+                        <label class="input-label" style="font-size: 0.9em;">
+                            <input type="checkbox" id="vendor-weapon-wand"> ワンド
+                        </label>
+                        <label class="input-label" style="font-size: 0.9em;">
+                            <input type="checkbox" id="vendor-weapon-oneHandSword"> 片手剣
+                        </label>
+                        <label class="input-label" style="font-size: 0.9em;">
+                            <input type="checkbox" id="vendor-weapon-thrustingSword"> 刺突剣
+                        </label>
+                        <label class="input-label" style="font-size: 0.9em;">
+                            <input type="checkbox" id="vendor-weapon-oneHandAxe"> 片手斧
+                        </label>
+                        <label class="input-label" style="font-size: 0.9em;">
+                            <input type="checkbox" id="vendor-weapon-oneHandMace"> 片手メイス
+                        </label>
+                        <label class="input-label" style="font-size: 0.9em;">
+                            <input type="checkbox" id="vendor-weapon-runeDagger"> ルーンの短剣
+                        </label>
+                        <label class="input-label" style="font-size: 0.9em;">
+                            <input type="checkbox" id="vendor-weapon-sceptre"> セプター
+                        </label>
+                        <label class="input-label" style="font-size: 0.9em;">
+                            <input type="checkbox" id="vendor-weapon-bow"> 弓
+                        </label>
+                        <label class="input-label" style="font-size: 0.9em;">
+                            <input type="checkbox" id="vendor-weapon-staff"> スタッフ
+                        </label>
+                        <label class="input-label" style="font-size: 0.9em;">
+                            <input type="checkbox" id="vendor-weapon-twoHandSword"> 両手剣
+                        </label>
+                        <label class="input-label" style="font-size: 0.9em;">
+                            <input type="checkbox" id="vendor-weapon-twoHandAxe"> 両手斧
+                        </label>
+                        <label class="input-label" style="font-size: 0.9em;">
+                            <input type="checkbox" id="vendor-weapon-twoHandMace"> 両手メイス
+                        </label>
+                        <label class="input-label" style="font-size: 0.9em;">
+                            <input type="checkbox" id="vendor-weapon-warstaff"> ウォースタッフ
+                        </label>
+                        <label class="input-label" style="font-size: 0.9em;">
+                            <input type="checkbox" id="vendor-weapon-shield"> 盾
+                        </label>
+                        </div>
+                        
+                        <!-- NG武器ベースセクション -->
+                            <h3 style="color: #FCA5A5; margin: 24px 0 16px 0; border-bottom: 2px solid #FCA5A5; padding-bottom: 8px;">
+                                NG武器ベース（除外）
+                            </h3>
+                            <p style="color: #FCA5A5; font-size: 0.85em; margin-bottom: 12px;">
+                                選択した武器タイプを除外します（これらの武器はハイライトされません）
+                            </p>
+
+                            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-bottom: 8px;">
+                                <label class="input-label" style="font-size: 0.9em;">
+                                    <input type="checkbox" id="vendor-exclude-claw"> 鉤爪
+                                </label>
+                                <label class="input-label" style="font-size: 0.9em;">
+                                    <input type="checkbox" id="vendor-exclude-dagger"> 短剣
+                                </label>
+                                <label class="input-label" style="font-size: 0.9em;">
+                                    <input type="checkbox" id="vendor-exclude-wand"> ワンド
+                                </label>
+                                <label class="input-label" style="font-size: 0.9em;">
+                                    <input type="checkbox" id="vendor-exclude-oneHandSword"> 片手剣
+                                </label>
+                                <label class="input-label" style="font-size: 0.9em;">
+                                    <input type="checkbox" id="vendor-exclude-thrustingSword"> 刺突剣
+                                </label>
+                                <label class="input-label" style="font-size: 0.9em;">
+                                    <input type="checkbox" id="vendor-exclude-oneHandAxe"> 片手斧
+                                </label>
+                                <label class="input-label" style="font-size: 0.9em;">
+                                    <input type="checkbox" id="vendor-exclude-oneHandMace"> 片手メイス
+                                </label>
+                                <label class="input-label" style="font-size: 0.9em;">
+                                    <input type="checkbox" id="vendor-exclude-runeDagger"> ルーンの短剣
+                                </label>
+                                <label class="input-label" style="font-size: 0.9em;">
+                                    <input type="checkbox" id="vendor-exclude-sceptre"> セプター
+                                </label>
+                                <label class="input-label" style="font-size: 0.9em;">
+                                    <input type="checkbox" id="vendor-exclude-bow"> 弓
+                                </label>
+                                <label class="input-label" style="font-size: 0.9em;">
+                                    <input type="checkbox" id="vendor-exclude-staff"> スタッフ
+                                </label>
+                                <label class="input-label" style="font-size: 0.9em;">
+                                    <input type="checkbox" id="vendor-exclude-twoHandSword"> 両手剣
+                                </label>
+                                <label class="input-label" style="font-size: 0.9em;">
+                                    <input type="checkbox" id="vendor-exclude-twoHandAxe"> 両手斧
+                                </label>
+                                <label class="input-label" style="font-size: 0.9em;">
+                                    <input type="checkbox" id="vendor-exclude-twoHandMace"> 両手メイス
+                                </label>
+                                <label class="input-label" style="font-size: 0.9em;">
+                                    <input type="checkbox" id="vendor-exclude-warstaff"> ウォースタッフ
+                                </label>
+                                <label class="input-label" style="font-size: 0.9em;">
+                                    <input type="checkbox" id="vendor-exclude-shield"> 盾
+                                </label>
+                            </div>
+                    </div>
+                </div>
+
+        <!-- ジェム選択セクション - 全幅で下部に移動 -->
+                <div style="margin-top: 40px; border-top: 2px solid var(--accent-primary); padding-top: 20px;">
+                    <h3 style="color: var(--accent-primary); margin-bottom: 16px; text-align: center;">
+                        ジェム選択
+                    </h3>
+                    
+                    <div class="input-group" style="margin-bottom: 20px;">
+                        <textarea 
+                        id="gemSearch" 
+                        placeholder="英語名でも検索可（改行、カンマで複数検索可能）&#10;pobb.inのジェム欄コピペ出来ます&#10;例: &#10;Poisonous Concoction&#10;Herald of Agony&#10;Faster Attacks" 
+                        style="flex: 1; padding: 8px; height: 80px; resize: vertical; font-family: inherit;"
+                        ></textarea>
+                        <button onclick="document.getElementById('gemSearch').value = ''; filterGems();">検索クリア</button>
+                        <button onclick="resetGemSelection()">ジェムをリセット</button>
+                    </div>
+
+                    <div id="gemListContainer" style="margin-top: 20px;">
+                        <div style="color: var(--text-secondary); text-align: center; padding: 20px;">
+                            ジェムデータを読み込み中...
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- トレードリンク集タブ -->
+        <div id="tradeContent" class="tab-content">
+            <div class="card">
+                <h2 class="section-header">トレードリンク集</h2>
+                
+                <h3 style="margin-top: 24px; margin-bottom: 16px;">粉</h3>
+                <ul>
+                    <li><a href="javascript:void(0)" onclick="openCustomTrade('op7E9y7Gil')">粉200万以上</a></li>
+                    <li><a href="javascript:void(0)" onclick="openCustomTrade('OgLKOYbKfE')">T1</a></li>
+                </ul>
+
+                <h3 style="margin-top: 32px; margin-bottom: 16px;">ダブコラ</h3>
+                <ul>
+                    <li><a href="javascript:void(0)" onclick="openCustomTrade('KlYrY0JgF5')">ダブコラ 装備</a> - 腐敗の根源</li>
+                    <li><a href="javascript:void(0)" onclick="openCustomTrade('X3m5bbMdcP')">ダブコラ ジェム</a> - ドリヤニの研究所</li>
+                    <li><a href="javascript:void(0)" onclick="openCustomTrade('KlYrY0JgF5')">どっちも</a></li>
+                </ul>
+
+                <h3 style="margin-top: 32px; margin-bottom: 16px;">マップ</h3>
+                <ul>
+                    <li><a href="javascript:void(0)" onclick="openCustomTrade('PPDW83XqFL')">シラスマップ</a> - バラン、ヴェリタリア、アルヘズミン、ドロックス</li>
+                    <li><a href="javascript:void(0)" onclick="openCustomTrade('Kl58JKbLs5')">エルダーマップ</a> - エンスイバー、エラディケーター、コンストリクター、ピュアリファイアー</li>
+                    <li><a href="javascript:void(0)" onclick="openCustomTrade('PPDW83XqFL')">シェイパーマップ</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- リンク集タブ -->
+        <div id="linkContent" class="tab-content">
+            <div class="card">
+                <h2 class="section-header">リンク集</h2>
+                
+                <h3 style="margin-top: 24px; margin-bottom: 16px;">ツール</h3>
+                <ul>
+                    <li><a href="https://poedb.tw/us/" target="_blank">PoEDB</a> - データベース</li>
+                    <li><a href="https://poe.ninja/" target="_blank">poe.ninja</a> - アイテムの相場、ビルド</li>
+                    <li><a href="https://vilsol.github.io/timeless-jewels/tree" target="_blank">Timeless Jewel Calculator</a> - Timeless Jewelの検索</li>
+                    <li><a href="https://poeplanner.com/atlas-tree" target="_blank">poe planner</a> - アトラスパッシブツリーのシミュレータ</li>
+                    <li><a href="https://pathofpathing.com/" target="_blank">path of pathing</a> - アトラスパッシブツリーのシミュレータ。コンテンツを選ぶとパッシブを自動で振ってくれる</li>
+                    <li><a href="https://www.craftofexile.com/" target="_blank">Craft of Exile</a> - アイテムクラフトシミュレータ</li>
+                    <li><a href="https://www.poelab.com/" target="_blank">poelab</a> - ラビリンスの日替わりレイアウト</li>
+                    <li><a href="https://siveran.github.io/calc.html" target="_blank">Vorici chromatic calculator</a> - 色彩のオーブ計算機</li>
+                    <li><a href="https://wealthyexile.com/" target="_blank">Wealthy Exile</a> - 資産管理・時給計算</li>
+                    <li><a href="https://www.filterblade.xyz/" target="_blank">Filterblade</a> - アイテムフィルターのカスタマイズ</li>
+                    <li><a href="https://mapsofexile.com/" target="_blank">Maps of Exile</a> - マップに関する情報集約</li>
+                    <li><a href="https://poe.re/" target="_blank">PoE Regex</a> - 英語のRegex</li>
+                </ul>
+
+                <h3 style="margin-top: 32px; margin-bottom: 16px;">日本語ツール</h3>
+                <ul>
+                    <li><a href="https://www.poeoverlay.com" target="_blank">POE Overlay</a> - 個人的にforkよりこっち</li>
+                    <li><a href="https://github.com/PoE-Overlay-Community/PoE-Overlay-Community-Fork" target="_blank">PoE Overlay Community Fork</a> - 上記オーバーレイのfork版</li>
+                    <li><a href="https://ochi3.github.io/exile-leveling-jp/#/" target="_blank">ACT道案内サイト</a> - レベリングルートガイド(日本語)</li>
+                    <li><a href="https://note.com/ochi3c/n/n9f7f828bd177" target="_blank">Lailloken-UI 日本語化</a> - 日本語化ガイド。新バージョン作成中</li>
+                    <li><a href="https://note.com/ochi3c/n/nd535f4424443" target="_blank">Better Trading 日本語</a> - お買い物リスト作成可能</li>
+                    <li><a href="https://note.com/ready_iris3558/n/n6207f6acfa18" target="_blank">poeninja/pobb.inからトレードサイトに飛ぶ</a></li>
+                    <li><a href="https://github.com/ryusus4/poe_ninja_to_trade" target="_blank">GitHub: poe_ninja_to_trade</a></li>
+                    <li><a href="https://github.com/ryusus4/pobb_to_trade" target="_blank">GitHub: pobb_to_trade</a></li>                    
+                    <li><a href="https://github.com/ryusus4/poe_transfer_jp_language" target="_blank">GitHub: poe_transfer_jp_language</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- モーダル: フラスコ用 -->
+    <div id="flaskModGroupModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="flaskModalTitle"></h3>
+                <span id="closeFlaskModal" class="modal-close">&times;</span>
+            </div>
+            <div id="flaskModalModList" class="modal-mod-list-container"></div>
+            <div class="modal-footer">
+                <button onclick="applyFlaskModalSelection()">適用</button>
+                <button onclick="closeFlaskModal()" style="background: #666; margin-left: 10px;">キャンセル</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- モーダル: アイテム用 -->
+    <div id="itemModGroupModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="itemModalTitle"></h3>
+                <span id="closeItemModal" class="modal-close">&times;</span>
+            </div>
+            <div id="itemModalModList" class="modal-mod-list-container"></div>
+            <div class="modal-footer">
+                <button onclick="applyItemModalSelection()">適用</button>
+                <button onclick="closeItemModal()" style="background: #666; margin-left: 10px;">キャンセル</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/map_mods.js"></script>
+    <script src="scripts/trade_link.js"></script>
+    <script src="scripts/beastlist.js"></script>
+    <script src="scripts/scarablist.js"></script>
+    <script src="scripts/tattoolist.js"></script>
+    <script src="scripts/runegraftlist.js"></script>
+    <script src="scripts/convert.js"></script>
+    <script src="scripts/scripts.js"></script>
+    <script src="scripts/flask.js"></script>
+    <script src="scripts/item.js"></script>
+    <script src="scripts/saved-regex.js"></script>
+    <script src="scripts/vendor.js"></script>
+
+
+    <!-- トレード設定サイドパネル -->
+    <div id="tradeSettingsPanel" class="side-panel">
+        <div class="side-panel-content">
+            <div class="side-panel-header">
+                <h3>トレード詳細設定</h3>
+                <button class="close-btn" onclick="toggleTradeSettings()">×</button>
+            </div>
+            <div class="settings-group">
+                <label>リーグ:</label>
+                <select id="leagueSelect" onchange="onLeagueSelectChange()" style="width: 100%; margin-bottom: 6px;">
+                    <option value="Mirage">Mirage</option>
+                    <option value="Hardcore Mirage">Hardcore Mirage</option>
+                    <option value="Ruthless Mirage">Ruthless Mirage</option>
+                    <option value="HC Ruthless Mirage">HC Ruthless Mirage</option>
+                    <option value="Standard">Standard</option>
+                    <option value="Hardcore">Hardcore</option>
+                    <option value="Ruthless">Ruthless</option>
+                    <option value="Hardcore Ruthless">Hardcore Ruthless</option>
+                    <option value="__custom__">その他（手入力）</option>
+                </select>
+                <input type="text" id="leagueInput" placeholder="リーグ名を入力" onchange="saveTradeSettings()" style="display: none;">
+            </div>
+            <div class="settings-group">
+                <label>トレード方法:</label>
+                <select id="tradeMethodSelect" onchange="saveTradeSettings()">
+                    <option value="any">全て</option>
+                    <option value="available">インスタントバイアウトおよび対面トレード</option>
+                    <option value="securable">インスタントバイアウト</option>
+                    <option value="onlineleague">対面トレード (リーグにオンライン)</option>
+                    <option value="online">対面トレード (オンライン)</option>
+                </select>
+            </div>
+            <div class="settings-group">
+                <label>マップティア:</label>
+                <div style="display: flex; gap: 10px; align-items: center;">
+                    <input type="number" id="mapTierMinInput" placeholder="Min" min="1" max="17" value="16" onchange="saveTradeSettings()" style="width: 70px;">
+                    <span>~</span>
+                    <input type="number" id="mapTierMaxInput" placeholder="Max" min="1" max="17" value="16" onchange="saveTradeSettings()" style="width: 70px;">
+                </div>
+            </div>
+            <div class="settings-group" style="display: flex; gap: 16px; align-items: center; margin-top: 10px;">
+                <label class="input-label" style="display: flex; align-items: center; gap: 8px; margin: 0; cursor: pointer; white-space: nowrap;">
+                    <input type="checkbox" id="memoryMapCheckbox" style="margin: 0;"
+                        onchange="if(this.checked) document.getElementById('nightmareMapCheckbox').checked = false; saveTradeSettings();">
+                    <span>メモリーマップ</span>
+                </label>
+                <label class="input-label" style="display: flex; align-items: center; gap: 8px; margin: 0; cursor: pointer; white-space: nowrap;">
+                    <input type="checkbox" id="nightmareMapCheckbox" style="margin: 0;"
+                        onchange="if(this.checked) document.getElementById('memoryMapCheckbox').checked = false; saveTradeSettings();">
+                    <span>ナイトメアマップ</span>
+                </label>
+            </div>
+            <div class="settings-group">
+                <label>モッド数:</label>
+                <div style="display: flex; gap: 10px; align-items: center;">
+                    <input type="number" id="minModCountInput" placeholder="Min" min="0" max="20" value="8" onchange="saveTradeSettings()" style="width: 70px;">
+                    <span>~</span>
+                    <input type="number" id="maxModCountInput" placeholder="Max" min="0" max="20" value="8" onchange="saveTradeSettings()" style="width: 70px;">
+                </div>
+            </div>
+            <div class="settings-group">
+                <label>コラプト状態:</label>
+                <select id="corruptedStatusSelect" onchange="saveTradeSettings()">
+                    <option value="">指定なし</option>
+                    <option value="true">はい</option>
+                    <option value="false">いいえ</option>
+                </select>
+            </div>
+            <div class="settings-group">
+                <label>欲しいModの検索モード:</label>
+                <select id="wantedModModeSelect" onchange="saveTradeSettings()">
+                    <option value="any">いずれか一つ以上 (Any)</option>
+                    <option value="all">全てを含む (All)</option>
+                </select>
+            </div>
+            <div class="settings-group">
+                <label>バイアウト価格:</label>
+                <div style="display: flex; gap: 10px; align-items: center; margin-bottom: 5px;">
+                    <select id="buyoutPriceSelect" onchange="saveTradeSettings()" style="flex: 1;">
+                        <option value="">カオスオーブ同等物</option>
+                        <option value="chaos_divine">カオスまたは神のオーブ</option>
+                        <option value="chaos">カオスオーブ</option>
+                        <option value="divine">神のオーブ</option>
+                    </select>
+                </div>
+                <div style="display: flex; gap: 10px; align-items: center;">
+                    <input type="number" id="buyoutPriceMinInput" placeholder="Min" min="0" onchange="saveTradeSettings()" style="width: 70px;">
+                    <span>~</span>
+                    <input type="number" id="buyoutPriceMaxInput" placeholder="Max" min="0" onchange="saveTradeSettings()" style="width: 70px;">
+                </div>
+            </div>
+            <div style="margin-top: 20px;">
+                <button onclick="toggleTradeSettings()" class="primary-btn">閉じる</button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- モーダル: 要望・不具合報告 -->
+    <div id="feedbackModal" class="modal">
+        <div class="modal-content" style="max-width: 600px;">
+            <div class="modal-header">
+                <h3>要望・不具合報告</h3>
+                <span onclick="closeFeedbackModal()" class="modal-close">&times;</span>
+            </div>
+            
+            <div id="feedbackFormContainer">
+                <p style="font-size: 14px; margin-bottom: 12px; color: var(--text-secondary);">
+                    不具合の報告や、機能追加の要望など、お気軽にお送りください。<br>
+                    Googleフォーラムを使用しています。
+                </p>
+                <div class="settings-group">
+                    <label style="display: block; margin-bottom: 8px;">内容:</label>
+                    <textarea id="feedbackText" rows="6" placeholder="こちらに詳細を入力してください..." style="width: 100%; resize: vertical; min-height: 150px;"></textarea>
+                </div>
+            </div>
+
+            <div id="feedbackSuccessMessage" style="display: none; text-align: center; padding: 40px 0;">
+                <div style="font-size: 48px; color: var(--accent-primary); margin-bottom: 16px;">✓</div>
+                <h3 style="margin-bottom: 8px;">送信完了</h3>
+                <p style="color: var(--text-secondary);">貴重なご意見ありがとうございました！</p>
+            </div>
+
+            <div class="modal-footer">
+                <div id="feedbackFooterButtons" style="display: flex; gap: 10px; justify-content: flex-end;">
+                    <button onclick="submitFeedback()" class="primary-btn">送信する</button>
+                    <button onclick="closeFeedbackModal()" style="background: #333; color: #fff;">キャンセル</button>
+                </div>
+                <div id="feedbackCloseButton" style="display: none; text-align: right;">
+                    <button onclick="closeFeedbackModal()">閉じる</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- フォーム送信時の中継用(画面遷移防止) -->
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="onFeedbackSubmitted()"></iframe>
+</body>
+
+</html>
+

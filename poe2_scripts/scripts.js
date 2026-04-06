@@ -1713,7 +1713,8 @@ function loadTradeSettings() {
 
     const mapTierMin = localStorage.getItem('poe2_poeTradeMapTierMin') || "16";
     const mapTierMax = localStorage.getItem('poe2_poeTradeMapTierMax') || "16";
-    const buyoutPrice = localStorage.getItem('poe2_poeTradeBuyoutPrice') || "exalted";
+    let buyoutPrice = localStorage.getItem('poe2_poeTradeBuyoutPrice');
+    if (buyoutPrice === null) buyoutPrice = "";
     const buyoutPriceMin = localStorage.getItem('poe2_poeTradeBuyoutPriceMin') || "";
     const buyoutPriceMax = localStorage.getItem('poe2_poeTradeBuyoutPriceMax') || "";
     const wantedMode = localStorage.getItem('poe2_poeTradeWantedMode') || "any";
