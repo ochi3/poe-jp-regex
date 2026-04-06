@@ -5,7 +5,7 @@ const beastlist = {
     "effect": "希少サポートジェムを捧げる: 高レベル、高品質のサポートジェム3個",
     "regex": "ド・ウ",
     "enRegex": "id w",
-    "chaosValue": "8"
+    "chaosValue": "7"
   },
   "黒のモリガン": {
     "engName": "Black Mórrigan",
@@ -13,7 +13,7 @@ const beastlist = {
     "effect": "アイテムを変化: 可能な最大リンク数",
     "regex": "リガ",
     "enRegex": "k m",
-    "chaosValue": "210"
+    "chaosValue": "225"
   },
   "クレイシアンのキメラル": {
     "engName": "Craicic Chimeral",
@@ -37,7 +37,7 @@ const beastlist = {
     "effect": "アイテムを変換: シンセシス暗黙モッドをリロール",
     "regex": "ド・ヴ",
     "enRegex": "id v",
-    "chaosValue": "749.1"
+    "chaosValue": "850.6"
   },
   "ワイルド・ヘリオン・アルファ": {
     "engName": "Wild Hellion Alpha",
@@ -45,7 +45,7 @@ const beastlist = {
     "effect": "アイテムのモッドを変化: ウォッチャーズアイのモッドをリロール",
     "regex": "ド・ヘリ",
     "enRegex": "ld h",
-    "chaosValue": "94.1"
+    "chaosValue": "95"
   },
   "ワイルド・ブランブルバック": {
     "engName": "Wild Brambleback",
@@ -53,7 +53,7 @@ const beastlist = {
     "effect": "アイテムを変換: 希少サポートジェムに500m経験値追加する",
     "regex": "ド・ブラ",
     "enRegex": "d bra",
-    "chaosValue": "34.2"
+    "chaosValue": "42.2"
   },
   "平原の始祖、ファルウル": {
     "engName": "Farrul, First of the Plains",
@@ -69,7 +69,7 @@ const beastlist = {
     "effect": "アイテムをスプリット: それぞれ半分のモッドを持つ2個のアイテムにスプリット",
     "regex": "のプレ",
     "enRegex": "l pla",
-    "chaosValue": "31"
+    "chaosValue": "30.2"
   },
   "プライマル・クリストコーラー": {
     "engName": "Primal Cystcaller",
@@ -77,7 +77,7 @@ const beastlist = {
     "effect": "アイテムを作成: ナイトメアマップ",
     "regex": "ル・クリ",
     "enRegex": " cy",
-    "chaosValue": "14"
+    "chaosValue": "15"
   },
   "夜の始祖、フィヌムス": {
     "engName": "Fenumus, First of the Night",
@@ -85,7 +85,7 @@ const beastlist = {
     "effect": "アイテムにアスペクトスキルを追加: 蜘蛛のアスペクト",
     "regex": "祖、フィ",
     "enRegex": "s, f",
-    "chaosValue": "49.2"
+    "chaosValue": "45"
   },
   "空の始祖、サカワル": {
     "engName": "Saqawal, First of the Sky",
@@ -381,7 +381,7 @@ const beastlist = {
     "effect": "ユニークアイテムを作成: フラスコ",
     "regex": "ルのゴー",
     "enRegex": "c goa",
-    "chaosValue": "0.98"
+    "chaosValue": "1"
   },
   "フィヌムスのスクラブラー": {
     "engName": "Fenumal Scrabbler",
