@@ -80,6 +80,8 @@ function updateSavedRegexDisplay() {
         applyFilters();
       }
     }
+      const contOp = document.getElementById('savedRegexList');
+    if (contOp) contOp.style.opacity = '1';
   }, 50);
 }
 
@@ -1667,7 +1669,7 @@ function hookSaveProfiles() {
   }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+function initSavedRegex() {
   const savedTabLink = document.querySelector('a[data-tab="savedContent"]');
   if (savedTabLink) {
     savedTabLink.addEventListener('click', () => {
@@ -1684,7 +1686,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // コンテナを非表示にしてから更新
       const container = document.getElementById('savedRegexList');
       if (container) {
-        container.style.opacity = '0';
+        container.style.opacity = '1';
       }
       
       setTimeout(() => {
@@ -1707,7 +1709,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 初期表示時も非表示状態から開始
     const container = document.getElementById('savedRegexList');
     if (container) {
-      container.style.opacity = '0';
+      container.style.opacity = '1';
     }
     
     setTimeout(() => {
@@ -1719,4 +1721,11 @@ document.addEventListener('DOMContentLoaded', () => {
   setTimeout(() => {
     hookSaveProfiles();
   }, 1000);
-});
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initSavedRegex);
+} else {
+  initSavedRegex();
+}
+

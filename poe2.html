@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <!-- Google タグ (gtag.js) -->
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-BV04ELTZSP">
+        </script>
+        <script>
+            window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-BV04ELTZSP');
+        </script>
+        <meta content="M679Lx1mttxZau0-nYyXDgG72YyGkistNw9JxAOYAk8" name="google-site-verification"/>
+        <meta charset="utf-8"/>
+        <meta content="width=1024, initial-scale=1.0" name="viewport"/>
+        <meta content="PoEのRegexを日本語で作成するツール。マップmod、英語Regex変換" name="description"/>
+        <meta content="path of exile, gaming, action rpg, regex, PoE, Regex, 日本語, マップmod" name="keywords"/>
+        <title>PoE JP Regex</title>
+        <link href="styles.css?v=2" rel="stylesheet"/>
+    </head>
+    <body>
+        <div id="sideMenu">
+            <h3>
+                PoE JP Regex
+                <span style="font-size: 0.6em; opacity: 0.8; margin-left: 8px;">3.28</span>
+            </h3>
+            <div style="display: flex; gap: 8px; margin-top: 10px; margin-bottom: 10px;">
+                <a href="index.html" style="flex: 1; text-align: center; padding: 3px; background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: 4px; color: var(--text-primary); text-decoration: none;">PoE 1</a>
+                <a href="poe2.html" style="flex: 1; text-align: center; padding: 3px; background: var(--accent-primary); border: 1px solid var(--accent-primary); border-radius: 4px; color: #000; text-decoration: none; font-weight: bold;">PoE 2</a>
+            </div>
+            <nav>
+                <a class="nav-link active" data-tab="mapContent" href="#map">ウェイストーンMOD</a>
+                <a class="nav-link" data-tab="savedContent" href="#saved">保存済みRegex</a>
+            </nav>
+            <h4 style="margin-top: 32px;">
+                Discord @ochi3c
+                <br/>
+                Twitter
+                <a href="https://x.com/ochi3c" style="color: var(--accent-primary);">@ochi3c</a>
+            </h4>
+            <button onclick="openFeedbackModal()" style="width: 100%; margin-bottom: 16px; background: var(--bg-tertiary); color: var(--accent-primary); border: 1px solid var(--border-color);">要望・不具合を送信</button>
+            <h4>
+                Change log
+                <br/>
+                26/04/06
+                <br/>
+                PoE2ページ追加 <br/>エアプなためFBお待ちしております。<br/>FBがないと改善されません。 <br/>色々追記予定
+                <br/>
+            </h4>
+        </div>
+        <div id="contentArea">
+            <!-- グローバル言語切り替えボタン -->
+            <div id="globalLangToggleContainer" style="position: absolute; top: 16px; right: 24px; z-index: 1001;">
+                <button id="globalLangToggle" onclick="toggleLanguage()" style="background: var(--bg-secondary); color: var(--accent-primary); border: 1px solid var(--border-color); padding: 8px 16px; border-radius: 8px; font-weight: bold; box-shadow: 0 4px 12px rgba(0,0,0,0.5);">Language: JA</button>
+            </div>
+            <!-- ウェイストーンMODタブ -->
+            <div class="tab-content" id="mapContent">
+                <div class="card">
+                    <h2 class="section-header">ウェイストーンMOD Regex</h2>
+                    <div class="input-group">
+                        <input class="large-input" id="profileName" placeholder="プロファイル名を入力してください。" type="text"/>
+                        <button onclick="saveProfile()">保存</button>
+                        <button onclick="loadProfile()">読み込み</button>
+                        <button onclick="deleteProfile()">削除</button>
+                        <select class="large-input" id="profileList" onchange="loadProfile()">
+                            <option value="">-- プロファイル選択 --</option>
+                        </select>
+                    </div>
+                    <div class="output-area" id="combinedRegexOutput">
+                    </div>
+                    <div class="input-group">
+                        <button onclick="copyToClipboard()">コピー</button>
+                        <button class="btn-primary-highlight" id="tradeLinkBtn" onclick="generateTradeLink()">トレードリンク</button>
+                        <!-- <button class="secondary-btn" id="copyTradeLinkBtn" onclick="copyTradeLink()">
+                        リンクをコピー(デバッグ)
+                    </button>
+                    -->
+                    <button class="btn-secondary-highlight" id="tradeSettingsBtn" onclick="toggleTradeSettings()">設定</button>
+                    <div class="button-with-info" style="margin-left: -5px;">
+                        <div class="info-icon">
+                            New
+                        </div>
+                        <div class="info-tooltip">
+                            <strong>トレードリンク機能を追加</strong>
+                            Regexに合ったトレードリンクを生成できます。
+                            <br/>
+                        </div>
+                    </div>
+                    <button onclick="resetAll()">リセット</button>
+                    <div style="width: 24px;">
+                    </div>
+                    <!-- スペーサー -->
+                    <span class="char-count" id="charCount"></span>
+                </div>
+                <div class="input-group">
+                    <label class="input-label">
+                        数量:
+                        <input id="itemQuantityInput" oninput="updateCombinedRegex(); saveInputState()" type="number"/>
+                    </label>
+                    <label class="input-label">
+                        パックサイズ:
+                        <input id="packSizeInput" oninput="updateCombinedRegex(); saveInputState()" type="number"/>
+                    </label>
+                    <label class="input-label">
+                        レアリティ:
+                        <input id="rarityInput" oninput="updateCombinedRegex(); saveInputState()" type="number"/>
+                    </label>
+                </div>
+                <div class="input-group">
+
+                    <label class="input-label">
+                        ウェイストーンドロップ率:
+                        <select id="waystoneInput" onchange="updateCombinedRegex(); saveInputState()">
+                            <option value="">なし</option>
+                            <option value="100">100</option>
+                            <option value="200">200</option>
+                            <option value="300">300</option>
+                            <option value="400">400</option>
+                            <option value="500">500</option>
+                            <option value="600">600</option>
+                            <option value="700">700</option>
+                        </select>
+                    </label>
+                    <label class="input-label">
+                        デリリウム:
+                        <select id="deliriumInput" onchange="updateCombinedRegex(); saveInputState()">
+                            <option value="">なし</option>
+                            <option value="10">10</option>
+                            <option value="20">20</option>
+                            <option value="30">30</option>
+                            <option value="40">40</option>
+                            <option value="50">50</option>
+                            <option value="60">60</option>
+                            <option value="70">70</option>
+                            <option value="80">80</option>
+                            <option value="90">90</option>
+                            <option value="100">100</option>
+                        </select>
+                    </label>
+                </div>
+
+                <div class="input-group">
+                    <label class="input-label">
+                        レアモンスター:
+                        <input id="rareMonsterInput" oninput="updateCombinedRegex(); saveInputState()" type="number"/>
+                    </label>
+                    <label class="input-label">
+                        マジックモンスター:
+                        <input id="magicMonsterInput" oninput="updateCombinedRegex(); saveInputState()" type="number"/>
+                    </label>
+                    <label class="input-label">
+                        <input checked="" id="searchAllRadio" name="searchMode" onchange="updateSearchMode(); saveSearchModeState()" type="radio" value="all"/>
+                        全て値以上
+                    </label>
+                    <label class="input-label">
+                        <input id="searchAnyRadio" name="searchMode" onchange="updateSearchMode(); saveSearchModeState()" type="radio" value="any"/>
+                        どれか
+                    </label>
+                </div>
+                <div class="input-group">
+                    <button onclick="copyUnidentified()">未鑑定</button>
+                    <button onclick="copyNormal()">ノーマル</button>
+                    <button onclick="copyMagic()">マジック</button>
+                    <button onclick="copyRare()">レア</button>
+                    <div class="button-with-info" style="margin-left: -5px;">
+                        <div class="info-icon">
+                            !
+                        </div>
+                        <div class="info-tooltip">
+                            <strong>マップ作成の下準備に</strong>
+                            ボタンに書かれている文字をコピーします。
+                            <br/>
+                        </div>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label class="input-label">
+                        <input id="packAdditionCheckbox" onchange="updateCombinedRegex(); saveInputState()" type="checkbox"/>
+                        パック追加
+                    </label>
+                    <label class="input-label">
+                        <input id="corruptedCheckbox" onchange="updateCombinedRegex(); saveInputState()" type="checkbox"/>
+                        コラプト
+                    </label>
+                    <label class="input-label">
+                        <input id="nonCorruptedCheckbox" onchange="updateCombinedRegex(); saveInputState()" type="checkbox"/>
+                        ノンコラ
+                    </label>
+                </div>
+                <div class="input-group" style="display: none;">
+                    <label class="input-label">
+                        <input checked="" id="ngModCheckbox" type="checkbox"/>
+                        NG mod
+                    </label>
+                </div>
+                <div class="input-group" style="font-size: 0.9em; color: var(--text-secondary); background: rgba(255,255,255,0.05); padding: 8px 12px; border-radius: 6px;">
+                    <div>
+                        <span style="color: var(--accent-red); font-weight: bold;">左クリック</span>
+                        : NG Mod (赤) /
+                        <span style="color: var(--accent-primary); font-weight: bold;">右クリック</span>
+                        : 欲しい Mod (緑)
+                    </div>
+                </div>
+                <input id="effectSearch" oninput="filterEffects()" placeholder="Modを検索..." style="margin-top: 16px;" type="text"/>
+                <div id="ModListResult" style="display: none;">
+                </div>
+                <div id="ModList" style="margin-top: 16px;">
+                </div>
+            </div>
+        </div>
+        <!-- 保存済みRegexタブ -->
+        <div class="tab-content" id="savedContent">
+            <div class="card">
+                <h2 class="section-header">保存済みRegex一覧</h2>
+                <div style="display: flex; gap: 8px; align-items: center; margin-bottom: 8px;">
+                    <input id="savedRegexSearch" placeholder="Regexを検索...ドラッグ&amp;ドロップで並び替えできます" style="flex: 1; margin-bottom: 0;" type="text"/>
+                </div>
+                <div id="savedRegexList" style="margin-top: 20px;">
+                    <div style="color: var(--text-secondary); text-align: center; padding: 40px;">
+                        保存されたRegexがありません
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ベンダーRegexタブ -->
+        <!-- トレードリンク集タブ -->
+        <!-- リンク集タブ -->
+    </div>
+    <script src="poe2_scripts/map_mods.js">
+    </script>
+    <script src="poe2_scripts/trade_link.js">
+    </script>
+    <script src="poe2_scripts/scripts.js">
+    </script>
+    <script src="poe2_scripts/saved-regex.js">
+    </script>
+    <!-- トレード設定サイドパネル -->
+    <div class="side-panel" id="tradeSettingsPanel">
+        <div class="side-panel-content">
+            <div class="side-panel-header">
+                <h3>トレード詳細設定</h3>
+                <button class="close-btn" onclick="toggleTradeSettings()">×</button>
+            </div>
+            <div class="settings-group">
+                <label>リーグ:</label>
+                <select id="leagueSelect" onchange="onLeagueSelectChange()" style="width: 100%; margin-bottom: 6px;">
+                    <option value="Fate of the Vaal">Fate of the Vaal</option>
+                    <option value="Hardcore Fate of the Vaal">Hardcore Fate of the Vaal</option>
+                    <option value="Ruthless Fate of the Vaal">Ruthless Fate of the Vaal</option>
+                    <option value="HC Ruthless Fate of the Vaal">HC Ruthless Fate of the Vaal</option>
+                    <option value="Standard">Standard</option>
+                    <option value="Hardcore">Hardcore</option>
+                    <option value="Ruthless">Ruthless</option>
+                    <option value="Hardcore Ruthless">Hardcore Ruthless</option>
+                    <option value="__custom__">その他（手入力）</option>
+                </select>
+                <input id="leagueInput" onchange="saveTradeSettings()" placeholder="リーグ名を入力" style="display: none;" type="text"/>
+            </div>
+            <div class="settings-group">
+                <label>トレード方法:</label>
+                <select id="tradeMethodSelect" onchange="saveTradeSettings()">
+                    <option value="any">全て</option>
+                    <option value="available">インスタントバイアウトおよび対面トレード</option>
+                    <option value="securable">インスタントバイアウト</option>
+                    <option value="onlineleague">対面トレード (リーグにオンライン)</option>
+                    <option value="online">対面トレード (オンライン)</option>
+                </select>
+            </div>
+            <div class="settings-group">
+                <label>ウェイストーンティア:</label>
+                <div style="display: flex; gap: 10px; align-items: center;">
+                    <input id="mapTierMinInput" max="17" min="1" onchange="saveTradeSettings()" placeholder="Min" style="width: 70px;" type="number" value="16"/>
+                    <span>~</span>
+                    <input id="mapTierMaxInput" max="17" min="1" onchange="saveTradeSettings()" placeholder="Max" style="width: 70px;" type="number" value="16"/>
+                </div>
+            </div>
+
+            <div class="settings-group">
+                <label>モッド数:</label>
+                <div style="display: flex; gap: 10px; align-items: center;">
+                    <input id="minModCountInput" max="20" min="0" onchange="saveTradeSettings()" placeholder="Min" style="width: 70px;" type="number" value="8"/>
+                    <span>~</span>
+                    <input id="maxModCountInput" max="20" min="0" onchange="saveTradeSettings()" placeholder="Max" style="width: 70px;" type="number" value="8"/>
+                </div>
+            </div>
+            <div class="settings-group">
+                <label>コラプト状態:</label>
+                <select id="corruptedStatusSelect" onchange="saveTradeSettings()">
+                    <option value="">指定なし</option>
+                    <option value="true">はい</option>
+                    <option value="false">いいえ</option>
+                </select>
+            </div>
+            <div class="settings-group">
+                <label>欲しいModの検索モード:</label>
+                <select id="wantedModModeSelect" onchange="saveTradeSettings()">
+                    <option value="any">いずれか一つ以上 (Any)</option>
+                    <option value="all">全てを含む (All)</option>
+                </select>
+            </div>
+            <div class="settings-group">
+                <label>バイアウト価格:</label>
+                <div style="display: flex; gap: 10px; align-items: center; margin-bottom: 5px;">
+                    <select id="buyoutPriceSelect" onchange="saveTradeSettings()" style="flex: 1;">
+                        <option value="">高貴なオーブ同等物</option>
+                        <option value="exalted">高貴なオーブ (Exalted)</option>
+                        <option value="divine">神のオーブ (Divine)</option>
+                        <option value="chaos">カオスオーブ (Chaos)</option>
+                    </select>
+                </div>
+                <div style="display: flex; gap: 10px; align-items: center;">
+                    <input id="buyoutPriceMinInput" min="0" onchange="saveTradeSettings()" placeholder="Min" style="width: 70px;" type="number"/>
+                    <span>~</span>
+                    <input id="buyoutPriceMaxInput" min="0" onchange="saveTradeSettings()" placeholder="Max" style="width: 70px;" type="number"/>
+                </div>
+            </div>
+            <div style="margin-top: 20px;">
+                <button class="primary-btn" onclick="toggleTradeSettings()">閉じる</button>
+            </div>
+        </div>
+    </div>
+    <!-- モーダル: 要望・不具合報告 -->
+    <div class="modal" id="feedbackModal">
+        <div class="modal-content" style="max-width: 600px;">
+            <div class="modal-header">
+                <h3>要望・不具合報告</h3>
+                <span class="modal-close" onclick="closeFeedbackModal()">×</span>
+            </div>
+            <div id="feedbackFormContainer">
+                <p style="font-size: 14px; margin-bottom: 12px; color: var(--text-secondary);">
+                    不具合の報告や、機能追加の要望など、お気軽にお送りください。
+                    <br/>
+                    Googleフォーラムを使用しています。
+                </p>
+                <div class="settings-group">
+                    <label style="display: block; margin-bottom: 8px;">内容:</label>
+                    <textarea id="feedbackText" placeholder="こちらに詳細を入力してください..." rows="6" style="width: 100%; resize: vertical; min-height: 150px;">
+                    </textarea>
+                </div>
+            </div>
+            <div id="feedbackSuccessMessage" style="display: none; text-align: center; padding: 40px 0;">
+                <div style="font-size: 48px; color: var(--accent-primary); margin-bottom: 16px;">
+                    ✓
+                </div>
+                <h3 style="margin-bottom: 8px;">送信完了</h3>
+                <p style="color: var(--text-secondary);">
+                    貴重なご意見ありがとうございました！
+                </p>
+            </div>
+            <div class="modal-footer">
+                <div id="feedbackFooterButtons" style="display: flex; gap: 10px; justify-content: flex-end;">
+                    <button class="primary-btn" onclick="submitFeedback()">送信する</button>
+                    <button onclick="closeFeedbackModal()" style="background: #333; color: #fff;">キャンセル</button>
+                </div>
+                <div id="feedbackCloseButton" style="display: none; text-align: right;">
+                    <button onclick="closeFeedbackModal()">閉じる</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- フォーム送信時の中継用(画面遷移防止) -->
+    <iframe id="hidden_iframe" name="hidden_iframe" onload="onFeedbackSubmitted()" style="display:none;">
+    </iframe>
+</body>
+</html>

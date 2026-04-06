@@ -1024,6 +1024,7 @@ let beastSortDirection = 'desc';
 // ビーストリストのレンダリング（ソート機能追加）
 function renderbeastlist() {
   const container = document.getElementById('beastlistContainer');
+  if (!container || typeof beastlist === 'undefined') return;
   container.innerHTML = '';
   
   let beasts = Object.entries(beastlist);
@@ -1774,6 +1775,7 @@ window.onclick = function(event) {
 // スカラベ関連ロジック
 function renderscarablist() {
   const container = document.getElementById('scarablistContainer');
+  if (!container || typeof scarablist === 'undefined') return;
   if (!container) return;
   container.innerHTML = '';
   
@@ -2056,6 +2058,7 @@ function updateScarabProfileList() {
 // --- タトゥー関連ロジック ---
 function rendertattoolist() {
   const container = document.getElementById('tattoolistContainer');
+  if (!container || typeof tattoolist === 'undefined') return;
   if (!container) return;
   container.innerHTML = '';
   
@@ -2350,6 +2353,7 @@ function updateTattooProfileList() {
 // --- ルーングラフト関連ロジック ---
 function renderrunegraftlist() {
   const container = document.getElementById('runegraftlistContainer');
+  if (!container || typeof runegraftlist === 'undefined') return;
   if (!container) return;
   container.innerHTML = '';
   
