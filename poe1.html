@@ -176,7 +176,28 @@
                     </div>
                 </div>
 
-                <input type="text" id="effectSearch" placeholder="Modを検索..." oninput="filterEffects()" style="margin-top: 16px;">
+                <div style="display: flex; gap: 8px; margin-top: 16px; align-items: center;">
+                    <input type="text" id="effectSearch" placeholder="Modを検索..." oninput="filterEffects()" style="flex: 1; margin-top: 0; padding: 10px; border-radius: 4px; border: 1px solid var(--border-color); background: var(--bg-secondary); color: var(--text-primary);">
+                    <select id="modSortSelect" onchange="updateModList()" style="padding: 10px; border-radius: 4px; border: 1px solid var(--border-color); background: var(--bg-secondary); color: var(--text-primary);">
+                        <option value="default">デフォルト順</option>
+                        <option value="tier_desc">危険度(Tier) 降順</option>
+                        <option value="tier_asc">危険度(Tier) 昇順</option>
+                        <option value="type_asc">プレフィックス 降順</option>
+                        <option value="type_desc">サフィックス 降順</option>
+                        <option value="quantity_desc">数量 降順</option>
+                        <!-- <option value="quantity_asc">数量 昇順</option> -->
+                        <option value="packsize_desc">パックサイズ 降順</option>
+                        <!-- <option value="packsize_asc">パックサイズ 昇順</option> -->
+                        <option value="rarity_desc">レアリティ 降順</option>
+                        <!-- <option value="rarity_asc">レアリティ 昇順</option> -->
+                        <option value="scarab_desc">スカラベ 降順</option>
+                        <!-- <option value="scarab_asc">スカラベ 昇順</option> -->
+                        <option value="currency_desc">カレンシー 降順</option>
+                        <!-- <option value="currency_asc">カレンシー 昇順</option> -->
+                        <option value="map_desc">マップ 降順</option>
+                        <!-- <option value="map_asc">マップ 昇順</option> -->
+                    </select>
+                </div>
                 <div id="ModListResult" style="display: none;"></div>
                 <div id="ModList" style="margin-top: 16px;"></div>
             </div>

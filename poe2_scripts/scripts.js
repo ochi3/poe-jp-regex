@@ -738,25 +738,112 @@ function updateModList() {
 
     const isT17 = document.getElementById('mapTierCheckbox')?.checked || false;
 
+    const sortSelect = document.getElementById('modSortSelect');
+    const sortMethod = sortSelect ? sortSelect.value : 'default';
+
     const sortedModList = Object.entries(ModList)
         .filter(([key, value]) => !(value.modTier17 && !isT17))
         .sort(([keyA, valueA], [keyB, valueB]) => {
             const stateA = checkedMods.get(keyA) || 'none';
             const stateB = checkedMods.get(keyB) || 'none';
 
-            // 1. 選択済みを優先
             if (stateA !== 'none' && stateB === 'none') return -1;
             if (stateA === 'none' && stateB !== 'none') return 1;
 
             if (stateA !== 'none' && stateB !== 'none') {
-                // 2. NGをWantedより優先
                 if (stateA === 'ng' && stateB === 'wanted') return -1;
                 if (stateA === 'wanted' && stateB === 'ng') return 1;
             }
 
-            // 3. ティア順 (高い順)
-            if (valueB.tier !== valueA.tier) {
-                return valueB.tier - valueA.tier;
+            switch (sortMethod) {
+                case 'tier_asc':
+                    if (valueA.tier !== valueB.tier) return valueA.tier - valueB.tier;
+                    break;
+                case 'tier_desc':
+                    if (valueA.tier !== valueB.tier) return valueB.tier - valueA.tier;
+                    break;
+                case 'type_asc':
+                    if (valueA.type !== valueB.type) return (valueA.type || '').localeCompare(valueB.type || '');
+                    break;
+                case 'type_desc':
+                    if (valueA.type !== valueB.type) return (valueB.type || '').localeCompare(valueA.type || '');
+                    break;
+                case 'quantity_asc': {
+                    const qA = valueA["map_map_item_drop_chance_+%"] || valueA["map_item_drop_quantity_+%"] || 0;
+                    const qB = valueB["map_map_item_drop_chance_+%"] || valueB["map_item_drop_quantity_+%"] || 0;
+                    if (qA !== qB) return qA - qB;
+                    break;
+                }
+                case 'quantity_desc': {
+                    const qA = valueA["map_map_item_drop_chance_+%"] || valueA["map_item_drop_quantity_+%"] || 0;
+                    const qB = valueB["map_map_item_drop_chance_+%"] || valueB["map_item_drop_quantity_+%"] || 0;
+                    if (qA !== qB) return qB - qA;
+                    break;
+                }
+                case 'packsize_asc': {
+                    const pA = valueA["map_pack_size_+%"] || 0;
+                    const pB = valueB["map_pack_size_+%"] || 0;
+                    if (pA !== pB) return pA - pB;
+                    break;
+                }
+                case 'packsize_desc': {
+                    const pA = valueA["map_pack_size_+%"] || 0;
+                    const pB = valueB["map_pack_size_+%"] || 0;
+                    if (pA !== pB) return pB - pA;
+                    break;
+                }
+                case 'rarity_asc': {
+                    const rA = valueA["map_item_drop_rarity_+%"] || 0;
+                    const rB = valueB["map_item_drop_rarity_+%"] || 0;
+                    if (rA !== rB) return rA - rB;
+                    break;
+                }
+                case 'rarity_desc': {
+                    const rA = valueA["map_item_drop_rarity_+%"] || 0;
+                    const rB = valueB["map_item_drop_rarity_+%"] || 0;
+                    if (rA !== rB) return rB - rA;
+                    break;
+                }
+                case 'waystone_asc': {
+                    const vA = valueA["map_map_item_drop_chance_+%"] || 0;
+                    const vB = valueB["map_map_item_drop_chance_+%"] || 0;
+                    if (vA !== vB) return vA - vB;
+                    break;
+                }
+                case 'waystone_desc': {
+                    const vA = valueA["map_map_item_drop_chance_+%"] || 0;
+                    const vB = valueB["map_map_item_drop_chance_+%"] || 0;
+                    if (vA !== vB) return vB - vA;
+                    break;
+                }
+                case 'rare_asc': {
+                    const vA = valueA["map_number_of_rare_packs_+%"] || 0;
+                    const vB = valueB["map_number_of_rare_packs_+%"] || 0;
+                    if (vA !== vB) return vA - vB;
+                    break;
+                }
+                case 'rare_desc': {
+                    const vA = valueA["map_number_of_rare_packs_+%"] || 0;
+                    const vB = valueB["map_number_of_rare_packs_+%"] || 0;
+                    if (vA !== vB) return vB - vA;
+                    break;
+                }
+                case 'magic_asc': {
+                    const vA = valueA["map_number_of_magic_packs_+%"] || 0;
+                    const vB = valueB["map_number_of_magic_packs_+%"] || 0;
+                    if (vA !== vB) return vA - vB;
+                    break;
+                }
+                case 'magic_desc': {
+                    const vA = valueA["map_number_of_magic_packs_+%"] || 0;
+                    const vB = valueB["map_number_of_magic_packs_+%"] || 0;
+                    if (vA !== vB) return vB - vA;
+                    break;
+                }
+                case 'default':
+                default:
+                    if (valueB.tier !== valueA.tier) return valueB.tier - valueA.tier;
+                    break;
             }
 
             if (valueA.type === 'Prefix' && valueB.type === 'Suffix') return -1;
@@ -915,12 +1002,19 @@ function saveProfile() {
   profiles[profileName] = {
     mods: Array.from(checkedMods), // [[id, state], ...] の形式で保存
     settings: {
-      itemQuantity: document.getElementById('itemQuantityInput').value,
-      packSize: document.getElementById('packSizeInput').value,
-      rarity: document.getElementById('rarityInput').value,
-      scarab: document.getElementById('scarabInput').value,
-      currency: document.getElementById('currencyInput').value,
-      map: document.getElementById('mapInput').value,
+      itemQuantity: document.getElementById('itemQuantityInput')?.value || '',
+      packSize: document.getElementById('packSizeInput')?.value || '',
+      rarity: document.getElementById('rarityInput')?.value || '',
+      scarab: document.getElementById('scarabInput')?.value || '',
+      currency: document.getElementById('currencyInput')?.value || '',
+      map: document.getElementById('mapInput')?.value || '',
+      waystone: document.getElementById('waystoneInput')?.value || '',
+      delirium: document.getElementById('deliriumInput')?.value || '',
+      rareMonster: document.getElementById('rareMonsterInput')?.value || '',
+      magicMonster: document.getElementById('magicMonsterInput')?.value || '',
+      packAddition: document.getElementById('packAdditionCheckbox')?.checked || false,
+      corrupted: document.getElementById('corruptedCheckbox')?.checked || false,
+      nonCorrupted: document.getElementById('nonCorruptedCheckbox')?.checked || false,
       searchMode: document.querySelector('input[name="searchMode"]:checked')?.value || 'any',
       ngModChecked: document.getElementById('ngModCheckbox').checked,
       mapTierChecked: document.getElementById('mapTierCheckbox')?.checked || false,
@@ -960,12 +1054,21 @@ function loadProfile() {
     const profile = profiles[profileName];
 
     // 入力値復元
-    document.getElementById('itemQuantityInput').value = profile.settings?.itemQuantity || '';
-    document.getElementById('packSizeInput').value = profile.settings?.packSize || '';
-    document.getElementById('rarityInput').value = profile.settings?.rarity || '';
-    document.getElementById('scarabInput').value = profile.settings?.scarab || '';
-    document.getElementById('currencyInput').value = profile.settings?.currency || '';
-    document.getElementById('mapInput').value = profile.settings?.map || '';
+    if (document.getElementById('itemQuantityInput')) document.getElementById('itemQuantityInput').value = profile.settings?.itemQuantity || '';
+    if (document.getElementById('packSizeInput')) document.getElementById('packSizeInput').value = profile.settings?.packSize || '';
+    if (document.getElementById('rarityInput')) document.getElementById('rarityInput').value = profile.settings?.rarity || '';
+    if (document.getElementById('scarabInput')) document.getElementById('scarabInput').value = profile.settings?.scarab || '';
+    if (document.getElementById('currencyInput')) document.getElementById('currencyInput').value = profile.settings?.currency || '';
+    if (document.getElementById('mapInput')) document.getElementById('mapInput').value = profile.settings?.map || '';
+    
+    if (document.getElementById('waystoneInput')) document.getElementById('waystoneInput').value = profile.settings?.waystone || '';
+    if (document.getElementById('deliriumInput')) document.getElementById('deliriumInput').value = profile.settings?.delirium || '';
+    if (document.getElementById('rareMonsterInput')) document.getElementById('rareMonsterInput').value = profile.settings?.rareMonster || '';
+    if (document.getElementById('magicMonsterInput')) document.getElementById('magicMonsterInput').value = profile.settings?.magicMonster || '';
+
+    if (document.getElementById('packAdditionCheckbox')) document.getElementById('packAdditionCheckbox').checked = profile.settings?.packAddition || false;
+    if (document.getElementById('corruptedCheckbox')) document.getElementById('corruptedCheckbox').checked = profile.settings?.corrupted || false;
+    if (document.getElementById('nonCorruptedCheckbox')) document.getElementById('nonCorruptedCheckbox').checked = profile.settings?.nonCorrupted || false;
 
     // チェックボックス状態復元（オプショナルチェイニングで安全に）
     document.getElementById('ngModCheckbox').checked = profile.settings?.ngModChecked || false;
@@ -1056,11 +1159,15 @@ function validateInputs() {
     'rarityInput',
     'scarabInput',
     'currencyInput',
-    'mapInput'
+    'mapInput',
+    'rareMonsterInput',
+    'magicMonsterInput'
   ];
 
   for (const id of inputs) {
-    const value = document.getElementById(id).value;
+    const el = document.getElementById(id);
+    if (!el) continue;
+    const value = el.value;
     if (value && (isNaN(value) || value < 0)) {
       alert(`${id.replace('Input', '')} には0以上の数値を入力してください`);
       document.getElementById(id).focus();

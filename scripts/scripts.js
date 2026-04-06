@@ -681,25 +681,112 @@ function updateModList() {
 
     const isT17 = document.getElementById('mapTierCheckbox').checked;
 
+    const sortSelect = document.getElementById('modSortSelect');
+    const sortMethod = sortSelect ? sortSelect.value : 'default';
+
     const sortedModList = Object.entries(ModList)
         .filter(([key, value]) => !(value.modTier17 && !isT17))
         .sort(([keyA, valueA], [keyB, valueB]) => {
             const stateA = checkedMods.get(keyA) || 'none';
             const stateB = checkedMods.get(keyB) || 'none';
 
-            // 1. 選択済みを優先
             if (stateA !== 'none' && stateB === 'none') return -1;
             if (stateA === 'none' && stateB !== 'none') return 1;
 
             if (stateA !== 'none' && stateB !== 'none') {
-                // 2. NGをWantedより優先
                 if (stateA === 'ng' && stateB === 'wanted') return -1;
                 if (stateA === 'wanted' && stateB === 'ng') return 1;
             }
 
-            // 3. ティア順 (高い順)
-            if (valueB.tier !== valueA.tier) {
-                return valueB.tier - valueA.tier;
+            switch (sortMethod) {
+                case 'tier_asc':
+                    if (valueA.tier !== valueB.tier) return valueA.tier - valueB.tier;
+                    break;
+                case 'tier_desc':
+                    if (valueA.tier !== valueB.tier) return valueB.tier - valueA.tier;
+                    break;
+                case 'type_asc':
+                    if (valueA.type !== valueB.type) return (valueA.type || '').localeCompare(valueB.type || '');
+                    break;
+                case 'type_desc':
+                    if (valueA.type !== valueB.type) return (valueB.type || '').localeCompare(valueA.type || '');
+                    break;
+                case 'quantity_asc': {
+                    const qA = valueA["map_map_item_drop_chance_+%"] || valueA["map_item_drop_quantity_+%"] || 0;
+                    const qB = valueB["map_map_item_drop_chance_+%"] || valueB["map_item_drop_quantity_+%"] || 0;
+                    if (qA !== qB) return qA - qB;
+                    break;
+                }
+                case 'quantity_desc': {
+                    const qA = valueA["map_map_item_drop_chance_+%"] || valueA["map_item_drop_quantity_+%"] || 0;
+                    const qB = valueB["map_map_item_drop_chance_+%"] || valueB["map_item_drop_quantity_+%"] || 0;
+                    if (qA !== qB) return qB - qA;
+                    break;
+                }
+                case 'packsize_asc': {
+                    const pA = valueA["map_pack_size_+%"] || 0;
+                    const pB = valueB["map_pack_size_+%"] || 0;
+                    if (pA !== pB) return pA - pB;
+                    break;
+                }
+                case 'packsize_desc': {
+                    const pA = valueA["map_pack_size_+%"] || 0;
+                    const pB = valueB["map_pack_size_+%"] || 0;
+                    if (pA !== pB) return pB - pA;
+                    break;
+                }
+                case 'rarity_asc': {
+                    const rA = valueA["map_item_drop_rarity_+%"] || 0;
+                    const rB = valueB["map_item_drop_rarity_+%"] || 0;
+                    if (rA !== rB) return rA - rB;
+                    break;
+                }
+                case 'rarity_desc': {
+                    const rA = valueA["map_item_drop_rarity_+%"] || 0;
+                    const rB = valueB["map_item_drop_rarity_+%"] || 0;
+                    if (rA !== rB) return rB - rA;
+                    break;
+                }
+                case 'scarab_asc': {
+                    const vA = valueA["map_scarab_drop_chance_+%_final_from_uber_mod"] || 0;
+                    const vB = valueB["map_scarab_drop_chance_+%_final_from_uber_mod"] || 0;
+                    if (vA !== vB) return vA - vB;
+                    break;
+                }
+                case 'scarab_desc': {
+                    const vA = valueA["map_scarab_drop_chance_+%_final_from_uber_mod"] || 0;
+                    const vB = valueB["map_scarab_drop_chance_+%_final_from_uber_mod"] || 0;
+                    if (vA !== vB) return vB - vA;
+                    break;
+                }
+                case 'currency_asc': {
+                    const vA = valueA["map_currency_drop_chance_+%_final_from_uber_mod"] || 0;
+                    const vB = valueB["map_currency_drop_chance_+%_final_from_uber_mod"] || 0;
+                    if (vA !== vB) return vA - vB;
+                    break;
+                }
+                case 'currency_desc': {
+                    const vA = valueA["map_currency_drop_chance_+%_final_from_uber_mod"] || 0;
+                    const vB = valueB["map_currency_drop_chance_+%_final_from_uber_mod"] || 0;
+                    if (vA !== vB) return vB - vA;
+                    break;
+                }
+                case 'map_asc': {
+                    const vA = valueA["map_map_item_drop_chance_+%_final_from_uber_mod"] || 0;
+                    const vB = valueB["map_map_item_drop_chance_+%_final_from_uber_mod"] || 0;
+                    if (vA !== vB) return vA - vB;
+                    break;
+                }
+                case 'map_desc': {
+                    const vA = valueA["map_map_item_drop_chance_+%_final_from_uber_mod"] || 0;
+                    const vB = valueB["map_map_item_drop_chance_+%_final_from_uber_mod"] || 0;
+                    if (vA !== vB) return vB - vA;
+                    break;
+                }
+                case 'default':
+                default:
+                    if (valueB.tier !== valueA.tier) return valueB.tier - valueA.tier;
+                    break;
             }
 
             if (valueA.type === 'Prefix' && valueB.type === 'Suffix') return -1;
