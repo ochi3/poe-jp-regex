@@ -469,9 +469,9 @@ function updateCharCount() {
     const charCountElement = document.getElementById('charCount');
     charCountElement.textContent = `文字数: ${charCount}`;
 
-    if (charCount > 250) {
+    if (charCount > 50) {
         charCountElement.style.color = 'red';
-        charCountElement.textContent += ' (250文字を超えています)';
+        charCountElement.textContent += ' (50文字を超えています)';
     } else {
         charCountElement.style.color = '';
     }
@@ -1319,9 +1319,9 @@ function updateBeastRegex() {
   const charCountElement = document.getElementById('beastCharCount');
   charCountElement.textContent = `文字数: ${charCount}`;
   
-  if (charCount > 250) {
+  if (charCount > 50) {
     charCountElement.style.color = 'red';
-    charCountElement.textContent += ' (250文字を超えています)';
+    charCountElement.textContent += ' (50文字を超えています)';
   } else {
     charCountElement.style.color = '';
   }
@@ -2066,9 +2066,9 @@ function updateScarabRegex() {
   const charCountElement = document.getElementById('scarabCharCount');
   charCountElement.textContent = `文字数: ${charCount}`;
   
-  if (charCount > 250) {
+  if (charCount > 50) {
     charCountElement.style.color = 'red';
-    charCountElement.textContent += ' (250文字を超えています)';
+    charCountElement.textContent += ' (50文字を超えています)';
   } else {
     charCountElement.style.color = '';
   }
@@ -2357,9 +2357,9 @@ function updateTattooRegex() {
   const charCountElement = document.getElementById('tattooCharCount');
   charCountElement.textContent = `文字数: ${charCount}`;
   
-  if (charCount > 250) {
+  if (charCount > 50) {
     charCountElement.style.color = 'red';
-    charCountElement.textContent += ' (250文字を超えています)';
+    charCountElement.textContent += ' (50文字を超えています)';
   } else {
     charCountElement.style.color = '';
   }
@@ -2652,9 +2652,9 @@ function updateRunegraftRegex() {
   const charCountElement = document.getElementById('runegraftCharCount');
   charCountElement.textContent = `文字数: ${charCount}`;
   
-  if (charCount > 250) {
+  if (charCount > 50) {
     charCountElement.style.color = 'red';
-    charCountElement.textContent += ' (250文字を超えています)';
+    charCountElement.textContent += ' (50文字を超えています)';
   } else {
     charCountElement.style.color = '';
   }
