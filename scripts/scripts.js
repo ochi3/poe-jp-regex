@@ -392,19 +392,19 @@ function copyToClipboard() {
 }
 
 function resetAll() {
-    document.getElementById('itemQuantityInput').value = '';
-    document.getElementById('packSizeInput').value = '';
-    document.getElementById('rarityInput').value = '';
-    document.getElementById('scarabInput').value = '';
-    document.getElementById('currencyInput').value = '';
-    document.getElementById('mapInput').value = '';
-    document.getElementById('ngModCheckbox').checked = false;
-    document.getElementById('mapTierCheckbox').checked = false;
-    document.getElementById('normalCheckbox').checked = false;
-    document.getElementById('magicCheckbox').checked = false;
-    document.getElementById('rareCheckbox').checked = false;
-    document.getElementById('searchAllRadio').checked = false;
-    document.getElementById('searchAnyRadio').checked = true;
+    if (document.getElementById('itemQuantityInput')) document.getElementById('itemQuantityInput').value = '';
+    if (document.getElementById('packSizeInput')) document.getElementById('packSizeInput').value = '';
+    if (document.getElementById('rarityInput')) document.getElementById('rarityInput').value = '';
+    if (document.getElementById('scarabInput')) document.getElementById('scarabInput').value = '';
+    if (document.getElementById('currencyInput')) document.getElementById('currencyInput').value = '';
+    if (document.getElementById('mapInput')) document.getElementById('mapInput').value = '';
+    if (document.getElementById('ngModCheckbox')) document.getElementById('ngModCheckbox').checked = false;
+    if (document.getElementById('mapTierCheckbox')) document.getElementById('mapTierCheckbox').checked = false;
+    if (document.getElementById('normalCheckbox')) document.getElementById('normalCheckbox').checked = false;
+    if (document.getElementById('magicCheckbox')) document.getElementById('magicCheckbox').checked = false;
+    if (document.getElementById('rareCheckbox')) document.getElementById('rareCheckbox').checked = false;
+    if (document.getElementById('searchAllRadio')) document.getElementById('searchAllRadio').checked = false;
+    if (document.getElementById('searchAnyRadio')) document.getElementById('searchAnyRadio').checked = true;
 
 
     checkedMods.clear();
@@ -599,8 +599,11 @@ function loadCheckboxState() {
     const ngModChecked = localStorage.getItem('ngModChecked') === 'true';
     const mapTierChecked = localStorage.getItem('mapTierChecked') === 'true';
 
-    document.getElementById('ngModCheckbox').checked = ngModChecked;
-    document.getElementById('mapTierCheckbox').checked = mapTierChecked;
+    const ngModCheckbox = document.getElementById('ngModCheckbox');
+    const mapTierCheckbox = document.getElementById('mapTierCheckbox');
+
+    if (ngModCheckbox) ngModCheckbox.checked = ngModChecked;
+    if (mapTierCheckbox) mapTierCheckbox.checked = mapTierChecked;
 }
 
 function saveModCheckboxState() {
@@ -783,44 +786,47 @@ function loadModCheckboxState() {
 
 function saveInputState() {
     const state = {
-        itemQuantity: document.getElementById('itemQuantityInput').value,
-        packSize: document.getElementById('packSizeInput').value,
-        rarity: document.getElementById('rarityInput').value,
-        scarab: document.getElementById('scarabInput').value,
-        currency: document.getElementById('currencyInput').value,
-        map: document.getElementById('mapInput').value,
-        beastBulkThreshold: document.getElementById('beastBulkThreshold').value,
-        beastBulkThresholdMax: document.getElementById('beastBulkThresholdMax').value,
-        scarabBulkThreshold: document.getElementById('scarabBulkThreshold').value,
-        scarabBulkThresholdMax: document.getElementById('scarabBulkThresholdMax').value,
-        tattooBulkThreshold: document.getElementById('tattooBulkThreshold').value,
-        tattooBulkThresholdMax: document.getElementById('tattooBulkThresholdMax').value,
-        runegraftBulkThreshold: document.getElementById('runegraftBulkThreshold').value,
-        runegraftBulkThresholdMax: document.getElementById('runegraftBulkThresholdMax').value
+        itemQuantity: document.getElementById('itemQuantityInput')?.value || '',
+        packSize: document.getElementById('packSizeInput')?.value || '',
+        rarity: document.getElementById('rarityInput')?.value || '',
+        scarab: document.getElementById('scarabInput')?.value || '',
+        currency: document.getElementById('currencyInput')?.value || '',
+        map: document.getElementById('mapInput')?.value || '',
+        beastBulkThreshold: document.getElementById('beastBulkThreshold')?.value || '',
+        beastBulkThresholdMax: document.getElementById('beastBulkThresholdMax')?.value || '',
+        scarabBulkThreshold: document.getElementById('scarabBulkThreshold')?.value || '',
+        scarabBulkThresholdMax: document.getElementById('scarabBulkThresholdMax')?.value || '',
+        tattooBulkThreshold: document.getElementById('tattooBulkThreshold')?.value || '',
+        tattooBulkThresholdMax: document.getElementById('tattooBulkThresholdMax')?.value || '',
+        runegraftBulkThreshold: document.getElementById('runegraftBulkThreshold')?.value || '',
+        runegraftBulkThresholdMax: document.getElementById('runegraftBulkThresholdMax')?.value || ''
     };
     localStorage.setItem('inputState', JSON.stringify(state));
 }
 
 function loadInputState() {
     const state = JSON.parse(localStorage.getItem('inputState') || '{}');
-    document.getElementById('itemQuantityInput').value = state.itemQuantity || '';
-    document.getElementById('packSizeInput').value = state.packSize || '';
-    document.getElementById('rarityInput').value = state.rarity || '';
-    document.getElementById('scarabInput').value = state.scarab || '';
-    document.getElementById('currencyInput').value = state.currency || '';
-    document.getElementById('mapInput').value = state.map || '';
-    document.getElementById('beastBulkThreshold').value = state.beastBulkThreshold || '10';
-    document.getElementById('beastBulkThresholdMax').value = state.beastBulkThresholdMax || '';
-    document.getElementById('scarabBulkThreshold').value = state.scarabBulkThreshold || '10';
-    document.getElementById('scarabBulkThresholdMax').value = state.scarabBulkThresholdMax || '';
-    document.getElementById('tattooBulkThreshold').value = state.tattooBulkThreshold || '10';
-    document.getElementById('tattooBulkThresholdMax').value = state.tattooBulkThresholdMax || '';
-    document.getElementById('runegraftBulkThreshold').value = state.runegraftBulkThreshold || '10';
-    document.getElementById('runegraftBulkThresholdMax').value = state.runegraftBulkThresholdMax || '';
+    if (document.getElementById('itemQuantityInput')) document.getElementById('itemQuantityInput').value = state.itemQuantity || '';
+    if (document.getElementById('packSizeInput')) document.getElementById('packSizeInput').value = state.packSize || '';
+    if (document.getElementById('rarityInput')) document.getElementById('rarityInput').value = state.rarity || '';
+    if (document.getElementById('scarabInput')) document.getElementById('scarabInput').value = state.scarab || '';
+    if (document.getElementById('currencyInput')) document.getElementById('currencyInput').value = state.currency || '';
+    if (document.getElementById('mapInput')) document.getElementById('mapInput').value = state.map || '';
+    if (document.getElementById('beastBulkThreshold')) document.getElementById('beastBulkThreshold').value = state.beastBulkThreshold || '10';
+    if (document.getElementById('beastBulkThresholdMax')) document.getElementById('beastBulkThresholdMax').value = state.beastBulkThresholdMax || '';
+    if (document.getElementById('scarabBulkThreshold')) document.getElementById('scarabBulkThreshold').value = state.scarabBulkThreshold || '10';
+    if (document.getElementById('scarabBulkThresholdMax')) document.getElementById('scarabBulkThresholdMax').value = state.scarabBulkThresholdMax || '';
+    if (document.getElementById('tattooBulkThreshold')) document.getElementById('tattooBulkThreshold').value = state.tattooBulkThreshold || '10';
+    if (document.getElementById('tattooBulkThresholdMax')) document.getElementById('tattooBulkThresholdMax').value = state.tattooBulkThresholdMax || '';
+    if (document.getElementById('runegraftBulkThreshold')) document.getElementById('runegraftBulkThreshold').value = state.runegraftBulkThreshold || '10';
+    if (document.getElementById('runegraftBulkThresholdMax')) document.getElementById('runegraftBulkThresholdMax').value = state.runegraftBulkThresholdMax || '';
 }
 
-document.getElementById('ngModCheckbox').addEventListener('change', saveCheckboxState);
-document.getElementById('mapTierCheckbox').addEventListener('change', saveCheckboxState);
+const ngModCheckboxEl = document.getElementById('ngModCheckbox');
+if (ngModCheckboxEl) ngModCheckboxEl.addEventListener('change', saveCheckboxState);
+
+const mapTierCheckboxEl = document.getElementById('mapTierCheckbox');
+if (mapTierCheckboxEl) mapTierCheckboxEl.addEventListener('change', saveCheckboxState);
 
 function saveSearchModeState() {
     const state = {
@@ -914,16 +920,16 @@ function loadProfile() {
     const profile = profiles[profileName];
 
     // 入力値復元
-    document.getElementById('itemQuantityInput').value = profile.settings?.itemQuantity || '';
-    document.getElementById('packSizeInput').value = profile.settings?.packSize || '';
-    document.getElementById('rarityInput').value = profile.settings?.rarity || '';
-    document.getElementById('scarabInput').value = profile.settings?.scarab || '';
-    document.getElementById('currencyInput').value = profile.settings?.currency || '';
-    document.getElementById('mapInput').value = profile.settings?.map || '';
+    if (document.getElementById('itemQuantityInput')) document.getElementById('itemQuantityInput').value = profile.settings?.itemQuantity || '';
+    if (document.getElementById('packSizeInput')) document.getElementById('packSizeInput').value = profile.settings?.packSize || '';
+    if (document.getElementById('rarityInput')) document.getElementById('rarityInput').value = profile.settings?.rarity || '';
+    if (document.getElementById('scarabInput')) document.getElementById('scarabInput').value = profile.settings?.scarab || '';
+    if (document.getElementById('currencyInput')) document.getElementById('currencyInput').value = profile.settings?.currency || '';
+    if (document.getElementById('mapInput')) document.getElementById('mapInput').value = profile.settings?.map || '';
 
     // チェックボックス状態復元（オプショナルチェイニングで安全に）
-    document.getElementById('ngModCheckbox').checked = profile.settings?.ngModChecked || false;
-    document.getElementById('mapTierCheckbox').checked = profile.settings?.mapTierChecked || false;
+    if (document.getElementById('ngModCheckbox')) document.getElementById('ngModCheckbox').checked = profile.settings?.ngModChecked || false;
+    if (document.getElementById('mapTierCheckbox')) document.getElementById('mapTierCheckbox').checked = profile.settings?.mapTierChecked || false;
     if (document.getElementById('normalCheckbox')) document.getElementById('normalCheckbox').checked = profile.settings?.rarities?.normal || false;
     if (document.getElementById('magicCheckbox')) document.getElementById('magicCheckbox').checked = profile.settings?.rarities?.magic || false;
     if (document.getElementById('rareCheckbox')) document.getElementById('rareCheckbox').checked = profile.settings?.rarities?.rare || false;
@@ -951,7 +957,7 @@ function loadProfile() {
     }
 
     // プロファイル名を入力欄に表示
-    document.getElementById('profileName').value = profileName;
+    if (document.getElementById('profileName')) document.getElementById('profileName').value = profileName;
 
     saveModCheckboxState();
 
@@ -959,8 +965,11 @@ function loadProfile() {
     updateCombinedRegex();
 
     ['change', 'input'].forEach(event => {
-      document.getElementById('mapTierCheckbox').dispatchEvent(new Event(event));
-      document.getElementById('ngModCheckbox').dispatchEvent(new Event(event));
+      const tierCb = document.getElementById('mapTierCheckbox');
+      if (tierCb) tierCb.dispatchEvent(new Event(event));
+      
+      const ngCb = document.getElementById('ngModCheckbox');
+      if (ngCb) ngCb.dispatchEvent(new Event(event));
     });
 
     showNotification(`"${profileName}" を読み込みました`);

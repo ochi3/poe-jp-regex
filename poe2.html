@@ -27,6 +27,7 @@
             </div>
             <nav>
                 <a class="nav-link active" data-tab="mapContent" href="#map">ウェイストーンMOD</a>
+                <a class="nav-link" data-tab="tabletContent" href="#tablet">タブレットRegex</a>
                 <a class="nav-link" data-tab="savedContent" href="#saved">保存済みRegex</a>
             </nav>
             <h4 style="margin-top: 32px;">
@@ -220,6 +221,30 @@
                 </div>
             </div>
         </div>
+        <!-- タブレットRegexタブ -->
+        <div class="tab-content" id="tabletContent">
+            <div class="card">
+                <h2 class="section-header">タブレットMOD Regex</h2>
+                <div class="output-area" id="tabletRegexOutput">
+                </div>
+                <div class="input-group">
+                    <button onclick="copyTabletToClipboard()">コピー</button>
+                    <button onclick="resetTabletAll()">リセット</button>
+                    <span class="char-count" id="tabletCharCount"></span>
+                </div>
+                <div style="font-size: 0.9em; color: var(--text-secondary); background: rgba(255,255,255,0.05); padding: 8px 12px; border-radius: 6px;">
+                    <div>
+                        <span style="color: var(--accent-primary); font-weight: bold;">左クリック</span>
+                        : Modを選択
+                    </div>
+                </div>
+            </div>
+            <div style="display: flex; gap: 8px; margin-top: 16px; align-items: center;">
+                <input id="tabletSearch" oninput="filterTabletEffects()" placeholder="Modを検索..." style="flex: 1; margin-top: 0; padding: 10px; border-radius: 4px; border: 1px solid var(--border-color); background: var(--bg-secondary); color: var(--text-primary);" type="text"/>
+            </div>
+            <div id="TabletModList" style="margin-top: 16px;">
+            </div>
+        </div>
         <!-- 保存済みRegexタブ -->
         <div class="tab-content" id="savedContent">
             <div class="card">
@@ -238,14 +263,12 @@
         <!-- トレードリンク集タブ -->
         <!-- リンク集タブ -->
     </div>
-    <script src="poe2_scripts/map_mods.js">
-    </script>
-    <script src="poe2_scripts/trade_link.js">
-    </script>
-    <script src="poe2_scripts/scripts.js">
-    </script>
-    <script src="poe2_scripts/saved-regex.js">
-    </script>
+    <script src="poe2_scripts/map_mods.js"></script>
+    <script src="poe2_scripts/tablet_mods.js"></script>
+    <script src="poe2_scripts/trade_link.js"></script>
+    <script src="poe2_scripts/scripts.js"></script>
+    <script src="poe2_scripts/tablet_scripts.js"></script>
+    <script src="poe2_scripts/saved-regex.js"></script>
     <!-- トレード設定サイドパネル -->
     <div class="side-panel" id="tradeSettingsPanel">
         <div class="side-panel-content">
