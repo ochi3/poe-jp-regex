@@ -313,6 +313,10 @@ function updateCombinedRegex() {
     const ngResults = [];
     const wantedResults = [];
 
+    if (document.getElementById('packAdditionCheckbox')?.checked) {
+        wantedResults.push(currentLanguage === 'ja' ? 'が追.*ク出' : 'packs');
+    }
+
     const validCheckedMods = new Map();
     
     checkedMods.forEach((state, key) => {
@@ -454,10 +458,6 @@ function generateExtraRegex() {
         if (firstDigit >= '1' && firstDigit <= '9') {
             finalResult.push(`([${firstDigit}-9]\\d+%のせ)`);
         }
-    }
-
-    if (document.getElementById('packAdditionCheckbox')?.checked) {
-        finalResult.push('が追.*ク出');
     }
 
     return finalResult.join(' ');

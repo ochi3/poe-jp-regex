@@ -5,7 +5,7 @@ const beastlist = {
     "effect": "希少サポートジェムを捧げる: 高レベル、高品質のサポートジェム3個",
     "regex": "ド・ウ",
     "enRegex": "id w",
-    "chaosValue": "7"
+    "chaosValue": "9"
   },
   "黒のモリガン": {
     "engName": "Black Mórrigan",
@@ -13,7 +13,7 @@ const beastlist = {
     "effect": "アイテムを変化: 可能な最大リンク数",
     "regex": "リガ",
     "enRegex": "k m",
-    "chaosValue": "225"
+    "chaosValue": "219"
   },
   "クレイシアンのキメラル": {
     "engName": "Craicic Chimeral",
@@ -37,7 +37,7 @@ const beastlist = {
     "effect": "アイテムを変換: シンセシス暗黙モッドをリロール",
     "regex": "ド・ヴ",
     "enRegex": "id v",
-    "chaosValue": "850.6"
+    "chaosValue": "749"
   },
   "ワイルド・ヘリオン・アルファ": {
     "engName": "Wild Hellion Alpha",
@@ -45,7 +45,7 @@ const beastlist = {
     "effect": "アイテムのモッドを変化: ウォッチャーズアイのモッドをリロール",
     "regex": "ド・ヘリ",
     "enRegex": "ld h",
-    "chaosValue": "95"
+    "chaosValue": "90"
   },
   "ワイルド・ブランブルバック": {
     "engName": "Wild Brambleback",
@@ -53,7 +53,7 @@ const beastlist = {
     "effect": "アイテムを変換: 希少サポートジェムに500m経験値追加する",
     "regex": "ド・ブラ",
     "enRegex": "d bra",
-    "chaosValue": "42.2"
+    "chaosValue": "41.6"
   },
   "平原の始祖、ファルウル": {
     "engName": "Farrul, First of the Plains",
@@ -69,7 +69,7 @@ const beastlist = {
     "effect": "アイテムをスプリット: それぞれ半分のモッドを持つ2個のアイテムにスプリット",
     "regex": "のプレ",
     "enRegex": "l pla",
-    "chaosValue": "30.2"
+    "chaosValue": "30"
   },
   "プライマル・クリストコーラー": {
     "engName": "Primal Cystcaller",
@@ -77,7 +77,7 @@ const beastlist = {
     "effect": "アイテムを作成: ナイトメアマップ",
     "regex": "ル・クリ",
     "enRegex": " cy",
-    "chaosValue": "15"
+    "chaosValue": "19"
   },
   "夜の始祖、フィヌムス": {
     "engName": "Fenumus, First of the Night",
@@ -85,7 +85,7 @@ const beastlist = {
     "effect": "アイテムにアスペクトスキルを追加: 蜘蛛のアスペクト",
     "regex": "祖、フィ",
     "enRegex": "s, f",
-    "chaosValue": "45"
+    "chaosValue": "45.4"
   },
   "空の始祖、サカワル": {
     "engName": "Saqawal, First of the Sky",
@@ -117,7 +117,7 @@ const beastlist = {
     "effect": "ポータルを開く: フィヌムスの巣",
     "regex": "スのハイ",
     "enRegex": "l hy",
-    "chaosValue": "1"
+    "chaosValue": "2"
   },
   "クレイシアンの砂のスピッター": {
     "engName": "Craicic Sand Spitter",
@@ -165,7 +165,7 @@ const beastlist = {
     "effect": "マップをコラプト: 暗黙モッドを1個付与\nマップをコラプト: ダブルコラプト",
     "regex": "ンの臣",
     "enRegex": "c v",
-    "chaosValue": "5"
+    "chaosValue": "5.33"
   },
   "ファルウルのリンクス・アルファ": {
     "engName": "Farric Lynx Alpha",
@@ -197,7 +197,7 @@ const beastlist = {
     "effect": "アイテムを作成: 貴重なスカラベ",
     "regex": "ル・クラ",
     "enRegex": "l cru",
-    "chaosValue": "10"
+    "chaosValue": "9"
   },
   "ファルウルのフロストヘリオン・アルファ": {
     "engName": "Farric Frost Hellion Alpha",
