@@ -26,8 +26,8 @@
                 <a href="poe2" style="flex: 1; text-align: center; padding: 3px; background: var(--accent-primary); border: 1px solid var(--accent-primary); border-radius: 4px; color: #000; text-decoration: none; font-weight: bold;">PoE 2</a>
             </div>
             <nav>
-                <a class="nav-link active" data-tab="mapContent" href="#map">ウェイストーンMOD</a>
-                <a class="nav-link" data-tab="tabletContent" href="#tablet">タブレットRegex</a>
+                <a class="nav-link active" data-tab="mapContent" href="#map">ウェイストーン</a>
+                <a class="nav-link" data-tab="tabletContent" href="#tablet">石板</a>
                 <a class="nav-link" data-tab="savedContent" href="#saved">保存済みRegex</a>
             </nav>
             <h4 style="margin-top: 32px;">
@@ -221,10 +221,10 @@
                 </div>
             </div>
         </div>
-        <!-- タブレットRegexタブ -->
+        <!-- 石板Regexタブ -->
         <div class="tab-content" id="tabletContent">
             <div class="card">
-                <h2 class="section-header">タブレットMOD Regex</h2>
+                <h2 class="section-header">石板</h2>
                 <div class="output-area" id="tabletRegexOutput">
                 </div>
                 <div class="input-group">
@@ -241,6 +241,12 @@
             </div>
             <div style="display: flex; gap: 8px; margin-top: 16px; align-items: center;">
                 <input id="tabletSearch" oninput="filterTabletEffects()" placeholder="Modを検索..." style="flex: 1; margin-top: 0; padding: 10px; border-radius: 4px; border: 1px solid var(--border-color); background: var(--bg-secondary); color: var(--text-primary);" type="text"/>
+                <select id="tabletSortSelect" onchange="updateTabletModList()" style="padding: 10px; border-radius: 4px; border: 1px solid var(--border-color); background: var(--bg-secondary); color: var(--text-primary);">
+                    <option value="default">デフォルト順</option>
+                    <option value="unique">Unique</option>
+                    <option value="prefix">Prefix</option>
+                    <option value="suffix">Suffix</option>
+                </select>
             </div>
             <div id="TabletModList" style="margin-top: 16px;">
             </div>

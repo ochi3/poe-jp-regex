@@ -19,16 +19,62 @@ function formatTabletModText(text, value) {
 function updateTabletModList() {
     const listDiv = document.getElementById('TabletModList');
     if (!listDiv) return;
+    
+    // 初回のみソートオプションを初期化
+    const sortSelect = document.getElementById('tabletSortSelect');
+    if (sortSelect && sortSelect.options.length <= 5) { // デフォルト、Unique, Pre, Suf, League の5つの初期状態
+        const categories = new Set();
+        Object.values(tabletModList).forEach(m => {
+            if (m.subGroups) m.subGroups.forEach(g => categories.add(g));
+        });
+        
+        // カテゴリー順オプションを消して個別のカテゴリーを追加
+        const leagueOpt = Array.from(sortSelect.options).find(o => o.value === 'league');
+        if (leagueOpt) leagueOpt.remove();
+        
+        // カテゴリーを五十音順に追加
+        Array.from(categories).sort().forEach(cat => {
+            if (cat === 'Map') return; // Mapは一般的すぎるので除外
+            const opt = document.createElement('option');
+            opt.value = `cat_${cat}`;
+            opt.textContent = `${cat} `;
+            sortSelect.appendChild(opt);
+        });
+    }
+
     listDiv.innerHTML = '';
     
     // デフォルト並び順のウェイト
+    const tabletSortMode = sortSelect?.value || 'default';
     const getTypeWeight = (key) => {
         const mod = tabletModList[key];
-        if (mod.groups.includes('TowerAddContent')) return 0;
-        if (mod.type === 'Unique') return 1;
-        if (mod.type === 'Prefix') return 2;
-        if (mod.type === 'Suffix') return 3;
-        return 4;
+        
+        if (tabletSortMode.startsWith('cat_')) {
+            const targetCat = tabletSortMode.replace('cat_', '');
+            if (mod.subGroups && mod.subGroups.includes(targetCat)) return 0;
+        }
+
+        switch (tabletSortMode) {
+            case 'unique':
+                if (mod.type === 'Unique') return 0;
+                break;
+            case 'prefix':
+                if (mod.type === 'Prefix') return 0;
+                break;
+            case 'suffix':
+                if (mod.type === 'Suffix') return 0;
+                break;
+            case 'league':
+                if (mod.subGroups && mod.subGroups.length > 0 && mod.subGroups[0] !== 'Map') return 0;
+                break;
+        }
+
+        // デフォルトの度
+        if (mod.groups.includes('TowerAddContent')) return 1;
+        if (mod.type === 'Unique') return 2;
+        if (mod.type === 'Prefix') return 3;
+        if (mod.type === 'Suffix') return 4;
+        return 5;
     };
 
     // 選択中のものを上に、それ以外をタイプ別にソート
@@ -71,33 +117,60 @@ function updateTabletModList() {
         badgeContainer.style.gap = '6px';
         badgeContainer.style.pointerEvents = 'none';
 
-        if (value.groups.includes('TowerAddContent')) {
-            const towerBadge = document.createElement('span');
-            towerBadge.classList.add('badge');
-            towerBadge.style.backgroundColor = 'var(--accent-gold)';
-            towerBadge.style.color = '#000';
-            towerBadge.textContent = 'Tower';
-            badgeContainer.appendChild(towerBadge);
-        }
+        const colorMap = {
+            'Ritual': '#cf3c3c',
+            'Delirium': '#607d8b',
+            'Breach': '#9c27b0',
+            'Abyss': '#212121',
+            'Expedition': '#bf9b30',
+            'Irradiated': '#4caf50',
+            'Map': '#1976d2',
+            'Tower': 'var(--accent-gold)',
+            'Monster': '#d32f2f'
+        };
 
+        // バッジ表示順: Unique > Prefix > Suffix > Tower > others
+        
+        // 1. Unique
         if (value.type === 'Unique') {
             const uniqueBadge = document.createElement('span');
             uniqueBadge.classList.add('badge');
-            uniqueBadge.style.backgroundColor = '#af3ea3'; // Unique用の紫色
+            uniqueBadge.style.backgroundColor = '#af3ea3';
             uniqueBadge.textContent = 'Unique';
             badgeContainer.appendChild(uniqueBadge);
-        } else if (value.type === 'Prefix') {
+        }
+        
+        // 2. Prefix
+        if (value.type === 'Prefix') {
             const prefixBadge = document.createElement('span');
             prefixBadge.classList.add('badge');
             prefixBadge.style.backgroundColor = 'var(--accent-red)';
             prefixBadge.textContent = 'Prefix';
             badgeContainer.appendChild(prefixBadge);
-        } else if (value.type === 'Suffix') {
+        }
+        
+        // 3. Suffix
+        if (value.type === 'Suffix') {
             const suffixBadge = document.createElement('span');
             suffixBadge.classList.add('badge');
             suffixBadge.style.backgroundColor = 'var(--accent-blue)';
             suffixBadge.textContent = 'Suffix';
             badgeContainer.appendChild(suffixBadge);
+        }
+
+        // 4. Mechanic (SubGroups)
+        if (value.subGroups) {
+            value.subGroups.forEach(cat => {
+                const exists = Array.from(badgeContainer.children).some(b => b.textContent === cat);
+                if (!exists) {
+                    const badge = document.createElement('span');
+                    badge.classList.add('badge');
+                    badge.style.backgroundColor = colorMap[cat] || '#555';
+                    if (cat === 'Tower') badge.style.color = '#000';
+                    badge.textContent = cat;
+                    badgeContainer.appendChild(badge);
+                }
+            });
         }
 
         effectItem.appendChild(badgeContainer);
@@ -145,8 +218,13 @@ function filterTabletEffects() {
     const term = searchInput.value.toLowerCase();
     const items = document.querySelectorAll('#TabletModList .effect-item');
     items.forEach(item => {
-        const text = item.querySelector('.mod-text').textContent.toLowerCase();
-        item.style.display = text.includes(term) ? 'flex' : 'none';
+        // 全体のテキスト（モッド文 + バッジテキスト）を検索対象にする
+        const text = item.textContent.toLowerCase();
+        if (text.includes(term)) {
+            item.classList.remove('hidden');
+        } else {
+            item.classList.add('hidden');
+        }
     });
 }
 
