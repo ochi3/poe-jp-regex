@@ -1283,12 +1283,25 @@ button.btn-secondary-highlight:hover {
     margin-bottom: 24px;
 }
 
+.settings-group.flex-group {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px; /* インライン時は少し詰める */
+}
+
 .settings-group label {
     display: block;
     margin-bottom: 8px;
     font-size: 14px;
     color: var(--text-primary);
     font-weight: 500;
+}
+
+.settings-group.flex-group label {
+    margin-bottom: 0;
+    white-space: nowrap;
+    min-width: 100px;
 }
 
 .settings-group input,

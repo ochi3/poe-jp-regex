@@ -72,16 +72,26 @@ function buildTradeUrl() {
     };
 
     // デリリウムの条件を追加
-    if (delirium > 0) {
+    // メインUIのセレクトボックスとサイドパネルのMin/Max値の両方をチェック
+    const sideDeliriumMin = parseInt(document.getElementById('deliriumMinInput')?.value || 0);
+    const sideDeliriumMax = parseInt(document.getElementById('deliriumMaxInput')?.value || 0);
+    
+    // 両方のソースから最大値を抽出
+    const finalDeliriumMin = Math.max(delirium || 0, sideDeliriumMin);
+    const finalDeliriumMax = sideDeliriumMax;
+
+    if (finalDeliriumMin > 0 || finalDeliriumMax > 0) {
+        const deliriumFilter = {
+            id: "enchant.stat_1715784068",
+            value: {},
+            disabled: false
+        };
+        if (finalDeliriumMin > 0) deliriumFilter.value.min = finalDeliriumMin;
+        if (finalDeliriumMax > 0) deliriumFilter.value.max = finalDeliriumMax;
+        
         query.stats.push({
             type: "and",
-            filters: [
-                {
-                    id: "enchant.stat_1715784068",
-                    value: { min: delirium },
-                    disabled: false
-                }
-            ]
+            filters: [deliriumFilter]
         });
     }
 

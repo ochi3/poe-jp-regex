@@ -1789,6 +1789,8 @@ function saveTradeSettings() {
     const buyoutPriceMin = document.getElementById('buyoutPriceMinInput').value;
     const buyoutPriceMax = document.getElementById('buyoutPriceMaxInput').value;
     const wantedMode = document.getElementById('wantedModModeSelect').value;
+    const deliriumMin = document.getElementById('deliriumMinInput').value;
+    const deliriumMax = document.getElementById('deliriumMaxInput').value;
 
     localStorage.setItem('poe2_poeTradeLeague', league);
     localStorage.setItem('poe2_poeTradeLeagueIsCustom', leagueIsCustom);
@@ -1802,6 +1804,8 @@ function saveTradeSettings() {
     localStorage.setItem('poe2_poeTradeBuyoutPriceMin', buyoutPriceMin);
     localStorage.setItem('poe2_poeTradeBuyoutPriceMax', buyoutPriceMax);
     localStorage.setItem('poe2_poeTradeWantedMode', wantedMode);
+    localStorage.setItem('poe2_poeTradeDeliriumMin', deliriumMin);
+    localStorage.setItem('poe2_poeTradeDeliriumMax', deliriumMax);
 }
 
 function loadTradeSettings() {
@@ -1823,6 +1827,8 @@ function loadTradeSettings() {
     const buyoutPriceMin = localStorage.getItem('poe2_poeTradeBuyoutPriceMin') || "";
     const buyoutPriceMax = localStorage.getItem('poe2_poeTradeBuyoutPriceMax') || "";
     const wantedMode = localStorage.getItem('poe2_poeTradeWantedMode') || "any";
+    const deliriumMin = localStorage.getItem('poe2_poeTradeDeliriumMin') || "";
+    const deliriumMax = localStorage.getItem('poe2_poeTradeDeliriumMax') || "";
 
     const select = document.getElementById('leagueSelect');
     const customInput = document.getElementById('leagueInput');
@@ -1854,6 +1860,8 @@ function loadTradeSettings() {
     document.getElementById('buyoutPriceMinInput').value = buyoutPriceMin;
     document.getElementById('buyoutPriceMaxInput').value = buyoutPriceMax;
     document.getElementById('wantedModModeSelect').value = wantedMode;
+    document.getElementById('deliriumMinInput').value = deliriumMin;
+    document.getElementById('deliriumMaxInput').value = deliriumMax;
 }
 
 function toggleTradeSettings() {

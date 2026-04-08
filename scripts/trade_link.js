@@ -148,6 +148,25 @@ function buildTradeUrl() {
         }
     }
 
+    // デリリウムの条件を追加
+    const deliriumMin = parseInt(document.getElementById('deliriumMinInput').value);
+    const deliriumMax = parseInt(document.getElementById('deliriumMaxInput').value);
+
+    if (deliriumMin > 0 || deliriumMax > 0) {
+        const deliriumFilter = {
+            id: "enchant.stat_1715784068",
+            value: {},
+            disabled: false
+        };
+        if (deliriumMin > 0) deliriumFilter.value.min = deliriumMin;
+        if (deliriumMax > 0) deliriumFilter.value.max = deliriumMax;
+        
+        query.stats.push({
+            type: "and",
+            filters: [deliriumFilter]
+        });
+    }
+
     const mapTierMin = document.getElementById('mapTierMinInput').value;
     const mapTierMax = document.getElementById('mapTierMaxInput').value;
     const buyoutPrice = document.getElementById('buyoutPriceSelect').value;

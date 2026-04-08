@@ -282,7 +282,7 @@
                 <h3>トレード詳細設定</h3>
                 <button class="close-btn" onclick="toggleTradeSettings()">×</button>
             </div>
-            <div class="settings-group">
+            <div class="settings-group flex-group">
                 <label>リーグ:</label>
                 <select id="leagueSelect" onchange="onLeagueSelectChange()" style="width: 100%; margin-bottom: 6px;">
                     <option value="Fate of the Vaal">Fate of the Vaal</option>
@@ -297,7 +297,7 @@
                 </select>
                 <input id="leagueInput" onchange="saveTradeSettings()" placeholder="リーグ名を入力" style="display: none;" type="text"/>
             </div>
-            <div class="settings-group">
+            <div class="settings-group flex-group">
                 <label>トレード方法:</label>
                 <select id="tradeMethodSelect" onchange="saveTradeSettings()">
                     <option value="any">全て</option>
@@ -307,7 +307,7 @@
                     <option value="online">対面トレード (オンライン)</option>
                 </select>
             </div>
-            <div class="settings-group">
+            <div class="settings-group flex-group">
                 <label>ウェイストーンティア:</label>
                 <div style="display: flex; gap: 10px; align-items: center;">
                     <input id="mapTierMinInput" max="17" min="1" onchange="saveTradeSettings()" placeholder="Min" style="width: 70px;" type="number" value="16"/>
@@ -316,7 +316,7 @@
                 </div>
             </div>
 
-            <div class="settings-group">
+            <div class="settings-group flex-group">
                 <label>モッド数:</label>
                 <div style="display: flex; gap: 10px; align-items: center;">
                     <input id="minModCountInput" max="20" min="0" onchange="saveTradeSettings()" placeholder="Min" style="width: 70px;" type="number" value="8"/>
@@ -324,7 +324,7 @@
                     <input id="maxModCountInput" max="20" min="0" onchange="saveTradeSettings()" placeholder="Max" style="width: 70px;" type="number" value="8"/>
                 </div>
             </div>
-            <div class="settings-group">
+            <div class="settings-group flex-group">
                 <label>コラプト状態:</label>
                 <select id="corruptedStatusSelect" onchange="saveTradeSettings()">
                     <option value="">指定なし</option>
@@ -332,6 +332,14 @@
                     <option value="false">いいえ</option>
                 </select>
             </div>
+            <!-- <div class="settings-group flex-group">
+                <label>デリリウム:</label>
+                <div style="display: flex; gap: 10px; align-items: center;">
+                    <input type="number" id="deliriumMinInput" placeholder="Min" min="0" max="100" step="10" onchange="saveTradeSettings()" style="width: 70px;">
+                    <span>~</span>
+                    <input type="number" id="deliriumMaxInput" placeholder="Max" min="0" max="100" step="10" onchange="saveTradeSettings()" style="width: 70px;">
+                </div>
+            </div> -->
             <div class="settings-group">
                 <label>欲しいModの検索モード:</label>
                 <select id="wantedModModeSelect" onchange="saveTradeSettings()">
@@ -339,6 +347,7 @@
                     <option value="all">全てを含む (All)</option>
                 </select>
             </div>
+
             <div class="settings-group">
                 <label><del>バイアウト価格:</del></label>
                 <div style="display: flex; gap: 10px; align-items: center; margin-bottom: 5px;">

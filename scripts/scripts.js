@@ -1660,6 +1660,8 @@ function saveTradeSettings() {
     const buyoutPriceMin = document.getElementById('buyoutPriceMinInput').value;
     const buyoutPriceMax = document.getElementById('buyoutPriceMaxInput').value;
     const wantedMode = document.getElementById('wantedModModeSelect').value;
+    const deliriumMin = document.getElementById('deliriumMinInput').value;
+    const deliriumMax = document.getElementById('deliriumMaxInput').value;
 
     localStorage.setItem('poeTradeLeague', league);
     localStorage.setItem('poeTradeLeagueIsCustom', leagueIsCustom);
@@ -1675,6 +1677,8 @@ function saveTradeSettings() {
     localStorage.setItem('poeTradeBuyoutPriceMin', buyoutPriceMin);
     localStorage.setItem('poeTradeBuyoutPriceMax', buyoutPriceMax);
     localStorage.setItem('poeTradeWantedMode', wantedMode);
+    localStorage.setItem('poeTradeDeliriumMin', deliriumMin);
+    localStorage.setItem('poeTradeDeliriumMax', deliriumMax);
 }
 
 function loadTradeSettings() {
@@ -1697,6 +1701,8 @@ function loadTradeSettings() {
     const buyoutPriceMin = localStorage.getItem('poeTradeBuyoutPriceMin') || "";
     const buyoutPriceMax = localStorage.getItem('poeTradeBuyoutPriceMax') || "";
     const wantedMode = localStorage.getItem('poeTradeWantedMode') || "any";
+    const deliriumMin = localStorage.getItem('poeTradeDeliriumMin') || "";
+    const deliriumMax = localStorage.getItem('poeTradeDeliriumMax') || "";
 
     const select = document.getElementById('leagueSelect');
     const customInput = document.getElementById('leagueInput');
@@ -1730,6 +1736,8 @@ function loadTradeSettings() {
     document.getElementById('buyoutPriceMinInput').value = buyoutPriceMin;
     document.getElementById('buyoutPriceMaxInput').value = buyoutPriceMax;
     document.getElementById('wantedModModeSelect').value = wantedMode;
+    document.getElementById('deliriumMinInput').value = deliriumMin;
+    document.getElementById('deliriumMaxInput').value = deliriumMax;
 }
 
 function toggleTradeSettings() {
