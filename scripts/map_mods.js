@@ -2319,7 +2319,7 @@ const mapModList = {
     "weight": 50,
     "tier": 1184,
     "engRegex": "hap",
-    "Regex": "に触",
+    "Regex": "パーに触",
     "tradeStatIds": [
       "explicit.stat_2931889194"
     ],
