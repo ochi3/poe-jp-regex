@@ -1664,7 +1664,7 @@ const mapModList = {
     "weight": 50,
     "tier": 1111,
     "engRegex": "o al",
-    "Regex": "性の最",
+    "Regex": "値 -2",
     "tradeStatIds": [
       "explicit.stat_3376488707"
     ],
