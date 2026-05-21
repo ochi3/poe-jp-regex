@@ -22,7 +22,7 @@ const runegraftlist = {
     "description": "能力値が10%減少する グローバル防御力が40%増加する",
     "enDescription": "",
     "attribute": "ALL",
-    "chaosValue": "670.1",
+    "chaosValue": "673.6",
     "regex": "要塞",
     "enRegex": "Def"
   },
@@ -31,7 +31,7 @@ const runegraftlist = {
     "description": "ライフの残りパーセントがプレイヤーより多い敵に対するアタックダメージが50%増加する",
     "enDescription": "",
     "attribute": "STR",
-    "chaosValue": "1.06",
+    "chaosValue": "1",
     "regex": "闘士",
     "enRegex": "e Co"
   },
@@ -40,7 +40,7 @@ const runegraftlist = {
     "description": "オフハンドのアタックスピードが10%上昇する",
     "enDescription": "",
     "attribute": "DEX",
-    "chaosValue": "3.97",
+    "chaosValue": "3.08",
     "regex": "左手",
     "enRegex": "Sin"
   },
@@ -49,7 +49,7 @@ const runegraftlist = {
     "description": "装備中の靴から得られるボーナスが20%減少する 装備中の手袋から得られるボーナスが20%増加する",
     "enDescription": "",
     "attribute": "DEX",
-    "chaosValue": "5.07",
+    "chaosValue": "3.69",
     "regex": "束縛",
     "enRegex": "e B"
   },
@@ -58,7 +58,7 @@ const runegraftlist = {
     "description": "プレイヤーのバフは30%遅く消える プレイヤーに対するデバフは30%速く消える",
     "enDescription": "",
     "attribute": "INT",
-    "chaosValue": "693.8",
+    "chaosValue": "703.1",
     "regex": "歪み",
     "enRegex": "Deb"
   },
@@ -67,7 +67,7 @@ const runegraftlist = {
     "description": "毎秒1のヴァールソウルを獲得する",
     "enDescription": "",
     "attribute": "STR",
-    "chaosValue": "27.14",
+    "chaosValue": "29.75",
     "regex": "灯火",
     "enRegex": "1 V"
   },
@@ -85,7 +85,7 @@ const runegraftlist = {
     "description": "全ての希少以外のサポートジェムのレベル +1",
     "enDescription": "",
     "attribute": "ALL",
-    "chaosValue": "202.5",
+    "chaosValue": "117.6",
     "regex": "ジェ",
     "enRegex": "Gem"
   },
@@ -94,7 +94,7 @@ const runegraftlist = {
     "description": "ヒット時に30%の確率で呪い状態でない敵にランダムな呪術で呪う",
     "enDescription": "",
     "attribute": "INT",
-    "chaosValue": "3.6",
+    "chaosValue": "1.02",
     "regex": "冒涜",
     "enRegex": "Hex"
   },
@@ -130,7 +130,7 @@ const runegraftlist = {
     "description": "スキル使用時に20%の確率でクールダウン使用回数を消費しない",
     "enDescription": "",
     "attribute": "INT",
-    "chaosValue": "3.28",
+    "chaosValue": "4.5",
     "regex": "時のル",
     "enRegex": "a C"
   },
@@ -139,7 +139,7 @@ const runegraftlist = {
     "description": "スキルのリザーブ効率が15%増加する 味方に影響するプレイヤーのスキルによるオーラは敵にも影響する",
     "enDescription": "",
     "attribute": "INT",
-    "chaosValue": "8.42",
+    "chaosValue": "11.76",
     "regex": "裏切",
     "enRegex": "f Tr"
   },
@@ -148,7 +148,7 @@ const runegraftlist = {
     "description": "フラスコによるマナ回復量が25%減少する 即時ではないフラスコによるマナ回復はライフも回復する",
     "enDescription": "",
     "attribute": "DEX",
-    "chaosValue": "1",
+    "chaosValue": "1.17",
     "regex": "暴飲",
     "enRegex": "25%"
   },
@@ -166,7 +166,7 @@ const runegraftlist = {
     "description": "プレイヤーに付与される元素系状態異常は40%の確率で代わりに近くのミニオン1体に付与される",
     "enDescription": "",
     "attribute": "INT",
-    "chaosValue": "1.44",
+    "chaosValue": "1",
     "regex": "忠誠",
     "enRegex": "Loy"
   },
@@ -175,7 +175,7 @@ const runegraftlist = {
     "description": "スペルはプレイヤーの最大ライフの2%と同量の追加混沌ダメージを与える スペルはライフの+8%をコストとする",
     "enDescription": "",
     "attribute": "INT",
-    "chaosValue": "4.5",
+    "chaosValue": "5.88",
     "regex": "ウィ",
     "enRegex": "he Wi"
   },
@@ -184,7 +184,7 @@ const runegraftlist = {
     "description": "ノヴァスペルはもし可能ならばプレイヤーの周囲の代わりに呪印を付与した敵にキャストされる",
     "enDescription": "",
     "attribute": "INT",
-    "chaosValue": "2.21",
+    "chaosValue": "2.2",
     "regex": "ノヴ",
     "enRegex": "Nov"
   },
@@ -193,7 +193,7 @@ const runegraftlist = {
     "description": "放たれる投射物が最大で1個になる 投射物は分岐する 投射物は追加で1回連鎖する",
     "enDescription": "",
     "attribute": "DEX",
-    "chaosValue": "3.06",
+    "chaosValue": "3",
     "regex": "屈折",
     "enRegex": "Ref"
   },
@@ -211,7 +211,7 @@ const runegraftlist = {
     "description": "幸運または不幸の効果が代わりに退屈なものになる",
     "enDescription": "",
     "attribute": "STR",
-    "chaosValue": "150.6",
+    "chaosValue": "56",
     "regex": "安定",
     "enRegex": "Luc"
   },
@@ -247,7 +247,7 @@ const runegraftlist = {
     "description": "ライフフラスコを使用した時に憤怒を3獲得する",
     "enDescription": "",
     "attribute": "STR",
-    "chaosValue": "35.5",
+    "chaosValue": "45",
     "regex": "怒り",
     "enRegex": "f F"
   },
@@ -256,7 +256,7 @@ const runegraftlist = {
     "description": "バナーを設置することで消費した勇猛5ごとに1の堅牢化を獲得する",
     "enDescription": "",
     "attribute": "STR",
-    "chaosValue": "8",
+    "chaosValue": "1",
     "regex": "鼓舞",
     "enRegex": "f Ra"
   },
@@ -265,7 +265,7 @@ const runegraftlist = {
     "description": "プレイヤーにより毒を付与された敵はそれが与える物理ダメージの10%が混沌ダメージに変換される",
     "enDescription": "",
     "attribute": "DEX",
-    "chaosValue": "186.3",
+    "chaosValue": "179",
     "regex": "ロッ",
     "enRegex": " Ro"
   },
@@ -274,7 +274,7 @@ const runegraftlist = {
     "description": "プレイヤーがフラスコの影響を受けていない時プレイヤーに適用されるチンキの効果が30%増加する",
     "enDescription": "",
     "attribute": "DEX",
-    "chaosValue": "4.2",
+    "chaosValue": "4.14",
     "regex": "与の",
     "enRegex": "e Im"
   },
@@ -283,7 +283,7 @@ const runegraftlist = {
     "description": "プレイヤーに対する身躱しの効果は最初の2秒間代わりに増える",
     "enDescription": "",
     "attribute": "DEX",
-    "chaosValue": "6.29",
+    "chaosValue": "5.38",
     "regex": "俊敏",
     "enRegex": "e Agi"
   },
@@ -301,7 +301,7 @@ const runegraftlist = {
     "description": "スペルはプレイヤーの装備中の両手武器の物理ダメージの30%と同量の追加スペルダメージを持つ",
     "enDescription": "",
     "attribute": "INT",
-    "chaosValue": "1.07",
+    "chaosValue": "1.52",
     "regex": "ペルバ",
     "enRegex": "e Sp"
   },
@@ -310,7 +310,7 @@ const runegraftlist = {
     "description": "アーケインサージはプレイヤーに対してライフ自動回復レート15%増加も付与する",
     "enDescription": "",
     "attribute": "INT",
-    "chaosValue": "2.08",
+    "chaosValue": "1.81",
     "regex": "回復の",
     "enRegex": "esu"
   },
@@ -319,7 +319,7 @@ const runegraftlist = {
     "description": "リンクスキルは範囲が50%増加する",
     "enDescription": "",
     "attribute": "INT",
-    "chaosValue": "2.06",
+    "chaosValue": "2.1",
     "regex": "接続",
     "enRegex": "onn"
   }
