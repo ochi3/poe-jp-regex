@@ -1,6 +1,8 @@
 let ModList = {...mapModList};
 let currentLanguage = localStorage.getItem('poe2_poeLanguage') || 'ja';
 if (currentLanguage !== 'ja' && currentLanguage !== 'en') currentLanguage = 'ja';
+const CHANGELOG_VERSION = 'poe2-2026-04-06';
+const CHANGELOG_STORAGE_KEY = 'poe2ChangelogSeenVersion';
 
 let checkedMods = new Map(); // id -> 'ng' または 'wanted'
 let checkedBeasts = new Set();
@@ -662,11 +664,27 @@ function switchTab(tabId) {
             link.classList.add('active');
         }
     });
+
+    if (tabId === 'changelogContent') {
+        markChangelogSeen();
+    }
     
     const tabName = tabId.replace('Content', '');
     if (window.location.hash !== `#${tabName}`) {
         history.replaceState(null, '', `#${tabName}`);
     }
+}
+
+function updateChangelogBadge() {
+    const badge = document.getElementById('changelogNewBadge');
+    if (!badge) return;
+    const seenVersion = localStorage.getItem(CHANGELOG_STORAGE_KEY);
+    badge.style.display = seenVersion === CHANGELOG_VERSION ? 'none' : 'inline-flex';
+}
+
+function markChangelogSeen() {
+    localStorage.setItem(CHANGELOG_STORAGE_KEY, CHANGELOG_VERSION);
+    updateChangelogBadge();
 }
 
 function handleHashChange() {
@@ -1878,6 +1896,10 @@ window.onload = function() {
 // 要望・不具合報告
 const FEEDBACK_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSdrlylmOp34bzayRTtuW19QyO9sRhV1BD0y_kUUnL8Mn5vHtQ/formResponse";
 const FEEDBACK_ENTRY_ID = "entry.386755920";
+const FEEDBACK_GAME_ENTRY_ID = "entry.2048327629";
+const FEEDBACK_PRODUCT_ENTRY_ID = "entry.1137147546";
+const FEEDBACK_DEFAULT_GAME = "PoE2";
+const FEEDBACK_DEFAULT_PRODUCT = "Regex(サイト)";
 let isFeedbackSubmitting = false;
 
 function openFeedbackModal() {
@@ -1888,6 +1910,10 @@ function openFeedbackModal() {
     document.getElementById('feedbackSuccessMessage').style.display = 'none';
     document.getElementById('feedbackCloseButton').style.display = 'none';
     document.getElementById('feedbackText').value = '';
+    const defaultGame = document.querySelector(`input[name="feedbackGame"][value="${FEEDBACK_DEFAULT_GAME}"]`);
+    const defaultProduct = document.querySelector(`input[name="feedbackProduct"][value="${FEEDBACK_DEFAULT_PRODUCT}"]`);
+    if (defaultGame) defaultGame.checked = true;
+    if (defaultProduct) defaultProduct.checked = true;
     
     modal.style.display = 'flex';
     document.body.style.overflow = 'hidden';
@@ -1917,10 +1943,19 @@ function submitFeedback() {
     form.target = 'hidden_iframe';
     form.style.display = 'none';
 
-    const input = document.createElement('input');
-    input.name = FEEDBACK_ENTRY_ID;
-    input.value = text;
-    form.appendChild(input);
+    const game = document.querySelector('input[name="feedbackGame"]:checked')?.value || FEEDBACK_DEFAULT_GAME;
+    const product = document.querySelector('input[name="feedbackProduct"]:checked')?.value || FEEDBACK_DEFAULT_PRODUCT;
+
+    const appendHiddenInput = (name, value) => {
+        const input = document.createElement('input');
+        input.name = name;
+        input.value = value;
+        form.appendChild(input);
+    };
+
+    appendHiddenInput(FEEDBACK_GAME_ENTRY_ID, game);
+    appendHiddenInput(FEEDBACK_PRODUCT_ENTRY_ID, product);
+    appendHiddenInput(FEEDBACK_ENTRY_ID, text);
 
     document.body.appendChild(form);
     form.submit();
@@ -2826,6 +2861,7 @@ function updateRunegraftProfileList() {
 
 function initializeApplication() {
     loadLanguageState();
+    updateChangelogBadge();
     const initialTab = window.location.hash.slice(1) || 'map';
     const initialTabId = `${initialTab}Content`;
     

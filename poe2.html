@@ -30,14 +30,19 @@
                 <a class="nav-link active" data-tab="mapContent" href="#map">ウェイストーン</a>
                 <a class="nav-link" data-tab="tabletContent" href="#tablet">石板</a>
                 <a class="nav-link" data-tab="savedContent" href="#saved">保存済みRegex</a>
+                <a class="nav-link" data-tab="changelogContent" href="#changelog">Change log <span id="changelogNewBadge" class="nav-new-badge">New</span></a>
             </nav>
-            <h4 style="margin-top: 32px;">
+            <button onclick="openFeedbackModal()" style="width: 100%; margin-bottom: 16px; background: var(--bg-tertiary); color: var(--accent-primary); border: 1px solid var(--border-color);">要望・不具合を送信</button>
+            <div class="support-links" aria-label="支援リンク">
+                <a class="support-link patreon" href="https://www.patreon.com/cw/ochi3c" target="_blank" rel="noopener noreferrer">Patreonで支援</a>
+                <a class="support-link kofi" href="https://ko-fi.com/ochi3c" target="_blank" rel="noopener noreferrer">Ko-Fiで支援</a>
+            </div>
+            <h4>
                 Discord @ochi3c
                 <br/>
                 Twitter
-                <a href="https://x.com/ochi3c" style="color: var(--accent-primary);">@ochi3c</a>
+                <a href="https://x.com/ochi3c" target="_blank" rel="noopener noreferrer" style="color: var(--accent-primary);">@ochi3c</a>
             </h4>
-            <button onclick="openFeedbackModal()" style="width: 100%; margin-bottom: 16px; background: var(--bg-tertiary); color: var(--accent-primary); border: 1px solid var(--border-color);">要望・不具合を送信</button>
             <h4>
                 Change log
                 <br/>
@@ -266,6 +271,17 @@
                 </div>
             </div>
         </div>
+        <div class="tab-content" id="changelogContent">
+            <div class="card">
+                <h2 class="section-header">Change log</h2>
+                <div class="changelog-list">
+                    <article class="changelog-entry">
+                        <time>26/04/06</time>
+                        <p>PoE2ページを追加しました。フィードバックを受けながら調整予定です。</p>
+                    </article>
+                </div>
+            </div>
+        </div>
         <!-- ベンダーRegexタブ -->
         <!-- トレードリンク集タブ -->
         <!-- リンク集タブ -->
@@ -383,6 +399,16 @@
                     <br/>
                     Googleフォーラムを使用しています。
                 </p>
+                <div class="settings-group feedback-choice-group">
+                    <label>対象:</label>
+                    <label class="feedback-choice"><input name="feedbackGame" type="radio" value="PoE1"/> PoE1</label>
+                    <label class="feedback-choice"><input checked="" name="feedbackGame" type="radio" value="PoE2"/> PoE2</label>
+                </div>
+                <div class="settings-group feedback-choice-group">
+                    <label>種類:</label>
+                    <label class="feedback-choice"><input checked="" name="feedbackProduct" type="radio" value="Regex(サイト)"/> Regex(サイト)</label>
+                    <label class="feedback-choice"><input name="feedbackProduct" type="radio" value="Helper(拡張機能)"/> Helper(拡張機能)</label>
+                </div>
                 <div class="settings-group">
                     <label style="display: block; margin-bottom: 8px;">内容:</label>
                     <textarea id="feedbackText" placeholder="こちらに詳細を入力してください..." rows="6" style="width: 100%; resize: vertical; min-height: 150px;">

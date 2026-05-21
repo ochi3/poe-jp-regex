@@ -1664,7 +1664,7 @@ const mapModList = {
     "weight": 50,
     "tier": 1111,
     "engRegex": "o al",
-    "Regex": "性の最",
+    "Regex": "値 -2",
     "tradeStatIds": [
       "explicit.stat_3376488707"
     ],
@@ -1900,7 +1900,7 @@ const mapModList = {
     "map_pack_size_+%": 6,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
-    "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
+    "map_scarab_drop_chance_+%_final_from_uber_mod": 35,
     "modTier17": true
   },
   "(T17) 全てのプレイヤーの効果範囲が(##)%低下する": {
@@ -2225,7 +2225,7 @@ const mapModList = {
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
-    "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
+    "map_map_item_drop_chance_+%_final_from_uber_mod": 35,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
     "modTier17": true
@@ -2319,7 +2319,7 @@ const mapModList = {
     "weight": 50,
     "tier": 1184,
     "engRegex": "hap",
-    "Regex": "に触",
+    "Regex": "パーに触",
     "tradeStatIds": [
       "explicit.stat_2931889194"
     ],

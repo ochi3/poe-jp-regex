@@ -59,6 +59,40 @@ body {
     font-weight: 400;
 }
 
+#sideMenu h4:last-child {
+    display: none;
+}
+
+.support-links {
+    display: grid;
+    gap: 8px;
+    margin: 0 0 16px;
+}
+
+.support-link {
+    display: block;
+    padding: 9px 12px;
+    border-radius: 6px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    border: 1px solid var(--border-color);
+    transition: all 0.2s ease;
+}
+
+.support-link:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px var(--shadow);
+}
+
+.support-link.patreon,
+.support-link.kofi {
+    background: var(--bg-tertiary);
+    color: var(--accent-primary);
+    border-color: var(--border-color);
+}
+
 nav {
     display: flex;
     flex-direction: column;
@@ -67,7 +101,10 @@ nav {
 }
 
 .nav-link {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
     padding: 10px 16px;
     background: var(--bg-tertiary);
     color: var(--text-primary);
@@ -76,6 +113,20 @@ nav {
     transition: all 0.2s ease;
     border-left: 3px solid transparent;
     font-size: 14px;
+}
+
+.nav-new-badge {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    min-width: 34px;
+    padding: 2px 7px;
+    border-radius: 999px;
+    background: var(--accent-primary);
+    color: #000;
+    font-size: 11px;
+    font-weight: 800;
+    line-height: 1.2;
 }
 
 .nav-link:hover {
@@ -950,6 +1001,33 @@ button.btn-secondary-highlight:hover {
     text-decoration: underline;
 }
 
+.changelog-list {
+    display: grid;
+    gap: 12px;
+}
+
+.changelog-entry {
+    display: grid;
+    grid-template-columns: 96px 1fr;
+    gap: 16px;
+    padding: 14px 16px;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    border-left: 3px solid var(--accent-primary);
+    border-radius: 8px;
+}
+
+.changelog-entry time {
+    color: var(--accent-primary);
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.changelog-entry p {
+    margin: 0;
+    color: var(--text-primary);
+}
+
 /* ========================================
    スクロールバー
    ======================================== */
@@ -1281,6 +1359,27 @@ button.btn-secondary-highlight:hover {
 
 .settings-group {
     margin-bottom: 24px;
+}
+
+.feedback-choice-group {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px 14px;
+    margin-bottom: 14px;
+}
+
+.feedback-choice-group > label:first-child {
+    width: 52px;
+    color: var(--text-secondary);
+}
+
+.feedback-choice {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--text-primary);
+    cursor: pointer;
 }
 
 .settings-group.flex-group {
