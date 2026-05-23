@@ -31,9 +31,7 @@ function toggleLanguage() {
 //     renderscarablist();
 //     rendertattoolist();
 //     renderrunegraftlist();
-    renderbeastlist();
 //     updateScarabRegex();
-    updateBeastRegex();
 //     updateTattooRegex();
 //     updateRunegraftRegex();
     // 保存済み一覧が表示中なら再描画
@@ -1050,7 +1048,11 @@ function saveProfile() {
 // プロファイル読み込み
 function loadProfile() {
   const profileName = document.getElementById('profileList').value;
-  if (!profileName || !profiles[profileName]) {
+  if (!profileName) {
+    document.getElementById('profileName').value = '';
+    return;
+  }
+  if (!profiles[profileName]) {
     showNotification('プロファイルを選択してください', true);
     return;
   }
@@ -1529,43 +1531,14 @@ function updateBeastProfileList() {
 }
 // 初期化処理
 document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('.beast-header > div[data-column]').forEach(header => {
-    header.addEventListener('click', () => {
-      sortBeasts(header.dataset.column);
+  const profileSelect = document.getElementById('profileList');
+  if (profileSelect && !profileSelect.hasEventListener) {
+    profileSelect.addEventListener('change', function() {
+      if (this.value) loadProfile();
+      else document.getElementById('profileName').value = '';
     });
-  });
-  
-  loadBeastCheckboxState();
-  renderbeastlist();
-  updateSortIcons(); // 初期ソート状態のアイコンを表示
-  updateBeastRegex();
-
-  const savedBeastProfiles = localStorage.getItem('poe2_beastProfiles');
-  if (savedBeastProfiles) {
-    try {
-      beastProfiles = JSON.parse(savedBeastProfiles);
-      updateBeastProfileList();
-    } catch (e) {
-      console.error('beastProfiles の読み込みエラー:', e);
-      beastProfiles = {};
-    }
+    profileSelect.hasEventListener = true;
   }
-
-  const beastProfileSelect = document.getElementById('beastProfileList');
-  if (beastProfileSelect) {
-    beastProfileSelect.addEventListener('change', function() {
-      if (this.value) {
-        loadBeastProfile();
-        const nameInput = document.getElementById('beastProfileName');
-        if (nameInput) nameInput.value = this.value;
-      }
-    });
-  }
-
-  const beastSaveBtn = document.getElementById('saveBeastProfileBtn');
-  if (beastSaveBtn) beastSaveBtn.addEventListener('click', saveBeastProfile);
-  const beastDeleteBtn = document.getElementById('deleteBeastProfileBtn');
-  if (beastDeleteBtn) beastDeleteBtn.addEventListener('click', deleteBeastProfile);
 });
 function showNotification(message, isError = false) {
   let container = document.querySelector('.notification-container');

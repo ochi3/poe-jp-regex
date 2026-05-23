@@ -29,6 +29,7 @@
             <nav>
                 <a class="nav-link active" data-tab="mapContent" href="#map">ウェイストーン</a>
                 <a class="nav-link" data-tab="tabletContent" href="#tablet">石板</a>
+                <a class="nav-link" data-tab="vendorContent" href="#vendor">ベンダー(ACT用)</a>
                 <a class="nav-link" data-tab="savedContent" href="#saved">保存済みRegex</a>
                 <a class="nav-link" data-tab="changelogContent" href="#changelog">Change log <span id="changelogNewBadge" class="nav-new-badge">New</span></a>
             </nav>
@@ -66,7 +67,7 @@
                         <button onclick="saveProfile()">保存</button>
                         <button onclick="loadProfile()">読み込み</button>
                         <button onclick="deleteProfile()">削除</button>
-                        <select class="large-input" id="profileList" onchange="loadProfile()">
+                        <select class="large-input" id="profileList">
                             <option value="">-- プロファイル選択 --</option>
                         </select>
                     </div>
@@ -276,6 +277,10 @@
                 <h2 class="section-header">Change log</h2>
                 <div class="changelog-list">
                     <article class="changelog-entry">
+                        <time>26/05/23</time>
+                        <p>PoE2にベンダー(ACT用) Regexページを追加しました。</p>
+                    </article>
+                    <article class="changelog-entry">
                         <time>26/04/06</time>
                         <p>PoE2ページを追加しました。フィードバックを受けながら調整予定です。</p>
                     </article>
@@ -283,14 +288,34 @@
             </div>
         </div>
         <!-- ベンダーRegexタブ -->
-        <!-- トレードリンク集タブ -->
-        <!-- リンク集タブ -->
+        <div class="tab-content" id="vendorContent">
+            <div class="card">
+                <h2 class="section-header">ベンダー(ACT用) Regex</h2>
+                <div class="input-group">
+                    <input class="large-input" id="vendorProfileName" placeholder="プロファイル名を入力してください。" type="text"/>
+                    <button onclick="saveVendorProfile()">保存</button>
+                    <button onclick="loadVendorProfile()">読み込み</button>
+                    <button onclick="deleteVendorProfile()">削除</button>
+                    <select class="large-input" id="vendorProfileList">
+                        <option value="">-- プロファイル選択 --</option>
+                    </select>
+                </div>
+                <div class="output-area" id="vendorRegexOutput"></div>
+                <div class="input-group">
+                    <button onclick="copyVendorRegex()">コピー</button>
+                    <button onclick="resetVendorSettings()">リセット</button>
+                    <span class="char-count" id="vendorCharCount"></span>
+                </div>
+                <div id="vendorGroupsContainer" style="margin-top: 30px;"></div>
+            </div>
+        </div>
     </div>
     <script src="poe2_scripts/map_mods.js"></script>
     <script src="poe2_scripts/tablet_mods.js"></script>
     <script src="poe2_scripts/trade_link.js"></script>
     <script src="poe2_scripts/scripts.js"></script>
     <script src="poe2_scripts/tablet_scripts.js"></script>
+    <script src="poe2_scripts/vendor.js"></script>
     <script src="poe2_scripts/saved-regex.js"></script>
     <!-- トレード設定サイドパネル -->
     <div class="side-panel" id="tradeSettingsPanel">

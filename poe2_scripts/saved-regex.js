@@ -3,6 +3,15 @@ let dragStartIndex = -1;
 let dragEndIndex = -1;
 let filterControlsAdded = false;
 
+const POE2_PROFILE_STORAGE_KEYS = {
+  map: 'poe2_poeProfiles',
+  vendor: 'poe2_vendorProfiles',
+};
+
+function getPoe2StorageKey(type) {
+  return POE2_PROFILE_STORAGE_KEYS[type] || null;
+}
+
 function saveFilterState() {
   const filterState = {
     searchTerm: document.getElementById('savedRegexSearch').value,
@@ -87,45 +96,13 @@ function updateSavedRegexDisplay() {
 
 function getAllProfiles() {
   const allProfiles = [];
-  
-  const mapProfiles = JSON.parse(localStorage.getItem('poe2_poeProfiles') || '{}');
-  Object.entries(mapProfiles).forEach(([name, profile]) => {
-    allProfiles.push({ name, profile, type: 'map', tabId: 'mapContent', timestamp: profile.timestamp || 0 });
-  });
-  
-  const flaskProfiles = JSON.parse(localStorage.getItem('poe2_flaskProfiles') || '{}');
-  Object.entries(flaskProfiles).forEach(([name, profile]) => {
-    allProfiles.push({ name, profile, type: 'flask', tabId: 'flaskContent', timestamp: profile.timestamp || 0 });
-  });
-  
-  const itemProfiles = JSON.parse(localStorage.getItem('poe2_itemProfiles') || '{}');
-  Object.entries(itemProfiles).forEach(([name, profile]) => {
-    allProfiles.push({ name, profile, type: 'item', tabId: 'itemContent', timestamp: profile.timestamp || 0 });
-  });
 
-  const vendorProfiles = JSON.parse(localStorage.getItem('poe2_vendorProfiles') || '{}');
-  Object.entries(vendorProfiles).forEach(([name, profile]) => {
-    allProfiles.push({ name, profile, type: 'vendor', tabId: 'vendorContent', timestamp: profile.timestamp || 0 });
-  });
-
-  const beastProfiles = JSON.parse(localStorage.getItem('poe2_beastProfiles') || '{}');
-  Object.entries(beastProfiles).forEach(([name, profile]) => {
-    allProfiles.push({ name, profile, type: 'beast', tabId: 'beastContent', timestamp: profile.timestamp || 0 });
-  });
-
-  const scarabProfiles = JSON.parse(localStorage.getItem('poe2_scarabProfiles') || '{}');
-  Object.entries(scarabProfiles).forEach(([name, profile]) => {
-    allProfiles.push({ name, profile, type: 'scarab', tabId: 'scarabContent', timestamp: profile.timestamp || 0 });
-  });
-
-  const tattooProfiles = JSON.parse(localStorage.getItem('poe2_tattooProfiles') || '{}');
-  Object.entries(tattooProfiles).forEach(([name, profile]) => {
-    allProfiles.push({ name, profile, type: 'tattoo', tabId: 'tattooContent', timestamp: profile.timestamp || 0 });
-  });
-
-  const runegraftProfiles = JSON.parse(localStorage.getItem('poe2_runegraftProfiles') || '{}');
-  Object.entries(runegraftProfiles).forEach(([name, profile]) => {
-    allProfiles.push({ name, profile, type: 'runegraft', tabId: 'runegraftContent', timestamp: profile.timestamp || 0 });
+  Object.entries(POE2_PROFILE_STORAGE_KEYS).forEach(([type, storageKey]) => {
+    const profiles = JSON.parse(localStorage.getItem(storageKey) || '{}');
+    const tabId = type === 'map' ? 'mapContent' : 'vendorContent';
+    Object.entries(profiles).forEach(([name, profile]) => {
+      allProfiles.push({ name, profile, type, tabId, timestamp: profile.timestamp || 0 });
+    });
   });
 
   return allProfiles;
@@ -133,79 +110,22 @@ function getAllProfiles() {
 
 const typeConfig = {
   map: { label: 'マップ', color: '#E74C3C', icon: '' },
-  flask: { label: 'フラスコ', color: '#9B59B6', icon: '' },
-  item: { label: 'アイテム', color: '#3498DB', icon: '' },
   vendor: { label: 'ベンダー', color: '#F39C12', icon: '' },
-  beast: { label: 'ビースト', color: '#1ABC9C', icon: '' },
-  scarab: { label: 'スカラベ', color: '#D35400', icon: '' },
-  tattoo: { label: 'タトゥー', color: '#8E44AD', icon: '' },
-  runegraft: { label: 'ルーングラフト', color: '#2C3E50', icon: '' }
 };
 
 function generateRegexFromProfile(profile, type) {
   if (type === 'map') {
     return generateMapRegexFromProfile(profile);
-  } else if (type === 'flask' || type === 'item') {
-    const mods = (profile.mods || []).join('|');
-    return mods || '(空のRegex)';
-  } else if (type === 'vendor') {
+  }
+  if (type === 'vendor') {
     if (typeof window.generateVendorRegexFromProfile === 'function') {
       const regex = window.generateVendorRegexFromProfile(profile);
       return regex || '(空のRegex)';
-    } else {
-      return '(エラー: vendor.jsが読み込まれていません)';
     }
-  } else if (type === 'beast') {
-    const beasts = (profile.beasts || []);
-    if (beasts.length === 0) return '(空のRegex)';
-    
-    const isEn = typeof currentLanguage !== 'undefined' && currentLanguage === 'en';
-    const regexes = beasts.map(beastName => {
-      const beast = beastlist[beastName];
-      if (!beast) return null;
-      return isEn ? (beast.enRegex || beast.regex) : beast.regex;
-    }).filter(regex => regex !== null);
-    
-    return regexes.join('|') || '(空のRegex)';
-  } else if (type === 'scarab') {
-    const scarabNames = (profile.scarabs || []);
-    if (scarabNames.length === 0) return '(空のRegex)';
-    
-    const isEn = typeof currentLanguage !== 'undefined' && currentLanguage === 'en';
-    const regexes = scarabNames.map(name => {
-      const item = scarablist[name];
-      if (!item) return null;
-      return isEn ? (item.enRegex || item.regex) : item.regex;
-    }).filter(regex => regex !== null);
-    
-    return regexes.join('|') || '(空のRegex)';
-  } else if (type === 'tattoo') {
-    const tattooNames = (profile.tattoos || []);
-    if (tattooNames.length === 0) return '(空のRegex)';
-    
-    const isEn = typeof currentLanguage !== 'undefined' && currentLanguage === 'en';
-    const regexes = tattooNames.map(name => {
-      const item = tattoolist[name];
-      if (!item) return null;
-      return isEn ? (item.enRegex || item.regex) : item.regex;
-    }).filter(regex => regex !== null);
-    
-    return regexes.join('|') || '(空のRegex)';
-  } else if (type === 'runegraft') {
-    const runegraftNames = (profile.runegrafts || []);
-    if (runegraftNames.length === 0) return '(空のRegex)';
-    
-    const isEn = typeof currentLanguage !== 'undefined' && currentLanguage === 'en';
-    const regexes = runegraftNames.map(name => {
-      const item = runegraftlist[name];
-      if (!item) return null;
-      return isEn ? (item.enRegex || item.regex) : item.regex;
-    }).filter(regex => regex !== null);
-    
-    return regexes.join('|') || '(空のRegex)';
+    return '(エラー: vendor.jsが読み込まれていません)';
   }
   return '(不明なタイプ)';
-} 
+}
 
 function generateMapRegexFromProfile(profile) {
   const originalCheckedMods = new Map(checkedMods);
@@ -638,40 +558,20 @@ function createProfileSummary(profile, type) {
     if (profile.itemType) parts.push(profile.itemType);
   } else if (type === 'vendor') {
     const settings = profile.settings || {};
-    const colorCount = Object.values(settings.colors || {}).filter(Boolean).length;
-    if (colorCount > 0) parts.push(`${colorCount}色`);
-    const linkSettings = [];
-    if (settings.anyThreeLink) linkSettings.push('3L');
-    if (settings.anyFourLink) linkSettings.push('4L');
-    if (settings.anyFiveLink) linkSettings.push('5L');
-    if (settings.anySixLink) linkSettings.push('6L');
-    if (settings.anySixSocket) linkSettings.push('6S');
-    if (linkSettings.length > 0) parts.push(linkSettings.join(','));
+    const selected = settings.selected || {};
+    const selectedIds = Object.entries(selected).filter(([, value]) => value).map(([id]) => id);
+    if (selectedIds.length > 0) {
+      const labels = selectedIds
+        .slice(0, 2)
+        .map(id => (typeof window.getVendorItemLabel === 'function' ? window.getVendorItemLabel(id) : id));
+      let summary = labels.join(', ');
+      if (selectedIds.length > 2) summary += ` ...他${selectedIds.length - 2}個`;
+      parts.push(summary);
+    }
     const weaponCount = Object.values(settings.weapon || {}).filter(Boolean).length;
     if (weaponCount > 0) parts.push(`${weaponCount}武器`);
-    const gemCount = (settings.selectedGems || []).length;
-    if (gemCount > 0) {
-      const gemNames = [];
-      const maxDisplay = 2;
-      for (let i = 0; i < Math.min(gemCount, maxDisplay); i++) {
-       // 保存されたRegex内の現在の言語は異なる可能性がありますが、
-      // 混合クライアントの場合はデフォルトとして日本語を使用するか、
-      // または enRegex を使用すべきか判断を試みます。;
-        const gemRegex = settings.selectedGems[i];
-        let displayName = gemRegex;
-        if (profile.gemInfo) {
-          const gemInfo = profile.gemInfo.find(g => g.regex === gemRegex);
-          if (gemInfo && gemInfo.display_name) displayName = gemInfo.display_name;
-        }
-        if (typeof window.getGemDisplayName === 'function') {
-          displayName = window.getGemDisplayName(gemRegex);
-        }
-        gemNames.push(displayName);
-      }
-      let gemSummary = gemNames.join(', ');
-      if (gemCount > maxDisplay) gemSummary += ` ...他${gemCount - maxDisplay}個`;
-      parts.push(gemSummary);
-    }
+    const excludeCount = Object.values(settings.excludeWeapons || {}).filter(Boolean).length;
+    if (excludeCount > 0) parts.push(`NG${excludeCount}武器`);
   } else if (type === 'beast') {
     const beastCount = (profile.beasts || []).length;
     if (beastCount > 0) parts.push(`${beastCount}個のビースト`);
@@ -838,94 +738,60 @@ function createDetailedView(profile, type) {
     }
   } else if (type === 'vendor') {
     const settings = profile.settings || {};
-    const enabledColors = Object.entries(settings.colors || {})
-      .filter(([key, value]) => value)
-      .map(([key]) => key);
-    if (enabledColors.length > 0) {
-      const colorsDiv = document.createElement('div');
-      colorsDiv.style.cssText = 'margin-bottom: 12px;';
-      const colorTitle = document.createElement('div');
-      colorTitle.textContent = isEn ? 'Color Settings:' : 'カラー設定:';
-      colorTitle.style.cssText = 'color: #AAA; font-size: 0.8em; margin-bottom: 8px;';
-      colorsDiv.appendChild(colorTitle);
-      enabledColors.forEach(colorKey => {
-        const colorItem = document.createElement('div');
-        colorItem.style.cssText = `
-          background: #2a2a2a;
-          padding: 6px 8px;
-          border-radius: 3px;
-          border-left: 3px solid #F39C12;
-          color: #FFF;
-          font-size: 0.8em;
-          margin-bottom: 4px;
-        `;
-        const colorNames = {
-          rrr: '🔴-🔴-🔴', ggg: '🟢-🟢-🟢', bbb: '🔵-🔵-🔵',
-          rrA: '🔴-🔴-⚪', ggA: '🟢-🟢-⚪', bbA: '🔵-🔵-⚪',
-          rrg: '🔴-🔴-🟢', rrb: '🔴-🔴-🔵', ggr: '🟢-🟢-🔴',
-          ggb: '🟢-🟢-🔵', bbr: '🔵-🔵-🔴', bbg: '🔵-🔵-🟢',
-          rgb: '🔴-🟢-🔵', raa: '🔴-⚪-⚪', gaa: '🟢-⚪-⚪', baa: '🔵-⚪-⚪',
-          rr: '🔴-🔴', gg: '🟢-🟢', bb: '🔵-🔵',
-          rb: '🔴-🔵', gr: '🟢-🔴', bg: '🔵-🟢'
-        };
-        colorItem.textContent = colorNames[colorKey] || colorKey;
-        colorsDiv.appendChild(colorItem);
+    const selected = settings.selected || {};
+    const selectedIds = Object.entries(selected).filter(([, value]) => value).map(([id]) => id);
+
+    if (selectedIds.length > 0) {
+      const groups = window.VENDOR_GROUPS || [];
+      const list = document.createElement('div');
+      list.style.cssText = 'display: grid; gap: 4px; margin-bottom: 12px;';
+
+      groups.forEach(group => {
+        const groupItems = group.items.filter(item => selected[item.id]);
+        if (groupItems.length === 0) return;
+
+        const groupTitle = document.createElement('div');
+        groupTitle.textContent = group.name;
+        groupTitle.style.cssText = 'color: #AAA; font-size: 0.8em; margin: 8px 0 4px;';
+        list.appendChild(groupTitle);
+
+        groupItems.forEach(item => {
+          const itemDiv = document.createElement('div');
+          itemDiv.style.cssText = `
+            background: #2a2a2a;
+            padding: 6px 8px;
+            border-radius: 3px;
+            border-left: 3px solid #F39C12;
+            color: #FFF;
+            font-size: 0.8em;
+            margin-bottom: 4px;
+          `;
+          itemDiv.textContent = item.label;
+          list.appendChild(itemDiv);
+        });
       });
-      container.appendChild(colorsDiv);
+
+      container.appendChild(list);
     }
 
     const enabledExcludeWeapons = Object.entries(settings.excludeWeapons || {})
-      .filter(([key, value]) => value)
+      .filter(([, value]) => value)
       .map(([key]) => key);
     if (enabledExcludeWeapons.length > 0) {
-      const weaponNames = isEn ? {
-        claw: 'Claw', dagger: 'Dagger', wand: 'Wand', oneHandSword: '1H Sword',
-        thrustingSword: 'Thrusting Sword', oneHandAxe: '1H Axe', oneHandMace: '1H Mace',
-        sceptre: 'Sceptre', runeDagger: 'Rune Dagger', bow: 'Bow', staff: 'Staff',
-        twoHandSword: '2H Sword', twoHandAxe: '2H Axe', twoHandMace: '2H Mace',
-        warstaff: 'Warstaff', shield: 'Shield'
-      } : {
-        claw: '鉤爪', dagger: '短剣', wand: 'ワンド', oneHandSword: '片手剣',
-        thrustingSword: '刺突剣', oneHandAxe: '片手斧', oneHandMace: '片手メイス',
-        sceptre: 'セプター', runeDagger: 'ルーンの短剣', bow: '弓', staff: 'スタッフ',
-        twoHandSword: '両手剣', twoHandAxe: '両手斧', twoHandMace: '両手メイス',
-        warstaff: 'ウォースタッフ', shield: '盾'
-      };
-      const excludeWeaponDisplayNames = enabledExcludeWeapons.map(weapon => weaponNames[weapon] || weapon);
-      container.appendChild(createDetailRow(isEn ? 'Excluded Weapons' : '除外武器ベース', excludeWeaponDisplayNames.join(', ')));
+      const excludeNames = enabledExcludeWeapons.map(key =>
+        typeof window.getWeaponLabel === 'function' ? window.getWeaponLabel(key) : key
+      );
+      container.appendChild(createDetailRow('NG武器ベース（除外）', excludeNames.join(', ')));
     }
 
-    const linkSettings = [];
-    if (settings.anyThreeLink) linkSettings.push(isEn ? '3-Link' : '3リンク');
-    if (settings.anyFourLink) linkSettings.push(isEn ? '4-Link' : '4リンク');
-    if (settings.anyFiveLink) linkSettings.push(isEn ? '5-Link' : '5リンク');
-    if (settings.anySixLink) linkSettings.push(isEn ? '6-Link' : '6リンク');
-    if (settings.anySixSocket) linkSettings.push(isEn ? '6-Socket' : '6ソケット');
-    if (linkSettings.length > 0) container.appendChild(createDetailRow(isEn ? 'Links' : 'リンク設定', linkSettings.join(', ')));
-    const movementSettings = [];
-    if (settings.movement?.ten) movementSettings.push('10%');
-    if (settings.movement?.fifteen) movementSettings.push('15%');
-    if (settings.movement?.twenty) movementSettings.push('20%');
-    if (settings.movement?.twentyfive) movementSettings.push('25%');
-    if (settings.movement?.thirty) movementSettings.push('30%');
-    if (movementSettings.length > 0) container.appendChild(createDetailRow(isEn ? 'MS' : '移動速度', movementSettings.join(', ')));
     const enabledWeapons = Object.entries(settings.weapon || {})
-      .filter(([key, value]) => value)
+      .filter(([, value]) => value)
       .map(([key]) => key);
     if (enabledWeapons.length > 0) {
-      const weaponNames = isEn ? {
-        claw: 'Claw', dagger: 'Dagger', wand: 'Wand', oneHandSword: '1H Sword',
-        thrustingSword: 'Thrusting Sword', oneHandAxe: '1H Axe', oneHandMace: '1H Mace',
-        sceptre: 'Sceptre', runeDagger: 'Rune Dagger', bow: 'Bow', staff: 'Staff',
-        twoHandSword: '2H Sword', twoHandAxe: '2H Axe', twoHandMace: '2H Mace', warstaff: 'Warstaff'
-      } : {
-        claw: '鉤爪', dagger: '短剣', wand: 'ワンド', oneHandSword: '片手剣',
-        thrustingSword: '刺突剣', oneHandAxe: '片手斧', oneHandMace: '片手メイス',
-        sceptre: 'セプター', runeDagger: 'ルーンの短剣', bow: '弓', staff: 'スタッフ',
-        twoHandSword: '両手剣', twoHandAxe: '両手斧', twoHandMace: '両手メイス', warstaff: 'ウォースタッフ'
-      };
-      const weaponDisplayNames = enabledWeapons.map(weapon => weaponNames[weapon] || weapon);
-      container.appendChild(createDetailRow(isEn ? 'Weapon Bases' : '武器ベース', weaponDisplayNames.join(', ')));
+      const weaponNames = enabledWeapons.map(key =>
+        typeof window.getWeaponLabel === 'function' ? window.getWeaponLabel(key) : key
+      );
+      container.appendChild(createDetailRow('武器ベース', weaponNames.join(', ')));
     }
   } else if (type === 'beast' || type === 'scarab' || type === 'tattoo' || type === 'runegraft') {
     const modItems = profile.beasts || profile.scarabs || profile.tattoos || profile.runegrafts || [];
@@ -1012,30 +878,11 @@ function loadSavedProfile(name, type, tabId) {
       if (type === 'map') {
         document.getElementById('profileList').value = name;
         loadProfile();
-      } else if (type === 'flask') {
-        document.getElementById('flaskProfileList').value = name;
-        loadFlaskProfile();
-      } else if (type === 'item') {
-        document.getElementById('itemProfileList').value = name;
-        loadItemProfile();
-      } else if (type === 'beast') {
-        document.getElementById('beastProfileList').value = name;
-        loadBeastProfile();
-      } else if (type === 'scarab') {
-        document.getElementById('scarabProfileList').value = name;
-        loadScarabProfile();
-      } else if (type === 'tattoo') {
-        document.getElementById('tattooProfileList').value = name;
-        loadTattooProfile();
-      } else if (type === 'runegraft') {
-        document.getElementById('runegraftProfileList').value = name;
-        loadRunegraftProfile();
       }
       const tabContent = document.getElementById(tabId);
       if (tabContent) {
         tabContent.scrollTop = 0;
       }
-      
     } catch (error) {
       console.error('Error loading profile:', error);
       showNotification('プロファイルの読み込みに失敗しました', true);
@@ -1076,15 +923,11 @@ function removeProfileFromOrder(profileName, type) {
 function deleteSavedProfile(name, type) {
   if (!confirm(`"${name}" を削除しますか?\nこの操作は元に戻せません。`)) return;
 
-  let storageKey = '';
-  if (type === 'map') storageKey = 'poeProfiles';
-  else if (type === 'flask') storageKey = 'flaskProfiles';
-  else if (type === 'item') storageKey = 'itemProfiles';
-  else if (type === 'vendor') storageKey = 'vendorProfiles';
-  else if (type === 'beast') storageKey = 'beastProfiles';
-  else if (type === 'scarab') storageKey = 'scarabProfiles';
-  else if (type === 'tattoo') storageKey = 'tattooProfiles';
-  else if (type === 'runegraft') storageKey = 'runegraftProfiles';
+  const storageKey = getPoe2StorageKey(type);
+  if (!storageKey) {
+    showNotification('不明なプロファイルタイプです', true);
+    return;
+  }
 
   try {
     const profiles = JSON.parse(localStorage.getItem(storageKey) || '{}');
@@ -1096,27 +939,9 @@ function deleteSavedProfile(name, type) {
     if (type === 'map') {
       window.profiles = profiles;
       if (typeof updateProfileList === 'function') updateProfileList();
-    } else if (type === 'flask') {
-      window.flaskProfiles = profiles;
-      if (typeof updateFlaskProfileList === 'function') updateFlaskProfileList();
-    } else if (type === 'item') {
-      window.itemProfiles = profiles;
-      if (typeof updateItemProfileList === 'function') updateItemProfileList();
     } else if (type === 'vendor') {
       window.vendorProfiles = profiles;
       if (typeof updateVendorProfileList === 'function') updateVendorProfileList();
-    } else if (type === 'beast') {
-      window.beastProfiles = profiles;
-      if (typeof updateBeastProfileList === 'function') updateBeastProfileList();
-    } else if (type === 'scarab') {
-      window.scarabProfiles = profiles;
-      if (typeof updateScarabProfileList === 'function') updateScarabProfileList();
-    } else if (type === 'tattoo') {
-      window.tattooProfiles = profiles;
-      if (typeof updateTattooProfileList === 'function') updateTattooProfileList();
-    } else if (type === 'runegraft') {
-      window.runegraftProfiles = profiles;
-      if (typeof updateRunegraftProfileList === 'function') updateRunegraftProfileList();
     }
 
     updateSavedRegexDisplay();
@@ -1156,13 +981,7 @@ function addFilterControls() {
   typeFilter.innerHTML = `
     <option value="all">すべてのタイプ</option>
     <option value="map">マップ</option>
-    <option value="flask">フラスコ</option>
-    <option value="item">アイテム</option>
     <option value="vendor">ベンダー</option>
-    <option value="beast">ビースト</option>
-    <option value="scarab">スカラベ</option>
-    <option value="tattoo">タトゥー</option>
-    <option value="runegraft">ルーングラフト</option>
   `;
   typeFilter.style.cssText = `
     padding: 8px 12px;
@@ -1553,52 +1372,6 @@ function hookSaveProfiles() {
     window.saveProfile._hooked = true;
   }
 
-  const originalFlaskSave = window.saveFlaskProfile;
-  if (originalFlaskSave && typeof originalFlaskSave === 'function' && !originalFlaskSave._hooked) {
-    window.saveFlaskProfile = function() {
-      const profileName = document.getElementById('flaskProfileName')?.value.trim() || '';
-      originalFlaskSave.apply(this, arguments);
-      setTimeout(() => {
-        try {
-          const profiles = JSON.parse(localStorage.getItem('poe2_flaskProfiles') || '{}');
-          Object.keys(profiles).forEach(key => {
-            if (!profiles[key].timestamp) profiles[key].timestamp = Date.now();
-          });
-          localStorage.setItem('poe2_flaskProfiles', JSON.stringify(profiles));
-          
-          if (profileName) addProfileToTop(profileName, 'flask');
-          updateSavedRegexDisplay();
-        } catch (e) {
-          console.error('タイムスタンプ追加エラー:', e);
-        }
-      }, 100);
-    };
-    window.saveFlaskProfile._hooked = true;
-  }
-
-  const originalItemSave = window.saveItemProfile;
-  if (originalItemSave && typeof originalItemSave === 'function' && !originalItemSave._hooked) {
-    window.saveItemProfile = function() {
-      const profileName = document.getElementById('itemProfileName')?.value.trim() || '';
-      originalItemSave.apply(this, arguments);
-      setTimeout(() => {
-        try {
-          const profiles = JSON.parse(localStorage.getItem('poe2_itemProfiles') || '{}');
-          Object.keys(profiles).forEach(key => {
-            if (!profiles[key].timestamp) profiles[key].timestamp = Date.now();
-          });
-          localStorage.setItem('poe2_itemProfiles', JSON.stringify(profiles));
-          
-          if (profileName) addProfileToTop(profileName, 'item');
-          updateSavedRegexDisplay();
-        } catch (e) {
-          console.error('タイムスタンプ追加エラー:', e);
-        }
-      }, 100);
-    };
-    window.saveItemProfile._hooked = true;
-  }
-
   const originalVendorSave = window.saveVendorProfile;
   if (originalVendorSave && typeof originalVendorSave === 'function' && !originalVendorSave._hooked) {
     window.saveVendorProfile = function() {
@@ -1621,52 +1394,6 @@ function hookSaveProfiles() {
     };
     window.saveVendorProfile._hooked = true;
   }
-
-  const originalBeastSave = window.saveBeastProfile;
-  if (originalBeastSave && typeof originalBeastSave === 'function' && !originalBeastSave._hooked) {
-    window.saveBeastProfile = function() {
-      const profileName = document.getElementById('beastProfileName')?.value.trim() || '';
-      originalBeastSave.apply(this, arguments);
-      setTimeout(() => {
-        try {
-          const profiles = JSON.parse(localStorage.getItem('poe2_beastProfiles') || '{}');
-          Object.keys(profiles).forEach(key => {
-            if (!profiles[key].timestamp) profiles[key].timestamp = Date.now();
-          });
-          localStorage.setItem('poe2_beastProfiles', JSON.stringify(profiles));
-          
-          if (profileName) addProfileToTop(profileName, 'beast');
-          updateSavedRegexDisplay();
-        } catch (e) {
-          console.error('タイムスタンプ追加エラー:', e);
-        }
-      }, 100);
-    };
-    window.saveBeastProfile._hooked = true;
-  }
-
-  const originalScarabSave = window.saveScarabProfile;
-  if (originalScarabSave && typeof originalScarabSave === 'function' && !originalScarabSave._hooked) {
-    window.saveScarabProfile = function() {
-      const profileName = document.getElementById('scarabProfileName')?.value.trim() || '';
-      originalScarabSave.apply(this, arguments);
-      setTimeout(() => {
-        try {
-          const profiles = JSON.parse(localStorage.getItem('poe2_scarabProfiles') || '{}');
-          Object.keys(profiles).forEach(key => {
-            if (!profiles[key].timestamp) profiles[key].timestamp = Date.now();
-          });
-          localStorage.setItem('poe2_scarabProfiles', JSON.stringify(profiles));
-          
-          if (profileName) addProfileToTop(profileName, 'scarab');
-          updateSavedRegexDisplay();
-        } catch (e) {
-          console.error('タイムスタンプ追加エラー:', e);
-        }
-      }, 100);
-    };
-    window.saveScarabProfile._hooked = true;
-  }
 }
 
 function initSavedRegex() {
@@ -1674,16 +1401,7 @@ function initSavedRegex() {
   if (savedTabLink) {
     savedTabLink.addEventListener('click', () => {
       resetFilterControls();
-      try {
-        const flaskData = localStorage.getItem('poe2_flaskModsData');
-        if (flaskData) window.rawFlaskMods = JSON.parse(flaskData);
-        const itemData = localStorage.getItem('poe2_itemModsData');
-        if (itemData) window.rawItemMods = JSON.parse(itemData);
-      } catch (e) {
-        console.error('MODデータ復元エラー:', e);
-      }
-      
-      // コンテナを非表示にしてから更新
+
       const container = document.getElementById('savedRegexList');
       if (container) {
         container.style.opacity = '1';

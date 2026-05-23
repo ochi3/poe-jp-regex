@@ -1206,6 +1206,38 @@ button.btn-secondary-highlight:hover {
     gap: 20px;
 }
 
+#vendorContent .three-columns {
+    grid-template-columns: 0.7fr 0.7fr 1.4fr;
+    gap: 14px;
+}
+
+#vendorContent .vendor-weapon-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+    margin-bottom: 6px;
+}
+
+#vendorContent .vendor-weapon-grid .input-label {
+    font-size: 0.85em;
+    line-height: 1.35;
+}
+
+#vendorContent .vendor-weapon-section h3 {
+    margin-bottom: 11px;
+    padding-bottom: 6px;
+    font-size: 0.95em;
+}
+
+#vendorContent .vendor-weapon-section p {
+    font-size: 0.8em;
+    margin-bottom: 9px;
+}
+
+#vendorContent .vendor-weapon-section .vendor-ng-title {
+    margin: 17px 0 11px;
+}
+
 
 
 /* レスポンシブ対応 */
