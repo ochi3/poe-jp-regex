@@ -1,7 +1,7 @@
 let ModList = {...mapModList};
 let currentLanguage = localStorage.getItem('poeLanguage') || 'ja';
 if (currentLanguage !== 'ja' && currentLanguage !== 'en') currentLanguage = 'ja';
-const CHANGELOG_VERSION = 'poe1-2026-04-09';
+const CHANGELOG_VERSION = 'poe1-2026-05-24';
 const CHANGELOG_STORAGE_KEY = 'poe1ChangelogSeenVersion';
 
 let checkedMods = new Map(); // id -> 'ng' または 'wanted'
@@ -1420,14 +1420,16 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   const beastProfileSelect = document.getElementById('beastProfileList');
-  if (beastProfileSelect) {
+  if (beastProfileSelect && !beastProfileSelect.hasEventListener) {
     beastProfileSelect.addEventListener('change', function() {
       if (this.value) {
         loadBeastProfile();
+      } else {
         const nameInput = document.getElementById('beastProfileName');
-        if (nameInput) nameInput.value = this.value;
+        if (nameInput) nameInput.value = '';
       }
     });
+    beastProfileSelect.hasEventListener = true;
   }
 
   const beastSaveBtn = document.getElementById('saveBeastProfileBtn');
@@ -2766,6 +2768,15 @@ function initializeApplication() {
     loadSearchModeState();
     loadModDetailsState();
     
+    const profileSelect = document.getElementById('profileList');
+    if (profileSelect && !profileSelect.hasEventListener) {
+        profileSelect.addEventListener('change', function() {
+            if (this.value) loadProfile();
+            else document.getElementById('profileName').value = '';
+        });
+        profileSelect.hasEventListener = true;
+    }
+
     loadScarabCheckboxState();
     renderscarablist();
     updateScarabSortIcons();
@@ -2796,13 +2807,31 @@ function initializeApplication() {
 
     // プロファイル選択時のイベントリスナーを設定
     const scarabProfileSelect = document.getElementById('scarabProfileList');
-    if (scarabProfileSelect) scarabProfileSelect.addEventListener('change', function() { if (this.value) loadScarabProfile(); });
+    if (scarabProfileSelect && !scarabProfileSelect.hasEventListener) {
+        scarabProfileSelect.addEventListener('change', function() {
+            if (this.value) loadScarabProfile();
+            else document.getElementById('scarabProfileName').value = '';
+        });
+        scarabProfileSelect.hasEventListener = true;
+    }
     
     const tattooProfileSelect = document.getElementById('tattooProfileList');
-    if (tattooProfileSelect) tattooProfileSelect.addEventListener('change', function() { if (this.value) loadTattooProfile(); });
+    if (tattooProfileSelect && !tattooProfileSelect.hasEventListener) {
+        tattooProfileSelect.addEventListener('change', function() {
+            if (this.value) loadTattooProfile();
+            else document.getElementById('tattooProfileName').value = '';
+        });
+        tattooProfileSelect.hasEventListener = true;
+    }
 
     const runegraftProfileSelect = document.getElementById('runegraftProfileList');
-    if (runegraftProfileSelect) runegraftProfileSelect.addEventListener('change', function() { if (this.value) loadRunegraftProfile(); });
+    if (runegraftProfileSelect && !runegraftProfileSelect.hasEventListener) {
+        runegraftProfileSelect.addEventListener('change', function() {
+            if (this.value) loadRunegraftProfile();
+            else document.getElementById('runegraftProfileName').value = '';
+        });
+        runegraftProfileSelect.hasEventListener = true;
+    }
     
     // 詳細表示の切り替えイベントを設定
     const detailCheckbox = document.getElementById('showModDetailsCheckbox');

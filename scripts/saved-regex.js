@@ -606,9 +606,6 @@ function createActionButton(text, color, onClick, title) {
   btn.addEventListener('click', (e) => {
     e.stopPropagation();
     onClick(e);
-    if (text === 'コピー') {
-      showNotification('コピーしました！');
-    }
   });
   return btn;
 }

@@ -211,9 +211,9 @@ function updateVendorCharCount() {
 
   if (charCountElement) {
     charCountElement.textContent = `文字数: ${charCount}`;
-    if (charCount > 250) {
+    if (charCount > POE2_REGEX_CHAR_LIMIT) {
       charCountElement.style.color = 'red';
-      charCountElement.textContent += ' (250文字を超えています)';
+      charCountElement.textContent += ` (${POE2_REGEX_CHAR_LIMIT}文字を超えています)`;
     } else {
       charCountElement.style.color = '';
     }

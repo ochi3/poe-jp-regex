@@ -2,6 +2,7 @@
 // tabletModList は tablet_mods.js で定義済み
 
 let tabletCheckedMods = new Set(); // 選択されたModのキー（modテキスト）
+let tabletProfiles = {};
 
 function formatTabletModText(text, value) {
     if (!text) return text || '';
@@ -208,7 +209,12 @@ function updateTabletCombinedRegex() {
     const charCountElement = document.getElementById('tabletCharCount');
     if (charCountElement) {
         charCountElement.textContent = `文字数: ${charCount}`;
-        charCountElement.style.color = charCount > 50 ? 'red' : '';
+        if (charCount > POE2_REGEX_CHAR_LIMIT) {
+            charCountElement.style.color = 'red';
+            charCountElement.textContent += ` (${POE2_REGEX_CHAR_LIMIT}文字を超えています)`;
+        } else {
+            charCountElement.style.color = '';
+        }
     }
 }
 
@@ -261,12 +267,165 @@ function loadTabletState() {
     }
 }
 
+function applyTabletMods(mods) {
+    tabletCheckedMods.clear();
+    (mods || []).forEach(key => {
+        if (tabletModList[key]) tabletCheckedMods.add(key);
+    });
+    updateTabletModList();
+    updateTabletCombinedRegex();
+    saveTabletState();
+}
+
+function saveTabletProfile() {
+    const profileName = document.getElementById('tabletProfileName')?.value.trim();
+    if (!profileName) {
+        showNotification('プロファイル名を入力してください', true);
+        return;
+    }
+
+    if (tabletProfiles[profileName] && !confirm(`${profileName} は既に存在します。上書きしますか?`)) {
+        return;
+    }
+
+    tabletProfiles[profileName] = {
+        mods: Array.from(tabletCheckedMods),
+        timestamp: Date.now()
+    };
+
+    localStorage.setItem('poe2_tabletProfiles', JSON.stringify(tabletProfiles));
+    updateTabletProfileList();
+    showNotification(`"${profileName}" を保存しました`);
+    document.getElementById('tabletProfileName').value = '';
+
+    if (typeof updateSavedRegexDisplay === 'function') {
+        updateSavedRegexDisplay();
+    }
+}
+
+function loadTabletProfile() {
+    const profileName = document.getElementById('tabletProfileList')?.value;
+    if (!profileName) {
+        document.getElementById('tabletProfileName').value = '';
+        return;
+    }
+    if (!tabletProfiles[profileName]) {
+        showNotification('プロファイルを選択してください', true);
+        return;
+    }
+
+    try {
+        applyTabletMods(tabletProfiles[profileName].mods);
+        document.getElementById('tabletProfileName').value = profileName;
+        showNotification(`"${profileName}" を読み込みました`);
+    } catch (error) {
+        console.error('石板プロファイル読み込みエラー:', error);
+        showNotification('プロファイルの読み込みに失敗しました', true);
+    }
+}
+
+function deleteTabletProfile() {
+    const profileName = document.getElementById('tabletProfileList')?.value;
+    if (!profileName || !tabletProfiles[profileName]) {
+        showNotification('削除するプロファイルを選択してください', true);
+        return;
+    }
+
+    if (confirm(`本当に "${profileName}" を削除しますか?`)) {
+        delete tabletProfiles[profileName];
+        localStorage.setItem('poe2_tabletProfiles', JSON.stringify(tabletProfiles));
+        updateTabletProfileList();
+        document.getElementById('tabletProfileName').value = '';
+        showNotification(`"${profileName}" を削除しました`);
+
+        if (typeof updateSavedRegexDisplay === 'function') {
+            updateSavedRegexDisplay();
+        }
+    }
+}
+
+function updateTabletProfileList() {
+    const select = document.getElementById('tabletProfileList');
+    if (!select) return;
+
+    select.innerHTML = '<option value="">-- プロファイル選択 --</option>';
+    Object.keys(tabletProfiles).sort().forEach(name => {
+        const option = document.createElement('option');
+        option.value = name;
+        option.textContent = name;
+        select.appendChild(option);
+    });
+}
+
+function loadTabletProfileDirectly(profileName) {
+    const profile = tabletProfiles[profileName];
+    if (!profile) {
+        showNotification('プロファイルが見つかりません', true);
+        return;
+    }
+
+    applyTabletMods(profile.mods);
+
+    const profileNameInput = document.getElementById('tabletProfileName');
+    const profileList = document.getElementById('tabletProfileList');
+    if (profileNameInput) profileNameInput.value = profileName;
+    if (profileList) profileList.value = profileName;
+
+    showNotification(`"${profileName}" を読み込みました`);
+}
+
+function generateTabletRegexFromProfile(profile) {
+    const mods = profile?.mods || [];
+    const results = mods.map(key => {
+        const modData = tabletModList[key];
+        if (!modData) return null;
+        return modData.Regex || modData.mod.split('|')[0].substring(0, 8);
+    }).filter(Boolean);
+
+    return results.length > 0 ? `"${results.join('|')}"` : '(空のRegex)';
+}
+
+function initializeTabletProfiles() {
+    const savedProfiles = localStorage.getItem('poe2_tabletProfiles');
+    if (savedProfiles) {
+        try {
+            tabletProfiles = JSON.parse(savedProfiles);
+            updateTabletProfileList();
+        } catch (e) {
+            console.error('石板プロファイル読み込みエラー:', e);
+            tabletProfiles = {};
+        }
+    }
+
+    const profileList = document.getElementById('tabletProfileList');
+    if (profileList && !profileList.hasEventListener) {
+        profileList.addEventListener('change', function() {
+            if (this.value) loadTabletProfile();
+            else document.getElementById('tabletProfileName').value = '';
+        });
+        profileList.hasEventListener = true;
+    }
+}
+
+function syncTabletProfiles(profiles) {
+    tabletProfiles = profiles;
+    updateTabletProfileList();
+}
+
+window.saveTabletProfile = saveTabletProfile;
+window.loadTabletProfile = loadTabletProfile;
+window.deleteTabletProfile = deleteTabletProfile;
+window.loadTabletProfileDirectly = loadTabletProfileDirectly;
+window.generateTabletRegexFromProfile = generateTabletRegexFromProfile;
+window.syncTabletProfiles = syncTabletProfiles;
+
 // 初期化
 // 注意: scripts.js と共存するため、重複して window.onload 等を使わないよう検討
 // ここでは poe2.html から直接初期化関数として呼び出すか、DOMContentLoaded を使う
 window.addEventListener('DOMContentLoaded', () => {
     // ページ内に Tablet 用の要素がある場合のみ初期化
     if (document.getElementById('tabletContent')) {
+        initializeTabletProfiles();
         loadTabletState();
         updateTabletModList();
         updateTabletCombinedRegex();

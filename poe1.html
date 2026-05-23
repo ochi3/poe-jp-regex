@@ -17,6 +17,7 @@
     <title>PoE JP Regex</title>
     <link rel="canonical" href="https://ochi3.github.io/poe-jp-regex/poe1">
     <link rel="stylesheet" href="styles.css?v=2">
+    <link rel="stylesheet" href="poe1_styles.css?v=2">
 </head>
 <body>
     <div id="sideMenu">
@@ -51,7 +52,7 @@
             Discord @ochi3c<br>
             Twitter <a href="https://x.com/ochi3c" target="_blank" rel="noopener noreferrer" style="color: var(--accent-primary);">@ochi3c</a>
         </h4>
-        <h4>Change log<br>26/04/09<br>トレードリンク設定追加<br><br>26/04/07<br>プロファイルエラー修正<br><br>26/03/25<br>モンスターのライフMod修正<br><br>26/03/24<br>ビーストRegex修正<br><br>26/03/24<br>Regex、ビーストレシピ修正<br><br>26/03/23<br>Regex一覧変更、Languageボタンの位置変更<br><br>26/03/22<br>数値Regex最適化、ルーンタトゥータグ追加<br><br>26/03/19<br>トレードリンクからガデマップを弾くようになりました。<br><br>英語のトレードリンクを作成できるようになりました。<br><br>スカラベ一括選択時下限を0にすると古いスカラベも選択されていたものを修正<br><br>26/03/19<br>トレードリンクの設定追加(コラプト、モッド数)<br>英語設定の維持<br><br>26/03/18<br>スカラベ、タトゥー、ルーングラフトRegexの追加<br><br>26/03/17<br>ビースト名前修正<br><br>26/03/15<br>ビースト価格自動更新機能追加<br>要望・不具合報告機能追加<br><br>26/03/12<br>トレードリンク機能追加<br>modの詳細を追加<br><br>26/03/10<br>カレンシー、マップ、スカラベ量の対応、新MOD追加<br><br>25/10/21<br>ベンダー(ACT用)更新、ワンドと弓の修正<br><br>25/10/17<br>いろいろ追加<br><br>25/09/19<br>200以上の数値に対応、レアリティの追加<br><br>25/07/02<br>チェックボックスバグ修正<br><br>25/06/05<br>文字数制限50→250<br></h4>
+        <h4>Change log<br>26/05/24<br>内部コード整理（不具合あれば報告を）<br><br>26/04/09<br>トレードリンク設定追加<br><br>26/04/07<br>プロファイルエラー修正<br><br>26/03/25<br>モンスターのライフMod修正<br><br>26/03/24<br>ビーストRegex修正<br><br>26/03/24<br>Regex、ビーストレシピ修正<br><br>26/03/23<br>Regex一覧変更、Languageボタンの位置変更<br><br>26/03/22<br>数値Regex最適化、ルーンタトゥータグ追加<br><br>26/03/19<br>トレードリンクからガデマップを弾くようになりました。<br><br>英語のトレードリンクを作成できるようになりました。<br><br>スカラベ一括選択時下限を0にすると古いスカラベも選択されていたものを修正<br><br>26/03/19<br>トレードリンクの設定追加(コラプト、モッド数)<br>英語設定の維持<br><br>26/03/18<br>スカラベ、タトゥー、ルーングラフトRegexの追加<br><br>26/03/17<br>ビースト名前修正<br><br>26/03/15<br>ビースト価格自動更新機能追加<br>要望・不具合報告機能追加<br><br>26/03/12<br>トレードリンク機能追加<br>modの詳細を追加<br><br>26/03/10<br>カレンシー、マップ、スカラベ量の対応、新MOD追加<br><br>25/10/21<br>ベンダー(ACT用)更新、ワンドと弓の修正<br><br>25/10/17<br>いろいろ追加<br><br>25/09/19<br>200以上の数値に対応、レアリティの追加<br><br>25/07/02<br>チェックボックスバグ修正<br><br>25/06/05<br>文字数制限50→250<br></h4>
     </div>
 
     <div id="contentArea">
@@ -68,7 +69,7 @@
                     <button onclick="saveProfile()">保存</button>
                     <button onclick="loadProfile()">読み込み</button>
                     <button onclick="deleteProfile()">削除</button>
-                    <select id="profileList" class="large-input" onchange="loadProfile()">
+                    <select id="profileList" class="large-input">
                         <option value="">-- プロファイル選択 --</option>
                     </select>
                 </div>
@@ -79,14 +80,14 @@
                     <button onclick="copyToClipboard()">コピー</button>
                     <button class="btn-primary-highlight" id="tradeLinkBtn" onclick="generateTradeLink()">トレードリンク</button>
                     <!-- <button class="secondary-btn" id="copyTradeLinkBtn" onclick="copyTradeLink()">リンクをコピー(デバッグ)</button> -->
-                    <button class="btn-secondary-highlight" id="tradeSettingsBtn" onclick="toggleTradeSettings()">設定</button>
-                        <div class="button-with-info" style="margin-left: -5px;">
-                            <div class="info-icon">New</div>
-                            <div class="info-tooltip">
-                                <strong>トレードリンク機能を追加</strong>
-                                Regexに合ったトレードリンクを生成できます。<br>
-                            </div>
+                    <div class="button-with-info">
+                        <button class="btn-secondary-highlight" id="tradeSettingsBtn" onclick="toggleTradeSettings()">設定</button>
+                        <div class="info-icon">New</div>
+                        <div class="info-tooltip">
+                            <strong>トレードリンク機能を追加</strong>
+                            Regexに合ったトレードリンクを生成できます。<br>
                         </div>
+                    </div>
                     <button onclick="resetAll()">リセット</button>
                     <div style="width: 24px;"></div> <!-- スペーサー -->
                     <span id="charCount" class="char-count"></span>
@@ -244,7 +245,7 @@
                     <button onclick="saveFlaskProfile()">保存</button>
                     <button onclick="loadFlaskProfile()">読み込み</button>
                     <button onclick="deleteFlaskProfile()">削除</button>
-                    <select id="flaskProfileList" class="large-input" onchange="loadFlaskProfile()">
+                    <select id="flaskProfileList" class="large-input">
                         <option value="">-- プロファイル選択 --</option>
                     </select>
                 </div>
@@ -298,7 +299,7 @@
                     <button onclick="saveItemProfile()">保存</button>
                     <button onclick="loadItemProfile()">読み込み</button>
                     <button onclick="deleteItemProfile()">削除</button>
-                    <select id="itemProfileList" class="large-input" onchange="loadItemProfile()">
+                    <select id="itemProfileList" class="large-input">
                         <option value="">-- プロファイル選択 --</option>
                     </select>
                 </div>
@@ -352,7 +353,7 @@
                     <button onclick="saveBeastProfile()">保存</button>
                     <button onclick="loadBeastProfile()">読み込み</button>
                     <button onclick="deleteBeastProfile()">削除</button>
-                    <select id="beastProfileList" class="large-input" onchange="loadBeastProfile()">
+                    <select id="beastProfileList" class="large-input">
                         <option value="">-- プロファイル選択 --</option>
                     </select>
                 </div>
@@ -397,7 +398,7 @@
                     <button onclick="saveScarabProfile()">保存</button>
                     <button onclick="loadScarabProfile()">読み込み</button>
                     <button onclick="deleteScarabProfile()">削除</button>
-                    <select id="scarabProfileList" class="large-input" onchange="loadScarabProfile()">
+                    <select id="scarabProfileList" class="large-input">
                         <option value="">-- プロファイル選択 --</option>
                     </select>
                 </div>
@@ -442,7 +443,7 @@
                     <button onclick="saveTattooProfile()">保存</button>
                     <button onclick="loadTattooProfile()">読み込み</button>
                     <button onclick="deleteTattooProfile()">削除</button>
-                    <select id="tattooProfileList" class="large-input" onchange="loadTattooProfile()">
+                    <select id="tattooProfileList" class="large-input">
                         <option value="">-- プロファイル選択 --</option>
                     </select>
                 </div>
@@ -487,7 +488,7 @@
                     <button onclick="saveRunegraftProfile()">保存</button>
                     <button onclick="loadRunegraftProfile()">読み込み</button>
                     <button onclick="deleteRunegraftProfile()">削除</button>
-                    <select id="runegraftProfileList" class="large-input" onchange="loadRunegraftProfile()">
+                    <select id="runegraftProfileList" class="large-input">
                         <option value="">-- プロファイル選択 --</option>
                     </select>
                 </div>
@@ -549,7 +550,7 @@
                     <button onclick="saveVendorProfile()">保存</button>
                     <button onclick="loadVendorProfile()">読み込み</button>
                     <button onclick="deleteVendorProfile()">削除</button>
-                    <select id="vendorProfileList" class="large-input" onchange="loadVendorProfile()">
+                    <select id="vendorProfileList" class="large-input">
                         <option value="">-- プロファイル選択 --</option>
                     </select>
                 </div>
@@ -955,6 +956,7 @@
             <div class="card">
                 <h2 class="section-header">Change log</h2>
                 <div class="changelog-list">
+                    <article class="changelog-entry"><time>26/05/24</time><p>内部コードの整理を行いました。不具合や想定と異なる動作がありましたら、フィードバックよりご報告をお願いします。</p></article>
                     <article class="changelog-entry"><time>26/04/09</time><p>トレードリンク設定を追加しました。</p></article>
                     <article class="changelog-entry"><time>26/04/07</time><p>プロファイルエラーを修正しました。</p></article>
                     <article class="changelog-entry"><time>26/03/25</time><p>モンスターのライフModを修正しました。</p></article>

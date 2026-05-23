@@ -47,9 +47,9 @@
             <h4>
                 Change log
                 <br/>
-                26/04/06
+                26/05/24
                 <br/>
-                PoE2ページ追加 <br/>エアプなためFBお待ちしております。<br/>FBがないと改善されません。 <br/>色々追記予定
+                コード整理（不具合あれば報告を）
                 <br/>
             </h4>
         </div>
@@ -75,13 +75,13 @@
                     </div>
                     <div class="input-group">
                         <button onclick="copyToClipboard()">コピー</button>
-                        <button class="btn-primary-highlight" id="tradeLinkBtn" onclick="generateTradeLink()">トレードリンク</button>
-                        <!-- <button class="secondary-btn" id="copyTradeLinkBtn" onclick="copyTradeLink()">
+                    <button class="btn-primary-highlight" id="tradeLinkBtn" onclick="generateTradeLink()">トレードリンク</button>
+                    <!-- <button class="secondary-btn" id="copyTradeLinkBtn" onclick="copyTradeLink()">
                         リンクをコピー(デバッグ)
                     </button>
                     -->
-                    <button class="btn-secondary-highlight" id="tradeSettingsBtn" onclick="toggleTradeSettings()">設定</button>
-                    <div class="button-with-info" style="margin-left: -5px;">
+                    <div class="button-with-info">
+                        <button class="btn-secondary-highlight" id="tradeSettingsBtn" onclick="toggleTradeSettings()">設定</button>
                         <div class="info-icon">
                             New
                         </div>
@@ -96,72 +96,71 @@
                     </div>
                     <!-- スペーサー -->
                     <span class="char-count" id="charCount"></span>
-                </div>
-                <div class="input-group">
-                    <label class="input-label">
-                        数量:
-                        <input id="itemQuantityInput" oninput="updateCombinedRegex(); saveInputState()" type="number"/>
-                    </label>
-                    <label class="input-label">
-                        パックサイズ:
-                        <input id="packSizeInput" oninput="updateCombinedRegex(); saveInputState()" type="number"/>
-                    </label>
-                    <label class="input-label">
-                        レアリティ:
-                        <input id="rarityInput" oninput="updateCombinedRegex(); saveInputState()" type="number"/>
-                    </label>
-                </div>
-                <div class="input-group">
+                    </div>
+                    <div class="input-group">
+                        <label class="input-label">
+                            数量:
+                            <input id="itemQuantityInput" oninput="updateCombinedRegex(); saveInputState()" type="number"/>
+                        </label>
+                        <label class="input-label">
+                            パックサイズ:
+                            <input id="packSizeInput" oninput="updateCombinedRegex(); saveInputState()" type="number"/>
+                        </label>
+                        <label class="input-label">
+                            レアリティ:
+                            <input id="rarityInput" oninput="updateCombinedRegex(); saveInputState()" type="number"/>
+                        </label>
+                    </div>
+                    <div class="input-group">
+                        <label class="input-label">
+                            ウェイストーンドロップ率:
+                            <select id="waystoneInput" onchange="updateCombinedRegex(); saveInputState()">
+                                <option value="">なし</option>
+                                <option value="100">100</option>
+                                <option value="200">200</option>
+                                <option value="300">300</option>
+                                <option value="400">400</option>
+                                <option value="500">500</option>
+                                <option value="600">600</option>
+                                <option value="700">700</option>
+                            </select>
+                        </label>
+                        <label class="input-label">
+                            デリリウム:
+                            <select id="deliriumInput" onchange="updateCombinedRegex(); saveInputState()">
+                                <option value="">なし</option>
+                                <option value="10">10</option>
+                                <option value="20">20</option>
+                                <option value="30">30</option>
+                                <option value="40">40</option>
+                                <option value="50">50</option>
+                                <option value="60">60</option>
+                                <option value="70">70</option>
+                                <option value="80">80</option>
+                                <option value="90">90</option>
+                                <option value="100">100</option>
+                            </select>
+                        </label>
+                    </div>
 
-                    <label class="input-label">
-                        ウェイストーンドロップ率:
-                        <select id="waystoneInput" onchange="updateCombinedRegex(); saveInputState()">
-                            <option value="">なし</option>
-                            <option value="100">100</option>
-                            <option value="200">200</option>
-                            <option value="300">300</option>
-                            <option value="400">400</option>
-                            <option value="500">500</option>
-                            <option value="600">600</option>
-                            <option value="700">700</option>
-                        </select>
-                    </label>
-                    <label class="input-label">
-                        デリリウム:
-                        <select id="deliriumInput" onchange="updateCombinedRegex(); saveInputState()">
-                            <option value="">なし</option>
-                            <option value="10">10</option>
-                            <option value="20">20</option>
-                            <option value="30">30</option>
-                            <option value="40">40</option>
-                            <option value="50">50</option>
-                            <option value="60">60</option>
-                            <option value="70">70</option>
-                            <option value="80">80</option>
-                            <option value="90">90</option>
-                            <option value="100">100</option>
-                        </select>
-                    </label>
-                </div>
-
-                <div class="input-group">
-                    <label class="input-label">
-                        レアモンスター:
-                        <input id="rareMonsterInput" oninput="updateCombinedRegex(); saveInputState()" type="number"/>
-                    </label>
-                    <label class="input-label">
-                        マジックモンスター:
-                        <input id="magicMonsterInput" oninput="updateCombinedRegex(); saveInputState()" type="number"/>
-                    </label>
-                    <label class="input-label">
-                        <input checked="" id="searchAllRadio" name="searchMode" onchange="updateSearchMode(); saveSearchModeState()" type="radio" value="all"/>
-                        全て値以上
-                    </label>
-                    <label class="input-label">
-                        <input id="searchAnyRadio" name="searchMode" onchange="updateSearchMode(); saveSearchModeState()" type="radio" value="any"/>
-                        どれか
-                    </label>
-                </div>
+                    <div class="input-group">
+                        <label class="input-label">
+                            レアモンスター:
+                            <input id="rareMonsterInput" oninput="updateCombinedRegex(); saveInputState()" type="number"/>
+                        </label>
+                        <label class="input-label">
+                            マジックモンスター:
+                            <input id="magicMonsterInput" oninput="updateCombinedRegex(); saveInputState()" type="number"/>
+                        </label>
+                        <label class="input-label">
+                            <input checked="" id="searchAllRadio" name="searchMode" onchange="updateSearchMode(); saveSearchModeState()" type="radio" value="all"/>
+                            全て値以上
+                        </label>
+                        <label class="input-label">
+                            <input id="searchAnyRadio" name="searchMode" onchange="updateSearchMode(); saveSearchModeState()" type="radio" value="any"/>
+                            どれか
+                        </label>
+                    </div>
                 <div class="input-group">
                     <button onclick="copyUnidentified()">未鑑定</button>
                     <button onclick="copyNormal()">ノーマル</button>
@@ -232,6 +231,15 @@
         <div class="tab-content" id="tabletContent">
             <div class="card">
                 <h2 class="section-header">石板</h2>
+                <div class="input-group">
+                    <input class="large-input" id="tabletProfileName" placeholder="プロファイル名を入力してください。" type="text"/>
+                    <button onclick="saveTabletProfile()">保存</button>
+                    <button onclick="loadTabletProfile()">読み込み</button>
+                    <button onclick="deleteTabletProfile()">削除</button>
+                    <select class="large-input" id="tabletProfileList">
+                        <option value="">-- プロファイル選択 --</option>
+                    </select>
+                </div>
                 <div class="output-area" id="tabletRegexOutput">
                 </div>
                 <div class="input-group">
@@ -277,6 +285,10 @@
                 <h2 class="section-header">Change log</h2>
                 <div class="changelog-list">
                     <article class="changelog-entry">
+                        <time>26/05/24</time>
+                        <p>内部コードの整理を行いました。不具合や想定と異なる動作がありましたら、フィードバックよりご報告をお願いします。</p>
+                    </article>
+                    <article class="changelog-entry">
                         <time>26/05/23</time>
                         <p>PoE2にベンダー(ACT用) Regexページを追加しました。</p>
                     </article>
@@ -310,6 +322,7 @@
             </div>
         </div>
     </div>
+    <script src="poe2_scripts/poe2_config.js"></script>
     <script src="poe2_scripts/map_mods.js"></script>
     <script src="poe2_scripts/tablet_mods.js"></script>
     <script src="poe2_scripts/trade_link.js"></script>
