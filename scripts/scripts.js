@@ -4,7 +4,7 @@ if (currentLanguage !== 'ja' && currentLanguage !== 'en') currentLanguage = 'ja'
 const CHANGELOG_VERSION = 'poe1-2026-05-25';
 const CHANGELOG_STORAGE_KEY = 'poe1ChangelogSeenVersion';
 
-let checkedMods = new Map(); // id -> 'ng' または 'wanted'
+let checkedMods = new Map(); // キー -> 'ng' または 'wanted'
 let checkedBeasts = new Set();
 let checkedScarabs = new Set();
 let checkedTattoos = new Set();

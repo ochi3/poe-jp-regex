@@ -1,3 +1,5 @@
+// poe-item-translator の build:browser により生成（PoE JP Regex 装備変換用）
+// 再生成: npm run build:browser
 "use strict";
 var JpPoeUtils = (() => {
   var __defProp = Object.defineProperty;
@@ -20,7 +22,7 @@ var JpPoeUtils = (() => {
   var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
   var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "symbol" ? key + "" : key, value);
 
-  // src/web/browser.ts
+  // ブラウザ向けエントリ (src/browser.ts)
   var browser_exports = {};
   __export(browser_exports, {
     detectItemTextDirection: () => detectItemTextDirection,
@@ -30,7 +32,7 @@ var JpPoeUtils = (() => {
     translateItemTextToJa: () => translateItemTextToJa
   });
 
-  // src/translator/detect_direction.ts
+  // 入力言語の自動判定 (src/translator/detect_direction.ts)
   var JA_ITEM_CLASS = "アイテムクラス";
   var EN_ITEM_CLASS = "Item Class";
   var JA_CHAR_PATTERN = /[\u3040-\u309F\u30A0-\u30FF\u4E00-\u9FFF]/g;
@@ -66,7 +68,7 @@ var JpPoeUtils = (() => {
     return direction === "ja2en" ? "日本語 → 英語" : "英語 → 日本語";
   }
 
-  // src/data/poe/data.ts
+  // PoE データ定義 (src/data/poe/data.ts)
   var attributes = [
     {
       "ja": "アイテムクラス",
@@ -140749,12 +140751,12 @@ var JpPoeUtils = (() => {
       "en": "Your Maps have +#% chance to contain a Mirror of Delirium"
     },
     {
-      "ja": "マップには+#%の確率で聖なる木立が出現する",
-      "en": "Area contains The Sacred Grove"
-    },
-    {
       "ja": "マップには+#%の確率でアビスが出現する",
       "en": "Your Maps have +#% chance to contain an Abyss"
+    },
+    {
+      "ja": "マップには+#%の確率で聖なる木立が出現する",
+      "en": "Area contains The Sacred Grove"
     },
     {
       "ja": "マップにエクスペディションエンカウンターが出現する確率が+#%される",
@@ -141493,12 +141495,12 @@ var JpPoeUtils = (() => {
       "en": "Minions deal # to # additional Physical Damage"
     },
     {
-      "ja": "最大チャージ数 +#",
-      "en": "+# to Maximum Charges"
-    },
-    {
       "ja": "弓によるアタックに#から#の追加火ダメージ",
       "en": "# to # Added Fire Damage with Bow Attacks"
+    },
+    {
+      "ja": "最大チャージ数 +#",
+      "en": "+# to Maximum Charges"
     },
     {
       "ja": "弓によるアタックに#から#の追加物理ダメージ",
@@ -143769,6 +143771,10 @@ var JpPoeUtils = (() => {
       "en": "#% increased Mana Regeneration Rate per Power Charge"
     },
     {
+      "ja": "召喚したレイジングスピリットのダメージが#%増加する",
+      "en": "Summoned Raging Spirits deal #% increased Damage"
+    },
+    {
       "ja": "プレイヤーはブロックできない",
       "en": "Players cannot Block"
     },
@@ -143809,10 +143815,6 @@ var JpPoeUtils = (() => {
       "en": "Ritual Splinters offered at Ritual Altars in your Maps have #% increased Stack Size"
     },
     {
-      "ja": "召喚したレイジングスピリットのダメージが#%増加する",
-      "en": "Summoned Raging Spirits deal #% increased Damage"
-    },
-    {
       "ja": "マップで見つかるハイストの依頼書が敏捷性、欺瞞または工作が必要であるものである確率が#%上昇する",
       "en": "Heist Contracts found in your Maps are #% more likely to require Agility, Deception or Engineering"
     },
@@ -143823,6 +143825,10 @@ var JpPoeUtils = (() => {
     {
       "ja": "マップに出現するリージョンモンスターのパックサイズが#%増加する",
       "en": "Legion Monsters in your Maps have #% increased Pack Size"
+    },
+    {
+      "ja": "ヘラルドオブサンダーが敵をヒットした時に#の雷ダメージを受ける",
+      "en": "Take # Lightning Damage when Herald of Thunder Hits an Enemy"
     },
     {
       "ja": "マップでドロップするスカラベがハービンジャースカラベになる確率が#%増加する",
@@ -143859,10 +143865,6 @@ var JpPoeUtils = (() => {
     {
       "ja": "両武器装備中に#から#の追加スペル混沌ダメージ",
       "en": "# to # Added Spell Chaos Damage while wielding a Two Handed Weapon"
-    },
-    {
-      "ja": "ヘラルドオブサンダーが敵をヒットした時に#の雷ダメージを受ける",
-      "en": "Take # Lightning Damage when Herald of Thunder Hits an Enemy"
     },
     {
       "ja": "マップに出現するリージョンの下士官がドロップするアイテムのレアリティが#%増加する",
@@ -144901,12 +144903,12 @@ var JpPoeUtils = (() => {
       "en": "#% increased Mana Cost of Skills during Effect"
     },
     {
-      "ja": "重傷状態の敵に対するアタックダメージの#%をライフとしてリーチする",
-      "en": "#% of Attack Damage Leeched as Life against Maimed Enemies"
-    },
-    {
       "ja": "凍結状態の敵に対する冷気ダメージの#%を追加火ダメージとして獲得する",
       "en": "Gain #% of Cold Damage as Extra Fire Damage against Frozen Enemies"
+    },
+    {
+      "ja": "重傷状態の敵に対するアタックダメージの#%をライフとしてリーチする",
+      "en": "#% of Attack Damage Leeched as Life against Maimed Enemies"
     },
     {
       "ja": "エリアの全てのマジックおよびノーマルのモンスターは魂の団結状態である",
@@ -145121,6 +145123,10 @@ var JpPoeUtils = (() => {
       "en": "You cannot be Ignited for # second after being Ignited"
     },
     {
+      "ja": "プレイヤーは冷却を付与された後#秒間は冷却を付与されることがない",
+      "en": "You cannot be Chilled for # second after being Chilled"
+    },
+    {
       "ja": "プレイヤーは凍結を付与された後#秒間は凍結を付与されることがない",
       "en": "You cannot be Frozen for # second after being Frozen"
     },
@@ -145235,10 +145241,6 @@ var JpPoeUtils = (() => {
     {
       "ja": "クリティカルストライク時に#%の確率で敵に毒を付与する",
       "en": "#% chance to Cause Poison on Critical Strike"
-    },
-    {
-      "ja": "プレイヤーは冷却を付与された後#秒間は冷却を付与されることがない",
-      "en": "You cannot be Chilled for # second after being Chilled"
     },
     {
       "ja": "移動スキルのアタックスピードが#%増加する",
@@ -145401,16 +145403,16 @@ var JpPoeUtils = (() => {
       "en": "Socketed Gems are Supported by Level # Minion Life"
     },
     {
-      "ja": "武器の物理ダメージの#%をランダムな元素属性の追加ダメージとして獲得する",
-      "en": "Gain #% of Weapon Physical Damage as Extra Damage of a random Element"
-    },
-    {
       "ja": "効果中は元素耐性 +#%",
       "en": "+#% to Elemental Resistances during Effect"
     },
     {
       "ja": "ヘラルドオブアゴニーのマナリザーブ効率が#%増加する",
       "en": "Herald of Agony has #% increased Mana Reservation Efficiency"
+    },
+    {
+      "ja": "武器の物理ダメージの#%をランダムな元素属性の追加ダメージとして獲得する",
+      "en": "Gain #% of Weapon Physical Damage as Extra Damage of a random Element"
     },
     {
       "ja": "プレイヤーは敵を倒した時に#の混沌継続ダメージを#秒間受ける",
@@ -145705,12 +145707,12 @@ var JpPoeUtils = (() => {
       "en": "+# to maximum number of Summoned Holy Relics"
     },
     {
-      "ja": "敵を発火させた時に#の火ダメージを受ける",
-      "en": "Take # Fire Damage when you Ignite an Enemy"
-    },
-    {
       "ja": "発火中は火ダメージの#%をライフとしてリーチする",
       "en": "#% of Fire Damage Leeched as Life while Ignited"
+    },
+    {
+      "ja": "敵を発火させた時に#の火ダメージを受ける",
+      "en": "Take # Fire Damage when you Ignite an Enemy"
     },
     {
       "ja": "冷却中は#%の確率で感電を無効化する",
@@ -145725,12 +145727,12 @@ var JpPoeUtils = (() => {
       "en": "Socketed Gems are Supported by Level # Inspiration"
     },
     {
-      "ja": "筋力10ごとに武器による物理ダメージが#%増加する",
-      "en": "#% increased Physical Weapon Damage per 10 Strength"
-    },
-    {
       "ja": "効果中にプレイヤーに対する冷却の効果が#%減少する",
       "en": "#% reduced Effect of Chill on you during Effect"
+    },
+    {
+      "ja": "筋力10ごとに武器による物理ダメージが#%増加する",
+      "en": "#% increased Physical Weapon Damage per 10 Strength"
     },
     {
       "ja": "ヒットにより受けたダメージの#%をプレイヤーより先にスペクターのライフで受ける",
@@ -146589,12 +146591,12 @@ var JpPoeUtils = (() => {
       "en": "Monster Damage Penetrates #% Elemental Resistances"
     },
     {
-      "ja": "スコーチングレイのビームの長さが#%増加する",
-      "en": "#% increased Scorching Ray beam length"
-    },
-    {
       "ja": "全てのスキルジェムの品質 +#",
       "en": "+#% to Quality of all Skill Gems"
+    },
+    {
+      "ja": "スコーチングレイのビームの長さが#%増加する",
+      "en": "#% increased Scorching Ray beam length"
     },
     {
       "ja": "コールオブスティールの使用スピードが#%増加する",
@@ -146905,10 +146907,6 @@ var JpPoeUtils = (() => {
       "en": "#% increased Effect of non-Keystone Passive Skills in Radius"
     },
     {
-      "ja": "トラップが敵により作動した時に#のエナジーシールドを回復する",
-      "en": "Recover # Energy Shield when your Trap is triggered by an Enemy"
-    },
-    {
       "ja": "毎秒#%アラートレベルが増える",
       "en": "Alert Level increases by #% per second"
     },
@@ -146919,6 +146917,10 @@ var JpPoeUtils = (() => {
     {
       "ja": "プレイヤーはキル時に#%の確率でレアモンスターのモッドを20秒間獲得する",
       "en": "Players have #% chance to gain Rare Monster Modifiers for 20 seconds on Kill"
+    },
+    {
+      "ja": "トラップが敵により作動した時に#のエナジーシールドを回復する",
+      "en": "Recover # Energy Shield when your Trap is triggered by an Enemy"
     },
     {
       "ja": "トラップが敵により作動した時に#%の確率で透明化を#秒間獲得する",
@@ -147041,12 +147043,12 @@ var JpPoeUtils = (() => {
       "en": "Gain #% of Cold Damage as Extra Chaos Damage"
     },
     {
-      "ja": "効果中は毎秒ライフの#%を自動回復する",
-      "en": "Regenerate #% of Life per second during Effect"
-    },
-    {
       "ja": "呪いスペルをキャストした時に#%の確率でソケットされた呪いスペルをトリガーする。クールダウンは0.25秒",
       "en": "#% chance to Trigger Socketed Curse Spell when you Cast a Curse Spell, with a 0.25 second Cooldown"
+    },
+    {
+      "ja": "効果中は毎秒ライフの#%を自動回復する",
+      "en": "Regenerate #% of Life per second during Effect"
     },
     {
       "ja": "プレイヤーおよびミニオンが受ける反射物理ダメージが#%減少する",
@@ -147461,12 +147463,12 @@ var JpPoeUtils = (() => {
       "en": "#% increased Area of Effect for Attacks"
     },
     {
-      "ja": "ソケットされたジェムはレベル#アタック元素ダメージによりサポートされる",
-      "en": "Socketed Gems are supported by Level # Elemental Damage with Attacks"
-    },
-    {
       "ja": "プレイヤーが付与した感電は#m以内の他の敵にも伝染する",
       "en": "Shocks you inflict spread to other Enemies within # metre"
+    },
+    {
+      "ja": "ソケットされたジェムはレベル#アタック元素ダメージによりサポートされる",
+      "en": "Socketed Gems are supported by Level # Elemental Damage with Attacks"
     },
     {
       "ja": "フレンジーチャージ1個ごとにスペル抑制確率 +#%",
@@ -148093,12 +148095,12 @@ var JpPoeUtils = (() => {
       "en": "Adds # to # Cold Damage while affected by Hatred"
     },
     {
-      "ja": "マップに出現するブライトモンスターがプレイヤーおよびそのミニオンから受けるダメージが#%上昇する",
-      "en": "Blight Monsters in your Maps take #% more Damage from Players and their Minions"
-    },
-    {
       "ja": "ブロック時にライフの#%を回復する",
       "en": "Recover #% of Life when you Block"
+    },
+    {
+      "ja": "マップに出現するブライトモンスターがプレイヤーおよびそのミニオンから受けるダメージが#%上昇する",
+      "en": "Blight Monsters in your Maps take #% more Damage from Players and their Minions"
     },
     {
       "ja": "マップ完了時にデリリウムの報酬タイプは+1される",
@@ -148193,12 +148195,12 @@ var JpPoeUtils = (() => {
       "en": "# Dexterity per 1 Dexterity on Allocated Passives in Radius"
     },
     {
-      "ja": "マップに出現するアルティメイタムモンスターとモッドのダメージが#%上昇する",
-      "en": "Ultimatum Monsters and Modifiers in your Maps deal #% more Damage"
-    },
-    {
       "ja": "マップに出現するアルティメイタムモンスターは特殊アビリティーで崩壊を付与し\n崩壊のスタックが7になると失敗になる",
       "en": "Ultimatum Monsters in your Maps apply Ruin with their special abilities\nFail on reaching 7 Ruin"
+    },
+    {
+      "ja": "マップに出現するアルティメイタムモンスターとモッドのダメージが#%上昇する",
+      "en": "Ultimatum Monsters and Modifiers in your Maps deal #% more Damage"
     },
     {
       "ja": "マップに出現するモンスターのダメージが#%上昇する",
@@ -148227,10 +148229,6 @@ var JpPoeUtils = (() => {
     {
       "ja": "器用さ10ごとに#から#の雷ダメージをこの武器によるアタックに追加する",
       "en": "Adds # to # Lightning Damage to Attacks with this Weapon per 10 Dexterity"
-    },
-    {
-      "ja": "マップに出現するビヨンドポータルはユニークボスを出現させない",
-      "en": "Beyond Portals in your Maps cannot spawn Unique Bosses"
     },
     {
       "ja": "灼熱の代行者のインフルエンスを受けているエルドリッチの祭壇は#%の確率で追加のメリットを持つ",
@@ -148271,6 +148269,10 @@ var JpPoeUtils = (() => {
     {
       "ja": "マップに出現するビヨンドポータルのマージ半径が#%上昇する",
       "en": "Beyond Portals in your Maps have #% more Merging Radius"
+    },
+    {
+      "ja": "マップに出現するビヨンドポータルはユニークボスを出現させない",
+      "en": "Beyond Portals in your Maps cannot spawn Unique Bosses"
     },
     {
       "ja": "マップで収穫された作物は#%の確率でモンスターを追加で1体スポーンさせる",
@@ -148353,12 +148355,12 @@ var JpPoeUtils = (() => {
       "en": "#% chance to lose a Power Charge when you gain Elusive"
     },
     {
-      "ja": "ラースの影響を受けている時にダメージは#%の雷耐性を貫通する",
-      "en": "Damage Penetrates #% Lightning Resistance while affected by Wrath"
-    },
-    {
       "ja": "ゴーレムは#から#の追加のアタック物理ダメージを獲得する",
       "en": "Golems have # to # Added Attack Physical Damage"
+    },
+    {
+      "ja": "ラースの影響を受けている時にダメージは#%の雷耐性を貫通する",
+      "en": "Damage Penetrates #% Lightning Resistance while affected by Wrath"
     },
     {
       "ja": "フレンジーチャージがある場合にグローバルクリティカルダメージ倍率 +#%",
@@ -148565,6 +148567,10 @@ var JpPoeUtils = (() => {
       "en": "#% of Physical Damage from your Hits cannot be Reflected while affected by Determination"
     },
     {
+      "ja": "クラリティの影響を受けている時にプレイヤーがスキルを使うと#%の確率でマナの10%を回復する",
+      "en": "#% chance to Recover 10% of Mana when you use a Skill while affected by Clarity"
+    },
+    {
       "ja": "感電状態の敵を倒した時に+#のエナジーシールドを獲得する",
       "en": "+# Energy Shield gained on Killing a Shocked Enemy"
     },
@@ -148573,12 +148579,12 @@ var JpPoeUtils = (() => {
       "en": "Durability of Ichor Pumps in Area is 1"
     },
     {
-      "ja": "この武器のヒットによる物理ダメージの#%を追加冷気ダメージまたは追加雷ダメージとして獲得する",
-      "en": "Hits with this Weapon gain #% of Physical Damage as Extra Cold or Lightning Damage"
-    },
-    {
       "ja": "ソケットされたジェムはレベル#トラップ・マインダメージによりサポートされる",
       "en": "Socketed Gems are Supported by Level # Trap And Mine Damage"
+    },
+    {
+      "ja": "この武器のヒットによる物理ダメージの#%を追加冷気ダメージまたは追加雷ダメージとして獲得する",
+      "en": "Hits with this Weapon gain #% of Physical Damage as Extra Cold or Lightning Damage"
     },
     {
       "ja": "ヘイストの影響を受けている時にプレイヤーに対するデバフは#%速く消える",
@@ -148633,10 +148639,6 @@ var JpPoeUtils = (() => {
       "en": "#% chance to deal Double Damage while using Pride"
     },
     {
-      "ja": "クラリティの影響を受けている時にプレイヤーがスキルを使うと#%の確率でマナの10%を回復する",
-      "en": "#% chance to Recover 10% of Mana when you use a Skill while affected by Clarity"
-    },
-    {
       "ja": "マナ回復レートが#%増加する",
       "en": "#% increased Mana Recovery rate"
     },
@@ -148669,12 +148671,12 @@ var JpPoeUtils = (() => {
       "en": "Expeditions in your Maps have #% increased chance to be led by Dannig"
     },
     {
-      "ja": "儚い再生の最大数 #",
-      "en": "Maximum # Fragile Regrowth"
-    },
-    {
       "ja": "儚い再生1スタックごとに毎秒ライフの#%を自動回復する",
       "en": "#% of Life Regenerated per second per Fragile Regrowth"
+    },
+    {
+      "ja": "儚い再生の最大数 #",
+      "en": "Maximum # Fragile Regrowth"
     },
     {
       "ja": "1秒ごとに儚い再生を#獲得する",
@@ -149113,12 +149115,12 @@ var JpPoeUtils = (() => {
       "en": "Gain a Void Charge every # seconds"
     },
     {
-      "ja": "プレシジョンの影響を受けている時にアタックダメージが#%増加する",
-      "en": "#% increased Attack Damage while affected by Precision"
-    },
-    {
       "ja": "ヴォイドチャージの最大数 #",
       "en": "# Maximum Void Charges"
+    },
+    {
+      "ja": "プレシジョンの影響を受けている時にアタックダメージが#%増加する",
+      "en": "#% increased Attack Damage while affected by Precision"
     },
     {
       "ja": "バイタリティの影響を受けている時にライフ回復レートが#%増加する",
@@ -149127,6 +149129,10 @@ var JpPoeUtils = (() => {
     {
       "ja": "プレイヤーがトリガースキル以外のスキルを使用し矢を放った時にヴォイドチャージを消費しレベル#ヴォイドショットをトリガーする",
       "en": "Consumes a Void Charge to Trigger Level # Void Shot when you fire Arrows with a Non-Triggered Skill"
+    },
+    {
+      "ja": "ヴァールスキルは使用された時に#%の確率で消費されたソウルを再獲得する",
+      "en": "Vaal Skills have #% chance to regain consumed Souls when used"
     },
     {
       "ja": "マップで見つかるスカラベがより高い確率で珍しい種類のものになる",
@@ -149179,10 +149185,6 @@ var JpPoeUtils = (() => {
     {
       "ja": "マップに出現するブリーチモンスターのパックサイズが#%増加する",
       "en": "Breach Monsters in Area have #% increased Pack Size"
-    },
-    {
-      "ja": "ヴァールスキルは使用された時に#%の確率で消費されたソウルを再獲得する",
-      "en": "Vaal Skills have #% chance to regain consumed Souls when used"
     },
     {
       "ja": "召喚したレイジングスピリットは毎秒その最大ライフの#%を混沌ダメージとして受ける",
@@ -149665,12 +149667,12 @@ var JpPoeUtils = (() => {
       "en": "+#% Chance to Block Attack Damage per 50 Strength"
     },
     {
-      "ja": "マップに出現するアビスの穴からスポーンする全てのモンスターが#%の確率で最低でもマジックとなる",
-      "en": "Abyss Pits in your Maps have #% chance to spawn all Monsters as at least Magic"
-    },
-    {
       "ja": "この武器により付与された毒の継続ダメージ倍率 +#%",
       "en": "+#% to Damage over Time Multiplier for Poison inflicted with this Weapon"
+    },
+    {
+      "ja": "マップに出現するアビスの穴からスポーンする全てのモンスターが#%の確率で最低でもマジックとなる",
+      "en": "Abyss Pits in your Maps have #% chance to spawn all Monsters as at least Magic"
     },
     {
       "ja": "マップのリージョンエンカウンターにマラケスの軍隊が含まれる確率が#%増加する",
@@ -149861,12 +149863,12 @@ var JpPoeUtils = (() => {
       "en": "Notable Passive Skills in Radius are Transformed to\ninstead grant: Minions take #% increased Damage"
     },
     {
-      "ja": "追加されるスモールパッシブスキルはさらに付与: ヘラルドの影響受けている時にアタックスピードおよびキャストスピードが#%増加する",
-      "en": "Added Small Passive Skills also grant: #% increased Attack and Cast Speed while affected by a Herald"
-    },
-    {
       "ja": "マップに出現するビヨンドボスを倒すと悪魔の力を獲得する",
       "en": "Gain Demonic Power on defeating a Beyond Boss in your Maps"
+    },
+    {
+      "ja": "追加されるスモールパッシブスキルはさらに付与: ヘラルドの影響受けている時にアタックスピードおよびキャストスピードが#%増加する",
+      "en": "Added Small Passive Skills also grant: #% increased Attack and Cast Speed while affected by a Herald"
     },
     {
       "ja": "レゾリュートテクニックを持つ間は物理ダメージが#%増加する",
@@ -150273,12 +150275,12 @@ var JpPoeUtils = (() => {
       "en": "Socketed Gems are supported by Level # Life Leech"
     },
     {
-      "ja": "マップでドロップするスカラベがリージョンスカラベになる確率が#%増加する",
-      "en": "Scarabs dropped in Area have #% increased chance to be Legion Scarabs"
-    },
-    {
       "ja": "凍結、感電および発火を付与される確率 +#%",
       "en": "+#% chance to be Frozen, Shocked and Ignited"
+    },
+    {
+      "ja": "マップでドロップするスカラベがリージョンスカラベになる確率が#%増加する",
+      "en": "Scarabs dropped in Area have #% increased chance to be Legion Scarabs"
     },
     {
       "ja": "マップでドロップするスカラベがサルファイトスカラベになる確率が#%増加する",
@@ -150429,12 +150431,12 @@ var JpPoeUtils = (() => {
       "en": "#% of Cold and Lightning Damage taken as Fire Damage while affected by Purity of Fire"
     },
     {
-      "ja": "グランドスペクトラム1個ごとに全ての元素耐性が+#%される",
-      "en": "+#% to all Elemental Resistances per Grand Spectrum"
-    },
-    {
       "ja": "グローバル最大エナジーシールドが#%増加し、雷耐性が#%減少する",
       "en": "#% increased Global maximum Energy Shield and reduced Lightning Resistance"
+    },
+    {
+      "ja": "グランドスペクトラム1個ごとに全ての元素耐性が+#%される",
+      "en": "+#% to all Elemental Resistances per Grand Spectrum"
     },
     {
       "ja": "オファリングの効果が#%増加する",
@@ -150837,12 +150839,12 @@ var JpPoeUtils = (() => {
       "en": "Completing a Blight Encounter in your Maps grants all Players Blightreach"
     },
     {
-      "ja": "マップに出現するリチュアルの祭壇では恩寵を追加で1回リロールすることができる",
-      "en": "Ritual Altars in Area allow rerolling Favours an additional time"
-    },
-    {
       "ja": "ディバインチャージの最大数 +#",
       "en": "+# to maximum Divine Charges"
+    },
+    {
+      "ja": "マップに出現するリチュアルの祭壇では恩寵を追加で1回リロールすることができる",
+      "en": "Ritual Altars in Area allow rerolling Favours an additional time"
     },
     {
       "ja": "エリアには形作られし者が出現する",
@@ -150957,6 +150959,10 @@ var JpPoeUtils = (() => {
       "en": "#% increased Effect of Non-Curse Auras from your Skills on Enemies"
     },
     {
+      "ja": "物理ダメージの増減のモッドはその数値の#%が物理スキルによるオーラの効果にも適用される",
+      "en": "Increases and Reductions to Physical Damage also apply to Effect of\nAuras from Physical Skills at #% of their value, up to a maximum of 150%"
+    },
+    {
       "ja": "#%の確率で敵を消耗させる",
       "en": "#% chance to Sap Enemies"
     },
@@ -150999,10 +151005,6 @@ var JpPoeUtils = (() => {
     {
       "ja": "マップに出現するアビスからスポーンするモンスターがそのアビスのこれまでの穴の数ごとに#%増加する",
       "en": "Abysses in your Maps spawn #% increased Monsters for each prior Pit in that Abyss"
-    },
-    {
-      "ja": "物理ダメージの増減のモッドはその数値の#%が物理スキルによるオーラの効果にも適用される",
-      "en": "Increases and Reductions to Physical Damage also apply to Effect of\nAuras from Physical Skills at #% of their value, up to a maximum of 150%"
     },
     {
       "ja": "倒した敵からドロップするゴールドの数量が#%増加する",
@@ -151113,12 +151115,12 @@ var JpPoeUtils = (() => {
       "en": "#% increased Cooldown Recovery Rate of Travel Skills"
     },
     {
-      "ja": "ソケットされたジェムはレベル#発火伝染によりサポートされる",
-      "en": "Socketed Gems are Supported by Level # Ignite Proliferation"
-    },
-    {
       "ja": "レベル#インティミデーティングクライスキルを付与する",
       "en": "Grants Level # Intimidating Cry Skill"
+    },
+    {
+      "ja": "ソケットされたジェムはレベル#発火伝染によりサポートされる",
+      "en": "Socketed Gems are Supported by Level # Ignite Proliferation"
     },
     {
       "ja": "直近インテンシティを獲得したスペルは#秒ごとにインテンシティを1失う",
@@ -151593,12 +151595,12 @@ var JpPoeUtils = (() => {
       "en": "#% increased Area of Effect per Power Charge"
     },
     {
-      "ja": "エリアには歪みし者が出現する",
-      "en": "Area contains The Twisted"
-    },
-    {
       "ja": "アタックした時、そのアタックを奮起しているウォークライ1種類ごとにライフの#%を物理ダメージとして受ける",
       "en": "When you Attack, take #% of Life as Physical Damage for\neach Warcry Exerting the Attack"
+    },
+    {
+      "ja": "エリアには歪みし者が出現する",
+      "en": "Area contains The Twisted"
     },
     {
       "ja": "近接クリティカル時にソケットされたスペルをトリガーする。クールダウンは#秒",
@@ -151869,12 +151871,12 @@ var JpPoeUtils = (() => {
       "en": "Nearby Enemies grant #% increased Flask Charges"
     },
     {
-      "ja": "エナジーシールドを自動回復することができない",
-      "en": "You cannot Regenerate Energy Shield"
-    },
-    {
       "ja": "範囲内に筋力が40以上あれば、インファーナルクライにより奮起したアタックの発火ダメージが#%上昇する",
       "en": "With at least 40 Strength in Radius, Attacks Exerted by Infernal Cry deal #% more Damage with Ignite"
+    },
+    {
+      "ja": "エナジーシールドを自動回復することができない",
+      "en": "You cannot Regenerate Energy Shield"
     },
     {
       "ja": "ハイテンプラーヴェナリウスが改宗させた#人の新しい信者の栄光のために彫られた",
@@ -151907,6 +151909,10 @@ var JpPoeUtils = (() => {
     {
       "ja": "追加されるスモールパッシブスキルはさらに付与: オーラスキルの効果範囲が#%増加する",
       "en": "Added Small Passive Skills also grant: #% increased Area of Effect of Aura Skills"
+    },
+    {
+      "ja": "パワーチャージ1個ごとにエナジーシールドが#%増加する",
+      "en": "#% increased Energy Shield per Power Charge"
     },
     {
       "ja": "ミニオンはプレイヤーの耐性の#%と同量の追加耐性を獲得する",
@@ -151979,10 +151985,6 @@ var JpPoeUtils = (() => {
     {
       "ja": "ソケットされたジェムはレベル#インペンディングドゥームによりサポートされる",
       "en": "Socketed Gems are Supported by Level # Impending Doom"
-    },
-    {
-      "ja": "パワーチャージ1個ごとにエナジーシールドが#%増加する",
-      "en": "#% increased Energy Shield per Power Charge"
     },
     {
       "ja": "報酬を獲得するためにはエリアに出現する全てのリージョンモンスターを解放しなけれならない",
@@ -152237,12 +152239,12 @@ var JpPoeUtils = (() => {
       "en": "Added Small Passive Skills also grant: Channelling Skills have #% increased Attack and Cast Speed"
     },
     {
-      "ja": "近接武器によりヒットした敵1体ごとに#のライフを獲得する",
-      "en": "Gain # Life per Enemy Hit with Melee Weapons"
-    },
-    {
       "ja": "コラプト状態のジェムが獲得する経験値が#%増加する",
       "en": "#% increased Experience Gain for Corrupted Gems"
+    },
+    {
+      "ja": "近接武器によりヒットした敵1体ごとに#のライフを獲得する",
+      "en": "Gain # Life per Enemy Hit with Melee Weapons"
     },
     {
       "ja": "ソケットされた知性ジェムのレベル +#",
@@ -152309,12 +152311,12 @@ var JpPoeUtils = (() => {
       "en": "Grants Level # Anger Skill"
     },
     {
-      "ja": "呪いの効果が#%上昇する",
-      "en": "#% more Effect of your Curses"
-    },
-    {
       "ja": "レベル#ドエドリズエフィジー召喚スキルを付与する\nソケットされた呪術スキルはドエドリのエフィジーが召喚されるとトリガーされる\nソケットされたスキルによる呪術は追加で呪い5つを付与できる",
       "en": "Grants Level # Summon Doedre's Effigy Skill\nSocketed Hex Curse Skills are Triggered by Doedre's Effigy when Summoned\nHexes from Socketed Skills can apply 5 additional Curses"
+    },
+    {
+      "ja": "呪いの効果が#%上昇する",
+      "en": "#% more Effect of your Curses"
     },
     {
       "ja": "プレイヤーのミニオンのアタックスピードが#%上昇する",
@@ -152361,12 +152363,12 @@ var JpPoeUtils = (() => {
       "en": "Minions have +#% to Critical Strike Chance"
     },
     {
-      "ja": "ソケットされたヴァールスキルのスキル効果持続時間が#%増加する",
-      "en": "Socketed Vaal Skills have #% increased Skill Effect Duration"
-    },
-    {
       "ja": "効果中はプレイヤーのヒットによるダメージの#%は反射されない",
       "en": "#% of Damage from your Hits cannot be Reflected during Effect"
+    },
+    {
+      "ja": "ソケットされたヴァールスキルのスキル効果持続時間が#%増加する",
+      "en": "Socketed Vaal Skills have #% increased Skill Effect Duration"
     },
     {
       "ja": "鳥の力の持続時間 +#秒",
@@ -152421,12 +152423,12 @@ var JpPoeUtils = (() => {
       "en": "Heist Chests have a #% chance to Duplicate contained Scarabs"
     },
     {
-      "ja": "筋力25ごとに#から#の物理ダメージをアタックに追加する",
-      "en": "Adds # to # Physical Damage to Attacks per 25 Strength"
-    },
-    {
       "ja": "ソケットされた恐怖の眼のジュエルごとにスペクターの最大数 +#",
       "en": "+# to maximum number of Raised Spectres per Socketed Ghastly Eye Jewel"
+    },
+    {
+      "ja": "筋力25ごとに#から#の物理ダメージをアタックに追加する",
+      "en": "Adds # to # Physical Damage to Attacks per 25 Strength"
     },
     {
       "ja": "ソケットされたヴァールスキルは一回の使用に必要なソウルの量が#%上昇する",
@@ -152477,12 +152479,12 @@ var JpPoeUtils = (() => {
       "en": "#% increased Maximum Recovery per Energy Shield Leech"
     },
     {
-      "ja": "筋力50ごとにアーマーが#%増加する",
-      "en": "#% increased Armour per 50 Strength"
-    },
-    {
       "ja": "ヒット時に#%の確率で敵を4秒間狼狽させる",
       "en": "#% chance to Unnerve Enemies for 4 seconds on Hit"
+    },
+    {
+      "ja": "筋力50ごとにアーマーが#%増加する",
+      "en": "#% increased Armour per 50 Strength"
     },
     {
       "ja": "3秒ごとにユーティリティフラスコのチャージを#獲得する",
@@ -152553,12 +152555,12 @@ var JpPoeUtils = (() => {
       "en": "#% increased Cold Resistance"
     },
     {
-      "ja": "エルダーアイテムを6個装備していれば能力値が#%増加する",
-      "en": "#% increased Attributes if 6 Elder Items are Equipped"
-    },
-    {
       "ja": "近接アタックは破門状態の敵に対してクリティカル率が+#%される",
       "en": "Melee Attacks have +#% to Critical Strike Chance against Excommunicated Enemies"
+    },
+    {
+      "ja": "エルダーアイテムを6個装備していれば能力値が#%増加する",
+      "en": "#% increased Attributes if 6 Elder Items are Equipped"
     },
     {
       "ja": "トーテムを召喚するオーラスキルのコストが#%減少する",
@@ -152589,12 +152591,12 @@ var JpPoeUtils = (() => {
       "en": "Vulnerability has #% reduced Reservation if Cast as an Aura"
     },
     {
-      "ja": "知性16ごとにスペルダメージが#%増加する",
-      "en": "#% increased Spell Damage per 16 Intelligence"
-    },
-    {
       "ja": "最大エナジーシールドが1000以上あれば毎秒#のライフを自動回復する",
       "en": "Regenerate # Life per second if you have at least 1000 Maximum Energy Shield"
+    },
+    {
+      "ja": "知性16ごとにスペルダメージが#%増加する",
+      "en": "#% increased Spell Damage per 16 Intelligence"
     },
     {
       "ja": "マップに出現するアルティメイタム報酬がブリーチアイテムになる確率が#%増加する",
@@ -152637,12 +152639,12 @@ var JpPoeUtils = (() => {
       "en": "Monsters have #% chance to have a Volatile Core"
     },
     {
-      "ja": "召喚したホーリーレリックのクールダウン解消レートが#%減少する",
-      "en": "Summoned Holy Relics have #% reduced Cooldown Recovery Rate"
-    },
-    {
       "ja": "投射物は地形と衝突した時にプレイヤーに影響している探索する眼のジュエル1個ごとに#%、最大20%の確率で連鎖することができる",
       "en": "Projectiles have #% chance to be able to Chain when colliding with terrain per\nSearching Eye Jewel affecting you, up to a maximum of 20%"
+    },
+    {
+      "ja": "召喚したホーリーレリックのクールダウン解消レートが#%減少する",
+      "en": "Summoned Holy Relics have #% reduced Cooldown Recovery Rate"
     },
     {
       "ja": "全ての器用さスキルジェムのレベル +#",
@@ -152773,12 +152775,12 @@ var JpPoeUtils = (() => {
       "en": "#% of Physical Damage Prevented Recently is Regenerated as Energy Shield Per Second if 6 Crusader Items are Equipped"
     },
     {
-      "ja": "マップに出現するアルティメイタム報酬がジェムになる確率が#%増加する",
-      "en": "Ultimatum Rewards in your Maps have #% increased chance to be Gems"
-    },
-    {
       "ja": "装備するとレベル#アルバリスト召喚をトリガーする",
       "en": "Triggers Level # Summon Arbalists when Equipped"
+    },
+    {
+      "ja": "マップに出現するアルティメイタム報酬がジェムになる確率が#%増加する",
+      "en": "Ultimatum Rewards in your Maps have #% increased chance to be Gems"
     },
     {
       "ja": "#%の確率でハイストチェストに入っているジュエルが複製される",
@@ -152913,6 +152915,10 @@ var JpPoeUtils = (() => {
       "en": "Gain Added Chaos Damage equal to #% of Ward"
     },
     {
+      "ja": "レディーマーアイテムを2個装備していれば器用さが#%増加する",
+      "en": "#% increased Dexterity if 2 Redeemer Items are Equipped"
+    },
+    {
       "ja": "ヘイストの影響を受けている時にスペルダメージ抑制確率 +#%",
       "en": "+#% chance to Suppress Spell Damage while affected by Haste"
     },
@@ -152941,20 +152947,20 @@ var JpPoeUtils = (() => {
       "en": "#% chance to receive additional Abyss items when opening a Reward Chest in a Heist"
     },
     {
-      "ja": "シェイパーアイテムを2個装備していればクールダウン解消レートが#%増加する",
-      "en": "#% increased Cooldown Recovery Rate if 2 Shaper Items are Equipped"
+      "ja": "ハンターアイテムを6個装備していれば呪いを追加で#個付与できる",
+      "en": "You can apply # additional Curses if 6 Hunter Items are Equipped"
     },
     {
       "ja": "レベル#ブラッドサークラメントスキルを付与する",
       "en": "Grants Level # Blood Sacrament Skill"
     },
     {
-      "ja": "#から#の追加火ダメージ\n全てのプレイヤーとそのミニオンは#から#の追加火ダメージを持つ",
-      "en": "# to # added Fire Damage\nPlayers and their Minions have # to # added Fire Damage"
+      "ja": "シェイパーアイテムを2個装備していればクールダウン解消レートが#%増加する",
+      "en": "#% increased Cooldown Recovery Rate if 2 Shaper Items are Equipped"
     },
     {
-      "ja": "ハンターアイテムを6個装備していれば呪いを追加で#個付与できる",
-      "en": "You can apply # additional Curses if 6 Hunter Items are Equipped"
+      "ja": "#から#の追加火ダメージ\n全てのプレイヤーとそのミニオンは#から#の追加火ダメージを持つ",
+      "en": "# to # added Fire Damage\nPlayers and their Minions have # to # added Fire Damage"
     },
     {
       "ja": "ハイストで報酬のチェストを開けた時に#%の確率で追加の宝飾品を入手する",
@@ -152983,10 +152989,6 @@ var JpPoeUtils = (() => {
     {
       "ja": "クラブバリア獲得時に#%の確率で代わりにクラブバリアを最大数獲得する",
       "en": "#% chance that if you would gain a Crab Barrier, you instead gain up to\nyour maximum number of Crab Barriers"
-    },
-    {
-      "ja": "レディーマーアイテムを2個装備していれば器用さが#%増加する",
-      "en": "#% increased Dexterity if 2 Redeemer Items are Equipped"
     },
     {
       "ja": "マップでドロップする装備品がメモリーストランドを持つ確率が#%増加する",
@@ -153117,12 +153119,12 @@ var JpPoeUtils = (() => {
       "en": "Critical Strikes with Spells have #% chance to inflict Impale"
     },
     {
-      "ja": "マップで見つかるライフフォースはその数値の#%の代わりにランダムな農作物として付与される",
-      "en": "Lifeforce found in your Maps is granted as a random Crop instead at #% of the value"
-    },
-    {
       "ja": "冷却中はダメージは#%の元素耐性を貫通する",
       "en": "Damage Penetrates #% Elemental Resistances while you are Chilled"
+    },
+    {
+      "ja": "マップで見つかるライフフォースはその数値の#%の代わりにランダムな農作物として付与される",
+      "en": "Lifeforce found in your Maps is granted as a random Crop instead at #% of the value"
     },
     {
       "ja": "ミニオンはプレイヤーの持つ堅牢化のスタックごとに#%の確率でダブルダメージを与える",
@@ -153133,12 +153135,12 @@ var JpPoeUtils = (() => {
       "en": "Ultimatum Rewards in your Maps have #% increased chance to be Corrupted Rare Items"
     },
     {
-      "ja": "ヒットにより受けたダメージの#%をプレイヤーより先に呪印を付与した対象のライフから受ける",
-      "en": "#% of Damage from Hits is taken from Marked Target's Life before you"
-    },
-    {
       "ja": "モンスターは感電の影響を受けない",
       "en": "Monsters are Unaffected by Shock"
+    },
+    {
+      "ja": "ヒットにより受けたダメージの#%をプレイヤーより先に呪印を付与した対象のライフから受ける",
+      "en": "#% of Damage from Hits is taken from Marked Target's Life before you"
     },
     {
       "ja": "猫の敏捷さの持続時間 +#秒",
@@ -153237,6 +153239,10 @@ var JpPoeUtils = (() => {
       "en": "Abysses in your Maps that do not lead to an Abyssal Depths lead to 4 Pits if able"
     },
     {
+      "ja": "毎秒#の憤怒を失う",
+      "en": "Lose # Rage per second"
+    },
+    {
       "ja": "範囲内にあるパッシブスキルは最大マナ +#も付与する",
       "en": "Passive Skills in Radius also grant +# to maximum Mana"
     },
@@ -153327,10 +153333,6 @@ var JpPoeUtils = (() => {
     {
       "ja": "プレイヤーに対する非ダメージ性状態異常の効果が#%増加する",
       "en": "#% increased Effect of Non-Damaging Ailments on you"
-    },
-    {
-      "ja": "毎秒#の憤怒を失う",
-      "en": "Lose # Rage per second"
     },
     {
       "ja": "ソケットされたジェムのクリティカル率 +#%",
@@ -153425,12 +153427,12 @@ var JpPoeUtils = (() => {
       "en": "Summoned Arbalists fire # additional Projectiles"
     },
     {
-      "ja": "天体が整列していれば全ての元素スキルジェムのレベル +#",
-      "en": "+# to Level of all Elemental Skill Gems if the stars are aligned"
-    },
-    {
       "ja": "プライドのマナリザーブ効率が#%増加する",
       "en": "Pride has #% increased Mana Reservation Efficiency"
+    },
+    {
+      "ja": "天体が整列していれば全ての元素スキルジェムのレベル +#",
+      "en": "+# to Level of all Elemental Skill Gems if the stars are aligned"
     },
     {
       "ja": "ハンターアイテムを2個装備していれば投射物は対象を追加で#体貫通する",
@@ -153757,12 +153759,12 @@ var JpPoeUtils = (() => {
       "en": "Malevolence has #% increased Mana Reservation Efficiency"
     },
     {
-      "ja": "凍結中に受けたダメージの#%をライフとして回収する",
-      "en": "#% of Damage taken while Frozen Recouped as Life"
-    },
-    {
       "ja": "このグラフトにより使用されるジョルトはクリティカル率#%増加を付与する",
       "en": "Jolt granted by this Graft grants #% increased Critical Strike Chance"
+    },
+    {
+      "ja": "凍結中に受けたダメージの#%をライフとして回収する",
+      "en": "#% of Damage taken while Frozen Recouped as Life"
     },
     {
       "ja": "シェイパーアイテムを4個装備していればスペルダメージブロック率の最大値 +#%",
@@ -153829,12 +153831,12 @@ var JpPoeUtils = (() => {
       "en": "Skills Fire # additional Projectile for 4 seconds after\nyou consume a total of 8 Steel Shards"
     },
     {
-      "ja": "投射物を放つアタックはスティールシャードを追加で最大#個消費する",
-      "en": "Attacks that Fire Projectiles Consume up to # additional Steel Shard"
-    },
-    {
       "ja": "回避力とアーマーが#%増加する",
       "en": "#% increased Evasion Rating and Armour"
+    },
+    {
+      "ja": "投射物を放つアタックはスティールシャードを追加で最大#個消費する",
+      "en": "Attacks that Fire Projectiles Consume up to # additional Steel Shard"
     },
     {
       "ja": "混沌ダメージの増減のモッドはその数値の#%が混沌スキルによるオーラの効果にも適用される",
@@ -153873,12 +153875,12 @@ var JpPoeUtils = (() => {
       "en": "Players deal #% increased Damage while Dead"
     },
     {
-      "ja": "過去10秒間にテンポラルチェーンをキャストしていればクールダウン解消レートが#%増加する",
-      "en": "#% increased Cooldown Recovery Rate if you've cast Temporal Chains in the past 10 seconds"
-    },
-    {
       "ja": "プレイヤーが付与した発火の持続時間が#%上昇する",
       "en": "#% more Duration of Ignites you inflict"
+    },
+    {
+      "ja": "過去10秒間にテンポラルチェーンをキャストしていればクールダウン解消レートが#%増加する",
+      "en": "#% increased Cooldown Recovery Rate if you've cast Temporal Chains in the past 10 seconds"
     },
     {
       "ja": "出血状態の敵に対するクリティカル率が#%増加する",
@@ -154041,12 +154043,12 @@ var JpPoeUtils = (() => {
       "en": "#% increased effect of Tattoos in Radius"
     },
     {
-      "ja": "毒状態の時にヒット時に#%の確率でパワーチャージを1個獲得する",
-      "en": "#% chance to Gain a Power Charge on Hit while Poisoned"
-    },
-    {
       "ja": "静止中の混沌耐性 +#%",
       "en": "+#% to Chaos Resistance while stationary"
+    },
+    {
+      "ja": "毒状態の時にヒット時に#%の確率でパワーチャージを1個獲得する",
+      "en": "#% chance to Gain a Power Charge on Hit while Poisoned"
     },
     {
       "ja": "直近スペルダメージをブロックしていればスペルブロック率 +#%",
@@ -154225,12 +154227,12 @@ var JpPoeUtils = (() => {
       "en": "Drops Scorched Ground while moving, lasting # seconds"
     },
     {
-      "ja": "プレイヤーに付与された毒のスタック数ごとにダメージが#%、最大75%増加する",
-      "en": "#% increased Damage for each Poison on you up to a maximum of 75%"
-    },
-    {
       "ja": "フレンジーチャージ獲得時に#%の確率で代わりにフレンジーチャージを最大数獲得する",
       "en": "#% chance that if you would gain Frenzy Charges, you instead gain up to your maximum number of Frenzy Charges"
+    },
+    {
+      "ja": "プレイヤーに付与された毒のスタック数ごとにダメージが#%、最大75%増加する",
+      "en": "#% increased Damage for each Poison on you up to a maximum of 75%"
     },
     {
       "ja": "ハイスト中に#%の確率でアイテムは鑑定状態でドロップする",
@@ -154345,24 +154347,24 @@ var JpPoeUtils = (() => {
       "en": "Malevolence has #% increased Aura Effect"
     },
     {
-      "ja": "冷却状態の敵に対して#%上昇したダメージを与えたと仮定してその敵を凍結させる",
-      "en": "Freeze Chilled Enemies as though dealing #% more Damage"
-    },
-    {
       "ja": "マップには#%の確率でローグエグザイルが追加で#体出現する",
       "en": "Your Maps have a #% chance to contain # additional Rogue Exiles"
+    },
+    {
+      "ja": "冷却状態の敵に対して#%上昇したダメージを与えたと仮定してその敵を凍結させる",
+      "en": "Freeze Chilled Enemies as though dealing #% more Damage"
     },
     {
       "ja": "ルーンスミスエンチャントを追加で#個持てる",
       "en": "Can have # additional Runesmithing Enchantment"
     },
     {
-      "ja": "ウォーロードアイテムを6個装備していればエンデュランスチャージの最大数 +#",
-      "en": "+# to Maximum Endurance Charges if 6 Warlord Items are Equipped"
-    },
-    {
       "ja": "ソケットされたマジックの凶暴な眼のジュエルの効果が#%増加する",
       "en": "#% increased Effect of Socketed Magic Murderous Eye Jewels"
+    },
+    {
+      "ja": "ウォーロードアイテムを6個装備していればエンデュランスチャージの最大数 +#",
+      "en": "+# to Maximum Endurance Charges if 6 Warlord Items are Equipped"
     },
     {
       "ja": "アイアンリフレックスがない時にアタックスピード、キャストスピードおよび移動スピードが#%増加する",
@@ -154425,12 +154427,12 @@ var JpPoeUtils = (() => {
       "en": "Passives granting Cold Resistance or all Elemental Resistances in Radius\nalso grant increased Maximum Mana at #% of its value"
     },
     {
-      "ja": "デターミネーションのマナリザーブ効率が#%増加する",
-      "en": "Determination has #% increased Mana Reservation Efficiency"
-    },
-    {
       "ja": "マップで見つかる装備品についているメモリーストランドの数が\n#%の確率で幸運になる",
       "en": "The number of Memory Strands on Equipment Items found\nin your Maps has #% chance to be Lucky"
+    },
+    {
+      "ja": "デターミネーションのマナリザーブ効率が#%増加する",
+      "en": "Determination has #% increased Mana Reservation Efficiency"
     },
     {
       "ja": "このグラフトにより使用されるグレイウィンドハウルは全ての元素耐性 +#%を付与する",
@@ -154465,12 +154467,12 @@ var JpPoeUtils = (() => {
       "en": "Non-Curse Aura Skills have #% increased Duration"
     },
     {
-      "ja": "ゼロトリーのオーラの効果が#%増加する",
-      "en": "Zealotry has #% increased Aura Effect"
-    },
-    {
       "ja": "直近ルビーフラスコを使用していれば\n物理ダメージの#%を追加火ダメージとして獲得する",
       "en": "Gain #% of Physical Damage as Extra Fire Damage if you've\nused a Ruby Flask Recently"
+    },
+    {
+      "ja": "ゼロトリーのオーラの効果が#%増加する",
+      "en": "Zealotry has #% increased Aura Effect"
     },
     {
       "ja": "#%の確率で敵に対するスタンの持続時間が倍になる",
@@ -154513,12 +154515,12 @@ var JpPoeUtils = (() => {
       "en": "#% of Suppressed Spell Damage taken Recouped as Energy Shield"
     },
     {
-      "ja": "ライフがリザーブされていない時に#から#の雷ダメージをスペルに追加する",
-      "en": "Adds # to # Lightning Damage to Spells while no Life is Reserved"
-    },
-    {
       "ja": "ライフがリザーブされていない時に#から#の冷気ダメージをスペルに追加する",
       "en": "Adds # to # Cold Damage to Spells while no Life is Reserved"
+    },
+    {
+      "ja": "ライフがリザーブされていない時に#から#の雷ダメージをスペルに追加する",
+      "en": "Adds # to # Lightning Damage to Spells while no Life is Reserved"
     },
     {
       "ja": "マップの鉱石の鉱床はより高い確率で珍しい種類のものになる",
@@ -154569,12 +154571,12 @@ var JpPoeUtils = (() => {
       "en": "#% increased Attack Speed while Phasing"
     },
     {
-      "ja": "レイジングスピリット最大数 +#",
-      "en": "+# to maximum number of Raging Spirits"
-    },
-    {
       "ja": "ファンタズム最大召喚数 +#",
       "en": "+# to maximum number of Summoned Phantasms"
+    },
+    {
+      "ja": "レイジングスピリット最大数 +#",
+      "en": "+# to maximum number of Raging Spirits"
     },
     {
       "ja": "恐怖の眼がソケットされていれば、ミニオンは\nスペルによるヒット時に#%の確率でアンホーリーマイトを獲得する",
@@ -154589,12 +154591,12 @@ var JpPoeUtils = (() => {
       "en": "#% reduced Lightning Damage taken"
     },
     {
-      "ja": "過去8秒間にクリティカルストライクを与えていれば毎秒ライフの#%を自動回復する",
-      "en": "#% of Life Regenerated per Second if you've dealt a Critical Strike in the past 8 seconds"
-    },
-    {
       "ja": "ソケットされたジェムはレベル#チャネリング時キャストによりサポートされる",
       "en": "Socketed Gems are Supported by Level # Cast While Channelling"
+    },
+    {
+      "ja": "過去8秒間にクリティカルストライクを与えていれば毎秒ライフの#%を自動回復する",
+      "en": "#% of Life Regenerated per Second if you've dealt a Critical Strike in the past 8 seconds"
     },
     {
       "ja": "堅牢化の最大数 +#",
@@ -154681,12 +154683,12 @@ var JpPoeUtils = (() => {
       "en": "#% increased Cost of Skills"
     },
     {
-      "ja": "ハイスト中は#%の確率でドロップした基礎カレンシーが複製される",
-      "en": "#% chance in Heists for Basic Currency drops to be Duplicated"
-    },
-    {
       "ja": "左の指輪スロット: アンリーシュによってサポートされたスキルのシールの最大数 +#",
       "en": "Left ring slot: Skills supported by Unleash have +# to maximum number of Seals"
+    },
+    {
+      "ja": "ハイスト中は#%の確率でドロップした基礎カレンシーが複製される",
+      "en": "#% chance in Heists for Basic Currency drops to be Duplicated"
     },
     {
       "ja": "レベル#ヘラルドオブザハイヴスキルを付与する",
@@ -154841,12 +154843,12 @@ var JpPoeUtils = (() => {
       "en": "Hits with this Weapon deal #% increased Damage to Ignited Enemies"
     },
     {
-      "ja": "プレイヤーがスキルを使用した時に犠牲的熱意を獲得し、プレーヤーにスキルのマナコストの#%を毎秒物理ダメージとして与える",
-      "en": "Gain Sacrificial Zeal when you use a Skill, dealing you #% of the Skill's Mana Cost as Physical Damage per Second"
-    },
-    {
       "ja": "犠牲的熱意をプレイヤーが持っている間ヒットは#%の確率で敵モンスターの物理ダメージ軽減率を無視する",
       "en": "Hits have #% chance to ignore Enemy Physical Damage Reduction while you have Sacrificial Zeal"
+    },
+    {
+      "ja": "プレイヤーがスキルを使用した時に犠牲的熱意を獲得し、プレーヤーにスキルのマナコストの#%を毎秒物理ダメージとして与える",
+      "en": "Gain Sacrificial Zeal when you use a Skill, dealing you #% of the Skill's Mana Cost as Physical Damage per Second"
     },
     {
       "ja": "#%の確率でヒットによる混沌ダメージ以外のダメージの25%を追加混沌ダメージとして獲得する",
@@ -154965,12 +154967,12 @@ var JpPoeUtils = (() => {
       "en": "#% increased Chill Duration on Enemies when in Off Hand"
     },
     {
-      "ja": "直近ダッシュをキャストしていなければ弓によるアタックは追加の矢を#本放つ",
-      "en": "Bow Attacks fire # additional Arrows if you haven't Cast Dash recently"
-    },
-    {
       "ja": "レベル#ダッシュスキルを付与する",
       "en": "Grants Level # Dash Skill"
+    },
+    {
+      "ja": "直近ダッシュをキャストしていなければ弓によるアタックは追加の矢を#本放つ",
+      "en": "Bow Attacks fire # additional Arrows if you haven't Cast Dash recently"
     },
     {
       "ja": "最大ライフと最大マナのどちらか低い方100ごとに#から#の追加火ダメージ",
@@ -155001,12 +155003,12 @@ var JpPoeUtils = (() => {
       "en": "Malevolence has #% reduced Reservation"
     },
     {
-      "ja": "欺瞞のジョブに対する雇用コストが#%増加する",
-      "en": "#% increased Hiring Fee for Deception Jobs"
-    },
-    {
       "ja": "ピュリティオブライトニングのマナリザーブ効率が#%増加する",
       "en": "Purity of Lightning has #% increased Mana Reservation Efficiency"
+    },
+    {
+      "ja": "欺瞞のジョブに対する雇用コストが#%増加する",
+      "en": "#% increased Hiring Fee for Deception Jobs"
     },
     {
       "ja": "盲目状態の敵に対するダメージは#%の火耐性を貫通する",
@@ -155033,12 +155035,12 @@ var JpPoeUtils = (() => {
       "en": "#% increased Critical Strike Chance against Poisoned Enemies"
     },
     {
-      "ja": "欺瞞のスピードが#%増加する",
-      "en": "#% increased Deception speed"
-    },
-    {
       "ja": "スキルは基礎マナコストの#%と同量の基礎エナジーシールドコストを獲得する",
       "en": "Skills gain a Base Energy Shield Cost equal to #% of Base Mana Cost"
+    },
+    {
+      "ja": "欺瞞のスピードが#%増加する",
+      "en": "#% increased Deception speed"
     },
     {
       "ja": "この武器によるヒットは盲目状態の敵に対して#から#の火ダメージを追加する",
@@ -155253,12 +155255,12 @@ var JpPoeUtils = (() => {
       "en": "#% of Chaos Damage taken as Lightning Damage"
     },
     {
-      "ja": "このグラフトにより使用されるスキルは発火状態の敵に対するダメージが#%増加する",
-      "en": "Skills used by this Graft deal #% increased Damage against Ignited Enemies"
-    },
-    {
       "ja": "グランドスペクトラム1個ごとにエンデュランスチャージの最低数 +#",
       "en": "+# to Minimum Endurance Charges per Grand Spectrum"
+    },
+    {
+      "ja": "このグラフトにより使用されるスキルは発火状態の敵に対するダメージが#%増加する",
+      "en": "Skills used by this Graft deal #% increased Damage against Ignited Enemies"
     },
     {
       "ja": "ラースのリザーブが#%減少する",
@@ -155281,20 +155283,20 @@ var JpPoeUtils = (() => {
       "en": "Skills used by this Graft Gain #% of Cold Damage as Extra Chaos Damage"
     },
     {
-      "ja": "ソケットされたジェムはレベル#クラスタートラップによりサポートされる",
-      "en": "Socketed Gems are Supported by Level # Cluster Trap"
-    },
-    {
       "ja": "罠解除のジョブに対する雇用コストが#%増加する",
       "en": "#% increased Hiring Fee for Trap Disarmament Jobs"
     },
     {
-      "ja": "範囲内にあるパッシブスキルは物理ダメージ#%増加も付与する",
-      "en": "Passive Skills in Radius also grant #% increased Physical Damage"
+      "ja": "ソケットされたジェムはレベル#クラスタートラップによりサポートされる",
+      "en": "Socketed Gems are Supported by Level # Cluster Trap"
     },
     {
       "ja": "全ての装備中のアイテムがコラプト状態であれば、毎秒#のマナを自動回復する",
       "en": "Regenerate # Mana per second if all Equipped Items are Corrupted"
+    },
+    {
+      "ja": "範囲内にあるパッシブスキルは物理ダメージ#%増加も付与する",
+      "en": "Passive Skills in Radius also grant #% increased Physical Damage"
     },
     {
       "ja": "直近ブロックしていればクリティカルダメージ倍率 +#%",
@@ -155393,16 +155395,16 @@ var JpPoeUtils = (() => {
       "en": "Projectiles gain Impale effect as they travel farther, causing Impales they inflict to have up to #% increased effect"
     },
     {
-      "ja": "スキルの憤怒コストが#%増加する",
-      "en": "#% increased Rage Cost of Skills"
-    },
-    {
       "ja": "ソケットされたジェムはレベル#憤怒によりサポートされる",
       "en": "Socketed Gems are Supported by Level # Rage"
     },
     {
       "ja": "ビヨンドからのモンスターのドロップするアイテムの数量と品質が#%上昇する",
       "en": "Monsters from Beyond have #% more Quantity and Rarity of Dropped Items"
+    },
+    {
+      "ja": "スキルの憤怒コストが#%増加する",
+      "en": "#% increased Rage Cost of Skills"
     },
     {
       "ja": "敏捷性のジョブに対する雇用コストが#%増加する",
@@ -155421,12 +155423,12 @@ var JpPoeUtils = (() => {
       "en": "#% increased Hiring Fee for Demolition Jobs"
     },
     {
-      "ja": "全ての#ジェムのレベル +閃光",
-      "en": "+# to Level of all Spark Gems"
-    },
-    {
       "ja": "スペルスリンガーによりサポートされたスキルのマナリザーブ効率が#%増加する",
       "en": "#% increased Mana Reservation Efficiency of Skills Supported by Spellslinger"
+    },
+    {
+      "ja": "全ての#ジェムのレベル +閃光",
+      "en": "+# to Level of all Spark Gems"
     },
     {
       "ja": "錠前破りを使い宝箱を開けた時に#%の確率でアラートレベルを上げない",
@@ -155485,12 +155487,12 @@ var JpPoeUtils = (() => {
       "en": "+#% Chance to Block Attack Damage per Power Charge"
     },
     {
-      "ja": "知覚能力を使い宝箱を開けた時に#%の確率でアラートレベルを上げない",
-      "en": "#% chance to not generate Alert Level on opening a Chest using Perception"
-    },
-    {
       "ja": "このグラフトにより使用されるテンダーエンブレイスが付与するバフはダメージの#%のライフとしてのリーチを付与する",
       "en": "Buff granted by Tender Embrace used by this Graft grants #% of Damage Leeched as Life"
+    },
+    {
+      "ja": "知覚能力を使い宝箱を開けた時に#%の確率でアラートレベルを上げない",
+      "en": "#% chance to not generate Alert Level on opening a Chest using Perception"
     },
     {
       "ja": "対魔術のスピードが#%増加する",
@@ -155501,12 +155503,12 @@ var JpPoeUtils = (() => {
       "en": "#% chance to not Activate Lockdown in Grand Heists"
     },
     {
-      "ja": "フレンジーチャージ1個ごとに#%の物理ダメージ軽減率追加",
-      "en": "#% additional Physical Damage Reduction per Frenzy Charge"
-    },
-    {
       "ja": "ソケットされたレアの催眠の眼のジュエルの効果が#%増加する",
       "en": "#% increased Effect of Socketed Rare Hypnotic Eye Jewels"
+    },
+    {
+      "ja": "フレンジーチャージ1個ごとに#%の物理ダメージ軽減率追加",
+      "en": "#% additional Physical Damage Reduction per Frenzy Charge"
     },
     {
       "ja": "ソケットされたジェムは物理ダメージの#%を追加雷ダメージとして獲得",
@@ -155581,24 +155583,24 @@ var JpPoeUtils = (() => {
       "en": "Talismans found in this Area are Rare"
     },
     {
-      "ja": "ブロック時に#%の確率でパワーチャージを1個獲得する",
-      "en": "#% chance to gain a Power Charge when you Block"
-    },
-    {
       "ja": "罠解除のスピードが#%増加する",
       "en": "#% increased Trap Disarmament speed"
+    },
+    {
+      "ja": "ブロック時に#%の確率でパワーチャージを1個獲得する",
+      "en": "#% chance to gain a Power Charge when you Block"
     },
     {
       "ja": "フロストブリンクの持続時間が#%増加する",
       "en": "Frostblink has #% increased Duration"
     },
     {
-      "ja": "ソケットされたジェムはレベル#狂乱の餌付けによりサポートされる",
-      "en": "Socketed Gems are Supported by Level # Feeding Frenzy"
-    },
-    {
       "ja": "レベル#フロストブリンクスキルを付与する",
       "en": "Grants Level # Frostblink Skill"
+    },
+    {
+      "ja": "ソケットされたジェムはレベル#狂乱の餌付けによりサポートされる",
+      "en": "Socketed Gems are Supported by Level # Feeding Frenzy"
     },
     {
       "ja": "ピュリティオブライトニングのリザーブが#%減少する",
@@ -155613,20 +155615,20 @@ var JpPoeUtils = (() => {
       "en": "#% chance to Crush on Hit"
     },
     {
-      "ja": "敏捷性のスピードが#%増加する",
-      "en": "#% increased Agility speed"
-    },
-    {
       "ja": "プレイヤーまたはそのミニオンが倒した呪い状態の敵は#%の確率で爆発し、その最大ライフの4分の1を混沌ダメージとして与える",
       "en": "Cursed Enemies you or your Minions Kill have a #% chance to Explode, dealing a quarter of their maximum Life as Chaos Damage"
     },
     {
-      "ja": "エリアにはアニメイトウェポンが追加で#パック出現する",
-      "en": "Area contains # additional Animated Weapon Packs"
+      "ja": "敏捷性のスピードが#%増加する",
+      "en": "#% increased Agility speed"
     },
     {
       "ja": "使用した時にランダムな占いカードのバフを#秒間獲得する",
       "en": "Grants a random Divination Buff for # seconds when Used"
+    },
+    {
+      "ja": "エリアにはアニメイトウェポンが追加で#パック出現する",
+      "en": "Area contains # additional Animated Weapon Packs"
     },
     {
       "ja": "マップにはレアモンスターを含むパックが追加で1パック出現する",
@@ -155673,6 +155675,10 @@ var JpPoeUtils = (() => {
       "en": "#% increased Demolition speed"
     },
     {
+      "ja": "ソケットされたジェムはレベル#グレーター投射物追加によりサポートされる",
+      "en": "Socketed Gems are Supported by Level # Greater Multiple Projectiles"
+    },
+    {
       "ja": "エンデュランスチャージ1個ごとに火ダメージの#%を追加混沌ダメージとして獲得する",
       "en": "Gain #% of Fire Damage as Extra Chaos Damage per Endurance Charge"
     },
@@ -155713,12 +155719,12 @@ var JpPoeUtils = (() => {
       "en": "Grants Level # Determination Skill"
     },
     {
-      "ja": "フォーカス時にミニオンはそのライフの#%を回復する",
-      "en": "Minions Recover #% of their Life when you Focus"
-    },
-    {
       "ja": "工作のスピードが#%増加する",
       "en": "#% increased Engineering speed"
+    },
+    {
+      "ja": "フォーカス時にミニオンはそのライフの#%を回復する",
+      "en": "Minions Recover #% of their Life when you Focus"
     },
     {
       "ja": "マップには奇妙な樽のクラスターが追加で#個出現する",
@@ -155797,10 +155803,6 @@ var JpPoeUtils = (() => {
       "en": "#% increased Deception Experience gained"
     },
     {
-      "ja": "ソケットされたジェムはレベル#グレーター投射物追加によりサポートされる",
-      "en": "Socketed Gems are Supported by Level # Greater Multiple Projectiles"
-    },
-    {
       "ja": "効果中は命中力が#%増加する",
       "en": "#% increased Accuracy Rating during Effect"
     },
@@ -155829,12 +155831,12 @@ var JpPoeUtils = (() => {
       "en": "Grants Level # Discipline Skill"
     },
     {
-      "ja": "全てのプレイヤーはレアモンスターを倒すと#%の確率でそのモッドのうち1個を20秒間獲得する",
-      "en": "Players have a #% chance when they Kill a Rare Monster to gain 1 of its Modifiers for 20 seconds"
-    },
-    {
       "ja": "ソケットされたジェムはレベル#ディケイによりサポートされる",
       "en": "Socketed Gems are Supported by Level # Decay"
+    },
+    {
+      "ja": "全てのプレイヤーはレアモンスターを倒すと#%の確率でそのモッドのうち1個を20秒間獲得する",
+      "en": "Players have a #% chance when they Kill a Rare Monster to gain 1 of its Modifiers for 20 seconds"
     },
     {
       "ja": "怪力を使い宝箱を開けた時に#%の確率でアラートレベルを上げない",
@@ -155893,12 +155895,12 @@ var JpPoeUtils = (() => {
       "en": "+# to maximum Mana per 2 Intelligence"
     },
     {
-      "ja": "全ての#ジェムのレベル +コースティックアロー",
-      "en": "+# to Level of all Caustic Arrow Gems"
-    },
-    {
       "ja": "ソケットされたジェムはレベル#カリングストライクによりサポートされる",
       "en": "Socketed Gems are Supported by Level # Culling Strike"
+    },
+    {
+      "ja": "全ての#ジェムのレベル +コースティックアロー",
+      "en": "+# to Level of all Caustic Arrow Gems"
     },
     {
       "ja": "全ての#ジェムのレベル +ストームブランド",
@@ -155929,12 +155931,12 @@ var JpPoeUtils = (() => {
       "en": "+# to Level of all Penance Brand Gems"
     },
     {
-      "ja": "全ての#ジェムのレベル +ウェーブオブコンヴィクション",
-      "en": "+# to Level of all Wave of Conviction Gems"
-    },
-    {
       "ja": "全ての#ジェムのレベル +ファイヤー・トラップ",
       "en": "+# to Level of all Fire Trap Gems"
+    },
+    {
+      "ja": "全ての#ジェムのレベル +ウェーブオブコンヴィクション",
+      "en": "+# to Level of all Wave of Conviction Gems"
     },
     {
       "ja": "このグラフトにより付与されるジョルトは受けるダメージの+#%増加を付与する",
@@ -156057,12 +156059,12 @@ var JpPoeUtils = (() => {
       "en": "+# to Level of all Animate Weapon Gems"
     },
     {
-      "ja": "全ての#ジェムのレベル +トキシックレイン",
-      "en": "+# to Level of all Toxic Rain Gems"
-    },
-    {
       "ja": "全ての#ジェムのレベル +アイスノヴァ",
       "en": "+# to Level of all Ice Nova Gems"
+    },
+    {
+      "ja": "全ての#ジェムのレベル +トキシックレイン",
+      "en": "+# to Level of all Toxic Rain Gems"
     },
     {
       "ja": "ソケットされたジェムはレベル#スペルトーテム化によりサポートされる",
@@ -156077,12 +156079,12 @@ var JpPoeUtils = (() => {
       "en": "#% increased Maximum Recovery per Life Leech for each 5% of Life Reserved"
     },
     {
-      "ja": "近距離でない時に矢のヒットダメージが#%上昇する",
-      "en": "#% more Damage with Arrow Hits not at Close Range"
-    },
-    {
       "ja": "このグラフトのスキルにより付与された状態異常は持続時間が#%増加する",
       "en": "Ailments inflicted by Skills used by this Graft have #% increased duration"
+    },
+    {
+      "ja": "近距離でない時に矢のヒットダメージが#%上昇する",
+      "en": "#% more Damage with Arrow Hits not at Close Range"
     },
     {
       "ja": "ソケットされたジェムはレベル#ナイトブレードによりサポートされる",
@@ -156093,12 +156095,12 @@ var JpPoeUtils = (() => {
       "en": "Socketed Gems are Supported by Level # Impale"
     },
     {
-      "ja": "このグラフトにより使用されるスキルは串刺し効果が#%増加する",
-      "en": "Skills used by this Graft have #% increased Impale Effect"
-    },
-    {
       "ja": "全ての#ジェムのレベル +キャリオンゴーレム召喚",
       "en": "+# to Level of all Summon Carrion Golem Gems"
+    },
+    {
+      "ja": "このグラフトにより使用されるスキルは串刺し効果が#%増加する",
+      "en": "Skills used by this Graft have #% increased Impale Effect"
     },
     {
       "ja": "プレイヤーが敵に付与した状態異常の数ごとにその敵に対して#%の確率でダブルダメージを与える",
@@ -156117,12 +156119,12 @@ var JpPoeUtils = (() => {
       "en": "Attacks with this Weapon deal # to # added Fire Damage to Bleeding Enemies"
     },
     {
-      "ja": "ブランド1個ごとにクリティカル率が#%増加する",
-      "en": "#% increased Critical Strike Chance per Brand"
-    },
-    {
       "ja": "ソケットされたジェムはレベル#スウィフトアフリクションによりサポートされる",
       "en": "Socketed Gems are Supported by Level # Swift Affliction"
+    },
+    {
+      "ja": "ブランド1個ごとにクリティカル率が#%増加する",
+      "en": "#% increased Critical Strike Chance per Brand"
     },
     {
       "ja": "対魔術の獲得経験値が#%増加する",
@@ -156137,52 +156139,52 @@ var JpPoeUtils = (() => {
       "en": "Socketed Gems are Supported by Level # Close Combat"
     },
     {
-      "ja": "ソケットされたジェムはレベル#ボレーによりサポートされる",
-      "en": "Socketed Gems are Supported by Level # Volley"
-    },
-    {
       "ja": "レベル#のピュリティオブライトニングスキルを付与する",
       "en": "Grants Level # Purity of Lightning Skill"
     },
     {
-      "ja": "ソケットされたジェムはレベル#クルーエルティによりサポートされる",
-      "en": "Socketed Gems are Supported by Level # Cruelty"
-    },
-    {
-      "ja": "この武器によるアタックは発火状態の敵に#から#の追加物理ダメージを与える",
-      "en": "Attacks with this Weapon deal # to # added Physical Damage to Ignited Enemies"
+      "ja": "ソケットされたジェムはレベル#ボレーによりサポートされる",
+      "en": "Socketed Gems are Supported by Level # Volley"
     },
     {
       "ja": "この武器によるアタックは発火状態の敵に対して#%の確率で出血を付与する",
       "en": "Attacks with this Weapon have #% chance to inflict Bleeding against Ignited Enemies"
     },
     {
-      "ja": "全ての#ジェムのレベル +イシリアルナイフ",
-      "en": "+# to Level of all Ethereal Knives Gems"
+      "ja": "この武器によるアタックは発火状態の敵に#から#の追加物理ダメージを与える",
+      "en": "Attacks with this Weapon deal # to # added Physical Damage to Ignited Enemies"
+    },
+    {
+      "ja": "ソケットされたジェムはレベル#クルーエルティによりサポートされる",
+      "en": "Socketed Gems are Supported by Level # Cruelty"
     },
     {
       "ja": "全ての#ジェムのレベル +エクスプローシブトラップ",
       "en": "+# to Level of all Explosive Trap Gems"
     },
     {
-      "ja": "敵を倒した時に1レベルごとに#のエナジーシールドを獲得する",
-      "en": "Gain # Energy Shield on Kill per Level"
+      "ja": "全ての#ジェムのレベル +イシリアルナイフ",
+      "en": "+# to Level of all Ethereal Knives Gems"
     },
     {
       "ja": "敵を倒した時に1レベルごとに#のマナを獲得する",
       "en": "Gain # Mana on Kill per Level"
     },
     {
+      "ja": "敵を倒した時に1レベルごとに#のエナジーシールドを獲得する",
+      "en": "Gain # Energy Shield on Kill per Level"
+    },
+    {
       "ja": "ソケットされたジェムはレベル#連鎖によりサポートされる",
       "en": "Socketed Gems are Supported by Level # Chain"
     },
     {
-      "ja": "ソケットされたジェムはレベル#電気刺激によりサポートされる",
-      "en": "Socketed Gems are Supported by Level # Innervate"
-    },
-    {
       "ja": "敵を倒した時に1レベルごとに#のライフを獲得する",
       "en": "Gain # Life on Kill per Level"
+    },
+    {
+      "ja": "ソケットされたジェムはレベル#電気刺激によりサポートされる",
+      "en": "Socketed Gems are Supported by Level # Innervate"
     },
     {
       "ja": "ソケットされたジェムはレベル#ヴォイド操作によりサポートされる",
@@ -156201,24 +156203,20 @@ var JpPoeUtils = (() => {
       "en": "Socketed Gems are Supported by Level # Prismatic Burst"
     },
     {
-      "ja": "知覚能力の獲得経験値が#%増加する",
-      "en": "#% increased Perception Experience gained"
-    },
-    {
       "ja": "マインにより使用されるスキルの効果範囲が#%増加する",
       "en": "Skills used by Mines have #% increased Area of Effect"
     },
     {
-      "ja": "全ての#ジェムのレベル +トルネード",
-      "en": "+# to Level of all Tornado Gems"
+      "ja": "知覚能力の獲得経験値が#%増加する",
+      "en": "#% increased Perception Experience gained"
     },
     {
       "ja": "全ての#ジェムのレベル +パイロクラストマイン",
       "en": "+# to Level of all Pyroclast Mine Gems"
     },
     {
-      "ja": "全ての#ジェムのレベル +アイオブウィンター",
-      "en": "+# to Level of all Eye of Winter Gems"
+      "ja": "全ての#ジェムのレベル +トルネード",
+      "en": "+# to Level of all Tornado Gems"
     },
     {
       "ja": "ソケットされたジェムはレベル#コラプティングクライによりサポートされる",
@@ -156229,6 +156227,10 @@ var JpPoeUtils = (() => {
       "en": "+# to Level of all Soulrend Gems"
     },
     {
+      "ja": "全ての#ジェムのレベル +アイオブウィンター",
+      "en": "+# to Level of all Eye of Winter Gems"
+    },
+    {
       "ja": "効果中は付与できる呪いが追加で#個増える",
       "en": "You can apply # additional Curses during Effect"
     },
@@ -156237,12 +156239,12 @@ var JpPoeUtils = (() => {
       "en": "Skills used by this Graft penetrate #% Enemy Lightning Resistance"
     },
     {
-      "ja": "レベル#のピュリティオブアイススキルを付与する",
-      "en": "Grants Level # Purity of Ice Skill"
-    },
-    {
       "ja": "全ての#ジェムのレベル +アブソリューション",
       "en": "+# to Level of all Absolution Gems"
+    },
+    {
+      "ja": "レベル#のピュリティオブアイススキルを付与する",
+      "en": "Grants Level # Purity of Ice Skill"
     },
     {
       "ja": "このグラフトにより使用されるスキルは#%の確率で敵の物理ダメ―ジ軽減を無視する",
@@ -156281,12 +156283,12 @@ var JpPoeUtils = (() => {
       "en": "Socketed Gems are Supported by Level # Fist of War"
     },
     {
-      "ja": "装備中のアイテムにコラプト状態のものがなければライフ自動回復の#%がエナジーシールドにも適用される",
-      "en": "#% of Life Regeneration also applies to Energy Shield if no Equipped Items are Corrupted"
-    },
-    {
       "ja": "ソケットされたジェムはレベル#ミラージュアーチャーによりサポートされる",
       "en": "Socketed Gems are Supported by Level # Mirage Archer"
+    },
+    {
+      "ja": "装備中のアイテムにコラプト状態のものがなければライフ自動回復の#%がエナジーシールドにも適用される",
+      "en": "#% of Life Regeneration also applies to Energy Shield if no Equipped Items are Corrupted"
     },
     {
       "ja": "ブランドのダメージが#%増加する",
@@ -156325,16 +156327,16 @@ var JpPoeUtils = (() => {
       "en": "+# to Level of all Animate Guardian Gems"
     },
     {
-      "ja": "全ての#ジェムのレベル +デトネートデッド",
-      "en": "+# to Level of all Detonate Dead Gems"
+      "ja": "全ての#ジェムのレベル +ライトニングアロー",
+      "en": "+# to Level of all Lightning Arrow Gems"
     },
     {
       "ja": "ソケットされたジェムはレベル#ポイントブランクによりサポートされる",
       "en": "Socketed Gems are Supported by Level # Point Blank"
     },
     {
-      "ja": "全ての#ジェムのレベル +ライトニングアロー",
-      "en": "+# to Level of all Lightning Arrow Gems"
+      "ja": "全ての#ジェムのレベル +デトネートデッド",
+      "en": "+# to Level of all Detonate Dead Gems"
     },
     {
       "ja": "全ての#ジェムのレベル +シールドクラッシュ",
@@ -156369,36 +156371,36 @@ var JpPoeUtils = (() => {
       "en": "+# to Level of all Ball Lightning Gems"
     },
     {
-      "ja": "ソケットされたジェムはレベル#燃焼促進によりサポートされる",
-      "en": "Socketed Gems are Supported by Level # Combustion"
-    },
-    {
       "ja": "効果中に敵を発火させた時に期待発火ダメージの#%をライフとしてリーチする",
       "en": "Leech #% of Expected Ignite Damage as Life when you Ignite an Enemy during Effect"
+    },
+    {
+      "ja": "ソケットされたジェムはレベル#燃焼促進によりサポートされる",
+      "en": "Socketed Gems are Supported by Level # Combustion"
     },
     {
       "ja": "ソケットされたジェムはレベル#ボラティリティによりサポートされる",
       "en": "Socketed Gems are Supported by Level # Volatility"
     },
     {
-      "ja": "全ての#ジェムのレベル +ゾンビ蘇生",
-      "en": "+# to Level of all Raise Zombie Gems"
-    },
-    {
       "ja": "#%の確率でトリプルダメージを与える",
       "en": "#% chance to deal Triple Damage"
+    },
+    {
+      "ja": "全ての#ジェムのレベル +ゾンビ蘇生",
+      "en": "+# to Level of all Raise Zombie Gems"
     },
     {
       "ja": "全ての#ジェムのレベル +ヘラルドオブアゴニー",
       "en": "+# to Level of all Herald of Agony Gems"
     },
     {
-      "ja": "バナースキルのオーラの効果が#%増加する",
-      "en": "Banner Skills have #% increased Aura Effect"
-    },
-    {
       "ja": "全ての#ジェムのレベル +グレイシャルカスケード",
       "en": "+# to Level of all Glacial Cascade Gems"
+    },
+    {
+      "ja": "バナースキルのオーラの効果が#%増加する",
+      "en": "Banner Skills have #% increased Aura Effect"
     },
     {
       "ja": "召喚したアルバリストはヒット時に#%の確率で冷気の曝露を付与する",
@@ -156413,20 +156415,20 @@ var JpPoeUtils = (() => {
       "en": "Physical Skills have #% increased Duration per 12 Intelligence"
     },
     {
-      "ja": "全ての#ジェムのレベル +スペクトラルシールドスロー",
-      "en": "+# to Level of all Spectral Shield Throw Gems"
-    },
-    {
       "ja": "全ての#ジェムのレベル +ファイヤーストーム",
       "en": "+# to Level of all Firestorm Gems"
     },
     {
-      "ja": "全ての#ジェムのレベル +ライトニングワープ",
-      "en": "+# to Level of all Lightning Warp Gems"
+      "ja": "全ての#ジェムのレベル +スペクトラルシールドスロー",
+      "en": "+# to Level of all Spectral Shield Throw Gems"
     },
     {
       "ja": "ソケットされたジェムはレベル#プレデターによりサポートされる",
       "en": "Socketed Gems are Supported by Level # Predator"
+    },
+    {
+      "ja": "全ての#ジェムのレベル +ライトニングワープ",
+      "en": "+# to Level of all Lightning Warp Gems"
     },
     {
       "ja": "最大ライフの#%を追加のアーマーとして獲得する",
@@ -156497,10 +156499,6 @@ var JpPoeUtils = (() => {
       "en": "Socketed Gems are Supported by Level # Summon Phantasm"
     },
     {
-      "ja": "ソケットされたジェムはレベル#ヒット時呪術によりサポートされる",
-      "en": "Socketed Gems are Supported by Level # Hextouch"
-    },
-    {
       "ja": "ソケットされたジェムはレベル#チャネリング注入によりサポートされる",
       "en": "Socketed Gems are Supported by Level # Infused Channelling"
     },
@@ -156517,12 +156515,12 @@ var JpPoeUtils = (() => {
       "en": "+# to Level of all Vortex Gems"
     },
     {
-      "ja": "ヒットを受けた時に猛攻を#秒間獲得する",
-      "en": "You gain Onslaught for # seconds when Hit"
-    },
-    {
       "ja": "シュラインを守るモンスターはマジックである",
       "en": "Monsters guarding Shrines are Magic"
+    },
+    {
+      "ja": "ヒットを受けた時に猛攻を#秒間獲得する",
+      "en": "You gain Onslaught for # seconds when Hit"
     },
     {
       "ja": "全ての#ジェムのレベル +リーパー召喚",
@@ -156541,10 +156539,6 @@ var JpPoeUtils = (() => {
       "en": "Imprisoned Monsters have an additional Essence"
     },
     {
-      "ja": "全ての#ジェムのレベル +ヴェノムジャイア",
-      "en": "+# to Level of all Venom Gyre Gems"
-    },
-    {
       "ja": "ソケットされたジェムはレベル#聖なるウィスプによりサポートされる",
       "en": "Socketed Gems are Supported by Level # Sacred Wisps"
     },
@@ -156553,8 +156547,16 @@ var JpPoeUtils = (() => {
       "en": "Socketed Gems are Supported by Level # Overcharge"
     },
     {
+      "ja": "全ての#ジェムのレベル +ヴェノムジャイア",
+      "en": "+# to Level of all Venom Gyre Gems"
+    },
+    {
       "ja": "シーリングボンドトーテムの最大召喚数 +#",
       "en": "+# to maximum number of Summoned Searing Bond Totems"
+    },
+    {
+      "ja": "ソケットされたジェムはレベル#ヒット時呪術によりサポートされる",
+      "en": "Socketed Gems are Supported by Level # Hextouch"
     },
     {
       "ja": "ソケットされたジェムはレベル#毒付与によりサポートされる",
@@ -156613,12 +156615,12 @@ var JpPoeUtils = (() => {
       "en": "#% increased Lockpicking Experience gained"
     },
     {
-      "ja": "レアのブリーチモンスターはスプリンターを追加で1個ドロップする",
-      "en": "Rare Breach Monsters drop an additional Splinter"
-    },
-    {
       "ja": "ソケットされたジェムはレベル#サディズムによりサポートされる",
       "en": "Socketed Gems are Supported by Level # Sadism"
+    },
+    {
+      "ja": "レアのブリーチモンスターはスプリンターを追加で1個ドロップする",
+      "en": "Rare Breach Monsters drop an additional Splinter"
     },
     {
       "ja": "全ての#ジェムのレベル +ライトニングトラップ",
@@ -156633,24 +156635,24 @@ var JpPoeUtils = (() => {
       "en": "Socketed Gems are Supported by Level # Bloodthirst"
     },
     {
-      "ja": "エリアにいるプレイヤーは近くの味方1体ごとに受けるダメージが#%増加する",
-      "en": "Players in Area take #% increased Damage per nearby Ally"
-    },
-    {
       "ja": "インベージョンボスがドロップするアイテムの数量とレアリティが#%上昇する",
       "en": "Invasion Bosses have #% more Quantity and Rarity of dropped Items"
+    },
+    {
+      "ja": "エリアにいるプレイヤーは近くの味方1体ごとに受けるダメージが#%増加する",
+      "en": "Players in Area take #% increased Damage per nearby Ally"
     },
     {
       "ja": "罠解除の雇用コストが#%増加する",
       "en": "#% increased Trap Disarmament Experience gained"
     },
     {
-      "ja": "ソケットされたジェムはレベル#アークメイジによりサポートされる",
-      "en": "Socketed Gems are Supported by Level # Archmage"
-    },
-    {
       "ja": "モンスターに対する呪いの効果が#%増加する",
       "en": "#% increased Effect of Curses on Monsters"
+    },
+    {
+      "ja": "ソケットされたジェムはレベル#アークメイジによりサポートされる",
+      "en": "Socketed Gems are Supported by Level # Archmage"
     },
     {
       "ja": "召喚したアルバリストはヒット時に#%の確率で火の曝露を付与する",
@@ -156665,12 +156667,12 @@ var JpPoeUtils = (() => {
       "en": "Socketed Gems are Supported by Level # Cast when Stunned"
     },
     {
-      "ja": "召喚したアルバリストは物理ダメージの#%を冷気ダメージに変換する",
-      "en": "Summoned Arbalists Convert #% of Physical Damage to Cold Damage"
-    },
-    {
       "ja": "ソケットされたジェムはレベル#極寒の絆によりサポートされる",
       "en": "Socketed Gems are Supported by Level # Frigid Bond"
+    },
+    {
+      "ja": "召喚したアルバリストは物理ダメージの#%を冷気ダメージに変換する",
+      "en": "Summoned Arbalists Convert #% of Physical Damage to Cold Damage"
     },
     {
       "ja": "全ての#ジェムのレベル +ボーンシャッター",
@@ -156697,20 +156699,20 @@ var JpPoeUtils = (() => {
       "en": "+# to Level of all Static Strike Gems"
     },
     {
-      "ja": "全ての#ジェムのレベル +ホーリーフレイムトーテム",
-      "en": "+# to Level of all Holy Flame Totem Gems"
-    },
-    {
-      "ja": "全ての#ジェムのレベル +ラセレイト",
-      "en": "+# to Level of all Lacerate Gems"
+      "ja": "ソケットされたジェムはレベル#ミニオンスピードによりサポートされる",
+      "en": "Socketed Gems are Supported by Level # Minion Speed"
     },
     {
       "ja": "全ての#ジェムのレベル +ライトニングコンジット",
       "en": "+# to Level of all Lightning Conduit Gems"
     },
     {
-      "ja": "ソケットされたジェムはレベル#ミニオンスピードによりサポートされる",
-      "en": "Socketed Gems are Supported by Level # Minion Speed"
+      "ja": "全ての#ジェムのレベル +ラセレイト",
+      "en": "+# to Level of all Lacerate Gems"
+    },
+    {
+      "ja": "全ての#ジェムのレベル +ホーリーフレイムトーテム",
+      "en": "+# to Level of all Holy Flame Totem Gems"
     },
     {
       "ja": "ソケットされたジェムはレベル#チャージドマインによりサポートされる",
@@ -156729,14 +156731,6 @@ var JpPoeUtils = (() => {
       "en": "+# to Level of all Scourge Arrow Gems"
     },
     {
-      "ja": "爆破の獲得経験値が#%増加する",
-      "en": "#% increased Demolition Experience gained"
-    },
-    {
-      "ja": "このグラフトのスキルにより生成された雷光領域はその上に立つ味方に#から#の追加雷ダメージを付与する",
-      "en": "Radiant Ground created by Skills from this Graft grants Allies on it an additional # to # added Lightning Damage"
-    },
-    {
       "ja": "ソケットされたジェムはレベル#過剰奮起によりサポートされる",
       "en": "Socketed Gems are Supported by Level # Overexertion"
     },
@@ -156745,16 +156739,28 @@ var JpPoeUtils = (() => {
       "en": "Regenerate #% of Energy Shield per second if you've dealt a Critical Strike with this weapon Recently"
     },
     {
+      "ja": "このグラフトのスキルにより生成された雷光領域はその上に立つ味方に#から#の追加雷ダメージを付与する",
+      "en": "Radiant Ground created by Skills from this Graft grants Allies on it an additional # to # added Lightning Damage"
+    },
+    {
+      "ja": "爆破の獲得経験値が#%増加する",
+      "en": "#% increased Demolition Experience gained"
+    },
+    {
       "ja": "召喚したアルバリストは物理ダメージの#%を火ダメージに変換する",
       "en": "Summoned Arbalists Convert #% of Physical Damage to Fire Damage"
+    },
+    {
+      "ja": "全ての#ジェムのレベル +モルテンストライク",
+      "en": "+# to Level of all Molten Strike Gems"
     },
     {
       "ja": "全ての#ジェムのレベル +フロストブレード",
       "en": "+# to Level of all Frost Blades Gems"
     },
     {
-      "ja": "全ての#ジェムのレベル +モルテンストライク",
-      "en": "+# to Level of all Molten Strike Gems"
+      "ja": "ヴァールスキル使用した時にアドレナリンを#秒間獲得する",
+      "en": "You gain Adrenaline for # second on using a Vaal Skill"
     },
     {
       "ja": "召喚したアルバリストは物理ダメージの#%を追加雷ダメージとして獲得する",
@@ -156767,10 +156773,6 @@ var JpPoeUtils = (() => {
     {
       "ja": "召喚したアルバリストは物理ダメージの#%を追加冷気ダメージとして獲得する",
       "en": "Summoned Arbalists gain #% of Physical Damage as Extra Cold Damage"
-    },
-    {
-      "ja": "ヴァールスキル使用した時にアドレナリンを#秒間獲得する",
-      "en": "You gain Adrenaline for # second on using a Vaal Skill"
     },
     {
       "ja": "全ての#ジェムのレベル +ウィンタータイドブランド",
@@ -156833,12 +156835,12 @@ var JpPoeUtils = (() => {
       "en": "+# to Level of all Holy Sweep Gems"
     },
     {
-      "ja": "ソケットされたジェムはレベル#スウィフトブランドによりサポートされる",
-      "en": "Socketed Gems are Supported by Level # Swiftbrand"
-    },
-    {
       "ja": "インベージョンボスはマジックモンスターの1パックに守られている",
       "en": "Invasion Bosses are guarded by a Magic Pack"
+    },
+    {
+      "ja": "ソケットされたジェムはレベル#スウィフトブランドによりサポートされる",
+      "en": "Socketed Gems are Supported by Level # Swiftbrand"
     },
     {
       "ja": "全ての#ジェムのレベル +イヴィセレイト",
@@ -156849,28 +156851,28 @@ var JpPoeUtils = (() => {
       "en": "+# to Level of all Arcanist Brand Gems"
     },
     {
-      "ja": "全ての#ジェムのレベル +スペルスリンガー",
-      "en": "+# to Level of all Spellslinger Gems"
+      "ja": "召喚したアルバリストは物理ダメージの#%を追加火ダメージとして獲得する",
+      "en": "Summoned Arbalists gain #% of Physical Damage as Extra Fire Damage"
     },
     {
       "ja": "全ての#ジェムのレベル +ジェネラルズクライ",
       "en": "+# to Level of all General's Cry Gems"
     },
     {
-      "ja": "召喚したアルバリストは物理ダメージの#%を追加火ダメージとして獲得する",
-      "en": "Summoned Arbalists gain #% of Physical Damage as Extra Fire Damage"
+      "ja": "全ての#ジェムのレベル +スペルスリンガー",
+      "en": "+# to Level of all Spellslinger Gems"
     },
     {
-      "ja": "ソケットされたジェムはレベル#首狩りによりサポートされる",
-      "en": "Socketed Gems are Supported by Level # Behead"
+      "ja": "全ての#ジェムのレベル +エクスプローシブコンコクション",
+      "en": "+# to Level of all Explosive Concoction Gems"
     },
     {
       "ja": "全ての#ジェムのレベル +ダブルストライク",
       "en": "+# to Level of all Double Strike Gems"
     },
     {
-      "ja": "全ての#ジェムのレベル +エクスプローシブコンコクション",
-      "en": "+# to Level of all Explosive Concoction Gems"
+      "ja": "ソケットされたジェムはレベル#首狩りによりサポートされる",
+      "en": "Socketed Gems are Supported by Level # Behead"
     },
     {
       "ja": "ソケットされたジェムはレベル#裂傷によりサポートされる",
@@ -156885,12 +156887,12 @@ var JpPoeUtils = (() => {
       "en": "+# to Level of all Storm Call Gems"
     },
     {
-      "ja": "全ての#ジェムのレベル +リーヴ",
-      "en": "+# to Level of all Reave Gems"
-    },
-    {
       "ja": "全ての#ジェムのレベル +クリーピングフロスト",
       "en": "+# to Level of all Creeping Frost Gems"
+    },
+    {
+      "ja": "全ての#ジェムのレベル +リーヴ",
+      "en": "+# to Level of all Reave Gems"
     },
     {
       "ja": "召喚したアルバリストの投射物をは#個に分裂する",
@@ -156913,14 +156915,6 @@ var JpPoeUtils = (() => {
       "en": "Socketed Gems are Supported by Level # Cursed Ground"
     },
     {
-      "ja": "全ての#ジェムのレベル +ディシプリン",
-      "en": "+# to Level of all Discipline Gems"
-    },
-    {
-      "ja": "全ての#ジェムのレベル +コブララッシュ",
-      "en": "+# to Level of all Cobra Lash Gems"
-    },
-    {
       "ja": "全ての#ジェムのレベル +スプリッティングスティール",
       "en": "+# to Level of all Splitting Steel Gems"
     },
@@ -156929,12 +156923,20 @@ var JpPoeUtils = (() => {
       "en": "Socketed Gems are Supported by Level # Locus Mine"
     },
     {
-      "ja": "ストロングボックスはマジックになる",
-      "en": "Strongboxes are Magic"
+      "ja": "全ての#ジェムのレベル +ディシプリン",
+      "en": "+# to Level of all Discipline Gems"
+    },
+    {
+      "ja": "全ての#ジェムのレベル +コブララッシュ",
+      "en": "+# to Level of all Cobra Lash Gems"
     },
     {
       "ja": "全ての#ジェムのレベル +ミラーアロー",
       "en": "+# to Level of all Mirror Arrow Gems"
+    },
+    {
+      "ja": "ストロングボックスはマジックになる",
+      "en": "Strongboxes are Magic"
     },
     {
       "ja": "全ての#ジェムのレベル +ストームブラストマイン",
@@ -156957,20 +156959,20 @@ var JpPoeUtils = (() => {
       "en": "+# to Level of all Flameblast Gems"
     },
     {
-      "ja": "全ての#ジェムのレベル +マレヴォレンス",
-      "en": "+# to Level of all Malevolence Gems"
-    },
-    {
       "ja": "ソケットされたジェムはレベル#プリスマティックバーストによりサポートされる",
       "en": "Socketed Gems are Supported by Level # Prismatic Burst"
     },
     {
-      "ja": "全ての#ジェムのレベル +スペクトラルスロー",
-      "en": "+# to Level of all Spectral Throw Gems"
+      "ja": "全ての#ジェムのレベル +マレヴォレンス",
+      "en": "+# to Level of all Malevolence Gems"
     },
     {
       "ja": "ソケットされたジェムはレベル#捕食によりサポートされる",
       "en": "Socketed Gems are Supported by Level # Devour"
+    },
+    {
+      "ja": "全ての#ジェムのレベル +スペクトラルスロー",
+      "en": "+# to Level of all Spectral Throw Gems"
     },
     {
       "ja": "全ての#ジェムのレベル +インシネレート",
@@ -156981,20 +156983,20 @@ var JpPoeUtils = (() => {
       "en": "Area contains a Voidspawn of Abaxoth Bloodline Pack"
     },
     {
-      "ja": "全ての#ジェムのレベル +シュラプネルバリスタ",
-      "en": "+# to Level of all Shrapnel Ballista Gems"
-    },
-    {
       "ja": "全ての#ジェムのレベル +プレイグベアラー",
       "en": "+# to Level of all Plague Bearer Gems"
     },
     {
-      "ja": "全ての#ジェムのレベル +ブラストレイン",
-      "en": "+# to Level of all Blast Rain Gems"
+      "ja": "全ての#ジェムのレベル +シュラプネルバリスタ",
+      "en": "+# to Level of all Shrapnel Ballista Gems"
     },
     {
       "ja": "ソケットされたジェムはレベル#ヒット時ライフ獲得によりサポートされる",
       "en": "Socketed Gems are Supported by Level # Life Gain on Hit"
+    },
+    {
+      "ja": "全ての#ジェムのレベル +ブラストレイン",
+      "en": "+# to Level of all Blast Rain Gems"
     },
     {
       "ja": "プレイヤーはブラッドマジックを獲得する",
@@ -157013,28 +157015,28 @@ var JpPoeUtils = (() => {
       "en": "+# to Level of all Freezing Pulse Gems"
     },
     {
-      "ja": "全ての#ジェムのレベル +ピュリティオブファイヤー",
-      "en": "+# to Level of all Purity of Fire Gems"
-    },
-    {
       "ja": "ソケットされたジェムはレベル#盲目によりサポートされる",
       "en": "Socketed Gems are Supported by Level # Blind"
     },
     {
-      "ja": "全ての#ジェムのレベル +ピュリファイングフレイム",
-      "en": "+# to Level of all Purifying Flame Gems"
+      "ja": "全ての#ジェムのレベル +ピュリティオブファイヤー",
+      "en": "+# to Level of all Purity of Fire Gems"
+    },
+    {
+      "ja": "全ての#ジェムのレベル +カオスゴーレム召喚",
+      "en": "+# to Level of all Summon Chaos Golem Gems"
     },
     {
       "ja": "全ての#ジェムのレベル +ランシングスティール",
       "en": "+# to Level of all Lancing Steel Gems"
     },
     {
-      "ja": "全ての#ジェムのレベル +ピュリティオブエレメンツ",
-      "en": "+# to Level of all Purity of Elements Gems"
+      "ja": "全ての#ジェムのレベル +ピュリファイングフレイム",
+      "en": "+# to Level of all Purifying Flame Gems"
     },
     {
-      "ja": "全ての#ジェムのレベル +カオスゴーレム召喚",
-      "en": "+# to Level of all Summon Chaos Golem Gems"
+      "ja": "全ての#ジェムのレベル +ピュリティオブエレメンツ",
+      "en": "+# to Level of all Purity of Elements Gems"
     },
     {
       "ja": "全ての#ジェムのレベル +ストームレイン",
@@ -157069,12 +157071,12 @@ var JpPoeUtils = (() => {
       "en": "+# to Level of all Kinetic Bolt Gems"
     },
     {
-      "ja": "全ての#ジェムのレベル +コンセクレイテッドパス",
-      "en": "+# to Level of all Consecrated Path Gems"
-    },
-    {
       "ja": "全ての#ジェムのレベル +ヘイトレッド",
       "en": "+# to Level of all Hatred Gems"
+    },
+    {
+      "ja": "全ての#ジェムのレベル +コンセクレイテッドパス",
+      "en": "+# to Level of all Consecrated Path Gems"
     },
     {
       "ja": "全ての#ジェムのレベル +ラース",
@@ -157137,24 +157139,24 @@ var JpPoeUtils = (() => {
       "en": "Socketed Gems are Supported by Level # Urgent Orders"
     },
     {
-      "ja": "全ての#ジェムのレベル +テクトニックスラム",
-      "en": "+# to Level of all Tectonic Slam Gems"
-    },
-    {
       "ja": "全ての#ジェムのレベル +コンテージョン",
       "en": "+# to Level of all Contagion Gems"
+    },
+    {
+      "ja": "全ての#ジェムのレベル +テクトニックスラム",
+      "en": "+# to Level of all Tectonic Slam Gems"
     },
     {
       "ja": "全ての#ジェムのレベル +デセクレート",
       "en": "+# to Level of all Desecrate Gems"
     },
     {
-      "ja": "全ての#ジェムのレベル +デュアルストライク",
-      "en": "+# to Level of all Dual Strike Gems"
-    },
-    {
       "ja": "召喚したアルバリストは#%の確率で凍結を付与する",
       "en": "Summoned Arbalists have #% chance to Freeze"
+    },
+    {
+      "ja": "全ての#ジェムのレベル +デュアルストライク",
+      "en": "+# to Level of all Dual Strike Gems"
     },
     {
       "ja": "全ての#ジェムのレベル +スペクトラルヘリックス",
@@ -157165,12 +157167,12 @@ var JpPoeUtils = (() => {
       "en": "Summoned Arbalists have #% chance to Ignite"
     },
     {
-      "ja": "全ての#ジェムのレベル +イグザングイネイト",
-      "en": "+# to Level of all Exsanguinate Gems"
-    },
-    {
       "ja": "ソケットされたジェムはレベル#フレッシュミートによりサポートされる",
       "en": "Socketed Gems are Supported by Level # Fresh Meat"
+    },
+    {
+      "ja": "全ての#ジェムのレベル +イグザングイネイト",
+      "en": "+# to Level of all Exsanguinate Gems"
     },
     {
       "ja": "全ての#ジェムのレベル +ペトリファイドブラッド",
@@ -157185,32 +157187,32 @@ var JpPoeUtils = (() => {
       "en": "+# to Level of all Punishment Gems"
     },
     {
-      "ja": "蘇生したスペクターのクリティカルストライク率が+#%される",
-      "en": "Raised Spectres have +#% to Critical Strike Chance"
-    },
-    {
       "ja": "パワーチャージが最大数の時にスペルによるヒット時に#%の確率でアーケインサージを獲得する",
       "en": "#% chance to Gain Arcane Surge on Hit with Spells while at maximum Power Charges"
-    },
-    {
-      "ja": "全ての#ジェムのレベル +シーリングボンド",
-      "en": "+# to Level of all Searing Bond Gems"
     },
     {
       "ja": "全ての#ジェムのレベル +フレームスローワートラップ",
       "en": "+# to Level of all Flamethrower Trap Gems"
     },
     {
+      "ja": "全ての#ジェムのレベル +シーリングボンド",
+      "en": "+# to Level of all Searing Bond Gems"
+    },
+    {
+      "ja": "蘇生したスペクターのクリティカルストライク率が+#%される",
+      "en": "Raised Spectres have +#% to Critical Strike Chance"
+    },
+    {
       "ja": "全ての#ジェムのレベル +マナボンド",
       "en": "+# to Level of all Manabond Gems"
     },
     {
-      "ja": "ソケットされたジェムはレベル#スタンによりサポートされる",
-      "en": "Socketed Gems are Supported by Level # Stun"
-    },
-    {
       "ja": "ソケットされたジェムはレベル#ヒット時呪印によりサポートされる",
       "en": "Socketed Gems are Supported by Level # Mark On Hit"
+    },
+    {
+      "ja": "ソケットされたジェムはレベル#スタンによりサポートされる",
+      "en": "Socketed Gems are Supported by Level # Stun"
     },
     {
       "ja": "ソケットされたジェムはレベル#スペルブレードによりサポートされる",
@@ -157221,24 +157223,20 @@ var JpPoeUtils = (() => {
       "en": "+# to Level of all Barrage Gems"
     },
     {
-      "ja": "全ての#ジェムのレベル +ヴィジラントストライク",
-      "en": "+# to Level of all Vigilant Strike Gems"
-    },
-    {
       "ja": "全ての#ジェムのレベル +アンガー",
       "en": "+# to Level of all Anger Gems"
     },
     {
-      "ja": "全ての#ジェムのレベル +フレンジー",
-      "en": "+# to Level of all Frenzy Gems"
+      "ja": "全ての#ジェムのレベル +ヴィジラントストライク",
+      "en": "+# to Level of all Vigilant Strike Gems"
     },
     {
       "ja": "このグラフトにより使用されるスキルは#%の確率で使用時にクールダウン使用回数を消費しない",
       "en": "Skills used by this Graft have #% chance to not consume a Cooldown on use"
     },
     {
-      "ja": "全ての#ジェムのレベル +サンダー",
-      "en": "+# to Level of all Sunder Gems"
+      "ja": "全ての#ジェムのレベル +フレンジー",
+      "en": "+# to Level of all Frenzy Gems"
     },
     {
       "ja": "全ての#ジェムのレベル +ガルヴァニックフィールド",
@@ -157247,6 +157245,10 @@ var JpPoeUtils = (() => {
     {
       "ja": "ソケットされたジェムはレベル#守護者のブレッシングによりサポートされる",
       "en": "Socketed Gems are Supported by Level # Guardian's Blessing"
+    },
+    {
+      "ja": "全ての#ジェムのレベル +サンダー",
+      "en": "+# to Level of all Sunder Gems"
     },
     {
       "ja": "全てのプレイヤーはフラスコ使用中に猛攻を獲得する",
@@ -157285,20 +157287,20 @@ var JpPoeUtils = (() => {
       "en": "Area contains a Bearers of the Guardian Bloodline Pack"
     },
     {
-      "ja": "全ての#ジェムのレベル +ヘラルドオブアイス",
-      "en": "+# to Level of all Herald of Ice Gems"
-    },
-    {
       "ja": "全ての#ジェムのレベル +パンクチャー",
       "en": "+# to Level of all Puncture Gems"
     },
     {
-      "ja": "全ての#ジェムのレベル +ストームバインド",
-      "en": "+# to Level of all Stormbind Gems"
+      "ja": "全ての#ジェムのレベル +ヘラルドオブアイス",
+      "en": "+# to Level of all Herald of Ice Gems"
     },
     {
       "ja": "全ての#ジェムのレベル +ソードストーム",
       "en": "+# to Level of all Swordstorm Gems"
+    },
+    {
+      "ja": "全ての#ジェムのレベル +ストームバインド",
+      "en": "+# to Level of all Stormbind Gems"
     },
     {
       "ja": "召喚したアルバリストは#%の確率で感電を付与する",
@@ -157313,24 +157315,24 @@ var JpPoeUtils = (() => {
       "en": "+# to Level of all Shield Charge Gems"
     },
     {
-      "ja": "全ての#ジェムのレベル +スペクター蘇生",
-      "en": "+# to Level of all Raise Spectre Gems"
-    },
-    {
       "ja": "全ての#ジェムのレベル +クリーヴ",
       "en": "+# to Level of all Cleave Gems"
+    },
+    {
+      "ja": "全ての#ジェムのレベル +スペクター蘇生",
+      "en": "+# to Level of all Raise Spectre Gems"
     },
     {
       "ja": "全ての#ジェムのレベル +スコーチングレイ",
       "en": "+# to Level of all Scorching Ray Gems"
     },
     {
-      "ja": "全ての#ジェムのレベル +スプリットアロー",
-      "en": "+# to Level of all Split Arrow Gems"
-    },
-    {
       "ja": "ソケットされたスキルジェムの品質 +#%",
       "en": "+#% to Quality of Socketed Skill Gems"
+    },
+    {
+      "ja": "全ての#ジェムのレベル +スプリットアロー",
+      "en": "+# to Level of all Split Arrow Gems"
     },
     {
       "ja": "ソケットされたジェムはレベル#熟練の報復によりサポートされる",
@@ -157397,12 +157399,12 @@ var JpPoeUtils = (() => {
       "en": "+# to Level of all Precision Gems"
     },
     {
-      "ja": "全ての#ジェムのレベル +ラリイングクライ",
-      "en": "+# to Level of all Rallying Cry Gems"
-    },
-    {
       "ja": "全ての#ジェムのレベル +ブラッドアンドサンド",
       "en": "+# to Level of all Blood and Sand Gems"
+    },
+    {
+      "ja": "全ての#ジェムのレベル +ラリイングクライ",
+      "en": "+# to Level of all Rallying Cry Gems"
     },
     {
       "ja": "全ての#ジェムのレベル +アルケミストの呪印",
@@ -157421,12 +157423,12 @@ var JpPoeUtils = (() => {
       "en": "+# to Level of all Temporal Rift Gems"
     },
     {
-      "ja": "全ての#ジェムのレベル +アンセストラルクライ",
-      "en": "+# to Level of all Ancestral Cry Gems"
-    },
-    {
       "ja": "フレンジーチャージが最大数の時にヒット時に#%の確率で猛攻を4秒間獲得する",
       "en": "#% chance to Gain Onslaught for 4 seconds on Hit while at maximum Frenzy Charges"
+    },
+    {
+      "ja": "全ての#ジェムのレベル +アンセストラルクライ",
+      "en": "+# to Level of all Ancestral Cry Gems"
     },
     {
       "ja": "全ての#ジェムのレベル +フレイムサージ",
@@ -157449,32 +157451,36 @@ var JpPoeUtils = (() => {
       "en": "+# to Level of all Summon Flame Golem Gems"
     },
     {
-      "ja": "全ての#ジェムのレベル +ウォーバナー",
-      "en": "+# to Level of all War Banner Gems"
-    },
-    {
       "ja": "全ての#ジェムのレベル +エンデュアリングクライ",
       "en": "+# to Level of all Enduring Cry Gems"
     },
     {
-      "ja": "全ての#ジェムのレベル +リジュヴェネーショントーテム",
-      "en": "+# to Level of all Rejuvenation Totem Gems"
-    },
-    {
-      "ja": "全ての#ジェムのレベル +ブランドリコール",
-      "en": "+# to Level of all Brand Recall Gems"
+      "ja": "全ての#ジェムのレベル +ウォーバナー",
+      "en": "+# to Level of all War Banner Gems"
     },
     {
       "ja": "全ての#ジェムのレベル +アイスゴーレム召喚",
       "en": "+# to Level of all Summon Ice Golem Gems"
     },
     {
+      "ja": "全ての#ジェムのレベル +ブランドリコール",
+      "en": "+# to Level of all Brand Recall Gems"
+    },
+    {
       "ja": "全ての#ジェムのレベル +インファーナルクライ",
       "en": "+# to Level of all Infernal Cry Gems"
     },
     {
+      "ja": "全ての#ジェムのレベル +リジュヴェネーショントーテム",
+      "en": "+# to Level of all Rejuvenation Totem Gems"
+    },
+    {
       "ja": "全ての#ジェムのレベル +ヴォイドスフィア",
       "en": "+# to Level of all Void Sphere Gems"
+    },
+    {
+      "ja": "全ての#ジェムのレベル +フレッシュアンドストーン",
+      "en": "+# to Level of all Flesh and Stone Gems"
     },
     {
       "ja": "全ての#ジェムのレベル +フレッシュオファリング",
@@ -157485,20 +157491,16 @@ var JpPoeUtils = (() => {
       "en": "+# to Level of all Wither Gems"
     },
     {
-      "ja": "全ての#ジェムのレベル +フレッシュアンドストーン",
-      "en": "+# to Level of all Flesh and Stone Gems"
-    },
-    {
       "ja": "ローグエグザイルは基礎カレンシーアイテムを追加で#個ドロップする",
       "en": "Rogue Exiles drop # additional Basic Currency Items"
     },
     {
-      "ja": "全ての#ジェムのレベル +インティミデーティングクライ",
-      "en": "+# to Level of all Intimidating Cry Gems"
-    },
-    {
       "ja": "このグラフトが使用するプリザービングスティルネスは全ての元素耐性の最大値 +#%も付与する",
       "en": "Preserving Stillness used by this Graft also grants +#% to all maximum Elemental Resistances"
+    },
+    {
+      "ja": "全ての#ジェムのレベル +インティミデーティングクライ",
+      "en": "+# to Level of all Intimidating Cry Gems"
     },
     {
       "ja": "全ての#ジェムのレベル +アサシンの呪印",
@@ -157549,28 +157551,28 @@ var JpPoeUtils = (() => {
       "en": "Gain #% of Maximum Life as Extra Maximum Energy Shield if no Equipped Items are Corrupted"
     },
     {
-      "ja": "全ての#ジェムのレベル +ウォーロードの呪印",
-      "en": "+# to Level of all Warlord's Mark Gems"
-    },
-    {
-      "ja": "全ての#ジェムのレベル +アークティックアーマー",
-      "en": "+# to Level of all Arctic Armour Gems"
+      "ja": "全ての#ジェムのレベル +モルテンシェル",
+      "en": "+# to Level of all Molten Shell Gems"
     },
     {
       "ja": "ソケットされたジェムはレベル#エンパワーによりサポートされる",
       "en": "Socketed Gems are Supported by Level # Empower"
     },
     {
-      "ja": "全ての#ジェムのレベル +モルテンシェル",
-      "en": "+# to Level of all Molten Shell Gems"
+      "ja": "全ての#ジェムのレベル +アークティックアーマー",
+      "en": "+# to Level of all Arctic Armour Gems"
     },
     {
-      "ja": "全ての#ジェムのレベル +グレース",
-      "en": "+# to Level of all Grace Gems"
+      "ja": "全ての#ジェムのレベル +ウォーロードの呪印",
+      "en": "+# to Level of all Warlord's Mark Gems"
     },
     {
       "ja": "全ての#ジェムのレベル +ヴァンピリックリンク",
       "en": "+# to Level of all Vampiric Link Gems"
+    },
+    {
+      "ja": "全ての#ジェムのレベル +グレース",
+      "en": "+# to Level of all Grace Gems"
     },
     {
       "ja": "全ての#ジェムのレベル +ヴェンジフルクライ",
@@ -157585,12 +157587,12 @@ var JpPoeUtils = (() => {
       "en": "+# to Level of all Autoexertion Gems"
     },
     {
-      "ja": "ソケットされたジェムはレベル#マインフィールドによりサポートされる",
-      "en": "Socketed Gems are Supported by Level # Minefield"
-    },
-    {
       "ja": "全てのローグエグザイルはローグエグザイルの味方を伴っている",
       "en": "Rogue Exiles each have a Rogue Exile ally"
+    },
+    {
+      "ja": "ソケットされたジェムはレベル#マインフィールドによりサポートされる",
+      "en": "Socketed Gems are Supported by Level # Minefield"
     },
     {
       "ja": "ローグエグザイルはジュエルを追加で1個ドロップする",
@@ -157609,20 +157611,20 @@ var JpPoeUtils = (() => {
       "en": "+# to Level of all Crushing Fist Gems"
     },
     {
-      "ja": "ソケットされたジェムはレベル#リビングライトニングによりサポートされる",
-      "en": "Socketed Gems are Supported by Level # Living Lightning"
-    },
-    {
       "ja": "全ての#ジェムのレベル +スナイパーの呪印",
       "en": "+# to Level of all Sniper's Mark Gems"
     },
     {
-      "ja": "全ての#ジェムのレベル +テンポラルチェーン",
-      "en": "+# to Level of all Temporal Chains Gems"
+      "ja": "ソケットされたジェムはレベル#リビングライトニングによりサポートされる",
+      "en": "Socketed Gems are Supported by Level # Living Lightning"
     },
     {
       "ja": "全ての#ジェムのレベル +ピュリティオブアイス",
       "en": "+# to Level of all Purity of Ice Gems"
+    },
+    {
+      "ja": "全ての#ジェムのレベル +テンポラルチェーン",
+      "en": "+# to Level of all Temporal Chains Gems"
     },
     {
       "ja": "全ての#ジェムのレベル +ブレードトラップ",
@@ -157669,20 +157671,20 @@ var JpPoeUtils = (() => {
       "en": "+# to Level of all Immortal Call Gems"
     },
     {
-      "ja": "エリアにはプライマルハーベストボスが追加で1体出現する",
-      "en": "Area contains an additional Primal Harvest Boss"
-    },
-    {
       "ja": "全ての#ジェムのレベル +シギルオブパワー",
       "en": "+# to Level of all Sigil of Power Gems"
     },
     {
-      "ja": "全ての#ジェムのレベル +レイジヴォーテックス",
-      "en": "+# to Level of all Rage Vortex Gems"
+      "ja": "エリアにはプライマルハーベストボスが追加で1体出現する",
+      "en": "Area contains an additional Primal Harvest Boss"
     },
     {
       "ja": "全ての#ジェムのレベル +ディファイアンスバナー",
       "en": "+# to Level of all Defiance Banner Gems"
+    },
+    {
+      "ja": "全ての#ジェムのレベル +レイジヴォーテックス",
+      "en": "+# to Level of all Rage Vortex Gems"
     },
     {
       "ja": "全ての#ジェムのレベル +デコイトーテム",
@@ -157705,12 +157707,12 @@ var JpPoeUtils = (() => {
       "en": "+# to Level of all Arcane Cloak Gems"
     },
     {
-      "ja": "ランページキル15ごとに全てのプレイヤーの見つけるアイテムのレアリティが#%増加する",
-      "en": "Players have #% increased Rarity of Items Found per 15 Rampage Kills"
-    },
-    {
       "ja": "全ての#ジェムのレベル +スモークマイン",
       "en": "+# to Level of all Smoke Mine Gems"
+    },
+    {
+      "ja": "ランページキル15ごとに全てのプレイヤーの見つけるアイテムのレアリティが#%増加する",
+      "en": "Players have #% increased Rarity of Items Found per 15 Rampage Kills"
     },
     {
       "ja": "全ての#ジェムのレベル +リープスラム",
@@ -157725,12 +157727,12 @@ var JpPoeUtils = (() => {
       "en": "+# to Level of all Seismic Cry Gems"
     },
     {
-      "ja": "感電状態の時に雷スキルのマナコストが#%上昇する",
-      "en": "#% more Mana cost of Lightning Skills while Shocked"
-    },
-    {
       "ja": "全ての#ジェムのレベル +ドレッドバナー",
       "en": "+# to Level of all Dread Banner Gems"
+    },
+    {
+      "ja": "感電状態の時に雷スキルのマナコストが#%上昇する",
+      "en": "#% more Mana cost of Lightning Skills while Shocked"
     },
     {
       "ja": "全ての#ジェムのレベル +ベアトラップ",
@@ -157757,44 +157759,48 @@ var JpPoeUtils = (() => {
       "en": "+# to Level of all Bodyswap Gems"
     },
     {
-      "ja": "全てのプレイヤーはパワーチャージを獲得することができない",
-      "en": "Players cannot gain Power Charges"
-    },
-    {
       "ja": "全ての#ジェムのレベル +スティールスキン",
       "en": "+# to Level of all Steelskin Gems"
+    },
+    {
+      "ja": "全てのプレイヤーはパワーチャージを獲得することができない",
+      "en": "Players cannot gain Power Charges"
     },
     {
       "ja": "全ての#ジェムのレベル +ヘラルドオブピュリティ",
       "en": "+# to Level of all Herald of Purity Gems"
     },
     {
-      "ja": "ソケットされたジェムはレベル#ウィンドバーストによりサポートされる",
-      "en": "Socketed Gems are Supported by Level # Windburst"
-    },
-    {
       "ja": "このグラフトにより使用されるバイオレントデザイアは串刺しの効果+#%も付与する",
       "en": "Violent Desire used by this Graft grants +#% increased effect of Impale"
+    },
+    {
+      "ja": "ソケットされたジェムはレベル#ウィンドバーストによりサポートされる",
+      "en": "Socketed Gems are Supported by Level # Windburst"
     },
     {
       "ja": "全ての#ジェムのレベル +フロストウォール",
       "en": "+# to Level of all Frost Wall Gems"
     },
     {
-      "ja": "火、冷気または雷耐性の不足耐性1%ごとに元素ダメージが#%増加する、最大450%まで",
-      "en": "#% increased Elemental Damage per 1% Missing\nFire, Cold, or Lightning Resistance, up to a maximum of 450%"
+      "ja": "全ての#ジェムのレベル +チェーンフック",
+      "en": "+# to Level of all Chain Hook Gems"
     },
     {
       "ja": "全ての#ジェムのレベル +エンスネアリングアロー",
       "en": "+# to Level of all Ensnaring Arrow Gems"
     },
     {
-      "ja": "全ての#ジェムのレベル +チェーンフック",
-      "en": "+# to Level of all Chain Hook Gems"
+      "ja": "火、冷気または雷耐性の不足耐性1%ごとに元素ダメージが#%増加する、最大450%まで",
+      "en": "#% increased Elemental Damage per 1% Missing\nFire, Cold, or Lightning Resistance, up to a maximum of 450%"
     },
     {
       "ja": "このグラフトにより使用されるスキルはダメージが#%上昇する",
       "en": "Skills used by this Graft deal #% more Damage"
+    },
+    {
+      "ja": "メインハンド装備中に筋力#ごとに最大マナが1%増加する",
+      "en": "1% increased maximum Mana per # Strength when in Main Hand"
     },
     {
       "ja": "装備中のマジックフラスコは隣接するフラスコがなければプレイヤーに対する効果が#%増加する",
@@ -157805,16 +157811,12 @@ var JpPoeUtils = (() => {
       "en": "+# to Maximum Power Charges while affected by Discipline"
     },
     {
-      "ja": "メインハンド装備中に筋力#ごとに最大マナが1%増加する",
-      "en": "1% increased maximum Mana per # Strength when in Main Hand"
+      "ja": "ハイスト中に#%の確率でアイテムはエルダーインフルエンスの状態でドロップする",
+      "en": "#% chance in Heists for Items to drop with Elder Influence"
     },
     {
       "ja": "全ての#ジェムのレベル +コンヴァージョントラップ",
       "en": "+# to Level of all Conversion Trap Gems"
-    },
-    {
-      "ja": "ハイスト中に#%の確率でアイテムはエルダーインフルエンスの状態でドロップする",
-      "en": "#% chance in Heists for Items to drop with Elder Influence"
     },
     {
       "ja": "物理ダメージの#%がランダムな元素属性に変換される",
@@ -157853,12 +157855,12 @@ var JpPoeUtils = (() => {
       "en": "+# to Level of all Flame Dash Gems"
     },
     {
-      "ja": "全ての#ジェムのレベル +キネティックレイン",
-      "en": "+# to Level of all Kinetic Rain Gems"
-    },
-    {
       "ja": "全ての#ジェムのレベル +ピュリティオブライトニング",
       "en": "+# to Level of all Purity of Lightning Gems"
+    },
+    {
+      "ja": "全ての#ジェムのレベル +キネティックレイン",
+      "en": "+# to Level of all Kinetic Rain Gems"
     },
     {
       "ja": "モンスターは粉砕される",
@@ -157933,10 +157935,6 @@ var JpPoeUtils = (() => {
       "en": "+# to Level of all Bone Offering Gems"
     },
     {
-      "ja": "筋力10ごとにスペルダメージが#%増加する",
-      "en": "#% increased Spell Damage per 10 Strength"
-    },
-    {
       "ja": "エリアで最初に開けるストロングボックスを守るレアモンスターが1体追加される",
       "en": "The first Strongbox Opened in this Area is guarded by an additional Rare Monster"
     },
@@ -157945,16 +157943,20 @@ var JpPoeUtils = (() => {
       "en": "Players cannot Recharge Energy Shield"
     },
     {
+      "ja": "筋力10ごとにスペルダメージが#%増加する",
+      "en": "#% increased Spell Damage per 10 Strength"
+    },
+    {
       "ja": "全ての#ジェムのレベル +インテュイティブリンク",
       "en": "+# to Level of all Intuitive Link Gems"
     },
     {
-      "ja": "召喚したアルバリストは#%の確率でダブルダメージを与える",
-      "en": "Summoned Arbalists have #% chance to deal Double Damage"
-    },
-    {
       "ja": "フルエナジーシールド時のスペルダメージ抑制量 +#%",
       "en": "Prevent +#% of Suppressed Spell Damage while on Full Energy Shield"
+    },
+    {
+      "ja": "召喚したアルバリストは#%の確率でダブルダメージを与える",
+      "en": "Summoned Arbalists have #% chance to deal Double Damage"
     },
     {
       "ja": "全ての#ジェムのレベル +ガルヴァニックアロー",
@@ -157993,20 +157995,20 @@ var JpPoeUtils = (() => {
       "en": "#% increased Effect of Shocks you inflict during Effect"
     },
     {
-      "ja": "このグラフトにより使用されるスキルは稲妻を追加で1本落雷させる",
-      "en": "Skills used by this Graft cause an additional lightning bolt strike"
-    },
-    {
       "ja": "効果中はプレイヤーが付与した感電は#m以内の他の敵に伝染する",
       "en": "Shocks you inflict during Effect spread to other Enemies within # metre"
     },
     {
-      "ja": "ソケットされたジェムはレベル#祝福された呼び声によりサポートされる",
-      "en": "Socketed Gems are Supported by Level # Blessed Call"
-    },
-    {
       "ja": "エンデュランスチャージが最大数の時にアタックによるヒット時に#%の確率で敵を4秒間威嚇する",
       "en": "#% chance to Intimidate Enemies for 4 seconds on Hit with Attacks while at maximum Endurance Charges"
+    },
+    {
+      "ja": "このグラフトにより使用されるスキルは稲妻を追加で1本落雷させる",
+      "en": "Skills used by this Graft cause an additional lightning bolt strike"
+    },
+    {
+      "ja": "ソケットされたジェムはレベル#祝福された呼び声によりサポートされる",
+      "en": "Socketed Gems are Supported by Level # Blessed Call"
     },
     {
       "ja": "フルライフ時にダメージが#%増加する",
@@ -158041,16 +158043,16 @@ var JpPoeUtils = (() => {
       "en": "#% chance in Heists for Items to drop with Shaper Influence"
     },
     {
+      "ja": "ソケットされたジェムはレベル#ブラッドラストによりサポートされる",
+      "en": "Socketed Gems are Supported by Level # Bloodlust"
+    },
+    {
       "ja": "エナジーシールドがない時にダメージが#%増加する",
       "en": "#% increased Damage while you have no Energy Shield"
     },
     {
       "ja": "冷却の効果が#%増加する",
       "en": "#% increased Effect of Chill"
-    },
-    {
-      "ja": "ソケットされたジェムはレベル#ブラッドラストによりサポートされる",
-      "en": "Socketed Gems are Supported by Level # Bloodlust"
     },
     {
       "ja": "全ての#ジェムのレベル +サンダーストーム",
@@ -158081,24 +158083,24 @@ var JpPoeUtils = (() => {
       "en": "Items dropped by Rogue Exiles are fully Linked"
     },
     {
-      "ja": "エリアには白きヤマが出現する",
-      "en": "Area contains Yama the White"
-    },
-    {
       "ja": "全ての#ジェムのレベル +ライトニングスパイアトラップ",
       "en": "+# to Level of all Lightning Spire Trap Gems"
+    },
+    {
+      "ja": "エリアには白きヤマが出現する",
+      "en": "Area contains Yama the White"
     },
     {
       "ja": "全ての#ジェムのレベル +ウィザリングステップ",
       "en": "+# to Level of all Withering Step Gems"
     },
     {
-      "ja": "範囲内でスモールパッシブが#個割り当てられていれば、プレイヤーがレアモンスターを倒した時にそのモッドの内1個を20秒間獲得する",
-      "en": "With # Small Passives Allocated in Radius, When you Kill a Rare monster, you gain 1 of its Modifiers for 20 seconds"
-    },
-    {
       "ja": "エッセンスに囚われたモンスターのアクションスピードが#%減少する",
       "en": "Imprisoned Monsters have #% reduced Action Speed"
+    },
+    {
+      "ja": "範囲内でスモールパッシブが#個割り当てられていれば、プレイヤーがレアモンスターを倒した時にそのモッドの内1個を20秒間獲得する",
+      "en": "With # Small Passives Allocated in Radius, When you Kill a Rare monster, you gain 1 of its Modifiers for 20 seconds"
     },
     {
       "ja": "エッセンスに囚われたモンスターの受けるダメージが#%増加する",
@@ -158161,12 +158163,12 @@ var JpPoeUtils = (() => {
       "en": "Rightmost # Magic Utility Flask constantly applies its Flask Effect to you"
     },
     {
-      "ja": "ハイスト中は#%の確率で後悔のオーブの代わりに消去のオーブがドロップする",
-      "en": "#% chance in Heists for Orbs of Regret to drop as Orbs of Annulment instead"
-    },
-    {
       "ja": "シルバーコインを持つモンスターは基礎カレンシーを追加で1個ドロップする",
       "en": "Monsters with Silver Coins drop an additional Basic Currency Item"
+    },
+    {
+      "ja": "ハイスト中は#%の確率で後悔のオーブの代わりに消去のオーブがドロップする",
+      "en": "#% chance in Heists for Orbs of Regret to drop as Orbs of Annulment instead"
     },
     {
       "ja": "このグラフトにより付与されるジョルトは移動スピード#%増加を付与する",
@@ -158269,24 +158271,24 @@ var JpPoeUtils = (() => {
       "en": "#% reduced Chill Duration on you"
     },
     {
-      "ja": "彼女の祝福がある時に#%の確率で発火、冷却および凍結を無効化する",
-      "en": "#% chance to Avoid being Ignited, Chilled or Frozen with Her Blessing"
-    },
-    {
-      "ja": "プレイヤーが敵を発火させた時に#%の確率で彼女の祝福を3秒間獲得する",
-      "en": "#% chance to gain Her Blessing for 3 seconds when you Ignite an Enemy"
-    },
-    {
-      "ja": "彼女の祝福がある時にアタックスピードおよび移動スピードが#%増加する",
-      "en": "#% increased Attack and Movement Speed with Her Blessing"
+      "ja": "剣の物理ダメージの#%を追加火ダメージとして獲得する",
+      "en": "Gain #% of Sword Physical Damage as Extra Fire Damage"
     },
     {
       "ja": "彼女の祝福獲得時に#%の確率で近くの敵を盲目にする",
       "en": "#% chance to Blind nearby Enemies when gaining Her Blessing"
     },
     {
-      "ja": "剣の物理ダメージの#%を追加火ダメージとして獲得する",
-      "en": "Gain #% of Sword Physical Damage as Extra Fire Damage"
+      "ja": "彼女の祝福がある時にアタックスピードおよび移動スピードが#%増加する",
+      "en": "#% increased Attack and Movement Speed with Her Blessing"
+    },
+    {
+      "ja": "プレイヤーが敵を発火させた時に#%の確率で彼女の祝福を3秒間獲得する",
+      "en": "#% chance to gain Her Blessing for 3 seconds when you Ignite an Enemy"
+    },
+    {
+      "ja": "彼女の祝福がある時に#%の確率で発火、冷却および凍結を無効化する",
+      "en": "#% chance to Avoid being Ignited, Chilled or Frozen with Her Blessing"
     },
     {
       "ja": "このグラフトにより召喚されるミニオンはヒット時に#%の確率で挑発を付与する",
@@ -158357,12 +158359,12 @@ var JpPoeUtils = (() => {
       "en": "Enervating Grasp used by this Graft creates # additional Hand"
     },
     {
-      "ja": "蘇生したスペクターは全ての耐性の最大値が+#%される",
-      "en": "Raised Spectres have +#% to all maximum Resistances"
-    },
-    {
       "ja": "マレヴォレンスの影響を受けている時の冷気継続ダメージ倍率 +#%",
       "en": "+#% to Cold Damage over Time Multiplier while affected by Malevolence"
+    },
+    {
+      "ja": "蘇生したスペクターは全ての耐性の最大値が+#%される",
+      "en": "Raised Spectres have +#% to all maximum Resistances"
     },
     {
       "ja": "エリアには拷問された横領犯が出現する",
@@ -158409,12 +158411,12 @@ var JpPoeUtils = (() => {
       "en": "His Burning Message used by this Graft creates an additional geyser"
     },
     {
-      "ja": "プレイヤーの最大ライフ100ごとに継続ダメージが#%増加する",
-      "en": "Deal #% increased Damage Over Time per 100 Player Maximum Life"
-    },
-    {
       "ja": "キル時に#%の確率でカオムの霊魂召喚をトリガーする",
       "en": "#% chance to Trigger Summon Spirit of Kaom on Kill"
+    },
+    {
+      "ja": "プレイヤーの最大ライフ100ごとに継続ダメージが#%増加する",
+      "en": "Deal #% increased Damage Over Time per 100 Player Maximum Life"
     },
     {
       "ja": "このグラフトにより使用されるスキルはヒット時に#%の確率で敵を灰まみれにする",
@@ -158425,12 +158427,12 @@ var JpPoeUtils = (() => {
       "en": "#% chance to Trigger Summon Spirit of Tawhanuku on Kill"
     },
     {
-      "ja": "直近死体を消費していれば毎秒エナジーシールドの#%を自動回復する",
-      "en": "Regenerate #% of Energy Shield per second if you've Consumed a Corpse Recently"
-    },
-    {
       "ja": "直近プレイヤーが敵を倒していなければエナジーシールド回復レートが#%増加する",
       "en": "#% increased Energy Shield Recovery Rate if you haven't Killed Recently"
+    },
+    {
+      "ja": "直近死体を消費していれば毎秒エナジーシールドの#%を自動回復する",
+      "en": "Regenerate #% of Energy Shield per second if you've Consumed a Corpse Recently"
     },
     {
       "ja": "ハイスト中は#%の確率で改変のオーブの代わりに王者のオーブがドロップする",
@@ -158457,44 +158459,44 @@ var JpPoeUtils = (() => {
       "en": "#% chance to Trigger Summon Spirit of Ahuana on Kill"
     },
     {
-      "ja": "キル時に#%の確率でアコヤの霊魂召喚をトリガーする",
-      "en": "#% chance to Trigger Summon Spirit of Akoya on Kill"
-    },
-    {
       "ja": "マップにアルティメイタムエンカウンターが出現する確率が#%増加する",
       "en": "Your Maps have #% increased chance to contain an Ultimatum Encounter"
-    },
-    {
-      "ja": "キル時に#%の確率でラキアタの霊魂召喚をトリガーする",
-      "en": "#% chance to Trigger Summon Spirit of Rakiata on Kill"
     },
     {
       "ja": "エリアには拷問されたヴァールの崇拝者が出現する",
       "en": "Area contains a Tormented Vaal Cultist"
     },
     {
-      "ja": "ソケットされたスキルのアタックスピードが#%増加する",
-      "en": "Socketed Skills have #% increased Attack Speed"
+      "ja": "キル時に#%の確率でアコヤの霊魂召喚をトリガーする",
+      "en": "#% chance to Trigger Summon Spirit of Akoya on Kill"
     },
     {
-      "ja": "ソケットされたジェムは#%の確率で発火させる",
-      "en": "Socketed Gems have #% chance to Ignite"
+      "ja": "キル時に#%の確率でラキアタの霊魂召喚をトリガーする",
+      "en": "#% chance to Trigger Summon Spirit of Rakiata on Kill"
+    },
+    {
+      "ja": "ソケットされたスキルのアタックスピードが#%増加する",
+      "en": "Socketed Skills have #% increased Attack Speed"
     },
     {
       "ja": "エリアには拷問された扇動者が出現する",
       "en": "Area contains a Tormented Seditionist"
     },
     {
+      "ja": "ソケットされたジェムは#%の確率で発火させる",
+      "en": "Socketed Gems have #% chance to Ignite"
+    },
+    {
       "ja": "インベージョンボスは複製される",
       "en": "Invasion Bosses are Duplicated"
     },
     {
-      "ja": "マジックモンスターは重傷状態になる",
-      "en": "Magic Monsters are Maimed"
-    },
-    {
       "ja": "キル時に#%の確率でキロアヴァの霊魂召喚をトリガーする",
       "en": "#% chance to Trigger Summon Spirit of Kiloava on Kill"
+    },
+    {
+      "ja": "マジックモンスターは重傷状態になる",
+      "en": "Magic Monsters are Maimed"
     },
     {
       "ja": "マジックモンスターの受けるダメージが#%増加する",
@@ -158533,16 +158535,16 @@ var JpPoeUtils = (() => {
       "en": "Players are assaulted by apparitions of Drox, the Warlord"
     },
     {
-      "ja": "キル時に#%の確率でイキアホの霊魂召喚をトリガーする",
-      "en": "#% chance to Trigger Summon Spirit of Ikiaho on Kill"
-    },
-    {
       "ja": "ソケットされた混沌ジェムの品質 +#%",
       "en": "+#% to Quality of Socketed Chaos Gems"
     },
     {
       "ja": "このグラフトにより使用されるスキルは連鎖範囲が#%増加する",
       "en": "Skills used by this Graft have #% increased Chaining range"
+    },
+    {
+      "ja": "キル時に#%の確率でイキアホの霊魂召喚をトリガーする",
+      "en": "#% chance to Trigger Summon Spirit of Ikiaho on Kill"
     },
     {
       "ja": "直近プレイヤーが敵を倒していなければライフ回復レートが#%増加する",
@@ -158573,12 +158575,12 @@ var JpPoeUtils = (() => {
       "en": "Your Maps have #% increased chance to contain an Expedition Encounter"
     },
     {
-      "ja": "ヒットにより受ける物理ダメージ +#",
-      "en": "+# Physical Damage taken from Hits"
-    },
-    {
       "ja": "トーテムにより使用されるスキルのダメージの#%をライフとしてリーチする",
       "en": "#% of Damage Leeched as Life for Skills used by Totems"
+    },
+    {
+      "ja": "ヒットにより受ける物理ダメージ +#",
+      "en": "+# Physical Damage taken from Hits"
     },
     {
       "ja": "テンペストエフェクトの効果範囲が#%増加する",
@@ -158605,12 +158607,12 @@ var JpPoeUtils = (() => {
       "en": "#% of Damage against Shocked Enemies Leeched as Mana"
     },
     {
-      "ja": "クリティカルストライク時に#%の確率でアンホーリーマイトを4秒間獲得する",
-      "en": "#% chance to gain Unholy Might for 4 seconds on Critical Strike"
-    },
-    {
       "ja": "プレイヤー自身が受けるヒットは物理ダメージの#%を追加火ダメージとして獲得する",
       "en": "Hits against you gain #% of Physical Damage as Extra Fire Damage"
+    },
+    {
+      "ja": "クリティカルストライク時に#%の確率でアンホーリーマイトを4秒間獲得する",
+      "en": "#% chance to gain Unholy Might for 4 seconds on Critical Strike"
     },
     {
       "ja": "エリアは迷路である",
@@ -158625,32 +158627,32 @@ var JpPoeUtils = (() => {
       "en": "#% increased Mana Recovery Rate if you haven't Killed Recently"
     },
     {
-      "ja": "直近スペルダメージを抑制していなければスペルダメージ抑制用 +#%",
-      "en": "Prevent +#% of Suppressed Spell Damage if you have not Suppressed Spell Damage Recently"
-    },
-    {
       "ja": "この武器による近接ヒット時にレベル#ライトニングボルトをトリガーする、クールダウンは0.25秒",
       "en": "Trigger Level # Lightning Bolt on Melee Hit with this Weapon, with a 0.25 second cooldown"
+    },
+    {
+      "ja": "直近スペルダメージを抑制していなければスペルダメージ抑制用 +#%",
+      "en": "Prevent +#% of Suppressed Spell Damage if you have not Suppressed Spell Damage Recently"
     },
     {
       "ja": "マップにリージョンエンカウンターが出現する確率が#%増加する",
       "en": "Your Maps have #% increased chance to contain a Legion Encounter"
     },
     {
-      "ja": "マップに密輸人の貯蔵箱が出現する確率が#%増加する",
-      "en": "Your Maps have #% increased chance to contain a Smuggler's Cache"
-    },
-    {
-      "ja": "ハイストの敏捷さレベル +#",
-      "en": "+# to Agility Level for Heists"
-    },
-    {
       "ja": "ハイストの爆破レベル +#",
       "en": "+# to Demolition Level for Heists"
     },
     {
+      "ja": "マップに密輸人の貯蔵箱が出現する確率が#%増加する",
+      "en": "Your Maps have #% increased chance to contain a Smuggler's Cache"
+    },
+    {
       "ja": "マップにデリリウムの鏡が出現する確率が#%増加する",
       "en": "Your Maps have #% increased chance to contain a Mirror of Delirium"
+    },
+    {
+      "ja": "ハイストの敏捷さレベル +#",
+      "en": "+# to Agility Level for Heists"
     },
     {
       "ja": "マップに聖なる木立が出現する確率が#%増加する",
@@ -158661,24 +158663,24 @@ var JpPoeUtils = (() => {
       "en": "Area contains a Chayula Breach"
     },
     {
-      "ja": "ソケットされたジェムはレベル#エンハンスによりサポートされる",
-      "en": "Socketed Gems are Supported by Level # Enhance"
-    },
-    {
       "ja": "ハイスト中は#%の確率で増強のオーブの代わりに王者のオーブがドロップする",
       "en": "#% chance in Heists for Orbs of Augmentation to drop as Regal Orbs instead"
+    },
+    {
+      "ja": "ソケットされたジェムはレベル#エンハンスによりサポートされる",
+      "en": "Socketed Gems are Supported by Level # Enhance"
     },
     {
       "ja": "エリアが#%大きい",
       "en": "Area is #% larger"
     },
     {
-      "ja": "プレイヤー自身が受けるヒットに#から#の雷ダメージを追加する",
-      "en": "Adds # to # Lightning Damage to Hits against you"
-    },
-    {
       "ja": "筋力50ごとにスペルブロック率 +#%",
       "en": "+#% Chance to Block Spell Damage per 50 Strength"
+    },
+    {
+      "ja": "プレイヤー自身が受けるヒットに#から#の雷ダメージを追加する",
+      "en": "Adds # to # Lightning Damage to Hits against you"
     },
     {
       "ja": "マップにリチュアルの祭壇が出現する確率が#%増加する",
@@ -158757,12 +158759,12 @@ var JpPoeUtils = (() => {
       "en": "+# to Counter-Thaumaturgy Level for Heists"
     },
     {
-      "ja": "このグラフトにより使用されるテンダーエンブレイスが付与するバフは獲得した時にエンデュランスチャージを+#個付与する",
-      "en": "Buff granted by Tender Embrace used by this Graft grants +# Endurance Charge when gained"
-    },
-    {
       "ja": "このグラフトにより使用されるフォーリングクリスタルが放つ砲弾の数が追加で最大+#される",
       "en": "Falling Crystals used by this Graft fires up to # additional mortar"
+    },
+    {
+      "ja": "このグラフトにより使用されるテンダーエンブレイスが付与するバフは獲得した時にエンデュランスチャージを+#個付与する",
+      "en": "Buff granted by Tender Embrace used by this Graft grants +# Endurance Charge when gained"
     },
     {
       "ja": "マップにアルヴァが出現する確率が#%増加する",
@@ -158809,12 +158811,12 @@ var JpPoeUtils = (() => {
       "en": "Your Maps have +#% chance to be haunted by a Tormented Spirit"
     },
     {
-      "ja": "ロックダウン中に錠前破りを使用しても追加の時間がかからない",
-      "en": "Performing Lockpicking during Lockdown doesn't take additional time"
-    },
-    {
       "ja": "エリアには握る手のタリスマンが1個出現する",
       "en": "Area contains an additional Clutching Talisman"
+    },
+    {
+      "ja": "ロックダウン中に錠前破りを使用しても追加の時間がかからない",
+      "en": "Performing Lockpicking during Lockdown doesn't take additional time"
     },
     {
       "ja": "マップには+#%の確率でローグエグザイルが出現する",
@@ -158845,12 +158847,12 @@ var JpPoeUtils = (() => {
       "en": "An additional #% of Damage from Hits is taken from Heart of Flame Buff used by this Graft before Life or Energy Shield"
     },
     {
-      "ja": "ハイストの怪力レベル +#",
-      "en": "+# to Brute Force Level for Heists"
-    },
-    {
       "ja": "毒状態の敵に対して#から#の物理ダメージを追加する",
       "en": "Adds # to # Physical Damage against Poisoned Enemies"
+    },
+    {
+      "ja": "ハイストの怪力レベル +#",
+      "en": "+# to Brute Force Level for Heists"
     },
     {
       "ja": "ソケットされたトラップジェムのレベル +#",
@@ -158873,16 +158875,16 @@ var JpPoeUtils = (() => {
       "en": "Your Maps have +#% chance to contain an Imprisoned Monster"
     },
     {
-      "ja": "エリアのウォーバンドにはエリートメンバーが追加で1体含まれる",
-      "en": "Warbands in the Area have an additional Elite Member"
+      "ja": "ヒットにより受ける火、冷気および雷ダメージにアーマーの#%が適用される",
+      "en": "#% of Armour applies to Fire, Cold and Lightning Damage taken from Hits"
     },
     {
       "ja": "直近プレイヤーが敵をヒットしていれば毎秒エナジーシールドの#%を自動回復する",
       "en": "Regenerate #% of Energy Shield per second if you've Hit an Enemy Recently"
     },
     {
-      "ja": "ヒットにより受ける火、冷気および雷ダメージにアーマーの#%が適用される",
-      "en": "#% of Armour applies to Fire, Cold and Lightning Damage taken from Hits"
+      "ja": "エリアのウォーバンドにはエリートメンバーが追加で1体含まれる",
+      "en": "Warbands in the Area have an additional Elite Member"
     },
     {
       "ja": "プレイヤー自身が受けるヒットに#から#の火ダメージを追加する",
@@ -158893,12 +158895,12 @@ var JpPoeUtils = (() => {
       "en": "Performing Counter-Thaumaturgy during Lockdown doesn't take additional time"
     },
     {
-      "ja": "直近敵をヒットしていれば回避力 +#",
-      "en": "+# to Evasion Rating if Hit an Enemy Recently"
-    },
-    {
       "ja": "エリアには陶芸家のストロングボックスが出現する",
       "en": "Area contains an Arcanist's Strongbox"
+    },
+    {
+      "ja": "直近敵をヒットしていれば回避力 +#",
+      "en": "+# to Evasion Rating if Hit an Enemy Recently"
     },
     {
       "ja": "敵を倒した時に#%の確率でエンデュランスチャージを1個失う",
@@ -158925,12 +158927,12 @@ var JpPoeUtils = (() => {
       "en": "#% increased raising of Alert Level from Killing Monsters"
     },
     {
-      "ja": "直近死体を消費していれば毎秒マナの#%を自動回復する",
-      "en": "Regenerate #% of Mana per second if you've Consumed a corpse Recently"
-    },
-    {
       "ja": "呪いオーラスキルのリザーブが#%増加する",
       "en": "#% increased Reservation of Curse Aura Skills"
+    },
+    {
+      "ja": "直近死体を消費していれば毎秒マナの#%を自動回復する",
+      "en": "Regenerate #% of Mana per second if you've Consumed a corpse Recently"
     },
     {
       "ja": "ロックダウン中に怪力を使用しても追加の時間がかからない",
@@ -158941,40 +158943,40 @@ var JpPoeUtils = (() => {
       "en": "Area contains an Essence of Hysteria"
     },
     {
-      "ja": "レベル#ヴァ―ルインピュリティオブライトニングスキルを付与する",
-      "en": "Grants Level # Vaal Impurity of Lightning Skill"
-    },
-    {
       "ja": "いずれかのフラスコ効果中は#%の物理ダメージ軽減率追加",
       "en": "#% additional Physical Damage Reduction during any Flask Effect"
     },
     {
-      "ja": "直近プレイヤーが敵をヒットしていればアーマー +#",
-      "en": "+# to Armour if you've Hit an Enemy Recently"
+      "ja": "レベル#ヴァ―ルインピュリティオブライトニングスキルを付与する",
+      "en": "Grants Level # Vaal Impurity of Lightning Skill"
     },
     {
       "ja": "感電中はマナ自動回復レートが#%増加する",
       "en": "#% increased Mana Regeneration Rate while Shocked"
     },
     {
-      "ja": "全ての耐性 +#%",
-      "en": "+#% to All Resistances"
+      "ja": "直近プレイヤーが敵をヒットしていればアーマー +#",
+      "en": "+# to Armour if you've Hit an Enemy Recently"
     },
     {
       "ja": "#%上昇したダメージを与えたと仮定して敵を感電させる",
       "en": "Shock Enemies as though dealing #% more Damage"
     },
     {
+      "ja": "全ての耐性 +#%",
+      "en": "+#% to All Resistances"
+    },
+    {
       "ja": "ソケットされた冷気ジェムの品質 +#%",
       "en": "+#% to Quality of Socketed Cold Gems"
     },
     {
-      "ja": "モンスターのアタックスピード、キャストスピードおよび移動スピードが#%増加する",
-      "en": "Monsters have #% increased Attack, Cast and Movement Speed"
-    },
-    {
       "ja": "モンスターの付与する経験値が#%増加する",
       "en": "Monsters grant #% increased Experience"
+    },
+    {
+      "ja": "モンスターのアタックスピード、キャストスピードおよび移動スピードが#%増加する",
+      "en": "Monsters have #% increased Attack, Cast and Movement Speed"
     },
     {
       "ja": "スキル使用時に#%の確率でライフを犠牲にしないが犠牲にしたと仮定して恩恵を獲得できる",
@@ -158993,24 +158995,24 @@ var JpPoeUtils = (() => {
       "en": "#% chance to lose a Power Charge on Kill"
     },
     {
-      "ja": "アラートレベルの増え方が#%増加する",
-      "en": "#% increased raising of Alert Level"
-    },
-    {
       "ja": "エリアのブリーチにはブリーチロードが出現する",
       "en": "Breaches in Area each contain a Breachlord"
+    },
+    {
+      "ja": "アラートレベルの増え方が#%増加する",
+      "en": "#% increased raising of Alert Level"
     },
     {
       "ja": "レベル#ヴァ―ルインピュリティオブファイヤースキルを付与する",
       "en": "Grants Level # Vaal Impurity of Fire Skill"
     },
     {
-      "ja": "マップに出現するアビスの宝箱とスティギアンスパイアがドロップするアイテムのレアリティが#%増加する",
-      "en": "#% increased Rarity of Items Dropped by Abyssal Troves and Stygian Spires in your Maps"
-    },
-    {
       "ja": "ハイスト中は#%の確率で王者のオーブの代わりに古代のオーブがドロップする",
       "en": "#% chance in Heists for Regal Orbs to drop as Ancient Orbs instead"
+    },
+    {
+      "ja": "マップに出現するアビスの宝箱とスティギアンスパイアがドロップするアイテムのレアリティが#%増加する",
+      "en": "#% increased Rarity of Items Dropped by Abyssal Troves and Stygian Spires in your Maps"
     },
     {
       "ja": "インベージョンボスがドロップするアイテムはソケットを追加で1個持つ",
@@ -159061,16 +159063,16 @@ var JpPoeUtils = (() => {
       "en": "#% reduced Reflected Damage taken"
     },
     {
-      "ja": "スペルによるヒット時に#%の確率で敵を4秒間狼狽させる",
-      "en": "#% chance to Unnerve Enemies for 4 seconds on Hit with Spells"
-    },
-    {
       "ja": "器用さ2ごとに命中力 +#",
       "en": "+# to Accuracy Rating per 2 Dexterity"
     },
     {
       "ja": "堅牢化中のアーマー +#",
       "en": "+# to Armour while Fortified"
+    },
+    {
+      "ja": "スペルによるヒット時に#%の確率で敵を4秒間狼狽させる",
+      "en": "#% chance to Unnerve Enemies for 4 seconds on Hit with Spells"
     },
     {
       "ja": "マップに出現するはぐれローグエグザイルがドロップするアイテムのレアリティが#%増加する",
@@ -159085,12 +159087,12 @@ var JpPoeUtils = (() => {
       "en": "#% increased Damage taken if you've been Frozen Recently"
     },
     {
-      "ja": "このグラフトにより使用されるハートオブフレイムのバフが受けることができるダメージが#%上昇する",
-      "en": "Heart of Flame Buff used by this Graft can take #% more Damage"
-    },
-    {
       "ja": "エリアには三匹のネズミのタリスマンが1個出現する",
       "en": "Area contains an additional Three Rat Talisman"
+    },
+    {
+      "ja": "このグラフトにより使用されるハートオブフレイムのバフが受けることができるダメージが#%上昇する",
+      "en": "Heart of Flame Buff used by this Graft can take #% more Damage"
     },
     {
       "ja": "ソケットされたジェムはレベル#覚醒のミニオンダメージによりサポートされる",
@@ -159101,12 +159103,16 @@ var JpPoeUtils = (() => {
       "en": "#% increased Movement speed while on Burning, Chilled or Shocked ground"
     },
     {
+      "ja": "プレイヤーに対する凍結の効果が#%増加する",
+      "en": "#% increased Effect of Freeze on you"
+    },
+    {
       "ja": "敵撃破時に#%の確率でアラートレベルを上げない",
       "en": "#% chance on killing an Enemy to not generate Alert Level"
     },
     {
-      "ja": "プレイヤーに対する凍結の効果が#%増加する",
-      "en": "#% increased Effect of Freeze on you"
+      "ja": "ソケットされた火ジェムの品質 +#%",
+      "en": "+#% to Quality of Socketed Fire Gems"
     },
     {
       "ja": "ビヨンドからのユニークモンスターが最初に倒された時にビヨンドユニークが1個ドロップする",
@@ -159115,10 +159121,6 @@ var JpPoeUtils = (() => {
     {
       "ja": "フルライフ時にグローバル回避力が#%増加する",
       "en": "#% increased Global Evasion Rating when on Full Life"
-    },
-    {
-      "ja": "ソケットされた火ジェムの品質 +#%",
-      "en": "+#% to Quality of Socketed Fire Gems"
     },
     {
       "ja": "エリアには「内なる宝」のモッドを持つレアモンスターが1体出現する",
@@ -159161,12 +159163,12 @@ var JpPoeUtils = (() => {
       "en": "Socketed Gems are Supported by Level # Awakened Elemental Damage With Attacks"
     },
     {
-      "ja": "リーチによる秒間最大合計マナ回復量が#%増加する",
-      "en": "#% increased Maximum total Mana Recovery per second from Leech"
-    },
-    {
       "ja": "パトロールしている集団を殺すことによるアラートレベルの増え方が#%増加する",
       "en": "#% increased Alert Level from killing Patrol Packs"
+    },
+    {
+      "ja": "リーチによる秒間最大合計マナ回復量が#%増加する",
+      "en": "#% increased Maximum total Mana Recovery per second from Leech"
     },
     {
       "ja": "ソケットされたジェムはレベル#ヴォラティリティによりサポートされる",
@@ -159193,20 +159195,20 @@ var JpPoeUtils = (() => {
       "en": "Socketed Gems are Supported by Level # Awakened Melee Splash"
     },
     {
-      "ja": "マップに出現するストロングボックスが宝石細工師のストロングボックスである確率が#%増加する",
-      "en": "Strongboxes in your Maps have #% increased chance to be a Gemcutter's Strongbox"
+      "ja": "直近プレイヤーがヒットを受けていなければアタックスピードおよびキャストスピードが#%増加する",
+      "en": "#% increased Attack and Cast Speed if you haven't been Hit Recently"
     },
     {
       "ja": "ソケットされたジェムはレベル#覚醒の近接物理ダメージによりサポートされる",
       "en": "Socketed Gems are Supported by Level # Awakened Melee Physical Damage"
     },
     {
-      "ja": "ソケットされたジェムはレベル#覚醒のマルチストライクによりサポートされる",
-      "en": "Socketed Gems are Supported by Level # Awakened Multistrike"
+      "ja": "マップに出現するストロングボックスが宝石細工師のストロングボックスである確率が#%増加する",
+      "en": "Strongboxes in your Maps have #% increased chance to be a Gemcutter's Strongbox"
     },
     {
-      "ja": "直近プレイヤーがヒットを受けていなければアタックスピードおよびキャストスピードが#%増加する",
-      "en": "#% increased Attack and Cast Speed if you haven't been Hit Recently"
+      "ja": "ソケットされたジェムはレベル#覚醒のマルチストライクによりサポートされる",
+      "en": "Socketed Gems are Supported by Level # Awakened Multistrike"
     },
     {
       "ja": "マップに出現するアルティメイタム報酬が宝飾品になる確率が#%増加する",
@@ -159229,56 +159231,64 @@ var JpPoeUtils = (() => {
       "en": "Socketed Gems are Supported by Level # Barrage"
     },
     {
-      "ja": "ソケットされたジェムはレベル#覚醒の雷耐性貫通によりサポートされる",
-      "en": "Socketed Gems are Supported by Level # Awakened Lightning Penetration"
-    },
-    {
       "ja": "エリアには地図製作者のストロングボックスが出現する",
       "en": "Area contains a Cartographer's Strongbox"
     },
     {
-      "ja": "エリアにはユニークタリスマンが1個出現する",
-      "en": "Area contains an additional Unique Talisman"
-    },
-    {
-      "ja": "ソケットされたジェムはレベル#クルエルティによりサポートされる",
-      "en": "Socketed Gems are Supported by Level # Cruelty"
+      "ja": "ソケットされたジェムはレベル#覚醒の雷耐性貫通によりサポートされる",
+      "en": "Socketed Gems are Supported by Level # Awakened Lightning Penetration"
     },
     {
       "ja": "ソケットされたジェムはレベル#グレーターマルチストライクによりサポートされる",
       "en": "Socketed Gems are Supported by Level # Greater Multistrike"
     },
     {
-      "ja": "ソケットされたジェムはレベル#法則反転によりサポートされる",
-      "en": "Socketed Gems are Supported by Level # Invert the Rules"
+      "ja": "ソケットされたジェムはレベル#クルエルティによりサポートされる",
+      "en": "Socketed Gems are Supported by Level # Cruelty"
     },
     {
-      "ja": "ソケットされたジェムはレベル#覚醒のボイド操作によりサポートされる",
-      "en": "Socketed Gems are Supported by Level # Awakened Void Manipulation"
+      "ja": "エリアにはユニークタリスマンが1個出現する",
+      "en": "Area contains an additional Unique Talisman"
+    },
+    {
+      "ja": "ソケットされたジェムはレベル#法則反転によりサポートされる",
+      "en": "Socketed Gems are Supported by Level # Invert the Rules"
     },
     {
       "ja": "雷ダメージの#%をライフとして敵がリーチする",
       "en": "#% of Lightning Damage Leeched by Enemy as Life"
     },
     {
+      "ja": "ソケットされたジェムはレベル#覚醒のボイド操作によりサポートされる",
+      "en": "Socketed Gems are Supported by Level # Awakened Void Manipulation"
+    },
+    {
       "ja": "フォーカス中はダメージの#%をライフとして敵がリーチする",
       "en": "#% of Damage Leeched by Enemy as Life while Focused"
-    },
-    {
-      "ja": "ソケットされたジェムはレベル#信徒の集団によりサポートされる",
-      "en": "Socketed Gems are Supported by Level # Congregation"
-    },
-    {
-      "ja": "ソケットされたジェムはレベル#覚醒のグレーター投射物追加によりサポートされる",
-      "en": "Socketed Gems are Supported by Level # Awakened Greater Multiple Projectiles"
     },
     {
       "ja": "マップに出現するストロングボックスから得られるジェムは複製される",
       "en": "Gems contained in Strongboxes in your Maps are Duplicated"
     },
     {
+      "ja": "ソケットされたジェムはレベル#覚醒のグレーター投射物追加によりサポートされる",
+      "en": "Socketed Gems are Supported by Level # Awakened Greater Multiple Projectiles"
+    },
+    {
+      "ja": "ソケットされたジェムはレベル#信徒の集団によりサポートされる",
+      "en": "Socketed Gems are Supported by Level # Congregation"
+    },
+    {
       "ja": "ソケットされたジェムはレベル#グレーター分岐によりサポートされる",
       "en": "Socketed Gems are Supported by Level # Greater Fork"
+    },
+    {
+      "ja": "ソケットされたジェムはレベル#覚醒の凶悪な投射物によりサポートされる",
+      "en": "Socketed Gems are Supported by Level # Awakened Vicious Projectiles"
+    },
+    {
+      "ja": "ソケットされたジェムはレベル#覚醒の状態異常解放によりサポートされる",
+      "en": "Socketed Gems are Supported by Level # Awakened Unbound Ailments"
     },
     {
       "ja": "マップに出現するデリリウムの霧は晴れることがない\nマップではシミュラクラムスプリンターが見つかることがない\nマップに出現するデリリウムエンカウンターは報酬タイプを持たない",
@@ -159289,32 +159299,8 @@ var JpPoeUtils = (() => {
       "en": "Socketed Gems are Supported by Level # Item Quantity"
     },
     {
-      "ja": "ソケットされたジェムはレベル#覚醒の状態異常解放によりサポートされる",
-      "en": "Socketed Gems are Supported by Level # Awakened Unbound Ailments"
-    },
-    {
-      "ja": "ソケットされたジェムはレベル#覚醒の凶悪な投射物によりサポートされる",
-      "en": "Socketed Gems are Supported by Level # Awakened Vicious Projectiles"
-    },
-    {
-      "ja": "ソケットされたジェムはレベル#ブロック率減少によりサポートされる",
-      "en": "Socketed Gems are Supported by Level # Block Chance Reduction"
-    },
-    {
-      "ja": "ソケットされたジェムはレベル#覚醒のスウィフトアフリクションによりサポートされる",
-      "en": "Socketed Gems are Supported by Level # Awakened Swift Affliction"
-    },
-    {
       "ja": "#%の確率でノックバックを無効化する",
       "en": "#% chance to Avoid being Knocked Back"
-    },
-    {
-      "ja": "ソケットされたジェムはレベル#覚醒の燃焼ダメージによりサポートされる",
-      "en": "Socketed Gems are Supported by Level # Awakened Burning Damage"
-    },
-    {
-      "ja": "ソケットされたジェムはレベル#覚醒の連鎖によりサポートされる",
-      "en": "Socketed Gems are Supported by Level # Awakened Chain"
     },
     {
       "ja": "ソケットされたジェムはレベル#グレーターアンリーシュによりサポートされる",
@@ -159325,24 +159311,40 @@ var JpPoeUtils = (() => {
       "en": "Socketed Gems are Supported by Level # Awakened Fork"
     },
     {
+      "ja": "ソケットされたジェムはレベル#覚醒の燃焼ダメージによりサポートされる",
+      "en": "Socketed Gems are Supported by Level # Awakened Burning Damage"
+    },
+    {
+      "ja": "ソケットされたジェムはレベル#ブロック率減少によりサポートされる",
+      "en": "Socketed Gems are Supported by Level # Block Chance Reduction"
+    },
+    {
+      "ja": "ソケットされたジェムはレベル#覚醒の連鎖によりサポートされる",
+      "en": "Socketed Gems are Supported by Level # Awakened Chain"
+    },
+    {
       "ja": "ソケットされたジェムはレベル#覚醒の元素集束によりサポートされる",
       "en": "Socketed Gems are Supported by Level # Awakened Elemental Focus"
     },
     {
-      "ja": "ソケットされたジェムはレベル#ミニオンパクトによりサポートされる",
-      "en": "Socketed Gems are Supported by Level # Minion Pact"
-    },
-    {
-      "ja": "ソケットされたジェムはレベル#グレータースペルエコーによりサポートされる",
-      "en": "Socketed Gems are Supported by Level # Greater Spell Echo"
+      "ja": "ソケットされたジェムはレベル#覚醒のスウィフトアフリクションによりサポートされる",
+      "en": "Socketed Gems are Supported by Level # Awakened Swift Affliction"
     },
     {
       "ja": "ソケットされたジェムはレベル#覚醒の状態異常特化によりサポートされる",
       "en": "Socketed Gems are Supported by Level # Awakened Deadly Ailments"
     },
     {
+      "ja": "ソケットされたジェムはレベル#覚醒の冒涜によりサポートされる",
+      "en": "Socketed Gems are Supported by Level # Awakened Blasphemy"
+    },
+    {
       "ja": "ソケットされたジェムはレベル#覚醒の雷ダメージ追加によりサポートされる",
       "en": "Socketed Gems are Supported by Level # Awakened Added Lightning Damage"
+    },
+    {
+      "ja": "ソケットされたジェムはレベル#ミニオンパクトによりサポートされる",
+      "en": "Socketed Gems are Supported by Level # Minion Pact"
     },
     {
       "ja": "ソケットされたジェムはレベル#ヴォイドショックウェーブによりサポートされる",
@@ -159353,44 +159355,64 @@ var JpPoeUtils = (() => {
       "en": "Socketed Gems are Supported by Level # Spellblade"
     },
     {
-      "ja": "ソケットされたジェムはレベル#覚醒の冒涜によりサポートされる",
-      "en": "Socketed Gems are Supported by Level # Awakened Blasphemy"
-    },
-    {
-      "ja": "レベル#より高い要求レベルのモッドはロールされない",
-      "en": "Cannot roll Modifiers with Required Level above #"
-    },
-    {
-      "ja": "ソケットされたジェムはレベル#覚醒の混沌ダメージ追加によりサポートされる",
-      "en": "Socketed Gems are Supported by Level # Awakened Added Chaos Damage"
-    },
-    {
-      "ja": "ソケットされたジェムはレベル#ヘックストードによりサポートされる",
-      "en": "Socketed Gems are Supported by Level # Hextoad"
-    },
-    {
-      "ja": "プレイヤーがスキルを使用した時に#%の確率でマナの10%を失う",
-      "en": "#% chance to lose 10% of Mana when you use a Skill"
+      "ja": "ソケットされたジェムはレベル#グレータースペルエコーによりサポートされる",
+      "en": "Socketed Gems are Supported by Level # Greater Spell Echo"
     },
     {
       "ja": "ソケットされたジェムはレベル#殲滅によりサポートされる",
       "en": "Socketed Gems are Supported by Level # Annihilation"
     },
     {
+      "ja": "ソケットされたジェムはレベル#輸血によりサポートされる",
+      "en": "Socketed Gems are Supported by Level # Transfusion"
+    },
+    {
+      "ja": "ソケットされたジェムはレベル#ヘックストードによりサポートされる",
+      "en": "Socketed Gems are Supported by Level # Hextoad"
+    },
+    {
+      "ja": "ソケットされたジェムはレベル#覚醒の混沌ダメージ追加によりサポートされる",
+      "en": "Socketed Gems are Supported by Level # Awakened Added Chaos Damage"
+    },
+    {
+      "ja": "ソケットされたジェムはレベル#ワード破壊時キャストによりサポートされる",
+      "en": "Socketed Gems are Supported by Level # Cast on Ward Break"
+    },
+    {
       "ja": "マップに出現するアビスの宝箱およびスティギアンスパイアがドロップするアビスジュエルは#%の確率でレアおよびコラプト状態となる",
       "en": "Abyss Jewels dropped by Abyssal Troves or Stygian Spires in your Maps have a #% Chance to be Rare and Corrupted"
     },
     {
-      "ja": "ソケットされたジェムはレベル#覚醒のスペルエコーによりサポートされる",
-      "en": "Socketed Gems are Supported by Level # Awakened Spell Echo"
+      "ja": "ソケットされたジェムはレベル#ガーディアンズブレッシングによりサポートされる",
+      "en": "Socketed Gems are Supported by Level # Guardian's Blessing"
+    },
+    {
+      "ja": "プレイヤーがスキルを使用した時に#%の確率でマナの10%を失う",
+      "en": "#% chance to lose 10% of Mana when you use a Skill"
+    },
+    {
+      "ja": "混沌ダメージの#%をライフとして敵がリーチする",
+      "en": "#% of Chaos Damage Leeched by Enemy as Life"
+    },
+    {
+      "ja": "ソケットされたジェムはレベル#覚醒のエンパワーによりサポートされる",
+      "en": "Socketed Gems are Supported by Level # Awakened Empower"
     },
     {
       "ja": "敵に付与されている凍結、感電、発火の数1種類ごとにその敵へのヒットおよび状態異常のダメージが#%増加する",
       "en": "#% increased Damage with Hits and Ailments per Freeze, Shock or Ignite on Enemy"
     },
     {
-      "ja": "火ダメージの#%をライフとして敵がリーチする",
-      "en": "#% of Fire Damage Leeched by Enemy as Life"
+      "ja": "ソケットされたジェムはレベル#覚醒のアンリーシュによりサポートされる",
+      "en": "Socketed Gems are Supported by Level # Awakened Unleash"
+    },
+    {
+      "ja": "ソケットされたジェムはレベル#覚醒のスペルエコーによりサポートされる",
+      "en": "Socketed Gems are Supported by Level # Awakened Spell Echo"
+    },
+    {
+      "ja": "レベル#より高い要求レベルのモッドはロールされない",
+      "en": "Cannot roll Modifiers with Required Level above #"
     },
     {
       "ja": "マップで見つかるエッセンスは1ティア高くなる",
@@ -159401,380 +159423,60 @@ var JpPoeUtils = (() => {
       "en": "Socketed Gems are Supported by Level # Cull the Weak"
     },
     {
-      "ja": "ソケットされたジェムはレベル#覚醒のアンリーシュによりサポートされる",
-      "en": "Socketed Gems are Supported by Level # Awakened Unleash"
-    },
-    {
-      "ja": "ソケットされたジェムはレベル#覚醒のエンパワーによりサポートされる",
-      "en": "Socketed Gems are Supported by Level # Awakened Empower"
-    },
-    {
-      "ja": "ソケットされたジェムはレベル#ワード破壊時キャストによりサポートされる",
-      "en": "Socketed Gems are Supported by Level # Cast on Ward Break"
-    },
-    {
-      "ja": "ソケットされたジェムはレベル#輸血によりサポートされる",
-      "en": "Socketed Gems are Supported by Level # Transfusion"
-    },
-    {
-      "ja": "混沌ダメージの#%をライフとして敵がリーチする",
-      "en": "#% of Chaos Damage Leeched by Enemy as Life"
-    },
-    {
-      "ja": "ソケットされたジェムはレベル#ガーディアンズブレッシングによりサポートされる",
-      "en": "Socketed Gems are Supported by Level # Guardian's Blessing"
-    },
-    {
       "ja": "ソケットされたジェムはレベル#ディバインセンチネルによりサポートされる",
       "en": "Socketed Gems are Supported by Level # Divine Sentinel"
     },
     {
-      "ja": "マップでドロップするメタモルフのサンプルが報酬を持つ確率が#%増加する",
-      "en": "Metamorph Samples dropped in your Maps have #% increased chance to have a Reward"
+      "ja": "火ダメージの#%をライフとして敵がリーチする",
+      "en": "#% of Fire Damage Leeched by Enemy as Life"
     },
     {
-      "ja": "マップに出現するペランダスのチェストがカタログになる確率が#%増加する",
-      "en": "Perandus Chests in your Maps have #% increased chance to be Catalogues"
+      "ja": "ソケットされたジェムはレベル#覚醒の火耐性貫通によりサポートされる",
+      "en": "Socketed Gems are Supported by Level # Awakened Fire Penetration"
     },
     {
-      "ja": "モンスターは#%の確率で感電を無効化する",
-      "en": "Monsters have #% chance to Avoid being Shocked"
-    },
-    {
-      "ja": "ソケットされたジェムはレベル# 熟練の報復によりサポートされる",
-      "en": "Socketed Gems are Supported by Level # Expert Retaliation"
-    },
-    {
-      "ja": "マップで見つかるレアマップは#%の確率でコラプト状態になる",
-      "en": "Rare Maps found in your Maps have #% chance to be Corrupted"
-    },
-    {
-      "ja": "マップに出現するストロングボックスがユニークになる確率が#%増加する",
-      "en": "#% increased chance for Strongboxes in Area to be Unique"
-    },
-    {
-      "ja": "モンスターのヒットは#%の確率で感電を付与する",
-      "en": "Monsters' Hits have #% chance to Shock"
-    },
-    {
-      "ja": "マップに出現するペランダスのチェストが補給品である確率が#%増加する",
-      "en": "Perandus Chests in your Maps have #% increased chance to be Hoards"
-    },
-    {
-      "ja": "残り使用回数 #回",
-      "en": "# uses remaining"
-    },
-    {
-      "ja": "チェストのアイテムの数量が#%増加する",
-      "en": "Chests have #% increased Item Quantity"
-    },
-    {
-      "ja": "マップのマジックモンスターは#%の確率でレアの宝飾品アイテムを追加で1個ドロップする",
-      "en": "Magic Monsters in your Maps have #% chance to drop an additional Rare Jewellery Item"
-    },
-    {
-      "ja": "マップで見つかる神のオーブは#%の確率でフルスタックでドロップする",
-      "en": "Divine Orbs found in your Maps have #% chance to drop as a stack of 4 Divine Orbs instead"
-    },
-    {
-      "ja": "鍛えたアイテムは可能ならば売値を変更するクルーシブルパッシブスキルを持つ",
-      "en": "Forged Items have a Crucible Passive Skill that modifies the sell price of the Item if possible"
-    },
-    {
-      "ja": "マップはランダムなサフィックスを追加で#個持つ",
-      "en": "Map has # additional random Suffix"
-    },
-    {
-      "ja": "マップはランダムなプレフィックスを追加で#個持つ",
-      "en": "Map has # additional random Prefix"
-    },
-    {
-      "ja": "マップで見つかる鍛冶屋の砥石は#%の確率でフルスタックでドロップする",
-      "en": "Blacksmith's Whetstones found in your Maps have #% chance to drop as a full stack"
-    },
-    {
-      "ja": "マップで見つかるジェムは#%の確率で20%の品質を持つ",
-      "en": "Gems found in your Maps have #% chance to have 20% Quality"
-    },
-    {
-      "ja": "マップで見つかる高貴なオーブは#%の確率で高貴なオーブ3個としてドロップする",
-      "en": "#% chance for Exalted Orbs to drop as 3 Exalted Orbs instead in your Maps"
-    },
-    {
-      "ja": "マップでは#%の確率でマップの代わりにランダムなユニークマップがドロップする",
-      "en": "Maps have a #% chance to drop as a random Unique Map instead in your Maps"
-    },
-    {
-      "ja": "マップで収穫された畑は#%の確率でクラフトオプションを追加で1個提供する",
-      "en": "Plants Harvested in your Maps have #% chance to give an additional Crafting option"
-    },
-    {
-      "ja": "マップに出現するレアモンスターは#%の確率でレアの武器を1個ドロップする",
-      "en": "Rare Monsters in your Maps have #% chance to drop an additional Rare Weapon"
-    },
-    {
-      "ja": "マップで見つかるフラスコは#%の確率で20%の品質を持つ",
-      "en": "Flasks found in your Maps have #% chance to have 20% Quality"
+      "ja": "マップでランダムに出現するマスターがザナである確率が#%増加する\nマップを完了することにより得られるマスターミッションがザナである確率が#%増加する",
+      "en": "Randomly encountered Masters in your Maps have #% increased chance to be Zana\nMaster Missions from completing your Maps have #% increased chance to be Zana"
     },
     {
       "ja": "アンセスタートーテムがアクティブ中に付与するバフの効果が#%増加する",
       "en": "#% increased Effect of Buffs your Ancestor Totems grant while Active"
     },
     {
-      "ja": "マップに出現する最終ボスは#%の確率で生贄フラグメントを追加で1個ドロップする",
-      "en": "Final Map Boss in each Map has #% chance to drop an additional Sacrifice Fragment"
-    },
-    {
-      "ja": "ソケットされたジェムはレベル#エクリプスによりサポートされる",
-      "en": "Socketed Gems are Supported by Level # Eclipse"
-    },
-    {
-      "ja": "マップに出現するインカージョンアーキテクトは#%の確率でレアのインカージョンアイテムを追加で1個ドロップする",
-      "en": "Incursion Architects have #% chance to drop an additional Rare Incursion Item"
-    },
-    {
-      "ja": "マップでは#%の確率でブリーチスプリンターの代わりにブリーチストーンがドロップする",
-      "en": "Breach Splinters have #% chance to drop as Breachstones instead"
-    },
-    {
-      "ja": "マップのインフルエンスモンスターは#%の確率で基礎カレンシーを追加で1個ドロップする",
-      "en": "Influenced Monsters in your Maps have #% chance to drop an additional Basic Currency Item"
-    },
-    {
-      "ja": "エリアのレアおよびユニークモンスターは憑依されており、そのミニオンは触れられている",
-      "en": "Rare and Unique Monsters found in Areas are Possessed and their Minions are Touched"
-    },
-    {
-      "ja": "マップで見つかるアイテムは#%の確率で白ソケットを持つ",
-      "en": "Items found in your Maps have #% chance to have a White Socket"
-    },
-    {
-      "ja": "エリアにアイナーが出現する\nエリアに捕獲可能なハーベストビーストが出現する",
-      "en": "Areas contain Einhar\nAreas can contain capturable Harvest Beasts"
+      "ja": "エリアにはペランダスの資料箱が追加で1個出現する",
+      "en": "Area contains an additional Perandus Archive"
     },
     {
       "ja": "マップボスは#%の確率でランダムなインフルエンスを持つアイテムを追加で1個ドロップする",
       "en": "Map Bosses have #% chance to drop an additional Item with random Influence"
     },
     {
-      "ja": "マップに出現する最終ボスは基礎カレンシーアイテムを追加で1個ドロップする",
-      "en": "Final Map Boss in each Map drops an additional Basic Currency Item"
-    },
-    {
-      "ja": "マップに出現するインカージョンでドロップするアイテムの数量が#%増加する",
-      "en": "#% increased Quantity of Items dropped in Incursions in your Maps"
-    },
-    {
-      "ja": "マップに出現するブライトチェストにブライトマップまたはオイルが入っている確率が#%増加する",
-      "en": "Blight Chests in your Maps have #% increased chance to contain Blighted Maps or Oils"
-    },
-    {
-      "ja": "マップで見つかるローグマーカーのスタックサイズが#%増加する",
-      "en": "#% increased Stack size of Rogue's Markers found in your Maps"
-    },
-    {
-      "ja": "直近ブロックをしていなければスペルブロック率 +#%",
-      "en": "+#% Chance to Block Spell Damage if you have not Blocked Recently"
-    },
-    {
-      "ja": "ソケットされたジェムはレベル#覚醒の寛大によりサポートされる",
-      "en": "Socketed Gems are Supported by Level # Awakened Generosity"
-    },
-    {
-      "ja": "モンスターによる全てのダメージが凍結を付与できる",
-      "en": "All Damage from Monsters' Hits can Freeze"
-    },
-    {
-      "ja": "ユニーククルーシブルモンスターは#%の確率でユニーク遠距離武器をドロップする",
-      "en": "Unique Crucible Monsters have #% chance to drop a Unique Ranged Weapon"
-    },
-    {
-      "ja": "征服者のマップで見つかるアイテムがインフルエンスを受けている確率が#%増加する",
-      "en": "Items found in your Conqueror Maps have #% increased chance to be Influenced"
-    },
-    {
-      "ja": "エリアにテンポラルインカージョンが出現する\nテンポラルインカージョンポータルの方向が逆転している",
-      "en": "Areas contain additional Temporal Incursions\nTemporal Incursion Portals have their direction reversed"
-    },
-    {
-      "ja": "ソケットされたジェムはレベル#コンパニオンシップによりサポートされる",
-      "en": "Socketed Gems are Supported by Level # Companionship"
-    },
-    {
-      "ja": "鍛えたアイテムはソケットが完全にリンクされる",
-      "en": "Forged Items are fully Linked"
-    },
-    {
-      "ja": "モンスターのアクションスピードが#%増加する",
-      "en": "Monsters have #% increased Action Speed"
-    },
-    {
-      "ja": "ペランダスのチェストは追加のレアモンスターに守られている",
-      "en": "Perandus Chests are guarded by additional Rare monsters"
-    },
-    {
-      "ja": "マップで見つかる防具アイテムは#%の確率で20%の品質を持つ",
-      "en": "Armour Items found in your Maps have #% chance to have 20% Quality"
-    },
-    {
-      "ja": "武器および盾は#%の確率でフラクチャー状態で見つかる",
-      "en": "Weapons and Shields found have #% chance to be Fractured"
-    },
-    {
-      "ja": "レアおよびユニークのクルーシブルモンスターは#%の確率で\nクルーシブルパッシブスキルツリーを持つ近接武器をドロップする",
-      "en": "Rare and Unique Crucible Monsters have #% chance to drop a Melee Weapon with\na Crucible Passive Skill Tree"
-    },
-    {
-      "ja": "レアおよびユニークモンスターは#%の確率でユニーク武器と交換できる占いカードをドロップする",
-      "en": "Rare and Unique Monsters have #% chance to drop Divination Cards that grant Unique Weapons"
-    },
-    {
-      "ja": "ソケットされたジェムはレベル#覚醒の火ダメージ追加によりサポートされる",
-      "en": "Socketed Gems are Supported by Level # Awakened Added Fire Damage"
-    },
-    {
-      "ja": "ソケットされたジェムはレベル#マークオンヒットによりサポートされる",
-      "en": "Socketed Gems are Supported by Level # Mark On Hit"
-    },
-    {
-      "ja": "ソケットされたジェムはレベル#覚醒の破壊制御によりサポートされる",
-      "en": "Socketed Gems are Supported by Level # Awakened Controlled Destruction"
-    },
-    {
-      "ja": "モンスターは#%の物理ダメージ軽減率を圧倒する",
-      "en": "Monsters Overwhelm #% Physical Damage Reduction"
-    },
-    {
-      "ja": "モンスターのスペルダメージブロック確率 +#%",
-      "en": "Monsters have +#% Chance to Block Spell Damage"
-    },
-    {
-      "ja": "モンスターによる出血の持続時間が#%増加する",
-      "en": "Monsters have #% increased Bleeding Duration"
-    },
-    {
-      "ja": "武器および盾は#%の確率でソケットが最大数の状態で見つかる",
-      "en": "Weapons and Shields found have #% chance to have the maximum number of Sockets"
-    },
-    {
-      "ja": "エリアにはペランダスの宝石箱が追加で1個出現する",
-      "en": "Area contains an additional Perandus Jewellery Box"
-    },
-    {
-      "ja": "エリアはブリーチとなる\nエリアに追加の大きなブリーチの手が出現する\nブリーチボスはブリーチストーンをドロップすることがある",
-      "en": "Areas are Breached\nAreas contain additional Large Breach Hands\nBreach Bosses have a chance to drop a Breachstone"
-    },
-    {
-      "ja": "エリアには王者のハービンジャーが追加で1体出現する",
-      "en": "Area contains an additional Regal Harbinger"
-    },
-    {
-      "ja": "ソケットされたジェムはレベル#覚醒の冷気ダメージ追加によりサポートされる",
-      "en": "Socketed Gems are Supported by Level # Awakened Added Cold Damage"
-    },
-    {
-      "ja": "マップで見つかる後悔のオーブは#%の確率で20スタックの後悔のオーブとしてドロップする",
-      "en": "Orbs of Regret found in your Maps have #% chance to drop as a stack of 20 Orbs of Regret instead"
+      "ja": "マップで見つかる宝石細工師のプリズムは#%の確率でフルスタックでドロップする",
+      "en": "Gemcutter's Prisms found in your Maps have #% chance to drop as a stack of 6 Gemcutter's Prisms instead"
     },
     {
       "ja": "エリアにはペランダスの金庫が出現する",
       "en": "Area contains an additional Perandus Locker"
     },
     {
-      "ja": "コラプト状態以外のユニークアイテムにクルーシブルパッシブスキルツリーを追加する炉が出現する",
-      "en": "Contains a Furnace that adds a Crucible Passive Skill Tree to an Uncorrupted Unique Item"
+      "ja": "マップで見つかる後悔のオーブは#%の確率で20スタックの後悔のオーブとしてドロップする",
+      "en": "Orbs of Regret found in your Maps have #% chance to drop as a stack of 20 Orbs of Regret instead"
     },
     {
-      "ja": "マップで見つかる宝石細工師のプリズムは#%の確率でフルスタックでドロップする",
-      "en": "Gemcutter's Prisms found in your Maps have #% chance to drop as a stack of 6 Gemcutter's Prisms instead"
+      "ja": "ソケットされたジェムはレベル#覚醒の冷気ダメージ追加によりサポートされる",
+      "en": "Socketed Gems are Supported by Level # Awakened Added Cold Damage"
     },
     {
-      "ja": "モンスターの全てのダメージにより感電が付与される",
-      "en": "All Damage from Monsters' Hits inflicts Shock"
+      "ja": "エリアにはペランダスの宝石箱が追加で1個出現する",
+      "en": "Area contains an additional Perandus Jewellery Box"
     },
     {
-      "ja": "マップに出現するブリーチモンスターの付与する経験値が#%増加する",
-      "en": "Breach Monsters in your Maps grant #% increased Experience"
-    },
-    {
-      "ja": "モンスターのダメージが#%上昇する",
-      "en": "#% more Monster Damage"
-    },
-    {
-      "ja": "モンスターによる感電の効果が#%増加する",
-      "en": "Monsters have #% increased Effect of Shock"
-    },
-    {
-      "ja": "モンスターの受けるダメージが#%増加する",
-      "en": "Monsters take #% increased Damage"
-    },
-    {
-      "ja": "マップに出現するレアモンスターは#%の確率でレアの宝飾品アイテムを1個ドロップする",
-      "en": "Rare Monsters in your Maps have #% chance to drop an additional Rare Jewellery Item"
-    },
-    {
-      "ja": "モンスターの全ての元素耐性の最大値 +#%",
-      "en": "Monsters have +#% to all maximum Elemental Resistances"
-    },
-    {
-      "ja": "レアおよびユニークモンスターは#%の確率でマグマの鉱石をドロップする",
-      "en": "Rare and Unique Monsters have #% chance to drop a Magmatic Ore"
-    },
-    {
-      "ja": "エリアにはペランダスの資料箱が追加で1個出現する",
-      "en": "Area contains an additional Perandus Archive"
-    },
-    {
-      "ja": "モンスターのヒットは常にクリティカルとなる",
-      "en": "Monsters' Hits are always Critical Strikes"
-    },
-    {
-      "ja": "#%の確率でマップに出現するメタモルフから得られる報酬が二倍になる",
-      "en": "#% chance for Rewards from Metamorphs in your Maps to be Doubled"
-    },
-    {
-      "ja": "ペランダスのチェストからドロップするアイテムの数量が#%上昇する",
-      "en": "Perandus Chests have #% more Quantity of Items Dropped"
-    },
-    {
-      "ja": "プレイヤーはアタックダメージをブロックすることができない",
-      "en": "Players cannot Block Attack Damage"
-    },
-    {
-      "ja": "マップで見つかる改変のオーブは#%の確率でフルスタックでドロップする",
-      "en": "Orbs of Alteration found in your Maps have #% chance to drop as a full stack"
-    },
-    {
-      "ja": "マップに出現するストロングボックスがレアである確率が#%増加する",
-      "en": "Strongboxes in your Maps have #% increased chance to be Rare"
-    },
-    {
-      "ja": "レアおよびユニークモンスターは低ライフ状態になると拷問された幽霊をスポーンさせる",
-      "en": "Rare and Unique monsters spawn a Tormented Spirit on reaching Low Life"
-    },
-    {
-      "ja": "ハイストで報酬のチェストを開けた時に#%の確率で追加のハービンジャーアイテムを入手する",
-      "en": "#% chance to receive additional Harbinger items when opening a Reward Chest in a Heist"
-    },
-    {
-      "ja": "モンスターによる全てのダメージが発火を付与できる",
-      "en": "All Damage from Monsters' Hits can Ignite"
-    },
-    {
-      "ja": "冷気ダメージの#%をライフとして敵がリーチする",
-      "en": "#% of Cold Damage Leeched by Enemy as Life"
-    },
-    {
-      "ja": "連鎖範囲が#%増加する",
-      "en": "#% increased Chaining range"
+      "ja": "マップで見つかるレアマップは#%の確率でコラプト状態になる",
+      "en": "Rare Maps found in your Maps have #% chance to be Corrupted"
     },
     {
       "ja": "マップに出現する最終ボスは#%の確率でタリスマンを追加で1個ドロップする",
       "en": "Final Map Boss in each Map has #% chance to drop an additional Talisman"
-    },
-    {
-      "ja": "マップでランダムに出現するマスターがザナである確率が#%増加する\nマップを完了することにより得られるマスターミッションがザナである確率が#%増加する",
-      "en": "Randomly encountered Masters in your Maps have #% increased chance to be Zana\nMaster Missions from completing your Maps have #% increased chance to be Zana"
     },
     {
       "ja": "マップのインフルエンスモンスターは#%の確率でレアの防具アイテムを追加で1個ドロップする",
@@ -159785,6 +159487,10 @@ var JpPoeUtils = (() => {
       "en": "Final Map Boss in each Map has #% chance to drop additional Map Currency Items"
     },
     {
+      "ja": "マップで見つかる改変のオーブは#%の確率でフルスタックでドロップする",
+      "en": "Orbs of Alteration found in your Maps have #% chance to drop as a full stack"
+    },
+    {
       "ja": "マップに出現する最終ボスは#%の確率でユニークアイテムを追加で1個ドロップする",
       "en": "Final Map Boss in each Map has #% chance to drop an additional Unique Item"
     },
@@ -159793,44 +159499,68 @@ var JpPoeUtils = (() => {
       "en": "Orbs of Fusing found in your Maps have #% chance to drop as a full stack"
     },
     {
-      "ja": "武器によるダメージは混沌耐性の#%を貫通する",
-      "en": "Damage with Weapons Penetrates #% Chaos Resistance"
+      "ja": "アトラスの征服者のインフルエンスを受けたマップを完了すると#%の確率で\nその砦の場所を見つけるための進行を倍獲得する",
+      "en": "#% chance on completing a Map influenced by a Conqueror of the Atlas\nto gain double progress towards locating their Citadel"
     },
     {
-      "ja": "武器および盾は#%の確率でソケットが完全にリンクされた状態で見つかる",
-      "en": "Weapons and Shields found have #% chance to be fully Linked"
+      "ja": "マップでは#%の確率でマップの代わりにランダムなユニークマップがドロップする",
+      "en": "Maps have a #% chance to drop as a random Unique Map instead in your Maps"
     },
     {
-      "ja": "ユニーククルーシブルモンスターは#%の確率でユニーク盾をドロップする",
-      "en": "Unique Crucible Monsters have #% chance to drop a Unique Shield"
+      "ja": "ペランダスのチェストからドロップするアイテムの数量が#%上昇する",
+      "en": "Perandus Chests have #% more Quantity of Items Dropped"
     },
     {
-      "ja": "マップで見つかる色彩のオーブは#%の確率でフルスタックでドロップする",
-      "en": "Chromatic Orbs found in your Maps have #% chance to drop as a full stack"
+      "ja": "マップに出現するインカージョンアーキテクトは#%の確率でレアのインカージョンアイテムを追加で1個ドロップする",
+      "en": "Incursion Architects have #% chance to drop an additional Rare Incursion Item"
     },
     {
-      "ja": "ユニーククルーシブルモンスターは#%の確率でユニーク近接武器をドロップする",
-      "en": "Unique Crucible Monsters have #% chance to drop a Unique Melee Weapon"
+      "ja": "ソケットされたジェムはレベル#エクリプスによりサポートされる",
+      "en": "Socketed Gems are Supported by Level # Eclipse"
+    },
+    {
+      "ja": "#%の確率でマップに出現するメタモルフから得られる報酬が二倍になる",
+      "en": "#% chance for Rewards from Metamorphs in your Maps to be Doubled"
+    },
+    {
+      "ja": "物理ダメージの#%をライフとして敵がリーチする",
+      "en": "#% of Physical Damage Leeched by Enemy as Life"
     },
     {
       "ja": "マップのザナミッションにはマップの選択肢が追加で#個ある",
       "en": "Zana Missions in your Maps have # additional Map option"
     },
     {
-      "ja": "エリアに多数のブリーチが出現する\nブリーチが開く速度および閉じる速度が速い",
-      "en": "Areas contain many additional Breaches\nBreaches open and close faster"
+      "ja": "直近ブロックをしていなければスペルブロック率 +#%",
+      "en": "+#% Chance to Block Spell Damage if you have not Blocked Recently"
     },
     {
-      "ja": "モンスターのヒットは#%の確率で発火を付与する",
-      "en": "Monsters' Hits have #% chance to Ignite"
+      "ja": "マップで見つかるローグマーカーのスタックサイズが#%増加する",
+      "en": "#% increased Stack size of Rogue's Markers found in your Maps"
     },
     {
-      "ja": "毎秒ライフの#%を失う",
-      "en": "Lose #% of Life per second"
+      "ja": "マップに出現するブライトチェストにブライトマップまたはオイルが入っている確率が#%増加する",
+      "en": "Blight Chests in your Maps have #% increased chance to contain Blighted Maps or Oils"
+    },
+    {
+      "ja": "ユニーククルーシブルモンスターは#%の確率でユニーク遠距離武器をドロップする",
+      "en": "Unique Crucible Monsters have #% chance to drop a Unique Ranged Weapon"
     },
     {
       "ja": "マップに出現する最終ボスは#%の確率でエッセンスを追加で1個ドロップする",
       "en": "Final Map Boss in each Map has #% chance to drop an additional Essence"
+    },
+    {
+      "ja": "マップで見つかるフラスコは#%の確率で20%の品質を持つ",
+      "en": "Flasks found in your Maps have #% chance to have 20% Quality"
+    },
+    {
+      "ja": "マップに出現するレアモンスターは#%の確率でレアの武器を1個ドロップする",
+      "en": "Rare Monsters in your Maps have #% chance to drop an additional Rare Weapon"
+    },
+    {
+      "ja": "レアおよびユニークモンスターは#%の確率でマグマの鉱石をドロップする",
+      "en": "Rare and Unique Monsters have #% chance to drop a Magmatic Ore"
     },
     {
       "ja": "マップのマジックモンスターは#%の確率でレアの防具アイテムを追加で1個ドロップする",
@@ -159841,268 +159571,96 @@ var JpPoeUtils = (() => {
       "en": "Cartographer's Chisels found in your Maps have #% chance to drop as a full stack"
     },
     {
-      "ja": "レアおよびユニークのクルーシブルモンスターは#%の確率で\nクルーシブルパッシブスキルツリーを持つ盾をドロップする",
-      "en": "Rare and Unique Crucible Monsters have #% chance to drop a Shield with\na Crucible Passive Skill Tree"
-    },
-    {
-      "ja": "憤怒10ごとに物理ダメージが#%増加する",
-      "en": "Each 10 Rage also grants #% increased Physical Damage"
-    },
-    {
-      "ja": "ユニーククルーシブルモンスターの数が#%増加する",
-      "en": "#% increased number of Unique Crucible Monsters"
+      "ja": "ソケットされたジェムはレベル#コンパニオンシップによりサポートされる",
+      "en": "Socketed Gems are Supported by Level # Companionship"
     },
     {
       "ja": "キラックミッションのマップとして提示されるマップの品質が+#%される",
       "en": "+#% to Quality of Maps offered by Kirac Missions in your Maps"
     },
     {
-      "ja": "エリアには隠されし者が出現する",
-      "en": "Area contains The Hidden"
+      "ja": "マップはランダムなサフィックスを追加で#個持つ",
+      "en": "Map has # additional random Suffix"
     },
     {
-      "ja": "アトラスの征服者のインフルエンスを受けたマップを完了すると#%の確率で\nその砦の場所を見つけるための進行を倍獲得する",
-      "en": "#% chance on completing a Map influenced by a Conqueror of the Atlas\nto gain double progress towards locating their Citadel"
+      "ja": "マップで見つかる神のオーブは#%の確率でフルスタックでドロップする",
+      "en": "Divine Orbs found in your Maps have #% chance to drop as a stack of 4 Divine Orbs instead"
     },
     {
-      "ja": "武器および盾は#%の確率で暗黙モッドを持つコラプト状態で見つかる",
-      "en": "Weapons and Shields found have #% chance to be Corrupted with an Implicit"
-    },
-    {
-      "ja": "マップで見つかる可能性のオーブは#%の確率でフルスタックでドロップする",
-      "en": "Orbs of Chance found in your Maps have #% chance to drop as a full stack"
-    },
-    {
-      "ja": "犠牲的熱意がある時にヒットは#%の物理ダメージ軽減率を圧倒する",
-      "en": "Hits Overwhelm #% of Physical Damage Reduction while you have Sacrificial Zeal"
-    },
-    {
-      "ja": "マップで見つかる洗浄のオーブは#%の確率でフルスタックでドロップする",
-      "en": "Orbs of Scouring found in your Maps have #% chance to drop as a full stack"
-    },
-    {
-      "ja": "マップに出現する赤ビーストは#%の確率で二種類のなかからより珍しいほうが選ばれて決まる",
-      "en": "#% chance for Red Beasts in your Maps to be the less common of two varieties"
-    },
-    {
-      "ja": "直近敵をスタンさせていればアタックブロック率 +#%",
-      "en": "+#% Chance to Block Attack Damage if you've Stunned an Enemy Recently"
-    },
-    {
-      "ja": "マップのマジックモンスターは#%の確率で基礎カレンシーアイテムを追加で1個ドロップする",
-      "en": "Magic Monsters in your Maps have #% chance to drop an additional Basic Currency Item"
-    },
-    {
-      "ja": "少なくとも1個のペランダスのチェストはユニークモンスターに守られている",
-      "en": "At least one Perandus Chest is guarded by a Unique Monster"
-    },
-    {
-      "ja": "エリアに追加のエッセンスが出現する\nエッセンスにローグエグザイルが閉じ込められている",
-      "en": "Areas contain additional Essences\nEssences contain Rogue Exiles"
-    },
-    {
-      "ja": "エリアに追加のストロングボックスが出現する\nストロングボックスは並んで出現する\n並んでいるストロングボックスは、並んでいる前のストロングボックスのロックがアンロックされた時に開く",
-      "en": "Areas contain additional Strongboxes\nStrongboxes are found in Sequences\nStrongboxes in a Sequence open when the previous Strongbox in the Sequence has unlocked"
-    },
-    {
-      "ja": "マップに出現する赤ビーストは#%の確率で二倍の経験値を付与する",
-      "en": "Red Beasts in your Maps have #% chance to grant double Experience"
-    },
-    {
-      "ja": "エリアに追加のアビスが出現する\nアビスは既に完全に開いている\nアビスにこの世界の外からのビヨンドモンスターが含まれる",
-      "en": "Areas contain additional Abysses\nAbysses have already fully opened\nAbysses contain monsters from Beyond this realm"
-    },
-    {
-      "ja": "物理ダメージの#%をライフとして敵がリーチする",
-      "en": "#% of Physical Damage Leeched by Enemy as Life"
-    },
-    {
-      "ja": "モンスターによる凍結の持続時間が#%増加する",
-      "en": "Monsters have #% increased Freeze Duration"
-    },
-    {
-      "ja": "マップで見つかる変成のオーブは#%の確率でフルスタックでドロップする",
-      "en": "Orbs of Transmutation found in your Maps have #% chance to drop as a full stack"
-    },
-    {
-      "ja": "プレイヤーはスペルダメージをブロックすることができない",
-      "en": "Players cannot Block Spell Damage"
-    },
-    {
-      "ja": "マップに出現するペランダスのチェストが金庫になる確率が#%増加する",
-      "en": "Perandus Chests in your Maps have #% increased chance to be Coffers"
-    },
-    {
-      "ja": "マップで見つかるアイテムは#%の確率でソケットが完全にリンクされている",
-      "en": "Items found in your Maps have #% chance to be fully Linked"
-    },
-    {
-      "ja": "鍛えたアイテムのクルーシブルパッシブスキルのティアがダウングレードされることがない",
-      "en": "Crucible Passive Skills on Forged Items cannot have tiers downgraded"
-    },
-    {
-      "ja": "ソケットされたジェムはレベル#覚醒の火耐性貫通によりサポートされる",
-      "en": "Socketed Gems are Supported by Level # Awakened Fire Penetration"
-    },
-    {
-      "ja": "マップに出現するペランダスのチェストが財宝である確率が#%増加する",
-      "en": "Perandus Chests in your Maps have #% increased chance to be Treasuries"
-    },
-    {
-      "ja": "武器によるダメージは雷耐性の#%を貫通する",
-      "en": "Damage with Weapons Penetrates #% Lightning Resistance"
-    },
-    {
-      "ja": "マップにはエルダーフィーンドが追加で#パック出現する",
-      "en": "Area contains # additional packs of Elder Fiends"
-    },
-    {
-      "ja": "マップにはシェイパークリエイションが追加で#パック出現する",
-      "en": "Area contains # additional packs of Shaper Creations"
-    },
-    {
-      "ja": "マップで全てのプレイヤーに対するシュラインのバフの効果が#%増加する",
-      "en": "#% increased Effect of Shrine Buffs on Players"
-    },
-    {
-      "ja": "モンスターのヒットは#%の確率で凍結を付与する",
-      "en": "Monsters' Hits have #% chance to Freeze"
-    },
-    {
-      "ja": "各マップの最終ボスは#%の確率で隣接マップの代わりにヴァールアイテムをドロップする",
-      "en": "Final Map Boss in each Map has #% chance to drop a Vaal Item instead of an Adjacent Map"
-    },
-    {
-      "ja": "モンスターは呪いの影響を受けない",
-      "en": "Monsters are Unaffected by Curses"
+      "ja": "マップで見つかる高貴なオーブは#%の確率で高貴なオーブ3個としてドロップする",
+      "en": "#% chance for Exalted Orbs to drop as 3 Exalted Orbs instead in your Maps"
     },
     {
       "ja": "マップで見つかるアイテムは#%の確率でソケットを最大数持つ",
       "en": "Items found in your Maps have #% chance to have the maximum number of Sockets"
     },
     {
-      "ja": "モンスターによる発火の持続時間が#%増加する",
-      "en": "Monsters have #% increased Ignite Duration"
+      "ja": "マップに出現するペランダスのチェストがカタログになる確率が#%増加する",
+      "en": "Perandus Chests in your Maps have #% increased chance to be Catalogues"
     },
     {
-      "ja": "マップに出現する最終ボスは#%の確率で占いカードを追加で1枚ドロップする",
-      "en": "Final Map Boss in each Map has #% chance to drop an additional Divination Card"
+      "ja": "マップに出現する最終ボスは#%の確率で生贄フラグメントを追加で1個ドロップする",
+      "en": "Final Map Boss in each Map has #% chance to drop an additional Sacrifice Fragment"
     },
     {
-      "ja": "マップに出現するレアモンスターは#%の確率でレアの防具アイテムを追加で1個ドロップする",
-      "en": "Rare Monsters in your Maps have #% chance to drop an additional Rare Armour Item"
+      "ja": "エリアにテンポラルインカージョンが出現する\nテンポラルインカージョンポータルの方向が逆転している",
+      "en": "Areas contain additional Temporal Incursions\nTemporal Incursion Portals have their direction reversed"
     },
     {
-      "ja": "モンスターのアタックによるヒットは出血を付与する",
-      "en": "Monsters' Attack Hits inflict Bleeding"
+      "ja": "ハイストで報酬のチェストを開けた時に#%の確率で追加のハービンジャーアイテムを入手する",
+      "en": "#% chance to receive additional Harbinger items when opening a Reward Chest in a Heist"
     },
     {
-      "ja": "モンスターが抑制したスペルダメージから防ぐダメージが+#%される",
-      "en": "Monsters prevent +#% of Suppressed Spell Damage"
+      "ja": "マップのマジックモンスターは#%の確率でレアの宝飾品アイテムを追加で1個ドロップする",
+      "en": "Magic Monsters in your Maps have #% chance to drop an additional Rare Jewellery Item"
     },
     {
-      "ja": "レアおよびユニークのクルーシブルモンスターは#%の確率で\nクルーシブルパッシブスキルツリーを持つ遠距離武器をドロップする",
-      "en": "Rare and Unique Crucible Monsters have #% chance to drop a Ranged Weapon with\na Crucible Passive Skill Tree"
+      "ja": "ソケットされたジェムはレベル#覚醒の破壊制御によりサポートされる",
+      "en": "Socketed Gems are Supported by Level # Awakened Controlled Destruction"
     },
     {
-      "ja": "モンスターのヒットを回避することができない",
-      "en": "Monsters' Hits can't be Evaded"
+      "ja": "エリアのレアおよびユニークモンスターは憑依されており、そのミニオンは触れられている",
+      "en": "Rare and Unique Monsters found in Areas are Possessed and their Minions are Touched"
     },
     {
-      "ja": "串刺しの持続時間が#%増加する",
-      "en": "#% increased Impale Duration"
+      "ja": "マップで見つかるアイテムは#%の確率で白ソケットを持つ",
+      "en": "Items found in your Maps have #% chance to have a White Socket"
     },
     {
-      "ja": "鍛えたアイテムのモッドの数値はランダム化される",
-      "en": "Forged Items have the numeric values of Modifiers Randomised"
+      "ja": "モンスターは#%の確率で感電を無効化する",
+      "en": "Monsters have #% chance to Avoid being Shocked"
     },
     {
-      "ja": "エリアにいるプレイヤーはハービンジャーの姿となる\nエリアで見つかるアイテムはカレンシーシャードのスタックに置き換わる",
-      "en": "Players in Areas take on the form of Harbingers\nItems found in Areas are replaced by stacks of Currency Shards"
+      "ja": "武器および盾は#%の確率でソケットが最大数の状態で見つかる",
+      "en": "Weapons and Shields found have #% chance to have the maximum number of Sockets"
     },
     {
-      "ja": "喰らったソウルの最大数 #",
-      "en": "Maximum # Eaten Soul"
+      "ja": "マップで見つかる鍛冶屋の砥石は#%の確率でフルスタックでドロップする",
+      "en": "Blacksmith's Whetstones found in your Maps have #% chance to drop as a full stack"
     },
     {
-      "ja": "アクティブ中のアンセスタートーテムが付与するバフの効果は#秒間残存する",
-      "en": "Buffs from Active Ancestor Totems Linger for # second"
+      "ja": "ソケットされたジェムはレベル# 熟練の報復によりサポートされる",
+      "en": "Socketed Gems are Supported by Level # Expert Retaliation"
     },
     {
-      "ja": "ハイストで報酬のチェストを開けた時に#%の確率で追加のブリーチアイテムを入手する",
-      "en": "#% chance to receive additional Breach items when opening a Reward Chest in a Heist"
+      "ja": "マップに出現する最終ボスは基礎カレンシーアイテムを追加で1個ドロップする",
+      "en": "Final Map Boss in each Map drops an additional Basic Currency Item"
     },
     {
-      "ja": "エリアにはペランダスの財宝が追加で1個出現する",
-      "en": "Area contains an additional Perandus Treasury"
+      "ja": "モンスターによる出血の持続時間が#%増加する",
+      "en": "Monsters have #% increased Bleeding Duration"
     },
     {
-      "ja": "マップのインフルエンスモンスターは#%の確率でレアの宝飾品アイテムを追加で1個ドロップする",
-      "en": "Influenced Monsters in your Maps have #% chance to drop an additional Rare Jewellery Item"
+      "ja": "ソケットされたジェムはレベル#覚醒の火ダメージ追加によりサポートされる",
+      "en": "Socketed Gems are Supported by Level # Awakened Added Fire Damage"
     },
     {
-      "ja": "強化値が#%増加する",
-      "en": "#% increased Empowerment"
+      "ja": "武器および盾は#%の確率でソケットが完全にリンクされた状態で見つかる",
+      "en": "Weapons and Shields found have #% chance to be fully Linked"
     },
     {
-      "ja": "ペランダスのチェストからドロップするアイテムのレアリティが#%上昇する",
-      "en": "Perandus Chests have #% more Rarity of Items Dropped"
-    },
-    {
-      "ja": "鍛えたアイテムのクルーシブルパッシブスキルは#%の確率でティアがアップグレードされる",
-      "en": "Crucible Passive Skills on Forged Items have +#% chance for tiers to be upgraded"
-    },
-    {
-      "ja": "マップでは#%の確率で無効化のオーブの代わりに3スタックの無効化のオーブがドロップする",
-      "en": "#% chance for Orbs of Annulment to drop as 3 Orbs of Annulment instead in your Maps"
-    },
-    {
-      "ja": "マップのインフルエンスモンスターは#%の確率で品質を持つジェムを追加で1個ドロップする",
-      "en": "Influenced Monsters in your Maps have #% chance to drop an additional Gem with Quality"
-    },
-    {
-      "ja": "#%の物理ダメージ軽減率を圧倒する",
-      "en": "Overwhelm #% Physical Damage Reduction"
-    },
-    {
-      "ja": "鍛えたアイテムは暗黙モッドを持つコラプト状態になる",
-      "en": "Forged Items are Corrupted with an Implicit"
-    },
-    {
-      "ja": "デターミネーションのマナリザーブ効率#%増加する",
-      "en": "Determination has #% increased Mana Reservation Efficiency"
-    },
-    {
-      "ja": "エリアに追加のシュラインが出現する\nエリアにパンテオンモンスターに守られたシュラインが出現する",
-      "en": "Areas contain additional Shrines\nArea contains Shrines guarded by Pantheon Monsters"
-    },
-    {
-      "ja": "エリアにはペランダスの金庫が追加で1個出現する",
-      "en": "Area contains an additional Perandus Coffer"
-    },
-    {
-      "ja": "#%の確率でハイストチェストに入っている六分儀が複製される",
-      "en": "Heist Chests have a #% chance to Duplicate contained Sextants"
-    },
-    {
-      "ja": "ソケットされたジェムはレベル#覚醒のエンハンスによりサポートされる",
-      "en": "Socketed Gems are Supported by Level # Awakened Enhance"
-    },
-    {
-      "ja": "マップで見つかるカオスオーブは#%の確率でフルスタックでドロップする",
-      "en": "Chaos Orbs found in your Maps have #% chance to drop as a full stack"
-    },
-    {
-      "ja": "マップを完了した時にアトラスミッションが付与されるの確率が+#%される",
-      "en": "Your Maps have +#% chance to grant an Atlas Mission on Completion"
-    },
-    {
-      "ja": "マップで憑依されたかまたは触れられたモンスターからドロップするアイテムの数量が#%増加する",
-      "en": "#% increased Quantity of Items dropped by Possessed or Touched Monsters in your Maps"
-    },
-    {
-      "ja": "#%の確率でマップに出現するブライトチェストが複製される",
-      "en": "#% chance to Duplicate Blight Chests in your Maps"
+      "ja": "ユニーククルーシブルモンスターは#%の確率でユニーク盾をドロップする",
+      "en": "Unique Crucible Monsters have #% chance to drop a Unique Shield"
     },
     {
       "ja": "マップボスは#%の確率でシルバーコインを追加で1個ドロップする",
@@ -160113,52 +159671,224 @@ var JpPoeUtils = (() => {
       "en": "Blessed Orbs found in your Maps have #% chance to drop as a stack of 8 Blessed Orbs instead"
     },
     {
-      "ja": "レベル#ヴェンジェンススキルを付与する",
-      "en": "Grants Level # Vengeance Skill"
-    },
-    {
-      "ja": "マップのモンスターとチェストは#%の確率でアイテムレベルが+1されたアイテムをドロップする",
-      "en": "Monsters and Chests in your Maps have #% chance to drop Items with +1 to Item Level"
-    },
-    {
-      "ja": "ソケットされたジェムはレベル#覚醒のアンセストラルコールによりサポートされる",
-      "en": "Socketed Gems are Supported by Level # Awakened Ancestral Call"
-    },
-    {
-      "ja": "マップに出現するイモータルシンジケートのメンバーは#%の確率で二倍の経験値を付与する",
-      "en": "Immortal Syndicate Members in your Maps have #% chance to grant double Experience"
-    },
-    {
-      "ja": "エリアに追加のハービンジャーポータルが出現する\nハービンジャーポータルが破壊された時に追加のハービンジャーシャードをドロップする",
-      "en": "Areas contain additional Harbinger Portals\nHarbinger Portals drop additional Currency Shards when destroyed"
-    },
-    {
-      "ja": "鍛えたアイテムの品質は30%になる",
-      "en": "Forged Items have 30% Quality"
-    },
-    {
-      "ja": "この武器によるヒットは#%の物理ダメージ軽減率を圧倒する",
-      "en": "Hits with this Weapon Overwhelm #% Physical Damage Reduction"
-    },
-    {
       "ja": "ペランダスモンスターは#%の確率でペランダスコインをドロップする",
       "en": "Perandus Monsters have a #% chance to drop Perandus Coins"
+    },
+    {
+      "ja": "チェストのアイテムの数量が#%増加する",
+      "en": "Chests have #% increased Item Quantity"
+    },
+    {
+      "ja": "エリアにアイナーが出現する\nエリアに捕獲可能なハーベストビーストが出現する",
+      "en": "Areas contain Einhar\nAreas can contain capturable Harvest Beasts"
+    },
+    {
+      "ja": "エリアには王者のハービンジャーが追加で1体出現する",
+      "en": "Area contains an additional Regal Harbinger"
+    },
+    {
+      "ja": "マップに出現するブリーチモンスターの付与する経験値が#%増加する",
+      "en": "Breach Monsters in your Maps grant #% increased Experience"
+    },
+    {
+      "ja": "モンスターのヒットは#%の確率で発火を付与する",
+      "en": "Monsters' Hits have #% chance to Ignite"
+    },
+    {
+      "ja": "残り使用回数 #回",
+      "en": "# uses remaining"
+    },
+    {
+      "ja": "マップで見つかる武器は#%の確率で20%の品質を持つ",
+      "en": "Weapons found in your Maps have #% chance to have 20% Quality"
+    },
+    {
+      "ja": "マップでドロップするメタモルフのサンプルが報酬を持つ確率が#%増加する",
+      "en": "Metamorph Samples dropped in your Maps have #% increased chance to have a Reward"
+    },
+    {
+      "ja": "モンスターのヒットは常にクリティカルとなる",
+      "en": "Monsters' Hits are always Critical Strikes"
+    },
+    {
+      "ja": "ソケットされたジェムはレベル#覚醒の寛大によりサポートされる",
+      "en": "Socketed Gems are Supported by Level # Awakened Generosity"
+    },
+    {
+      "ja": "プレイヤーはアタックダメージをブロックすることができない",
+      "en": "Players cannot Block Attack Damage"
+    },
+    {
+      "ja": "モンスターのヒットは#%の確率で感電を付与する",
+      "en": "Monsters' Hits have #% chance to Shock"
+    },
+    {
+      "ja": "ソケットされたジェムはレベル#マークオンヒットによりサポートされる",
+      "en": "Socketed Gems are Supported by Level # Mark On Hit"
+    },
+    {
+      "ja": "モンスターによる全てのダメージが凍結を付与できる",
+      "en": "All Damage from Monsters' Hits can Freeze"
+    },
+    {
+      "ja": "鍛えたアイテムは可能ならば売値を変更するクルーシブルパッシブスキルを持つ",
+      "en": "Forged Items have a Crucible Passive Skill that modifies the sell price of the Item if possible"
+    },
+    {
+      "ja": "レアおよびユニークモンスターは低ライフ状態になると拷問された幽霊をスポーンさせる",
+      "en": "Rare and Unique monsters spawn a Tormented Spirit on reaching Low Life"
+    },
+    {
+      "ja": "マップに出現するストロングボックスがレアである確率が#%増加する",
+      "en": "Strongboxes in your Maps have #% increased chance to be Rare"
     },
     {
       "ja": "マップに出現するハーベストの畑はよりティアの高い作物が生えるようにもう1回リロールする",
       "en": "Harvest Crops in your Maps have an extra chance to grow higher Tier Plants"
     },
     {
-      "ja": "ソケットされたジェムはレベル#覚醒の冷気耐性貫通によりサポートされる",
-      "en": "Socketed Gems are Supported by Level # Awakened Cold Penetration"
+      "ja": "モンスターのアクションスピードが#%増加する",
+      "en": "Monsters have #% increased Action Speed"
+    },
+    {
+      "ja": "鍛えたアイテムはソケットが完全にリンクされる",
+      "en": "Forged Items are fully Linked"
+    },
+    {
+      "ja": "レアおよびユニークのクルーシブルモンスターは#%の確率で\nクルーシブルパッシブスキルツリーを持つ近接武器をドロップする",
+      "en": "Rare and Unique Crucible Monsters have #% chance to drop a Melee Weapon with\na Crucible Passive Skill Tree"
+    },
+    {
+      "ja": "連鎖範囲が#%増加する",
+      "en": "#% increased Chaining range"
+    },
+    {
+      "ja": "レアおよびユニークモンスターは#%の確率でユニーク武器と交換できる占いカードをドロップする",
+      "en": "Rare and Unique Monsters have #% chance to drop Divination Cards that grant Unique Weapons"
+    },
+    {
+      "ja": "エリアはブリーチとなる\nエリアに追加の大きなブリーチの手が出現する\nブリーチボスはブリーチストーンをドロップすることがある",
+      "en": "Areas are Breached\nAreas contain additional Large Breach Hands\nBreach Bosses have a chance to drop a Breachstone"
+    },
+    {
+      "ja": "ペランダスのチェストは追加のレアモンスターに守られている",
+      "en": "Perandus Chests are guarded by additional Rare monsters"
+    },
+    {
+      "ja": "毎秒ライフの#%を失う",
+      "en": "Lose #% of Life per second"
+    },
+    {
+      "ja": "モンスターは#%の物理ダメージ軽減率を圧倒する",
+      "en": "Monsters Overwhelm #% Physical Damage Reduction"
+    },
+    {
+      "ja": "マップで見つかる防具アイテムは#%の確率で20%の品質を持つ",
+      "en": "Armour Items found in your Maps have #% chance to have 20% Quality"
+    },
+    {
+      "ja": "モンスターのスペルダメージブロック確率 +#%",
+      "en": "Monsters have +#% Chance to Block Spell Damage"
+    },
+    {
+      "ja": "マップのインフルエンスモンスターは#%の確率でレアの宝飾品アイテムを追加で1個ドロップする",
+      "en": "Influenced Monsters in your Maps have #% chance to drop an additional Rare Jewellery Item"
+    },
+    {
+      "ja": "モンスターのダメージが#%上昇する",
+      "en": "#% more Monster Damage"
+    },
+    {
+      "ja": "エリアには隠されし者が出現する",
+      "en": "Area contains The Hidden"
+    },
+    {
+      "ja": "コラプト状態以外のユニークアイテムにクルーシブルパッシブスキルツリーを追加する炉が出現する",
+      "en": "Contains a Furnace that adds a Crucible Passive Skill Tree to an Uncorrupted Unique Item"
+    },
+    {
+      "ja": "モンスターの全てのダメージにより感電が付与される",
+      "en": "All Damage from Monsters' Hits inflicts Shock"
+    },
+    {
+      "ja": "征服者のマップで見つかるアイテムがインフルエンスを受けている確率が#%増加する",
+      "en": "Items found in your Conqueror Maps have #% increased chance to be Influenced"
+    },
+    {
+      "ja": "エリアに追加のアビスが出現する\nアビスは既に完全に開いている\nアビスにこの世界の外からのビヨンドモンスターが含まれる",
+      "en": "Areas contain additional Abysses\nAbysses have already fully opened\nAbysses contain monsters from Beyond this realm"
+    },
+    {
+      "ja": "武器および盾は#%の確率でフラクチャー状態で見つかる",
+      "en": "Weapons and Shields found have #% chance to be Fractured"
+    },
+    {
+      "ja": "モンスターによる感電の効果が#%増加する",
+      "en": "Monsters have #% increased Effect of Shock"
+    },
+    {
+      "ja": "モンスターの受けるダメージが#%増加する",
+      "en": "Monsters take #% increased Damage"
+    },
+    {
+      "ja": "モンスターによる凍結の持続時間が#%増加する",
+      "en": "Monsters have #% increased Freeze Duration"
+    },
+    {
+      "ja": "モンスターの全ての元素耐性の最大値 +#%",
+      "en": "Monsters have +#% to all maximum Elemental Resistances"
+    },
+    {
+      "ja": "モンスターは呪いの影響を受けない",
+      "en": "Monsters are Unaffected by Curses"
+    },
+    {
+      "ja": "プレイヤーはスペルダメージをブロックすることができない",
+      "en": "Players cannot Block Spell Damage"
+    },
+    {
+      "ja": "マップで見つかるカオスオーブは#%の確率でフルスタックでドロップする",
+      "en": "Chaos Orbs found in your Maps have #% chance to drop as a full stack"
+    },
+    {
+      "ja": "ユニーククルーシブルモンスターの数が#%増加する",
+      "en": "#% increased number of Unique Crucible Monsters"
+    },
+    {
+      "ja": "マップに出現する赤ビーストは#%の確率で二種類のなかからより珍しいほうが選ばれて決まる",
+      "en": "#% chance for Red Beasts in your Maps to be the less common of two varieties"
+    },
+    {
+      "ja": "少なくとも1個のペランダスのチェストはユニークモンスターに守られている",
+      "en": "At least one Perandus Chest is guarded by a Unique Monster"
+    },
+    {
+      "ja": "モンスターによる全てのダメージが発火を付与できる",
+      "en": "All Damage from Monsters' Hits can Ignite"
+    },
+    {
+      "ja": "マップに出現する赤ビーストは#%の確率で二倍の経験値を付与する",
+      "en": "Red Beasts in your Maps have #% chance to grant double Experience"
+    },
+    {
+      "ja": "マップに出現するレアモンスターは#%の確率でレアの宝飾品アイテムを1個ドロップする",
+      "en": "Rare Monsters in your Maps have #% chance to drop an additional Rare Jewellery Item"
     },
     {
       "ja": "マップに出現するレアモンスターは#%の確率で基礎カレンシーアイテムを追加で1個ドロップする",
       "en": "Rare Monsters in your Maps have #% chance to drop an additional Basic Currency Item"
     },
     {
-      "ja": "武器によるダメージは冷気耐性の#%を貫通する",
-      "en": "Damage with Weapons Penetrates #% Cold Resistance"
+      "ja": "レアおよびユニークのクルーシブルモンスターは#%の確率で\nクルーシブルパッシブスキルツリーを持つ盾をドロップする",
+      "en": "Rare and Unique Crucible Monsters have #% chance to drop a Shield with\na Crucible Passive Skill Tree"
+    },
+    {
+      "ja": "憤怒10ごとに物理ダメージが#%増加する",
+      "en": "Each 10 Rage also grants #% increased Physical Damage"
+    },
+    {
+      "ja": "マップで見つかる色彩のオーブは#%の確率でフルスタックでドロップする",
+      "en": "Chromatic Orbs found in your Maps have #% chance to drop as a full stack"
     },
     {
       "ja": "マップのマジックモンスターは#%の確率で品質を持つジェムを追加で1個ドロップする",
@@ -160173,6 +159903,10 @@ var JpPoeUtils = (() => {
       "en": "Armourer's Scraps found in your Maps have #% chance to drop as a full stack"
     },
     {
+      "ja": "モンスターによる発火の持続時間が#%増加する",
+      "en": "Monsters have #% increased Ignite Duration"
+    },
+    {
       "ja": "マップで見つかる王者のオーブは#%の確率で5スタックの王者のオーブとしてドロップする",
       "en": "Regal Orbs found in your Maps have #% chance to drop as a stack of 5 Regal Orbs instead"
     },
@@ -160181,16 +159915,12 @@ var JpPoeUtils = (() => {
       "en": "Incursion Architects in your Maps have #% chance to grant double Experience"
     },
     {
-      "ja": "マップに出現するビヨンドポータルは#%の確率でビヨンドデーモンを追加で1体スポーンさせる",
-      "en": "Beyond Portals have a #% chance to spawn an additional Beyond Demon"
-    },
-    {
       "ja": "マップに出現する最終ボスは#%の確率でマップを追加で1個ドロップする",
       "en": "Final Map Boss in each Map have #% chance to drop an additional Map Item"
     },
     {
-      "ja": "マップのマジックモンスターは#%の確率でレアの武器を追加で1個ドロップする",
-      "en": "Magic Monsters in your Maps have #% chance to drop an additional Rare Weapon"
+      "ja": "武器および盾は#%の確率で暗黙モッドを持つコラプト状態で見つかる",
+      "en": "Weapons and Shields found have #% chance to be Corrupted with an Implicit"
     },
     {
       "ja": "マップでは#%の確率でアミュレットの代わりにアノイントされたタリスマンがドロップする",
@@ -160201,40 +159931,24 @@ var JpPoeUtils = (() => {
       "en": "Mirrors of Kalandra found in your Maps have #% chance to drop as a stack of 2 Mirrors of Kalandra instead"
     },
     {
-      "ja": "マップで見つかる宝飾職人のオーブは#%の確率でフルスタックでドロップする",
-      "en": "Jeweller's Orbs found in your Maps have #% chance to drop as a full stack"
-    },
-    {
-      "ja": "マップで見つかる錬金術のオーブは#%の確率でフルスタックでドロップする",
-      "en": "Orbs of Alchemy found in your Maps have #% chance to drop as a full stack"
-    },
-    {
-      "ja": "レアおよびユニークのクルーシブルモンスターは#%の確率で\nクルーシブルパッシブスキルツリーを持つユニークアイテムをドロップする",
-      "en": "Unique Crucible Monsters have #% chance to drop a Unique Item with\na Crucible Passive Skill Tree"
-    },
-    {
       "ja": "マップに出現するあるペランダスのチェストがアーカイブになる確率が#%増加する",
       "en": "Perandus Chests in your Maps have #% increased chance to be Archives"
     },
     {
-      "ja": "ソケットされたジェムはレベル#ヘックスパスによりサポートされる",
-      "en": "Socketed Gems are Supported by Level # Hexpass"
+      "ja": "レアおよびユニークのクルーシブルモンスターは#%の確率で\nクルーシブルパッシブスキルツリーを持つ遠距離武器をドロップする",
+      "en": "Rare and Unique Crucible Monsters have #% chance to drop a Ranged Weapon with\na Crucible Passive Skill Tree"
     },
     {
-      "ja": "ユニーク以外のアイテムからクルーシブルパッシブスキルツリーを取り除く炉が出現する",
-      "en": "Contains a Furnace that removes a Crucible Passive Skill Tree from a Non-Unique Item"
+      "ja": "モンスターのヒットを回避することができない",
+      "en": "Monsters' Hits can't be Evaded"
     },
     {
-      "ja": "ソケットされたジェムはレベル#覚醒のスペルカスケードによりサポートされる",
-      "en": "Socketed Gems are Supported by Level # Awakened Spell Cascade"
+      "ja": "マップに出現するペランダスのチェストが財宝である確率が#%増加する",
+      "en": "Perandus Chests in your Maps have #% increased chance to be Treasuries"
     },
     {
-      "ja": "エリアに聖なる木立が出現する\n作物のサイズが大きくなる\n作物にティアの高いシードが出現する",
-      "en": "Areas contain The Sacred Grove\nCrops are larger in size\nCrops contain higher tier seeds"
-    },
-    {
-      "ja": "鍛えたときにクルーシブルパッシブスキルが維持される確率が上がる",
-      "en": "Crucible Passive Skills are more likely to be retained when Forging"
+      "ja": "鍛えたアイテムのクルーシブルパッシブスキルのティアがダウングレードされることがない",
+      "en": "Crucible Passive Skills on Forged Items cannot have tiers downgraded"
     },
     {
       "ja": "マップには#%の確率でインベージョンボスが追加で1体出現する",
@@ -160245,28 +159959,8 @@ var JpPoeUtils = (() => {
       "en": "+# Metamorph Monster Samples in your Maps have Rewards"
     },
     {
-      "ja": "武器によるダメージは火耐性の#%を貫通する",
-      "en": "Damage with Weapons Penetrates #% Fire Resistance"
-    },
-    {
-      "ja": "マップで見つかる武器は#%の確率で20%の品質を持つ",
-      "en": "Weapons found in your Maps have #% chance to have 20% Quality"
-    },
-    {
-      "ja": "マップに出現するミッションが付与する好意が#%増加する",
-      "en": "Missions in your Maps grant #% increased Favour"
-    },
-    {
-      "ja": "マップのインフルエンスモンスターは#%の確率でレアの武器を追加で1個ドロップする",
-      "en": "Influenced Monsters in your Maps have #% chance to drop an additional Rare Weapon"
-    },
-    {
-      "ja": "マップに出現するハービンジャーはよりレアなカレンシーシャードをドロップする",
-      "en": "Harbingers in your Maps drop rarer Currency Shards"
-    },
-    {
-      "ja": "マップに出現する最終ボスは#%の確率でアトラスベースアイテムを追加で1個ドロップする",
-      "en": "Final Map Boss in each Map has #% chance to drop an additional Atlas Base Type"
+      "ja": "各マップの最終ボスは#%の確率で隣接マップの代わりにヴァールアイテムをドロップする",
+      "en": "Final Map Boss in each Map has #% chance to drop a Vaal Item instead of an Adjacent Map"
     },
     {
       "ja": "マップで見つかるヴァールオーブは#%の確率で7スタックのヴァールオーブとしてドロップする",
@@ -160275,6 +159969,314 @@ var JpPoeUtils = (() => {
     {
       "ja": "マップに出現するサルファイトの鉱脈およびチェストは#%の確率でサルファイトを集めるモンスターに守られている",
       "en": "Sulphite Veins and Chests in your Maps have #% chance to be guarded by Sulphite-hoarding Monsters"
+    },
+    {
+      "ja": "ユニーククルーシブルモンスターは#%の確率でユニーク近接武器をドロップする",
+      "en": "Unique Crucible Monsters have #% chance to drop a Unique Melee Weapon"
+    },
+    {
+      "ja": "エリアに多数のブリーチが出現する\nブリーチが開く速度および閉じる速度が速い",
+      "en": "Areas contain many additional Breaches\nBreaches open and close faster"
+    },
+    {
+      "ja": "冷気ダメージの#%をライフとして敵がリーチする",
+      "en": "#% of Cold Damage Leeched by Enemy as Life"
+    },
+    {
+      "ja": "マップに出現する最終ボスは#%の確率でアトラスベースアイテムを追加で1個ドロップする",
+      "en": "Final Map Boss in each Map has #% chance to drop an additional Atlas Base Type"
+    },
+    {
+      "ja": "マップに出現するハービンジャーはよりレアなカレンシーシャードをドロップする",
+      "en": "Harbingers in your Maps drop rarer Currency Shards"
+    },
+    {
+      "ja": "マップに出現するミッションが付与する好意が#%増加する",
+      "en": "Missions in your Maps grant #% increased Favour"
+    },
+    {
+      "ja": "マップに出現するインカージョンでドロップするアイテムの数量が#%増加する",
+      "en": "#% increased Quantity of Items dropped in Incursions in your Maps"
+    },
+    {
+      "ja": "マップにはエルダーフィーンドが追加で#パック出現する",
+      "en": "Area contains # additional packs of Elder Fiends"
+    },
+    {
+      "ja": "武器によるダメージは混沌耐性の#%を貫通する",
+      "en": "Damage with Weapons Penetrates #% Chaos Resistance"
+    },
+    {
+      "ja": "犠牲的熱意がある時にヒットは#%の物理ダメージ軽減率を圧倒する",
+      "en": "Hits Overwhelm #% of Physical Damage Reduction while you have Sacrificial Zeal"
+    },
+    {
+      "ja": "モンスターのアタックによるヒットは出血を付与する",
+      "en": "Monsters' Attack Hits inflict Bleeding"
+    },
+    {
+      "ja": "モンスターが抑制したスペルダメージから防ぐダメージが+#%される",
+      "en": "Monsters prevent +#% of Suppressed Spell Damage"
+    },
+    {
+      "ja": "マップで見つかる錬金術のオーブは#%の確率でフルスタックでドロップする",
+      "en": "Orbs of Alchemy found in your Maps have #% chance to drop as a full stack"
+    },
+    {
+      "ja": "マップで見つかる宝飾職人のオーブは#%の確率でフルスタックでドロップする",
+      "en": "Jeweller's Orbs found in your Maps have #% chance to drop as a full stack"
+    },
+    {
+      "ja": "串刺しの持続時間が#%増加する",
+      "en": "#% increased Impale Duration"
+    },
+    {
+      "ja": "マップのマジックモンスターは#%の確率でレアの武器を追加で1個ドロップする",
+      "en": "Magic Monsters in your Maps have #% chance to drop an additional Rare Weapon"
+    },
+    {
+      "ja": "直近敵をスタンさせていればアタックブロック率 +#%",
+      "en": "+#% Chance to Block Attack Damage if you've Stunned an Enemy Recently"
+    },
+    {
+      "ja": "マップに出現するビヨンドポータルは#%の確率でビヨンドデーモンを追加で1体スポーンさせる",
+      "en": "Beyond Portals have a #% chance to spawn an additional Beyond Demon"
+    },
+    {
+      "ja": "エリアに追加のシュラインが出現する\nエリアにパンテオンモンスターに守られたシュラインが出現する",
+      "en": "Areas contain additional Shrines\nArea contains Shrines guarded by Pantheon Monsters"
+    },
+    {
+      "ja": "マップにはシェイパークリエイションが追加で#パック出現する",
+      "en": "Area contains # additional packs of Shaper Creations"
+    },
+    {
+      "ja": "エリアに追加のエッセンスが出現する\nエッセンスにローグエグザイルが閉じ込められている",
+      "en": "Areas contain additional Essences\nEssences contain Rogue Exiles"
+    },
+    {
+      "ja": "エリアに追加のストロングボックスが出現する\nストロングボックスは並んで出現する\n並んでいるストロングボックスは、並んでいる前のストロングボックスのロックがアンロックされた時に開く",
+      "en": "Areas contain additional Strongboxes\nStrongboxes are found in Sequences\nStrongboxes in a Sequence open when the previous Strongbox in the Sequence has unlocked"
+    },
+    {
+      "ja": "武器によるダメージは冷気耐性の#%を貫通する",
+      "en": "Damage with Weapons Penetrates #% Cold Resistance"
+    },
+    {
+      "ja": "マップで全てのプレイヤーに対するシュラインのバフの効果が#%増加する",
+      "en": "#% increased Effect of Shrine Buffs on Players"
+    },
+    {
+      "ja": "マップのインフルエンスモンスターは#%の確率で基礎カレンシーを追加で1個ドロップする",
+      "en": "Influenced Monsters in your Maps have #% chance to drop an additional Basic Currency Item"
+    },
+    {
+      "ja": "強化値が#%増加する",
+      "en": "#% increased Empowerment"
+    },
+    {
+      "ja": "ペランダスのチェストからドロップするアイテムのレアリティが#%上昇する",
+      "en": "Perandus Chests have #% more Rarity of Items Dropped"
+    },
+    {
+      "ja": "モンスターのヒットは#%の確率で凍結を付与する",
+      "en": "Monsters' Hits have #% chance to Freeze"
+    },
+    {
+      "ja": "マップに出現するイモータルシンジケートのメンバーは#%の確率で二倍の経験値を付与する",
+      "en": "Immortal Syndicate Members in your Maps have #% chance to grant double Experience"
+    },
+    {
+      "ja": "マップでは#%の確率でブリーチスプリンターの代わりにブリーチストーンがドロップする",
+      "en": "Breach Splinters have #% chance to drop as Breachstones instead"
+    },
+    {
+      "ja": "マップで見つかる可能性のオーブは#%の確率でフルスタックでドロップする",
+      "en": "Orbs of Chance found in your Maps have #% chance to drop as a full stack"
+    },
+    {
+      "ja": "マップのモンスターとチェストは#%の確率でアイテムレベルが+1されたアイテムをドロップする",
+      "en": "Monsters and Chests in your Maps have #% chance to drop Items with +1 to Item Level"
+    },
+    {
+      "ja": "マップのインフルエンスモンスターは#%の確率で品質を持つジェムを追加で1個ドロップする",
+      "en": "Influenced Monsters in your Maps have #% chance to drop an additional Gem with Quality"
+    },
+    {
+      "ja": "エリアに追加のハービンジャーポータルが出現する\nハービンジャーポータルが破壊された時に追加のハービンジャーシャードをドロップする",
+      "en": "Areas contain additional Harbinger Portals\nHarbinger Portals drop additional Currency Shards when destroyed"
+    },
+    {
+      "ja": "マップで見つかる洗浄のオーブは#%の確率でフルスタックでドロップする",
+      "en": "Orbs of Scouring found in your Maps have #% chance to drop as a full stack"
+    },
+    {
+      "ja": "マップで憑依されたかまたは触れられたモンスターからドロップするアイテムの数量が#%増加する",
+      "en": "#% increased Quantity of Items dropped by Possessed or Touched Monsters in your Maps"
+    },
+    {
+      "ja": "マップを完了した時にアトラスミッションが付与されるの確率が+#%される",
+      "en": "Your Maps have +#% chance to grant an Atlas Mission on Completion"
+    },
+    {
+      "ja": "レアおよびユニークのクルーシブルモンスターは#%の確率で\nクルーシブルパッシブスキルツリーを持つユニークアイテムをドロップする",
+      "en": "Unique Crucible Monsters have #% chance to drop a Unique Item with\na Crucible Passive Skill Tree"
+    },
+    {
+      "ja": "マップのマジックモンスターは#%の確率で基礎カレンシーアイテムを追加で1個ドロップする",
+      "en": "Magic Monsters in your Maps have #% chance to drop an additional Basic Currency Item"
+    },
+    {
+      "ja": "ソケットされたジェムはレベル#覚醒のエンハンスによりサポートされる",
+      "en": "Socketed Gems are Supported by Level # Awakened Enhance"
+    },
+    {
+      "ja": "マップで収穫された畑は#%の確率でクラフトオプションを追加で1個提供する",
+      "en": "Plants Harvested in your Maps have #% chance to give an additional Crafting option"
+    },
+    {
+      "ja": "マップで見つかるジェムは#%の確率で20%の品質を持つ",
+      "en": "Gems found in your Maps have #% chance to have 20% Quality"
+    },
+    {
+      "ja": "マップで見つかる変成のオーブは#%の確率でフルスタックでドロップする",
+      "en": "Orbs of Transmutation found in your Maps have #% chance to drop as a full stack"
+    },
+    {
+      "ja": "武器によるダメージは火耐性の#%を貫通する",
+      "en": "Damage with Weapons Penetrates #% Fire Resistance"
+    },
+    {
+      "ja": "エリアにはペランダスの金庫が追加で1個出現する",
+      "en": "Area contains an additional Perandus Coffer"
+    },
+    {
+      "ja": "#%の確率でマップに出現するブライトチェストが複製される",
+      "en": "#% chance to Duplicate Blight Chests in your Maps"
+    },
+    {
+      "ja": "マップでは#%の確率で無効化のオーブの代わりに3スタックの無効化のオーブがドロップする",
+      "en": "#% chance for Orbs of Annulment to drop as 3 Orbs of Annulment instead in your Maps"
+    },
+    {
+      "ja": "鍛えたアイテムのモッドの数値はランダム化される",
+      "en": "Forged Items have the numeric values of Modifiers Randomised"
+    },
+    {
+      "ja": "エリアに聖なる木立が出現する\n作物のサイズが大きくなる\n作物にティアの高いシードが出現する",
+      "en": "Areas contain The Sacred Grove\nCrops are larger in size\nCrops contain higher tier seeds"
+    },
+    {
+      "ja": "エリアにいるプレイヤーはハービンジャーの姿となる\nエリアで見つかるアイテムはカレンシーシャードのスタックに置き換わる",
+      "en": "Players in Areas take on the form of Harbingers\nItems found in Areas are replaced by stacks of Currency Shards"
+    },
+    {
+      "ja": "マップはランダムなプレフィックスを追加で#個持つ",
+      "en": "Map has # additional random Prefix"
+    },
+    {
+      "ja": "ユニーク以外のアイテムからクルーシブルパッシブスキルツリーを取り除く炉が出現する",
+      "en": "Contains a Furnace that removes a Crucible Passive Skill Tree from a Non-Unique Item"
+    },
+    {
+      "ja": "喰らったソウルの最大数 #",
+      "en": "Maximum # Eaten Soul"
+    },
+    {
+      "ja": "マップに出現するペランダスのチェストが金庫になる確率が#%増加する",
+      "en": "Perandus Chests in your Maps have #% increased chance to be Coffers"
+    },
+    {
+      "ja": "ソケットされたジェムはレベル#覚醒のアンセストラルコールによりサポートされる",
+      "en": "Socketed Gems are Supported by Level # Awakened Ancestral Call"
+    },
+    {
+      "ja": "マップで見つかるアイテムは#%の確率でソケットが完全にリンクされている",
+      "en": "Items found in your Maps have #% chance to be fully Linked"
+    },
+    {
+      "ja": "アクティブ中のアンセスタートーテムが付与するバフの効果は#秒間残存する",
+      "en": "Buffs from Active Ancestor Totems Linger for # second"
+    },
+    {
+      "ja": "武器によるダメージは雷耐性の#%を貫通する",
+      "en": "Damage with Weapons Penetrates #% Lightning Resistance"
+    },
+    {
+      "ja": "ハイストで報酬のチェストを開けた時に#%の確率で追加のブリーチアイテムを入手する",
+      "en": "#% chance to receive additional Breach items when opening a Reward Chest in a Heist"
+    },
+    {
+      "ja": "#%の物理ダメージ軽減率を圧倒する",
+      "en": "Overwhelm #% Physical Damage Reduction"
+    },
+    {
+      "ja": "レベル#ヴェンジェンススキルを付与する",
+      "en": "Grants Level # Vengeance Skill"
+    },
+    {
+      "ja": "鍛えたアイテムのクルーシブルパッシブスキルは#%の確率でティアがアップグレードされる",
+      "en": "Crucible Passive Skills on Forged Items have +#% chance for tiers to be upgraded"
+    },
+    {
+      "ja": "エリアにはペランダスの財宝が追加で1個出現する",
+      "en": "Area contains an additional Perandus Treasury"
+    },
+    {
+      "ja": "鍛えたアイテムは暗黙モッドを持つコラプト状態になる",
+      "en": "Forged Items are Corrupted with an Implicit"
+    },
+    {
+      "ja": "ソケットされたジェムはレベル#覚醒の冷気耐性貫通によりサポートされる",
+      "en": "Socketed Gems are Supported by Level # Awakened Cold Penetration"
+    },
+    {
+      "ja": "デターミネーションのマナリザーブ効率#%増加する",
+      "en": "Determination has #% increased Mana Reservation Efficiency"
+    },
+    {
+      "ja": "マップに出現する最終ボスは#%の確率で占いカードを追加で1枚ドロップする",
+      "en": "Final Map Boss in each Map has #% chance to drop an additional Divination Card"
+    },
+    {
+      "ja": "#%の確率でハイストチェストに入っている六分儀が複製される",
+      "en": "Heist Chests have a #% chance to Duplicate contained Sextants"
+    },
+    {
+      "ja": "この武器によるヒットは#%の物理ダメージ軽減率を圧倒する",
+      "en": "Hits with this Weapon Overwhelm #% Physical Damage Reduction"
+    },
+    {
+      "ja": "ソケットされたジェムはレベル#覚醒のスペルカスケードによりサポートされる",
+      "en": "Socketed Gems are Supported by Level # Awakened Spell Cascade"
+    },
+    {
+      "ja": "マップに出現するペランダスのチェストが補給品である確率が#%増加する",
+      "en": "Perandus Chests in your Maps have #% increased chance to be Hoards"
+    },
+    {
+      "ja": "鍛えたアイテムの品質は30%になる",
+      "en": "Forged Items have 30% Quality"
+    },
+    {
+      "ja": "マップに出現するストロングボックスがユニークになる確率が#%増加する",
+      "en": "#% increased chance for Strongboxes in Area to be Unique"
+    },
+    {
+      "ja": "マップに出現するレアモンスターは#%の確率でレアの防具アイテムを追加で1個ドロップする",
+      "en": "Rare Monsters in your Maps have #% chance to drop an additional Rare Armour Item"
+    },
+    {
+      "ja": "ソケットされたジェムはレベル#ヘックスパスによりサポートされる",
+      "en": "Socketed Gems are Supported by Level # Hexpass"
+    },
+    {
+      "ja": "鍛えたときにクルーシブルパッシブスキルが維持される確率が上がる",
+      "en": "Crucible Passive Skills are more likely to be retained when Forging"
+    },
+    {
+      "ja": "マップのインフルエンスモンスターは#%の確率でレアの武器を追加で1個ドロップする",
+      "en": "Influenced Monsters in your Maps have #% chance to drop an additional Rare Weapon"
     },
     {
       "ja": "エリアは#のインフルエンスを受けている",
@@ -160501,10 +160503,6 @@ var JpPoeUtils = (() => {
       "en": "Grants Level # Zealotry Skill"
     },
     {
-      "ja": "レベル#のグレートアバランチを使用する",
-      "en": "Uses level # The Great Avalanche"
-    },
-    {
       "ja": "プレフィックスモッドの強さが#%増加する",
       "en": "#% increased Prefix Modifier magnitudes"
     },
@@ -160595,6 +160593,10 @@ var JpPoeUtils = (() => {
     {
       "ja": "レベル#のダンスインザホワイトを使用する",
       "en": "Uses level # Dance in the White"
+    },
+    {
+      "ja": "レベル#のグレートアバランチを使用する",
+      "en": "Uses level # The Great Avalanche"
     },
     {
       "ja": "投射物のヒットから受けるダメージが#%減少する",
@@ -161065,12 +161067,12 @@ var JpPoeUtils = (() => {
       "en": "Tempest Shield has #% increased Buff Effect"
     },
     {
-      "ja": "ユニークの敵が付近にいる場合、アタックのクリティカル率が#%増加する",
-      "en": "While a Unique Enemy is in your Presence, #% increased Critical Strike Chance for Attacks"
-    },
-    {
       "ja": "ピュリティオブエレメンツのオーラの効果が#%増加する",
       "en": "Purity of Elements has #% increased Aura Effect"
+    },
+    {
+      "ja": "ユニークの敵が付近にいる場合、アタックのクリティカル率が#%増加する",
+      "en": "While a Unique Enemy is in your Presence, #% increased Critical Strike Chance for Attacks"
     },
     {
       "ja": "ユニークの敵が付近にいる場合、グローバル物理ダメージが#%増加する",
@@ -161141,12 +161143,12 @@ var JpPoeUtils = (() => {
       "en": "#% increased Physical Damage with Spell Skills"
     },
     {
-      "ja": "ユニークの敵が付近にいる場合、火継続ダメージ倍率 +#%",
-      "en": "While a Unique Enemy is in your Presence, +#% to Fire Damage over Time Multiplier"
-    },
-    {
       "ja": "鉤爪のクリティカルダメージ倍率 +#%",
       "en": "+#% to Critical Strike Multiplier with Claws"
+    },
+    {
+      "ja": "ユニークの敵が付近にいる場合、火継続ダメージ倍率 +#%",
+      "en": "While a Unique Enemy is in your Presence, +#% to Fire Damage over Time Multiplier"
     },
     {
       "ja": "ユニークの敵が付近にいる場合、冷気ダメージが#%増加する",
@@ -161241,12 +161243,12 @@ var JpPoeUtils = (() => {
       "en": "#% increased Fire Damage with Attack Skills"
     },
     {
-      "ja": "ユニークの敵が付近にいる場合、ダメージは#%の雷耐性を貫通する",
-      "en": "While a Unique Enemy is in your Presence, Damage Penetrates #% Lightning Resistance"
-    },
-    {
       "ja": "スピリットオファリングの効果が#%増加する",
       "en": "Spirit Offering has #% increased Effect"
+    },
+    {
+      "ja": "ユニークの敵が付近にいる場合、ダメージは#%の雷耐性を貫通する",
+      "en": "While a Unique Enemy is in your Presence, Damage Penetrates #% Lightning Resistance"
     },
     {
       "ja": "アンセストラルクライで奮起したアタックのダメージが#%増加する",
@@ -161533,12 +161535,12 @@ var JpPoeUtils = (() => {
       "en": "While a Unique Enemy is in your Presence, +#% to maximum Cold Resistance"
     },
     {
-      "ja": "ユニークの敵が付近にいる場合、物理ダメージの#%を追加混沌ダメージとして獲得する",
-      "en": "While a Unique Enemy is in your Presence, Gain #% of Physical Damage as Extra Chaos Damage"
-    },
-    {
       "ja": "剣の命中力が#%増加する",
       "en": "#% increased Accuracy Rating with Swords"
+    },
+    {
+      "ja": "ユニークの敵が付近にいる場合、物理ダメージの#%を追加混沌ダメージとして獲得する",
+      "en": "While a Unique Enemy is in your Presence, Gain #% of Physical Damage as Extra Chaos Damage"
     },
     {
       "ja": "ユニークの敵が付近にいる場合、物理ダメージの#%を追加火ダメージとして獲得する",
@@ -161585,12 +161587,12 @@ var JpPoeUtils = (() => {
       "en": "While a Unique Enemy is in your Presence, #% of Physical Damage from Hits taken as Cold Damage"
     },
     {
-      "ja": "ユニークの敵が付近にいる場合、ヒットは#%の確率で敵モンスターの物理ダメージ軽減を無視する",
-      "en": "While a Unique Enemy is in your Presence, Hits have #% chance to ignore Enemy Physical Damage Reduction"
-    },
-    {
       "ja": "アトラスのピナクルボスが付近にいる場合、アタックダメージが#%増加する",
       "en": "While a Pinnacle Atlas Boss is in your Presence, #% increased Attack Damage"
+    },
+    {
+      "ja": "ユニークの敵が付近にいる場合、ヒットは#%の確率で敵モンスターの物理ダメージ軽減を無視する",
+      "en": "While a Unique Enemy is in your Presence, Hits have #% chance to ignore Enemy Physical Damage Reduction"
     },
     {
       "ja": "ユニークの敵が付近にいる場合、#から#の雷ダメージをアタックに追加する",
@@ -161701,16 +161703,16 @@ var JpPoeUtils = (() => {
       "en": "While a Unique Enemy is in your Presence, Malevolence has #% increased Aura Effect"
     },
     {
-      "ja": "アトラスのピナクルボスが付近にいる場合、火ダメージが#%増加する",
-      "en": "While a Pinnacle Atlas Boss is in your Presence, #% increased Fire Damage"
-    },
-    {
       "ja": "ユニークの敵が付近にいる場合、#%の確率で出血を無効化する",
       "en": "While a Unique Enemy is in your Presence, #% chance to Avoid Bleeding"
     },
     {
       "ja": "アトラスのピナクルボスが付近にいる場合、スペルダメージ抑制確率 +#%",
       "en": "While a Pinnacle Atlas Boss is in your Presence, +#% chance to Suppress Spell Damage"
+    },
+    {
+      "ja": "アトラスのピナクルボスが付近にいる場合、火ダメージが#%増加する",
+      "en": "While a Pinnacle Atlas Boss is in your Presence, #% increased Fire Damage"
     },
     {
       "ja": "アトラスのピナクルボスが付近にいる場合、グローバル物理ダメージが#%増加する",
@@ -161753,12 +161755,12 @@ var JpPoeUtils = (() => {
       "en": "While a Pinnacle Atlas Boss is in your Presence, #% increased Critical Strike Chance for Attacks"
     },
     {
-      "ja": "ユニークの敵が付近にいる場合、ミニオンの移動スピードが#%増加する",
-      "en": "While a Unique Enemy is in your Presence, Minions have #% increased Movement Speed"
-    },
-    {
       "ja": "ユニークの敵が付近にいる場合、ライフ回復レートが#%増加する",
       "en": "While a Unique Enemy is in your Presence, #% increased Life Recovery rate"
+    },
+    {
+      "ja": "ユニークの敵が付近にいる場合、ミニオンの移動スピードが#%増加する",
+      "en": "While a Unique Enemy is in your Presence, Minions have #% increased Movement Speed"
     },
     {
       "ja": "ユニークの敵が付近にいる場合、物理ダメージの#%を雷ダメージに変換する",
@@ -161773,12 +161775,12 @@ var JpPoeUtils = (() => {
       "en": "While a Unique Enemy is in your Presence, Bleeding you inflict deals Damage #% faster"
     },
     {
-      "ja": "アトラスのピナクルボスが付近にいる場合、エナジーシールドリチャージレートが#%増加する",
-      "en": "While a Pinnacle Atlas Boss is in your Presence, #% increased Energy Shield Recharge Rate"
-    },
-    {
       "ja": "ユニークの敵が付近にいる場合、#秒ごとにフレンジーチャージを1獲得する",
       "en": "While a Unique Enemy is in your Presence, Gain a Frenzy Charge every # seconds"
+    },
+    {
+      "ja": "アトラスのピナクルボスが付近にいる場合、エナジーシールドリチャージレートが#%増加する",
+      "en": "While a Pinnacle Atlas Boss is in your Presence, #% increased Energy Shield Recharge Rate"
     },
     {
       "ja": "ユニークの敵が付近にいる場合、#から#の火ダメージをアタックに追加する",
@@ -161837,12 +161839,12 @@ var JpPoeUtils = (() => {
       "en": "While a Unique Enemy is in your Presence, #% chance to Hinder Enemies on Hit with Spells"
     },
     {
-      "ja": "ユニークの敵が付近にいる場合、#から#の混沌ダメージをスペルに追加する",
-      "en": "While a Unique Enemy is in your Presence, Adds # to # Chaos Damage to Spells"
-    },
-    {
       "ja": "ユニークの敵が付近にいる場合、物理ダメージの#%を火ダメージに変換する",
       "en": "While a Unique Enemy is in your Presence, #% of Physical Damage Converted to Fire Damage"
+    },
+    {
+      "ja": "ユニークの敵が付近にいる場合、#から#の混沌ダメージをスペルに追加する",
+      "en": "While a Unique Enemy is in your Presence, Adds # to # Chaos Damage to Spells"
     },
     {
       "ja": "ユニークの敵が付近にいる場合、プライドのオーラの効果が#%増加する",
@@ -161853,12 +161855,12 @@ var JpPoeUtils = (() => {
       "en": "While a Unique Enemy is in your Presence, +# to Accuracy Rating per Frenzy Charge"
     },
     {
-      "ja": "ユニークの敵が付近にいる場合、受けた火ダメージの#%をライフとして回収する",
-      "en": "While a Unique Enemy is in your Presence, #% of Fire Damage taken Recouped as Life"
-    },
-    {
       "ja": "ユニークの敵が付近にいる場合、デターミネーションのオーラの効果が#%増加する",
       "en": "While a Unique Enemy is in your Presence, Determination has #% increased Aura Effect"
+    },
+    {
+      "ja": "ユニークの敵が付近にいる場合、受けた火ダメージの#%をライフとして回収する",
+      "en": "While a Unique Enemy is in your Presence, #% of Fire Damage taken Recouped as Life"
     },
     {
       "ja": "ユニークの敵が付近にいる場合、プレイヤーのヒットによるダメージの#%は反射されない",
@@ -161873,12 +161875,12 @@ var JpPoeUtils = (() => {
       "en": "While a Unique Enemy is in your Presence, #% increased Damage per 100 Intelligence"
     },
     {
-      "ja": "ユニークの敵が付近にいる場合、#%の確率で敵を感電させる",
-      "en": "While a Unique Enemy is in your Presence, #% chance to Shock"
-    },
-    {
       "ja": "ユニークの敵が付近にいる場合、ヒット時に#%の確率で近くの敵を4秒間威嚇する",
       "en": "While a Unique Enemy is in your Presence, #% chance to Intimidate Enemies for 4 seconds on Hit"
+    },
+    {
+      "ja": "ユニークの敵が付近にいる場合、#%の確率で敵を感電させる",
+      "en": "While a Unique Enemy is in your Presence, #% chance to Shock"
     },
     {
       "ja": "ユニークの敵が付近にいる場合、ウォークライスピードが#%増加する",
@@ -161901,12 +161903,12 @@ var JpPoeUtils = (() => {
       "en": "While a Unique Enemy is in your Presence, #% chance to Freeze"
     },
     {
-      "ja": "ユニークの敵が付近にいる場合、#から#の混沌ダメージをアタックに追加する",
-      "en": "While a Unique Enemy is in your Presence, Adds # to # Chaos Damage to Attacks"
-    },
-    {
       "ja": "ユニークの敵が付近にいる場合、雷耐性 +#%",
       "en": "While a Unique Enemy is in your Presence, +#% to Lightning Resistance"
+    },
+    {
+      "ja": "ユニークの敵が付近にいる場合、#から#の混沌ダメージをアタックに追加する",
+      "en": "While a Unique Enemy is in your Presence, Adds # to # Chaos Damage to Attacks"
     },
     {
       "ja": "ユニークの敵が付近にいる場合、プレイヤーに対して使用されたフラスコの効果が#%増加する",
@@ -161921,36 +161923,36 @@ var JpPoeUtils = (() => {
       "en": "While a Unique Enemy is in your Presence, #% of Lightning Damage taken Recouped as Life"
     },
     {
-      "ja": "アトラスのピナクルボスが付近にいる場合、火継続ダメージ倍率 +#%",
-      "en": "While a Pinnacle Atlas Boss is in your Presence, +#% to Fire Damage over Time Multiplier"
-    },
-    {
       "ja": "ユニークの敵が付近にいる場合、知性#ごとに受けるダメージが1%低下する",
       "en": "While a Unique Enemy is in your Presence, 1% less Damage Taken per # Intelligence"
     },
     {
-      "ja": "アトラスのピナクルボスが付近にいる場合、混沌継続ダメージ倍率 +#%",
-      "en": "While a Pinnacle Atlas Boss is in your Presence, +#% to Chaos Damage over Time Multiplier"
+      "ja": "アトラスのピナクルボスが付近にいる場合、火継続ダメージ倍率 +#%",
+      "en": "While a Pinnacle Atlas Boss is in your Presence, +#% to Fire Damage over Time Multiplier"
     },
     {
       "ja": "ユニークの敵が付近にいる場合、器用さ100ごとにダメージが#%増加する",
       "en": "While a Unique Enemy is in your Presence, #% increased Damage per 100 Dexterity"
     },
     {
+      "ja": "アトラスのピナクルボスが付近にいる場合、混沌継続ダメージ倍率 +#%",
+      "en": "While a Pinnacle Atlas Boss is in your Presence, +#% to Chaos Damage over Time Multiplier"
+    },
+    {
       "ja": "ユニークの敵が付近にいる場合、器用さ#ごとに受けるダメージが1%低下する",
       "en": "While a Unique Enemy is in your Presence, 1% less Damage Taken per # Dexterity"
     },
     {
-      "ja": "ユニークの敵が付近にいる場合、グレースのオーラの効果が#%増加する",
-      "en": "While a Unique Enemy is in your Presence, Grace has #% increased Aura Effect"
+      "ja": "コラプト状態であれば移動スピードが#%増加する",
+      "en": "#% increased Movement Speed if Corrupted"
     },
     {
       "ja": "アトラスのピナクルボスが付近にいる場合、スキルによる呪い以外のオーラの効果が#%増加する",
       "en": "While a Pinnacle Atlas Boss is in your Presence, #% increased effect of Non-Curse Auras from your Skills"
     },
     {
-      "ja": "コラプト状態であれば移動スピードが#%増加する",
-      "en": "#% increased Movement Speed if Corrupted"
+      "ja": "ユニークの敵が付近にいる場合、グレースのオーラの効果が#%増加する",
+      "en": "While a Unique Enemy is in your Presence, Grace has #% increased Aura Effect"
     },
     {
       "ja": "アトラスのピナクルボスが付近にいる場合、アタックブロック率が#%",
@@ -161977,16 +161979,16 @@ var JpPoeUtils = (() => {
       "en": "While a Unique Enemy is in your Presence, #% increased Mana Recovery rate"
     },
     {
-      "ja": "アトラスのピナクルボスが付近にいる場合、ダメージは#%の火耐性を貫通する",
-      "en": "While a Pinnacle Atlas Boss is in your Presence, Damage Penetrates #% Fire Resistance"
+      "ja": "アトラスのピナクルボスが付近にいる場合、非ダメージ性状態異常の効果が#%増加する",
+      "en": "While a Pinnacle Atlas Boss is in your Presence, #% increased Effect of Non-Damaging Ailments"
     },
     {
       "ja": "ユニークの敵が付近にいる場合、トラップ投擲スピードが#%増加する",
       "en": "While a Unique Enemy is in your Presence, #% increased Trap Throwing Speed"
     },
     {
-      "ja": "アトラスのピナクルボスが付近にいる場合、非ダメージ性状態異常の効果が#%増加する",
-      "en": "While a Pinnacle Atlas Boss is in your Presence, #% increased Effect of Non-Damaging Ailments"
+      "ja": "アトラスのピナクルボスが付近にいる場合、ダメージは#%の火耐性を貫通する",
+      "en": "While a Pinnacle Atlas Boss is in your Presence, Damage Penetrates #% Fire Resistance"
     },
     {
       "ja": "ユニークの敵が付近にいる場合、アタックはヒット時に#%の確率で敵に重傷を付与する",
@@ -162045,12 +162047,12 @@ var JpPoeUtils = (() => {
       "en": "While a Unique Enemy is in your Presence, #% reduced Effect of Shock on you"
     },
     {
-      "ja": "ユニークの敵が付近にいる場合、ヘイストのオーラの効果が#%増加する",
-      "en": "While a Unique Enemy is in your Presence, Haste has #% increased Aura Effect"
-    },
-    {
       "ja": "アトラスのピナクルボスが付近にいる場合、物理継続ダメージ倍率 +#%",
       "en": "While a Pinnacle Atlas Boss is in your Presence, +#% to Physical Damage over Time Multiplier"
+    },
+    {
+      "ja": "ユニークの敵が付近にいる場合、ヘイストのオーラの効果が#%増加する",
+      "en": "While a Unique Enemy is in your Presence, Haste has #% increased Aura Effect"
     },
     {
       "ja": "ユニークの敵が付近にいる場合、ストーンゴーレムにより付与されるバフの効果が#%増加する",
@@ -162161,12 +162163,12 @@ var JpPoeUtils = (() => {
       "en": "While a Unique Enemy is in your Presence, Purity of Elements has #% increased Aura Effect"
     },
     {
-      "ja": "ユニークの敵が付近にいる場合、混沌ダメージの#%をライフとしてリーチする",
-      "en": "While a Unique Enemy is in your Presence, #% of Chaos Damage Leeched as Life"
-    },
-    {
       "ja": "ユニークの敵が付近にいる場合、冷気ダメージの#%をライフとしてリーチする",
       "en": "While a Unique Enemy is in your Presence, #% of Cold Damage Leeched as Life"
+    },
+    {
+      "ja": "ユニークの敵が付近にいる場合、混沌ダメージの#%をライフとしてリーチする",
+      "en": "While a Unique Enemy is in your Presence, #% of Chaos Damage Leeched as Life"
     },
     {
       "ja": "ユニークの敵が付近にいる場合、トーテム設置スピードが#%増加する",
@@ -162177,12 +162179,12 @@ var JpPoeUtils = (() => {
       "en": "While a Pinnacle Atlas Boss is in your Presence, #% increased Mana Reservation Efficiency of Skills"
     },
     {
-      "ja": "ユニークの敵が付近にいる場合、アタックによるヒット時に憤怒を1獲得する",
-      "en": "While a Unique Enemy is in your Presence, Gain 1 Rage on Hit with Attacks"
-    },
-    {
       "ja": "ユニークの敵が付近にいる場合、プレイヤーが付与した凍結は#m以内の他の敵に伝染する",
       "en": "While a Unique Enemy is in your Presence, Freezes you inflict spread to other Enemies within # metre"
+    },
+    {
+      "ja": "ユニークの敵が付近にいる場合、アタックによるヒット時に憤怒を1獲得する",
+      "en": "While a Unique Enemy is in your Presence, Gain 1 Rage on Hit with Attacks"
     },
     {
       "ja": "ユニークの敵が付近にいる場合、スピリットオファリングの効果が#%増加する",
@@ -162249,16 +162251,16 @@ var JpPoeUtils = (() => {
       "en": "While a Unique Enemy is in your Presence, Bone Offering has #% increased Effect"
     },
     {
-      "ja": "ユニークの敵が付近にいる場合、インティミデーティングクライのクールダウン解消レートが#%増加する",
-      "en": "While a Unique Enemy is in your Presence, Intimidating Cry has #% increased Cooldown Recovery Rate"
-    },
-    {
       "ja": "ユニークの敵が付近にいる場合、アンセストラルクライで奮起したアタックのダメージが#%増加する",
       "en": "While a Unique Enemy is in your Presence, Attacks Exerted by Ancestral Cry deal #% increased Damage"
     },
     {
       "ja": "ユニークの敵が付近にいる場合、ラリイングクライのバフの効果が#%増加する",
       "en": "While a Unique Enemy is in your Presence, #% increased Rallying Cry Buff Effect"
+    },
+    {
+      "ja": "ユニークの敵が付近にいる場合、インティミデーティングクライのクールダウン解消レートが#%増加する",
+      "en": "While a Unique Enemy is in your Presence, Intimidating Cry has #% increased Cooldown Recovery Rate"
     },
     {
       "ja": "ユニークの敵が付近にいる場合、コンダクティヴィティの呪い効果が#%増加する",
@@ -162297,16 +162299,12 @@ var JpPoeUtils = (() => {
       "en": "While a Pinnacle Atlas Boss is in your Presence, +#% to all Elemental Resistances"
     },
     {
-      "ja": "ユニークの敵が付近にいる場合、フロストバイトの呪い効果が#%増加する",
-      "en": "While a Unique Enemy is in your Presence, #% increased Frostbite Curse Effect"
-    },
-    {
       "ja": "ユニークの敵が付近にいる場合、フレイムゴーレムにより付与されるバフの効果が#%増加する",
       "en": "While a Unique Enemy is in your Presence, #% increased Effect of the Buff granted by your Flame Golems"
     },
     {
-      "ja": "最大マナ500ごとにスペルダメージが#%増加する",
-      "en": "#% increased Spell Damage per 500 Maximum Mana"
+      "ja": "ユニークの敵が付近にいる場合、フロストバイトの呪い効果が#%増加する",
+      "en": "While a Unique Enemy is in your Presence, #% increased Frostbite Curse Effect"
     },
     {
       "ja": "アトラスのピナクルボスが付近にいる場合、火耐性の最大値 +#%",
@@ -162317,12 +162315,16 @@ var JpPoeUtils = (() => {
       "en": "While a Unique Enemy is in your Presence, #% increased Battlemage's Cry Buff Effect"
     },
     {
-      "ja": "ユニークの敵が付近にいる場合、ライトニングゴーレムにより付与されるバフの効果が#%増加する",
-      "en": "While a Unique Enemy is in your Presence, #% increased Effect of the Buff granted by your Lightning Golems"
+      "ja": "最大マナ500ごとにスペルダメージが#%増加する",
+      "en": "#% increased Spell Damage per 500 Maximum Mana"
     },
     {
       "ja": "ユニークの敵が付近にいる場合、フレッシュアンドストーンの効果範囲が#%増加する",
       "en": "While a Unique Enemy is in your Presence, Flesh and Stone has #% increased Area of Effect"
+    },
+    {
+      "ja": "ユニークの敵が付近にいる場合、ライトニングゴーレムにより付与されるバフの効果が#%増加する",
+      "en": "While a Unique Enemy is in your Presence, #% increased Effect of the Buff granted by your Lightning Golems"
     },
     {
       "ja": "アトラスのピナクルボスが付近にいる場合、ヒット時に雷の曝露を付与し、雷耐性を#%させる",
@@ -162393,12 +162395,12 @@ var JpPoeUtils = (() => {
       "en": "While a Pinnacle Atlas Boss is in your Presence, #% increased Damage per Power Charge"
     },
     {
-      "ja": "アトラスのピナクルボスが付近にいる場合、呪印の効果が#%増加する",
-      "en": "While a Pinnacle Atlas Boss is in your Presence, #% increased Effect of your Marks"
-    },
-    {
       "ja": "アトラスのピナクルボスが付近にいる場合、トラベルスキルのクールダウン解消レートが#%増加する",
       "en": "While a Pinnacle Atlas Boss is in your Presence, #% increased Cooldown Recovery Rate of Travel Skills"
+    },
+    {
+      "ja": "アトラスのピナクルボスが付近にいる場合、呪印の効果が#%増加する",
+      "en": "While a Pinnacle Atlas Boss is in your Presence, #% increased Effect of your Marks"
     },
     {
       "ja": "アトラスのピナクルボスが付近にいる場合、アタックスピードが#%増加する",
@@ -162413,16 +162415,16 @@ var JpPoeUtils = (() => {
       "en": "While a Pinnacle Atlas Boss is in your Presence, +#% to maximum Lightning Resistance"
     },
     {
+      "ja": "アトラスのピナクルボスが付近にいる場合、キャストスピードが#%増加する",
+      "en": "While a Pinnacle Atlas Boss is in your Presence, #% increased Cast Speed"
+    },
+    {
       "ja": "アトラスのピナクルボスが付近にいる場合、アタックダメージのクリティカルダメージ倍率 +#%",
       "en": "While a Pinnacle Atlas Boss is in your Presence, +#% to Critical Strike Multiplier for Attack Damage"
     },
     {
       "ja": "アトラスのピナクルボスが付近にいる場合、フレンジーチャージ1個ごとにダメージが#%増加する",
       "en": "While a Pinnacle Atlas Boss is in your Presence, #% increased Damage per Frenzy Charge"
-    },
-    {
-      "ja": "アトラスのピナクルボスが付近にいる場合、キャストスピードが#%増加する",
-      "en": "While a Pinnacle Atlas Boss is in your Presence, #% increased Cast Speed"
     },
     {
       "ja": "アトラスのピナクルボスが付近にいる場合、装備中の手袋と靴から得られる最大エナジーシールドが#%増加する",
@@ -162465,10 +162467,6 @@ var JpPoeUtils = (() => {
       "en": "While a Pinnacle Atlas Boss is in your Presence, #% increased Life Recovery rate"
     },
     {
-      "ja": "アトラスのピナクルボスが付近にいる場合、エンデュランスチャージ1個ごとにダメージが#%増加する",
-      "en": "While a Pinnacle Atlas Boss is in your Presence, #% increased Damage per Endurance Charge"
-    },
-    {
       "ja": "アトラスのピナクルボスが付近にいる場合、スタン閾値が#%増加する",
       "en": "While a Pinnacle Atlas Boss is in your Presence, #% increased Stun Threshold"
     },
@@ -162477,24 +162475,28 @@ var JpPoeUtils = (() => {
       "en": "While a Pinnacle Atlas Boss is in your Presence, Hits have #% chance to ignore Enemy Physical Damage Reduction"
     },
     {
-      "ja": "アトラスのピナクルボスが付近にいる場合、物理ダメージの#%を追加雷ダメージとして獲得する",
-      "en": "While a Pinnacle Atlas Boss is in your Presence, Gain #% of Physical Damage as Extra Lightning Damage"
+      "ja": "アトラスのピナクルボスが付近にいる場合、エンデュランスチャージ1個ごとにダメージが#%増加する",
+      "en": "While a Pinnacle Atlas Boss is in your Presence, #% increased Damage per Endurance Charge"
     },
     {
       "ja": "最大値を超えた冷気耐性2%ごとに#%の確率で範囲ヒットダメージから受けるダメージが20%低下する",
       "en": "#% chance to take 20% less Area Damage from Hits per 2% Overcapped Cold Resistance"
     },
     {
+      "ja": "アトラスのピナクルボスが付近にいる場合、物理ダメージの#%を追加雷ダメージとして獲得する",
+      "en": "While a Pinnacle Atlas Boss is in your Presence, Gain #% of Physical Damage as Extra Lightning Damage"
+    },
+    {
       "ja": "アトラスのピナクルボスが付近にいる場合、付与した毒がダメージを与える速度が#%速くなる",
       "en": "While a Pinnacle Atlas Boss is in your Presence, Poisons you inflict deal Damage #% faster"
     },
     {
-      "ja": "アトラスのピナクルボスが付近にいる場合、物理ダメージの#%を追加火ダメージとして獲得する",
-      "en": "While a Pinnacle Atlas Boss is in your Presence, Gain #% of Physical Damage as Extra Fire Damage"
-    },
-    {
       "ja": "ユニークの敵が付近にいる場合、ピュリティオブアイスのオーラの効果が#%増加する",
       "en": "While a Unique Enemy is in your Presence, Purity of Ice has #% increased Aura Effect"
+    },
+    {
+      "ja": "アトラスのピナクルボスが付近にいる場合、物理ダメージの#%を追加火ダメージとして獲得する",
+      "en": "While a Pinnacle Atlas Boss is in your Presence, Gain #% of Physical Damage as Extra Fire Damage"
     },
     {
       "ja": "アトラスのピナクルボスが付近にいる場合、ゴーレムにより付与されるバフの効果が#%増加する",
@@ -162529,32 +162531,32 @@ var JpPoeUtils = (() => {
       "en": "While a Pinnacle Atlas Boss is in your Presence, Flasks applied to you have #% increased Effect"
     },
     {
-      "ja": "アトラスのピナクルボスが付近にいる場合、#から#の混沌ダメージをスペルに追加する",
-      "en": "While a Pinnacle Atlas Boss is in your Presence, Adds # to # Chaos Damage to Spells"
-    },
-    {
       "ja": "アトラスのピナクルボスが付近にいる場合、混沌耐性 +#%",
       "en": "While a Pinnacle Atlas Boss is in your Presence, +#% to Chaos Resistance"
-    },
-    {
-      "ja": "アトラスのピナクルボスが付近にいる場合、ミニオンのヒットによるダメージの#%は反射されない",
-      "en": "While a Pinnacle Atlas Boss is in your Presence, #% of Hit Damage from your Minions cannot be Reflected"
     },
     {
       "ja": "アトラスのピナクルボスが付近にいる場合、フレンジーチャージ1個ごとに命中力 +#",
       "en": "While a Pinnacle Atlas Boss is in your Presence, +# to Accuracy Rating per Frenzy Charge"
     },
     {
+      "ja": "アトラスのピナクルボスが付近にいる場合、#から#の混沌ダメージをスペルに追加する",
+      "en": "While a Pinnacle Atlas Boss is in your Presence, Adds # to # Chaos Damage to Spells"
+    },
+    {
       "ja": "アトラスのピナクルボスが付近にいる場合、ヴァールスキルでないストライクスキルは近くの敵を追加で#体対象にする",
       "en": "While a Pinnacle Atlas Boss is in your Presence, Non-Vaal Strike Skills target # additional nearby Enemy"
     },
     {
-      "ja": "アトラスのピナクルボスが付近にいる場合、マナ自動回復レートが#%増加する",
-      "en": "While a Pinnacle Atlas Boss is in your Presence, #% increased Mana Regeneration Rate"
+      "ja": "アトラスのピナクルボスが付近にいる場合、ミニオンのヒットによるダメージの#%は反射されない",
+      "en": "While a Pinnacle Atlas Boss is in your Presence, #% of Hit Damage from your Minions cannot be Reflected"
     },
     {
       "ja": "アトラスのピナクルボスが付近にいる場合、装備中の兜と靴から得られる回避力が#%増加する",
       "en": "While a Pinnacle Atlas Boss is in your Presence, #% increased Evasion Rating from Equipped Helmet and Boots"
+    },
+    {
+      "ja": "アトラスのピナクルボスが付近にいる場合、マナ自動回復レートが#%増加する",
+      "en": "While a Pinnacle Atlas Boss is in your Presence, #% increased Mana Regeneration Rate"
     },
     {
       "ja": "アトラスのピナクルボスが付近にいる場合、クールダウン解消レートが#%増加する",
@@ -162577,36 +162579,40 @@ var JpPoeUtils = (() => {
       "en": "While a Pinnacle Atlas Boss is in your Presence, #% increased Mana Regeneration Rate per Power Charge"
     },
     {
-      "ja": "アトラスのピナクルボスが付近にいる場合、物理ダメージの#%を混沌ダメージに変換する",
-      "en": "While a Pinnacle Atlas Boss is in your Presence, #% of Physical Damage Converted to Chaos Damage"
-    },
-    {
       "ja": "アトラスのピナクルボスが付近にいる場合、近接ヒットにより堅牢化する",
       "en": "While a Pinnacle Atlas Boss is in your Presence, Melee Hits Fortify"
     },
     {
-      "ja": "アトラスのピナクルボスが付近にいる場合、#%の確率で敵を凍結させる",
-      "en": "While a Pinnacle Atlas Boss is in your Presence, #% chance to Freeze"
+      "ja": "アトラスのピナクルボスが付近にいる場合、物理ダメージの#%を混沌ダメージに変換する",
+      "en": "While a Pinnacle Atlas Boss is in your Presence, #% of Physical Damage Converted to Chaos Damage"
     },
     {
       "ja": "アトラスのピナクルボスが付近にいる場合、マナ回復レートが#%増加する",
       "en": "While a Pinnacle Atlas Boss is in your Presence, #% increased Mana Recovery rate"
     },
     {
-      "ja": "アトラスのピナクルボスが付近にいる場合、物理ダメージの#%を火ダメージに変換する",
-      "en": "While a Pinnacle Atlas Boss is in your Presence, #% of Physical Damage Converted to Fire Damage"
+      "ja": "アトラスのピナクルボスが付近にいる場合、#%の確率で敵を凍結させる",
+      "en": "While a Pinnacle Atlas Boss is in your Presence, #% chance to Freeze"
     },
     {
-      "ja": "アトラスのピナクルボスが付近にいる場合、#秒ごとにパワーチャージを1獲得する",
-      "en": "While a Pinnacle Atlas Boss is in your Presence, Gain a Power Charge every # seconds"
+      "ja": "アトラスのピナクルボスが付近にいる場合、物理ダメージの#%を火ダメージに変換する",
+      "en": "While a Pinnacle Atlas Boss is in your Presence, #% of Physical Damage Converted to Fire Damage"
     },
     {
       "ja": "アトラスのピナクルボスが付近にいる場合、アタックによるヒット時に#%の確率で敵を串刺しにする",
       "en": "While a Pinnacle Atlas Boss is in your Presence, #% chance to Impale Enemies on Hit with Attacks"
     },
     {
-      "ja": "アトラスのピナクルボスが付近にいる場合、アタックはヒット時に#%の確率で敵に重傷を付与する",
-      "en": "While a Pinnacle Atlas Boss is in your Presence, Attacks have #% chance to Maim on Hit"
+      "ja": "アトラスのピナクルボスが付近にいる場合、#秒ごとにパワーチャージを1獲得する",
+      "en": "While a Pinnacle Atlas Boss is in your Presence, Gain a Power Charge every # seconds"
+    },
+    {
+      "ja": "アトラスのピナクルボスが付近にいる場合、付与した出血がダメージを与える速度が#%速くなる",
+      "en": "While a Pinnacle Atlas Boss is in your Presence, Bleeding you inflict deals Damage #% faster"
+    },
+    {
+      "ja": "アトラスのピナクルボスが付近にいる場合、#から#の冷気ダメージをスペルに追加する",
+      "en": "While a Pinnacle Atlas Boss is in your Presence, Adds # to # Cold Damage to Spells"
     },
     {
       "ja": "アトラスのピナクルボスが付近にいる場合、ウォークライスピードが#%増加する",
@@ -162617,16 +162623,12 @@ var JpPoeUtils = (() => {
       "en": "While a Pinnacle Atlas Boss is in your Presence, #% increased Action Speed"
     },
     {
-      "ja": "アトラスのピナクルボスが付近にいる場合、#から#の冷気ダメージをスペルに追加する",
-      "en": "While a Pinnacle Atlas Boss is in your Presence, Adds # to # Cold Damage to Spells"
-    },
-    {
-      "ja": "アトラスのピナクルボスが付近にいる場合、付与した出血がダメージを与える速度が#%速くなる",
-      "en": "While a Pinnacle Atlas Boss is in your Presence, Bleeding you inflict deals Damage #% faster"
-    },
-    {
       "ja": "アトラスのピナクルボスが付近にいる場合、物理ダメージの#%を雷ダメージに変換する",
       "en": "While a Pinnacle Atlas Boss is in your Presence, #% of Physical Damage Converted to Lightning Damage"
+    },
+    {
+      "ja": "アトラスのピナクルボスが付近にいる場合、アタックはヒット時に#%の確率で敵に重傷を付与する",
+      "en": "While a Pinnacle Atlas Boss is in your Presence, Attacks have #% chance to Maim on Hit"
     },
     {
       "ja": "アトラスのピナクルボスが付近にいる場合、#から#の物理ダメージをスペルに追加する",
@@ -162641,20 +162643,20 @@ var JpPoeUtils = (() => {
       "en": "While a Pinnacle Atlas Boss is in your Presence, #% of Physical Damage taken Recouped as Life"
     },
     {
-      "ja": "アトラスのピナクルボスが付近にいる場合、ミニオンの移動スピードが#%増加する",
-      "en": "While a Pinnacle Atlas Boss is in your Presence, Minions have #% increased Movement Speed"
+      "ja": "アトラスのピナクルボスが付近にいる場合、3秒ごとにフラスコはチャージを#獲得する",
+      "en": "While a Pinnacle Atlas Boss is in your Presence, Flasks gain # Charges every 3 seconds"
     },
     {
-      "ja": "アトラスのピナクルボスが付近にいる場合、#から#の火ダメージをスペルに追加する",
-      "en": "While a Pinnacle Atlas Boss is in your Presence, Adds # to # Fire Damage to Spells"
+      "ja": "アトラスのピナクルボスが付近にいる場合、ミニオンの移動スピードが#%増加する",
+      "en": "While a Pinnacle Atlas Boss is in your Presence, Minions have #% increased Movement Speed"
     },
     {
       "ja": "ソケットしている赤スキルジェムの数ごとにスキル効果持続時間が#%増加する",
       "en": "#% increased Skill Effect Duration for each Red Skill Gem you have socketed"
     },
     {
-      "ja": "アトラスのピナクルボスが付近にいる場合、3秒ごとにフラスコはチャージを#獲得する",
-      "en": "While a Pinnacle Atlas Boss is in your Presence, Flasks gain # Charges every 3 seconds"
+      "ja": "アトラスのピナクルボスが付近にいる場合、#から#の火ダメージをスペルに追加する",
+      "en": "While a Pinnacle Atlas Boss is in your Presence, Adds # to # Fire Damage to Spells"
     },
     {
       "ja": "アトラスのピナクルボスが付近にいる場合、ヒット時に#%の確率で敵を4秒間狼狽させる",
@@ -162669,8 +162671,8 @@ var JpPoeUtils = (() => {
       "en": "While a Pinnacle Atlas Boss is in your Presence, Adds # to # Lightning Damage to Spells"
     },
     {
-      "ja": "アトラスのピナクルボスが付近にいる場合、物理ダメージの#%を冷気ダメージに変換する",
-      "en": "While a Pinnacle Atlas Boss is in your Presence, #% of Physical Damage Converted to Cold Damage"
+      "ja": "アトラスのピナクルボスが付近にいる場合、#から#の混沌ダメージをアタックに追加する",
+      "en": "While a Pinnacle Atlas Boss is in your Presence, Adds # to # Chaos Damage to Attacks"
     },
     {
       "ja": "アトラスのピナクルボスが付近にいる場合、#から#の雷ダメージをアタックに追加する",
@@ -162685,64 +162687,60 @@ var JpPoeUtils = (() => {
       "en": "While a Pinnacle Atlas Boss is in your Presence, Adds # to # Physical Damage to Attacks"
     },
     {
-      "ja": "アトラスのピナクルボスが付近にいる場合、#から#の混沌ダメージをアタックに追加する",
-      "en": "While a Pinnacle Atlas Boss is in your Presence, Adds # to # Chaos Damage to Attacks"
+      "ja": "アトラスのピナクルボスが付近にいる場合、物理ダメージの#%を冷気ダメージに変換する",
+      "en": "While a Pinnacle Atlas Boss is in your Presence, #% of Physical Damage Converted to Cold Damage"
     },
     {
       "ja": "アトラスのピナクルボスが付近にいる場合、#%の確率で感電を無効化する",
       "en": "While a Pinnacle Atlas Boss is in your Presence, #% chance to Avoid being Shocked"
     },
     {
-      "ja": "コラプト状態であればグローバルクリティカル率が#%増加する",
-      "en": "#% increased Global Critical Strike Chance if Corrupted"
+      "ja": "アトラスのピナクルボスが付近にいる場合、スペルによるヒット時に#%の確率で敵を阻害する",
+      "en": "While a Pinnacle Atlas Boss is in your Presence, #% chance to Hinder Enemies on Hit with Spells"
     },
     {
       "ja": "アトラスのピナクルボスが付近にいる場合、奮起したアタックのダメージが#%増加する",
       "en": "While a Pinnacle Atlas Boss is in your Presence, Exerted Attacks deal #% increased Damage"
     },
     {
-      "ja": "アトラスのピナクルボスが付近にいる場合、#%の確率で敵を発火させる",
-      "en": "While a Pinnacle Atlas Boss is in your Presence, #% chance to Ignite"
-    },
-    {
       "ja": "アトラスのピナクルボスが付近にいる場合、筋力100ごとにダメージが#%増加する",
       "en": "While a Pinnacle Atlas Boss is in your Presence, #% increased Damage per 100 Strength"
-    },
-    {
-      "ja": "アトラスのピナクルボスが付近にいる場合、スペルによるヒット時に#%の確率で敵を阻害する",
-      "en": "While a Pinnacle Atlas Boss is in your Presence, #% chance to Hinder Enemies on Hit with Spells"
     },
     {
       "ja": "アトラスのピナクルボスが付近にいる場合、器用さ#ごとに受けるダメージが1%低下する",
       "en": "While a Pinnacle Atlas Boss is in your Presence, 1% less Damage Taken per # Dexterity"
     },
     {
-      "ja": "アトラスのピナクルボスが付近にいる場合、#から#の火ダメージをアタックに追加する",
-      "en": "While a Pinnacle Atlas Boss is in your Presence, Adds # to # Fire Damage to Attacks"
+      "ja": "コラプト状態であればグローバルクリティカル率が#%増加する",
+      "en": "#% increased Global Critical Strike Chance if Corrupted"
     },
     {
-      "ja": "ソケットしている緑スキルジェムの数ごとにクールダウン解消レートが#%増加する",
-      "en": "#% increased Cooldown Recovery Rate for each Green Skill Gem you have socketed"
+      "ja": "アトラスのピナクルボスが付近にいる場合、#%の確率で敵を発火させる",
+      "en": "While a Pinnacle Atlas Boss is in your Presence, #% chance to Ignite"
     },
     {
       "ja": "アトラスのピナクルボスが付近にいる場合、火耐性 +#%",
       "en": "While a Pinnacle Atlas Boss is in your Presence, +#% to Fire Resistance"
     },
     {
+      "ja": "アトラスのピナクルボスが付近にいる場合、#から#の火ダメージをアタックに追加する",
+      "en": "While a Pinnacle Atlas Boss is in your Presence, Adds # to # Fire Damage to Attacks"
+    },
+    {
       "ja": "アトラスのピナクルボスが付近にいる場合、#%の確率で毒を無効化する",
       "en": "While a Pinnacle Atlas Boss is in your Presence, #% chance to Avoid being Poisoned"
     },
     {
-      "ja": "アトラスのピナクルボスが付近にいる場合、#秒ごとにエンデュランスチャージを1獲得する",
-      "en": "While a Pinnacle Atlas Boss is in your Presence, Gain an Endurance Charge every # seconds"
-    },
-    {
-      "ja": "アトラスのピナクルボスが付近にいる場合、トラップ投擲スピードが#%増加する",
-      "en": "While a Pinnacle Atlas Boss is in your Presence, #% increased Trap Throwing Speed"
+      "ja": "ソケットしている緑スキルジェムの数ごとにクールダウン解消レートが#%増加する",
+      "en": "#% increased Cooldown Recovery Rate for each Green Skill Gem you have socketed"
     },
     {
       "ja": "アトラスのピナクルボスが付近にいる場合、ヒット時に#%の確率で敵に毒を付与する",
       "en": "While a Pinnacle Atlas Boss is in your Presence, #% chance to Poison on Hit"
+    },
+    {
+      "ja": "アトラスのピナクルボスが付近にいる場合、ディシプリンのオーラの効果が#%増加する",
+      "en": "While a Pinnacle Atlas Boss is in your Presence, Discipline has #% increased Aura Effect"
     },
     {
       "ja": "アトラスのピナクルボスが付近にいる場合、プレイヤーに対する感電の効果が#%減少する",
@@ -162753,10 +162751,6 @@ var JpPoeUtils = (() => {
       "en": "While a Pinnacle Atlas Boss is in your Presence, Projectiles Pierce # additional Targets"
     },
     {
-      "ja": "アトラスのピナクルボスが付近にいる場合、ディシプリンのオーラの効果が#%増加する",
-      "en": "While a Pinnacle Atlas Boss is in your Presence, Discipline has #% increased Aura Effect"
-    },
-    {
       "ja": "アトラスのピナクルボスが付近にいる場合、器用さ100ごとにダメージが#%増加する",
       "en": "While a Pinnacle Atlas Boss is in your Presence, #% increased Damage per 100 Dexterity"
     },
@@ -162765,48 +162759,52 @@ var JpPoeUtils = (() => {
       "en": "While a Pinnacle Atlas Boss is in your Presence, #% reduced Mana Cost of Attacks"
     },
     {
-      "ja": "アトラスのピナクルボスが付近にいる場合、雷耐性 +#%",
-      "en": "While a Pinnacle Atlas Boss is in your Presence, +#% to Lightning Resistance"
+      "ja": "アトラスのピナクルボスが付近にいる場合、#秒ごとにエンデュランスチャージを1獲得する",
+      "en": "While a Pinnacle Atlas Boss is in your Presence, Gain an Endurance Charge every # seconds"
+    },
+    {
+      "ja": "アトラスのピナクルボスが付近にいる場合、トラップ投擲スピードが#%増加する",
+      "en": "While a Pinnacle Atlas Boss is in your Presence, #% increased Trap Throwing Speed"
     },
     {
       "ja": "アトラスのピナクルボスが付近にいる場合、デターミネーションのオーラの効果が#%増加する",
       "en": "While a Pinnacle Atlas Boss is in your Presence, Determination has #% increased Aura Effect"
     },
     {
-      "ja": "アトラスのピナクルボスが付近にいる場合、受けた火ダメージの#%をライフとして回収する",
-      "en": "While a Pinnacle Atlas Boss is in your Presence, #% of Fire Damage taken Recouped as Life"
-    },
-    {
-      "ja": "アトラスのピナクルボスが付近にいる場合、プライドのオーラの効果が#%増加する",
-      "en": "While a Pinnacle Atlas Boss is in your Presence, Pride has #% increased Aura Effect"
+      "ja": "アトラスのピナクルボスが付近にいる場合、雷耐性 +#%",
+      "en": "While a Pinnacle Atlas Boss is in your Presence, +#% to Lightning Resistance"
     },
     {
       "ja": "アトラスのピナクルボスが付近にいる場合、グレースのオーラの効果が#%増加する",
       "en": "While a Pinnacle Atlas Boss is in your Presence, Grace has #% increased Aura Effect"
     },
     {
-      "ja": "アトラスのピナクルボスが付近にいる場合、アタックヒット時に憤怒を#獲得する",
-      "en": "While a Pinnacle Atlas Boss is in your Presence, Gain # Rage on Attack Hit"
+      "ja": "アトラスのピナクルボスが付近にいる場合、プライドのオーラの効果が#%増加する",
+      "en": "While a Pinnacle Atlas Boss is in your Presence, Pride has #% increased Aura Effect"
+    },
+    {
+      "ja": "アトラスのピナクルボスが付近にいる場合、受けた火ダメージの#%をライフとして回収する",
+      "en": "While a Pinnacle Atlas Boss is in your Presence, #% of Fire Damage taken Recouped as Life"
     },
     {
       "ja": "アトラスのピナクルボスが付近にいる場合、混沌耐性の最大値 +#%",
       "en": "While a Pinnacle Atlas Boss is in your Presence, +#% to maximum Chaos Resistance"
     },
     {
+      "ja": "アトラスのピナクルボスが付近にいる場合、アタックヒット時に憤怒を#獲得する",
+      "en": "While a Pinnacle Atlas Boss is in your Presence, Gain # Rage on Attack Hit"
+    },
+    {
       "ja": "アトラスのピナクルボスが付近にいる場合、ウォークライのバフの効果が#%増加する",
       "en": "While a Pinnacle Atlas Boss is in your Presence, #% increased Warcry Buff Effect"
     },
     {
-      "ja": "アトラスのピナクルボスが付近にいる場合、ヘイストのオーラの効果が#%増加する",
-      "en": "While a Pinnacle Atlas Boss is in your Presence, Haste has #% increased Aura Effect"
+      "ja": "アトラスのピナクルボスが付近にいる場合、受ける発火の持続時間が#%減少する",
+      "en": "While a Pinnacle Atlas Boss is in your Presence, #% reduced Ignite Duration on you"
     },
     {
       "ja": "アトラスのピナクルボスが付近にいる場合、#%の確率で敵を感電させる",
       "en": "While a Pinnacle Atlas Boss is in your Presence, #% chance to Shock"
-    },
-    {
-      "ja": "アトラスのピナクルボスが付近にいる場合、受ける発火の持続時間が#%減少する",
-      "en": "While a Pinnacle Atlas Boss is in your Presence, #% reduced Ignite Duration on you"
     },
     {
       "ja": "アトラスのピナクルボスが付近にいる場合、ヒット時に#%の確率で敵を消火する",
@@ -162817,6 +162815,10 @@ var JpPoeUtils = (() => {
       "en": "While a Pinnacle Atlas Boss is in your Presence, Drops Scorched Ground while moving, lasting # seconds"
     },
     {
+      "ja": "アトラスのピナクルボスが付近にいる場合、ヘイストのオーラの効果が#%増加する",
+      "en": "While a Pinnacle Atlas Boss is in your Presence, Haste has #% increased Aura Effect"
+    },
+    {
       "ja": "アトラスのピナクルボスが付近にいる場合、ブランドの付着範囲が#%増加する",
       "en": "While a Pinnacle Atlas Boss is in your Presence, #% increased Brand Attachment range"
     },
@@ -162825,8 +162827,8 @@ var JpPoeUtils = (() => {
       "en": "While a Pinnacle Atlas Boss is in your Presence, Attacks have #% chance to cause Bleeding"
     },
     {
-      "ja": "アトラスのピナクルボスが付近にいる場合、マイン投擲スピードが#%増加する",
-      "en": "While a Pinnacle Atlas Boss is in your Presence, #% increased Mine Throwing Speed"
+      "ja": "アトラスのピナクルボスが付近にいる場合、フラマビリティの呪い効果が#%増加する",
+      "en": "While a Pinnacle Atlas Boss is in your Presence, #% increased Flammability Curse Effect"
     },
     {
       "ja": "アトラスのピナクルボスが付近にいる場合、ラースのオーラの効果が#%増加する",
@@ -162837,8 +162839,8 @@ var JpPoeUtils = (() => {
       "en": "While a Pinnacle Atlas Boss is in your Presence, #% chance to Avoid being Ignited"
     },
     {
-      "ja": "アトラスのピナクルボスが付近にいる場合、フラマビリティの呪い効果が#%増加する",
-      "en": "While a Pinnacle Atlas Boss is in your Presence, #% increased Flammability Curse Effect"
+      "ja": "アトラスのピナクルボスが付近にいる場合、マイン投擲スピードが#%増加する",
+      "en": "While a Pinnacle Atlas Boss is in your Presence, #% increased Mine Throwing Speed"
     },
     {
       "ja": "アトラスのピナクルボスが付近にいる場合、プレイヤーが付与した衰弱は#%速く消える",
@@ -162849,16 +162851,16 @@ var JpPoeUtils = (() => {
       "en": "While a Pinnacle Atlas Boss is in your Presence, #% of Lightning Damage taken Recouped as Life"
     },
     {
-      "ja": "アトラスのピナクルボスが付近にいる場合、オファリングの効果が#%増加する",
-      "en": "While a Pinnacle Atlas Boss is in your Presence, #% increased effect of Offerings"
+      "ja": "アトラスのピナクルボスが付近にいる場合、ゼロトリーのオーラの効果が#%増加する",
+      "en": "While a Pinnacle Atlas Boss is in your Presence, Zealotry has #% increased Aura Effect"
     },
     {
       "ja": "アトラスのピナクルボスが付近にいる場合、知性100ごとにダメージが#%増加する",
       "en": "While a Pinnacle Atlas Boss is in your Presence, #% increased Damage per 100 Intelligence"
     },
     {
-      "ja": "アトラスのピナクルボスが付近にいる場合、ゼロトリーのオーラの効果が#%増加する",
-      "en": "While a Pinnacle Atlas Boss is in your Presence, Zealotry has #% increased Aura Effect"
+      "ja": "アトラスのピナクルボスが付近にいる場合、オファリングの効果が#%増加する",
+      "en": "While a Pinnacle Atlas Boss is in your Presence, #% increased effect of Offerings"
     },
     {
       "ja": "アトラスのピナクルボスが付近にいる場合、キャリオンゴーレムにより付与されるバフの効果が#%増加する",
@@ -162885,32 +162887,28 @@ var JpPoeUtils = (() => {
       "en": "While a Pinnacle Atlas Boss is in your Presence, #% chance to Avoid being Frozen"
     },
     {
-      "ja": "アトラスのピナクルボスが付近にいる場合、ピュリティオブライトニングのオーラの効果が#%増加する",
-      "en": "While a Pinnacle Atlas Boss is in your Presence, Purity of Lightning has #% increased Aura Effect"
-    },
-    {
-      "ja": "筋力20ごとに投射物スピードが#%増加する",
-      "en": "#% increased Projectile Speed per 20 Strength"
+      "ja": "アトラスのピナクルボスが付近にいる場合、ピュリティオブファイヤーのオーラの効果が#%増加する",
+      "en": "While a Pinnacle Atlas Boss is in your Presence, Purity of Fire has #% increased Aura Effect"
     },
     {
       "ja": "アトラスのピナクルボスが付近にいる場合、ジュネラルズクライのクールダウン解消レートが#%増加する",
       "en": "While a Pinnacle Atlas Boss is in your Presence, General's Cry has #% increased Cooldown Recovery Rate"
     },
     {
-      "ja": "アトラスのピナクルボスが付近にいる場合、ピュリティオブファイヤーのオーラの効果が#%増加する",
-      "en": "While a Pinnacle Atlas Boss is in your Presence, Purity of Fire has #% increased Aura Effect"
+      "ja": "筋力20ごとに投射物スピードが#%増加する",
+      "en": "#% increased Projectile Speed per 20 Strength"
     },
     {
-      "ja": "アトラスのピナクルボスが付近にいる場合、エレメンタルウィークネスの呪い効果が#%増加する",
-      "en": "While a Pinnacle Atlas Boss is in your Presence, #% increased Elemental Weakness Curse Effect"
+      "ja": "アトラスのピナクルボスが付近にいる場合、ピュリティオブライトニングのオーラの効果が#%増加する",
+      "en": "While a Pinnacle Atlas Boss is in your Presence, Purity of Lightning has #% increased Aura Effect"
     },
     {
       "ja": "アトラスのピナクルボスが付近にいる場合、受けた冷気ダメージの#%をライフとして回収する",
       "en": "While a Pinnacle Atlas Boss is in your Presence, #% of Cold Damage taken Recouped as Life"
     },
     {
-      "ja": "アトラスのピナクルボスが付近にいる場合、#%の確率でスタンを無効化する",
-      "en": "While a Pinnacle Atlas Boss is in your Presence, #% chance to Avoid being Stunned"
+      "ja": "アトラスのピナクルボスが付近にいる場合、エレメンタルウィークネスの呪い効果が#%増加する",
+      "en": "While a Pinnacle Atlas Boss is in your Presence, #% increased Elemental Weakness Curse Effect"
     },
     {
       "ja": "アトラスのピナクルボスが付近にいる場合、プレイヤーが付与した発火は#m以内の他の敵にも伝染する",
@@ -162921,16 +162919,12 @@ var JpPoeUtils = (() => {
       "en": "While a Pinnacle Atlas Boss is in your Presence, Anger has #% increased Aura Effect"
     },
     {
+      "ja": "アトラスのピナクルボスが付近にいる場合、#%の確率でスタンを無効化する",
+      "en": "While a Pinnacle Atlas Boss is in your Presence, #% chance to Avoid being Stunned"
+    },
+    {
       "ja": "アトラスのピナクルボスが付近にいる場合、ピュリティオブエレメンツのオーラの効果が#%増加する",
       "en": "While a Pinnacle Atlas Boss is in your Presence, Purity of Elements has #% increased Aura Effect"
-    },
-    {
-      "ja": "知性20ごとに近接ダメージが#%増加する",
-      "en": "#% increased Melee Damage per 20 Intelligence"
-    },
-    {
-      "ja": "アトラスのピナクルボスが付近にいる場合、プレイヤーが付与した感電は#m以内の他の敵にも伝染する",
-      "en": "While a Pinnacle Atlas Boss is in your Presence, Shocks you inflict spread to other Enemies within # metre"
     },
     {
       "ja": "アトラスのピナクルボスが付近にいる場合、アークティックアーマーのバフ効果が#%増加する",
@@ -162945,68 +162939,80 @@ var JpPoeUtils = (() => {
       "en": "While a Pinnacle Atlas Boss is in your Presence, #% increased Frostbite Curse Effect"
     },
     {
-      "ja": "アトラスのピナクルボスが付近にいる場合、プレイヤーが付与した凍結は#m以内の他の敵に伝染する",
-      "en": "While a Pinnacle Atlas Boss is in your Presence, Freezes you inflict spread to other Enemies within # metre"
+      "ja": "知性20ごとに近接ダメージが#%増加する",
+      "en": "#% increased Melee Damage per 20 Intelligence"
     },
     {
-      "ja": "アトラスのピナクルボスが付近にいる場合、ヒット時に#%の確率で近くの敵を4秒間威嚇する",
-      "en": "While a Pinnacle Atlas Boss is in your Presence, #% chance to Intimidate Enemies for 4 seconds on Hit"
+      "ja": "アトラスのピナクルボスが付近にいる場合、プレイヤーが付与した感電は#m以内の他の敵にも伝染する",
+      "en": "While a Pinnacle Atlas Boss is in your Presence, Shocks you inflict spread to other Enemies within # metre"
     },
     {
       "ja": "アトラスのピナクルボスが付近にいる場合、混沌ダメージの#%をライフとしてリーチする",
       "en": "While a Pinnacle Atlas Boss is in your Presence, #% of Chaos Damage Leeched as Life"
     },
     {
-      "ja": "アトラスのピナクルボスが付近にいる場合、エンフィーブルの呪い効果が#%増加する",
-      "en": "While a Pinnacle Atlas Boss is in your Presence, #% increased Enfeeble Curse Effect"
+      "ja": "アトラスのピナクルボスが付近にいる場合、プレイヤーが持つ猛攻の効果が#%増加する",
+      "en": "While a Pinnacle Atlas Boss is in your Presence, #% increased Effect of Onslaught on you"
+    },
+    {
+      "ja": "アトラスのピナクルボスが付近にいる場合、ヒット時に#%の確率で近くの敵を4秒間威嚇する",
+      "en": "While a Pinnacle Atlas Boss is in your Presence, #% chance to Intimidate Enemies for 4 seconds on Hit"
     },
     {
       "ja": "アトラスのピナクルボスが付近にいる場合、エンデュアリングクライのクールダウン解消レートが#%増加する",
       "en": "While a Pinnacle Atlas Boss is in your Presence, Enduring Cry has #% increased Cooldown Recovery Rate"
     },
     {
-      "ja": "アトラスのピナクルボスが付近にいる場合、プレイヤーが持つ猛攻の効果が#%増加する",
-      "en": "While a Pinnacle Atlas Boss is in your Presence, #% increased Effect of Onslaught on you"
-    },
-    {
       "ja": "アトラスのピナクルボスが付近にいる場合、スピリットオファリングの効果が#%増加する",
       "en": "While a Pinnacle Atlas Boss is in your Presence, Spirit Offering has #% increased Effect"
     },
     {
-      "ja": "アトラスのピナクルボスが付近にいる場合、雷ダメージの#%をライフとしてリーチする",
-      "en": "While a Pinnacle Atlas Boss is in your Presence, #% of Lightning Damage Leeched as Life"
+      "ja": "アトラスのピナクルボスが付近にいる場合、プレイヤーが付与した凍結は#m以内の他の敵に伝染する",
+      "en": "While a Pinnacle Atlas Boss is in your Presence, Freezes you inflict spread to other Enemies within # metre"
+    },
+    {
+      "ja": "アトラスのピナクルボスが付近にいる場合、エンフィーブルの呪い効果が#%増加する",
+      "en": "While a Pinnacle Atlas Boss is in your Presence, #% increased Enfeeble Curse Effect"
     },
     {
       "ja": "アトラスのピナクルボスが付近にいる場合、ピュリティオブアイスのオーラの効果が#%増加する",
       "en": "While a Pinnacle Atlas Boss is in your Presence, Purity of Ice has #% increased Aura Effect"
     },
     {
-      "ja": "アトラスのピナクルボスが付近にいる場合、火ダメージの#%をライフとしてリーチする",
-      "en": "While a Pinnacle Atlas Boss is in your Presence, #% of Fire Damage Leeched as Life"
-    },
-    {
-      "ja": "アトラスのピナクルボスが付近にいる場合、テンポラルチェーンの呪い効果が#%増加する",
-      "en": "While a Pinnacle Atlas Boss is in your Presence, #% increased Temporal Chains Curse Effect"
+      "ja": "アトラスのピナクルボスが付近にいる場合、雷ダメージの#%をライフとしてリーチする",
+      "en": "While a Pinnacle Atlas Boss is in your Presence, #% of Lightning Damage Leeched as Life"
     },
     {
       "ja": "アトラスのピナクルボスが付近にいる場合、アンセストラルクライで奮起したアタックのダメージが#%増加する",
       "en": "While a Pinnacle Atlas Boss is in your Presence, Attacks Exerted by Ancestral Cry deal #% increased Damage"
     },
     {
+      "ja": "アトラスのピナクルボスが付近にいる場合、インファーナルクライの効果範囲が#%増加する",
+      "en": "While a Pinnacle Atlas Boss is in your Presence, Infernal Cry has #% increased Area of Effect"
+    },
+    {
+      "ja": "アトラスのピナクルボスが付近にいる場合、火ダメージの#%をライフとしてリーチする",
+      "en": "While a Pinnacle Atlas Boss is in your Presence, #% of Fire Damage Leeched as Life"
+    },
+    {
       "ja": "アトラスのピナクルボスが付近にいる場合、バトルメイジズクライのバフの効果が#%増加する",
       "en": "While a Pinnacle Atlas Boss is in your Presence, #% increased Battlemage's Cry Buff Effect"
     },
     {
-      "ja": "アトラスのピナクルボスが付近にいる場合、インファーナルクライの効果範囲が#%増加する",
-      "en": "While a Pinnacle Atlas Boss is in your Presence, Infernal Cry has #% increased Area of Effect"
+      "ja": "アトラスのピナクルボスが付近にいる場合、テンポラルチェーンの呪い効果が#%増加する",
+      "en": "While a Pinnacle Atlas Boss is in your Presence, #% increased Temporal Chains Curse Effect"
+    },
+    {
+      "ja": "アトラスのピナクルボスが付近にいる場合、ヘラルドオブアイスのバフの効果が#%増加する",
+      "en": "While a Pinnacle Atlas Boss is in your Presence, Herald of Ice has #% increased Buff Effect"
     },
     {
       "ja": "アトラスのピナクルボスが付近にいる場合、ヴァルネラビリティの呪い効果が#%増加する",
       "en": "While a Pinnacle Atlas Boss is in your Presence, #% increased Vulnerability Curse Effect"
     },
     {
-      "ja": "アトラスのピナクルボスが付近にいる場合、ヘラルドオブアイスのバフの効果が#%増加する",
-      "en": "While a Pinnacle Atlas Boss is in your Presence, Herald of Ice has #% increased Buff Effect"
+      "ja": "アトラスのピナクルボスが付近にいる場合、テンペストシールドのバフの効果が#%増加する",
+      "en": "While a Pinnacle Atlas Boss is in your Presence, Tempest Shield has #% increased Buff Effect"
     },
     {
       "ja": "アトラスのピナクルボスが付近にいる場合、冷気ダメージの#%をライフとしてリーチする",
@@ -163017,24 +163023,28 @@ var JpPoeUtils = (() => {
       "en": "While a Pinnacle Atlas Boss is in your Presence, Herald of Thunder has #% increased Buff Effect"
     },
     {
-      "ja": "アトラスのピナクルボスが付近にいる場合、ヘラルドオブアゴニーのバフの効果が#%増加する",
-      "en": "While a Pinnacle Atlas Boss is in your Presence, Herald of Agony has #% increased Buff Effect"
-    },
-    {
-      "ja": "アトラスのピナクルボスが付近にいる場合、テンペストシールドのバフの効果が#%増加する",
-      "en": "While a Pinnacle Atlas Boss is in your Presence, Tempest Shield has #% increased Buff Effect"
-    },
-    {
       "ja": "アトラスのピナクルボスが付近にいる場合、インティミデーティングクライのクールダウン解消レートが#%増加する",
       "en": "While a Pinnacle Atlas Boss is in your Presence, Intimidating Cry has #% increased Cooldown Recovery Rate"
+    },
+    {
+      "ja": "アトラスのピナクルボスが付近にいる場合、ヘラルドオブアゴニーのバフの効果が#%増加する",
+      "en": "While a Pinnacle Atlas Boss is in your Presence, Herald of Agony has #% increased Buff Effect"
     },
     {
       "ja": "アトラスのピナクルボスが付近にいる場合、フレイムゴーレムにより付与されるバフの効果が#%増加する",
       "en": "While a Pinnacle Atlas Boss is in your Presence, #% increased Effect of the Buff granted by your Flame Golems"
     },
     {
+      "ja": "アトラスのピナクルボスが付近にいる場合、ヘラルドオブピュリティのバフの効果が#%増加する",
+      "en": "While a Pinnacle Atlas Boss is in your Presence, Herald of Purity has #% increased Buff Effect"
+    },
+    {
       "ja": "アトラスのピナクルボスが付近にいる場合、ボーンオファリングの効果が#%増加する",
       "en": "While a Pinnacle Atlas Boss is in your Presence, Bone Offering has #% increased Effect"
+    },
+    {
+      "ja": "アトラスのピナクルボスが付近にいる場合、物理ダメージの#%をライフとしてリーチする",
+      "en": "While a Pinnacle Atlas Boss is in your Presence, #% of Physical Damage Leeched as Life"
     },
     {
       "ja": "アトラスのピナクルボスが付近にいる場合、プレイヤーがアタックによるヒットを対象に与えたら#%の確率で対象の出血を悪化させる",
@@ -163045,16 +163055,12 @@ var JpPoeUtils = (() => {
       "en": "While a Pinnacle Atlas Boss is in your Presence, Flesh and Stone has #% increased Area of Effect"
     },
     {
-      "ja": "アトラスのピナクルボスが付近にいる場合、物理ダメージの#%をライフとしてリーチする",
-      "en": "While a Pinnacle Atlas Boss is in your Presence, #% of Physical Damage Leeched as Life"
+      "ja": "ユニークの敵が付近にいる場合、ダメージの#%をライフより先にマナで受ける",
+      "en": "While a Unique Enemy is in your Presence, #% of Damage is taken from Mana before Life"
     },
     {
-      "ja": "アトラスのピナクルボスが付近にいる場合、ヘラルドオブピュリティのバフの効果が#%増加する",
-      "en": "While a Pinnacle Atlas Boss is in your Presence, Herald of Purity has #% increased Buff Effect"
-    },
-    {
-      "ja": "アトラスのピナクルボスが付近にいる場合、プレイヤーに対するアーケインサージの効果が#%増加する",
-      "en": "While a Pinnacle Atlas Boss is in your Presence, #% increased Effect of Arcane Surge on you"
+      "ja": "アトラスのピナクルボスが付近にいる場合、サイズミッククライにより奮起したアタックのダメージが#%増加する",
+      "en": "While a Pinnacle Atlas Boss is in your Presence, Attacks Exerted by Seismic Cry deal #% increased Damage"
     },
     {
       "ja": "アトラスのピナクルボスが付近にいる場合、ラリイングクライのバフの効果が#%増加する",
@@ -163065,20 +163071,8 @@ var JpPoeUtils = (() => {
       "en": "While a Pinnacle Atlas Boss is in your Presence, Flesh Offering has #% increased Effect"
     },
     {
-      "ja": "ユニークの敵が付近にいる場合、ダメージの#%をライフより先にマナで受ける",
-      "en": "While a Unique Enemy is in your Presence, #% of Damage is taken from Mana before Life"
-    },
-    {
-      "ja": "アトラスのピナクルボスが付近にいる場合、サイズミッククライにより奮起したアタックのダメージが#%増加する",
-      "en": "While a Pinnacle Atlas Boss is in your Presence, Attacks Exerted by Seismic Cry deal #% increased Damage"
-    },
-    {
-      "ja": "アトラスのピナクルボスが付近にいる場合、カオスゴーレムにより付与されるバフの効果が#%増加する",
-      "en": "While a Pinnacle Atlas Boss is in your Presence, #% increased Effect of the Buff granted by your Chaos Golems"
-    },
-    {
-      "ja": "アトラスのピナクルボスが付近にいる場合、ディスペアの呪い効果が#%増加する",
-      "en": "While a Pinnacle Atlas Boss is in your Presence, #% increased Despair Curse Effect"
+      "ja": "アトラスのピナクルボスが付近にいる場合、プレイヤーに対するアーケインサージの効果が#%増加する",
+      "en": "While a Pinnacle Atlas Boss is in your Presence, #% increased Effect of Arcane Surge on you"
     },
     {
       "ja": "アトラスのピナクルボスが付近にいる場合、ヘラルドオブアッシュのバフの効果が#%増加する",
@@ -163089,16 +163083,24 @@ var JpPoeUtils = (() => {
       "en": "While a Pinnacle Atlas Boss is in your Presence, Gain 1 Rage on Hit with Attacks"
     },
     {
+      "ja": "アトラスのピナクルボスが付近にいる場合、カオスゴーレムにより付与されるバフの効果が#%増加する",
+      "en": "While a Pinnacle Atlas Boss is in your Presence, #% increased Effect of the Buff granted by your Chaos Golems"
+    },
+    {
+      "ja": "アトラスのピナクルボスが付近にいる場合、ディスペアの呪い効果が#%増加する",
+      "en": "While a Pinnacle Atlas Boss is in your Presence, #% increased Despair Curse Effect"
+    },
+    {
       "ja": "器用さ20ごとにキャストスピードが#%増加する",
       "en": "#% increased Cast Speed per 20 Dexterity"
     },
     {
-      "ja": "アトラスのピナクルボスが付近にいる場合、盲目の効果が#%増加する",
-      "en": "While a Pinnacle Atlas Boss is in your Presence, #% increased Blind Effect"
-    },
-    {
       "ja": "アトラスのピナクルボスが付近にいる場合、敵スタン閾値が#%減少する",
       "en": "While a Pinnacle Atlas Boss is in your Presence, #% reduced Enemy Stun Threshold"
+    },
+    {
+      "ja": "アトラスのピナクルボスが付近にいる場合、盲目の効果が#%増加する",
+      "en": "While a Pinnacle Atlas Boss is in your Presence, #% increased Blind Effect"
     },
     {
       "ja": "アトラスのピナクルボスが付近にいる場合、コンダクティヴィティの呪い効果が#%増加する",
@@ -163133,36 +163135,36 @@ var JpPoeUtils = (() => {
       "en": "#% increased Damage taken per 250 Strength"
     },
     {
-      "ja": "出血状態でない敵に近接武器で付与した出血のダメージが#%上昇する",
-      "en": "Bleeding inflicted with Melee Weapons on non-Bleeding Enemies deals #% more Damage"
-    },
-    {
-      "ja": "ユニークアイテムおよびコラプト状態のアイテムを含む、クルーシブルパッシブツリーを組み合わせることができる鍛冶場が出現する",
-      "en": "Contains a Forge that can Combine Crucible Passive Skill Trees, including on Unique and Corrupted Items"
+      "ja": "ミニオンが受ける反射ダメージが#%減少する",
+      "en": "Minions take #% reduced Reflected Damage"
     },
     {
       "ja": "クルーシブパッシブツリーを組み合わせることができる鍜治場が出現する",
       "en": "Contains a Forge that can Combine Crucible Passive Skill Trees"
     },
     {
-      "ja": "エリアにはペランダスのチェストが1個出現する",
-      "en": "Area contains a Perandus Chest"
+      "ja": "エリアには密輸人の貯蔵箱が追加で1個出現する",
+      "en": "Area contains an additional Smuggler's Cache"
     },
     {
-      "ja": "ミニオンが受ける反射ダメージが#%減少する",
-      "en": "Minions take #% reduced Reflected Damage"
-    },
-    {
-      "ja": "アイテムの数量のモッドはその数値の#%がエンカウンターの報酬からドロップするアイテムの数に影響する",
-      "en": "Modifiers to Item Quantity will affect the number of encounter rewards dropped by #% of their value"
+      "ja": "ユニークアイテムおよびコラプト状態のアイテムを含む、クルーシブルパッシブツリーを組み合わせることができる鍛冶場が出現する",
+      "en": "Contains a Forge that can Combine Crucible Passive Skill Trees, including on Unique and Corrupted Items"
     },
     {
       "ja": "エリアにはメタモルフモンスターが出現する",
       "en": "Area contains Metamorph Monsters"
     },
     {
-      "ja": "エリアには密輸人の貯蔵箱が追加で1個出現する",
-      "en": "Area contains an additional Smuggler's Cache"
+      "ja": "アイテムの数量のモッドはその数値の#%がエンカウンターの報酬からドロップするアイテムの数に影響する",
+      "en": "Modifiers to Item Quantity will affect the number of encounter rewards dropped by #% of their value"
+    },
+    {
+      "ja": "エリアにはペランダスのチェストが1個出現する",
+      "en": "Area contains a Perandus Chest"
+    },
+    {
+      "ja": "出血状態でない敵に近接武器で付与した出血のダメージが#%上昇する",
+      "en": "Bleeding inflicted with Melee Weapons on non-Bleeding Enemies deals #% more Damage"
     },
     {
       "ja": "レベル1 近接キル時キャストによりサポートされる",
@@ -163805,12 +163807,12 @@ var JpPoeUtils = (() => {
       "en": "Supported by Level 1 Brutality"
     },
     {
-      "ja": "レベル1 クリティカルアフリクションによりサポートされる",
-      "en": "Supported by Level 1 Critical Strike Affliction"
-    },
-    {
       "ja": "レベル1 物理から雷変換によりサポートされる",
       "en": "Supported by Level 1 Physical to Lightning"
+    },
+    {
+      "ja": "レベル1 クリティカルアフリクションによりサポートされる",
+      "en": "Supported by Level 1 Critical Strike Affliction"
     },
     {
       "ja": "ナイトメアにいるモンスターの最大ライフが#%上昇する",
@@ -163989,12 +163991,12 @@ var JpPoeUtils = (() => {
       "en": "#% chance to create Consecrated Ground when Hit, lasting 8 seconds"
     },
     {
-      "ja": "スペルによるヒットは#%の確率でプレイヤーを阻害する",
-      "en": "Spell Hits have #% chance to Hinder you"
-    },
-    {
       "ja": "受けるヒットのクリティカル率が+#%される",
       "en": "Hits have +#% additional Critical Strike Chance against you"
+    },
+    {
+      "ja": "スペルによるヒットは#%の確率でプレイヤーを阻害する",
+      "en": "Spell Hits have #% chance to Hinder you"
     },
     {
       "ja": "レアスカージモンスターはスカラベを追加で#個ドロップする",
@@ -164017,12 +164019,12 @@ var JpPoeUtils = (() => {
       "en": "Can have up to # additional Remote Mine placed at a time"
     },
     {
-      "ja": "敵がプレイヤーをヒットした時に#%の確率で敵を盲目にする",
-      "en": "#% chance to Blind Enemies when they Hit you"
-    },
-    {
       "ja": "エリアにはスカージボスが追加で1体いる",
       "en": "Area contains an additional Scourge Boss"
+    },
+    {
+      "ja": "敵がプレイヤーをヒットした時に#%の確率で敵を盲目にする",
+      "en": "#% chance to Blind Enemies when they Hit you"
     },
     {
       "ja": "トーテムは#%の物理ダメージ軽減率の追加を獲得する",
@@ -164061,12 +164063,12 @@ var JpPoeUtils = (() => {
       "en": "Monsters in Nightmare grant #% more Experience"
     },
     {
-      "ja": "ヒット時に#%の確率で敵をエレメンタルウィークネスで呪う",
-      "en": "#% chance to Curse Enemies with Elemental Weakness on Hit"
-    },
-    {
       "ja": "ヒット時に#%の確率で敵をエンフィーブルで呪う",
       "en": "#% chance to Curse Enemies with Enfeeble on Hit"
+    },
+    {
+      "ja": "ヒット時に#%の確率で敵をエレメンタルウィークネスで呪う",
+      "en": "#% chance to Curse Enemies with Elemental Weakness on Hit"
     },
     {
       "ja": "ヒット時に#%の確率で敵をコンダクティヴィティで呪う",
@@ -195667,22 +195669,10 @@ var JpPoeUtils = (() => {
     {
       "ja": "悪意ある",
       "en": "Baleful"
-    },
-    {
-      "ja": "パッシブツリーで割り当てられたジュエルソケット(大)または(中)にはめる。追加されたパッシブは他の半径を持つジュエルと相互作用しない。右クリックしてソケットから取り外すことができる。",
-      "en": "Place into an allocated Medium or Large Jewel Socket on the Passive Skill Tree. Added passives do not interact with jewel radii. Right click to remove from the Socket."
-    },
-    {
-      "ja": "パッシブツリーで割り当てられたジュエルソケット(小)または(中)または(大)にはめる。追加されたパッシブは他の半径を持つジュエルと相互作用しない。右クリックしてソケットから取り外すことができる。",
-      "en": "Place into an allocated Small, Medium or Large Jewel Socket on the Passive Skill Tree. Added passives do not interact with jewel radii. Right click to remove from the Socket."
-    },
-    {
-      "ja": "パッシブツリーで割り当てられたジュエルソケット(大)にはめる。追加されたパッシブは他の半径を持つジュエルと相互作用しない。右クリックしてソケットから取り外すことができる。",
-      "en": "Place into an allocated Large Jewel Socket on the Passive Skill Tree. Added passives do not interact with jewel radii. Right click to remove from the Socket."
     }
   ];
 
-  // src/data/poe/index.ts
+  // PoE データ統合 (src/data/poe/index.ts)
   var DATA = {
     amulets,
     belts,
@@ -195711,7 +195701,7 @@ var JpPoeUtils = (() => {
     currencies,
     tradeStatic,
     mods,
-    // 当前版本/配置的TS会报类型错误，使用强制转换
+    // 型定義の都合で as Stat[] が必要
     stats,
     attributes,
     properties,
@@ -195720,7 +195710,7 @@ var JpPoeUtils = (() => {
     strings
   };
 
-  // src/translator/ja2en/provider/attribute.ts
+  // 属性名の翻訳 (src/translator/ja2en/provider/attribute.ts)
   var AttributeProvider = class {
     constructor() {
       __publicField(this, "jaIdx", /* @__PURE__ */ new Map());
@@ -195738,7 +195728,7 @@ var JpPoeUtils = (() => {
     }
   };
 
-  // src/translator/ja2en/provider/base_type.ts
+  // ベースタイプの翻訳 (src/translator/ja2en/provider/base_type.ts)
   var BaseTypeProvider = class {
     constructor() {
       __publicField(this, "jaIdx", /* @__PURE__ */ new Map());
@@ -195784,7 +195774,7 @@ var JpPoeUtils = (() => {
     }
   };
 
-  // src/translator/ja2en/provider/requirement.ts
+  // 要求値の翻訳 (src/translator/ja2en/provider/requirement.ts)
   var RequirementProvider = class {
     constructor() {
       __publicField(this, "jaIdx", /* @__PURE__ */ new Map());
@@ -195814,13 +195804,13 @@ var JpPoeUtils = (() => {
     }
   };
 
-  // src/translator/ja2en/util/text.ts
+  // テキスト骨格ユーティリティ (src/translator/ja2en/util/text.ts)
   var LINE_SEPARATOR = "\n";
   function getTextSkeleton(text) {
     return text.replace(/[{}\d.+-]/gu, "");
   }
 
-  // src/translator/ja2en/provider/property.ts
+  // プロパティの翻訳 (src/translator/ja2en/provider/property.ts)
   var VARIABLE_PLACEHOLDER = "{0}";
   var PropertyProvider = class {
     constructor() {
@@ -195866,7 +195856,7 @@ var JpPoeUtils = (() => {
     }
   };
 
-  // src/translator/ja2en/provider/skill.ts
+  // スキルの翻訳 (src/translator/ja2en/provider/skill.ts)
   var SkillProvider = class {
     constructor() {
       __publicField(this, "jaIdx", /* @__PURE__ */ new Map());
@@ -195904,7 +195894,7 @@ var JpPoeUtils = (() => {
     }
   };
 
-  // src/translator/ja2en/provider/passive_skill.ts
+  // パッシブスキルの翻訳 (src/translator/ja2en/provider/passive_skill.ts)
   var PassiveSkillProvider = class {
     constructor() {
       __publicField(this, "anointedJaIdx", /* @__PURE__ */ new Map());
@@ -195975,7 +195965,7 @@ var JpPoeUtils = (() => {
     }
   };
 
-  // src/translator/ja2en/provider/stat.ts
+  // ステータス（モッド）の翻訳 (src/translator/ja2en/provider/stat.ts)
   var StatProvider = class {
     constructor() {
       __publicField(this, "jaSkeletonIdx", /* @__PURE__ */ new Map());
@@ -196079,7 +196069,7 @@ var JpPoeUtils = (() => {
     }
   };
 
-  // src/translator/ja2en/provider/sting.ts
+  // 短い不一致検出 (src/translator/ja2en/provider/sting.ts)
   var StringProvider = class {
     constructor() {
       __publicField(this, "idx", /* @__PURE__ */ new Map());
@@ -196099,7 +196089,7 @@ var JpPoeUtils = (() => {
     }
   };
 
-  // src/translator/ja2en/util/template.ts
+  // テンプレート処理 (src/translator/ja2en/util/template.ts)
   var Template = class {
     constructor(template) {
       __publicField(this, "template");
@@ -196109,7 +196099,7 @@ var JpPoeUtils = (() => {
       this.parseTemplate();
     }
     /**
-     * 在构造函数中解析模板，提取占位符信息
+     * コンストラクタでテンプレートを解析し、プレースホルダー情報を抽出する
      */
     parseTemplate() {
       const regex = /\{(\d+)\}/g;
@@ -196134,9 +196124,9 @@ var JpPoeUtils = (() => {
       this.staticParts = staticParts;
     }
     /**
-     * 解析渲染结果，得到位置参数与实际参数值的映射表
-     * @param str 已渲染的字符串
-     * @returns 参数映射表，key为位置索引，value为对应的参数值，如果渲染结果与模板不匹配，返回undefined
+     * レンダリング結果を解析し、位置パラメータと実際の値の対応表を得る
+     * @param str レンダリング済み文字列
+     * @returns パラメータ対応表。key は位置インデックス、value は対応する値。テンプレートと一致しない場合は undefined
      */
     parseParams(str) {
       if (this.placeholders.length === 0) {
@@ -196174,9 +196164,9 @@ var JpPoeUtils = (() => {
       return result;
     }
     /**
-     * 渲染模板
-     * @param paramMap 参数映射表，可以是数组、对象或Map
-     * @returns 渲染后的字符串
+     * テンプレートをレンダリングする
+     * @param paramMap パラメータ対応表（配列・オブジェクト・Map）
+     * @returns レンダリング後の文字列
      */
     render(paramMap) {
       if (this.placeholders.length === 0) {
@@ -196197,7 +196187,7 @@ var JpPoeUtils = (() => {
     }
   };
 
-  // src/translator/en2ja/basic.ts
+  // 英語→日本語 基本翻訳 (src/translator/en2ja/basic.ts)
   var DEFAULT_RARITY_ITEM_NAME = "Item";
   var ReverseClientStringTranslator = class {
     constructor(clientString) {
@@ -196571,7 +196561,7 @@ var JpPoeUtils = (() => {
     }
   };
 
-  // src/translator/en2ja/text.ts
+  // 英語→日本語 テキスト翻訳 (src/translator/en2ja/text.ts)
   var VENDOR_FOOTER_PATTERNS = [
     /^出售获得通货:/,
     /^売却価格:/,
@@ -196865,7 +196855,7 @@ var JpPoeUtils = (() => {
     }
   };
 
-  // src/translator/en2ja/factory.ts
+  // 英語→日本語 ファクトリ (src/translator/en2ja/factory.ts)
   var En2JaTranslatorFactory = class {
     constructor() {
       __publicField(this, "basicTranslator");
@@ -196885,7 +196875,7 @@ var JpPoeUtils = (() => {
     }
   };
 
-  // src/translator/ja2en/basic.ts
+  // 日本語→英語 基本翻訳 (src/translator/ja2en/basic.ts)
   var DEFAULT_RARITY_ITEM_NAME2 = "Item";
   var GEM_PROPERTY_MAP = /* @__PURE__ */ new Map([
     ["レベル", "Level"],
@@ -196960,7 +196950,7 @@ var JpPoeUtils = (() => {
       );
     }
     /**
-     * 翻译 attribute。
+     * attribute を翻訳する。
      */
     transAttr(name, value) {
       const attr = this.attributeProvider.provideByJa(name);
@@ -196984,17 +196974,18 @@ var JpPoeUtils = (() => {
       return void 0;
     }
     /**
-     * 翻译 attribute name。
+     * attribute 名を翻訳する。
      */
     transAttrName(name) {
       return this.transAttr(name, void 0)?.name;
     }
     /**
-     * 翻译 name 和 baseType，用于json数据翻译。
+     * name と baseType を翻訳する。JSON データ翻訳用。
      *
-     * 传奇物品的`name`被精确翻译，稀有物品的`name`被翻译为默认名称`Item`，魔法物品和普通物品的`name`保持不变（空字符串）。
+     * ユニークアイテムの `name` は正確に翻訳され、レアアイテムの `name` は既定名称 `Item` に翻訳される。
+     * マジックアイテムとノーマルアイテムの `name` は変更されない（空文字列のまま）。
      *
-     * 可能存在同名的 baseType，传奇物品使用 name 来进行鉴别，否则返回第一个。
+     * 同名の baseType が存在する場合、ユニークアイテムでは name により識別し、それ以外は最初のものを返す。
      */
     transNameAndBaseType(name, baseType) {
       const baseTypes = this.baseTypeProvider.provideByJa(baseType);
@@ -197036,9 +197027,9 @@ var JpPoeUtils = (() => {
       return void 0;
     }
     /**
-     * 翻译 baseType。
+     * baseType を翻訳する。
      *
-     * 可能存在同名的 baseType，返回第一个。
+     * 同名の baseType が複数存在する場合は、最初のものを返す。
      */
     transBaseType(baseType) {
       if (!baseType) {
@@ -197047,9 +197038,9 @@ var JpPoeUtils = (() => {
       return this.baseTypeProvider.provideByJa(baseType)?.[0].en;
     }
     /**
-     * 根据 typeLine 推断 BaseType，用于文本翻译。
+     * typeLine から BaseType を推定する。テキスト翻訳用。
      *
-     * name 用于匹配传奇，否则返回首个匹配的 BaseType。
+     * name はユニークの照合用。それ以外は最初に一致した BaseType を返す。
      */
     findBaseTypeFromTypeLine(typeLine, name) {
       if (name.length > 0) {
@@ -197094,15 +197085,19 @@ var JpPoeUtils = (() => {
       return;
     }
     /**
-     * 翻译 name 和 typeLine，用于文本翻译。
+     * name と typeLine を翻訳する。テキスト翻訳用。
      *
-     * typeLine 是 baseType 加上一些修饰词。修饰词可以分为两类，一类是 `シンセサイズされた ` 和 `上質な `，一类是与物品词缀相关的修饰词。
+     * typeLine は baseType と修飾語の組み合わせ。修飾語は2種類に分けられる。
+     * 1つ目は `シンセサイズされた ` と `上質な ` で、2つ目はアイテムの接辞に関連する修飾語。
      *
-     * `シンセサイズされた `出现在所有稀有度物品上，`上質な `出现在非传奇物品上，第二类修饰词仅出现在魔法物品上。
+     * `シンセサイズされた ` は全レアリティで出現し、`上質な ` は非ユニークで出現する。
+     * 2つ目の修飾語はマジックアイテムにのみ出現する。
      *
-     * 未鉴定物品是例外，它只会存在第一类修饰词，`シンセサイズされた `和`上質な `出现在所有稀有度的未鉴定物品上。
+     * 未鑑定アイテムは例外で、1つ目の修飾語のみが存在する。
+     * `シンセサイズされた ` と `上質な ` は全レアリティの未鑑定アイテムに出現する。
      *
-     * 由于第二类修饰词对于POB而言是没有什么作用的，且维护比较麻烦，这里仅支持第一类修饰词的翻译，第二类修饰词被移除。
+     * 2つ目の修飾語は POB 上ほとんど意味がなく、保守も困難なため、
+     * ここでは1つ目の修飾語の翻訳のみサポートし、2つ目は除去する。
      */
     transNameAndTypeLine(name, typeLine) {
       if (name.length > 0) {
@@ -197168,7 +197163,7 @@ var JpPoeUtils = (() => {
       return;
     }
     /**
-     * 翻译技能和辅助技能。日本語クライアントでは補助スキル名に「サポート」が付く。
+     * スキルおよびサポートスキルを翻訳する。日本語クライアントでは補助スキル名に「サポート」が付く。
      */
     transSkill(name) {
       return this.skillProvider.provideSkill(name)?.en;
@@ -197177,7 +197172,7 @@ var JpPoeUtils = (() => {
       return GEM_PROPERTY_MAP.get(name);
     }
     /**
-     * 翻译索引的辅助技能。
+     * 索引付きサポートスキルを翻訳する。
      */
     transIndexableSupports(name) {
       return this.skillProvider.provideIndexableSupport(name)?.en;
@@ -197194,33 +197189,33 @@ var JpPoeUtils = (() => {
       return void 0;
     }
     /**
-     * 翻译可涂油天赋。
+     * アノイント可能なパッシブを翻訳する。
      */
     transAnointed(name) {
       return this.passiveSkillProvider.provideAnointedByJa(name)?.en;
     }
     /**
-     * 翻译基石天赋。
+     * キーストーンパッシブを翻訳する。
      */
     transKeystone(name) {
       return this.passiveSkillProvider.provideKeystoneByJa(name)?.en;
     }
     /**
-     * 翻译升华天赋。
+     * アセンダンシーパッシブを翻訳する。
      *
-     * 不支持菲西雅升华、血脉升华。
+     * フィシアアセンダンシー、血統アセンダンシーには非対応。
      */
     transAscendant(ja) {
       return this.passiveSkillProvider.provideAscendantByJa(ja)?.en;
     }
     /**
-     * 翻译パッシブスキルノード名（全ノード辞書）。
+     * パッシブスキルノード名を翻訳する（全ノード辞書）。
      */
     transPassiveNode(ja) {
       return this.passiveSkillProvider.providePassiveNodeByJa(ja)?.en;
     }
     /**
-     * 翻译 Property。
+     * Property を翻訳する。
      */
     transProperty(name, value) {
       const prop = this.propertyProvider.provideByJa(name);
@@ -197242,17 +197237,18 @@ var JpPoeUtils = (() => {
       return void 0;
     }
     /**
-     * 翻译 property name，用于文本翻译。
+     * property 名を翻訳する。テキスト翻訳用。
      *
-     * 这个方法引入了 `动态` property name的概念。
-     * 比如`武器范围：1.3 米`，这个文本片段使用了日本語符号`：`，而一般的 name:value 的分隔符为英文符号`:`。
-     * 因此相比将其解析为 `name:value`，还不如将其整体解析为一个 name 省事。
+     * 本メソッドでは `動的` property 名の概念を導入する。
+     * 例: `武器范围：1.3 米` は日本語記号 `：` を使用しているが、
+     * 一般的な name:value 区切りは英語記号 `:`。
+     * したがって name:value として解析するよりも、全体を name として扱う方が簡便。
      *
-     * 其中 `1.3` 是动态值，因此这个文本片段需要动态翻译为英文。
+     * ここで `1.3` は動的値であり、本テキスト断片は動的に英語へ翻訳する必要がある。
      *
-     * 对应的 json 数据不存在类似的概念，比如：
+     * 対応する JSON データには同様の概念はなく、例:
      * {name: "武器范围：{0} 米", values: [["1.1", 0]], displayMode: 3, type: 14}
-     * name和value是分隔的，只需要静态翻译 name。
+     * name と value は分離されており、name は静的翻訳のみでよい。
      */
     transPropertyName(name) {
       const prop = this.propertyProvider.provideByJa(name);
@@ -197276,7 +197272,7 @@ var JpPoeUtils = (() => {
       return void 0;
     }
     /**
-     * 翻译 requirement。
+     * requirement を翻訳する。
      */
     transRequirement(name, value) {
       const r = this.requirementProvider.provideByJa(name);
@@ -197295,21 +197291,21 @@ var JpPoeUtils = (() => {
       return void 0;
     }
     /**
-     * 翻译 requirement name。
+     * requirement 名を翻訳する。
      */
     transRequirementName(jaName) {
       const r = this.requirementProvider.provideByJa(jaName);
       return r?.en;
     }
     /**
-     * 翻译 requirement suffix。
+     * requirement の接尾辞を翻訳する。
      */
     transRequirementSuffix(suffix) {
       const s = this.requirementProvider.provideSuffixByJa(suffix);
       return s?.en;
     }
     /**
-     * 翻译词缀
+     * モッドを翻訳する。
      */
     transMod(jaMod) {
       let parseResult = this.influenceStat1Translator.parseJa(jaMod);
@@ -197351,7 +197347,7 @@ var JpPoeUtils = (() => {
       return void 0;
     }
     /**
-     * 翻译词缀参数
+     * モッドのパラメータを翻訳する。
      */
     transStatParams(stat, posParams) {
       if (stat.refs) {
@@ -197413,12 +197409,12 @@ var JpPoeUtils = (() => {
       return enTmpl.render(posParams);
     }
     /**
-     * 翻译 multiline mod。
+     * multiline mod を翻訳する。
      *
-     * 该方法用于文本翻译，使用贪婪法推断 lines 中可能存在的以首行为首的 multiline mod。
+     * テキスト翻訳用。貪欲法で lines 内に先頭行を先頭とする multiline mod が存在するか推定する。
      *
-     * @returns {result,lines}, 翻译结果, multiline mod 的行数
-     * @returns undefined, 无匹配
+     * @returns {result, lines} 翻訳結果と multiline mod の行数
+     * @returns undefined 一致なし
      */
     transMultilineMod(lines) {
       const skeleton = getTextSkeleton(lines[0]);
@@ -197463,16 +197459,16 @@ var JpPoeUtils = (() => {
     }
   };
 
-  // src/translator/ja2en/json.ts
+  // JSON データ翻訳 (src/translator/ja2en/json.ts)
   var JA_THIEF_TRINKET = "__JP_HEIST_TRINKET__";
   var JsonTranslator = class {
     constructor(basic) {
       this.basic = basic;
     }
     /**
-     * 翻译 items json 数据
+     * items JSON データを翻訳する。
      *
-     * 本函数采用本地翻译，会修改原始对象
+     * 本関数はインプレース翻訳を行い、元オブジェクトを変更する。
      */
     transItems(items) {
       const itemList = items.items;
@@ -197489,9 +197485,9 @@ var JpPoeUtils = (() => {
       return !(item.inventoryId === "MainInventory" || item.inventoryId === "ExpandedMainInventory" || item.baseType === JA_THIEF_TRINKET);
     }
     /**
-     * 翻译 Item
+     * Item を翻訳する。
      *
-     * 本函数采用本地翻译，会修改原始对象
+     * 本関数はインプレース翻訳を行い、元オブジェクトを変更する。
      */
     transItem(item) {
       const name = item.name;
@@ -197742,7 +197738,7 @@ var JpPoeUtils = (() => {
     }
   };
 
-  // src/translator/ja2en/text.ts
+  // 日本語→英語 テキスト翻訳 (src/translator/ja2en/text.ts)
   var VENDOR_FOOTER_PATTERNS2 = [
     /^出售获得通货:/,
     /^売却価格:/,
@@ -197753,8 +197749,8 @@ var JpPoeUtils = (() => {
       this.basic = basic;
     }
     /**
-     * 翻译物品文本
-     * @param content 物品文本，使用`\n`作为行分隔符
+     * アイテムテキストを翻訳する
+     * @param content アイテムテキスト。行区切りは `\n`
      */
     trans(content) {
       const item = new Text2(this.preHandle(content));
@@ -197833,9 +197829,9 @@ var JpPoeUtils = (() => {
       );
     }
     /**
-     * 获取分区的翻译
+     * セクション全体を翻訳する
      *
-     * 默认实现基于 Mod 分区，这是最常见的情况，子类型的分区需要覆盖该方法
+     * 既定は Mod 行向け。サブクラスで上書き可能
      */
     getTranslation(ctx) {
       ctx.section = this;
@@ -197864,7 +197860,7 @@ var JpPoeUtils = (() => {
       return builder.join(LINE_SEPARATOR3);
     }
     /**
-     * 给带有后缀的 multiline mod 的翻译结果的每行添加后缀
+     * multiline mod 翻訳の各行に suffix を付ける
      */
     fillSuffixesToMultilineModTranslation(mod, translation) {
       const slices = translation.split(LINE_SEPARATOR3);
@@ -198061,7 +198057,7 @@ var JpPoeUtils = (() => {
     }
   };
 
-  // src/translator/ja2en/factory.ts
+  // 日本語→英語 ファクトリ (src/translator/ja2en/factory.ts)
   var TranslatorFactory = class {
     constructor() {
       __publicField(this, "basicTranslator");
@@ -198095,7 +198091,7 @@ var JpPoeUtils = (() => {
     }
   };
 
-  // src/web/browser.ts
+  // ブラウザ向けエントリ (src/browser.ts)
   var ja2en = new TranslatorFactory().getTextTranslator();
   var en2ja = new En2JaTranslatorFactory().getTextTranslator();
   function translateItemText(text) {
