@@ -12,7 +12,10 @@ function formatTabletModText(text, value) {
     const result = textParts.map((part, i) => {
         const v = valueParts[i] !== undefined ? valueParts[i] : valueParts[0];
         if (!v || v === '1') return part;
-        return part.replace(/#+/, v);
+        return part
+            .replace(/\(##\)/g, `(${v})`)
+            .replace(/##/g, v)
+            .replace(/#/g, v);
     });
     return result.join('\n');
 }
@@ -103,7 +106,10 @@ function updateTabletModList() {
         const textSpan = document.createElement('span');
         textSpan.classList.add('mod-text');
         textSpan.style.paddingRight = '80px'; // バッジ用の余白
-        textSpan.textContent = formatTabletModText(value.mod, value.value);
+        const rawText = (typeof currentLanguage !== 'undefined' && currentLanguage === 'en')
+            ? (value.engMod || value.mod)
+            : value.mod;
+        textSpan.textContent = formatTabletModText(rawText, value.value);
         
         effectItem.appendChild(textSpan);
 
@@ -197,7 +203,10 @@ function updateTabletCombinedRegex() {
     const results = [];
     tabletCheckedMods.forEach(key => {
         const modData = tabletModList[key];
-        const reg = modData.Regex || modData.mod.split('|')[0].substring(0, 8);
+        const useEnglish = typeof currentLanguage !== 'undefined' && currentLanguage === 'en';
+        const reg = useEnglish
+            ? (modData.engRegex || modData.Regex || (modData.engMod || modData.mod).split('|')[0].substring(0, 8))
+            : (modData.Regex || modData.mod.split('|')[0].substring(0, 8));
         results.push(reg);
     });
 

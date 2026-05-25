@@ -1,7 +1,7 @@
 ﻿let ModList = {...mapModList};
 let currentLanguage = localStorage.getItem('poe2_poeLanguage') || 'ja';
 if (currentLanguage !== 'ja' && currentLanguage !== 'en') currentLanguage = 'ja';
-const CHANGELOG_VERSION = 'poe2-2026-05-24';
+const CHANGELOG_VERSION = 'poe2-2026-05-25';
 const CHANGELOG_STORAGE_KEY = 'poe2ChangelogSeenVersion';
 
 let checkedMods = new Map(); // id -> 'ng' または 'wanted'
@@ -13,6 +13,8 @@ function toggleLanguage() {
     
     updateModList();
     updateCombinedRegex();
+    if (typeof updateTabletModList === 'function') updateTabletModList();
+    if (typeof updateTabletCombinedRegex === 'function') updateTabletCombinedRegex();
     // 保存済み一覧が表示中なら再描画
     const savedContent = document.getElementById('savedContent');
     if (savedContent && savedContent.style.display !== 'none') {

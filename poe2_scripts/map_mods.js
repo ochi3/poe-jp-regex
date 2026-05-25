@@ -7,7 +7,7 @@ const mapModList = {
     "type": "Suffix",
     "weight": 1,
     "tier": 0,
-    "engRegex": "",
+    "engRegex": "mod",
     "Regex": "は追",
     "tradeStatIds": [
       "explicit.stat_2550456553"
@@ -26,7 +26,7 @@ const mapModList = {
     "type": "Prefix",
     "weight": 1,
     "tier": 0,
-    "engRegex": "",
+    "engRegex": "ndea",
     "Regex": "ドが追",
     "tradeStatIds": [
       "explicit.stat_240445958"
@@ -45,7 +45,7 @@ const mapModList = {
     "type": "Prefix",
     "weight": 1,
     "tier": 0,
-    "engRegex": "",
+    "engRegex": "sts",
     "Regex": "獣が追",
     "tradeStatIds": [
       "explicit.stat_3757259819"
@@ -64,7 +64,7 @@ const mapModList = {
     "type": "Prefix",
     "weight": 1,
     "tier": 0,
-    "engRegex": "",
+    "engRegex": "yt",
     "Regex": "エゾ",
     "tradeStatIds": [
       "explicit.stat_1436812886"
@@ -83,7 +83,7 @@ const mapModList = {
     "type": "Prefix",
     "weight": 1,
     "tier": 0,
-    "engRegex": "",
+    "engRegex": "un m",
     "Regex": "リド",
     "tradeStatIds": [
       "explicit.stat_4130878258"
@@ -102,7 +102,7 @@ const mapModList = {
     "type": "Prefix",
     "weight": 1,
     "tier": 0,
-    "engRegex": "",
+    "engRegex": "aa",
     "Regex": "はヴ",
     "tradeStatIds": [
       "explicit.stat_4181857719"
@@ -121,7 +121,7 @@ const mapModList = {
     "type": "Prefix",
     "weight": 1,
     "tier": 0,
-    "engRegex": "",
+    "engRegex": "ds",
     "Regex": "の護",
     "tradeStatIds": [
       "explicit.stat_2949706590"
@@ -140,7 +140,7 @@ const mapModList = {
     "type": "Prefix",
     "weight": 1,
     "tier": 0,
-    "engRegex": "",
+    "engRegex": "agu",
     "Regex": "染",
     "tradeStatIds": [
       "explicit.stat_3592067990"
@@ -159,7 +159,7 @@ const mapModList = {
     "type": "Prefix",
     "weight": 1,
     "tier": 0,
-    "engRegex": "",
+    "engRegex": "ans",
     "Regex": "華し",
     "tradeStatIds": [
       "explicit.stat_1689473577"
@@ -178,7 +178,7 @@ const mapModList = {
     "type": "Prefix",
     "weight": 1,
     "tier": 0,
-    "engRegex": "",
+    "engRegex": "f br",
     "Regex": "は茨",
     "tradeStatIds": [
       "explicit.stat_3309089125"
@@ -197,7 +197,7 @@ const mapModList = {
     "type": "Prefix",
     "weight": 1,
     "tier": 200,
-    "engRegex": "",
+    "engRegex": "fire$",
     "Regex": "加火",
     "tradeStatIds": [
       "explicit.stat_92381065"
@@ -216,7 +216,7 @@ const mapModList = {
     "type": "Prefix",
     "weight": 1,
     "tier": 200,
-    "engRegex": "",
+    "engRegex": "col",
     "Regex": "加冷",
     "tradeStatIds": [
       "explicit.stat_211727"
@@ -235,7 +235,7 @@ const mapModList = {
     "type": "Prefix",
     "weight": 1,
     "tier": 200,
-    "engRegex": "",
+    "engRegex": "tn",
     "Regex": "加雷",
     "tradeStatIds": [
       "explicit.stat_512071314"
@@ -254,7 +254,7 @@ const mapModList = {
     "type": "Prefix",
     "weight": 1,
     "tier": 200,
-    "engRegex": "",
+    "engRegex": "mage$",
     "Regex": "のダ.*増",
     "tradeStatIds": [
       "explicit.stat_1890519597"
@@ -273,7 +273,7 @@ const mapModList = {
     "type": "Suffix",
     "weight": 1,
     "tier": 200,
-    "engRegex": "",
+    "engRegex": "tta",
     "Regex": "、キ",
     "tradeStatIds": [
       "explicit.stat_3909654181"
@@ -292,7 +292,7 @@ const mapModList = {
     "type": "Suffix",
     "weight": 1,
     "tier": 0,
-    "engRegex": "",
+    "engRegex": "bon",
     "Regex": "のク",
     "tradeStatIds": [
       "explicit.stat_2753083623",
@@ -312,7 +312,7 @@ const mapModList = {
     "type": "Prefix",
     "weight": 1,
     "tier": 200,
-    "engRegex": "",
+    "engRegex": "fe$",
     "Regex": "が.*上",
     "tradeStatIds": [
       "explicit.stat_95249895"
@@ -331,7 +331,7 @@ const mapModList = {
     "type": "Suffix",
     "weight": 1,
     "tier": 200,
-    "engRegex": "",
+    "engRegex": "r el",
     "Regex": "性 +",
     "tradeStatIds": [
       "explicit.stat_1054098949"
@@ -350,7 +350,7 @@ const mapModList = {
     "type": "Prefix",
     "weight": 1,
     "tier": 200,
-    "engRegex": "",
+    "engRegex": "oure",
     "Regex": "ーはア",
     "tradeStatIds": [
       "explicit.stat_2539290279"
@@ -369,7 +369,7 @@ const mapModList = {
     "type": "Prefix",
     "weight": 1,
     "tier": 200,
-    "engRegex": "",
+    "engRegex": "e eva",
     "Regex": "ーは回",
     "tradeStatIds": [
       "explicit.stat_2570249991"
@@ -388,7 +388,7 @@ const mapModList = {
     "type": "Prefix",
     "weight": 1,
     "tier": 200,
-    "engRegex": "",
+    "engRegex": "f m",
     "Regex": "大エ",
     "tradeStatIds": [
       "explicit.stat_2887760183"
@@ -407,7 +407,7 @@ const mapModList = {
     "type": "Suffix",
     "weight": 1,
     "tier": 200,
-    "engRegex": "",
+    "engRegex": "ois",
     "Regex": "で毒",
     "tradeStatIds": [
       "explicit.stat_95221307"
@@ -426,7 +426,7 @@ const mapModList = {
     "type": "Suffix",
     "weight": 1,
     "tier": 200,
-    "engRegex": "",
+    "engRegex": "blee",
     "Regex": "で出",
     "tradeStatIds": [
       "explicit.stat_2506820610"
@@ -445,7 +445,7 @@ const mapModList = {
     "type": "Suffix",
     "weight": 1,
     "tier": 1,
-    "engRegex": "",
+    "engRegex": "lm",
     "Regex": "は状",
     "tradeStatIds": [
       "explicit.stat_4101943684",
@@ -465,7 +465,7 @@ const mapModList = {
     "type": "Suffix",
     "weight": 1,
     "tier": 1,
-    "engRegex": "",
+    "engRegex": "eq",
     "Regex": "を破",
     "tradeStatIds": [
       "explicit.stat_1879340377"
@@ -484,7 +484,7 @@ const mapModList = {
     "type": "Prefix",
     "weight": 1,
     "tier": 1,
-    "engRegex": "",
+    "engRegex": "cc",
     "Regex": "の命",
     "tradeStatIds": [
       "explicit.stat_1588049749"
@@ -503,7 +503,7 @@ const mapModList = {
     "type": "Prefix",
     "weight": 1,
     "tier": 500,
-    "engRegex": "",
+    "engRegex": "ra ch",
     "Regex": "加混",
     "tradeStatIds": [
       "explicit.stat_2200661314"
@@ -522,7 +522,7 @@ const mapModList = {
     "type": "Suffix",
     "weight": 1,
     "tier": 1,
-    "engRegex": "",
+    "engRegex": "un b",
     "Regex": "ン蓄",
     "tradeStatIds": [
       "explicit.stat_115425161"
@@ -541,7 +541,7 @@ const mapModList = {
     "type": "Suffix",
     "weight": 1,
     "tier": 1,
-    "engRegex": "",
+    "engRegex": "mm",
     "Regex": "の凍",
     "tradeStatIds": [
       "explicit.stat_2508044078",
@@ -562,7 +562,7 @@ const mapModList = {
     "type": "Suffix",
     "weight": 1,
     "tier": 200,
-    "engRegex": "",
+    "engRegex": "oj",
     "Regex": "個放",
     "tradeStatIds": [
       "explicit.stat_1309819744"
@@ -581,7 +581,7 @@ const mapModList = {
     "type": "Prefix",
     "weight": 1,
     "tier": 200,
-    "engRegex": "",
+    "engRegex": "eble",
     "Regex": "ンフ",
     "tradeStatIds": [
       "explicit.stat_2029171424"
@@ -600,7 +600,7 @@ const mapModList = {
     "type": "Prefix",
     "weight": 1,
     "tier": 200,
-    "engRegex": "",
+    "engRegex": "emp",
     "Regex": "ルチ",
     "tradeStatIds": [
       "explicit.stat_1629357380"
@@ -619,7 +619,7 @@ const mapModList = {
     "type": "Prefix",
     "weight": 1,
     "tier": 200,
-    "engRegex": "",
+    "engRegex": "kn",
     "Regex": "ルウ",
     "tradeStatIds": [
       "explicit.stat_554690751"
@@ -638,7 +638,7 @@ const mapModList = {
     "type": "Prefix",
     "weight": 1,
     "tier": 200,
-    "engRegex": "",
+    "engRegex": "ign",
     "Regex": "火領",
     "tradeStatIds": [
       "explicit.stat_133340941"
@@ -657,7 +657,7 @@ const mapModList = {
     "type": "Prefix",
     "weight": 1,
     "tier": 200,
-    "engRegex": "",
+    "engRegex": "chi",
     "Regex": "却領",
     "tradeStatIds": [
       "explicit.stat_349586058"
@@ -676,7 +676,7 @@ const mapModList = {
     "type": "Prefix",
     "weight": 1,
     "tier": 200,
-    "engRegex": "",
+    "engRegex": "cke",
     "Regex": "電領",
     "tradeStatIds": [
       "explicit.stat_3477720557"
@@ -695,7 +695,7 @@ const mapModList = {
     "type": "Suffix",
     "weight": 1,
     "tier": 500,
-    "engRegex": "",
+    "engRegex": "tes",
     "Regex": "を貫",
     "tradeStatIds": [
       "explicit.stat_1898978455"
@@ -714,7 +714,7 @@ const mapModList = {
     "type": "Suffix",
     "weight": 1,
     "tier": 1000,
-    "engRegex": "",
+    "engRegex": "% ma",
     "Regex": "性の最",
     "tradeStatIds": [
       "explicit.stat_3376488707"
@@ -733,7 +733,7 @@ const mapModList = {
     "type": "Suffix",
     "weight": 1,
     "tier": 200,
-    "engRegex": "",
+    "engRegex": "sk",
     "Regex": "コチ",
     "tradeStatIds": [
       "explicit.stat_2549889921"
@@ -752,7 +752,7 @@ const mapModList = {
     "type": "Suffix",
     "weight": 1,
     "tier": 1000,
-    "engRegex": "",
+    "engRegex": "f l",
     "Regex": "復レ",
     "tradeStatIds": [
       "explicit.stat_4181072906"
@@ -771,7 +771,7 @@ const mapModList = {
     "type": "Suffix",
     "weight": 1,
     "tier": 200,
-    "engRegex": "",
+    "engRegex": "wn",
     "Regex": "ン解",
     "tradeStatIds": [
       ""
@@ -790,7 +790,7 @@ const mapModList = {
     "type": "Suffix",
     "weight": 1,
     "tier": 0,
-    "engRegex": "",
+    "engRegex": "tak",
     "Regex": "トか",
     "tradeStatIds": [
       "explicit.stat_337935900"
@@ -809,7 +809,7 @@ const mapModList = {
     "type": "Prefix",
     "weight": 1,
     "tier": 200,
-    "engRegex": "",
+    "engRegex": "rses",
     "Regex": "る呪",
     "tradeStatIds": [
       "explicit.stat_3796523155"
@@ -828,7 +828,7 @@ const mapModList = {
     "type": "Prefix",
     "weight": 1,
     "tier": 200,
-    "engRegex": "",
+    "engRegex": "r,",
     "Regex": "盗",
     "tradeStatIds": [
       "explicit.stat_3222482040"

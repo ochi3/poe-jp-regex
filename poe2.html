@@ -29,6 +29,7 @@
             <nav>
                 <a class="nav-link active" data-tab="mapContent" href="#map">ウェイストーン</a>
                 <a class="nav-link" data-tab="tabletContent" href="#tablet">石板</a>
+                <a class="nav-link" data-tab="itemTransContent" href="#itemTrans">装備変換</a>
                 <a class="nav-link" data-tab="vendorContent" href="#vendor">ベンダー(ACT用)</a>
                 <a class="nav-link" data-tab="savedContent" href="#saved">保存済みRegex</a>
                 <a class="nav-link" data-tab="changelogContent" href="#changelog">Change log <span id="changelogNewBadge" class="nav-new-badge">New</span></a>
@@ -47,6 +48,13 @@
             <h4>
                 Change log
                 <br/>
+                26/05/25
+                <br/>
+                装備変換タブ追加
+                <br/>
+                ウェイストーン英語Regex・Language切替対応
+                <br/>
+                <br/>
                 26/05/24
                 <br/>
                 コード整理（不具合あれば報告を）
@@ -56,7 +64,7 @@
         <div id="contentArea">
             <!-- グローバル言語切り替えボタン -->
             <div id="globalLangToggleContainer" style="position: absolute; top: 16px; right: 24px; z-index: 1001;">
-                <!-- <button id="globalLangToggle" onclick="toggleLanguage()" style="background: var(--bg-secondary); color: var(--accent-primary); border: 1px solid var(--border-color); padding: 8px 16px; border-radius: 8px; font-weight: bold; box-shadow: 0 4px 12px rgba(0,0,0,0.5);">Language: JA</button> -->
+                <button id="globalLangToggle" onclick="toggleLanguage()" style="background: var(--bg-secondary); color: var(--accent-primary); border: 1px solid var(--border-color); padding: 8px 16px; border-radius: 8px; font-weight: bold; box-shadow: 0 4px 12px rgba(0,0,0,0.5);">Language: JA</button>
             </div>
             <!-- ウェイストーンMODタブ -->
             <div class="tab-content" id="mapContent">
@@ -266,6 +274,36 @@
             <div id="TabletModList" style="margin-top: 16px;">
             </div>
         </div>
+        <!-- 装備変換タブ -->
+        <div id="itemTransContent" class="tab-content">
+            <div class="card item-trans-card">
+                <h2 class="section-header item-trans-header">装備変換</h2>
+
+                <p style="margin: 0 0 12px; color: var(--text-secondary); font-size: 14px;">
+                    アイテムのテキストを英語に変換します。<br>
+                    英語→日本語も出来ますがまだ精度が悪いかもしれません。
+                </p>
+
+                <div class="item-trans-columns">
+                    <div class="item-trans-column">
+                        <label for="itemTransInput" class="item-trans-label">入力（原文）</label>
+                        <textarea id="itemTransInput" class="item-trans-textarea" spellcheck="false" placeholder="アイテムクラス: ... / Item Class: ..."></textarea>
+                    </div>
+                    <div class="item-trans-column">
+                        <label for="itemTransOutput" class="item-trans-label">出力（変換結果）</label>
+                        <textarea id="itemTransOutput" class="item-trans-textarea" spellcheck="false" readonly placeholder="変換結果がここに表示されます"></textarea>
+                    </div>
+                </div>
+
+                <div class="input-group item-trans-actions">
+                    <button class="btn-primary-highlight" onclick="translateItemText()">変換</button>
+                    <button onclick="copyItemTransOutput()">結果をコピー</button>
+                    <button onclick="clearItemTransFields()">クリア</button>
+                </div>
+
+                <div id="itemTransStatus" class="item-trans-status"></div>
+            </div>
+        </div>
         <!-- 保存済みRegexタブ -->
         <div class="tab-content" id="savedContent">
             <div class="card">
@@ -284,6 +322,14 @@
             <div class="card">
                 <h2 class="section-header">Change log</h2>
                 <div class="changelog-list">
+                    <article class="changelog-entry">
+                        <time>26/05/25</time>
+                        <p>装備変換タブを追加しました。貼り付けた装備テキストの言語を自動判定し、日本語と英語を相互に変換できます。</p>
+                    </article>
+                    <article class="changelog-entry">
+                        <time>26/05/25</time>
+                        <p>ウェイストーンModの英語Regexに対応し、Language切替（日本語/英語）を追加しました。</p>
+                    </article>
                     <article class="changelog-entry">
                         <time>26/05/24</time>
                         <p>内部コードの整理を行いました。不具合や想定と異なる動作がありましたら、フィードバックよりご報告をお願いします。</p>
@@ -330,6 +376,8 @@
     <script src="poe2_scripts/tablet_scripts.js"></script>
     <script src="poe2_scripts/vendor.js"></script>
     <script src="poe2_scripts/saved-regex.js"></script>
+    <script src="poe2_scripts/jp-poe2-utils-translator.js"></script>
+    <script src="poe2_scripts/item-translator.js"></script>
     <!-- トレード設定サイドパネル -->
     <div class="side-panel" id="tradeSettingsPanel">
         <div class="side-panel-content">
