@@ -281,7 +281,7 @@ function updateCombinedRegex() {
     const wantedResults = [];
 
     if (document.getElementById('packAdditionCheckbox')?.checked) {
-        wantedResults.push(currentLanguage === 'ja' ? 'が追.*ク出' : 'packs');
+        wantedResults.push(currentLanguage === 'ja' ? 'が追.*ク出' : 'l pa');
     }
 
     const validCheckedMods = new Map();
@@ -382,7 +382,7 @@ function generateExtraRegex() {
 
     let monsterRegex = [];
     if (rareValue) {
-        monsterRegex.push(getFixedRangeRegex(rareValue, currentLanguage === 'ja' ? 'アモ.*数が' : 'e r.*'));
+        monsterRegex.push(getFixedRangeRegex(rareValue, currentLanguage === 'ja' ? 'アモ.*数が' : 'e mo .*'));
     }
     if (magicValue) {
         monsterRegex.push(getFixedRangeRegex(magicValue, currentLanguage === 'ja' ? 'ックモ.*数が' : 'c m.*'));

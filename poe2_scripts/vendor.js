@@ -13,39 +13,38 @@ const WEAPON_GROUPS = [
   {
     name: '片手武器',
     items: [
-      { key: 'claw', label: '鉤爪' },
-      { key: 'dagger', label: '短剣' },
-      { key: 'wand', label: 'ワンド' },
-      { key: 'oneHandSword', label: '片手剣' },
-      { key: 'oneHandAxe', label: '片手斧' },
-      { key: 'oneHandMace', label: '片手メイス' },
-      { key: 'sceptre', label: 'セプター' },
-      { key: 'spear', label: 'スピア' },
-      { key: 'flail', label: 'フレイル' },
+      // { key: 'claw', label: '鉤爪', regex: ': 鉤爪' },
+      // { key: 'dagger', label: '短剣', regex: ': 短剣' },
+      { key: 'wand', label: 'ワンド', regex: ': ワンド' },
+      // { key: 'oneHandSword', label: '片手剣', regex: ': 片手剣' },
+      // { key: 'oneHandAxe', label: '片手斧', regex: ': 片手斧' },
+      { key: 'oneHandMace', label: '片手メイス', regex: ': 片手メ' },
+      { key: 'sceptre', label: 'セプター', regex: ': セプター' },
+      { key: 'spear', label: 'スピア', regex: ': スピア' },
+      // { key: 'flail', label: 'フレイル', regex: ': フレイル' },
     ]
   },
   {
     name: '両手武器',
     items: [
-      { key: 'bow', label: '弓' },
-      { key: 'staff', label: 'スタッフ' },
-      { key: 'twoHandSword', label: '両手剣' },
-      { key: 'twoHandAxe', label: '両手斧' },
-      { key: 'twoHandMace', label: '両手メイス' },
-      { key: 'quarterstaff', label: 'クォータースタッフ' },
-      { key: 'fishingRod', label: '釣り竿' },
-      { key: 'crossbow', label: 'クロスボウ' },
-      { key: 'trap', label: 'トラップ' },
-      { key: 'talisman', label: 'タリスマン' },
+      { key: 'bow', label: '弓', regex: ': 弓' },
+      { key: 'staff', label: 'スタッフ', regex: ': スタッ'   },
+      // { key: 'twoHandSword', label: '両手剣', regex: ': 両手剣' },
+      // { key: 'twoHandAxe', label: '両手斧', regex: ': 両手斧' },
+      { key: 'twoHandMace', label: '両手メイス', regex: ': 両手メ' },
+      { key: 'quarterstaff', label: 'クォータースタッフ', regex: ': クォー' },
+      // { key: 'fishingRod', label: '釣り竿', regex: ': 釣り竿' },
+      { key: 'crossbow', label: 'クロスボウ', regex: ': クロス' },
+      { key: 'talisman', label: 'タリスマン', regex: ': タリス' },
     ]
   },
   {
     name: 'オフハンド',
     items: [
-      { key: 'quiver', label: '矢筒' },
-      { key: 'shield', label: '盾' },
-      { key: 'buckler', label: 'バックラー' },
-      { key: 'focus', label: 'フォーカス' },
+      { key: 'quiver', label: '矢筒', regex: ': 矢筒' },
+      // { key: 'shield', label: '盾', regex: ': 盾' },
+      { key: 'buckler', label: 'バックラー', regex: ': バック' },
+      { key: 'focus', label: 'フォーカス', regex: ': フォー' },
     ]
   },
 ];
@@ -53,7 +52,7 @@ const WEAPON_GROUPS = [
 const WEAPON_OPTIONS = WEAPON_GROUPS.flatMap(group => group.items);
 
 const weaponMapping = Object.fromEntries(
-  WEAPON_OPTIONS.map(({ key, label }) => [key, toWeaponRegexPart(label)])
+  WEAPON_OPTIONS.map(({ key, label, regex }) => [key, regex])
 );
 
 function createDefaultWeaponSettings() {
@@ -73,15 +72,21 @@ let vendorSettings = {
 
 let vendorProfiles = {};
 
+const MOVEMENT_SPEED_PCTS = [10, 15, 20, 25, 30];
+
+function buildMovementSpeedRegex(pct) {
+  return `移動ス.*${pct}%増`;
+}
+
 function createMovementSpeedItems() {
   const items = [
     { id: 'move_all', label: 'ALL', regex: '移動スピ' },
   ];
-  for (let pct = 10; pct <= 30; pct += 5) {
+  for (const pct of MOVEMENT_SPEED_PCTS) {
     items.push({
       id: `move_${pct}`,
       label: `${pct}%`,
-      regex: `移動スピードが${pct}%増加する`,
+      regex: buildMovementSpeedRegex(pct),
     });
   }
   return items;
@@ -112,6 +117,7 @@ const VENDOR_GROUPS = [
       { id: 'common_str', label: '筋力', regex: '筋力 +' },
       { id: 'common_dex', label: '器用さ', regex: '器用さ +' },
       { id: 'common_int', label: '知性', regex: '知性 +' },
+      { id: 'common_all_attributes', label: '全ての能力値 ', regex: '能力値 +' },
       { id: 'common_max_life', label: '最大ライフ', regex: '大ライ' },
       { id: 'common_resist', label: '耐性', regex: '耐性' },
       { id: 'common_spirit', label: 'スピリット', regex: 'リット +' },
@@ -121,6 +127,9 @@ const VENDOR_GROUPS = [
     name: 'ダメージMOD',
     items: [
       { id: 'build_phys_pct', label: '物理ダメージが#%増加する', regex: '理ダ.*増' },
+      { id: 'build_fire_pct', label: '火ダメージが#%増加する', regex: '火ダ.*増' },
+      { id: 'build_cold_pct', label: '冷気ダメージが#%増加する', regex: '気ダ.*増' },
+      { id: 'build_lightning_pct', label: '雷ダメージが#%増加する', regex: '雷ダ.*増' },
       { id: 'build_phys_add', label: '物理ダメージを追加する', regex: '理.*ジを追' },
       { id: 'build_fire_add', label: '火ダメージを追加する', regex: '火.*ジを追' },
       { id: 'build_cold_add', label: '冷気ダメージを追加する', regex: '気.*ジを追' },
@@ -136,7 +145,7 @@ const VENDOR_GROUPS = [
     items: [
       { id: 'build_melee_level', label: '全ての近接スキルのレベル+', regex: 'の近接ス' },
       { id: 'build_projectile_level', label: '全ての投射物スキルのレベル+', regex: 'の投射物ス' },
-      { id: 'build_spell_level', label: '全てのスペルスキル+', regex: '全てのス' },
+      { id: 'build_spell_level', label: '全てのスペルスキル+', regex: '全てのスペ' },
       { id: 'build_fire_spell', label: '火スペルスキル+', regex: 'の火スペ' },
       { id: 'build_cold_spell', label: '冷気スペルスキル+', regex: 'の冷気スペ' },
       { id: 'build_lightning_spell', label: '雷スペルスキル+', regex: 'の雷スペ' },
@@ -160,6 +169,130 @@ VENDOR_GROUPS.forEach(group => {
   });
 });
 
+// 複数選択時に (火|理).*… の形式へまとめる設定
+const VENDOR_REGEX_MERGE_CONFIG = [
+  {
+    suffix: ' +',
+    items: {
+      common_str: '筋力',
+      common_dex: '器用さ',
+      common_int: '知性',
+      common_all_attributes: '能力値',
+      common_spirit: 'リット',
+    },
+    alwaysIncludePrefixes: ['能力値'],
+    alwaysIncludeWhenAny: ['common_str', 'common_dex', 'common_int'],
+  },
+  {
+    suffix: 'ダ.*増',
+    items: {
+      build_phys_pct: '理',
+      build_fire_pct: '火',
+      build_cold_pct: '気',
+      build_lightning_pct: '雷',
+    },
+  },
+  {
+    suffix: '.*ジを追',
+    items: {
+      build_phys_add: '理',
+      build_fire_add: '火',
+      build_cold_add: '気',
+      build_lightning_add: '雷',
+    },
+  },
+  {
+    suffix: 'ダ.*をア',
+    items: {
+      build_phys_attack_add: '理',
+      build_fire_attack_add: '火',
+      build_cold_attack_add: '気',
+      build_lightning_attack_add: '雷',
+    },
+  },
+  {
+    prefixLiteral: 'の',
+    suffix: 'スペ',
+    items: {
+      build_fire_spell: '火',
+      build_cold_spell: '冷気',
+      build_lightning_spell: '雷',
+      build_chaos_spell: '混沌',
+      build_physical_spell: '物理',
+    },
+  },
+  {
+    prefixLiteral: 'の',
+    suffix: 'ス',
+    items: {
+      build_melee_level: '近接',
+      build_projectile_level: '投射物',
+    },
+  },
+  {
+    prefixLiteral: '移動ス.*',
+    suffix: '増',
+    items: Object.fromEntries(
+      MOVEMENT_SPEED_PCTS.map(pct => [`move_${pct}`, `${pct}%`])
+    ),
+  },
+];
+
+function sortAlternationPrefixes(prefixes) {
+  return [...prefixes].sort((a, b) => b.length - a.length);
+}
+
+function buildMergedRegexPart(prefixes, mergeConfig) {
+  const ordered = sortAlternationPrefixes(prefixes);
+  const alternation = ordered.join('|');
+  if (mergeConfig.prefixLiteral) {
+    return `${mergeConfig.prefixLiteral}(${alternation})${mergeConfig.suffix}`;
+  }
+  return `(${alternation})${mergeConfig.suffix}`;
+}
+
+function applyAlwaysIncludePrefixes(activePrefixes, mergeConfig, selectedIds) {
+  const extras = mergeConfig.alwaysIncludePrefixes;
+  const triggers = mergeConfig.alwaysIncludeWhenAny;
+  if (!extras?.length || !triggers?.some(id => selectedIds.has(id))) {
+    return activePrefixes;
+  }
+  const merged = [...activePrefixes];
+  extras.forEach(prefix => {
+    if (!merged.includes(prefix)) merged.push(prefix);
+  });
+  return merged;
+}
+
+function buildOptimizedVendorRegexParts(settings = vendorSettings) {
+  const selectedItems = getSelectedItems(settings);
+  const selectedIds = new Set(selectedItems.map(item => item.id));
+  const usedIds = new Set();
+  const parts = [];
+
+  VENDOR_REGEX_MERGE_CONFIG.forEach(mergeConfig => {
+    let activePrefixes = Object.entries(mergeConfig.items)
+      .filter(([id]) => selectedIds.has(id))
+      .map(([, prefix]) => prefix);
+
+    if (activePrefixes.length >= 2) {
+      activePrefixes = applyAlwaysIncludePrefixes(activePrefixes, mergeConfig, selectedIds);
+      parts.push(buildMergedRegexPart(activePrefixes, mergeConfig));
+      Object.keys(mergeConfig.items).forEach(id => {
+        if (selectedIds.has(id)) usedIds.add(id);
+      });
+    }
+  });
+
+  selectedItems.forEach(item => {
+    if (!usedIds.has(item.id)) {
+      parts.push(getItemRegexPart(item));
+    }
+  });
+
+  return parts;
+}
+
 function getItemRegexPart(item) {
   return item.regex ?? labelToRegexPart(item.label);
 }
@@ -174,7 +307,7 @@ function getSelectedItems(settings = vendorSettings) {
 
 function generateVendorRegex() {
   const settings = vendorSettings;
-  const parts = getSelectedItems(settings).map(item => getItemRegexPart(item));
+  const parts = buildOptimizedVendorRegexParts(settings);
 
   const weapons = [];
   Object.entries(settings.weapon || {}).forEach(([key, value]) => {
