@@ -145,7 +145,7 @@ const VENDOR_GROUPS = [
     items: [
       { id: 'build_melee_level', label: '全ての近接スキルのレベル+', regex: 'の近接ス' },
       { id: 'build_projectile_level', label: '全ての投射物スキルのレベル+', regex: 'の投射物ス' },
-      { id: 'build_spell_level', label: '全てのスペルスキル+', regex: '全てのスペ' },
+      { id: 'build_spell_level', label: '全てのスペルスキル+', regex: 'のスペルス' },
       { id: 'build_fire_spell', label: '火スペルスキル+', regex: 'の火スペ' },
       { id: 'build_cold_spell', label: '冷気スペルスキル+', regex: 'の冷気スペ' },
       { id: 'build_lightning_spell', label: '雷スペルスキル+', regex: 'の雷スペ' },
@@ -214,6 +214,7 @@ const VENDOR_REGEX_MERGE_CONFIG = [
     prefixLiteral: 'の',
     suffix: 'スペ',
     items: {
+      build_spell_level: 'スペルス',
       build_fire_spell: '火',
       build_cold_spell: '冷気',
       build_lightning_spell: '雷',
