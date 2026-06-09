@@ -22,7 +22,7 @@ const runegraftlist = {
     "description": "能力値が10%減少する グローバル防御力が40%増加する",
     "enDescription": "",
     "attribute": "ALL",
-    "chaosValue": "918.5",
+    "chaosValue": "755.8",
     "regex": "要塞",
     "enRegex": "Def"
   },
@@ -49,7 +49,7 @@ const runegraftlist = {
     "description": "装備中の靴から得られるボーナスが20%減少する 装備中の手袋から得られるボーナスが20%増加する",
     "enDescription": "",
     "attribute": "DEX",
-    "chaosValue": "5.17",
+    "chaosValue": "3.73",
     "regex": "束縛",
     "enRegex": "e B"
   },
@@ -58,7 +58,7 @@ const runegraftlist = {
     "description": "プレイヤーのバフは30%遅く消える プレイヤーに対するデバフは30%速く消える",
     "enDescription": "",
     "attribute": "INT",
-    "chaosValue": "1810",
+    "chaosValue": "1211",
     "regex": "歪み",
     "enRegex": "Deb"
   },
@@ -85,7 +85,7 @@ const runegraftlist = {
     "description": "全ての希少以外のサポートジェムのレベル +1",
     "enDescription": "",
     "attribute": "ALL",
-    "chaosValue": "766",
+    "chaosValue": "422.2",
     "regex": "ジェ",
     "enRegex": "Gem"
   },
@@ -130,7 +130,7 @@ const runegraftlist = {
     "description": "スキル使用時に20%の確率でクールダウン使用回数を消費しない",
     "enDescription": "",
     "attribute": "INT",
-    "chaosValue": "16",
+    "chaosValue": "15.75",
     "regex": "時のル",
     "enRegex": "a C"
   },
@@ -139,7 +139,7 @@ const runegraftlist = {
     "description": "スキルのリザーブ効率が15%増加する 味方に影響するプレイヤーのスキルによるオーラは敵にも影響する",
     "enDescription": "",
     "attribute": "INT",
-    "chaosValue": "18.89",
+    "chaosValue": "9.26",
     "regex": "裏切",
     "enRegex": "f Tr"
   },
@@ -148,7 +148,7 @@ const runegraftlist = {
     "description": "フラスコによるマナ回復量が25%減少する 即時ではないフラスコによるマナ回復はライフも回復する",
     "enDescription": "",
     "attribute": "DEX",
-    "chaosValue": "1.92",
+    "chaosValue": "1",
     "regex": "暴飲",
     "enRegex": "25%"
   },
@@ -175,7 +175,7 @@ const runegraftlist = {
     "description": "スペルはプレイヤーの最大ライフの2%と同量の追加混沌ダメージを与える スペルはライフの+8%をコストとする",
     "enDescription": "",
     "attribute": "INT",
-    "chaosValue": "6",
+    "chaosValue": "6.5",
     "regex": "ウィ",
     "enRegex": "he Wi"
   },
@@ -193,7 +193,7 @@ const runegraftlist = {
     "description": "放たれる投射物が最大で1個になる 投射物は分岐する 投射物は追加で1回連鎖する",
     "enDescription": "",
     "attribute": "DEX",
-    "chaosValue": "5.71",
+    "chaosValue": "6.94",
     "regex": "屈折",
     "enRegex": "Ref"
   },
@@ -211,7 +211,7 @@ const runegraftlist = {
     "description": "幸運または不幸の効果が代わりに退屈なものになる",
     "enDescription": "",
     "attribute": "STR",
-    "chaosValue": "57",
+    "chaosValue": "64",
     "regex": "安定",
     "enRegex": "Luc"
   },
@@ -229,7 +229,7 @@ const runegraftlist = {
     "description": "釣り竿を装備中に全てのヒットはクリティカルストライクになる",
     "enDescription": "",
     "attribute": "ALL",
-    "chaosValue": "21723",
+    "chaosValue": "21802",
     "regex": "釣り",
     "enRegex": "Rod"
   },
@@ -256,7 +256,7 @@ const runegraftlist = {
     "description": "バナーを設置することで消費した勇猛5ごとに1の堅牢化を獲得する",
     "enDescription": "",
     "attribute": "STR",
-    "chaosValue": "1",
+    "chaosValue": "9",
     "regex": "鼓舞",
     "enRegex": "f Ra"
   },
@@ -265,7 +265,7 @@ const runegraftlist = {
     "description": "プレイヤーにより毒を付与された敵はそれが与える物理ダメージの10%が混沌ダメージに変換される",
     "enDescription": "",
     "attribute": "DEX",
-    "chaosValue": "84",
+    "chaosValue": "52",
     "regex": "ロッ",
     "enRegex": " Ro"
   },
@@ -274,7 +274,7 @@ const runegraftlist = {
     "description": "プレイヤーがフラスコの影響を受けていない時プレイヤーに適用されるチンキの効果が30%増加する",
     "enDescription": "",
     "attribute": "DEX",
-    "chaosValue": "6",
+    "chaosValue": "8.33",
     "regex": "与の",
     "enRegex": "e Im"
   },
@@ -283,7 +283,7 @@ const runegraftlist = {
     "description": "プレイヤーに対する身躱しの効果は最初の2秒間代わりに増える",
     "enDescription": "",
     "attribute": "DEX",
-    "chaosValue": "4.92",
+    "chaosValue": "2.72",
     "regex": "俊敏",
     "enRegex": "e Agi"
   },
@@ -310,7 +310,7 @@ const runegraftlist = {
     "description": "アーケインサージはプレイヤーに対してライフ自動回復レート15%増加も付与する",
     "enDescription": "",
     "attribute": "INT",
-    "chaosValue": "4.2",
+    "chaosValue": "5",
     "regex": "回復の",
     "enRegex": "esu"
   },
