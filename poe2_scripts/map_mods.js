@@ -1,14 +1,14 @@
-// tools_poe2/extract_map_mods.py によって自動生成されました
+// tools_poe2/optimize_mod_regex.py によって map Regex を最短化しました
 const mapModList = {
   "レアモンスターは追加のモッドを#個持つ": {
     "mod": "レアモンスターは追加のモッドを#個持つ",
     "engMod": "Rare Monsters have # additional Modifier",
     "value": "1|10|25",
     "type": "Suffix",
-    "weight": 1,
+    "weight": 0,
     "tier": 0,
-    "engRegex": "mod",
-    "Regex": "は追",
+    "engRegex": "Rar",
+    "Regex": "レア",
     "tradeStatIds": [
       "explicit.stat_2550456553"
     ],
@@ -23,11 +23,11 @@ const mapModList = {
     "mod": "エリアにはアンデッドが追加で(##)パック出現する",
     "engMod": "Area contains (##) additional packs of Undead",
     "value": "12-13|10|10",
-    "type": "Prefix",
+    "type": "Unique",
     "weight": 1,
     "tier": 0,
-    "engRegex": "ndea",
-    "Regex": "ドが追",
+    "engRegex": "Und",
+    "Regex": "アン",
     "tradeStatIds": [
       "explicit.stat_240445958"
     ],
@@ -42,11 +42,11 @@ const mapModList = {
     "mod": "エリアには獣が追加で(##)パック出現する",
     "engMod": "Area contains (##) additional packs of Beasts",
     "value": "12-13|10|5",
-    "type": "Prefix",
+    "type": "Unique",
     "weight": 1,
     "tier": 0,
-    "engRegex": "sts",
-    "Regex": "獣が追",
+    "engRegex": "Bea",
+    "Regex": "は獣",
     "tradeStatIds": [
       "explicit.stat_3757259819"
     ],
@@ -61,10 +61,10 @@ const mapModList = {
     "mod": "エリアにはエゾマイトモンスターが追加で(##)パック出現する",
     "engMod": "Area contains (##) additional packs of Ezomyte Monsters",
     "value": "12-13|10|5",
-    "type": "Prefix",
+    "type": "Unique",
     "weight": 1,
     "tier": 0,
-    "engRegex": "yt",
+    "engRegex": "Ezo",
     "Regex": "エゾ",
     "tradeStatIds": [
       "explicit.stat_1436812886"
@@ -80,11 +80,11 @@ const mapModList = {
     "mod": "エリアにはファリドゥンモンスターが追加で(##)パック出現する",
     "engMod": "Area contains (##) additional packs of Faridun Monsters",
     "value": "12-13|10|10",
-    "type": "Prefix",
+    "type": "Unique",
     "weight": 1,
     "tier": 0,
-    "engRegex": "un m",
-    "Regex": "リド",
+    "engRegex": "Far",
+    "Regex": "はフ",
     "tradeStatIds": [
       "explicit.stat_4130878258"
     ],
@@ -99,10 +99,10 @@ const mapModList = {
     "mod": "エリアにはヴァールモンスターが追加で(##)パック出現する",
     "engMod": "Area contains (##) additional packs of Vaal Monsters",
     "value": "12-13|10|18",
-    "type": "Prefix",
+    "type": "Unique",
     "weight": 1,
     "tier": 0,
-    "engRegex": "aa",
+    "engRegex": "Vaa",
     "Regex": "はヴ",
     "tradeStatIds": [
       "explicit.stat_4181857719"
@@ -118,11 +118,11 @@ const mapModList = {
     "mod": "エリアには鉄の護衛が追加で(##)パック出現する",
     "engMod": "Area contains (##) additional packs of Iron Guards",
     "value": "12-13|10|13",
-    "type": "Prefix",
+    "type": "Unique",
     "weight": 1,
     "tier": 0,
-    "engRegex": "ds",
-    "Regex": "の護",
+    "engRegex": "Iro",
+    "Regex": "は鉄",
     "tradeStatIds": [
       "explicit.stat_2949706590"
     ],
@@ -137,11 +137,11 @@ const mapModList = {
     "mod": "エリアには感染したモンスターが追加で(##)パック出現する",
     "engMod": "Area contains (##) additional packs of Plagued Monsters",
     "value": "12-13|10|10",
-    "type": "Prefix",
+    "type": "Unique",
     "weight": 1,
     "tier": 0,
-    "engRegex": "agu",
-    "Regex": "染",
+    "engRegex": "Plag",
+    "Regex": "感染",
     "tradeStatIds": [
       "explicit.stat_3592067990"
     ],
@@ -156,11 +156,11 @@ const mapModList = {
     "mod": "エリアには昇華したモンスターが追加で(##)パック出現する",
     "engMod": "Area contains (##) additional packs of Transcended Monsters",
     "value": "12-13|10|13",
-    "type": "Prefix",
+    "type": "Unique",
     "weight": 1,
     "tier": 0,
-    "engRegex": "ans",
-    "Regex": "華し",
+    "engRegex": "Tra",
+    "Regex": "は昇",
     "tradeStatIds": [
       "explicit.stat_1689473577"
     ],
@@ -175,10 +175,10 @@ const mapModList = {
     "mod": "エリアには茨のモンスターが追加で(##)パック出現する",
     "engMod": "Area contains (##) additional packs of Bramble Monsters",
     "value": "12-13|10|5",
-    "type": "Prefix",
+    "type": "Unique",
     "weight": 1,
     "tier": 0,
-    "engRegex": "f br",
+    "engRegex": "Bra",
     "Regex": "は茨",
     "tradeStatIds": [
       "explicit.stat_3309089125"
@@ -197,7 +197,7 @@ const mapModList = {
     "type": "Prefix",
     "weight": 1,
     "tier": 200,
-    "engRegex": "fire$",
+    "engRegex": "Fir",
     "Regex": "加火",
     "tradeStatIds": [
       "explicit.stat_92381065"
@@ -216,7 +216,7 @@ const mapModList = {
     "type": "Prefix",
     "weight": 1,
     "tier": 200,
-    "engRegex": "col",
+    "engRegex": "Col",
     "Regex": "加冷",
     "tradeStatIds": [
       "explicit.stat_211727"
@@ -235,7 +235,7 @@ const mapModList = {
     "type": "Prefix",
     "weight": 1,
     "tier": 200,
-    "engRegex": "tn",
+    "engRegex": "Lig",
     "Regex": "加雷",
     "tradeStatIds": [
       "explicit.stat_512071314"
@@ -250,78 +250,78 @@ const mapModList = {
   "モンスターのダメージが(##)%増加する": {
     "mod": "モンスターのダメージが(##)%増加する",
     "engMod": "(##)% increased Monster Damage",
-    "value": "26-30|20|28",
-    "type": "Prefix",
-    "weight": 1,
+    "value": "50",
+    "type": "Unique",
+    "weight": 0,
     "tier": 200,
-    "engRegex": "mage$",
-    "Regex": "のダ.*増",
+    "engRegex": "sed Mo",
+    "Regex": "のダメージが",
     "tradeStatIds": [
       "explicit.stat_1890519597"
     ],
     "map_item_drop_quantity_+%": 0,
     "map_item_drop_rarity_+%": 0,
     "map_pack_size_+%": 0,
-    "map_map_item_drop_chance_+%": 20,
-    "map_number_of_rare_packs_+%": 28,
+    "map_map_item_drop_chance_+%": 0,
+    "map_number_of_rare_packs_+%": 0,
     "map_number_of_magic_packs_+%": 0
   },
   "モンスターのアタックスピード、キャストスピードおよび移動スピードが(##)%増加する": {
     "mod": "モンスターのアタックスピード、キャストスピードおよび移動スピードが(##)%増加する",
     "engMod": "Monsters have (##)% increased Attack, Cast and Movement Speed",
-    "value": "10-15|0|0|25|12",
-    "type": "Suffix",
-    "weight": 1,
+    "value": "0|0|20|0|0",
+    "type": "Unique",
+    "weight": 0,
     "tier": 200,
-    "engRegex": "tta",
-    "Regex": "、キ",
+    "engRegex": "Att",
+    "Regex": "アタ",
     "tradeStatIds": [
       "explicit.stat_3909654181"
     ],
     "map_item_drop_quantity_+%": 0,
     "map_item_drop_rarity_+%": 0,
-    "map_pack_size_+%": 12,
-    "map_map_item_drop_chance_+%": 25,
+    "map_pack_size_+%": 0,
+    "map_map_item_drop_chance_+%": 0,
     "map_number_of_rare_packs_+%": 0,
     "map_number_of_magic_packs_+%": 0
   },
   "モンスターのクリティカルヒット率が(##)%増加する|モンスターのクリティカルダメージボーナス +(##)%": {
     "mod": "モンスターのクリティカルヒット率が(##)%増加する|モンスターのクリティカルダメージボーナス +(##)%",
     "engMod": "Monsters have (##)% increased Critical Hit Chance|+(##)% to Monster Critical Damage Bonus",
-    "value": "260-300|26-30|15|10",
-    "type": "Suffix",
-    "weight": 1,
+    "value": "400|45",
+    "type": "Unique",
+    "weight": 0,
     "tier": 0,
-    "engRegex": "bon",
-    "Regex": "のク",
+    "engRegex": "Bon",
+    "Regex": "ト率",
     "tradeStatIds": [
       "explicit.stat_2753083623",
       "explicit.stat_57326096"
     ],
     "map_item_drop_quantity_+%": 0,
     "map_item_drop_rarity_+%": 0,
-    "map_pack_size_+%": 10,
-    "map_map_item_drop_chance_+%": 15,
+    "map_pack_size_+%": 0,
+    "map_map_item_drop_chance_+%": 0,
     "map_number_of_rare_packs_+%": 0,
     "map_number_of_magic_packs_+%": 0
   },
   "モンスターのライフが(##)%上昇する": {
     "mod": "モンスターのライフが(##)%上昇する",
     "engMod": "(##)% more Monster Life",
-    "value": "40-49|15|26",
-    "type": "Prefix",
-    "weight": 1,
+    "value": "0|0|0|250",
+    "type": "Unique",
+    "weight": 0,
     "tier": 200,
-    "engRegex": "fe$",
-    "Regex": "が.*上",
+    "engRegex": "er Li",
+    "Regex": "フが",
     "tradeStatIds": [
       "explicit.stat_95249895"
     ],
     "map_item_drop_quantity_+%": 0,
     "map_item_drop_rarity_+%": 0,
     "map_pack_size_+%": 0,
-    "map_map_item_drop_chance_+%": 15,
-    "map_number_of_rare_packs_+%": 26,
+    "map_map_item_drop_chance_+%": 0,
+    "map_number_of_rare_packs_+%": 0,
     "map_number_of_magic_packs_+%": 0
   },
   "モンスターの元素耐性 +(##)%": {
@@ -331,8 +331,8 @@ const mapModList = {
     "type": "Suffix",
     "weight": 1,
     "tier": 200,
-    "engRegex": "r el",
-    "Regex": "性 +",
+    "engRegex": "er El",
+    "Regex": "ーの元",
     "tradeStatIds": [
       "explicit.stat_1054098949"
     ],
@@ -350,7 +350,7 @@ const mapModList = {
     "type": "Prefix",
     "weight": 1,
     "tier": 200,
-    "engRegex": "oure",
+    "engRegex": "re Ar",
     "Regex": "ーはア",
     "tradeStatIds": [
       "explicit.stat_2539290279"
@@ -369,8 +369,8 @@ const mapModList = {
     "type": "Prefix",
     "weight": 1,
     "tier": 200,
-    "engRegex": "e eva",
-    "Regex": "ーは回",
+    "engRegex": "Eva",
+    "Regex": "は回",
     "tradeStatIds": [
       "explicit.stat_2570249991"
     ],
@@ -384,19 +384,19 @@ const mapModList = {
   "モンスターは最大ライフの#%を追加最大エナジーシールドとして獲得する": {
     "mod": "モンスターは最大ライフの#%を追加最大エナジーシールドとして獲得する",
     "engMod": "Monsters gain #% of maximum Life as Extra maximum Energy Shield",
-    "value": "20|15|17",
-    "type": "Prefix",
+    "value": "13|8|5|40-49",
+    "type": "Unique",
     "weight": 1,
     "tier": 200,
-    "engRegex": "f m",
-    "Regex": "大エ",
+    "engRegex": "of ma",
+    "Regex": "は最",
     "tradeStatIds": [
       "explicit.stat_2887760183"
     ],
-    "map_item_drop_quantity_+%": 0,
-    "map_item_drop_rarity_+%": 17,
-    "map_pack_size_+%": 0,
-    "map_map_item_drop_chance_+%": 15,
+    "map_item_drop_quantity_+%": 13,
+    "map_item_drop_rarity_+%": 8,
+    "map_pack_size_+%": 5,
+    "map_map_item_drop_chance_+%": 0,
     "map_number_of_rare_packs_+%": 0,
     "map_number_of_magic_packs_+%": 0
   },
@@ -407,7 +407,7 @@ const mapModList = {
     "type": "Suffix",
     "weight": 1,
     "tier": 200,
-    "engRegex": "ois",
+    "engRegex": "Poi",
     "Regex": "で毒",
     "tradeStatIds": [
       "explicit.stat_95221307"
@@ -426,7 +426,7 @@ const mapModList = {
     "type": "Suffix",
     "weight": 1,
     "tier": 200,
-    "engRegex": "blee",
+    "engRegex": "Ble",
     "Regex": "で出",
     "tradeStatIds": [
       "explicit.stat_2506820610"
@@ -445,8 +445,8 @@ const mapModList = {
     "type": "Suffix",
     "weight": 1,
     "tier": 1,
-    "engRegex": "lm",
-    "Regex": "は状",
+    "engRegex": "Thr",
+    "Regex": "閾値",
     "tradeStatIds": [
       "explicit.stat_4101943684",
       "explicit.stat_1994551050"
@@ -465,8 +465,8 @@ const mapModList = {
     "type": "Suffix",
     "weight": 1,
     "tier": 1,
-    "engRegex": "eq",
-    "Regex": "を破",
+    "engRegex": "Bre",
+    "Regex": "は与",
     "tradeStatIds": [
       "explicit.stat_1879340377"
     ],
@@ -480,19 +480,19 @@ const mapModList = {
   "モンスターの命中力が(##)%増加する": {
     "mod": "モンスターの命中力が(##)%増加する",
     "engMod": "Monsters have (##)% increased Accuracy Rating",
-    "value": "35-45|10|7",
-    "type": "Prefix",
-    "weight": 1,
+    "value": "0|0|0|-10|50",
+    "type": "Unique",
+    "weight": 0,
     "tier": 1,
-    "engRegex": "cc",
+    "engRegex": "Acc",
     "Regex": "の命",
     "tradeStatIds": [
       "explicit.stat_1588049749"
     ],
     "map_item_drop_quantity_+%": 0,
     "map_item_drop_rarity_+%": 0,
-    "map_pack_size_+%": 7,
-    "map_map_item_drop_chance_+%": 10,
+    "map_pack_size_+%": 0,
+    "map_map_item_drop_chance_+%": 0,
     "map_number_of_rare_packs_+%": 0,
     "map_number_of_magic_packs_+%": 0
   },
@@ -503,7 +503,7 @@ const mapModList = {
     "type": "Prefix",
     "weight": 1,
     "tier": 500,
-    "engRegex": "ra ch",
+    "engRegex": "Chao",
     "Regex": "加混",
     "tradeStatIds": [
       "explicit.stat_2200661314"
@@ -522,7 +522,7 @@ const mapModList = {
     "type": "Suffix",
     "weight": 1,
     "tier": 1,
-    "engRegex": "un b",
+    "engRegex": "un Bu",
     "Regex": "ン蓄",
     "tradeStatIds": [
       "explicit.stat_115425161"
@@ -541,8 +541,8 @@ const mapModList = {
     "type": "Suffix",
     "weight": 1,
     "tier": 1,
-    "engRegex": "mm",
-    "Regex": "の凍",
+    "engRegex": "lam",
+    "Regex": "が付",
     "tradeStatIds": [
       "explicit.stat_2508044078",
       "explicit.stat_3998863698",
@@ -558,19 +558,19 @@ const mapModList = {
   "モンスターは投射物を追加で#個放つ": {
     "mod": "モンスターは投射物を追加で#個放つ",
     "engMod": "Monsters fire # additional Projectiles",
-    "value": "2|25|14",
-    "type": "Suffix",
-    "weight": 1,
+    "value": "3",
+    "type": "Unique",
+    "weight": 0,
     "tier": 200,
-    "engRegex": "oj",
-    "Regex": "個放",
+    "engRegex": "Pro",
+    "Regex": "は投",
     "tradeStatIds": [
       "explicit.stat_1309819744"
     ],
     "map_item_drop_quantity_+%": 0,
     "map_item_drop_rarity_+%": 0,
-    "map_pack_size_+%": 14,
-    "map_map_item_drop_chance_+%": 25,
+    "map_pack_size_+%": 0,
+    "map_map_item_drop_chance_+%": 0,
     "map_number_of_rare_packs_+%": 0,
     "map_number_of_magic_packs_+%": 0
   },
@@ -581,7 +581,7 @@ const mapModList = {
     "type": "Prefix",
     "weight": 1,
     "tier": 200,
-    "engRegex": "eble",
+    "engRegex": "Enf",
     "Regex": "ンフ",
     "tradeStatIds": [
       "explicit.stat_2029171424"
@@ -600,8 +600,8 @@ const mapModList = {
     "type": "Prefix",
     "weight": 1,
     "tier": 200,
-    "engRegex": "emp",
-    "Regex": "ルチ",
+    "engRegex": "Tem",
+    "Regex": "はテ",
     "tradeStatIds": [
       "explicit.stat_1629357380"
     ],
@@ -619,8 +619,8 @@ const mapModList = {
     "type": "Prefix",
     "weight": 1,
     "tier": 200,
-    "engRegex": "kn",
-    "Regex": "ルウ",
+    "engRegex": "Wea",
+    "Regex": "エレ",
     "tradeStatIds": [
       "explicit.stat_554690751"
     ],
@@ -634,57 +634,57 @@ const mapModList = {
   "エリアには発火領域がまだらに存在する": {
     "mod": "エリアには発火領域がまだらに存在する",
     "engMod": "Area has patches of Ignited Ground",
-    "value": "6000|6|20|15|33|1033",
-    "type": "Prefix",
-    "weight": 1,
+    "value": "0|16000|20|14",
+    "type": "Unique",
+    "weight": 0,
     "tier": 200,
-    "engRegex": "ign",
-    "Regex": "火領",
+    "engRegex": "Ign",
+    "Regex": "は発",
     "tradeStatIds": [
       "explicit.stat_133340941"
     ],
     "map_item_drop_quantity_+%": 0,
     "map_item_drop_rarity_+%": 0,
     "map_pack_size_+%": 0,
-    "map_map_item_drop_chance_+%": 15,
+    "map_map_item_drop_chance_+%": 0,
     "map_number_of_rare_packs_+%": 0,
-    "map_number_of_magic_packs_+%": 33
+    "map_number_of_magic_packs_+%": 0
   },
   "エリアには冷却領域がまだらに存在する": {
     "mod": "エリアには冷却領域がまだらに存在する",
     "engMod": "Area has patches of Chilled Ground",
-    "value": "30|5|26|15|20|1014",
-    "type": "Prefix",
+    "value": "10|6|4|30|28|18",
+    "type": "Unique",
     "weight": 1,
     "tier": 200,
-    "engRegex": "chi",
-    "Regex": "却領",
+    "engRegex": "Chi",
+    "Regex": "は冷",
     "tradeStatIds": [
       "explicit.stat_349586058"
     ],
-    "map_item_drop_quantity_+%": 0,
-    "map_item_drop_rarity_+%": 20,
-    "map_pack_size_+%": 0,
-    "map_map_item_drop_chance_+%": 15,
+    "map_item_drop_quantity_+%": 10,
+    "map_item_drop_rarity_+%": 6,
+    "map_pack_size_+%": 4,
+    "map_map_item_drop_chance_+%": 0,
     "map_number_of_rare_packs_+%": 0,
     "map_number_of_magic_packs_+%": 0
   },
   "エリアには感電領域がまだらに存在する": {
     "mod": "エリアには感電領域がまだらに存在する",
     "engMod": "Area has patches of Shocked Ground",
-    "value": "1|7|17|15|10|1011",
-    "type": "Prefix",
-    "weight": 1,
+    "value": "12|6|1|7|17",
+    "type": "Unique",
+    "weight": 0,
     "tier": 200,
-    "engRegex": "cke",
+    "engRegex": "of Sh",
     "Regex": "電領",
     "tradeStatIds": [
       "explicit.stat_3477720557"
     ],
-    "map_item_drop_quantity_+%": 0,
-    "map_item_drop_rarity_+%": 0,
-    "map_pack_size_+%": 10,
-    "map_map_item_drop_chance_+%": 15,
+    "map_item_drop_quantity_+%": 12,
+    "map_item_drop_rarity_+%": 6,
+    "map_pack_size_+%": 0,
+    "map_map_item_drop_chance_+%": 0,
     "map_number_of_rare_packs_+%": 0,
     "map_number_of_magic_packs_+%": 0
   },
@@ -695,8 +695,8 @@ const mapModList = {
     "type": "Suffix",
     "weight": 1,
     "tier": 500,
-    "engRegex": "tes",
-    "Regex": "を貫",
+    "engRegex": "Pen",
+    "Regex": "ジは",
     "tradeStatIds": [
       "explicit.stat_1898978455"
     ],
@@ -710,114 +710,114 @@ const mapModList = {
   "プレイヤーの耐性の最大値が-(##)%": {
     "mod": "プレイヤーの耐性の最大値が-(##)%",
     "engMod": "-(##)% maximum Player Resistances",
-    "value": "-12--10|25|13",
-    "type": "Suffix",
+    "value": "19|11|7|-12--9",
+    "type": "Unique",
     "weight": 1,
     "tier": 1000,
-    "engRegex": "% ma",
-    "Regex": "性の最",
+    "engRegex": "um Pl",
+    "Regex": "の耐",
     "tradeStatIds": [
       "explicit.stat_3376488707"
     ],
-    "map_item_drop_quantity_+%": 0,
-    "map_item_drop_rarity_+%": 0,
-    "map_pack_size_+%": 13,
-    "map_map_item_drop_chance_+%": 25,
+    "map_item_drop_quantity_+%": 19,
+    "map_item_drop_rarity_+%": 11,
+    "map_pack_size_+%": 7,
+    "map_map_item_drop_chance_+%": 0,
     "map_number_of_rare_packs_+%": 0,
     "map_number_of_magic_packs_+%": 0
   },
   "全てのプレイヤーの獲得フラスコチャージが(##)%減少する": {
     "mod": "全てのプレイヤーの獲得フラスコチャージが(##)%減少する",
     "engMod": "Players gain (##)% reduced Flask Charges",
-    "value": "30-35|-15|-9",
-    "type": "Suffix",
+    "value": "-13|-8|-5|50",
+    "type": "Unique",
     "weight": 1,
     "tier": 200,
-    "engRegex": "sk",
-    "Regex": "コチ",
+    "engRegex": "Flas",
+    "Regex": "の獲",
     "tradeStatIds": [
       "explicit.stat_2549889921"
     ],
-    "map_item_drop_quantity_+%": 0,
-    "map_item_drop_rarity_+%": 0,
-    "map_pack_size_+%": 9,
-    "map_map_item_drop_chance_+%": 15,
+    "map_item_drop_quantity_+%": 13,
+    "map_item_drop_rarity_+%": 8,
+    "map_pack_size_+%": 5,
+    "map_map_item_drop_chance_+%": 0,
     "map_number_of_rare_packs_+%": 0,
     "map_number_of_magic_packs_+%": 0
   },
   "全てのプレイヤーのライフとエナジーシールドの回復レートが(##)%低下する": {
     "mod": "全てのプレイヤーのライフとエナジーシールドの回復レートが(##)%低下する",
     "engMod": "Players have (##)% less Recovery Rate of Life and Energy Shield",
-    "value": "36-40|-20|-22",
-    "type": "Suffix",
-    "weight": 1,
+    "value": "0|25",
+    "type": "Unique",
+    "weight": 0,
     "tier": 1000,
-    "engRegex": "f l",
-    "Regex": "復レ",
+    "engRegex": "ss Re",
+    "Regex": "フと",
     "tradeStatIds": [
       "explicit.stat_4181072906"
     ],
     "map_item_drop_quantity_+%": 0,
-    "map_item_drop_rarity_+%": 22,
+    "map_item_drop_rarity_+%": 0,
     "map_pack_size_+%": 0,
-    "map_map_item_drop_chance_+%": 20,
+    "map_map_item_drop_chance_+%": 0,
     "map_number_of_rare_packs_+%": 0,
     "map_number_of_magic_packs_+%": 0
   },
   "全てのプレイヤーのクールダウン解消レートが(##)%低下する": {
     "mod": "全てのプレイヤーのクールダウン解消レートが(##)%低下する",
     "engMod": "Players have (##)% less Cooldown Recovery Rate",
-    "value": "25-30|-15|-19",
-    "type": "Suffix",
+    "value": "-13|-8|-5|40",
+    "type": "Unique",
     "weight": 1,
     "tier": 200,
-    "engRegex": "wn",
-    "Regex": "ン解",
+    "engRegex": "Coo",
+    "Regex": "クー",
     "tradeStatIds": [
-      ""
+      "explicit.stat_941368244"
     ],
-    "map_item_drop_quantity_+%": 0,
-    "map_item_drop_rarity_+%": 19,
-    "map_pack_size_+%": 0,
-    "map_map_item_drop_chance_+%": 15,
+    "map_item_drop_quantity_+%": 13,
+    "map_item_drop_rarity_+%": 8,
+    "map_pack_size_+%": 5,
+    "map_map_item_drop_chance_+%": 0,
     "map_number_of_rare_packs_+%": 0,
     "map_number_of_magic_packs_+%": 0
   },
   "モンスターがクリティカルヒットから受ける追加ダメージが(##)%減少する": {
     "mod": "モンスターがクリティカルヒットから受ける追加ダメージが(##)%減少する",
     "engMod": "Monsters take (##)% reduced Extra Damage from Critical Hits",
-    "value": "-30--26|-10|-24",
-    "type": "Suffix",
+    "value": "-10|-6|-4|-40--36",
+    "type": "Unique",
     "weight": 1,
     "tier": 0,
-    "engRegex": "tak",
-    "Regex": "トか",
+    "engRegex": "Hits",
+    "Regex": "がク",
     "tradeStatIds": [
       "explicit.stat_337935900"
     ],
-    "map_item_drop_quantity_+%": 0,
-    "map_item_drop_rarity_+%": 0,
-    "map_pack_size_+%": 0,
-    "map_map_item_drop_chance_+%": 10,
-    "map_number_of_rare_packs_+%": 24,
+    "map_item_drop_quantity_+%": 10,
+    "map_item_drop_rarity_+%": 6,
+    "map_pack_size_+%": 4,
+    "map_map_item_drop_chance_+%": 0,
+    "map_number_of_rare_packs_+%": 0,
     "map_number_of_magic_packs_+%": 0
   },
   "モンスターに対する呪いの効果が(##)%低下する": {
     "mod": "モンスターに対する呪いの効果が(##)%低下する",
     "engMod": "(##)% less effect of Curses on Monsters",
-    "value": "40-50|-10|-16",
-    "type": "Prefix",
-    "weight": 1,
+    "value": "60",
+    "type": "Unique",
+    "weight": 0,
     "tier": 200,
-    "engRegex": "rses",
-    "Regex": "る呪",
+    "engRegex": "ss ef",
+    "Regex": "ーに",
     "tradeStatIds": [
       "explicit.stat_3796523155"
     ],
     "map_item_drop_quantity_+%": 0,
-    "map_item_drop_rarity_+%": 16,
+    "map_item_drop_rarity_+%": 0,
     "map_pack_size_+%": 0,
-    "map_map_item_drop_chance_+%": 10,
+    "map_map_item_drop_chance_+%": 0,
     "map_number_of_rare_packs_+%": 0,
     "map_number_of_magic_packs_+%": 0
   },
@@ -828,8 +828,8 @@ const mapModList = {
     "type": "Prefix",
     "weight": 1,
     "tier": 200,
-    "engRegex": "r,",
-    "Regex": "盗",
+    "engRegex": "Pow",
+    "Regex": "でパ",
     "tradeStatIds": [
       "explicit.stat_3222482040"
     ],

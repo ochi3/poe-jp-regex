@@ -1,11 +1,11 @@
-// tools_poe2/extract_tablet_mods.py によって自動生成されました
+// veiset Generated.Tablet.json から engRegex を同期
 const tabletModList = {
   "マップに照射状態を追加する": {
     "mod": "マップに照射状態を追加する",
     "engMod": "Adds Irradiated to a Map",
     "value": "1",
     "type": "Unique",
-    "engRegex": "A.*I",
+    "engRegex": "ted to",
     "Regex": "プに照",
     "groups": [
       "TowerAddContent"
@@ -20,7 +20,7 @@ const tabletModList = {
     "engMod": "Adds an Otherworldy Breach to a Map",
     "value": "5",
     "type": "Unique",
-    "engRegex": "Ot",
+    "engRegex": "Oth",
     "Regex": "に異",
     "groups": [
       "TowerAddContent"
@@ -35,7 +35,7 @@ const tabletModList = {
     "engMod": "Adds a Kalguuran Expedition to a Map",
     "value": "5",
     "type": "Unique",
-    "engRegex": "Ka",
+    "engRegex": "Kal",
     "Regex": "にカ",
     "groups": [
       "TowerAddContent"
@@ -50,7 +50,7 @@ const tabletModList = {
     "engMod": "Adds a Mirror of Delirium to a Map",
     "value": "5",
     "type": "Unique",
-    "engRegex": "f D",
+    "engRegex": "or of",
     "Regex": "にデ",
     "groups": [
       "TowerAddContent"
@@ -65,7 +65,7 @@ const tabletModList = {
     "engMod": "Adds Ritual Altars to a Map",
     "value": "5",
     "type": "Unique",
-    "engRegex": "ds R",
+    "engRegex": "ds Ri",
     "Regex": "にリ",
     "groups": [
       "TowerAddContent"
@@ -80,7 +80,7 @@ const tabletModList = {
     "engMod": "Empowers the Map Boss of a Map",
     "value": "5",
     "type": "Unique",
-    "engRegex": "Em",
+    "engRegex": "Emp",
     "Regex": "を強",
     "groups": [
       "TowerAddContent"
@@ -95,8 +95,23 @@ const tabletModList = {
     "engMod": "Adds Abysses to a Map",
     "value": "1",
     "type": "Unique",
-    "engRegex": "s A",
+    "engRegex": "ds Ab",
     "Regex": "ビスを",
+    "groups": [
+      "TowerAddContent"
+    ],
+    "subGroups": [
+      "Tower"
+    ],
+    "domain": "tablet"
+  },
+  "マップにヴァールビーコンを追加する": {
+    "mod": "マップにヴァールビーコンを追加する",
+    "engMod": "Adds Vaal Beacons to a Map",
+    "value": "10",
+    "type": "Unique",
+    "engRegex": "ds Va",
+    "Regex": "にヴ",
     "groups": [
       "TowerAddContent"
     ],
@@ -110,8 +125,8 @@ const tabletModList = {
     "engMod": "(##)% increased Quantity of Items found in Map",
     "value": "4-10",
     "type": "Unique",
-    "engRegex": "Q.*ms f",
-    "Regex": "で.*ムの数",
+    "engRegex": "Qu.*ms fo",
+    "Regex": "かるアイテムの数",
     "groups": [
       "MapDroppedItemQuantityIncrease"
     ],
@@ -123,10 +138,10 @@ const tabletModList = {
   "モンスターのエフェクティブが(##)%増加する": {
     "mod": "モンスターのエフェクティブが(##)%増加する",
     "engMod": "Monsters have (##)% increased Effectiveness",
-    "value": "7-11",
+    "value": "10-15",
     "type": "Prefix",
-    "engRegex": "cti",
-    "Regex": "エフ",
+    "engRegex": "eness$",
+    "Regex": "ーのエ",
     "groups": [
       "MapMonsterEffectiveness"
     ],
@@ -138,10 +153,10 @@ const tabletModList = {
   "マップで見つかるアイテムのレアリティが(##)%増加する": {
     "mod": "マップで見つかるアイテムのレアリティが(##)%増加する",
     "engMod": "(##)% increased Rarity of Items found in Map",
-    "value": "18-30",
+    "value": "8-12",
     "type": "Prefix",
-    "engRegex": "R.*fou",
-    "Regex": "見.*レ",
+    "engRegex": "Ra.*fou",
+    "Regex": "かるアイテムのレ",
     "groups": [
       "MapDroppedItemRarityIncrease"
     ],
@@ -153,10 +168,10 @@ const tabletModList = {
   "マップのパックサイズが(##)%増加する": {
     "mod": "マップのパックサイズが(##)%増加する",
     "engMod": "(##)% increased Pack Size in Map",
-    "value": "6-10",
+    "value": "5-7",
     "type": "Prefix",
     "engRegex": "ze i",
-    "Regex": "のパ",
+    "Regex": "プのパ",
     "groups": [
       "MapPackSizeIncrease"
     ],
@@ -168,9 +183,9 @@ const tabletModList = {
   "マップのマジックモンスターが(##)%増加する": {
     "mod": "マップのマジックモンスターが(##)%増加する",
     "engMod": "Map has (##)% increased Magic Monsters",
-    "value": "50-70",
+    "value": "30-40",
     "type": "Prefix",
-    "engRegex": "ha.*c M",
+    "engRegex": "c m",
     "Regex": "のマジ",
     "groups": [
       "MapMagicPackIncrease"
@@ -183,12 +198,27 @@ const tabletModList = {
   "マップのレアモンスターの数が(##)%増加する": {
     "mod": "マップのレアモンスターの数が(##)%増加する",
     "engMod": "Map has (##)% increased number of Rare Monsters",
-    "value": "25-40",
+    "value": "25-35",
     "type": "Prefix",
-    "engRegex": "h.*nu",
-    "Regex": "アモ.*数",
+    "engRegex": "ha.*nu",
+    "Regex": "アモンスターの",
     "groups": [
       "MapRarePackIncrease"
+    ],
+    "subGroups": [
+      "Map"
+    ],
+    "domain": "tablet"
+  },
+  "マップのモンスターレアリティが(##)%増加する": {
+    "mod": "マップのモンスターレアリティが(##)%増加する",
+    "engMod": "Map has (##)% increased Monster Rarity",
+    "value": "15-20",
+    "type": "Prefix",
+    "engRegex": "rity$",
+    "Regex": "ーレ",
+    "groups": [
+      "MapMonsterRarityIncrease"
     ],
     "subGroups": [
       "Map"
@@ -198,9 +228,9 @@ const tabletModList = {
   "マップで見つかるゴールドが(##)%増加する": {
     "mod": "マップで見つかるゴールドが(##)%増加する",
     "engMod": "(##)% increased Gold found in Map",
-    "value": "25-40",
+    "value": "25-35",
     "type": "Prefix",
-    "engRegex": "G",
+    "engRegex": "go",
     "Regex": "るゴ",
     "groups": [
       "MapDroppedGoldIncrease"
@@ -213,9 +243,9 @@ const tabletModList = {
   "マップでの獲得経験値が(##)%増加する": {
     "mod": "マップでの獲得経験値が(##)%増加する",
     "engMod": "(##)% increased Experience gain in Map",
-    "value": "10-20",
+    "value": "12-18",
     "type": "Prefix",
-    "engRegex": "ga",
+    "engRegex": "e g",
     "Regex": "の獲",
     "groups": [
       "MapExperienceGainIncrease"
@@ -230,7 +260,7 @@ const tabletModList = {
     "engMod": "Map contains (##) additional Rare Chests",
     "value": "2-3",
     "type": "Prefix",
-    "engRegex": "Ch",
+    "engRegex": "sts$",
     "Regex": "にレ",
     "groups": [
       "MapAdditionalChests"
@@ -243,7 +273,7 @@ const tabletModList = {
   "マップで見つかるウェイストーンの数量が(##)%増加する": {
     "mod": "マップで見つかるウェイストーンの数量が(##)%増加する",
     "engMod": "(##)% increased Quantity of Waystones found in Map",
-    "value": "30-50",
+    "value": "30-40",
     "type": "Suffix",
     "engRegex": "es f",
     "Regex": "かるウ",
@@ -255,13 +285,13 @@ const tabletModList = {
     ],
     "domain": "tablet"
   },
-  "マップのレアモンスターは(##)%の確率でモッドを追加で#個持つ": {
-    "mod": "マップのレアモンスターは(##)%の確率でモッドを追加で#個持つ",
-    "engMod": "Rare Monsters in Map have a (##)% chance to have an additional Modifier",
+  "マップのレアモンスターは(##)%の超過可能確率でモッドを追加で#個持つ": {
+    "mod": "マップのレアモンスターは(##)%の超過可能確率でモッドを追加で#個持つ",
+    "engMod": "Rare Monsters in Map have a (##)% Surpassing chance to have an additional Modifier",
     "value": "50-80",
     "type": "Suffix",
-    "engRegex": "a %",
-    "Regex": "率でモ",
+    "engRegex": "Sur",
+    "Regex": "の超",
     "groups": [
       "MapRareMonstersAdditionalModifier"
     ],
@@ -275,7 +305,7 @@ const tabletModList = {
     "engMod": "Map has (##)% increased chance to contain Shrines",
     "value": "70-100",
     "type": "Suffix",
-    "engRegex": "n Sh",
+    "engRegex": "n sh",
     "Regex": "ンが出",
     "groups": [
       "MapAdditionalShrine"
@@ -290,8 +320,8 @@ const tabletModList = {
     "engMod": "Map contains an additional Shrine",
     "value": "1|0|0",
     "type": "Suffix",
-    "engRegex": "s a.*Sh",
-    "Regex": "マップにシュラインが",
+    "engRegex": "an.*al Sh",
+    "Regex": "インが追",
     "groups": [
       "MapAdditionalShrine"
     ],
@@ -305,7 +335,7 @@ const tabletModList = {
     "engMod": "Map has (##)% increased chance to contain Strongboxes",
     "value": "70-100",
     "type": "Suffix",
-    "engRegex": "n St",
+    "engRegex": "in st",
     "Regex": "クスが出",
     "groups": [
       "MapAdditionalStrongbox"
@@ -320,8 +350,8 @@ const tabletModList = {
     "engMod": "Map contains an additional Strongbox",
     "value": "1|0|0",
     "type": "Suffix",
-    "engRegex": "n a.*x",
-    "Regex": "マップにストロングボ",
+    "engRegex": "an.*al St",
+    "Regex": "クスが追",
     "groups": [
       "MapAdditionalStrongbox"
     ],
@@ -335,7 +365,7 @@ const tabletModList = {
     "engMod": "Map has (##)% increased chance to contain Essences",
     "value": "70-100",
     "type": "Suffix",
-    "engRegex": "in E",
+    "engRegex": "in e",
     "Regex": "ンスが出",
     "groups": [
       "MapAdditionalEssence"
@@ -350,8 +380,8 @@ const tabletModList = {
     "engMod": "Map contains an additional Essence",
     "value": "1|0|0",
     "type": "Prefix",
-    "engRegex": "n a.*E",
-    "Regex": "マップにエッセンスが",
+    "engRegex": "an.*al Es",
+    "Regex": "ンスが追",
     "groups": [
       "MapAdditionalEssence"
     ],
@@ -365,7 +395,7 @@ const tabletModList = {
     "engMod": "Map has (##)% increased chance to contain Azmeri Spirits",
     "value": "70-100",
     "type": "Suffix",
-    "engRegex": "n Az",
+    "engRegex": "n az",
     "Regex": "霊が出",
     "groups": [
       "MapAdditionalSpirit"
@@ -380,8 +410,8 @@ const tabletModList = {
     "engMod": "Map contains # additional Azmeri Spirit",
     "value": "1|0|0",
     "type": "Prefix",
-    "engRegex": "Map\\ contai",
-    "Regex": "マップにアズメリの精",
+    "engRegex": "it$",
+    "Regex": "体出",
     "groups": [
       "MapAdditionalAzmeriWisp"
     ],
@@ -393,9 +423,9 @@ const tabletModList = {
   "マップにローグエグザイルが出現する確率が(##)%増加する": {
     "mod": "マップにローグエグザイルが出現する確率が(##)%増加する",
     "engMod": "Map has (##)% increased chance to contain Rogue Exiles",
-    "value": "35-50",
+    "value": "70-100",
     "type": "Suffix",
-    "engRegex": "les",
+    "engRegex": "iles",
     "Regex": "イルが出",
     "groups": [
       "MapAdditionalExile"
@@ -425,7 +455,7 @@ const tabletModList = {
     "engMod": "Map contains an additional Summoning Circle",
     "value": "1",
     "type": "Prefix",
-    "engRegex": "l Su",
+    "engRegex": "l su",
     "Regex": "モ二",
     "groups": [
       "MapAdditionalStoneCircle"
@@ -438,9 +468,9 @@ const tabletModList = {
   "マップにサモニングサークルが出現する確率が(##)%増加する": {
     "mod": "マップにサモニングサークルが出現する確率が(##)%増加する",
     "engMod": "Map has (##)% increased chance to contain a Summoning Circle",
-    "value": "35-50",
+    "value": "70-100",
     "type": "Suffix",
-    "engRegex": "a S",
+    "engRegex": "a s",
     "Regex": "モニ",
     "groups": [
       "MapAdditionalStoneCircle"
@@ -455,7 +485,7 @@ const tabletModList = {
     "engMod": "Map has (##) additional random Modifiers",
     "value": "1-2",
     "type": "Suffix",
-    "engRegex": "do",
+    "engRegex": "ndo",
     "Regex": "ラン",
     "groups": [
       "MapAdditionalModifier"
@@ -470,8 +500,8 @@ const tabletModList = {
     "engMod": "Unique Monsters have # additional Rare Modifier",
     "value": "1",
     "type": "Suffix",
-    "engRegex": "ue M",
-    "Regex": "ークモ",
+    "engRegex": "^uni",
+    "Regex": "ーはモ",
     "groups": [
       "MapAdditionalUniqueMonsterModifier"
     ],
@@ -484,8 +514,8 @@ const tabletModList = {
     "mod": "マップのブリーチがスポーンするマジックモンスターが(##)%増加する",
     "engMod": "Breaches in Map spawn (##)% increased Magic Monsters",
     "value": "40-70",
-    "type": "Suffix",
-    "engRegex": "B.*ag",
+    "type": "Unique",
+    "engRegex": "Br.*ag",
     "Regex": "るマ",
     "groups": [
       "BreachMagicMonsterIncrease"
@@ -499,8 +529,8 @@ const tabletModList = {
     "mod": "マップのブリーチはレアモンスターを追加で(##)体スポーンさせる",
     "engMod": "Breaches in Map spawn (##) additional Rare Monsters",
     "value": "1-2",
-    "type": "Suffix",
-    "engRegex": "B.*R",
+    "type": "Unique",
+    "engRegex": "al Rare Monsters$",
     "Regex": "はレ",
     "groups": [
       "BreachRareMonsterIncrease"
@@ -510,13 +540,13 @@ const tabletModList = {
     ],
     "domain": "tablet"
   },
-  "マップのブリーチはモンスター密度が(##)%増加する": {
-    "mod": "マップのブリーチはモンスター密度が(##)%増加する",
-    "engMod": "Breaches in Map have (##)% increased Monster density",
+  "Breaches in Map have (##)% increased Pack Size": {
+    "mod": "Breaches in Map have (##)% increased Pack Size",
+    "engMod": "Breaches in Map have (##)% increased Pack Size",
     "value": "-20-10",
     "type": "Unique",
-    "engRegex": "Breaches\\ i",
-    "Regex": "マップのブリーチはモ",
+    "engRegex": "Br.*ck",
+    "Regex": "Pa",
     "groups": [
       "BreachDensityIncrease"
     ],
@@ -525,30 +555,15 @@ const tabletModList = {
     ],
     "domain": "tablet"
   },
-  "マップのブリーチが開閉する速度が(##)%速くなる|マップのブリーチはモンスター密度が(##)%増加する": {
-    "mod": "マップのブリーチが開閉する速度が(##)%速くなる|マップのブリーチはモンスター密度が(##)%増加する",
-    "engMod": "Breaches in Map open and close (##)% faster|Breaches in Map have (##)% increased Monster density",
+  "マップのブリーチが開閉する速度が(##)%速くなる|Breaches in Map have (##)% increased Pack Size": {
+    "mod": "マップのブリーチが開閉する速度が(##)%速くなる|Breaches in Map have (##)% increased Pack Size",
+    "engMod": "Breaches in Map open and close (##)% faster|Breaches in Map have (##)% increased Pack Size",
     "value": "10-30|3-8",
-    "type": "Suffix",
-    "engRegex": "p o",
-    "Regex": "が開",
+    "type": "Unique",
+    "engRegex": "open",
+    "Regex": "開閉",
     "groups": [
       "BreachSpeedIncrease"
-    ],
-    "subGroups": [
-      "Breach"
-    ],
-    "domain": "tablet"
-  },
-  "マップのブリーチには握られた手が追加で(##)個出現する": {
-    "mod": "マップのブリーチには握られた手が追加で(##)個出現する",
-    "engMod": "Breaches in Map contain (##) additional Clasped Hands",
-    "value": "1-3",
-    "type": "Suffix",
-    "engRegex": "Cl",
-    "Regex": "チに",
-    "groups": [
-      "BreachChestAdditional"
     ],
     "subGroups": [
       "Breach"
@@ -559,9 +574,9 @@ const tabletModList = {
     "mod": "マップのブリーチモンスターがドロップするブリーチスプリンターの数量が(##)%増加する",
     "engMod": "(##)% increased Quantity of Breach Splinters dropped by Breach Monsters in Map",
     "value": "15-30",
-    "type": "Suffix",
-    "engRegex": "f B",
-    "Regex": "るブ",
+    "type": "Unique",
+    "engRegex": "of Br",
+    "Regex": "チモ",
     "groups": [
       "BreachMonsterSplinterIncrease"
     ],
@@ -574,11 +589,101 @@ const tabletModList = {
     "mod": "マップは(##)%の確率でブリーチが追加で#個出現する",
     "engMod": "Map has (##)% chance to contain an additional Breach",
     "value": "15-30",
-    "type": "Suffix",
-    "engRegex": "l B",
+    "type": "Unique",
+    "engRegex": "al Br",
     "Regex": "でブ",
     "groups": [
       "BreachAdditionalChance"
+    ],
+    "subGroups": [
+      "Breach"
+    ],
+    "domain": "tablet"
+  },
+  "(##)% increased Quantity of Hiveblood found in Map": {
+    "mod": "(##)% increased Quantity of Hiveblood found in Map",
+    "engMod": "(##)% increased Quantity of Hiveblood found in Map",
+    "value": "30-60",
+    "type": "Suffix",
+    "engRegex": "ivebl",
+    "Regex": "eb",
+    "groups": [
+      "BreachHivebloodQuantity"
+    ],
+    "subGroups": [
+      "Breach"
+    ],
+    "domain": "tablet"
+  },
+  "(##)% increased Quantity of Wombgifts found in Map": {
+    "mod": "(##)% increased Quantity of Wombgifts found in Map",
+    "engMod": "(##)% increased Quantity of Wombgifts found in Map",
+    "value": "30-60",
+    "type": "Suffix",
+    "engRegex": "ts f",
+    "Regex": "of Wo",
+    "groups": [
+      "BreachWombgiftQuantity"
+    ],
+    "subGroups": [
+      "Breach"
+    ],
+    "domain": "tablet"
+  },
+  "Wombgifts have (##)% chance to drop one Level higher in Map": {
+    "mod": "Wombgifts have (##)% chance to drop one Level higher in Map",
+    "engMod": "Wombgifts have (##)% chance to drop one Level higher in Map",
+    "value": "10-30",
+    "type": "Suffix",
+    "engRegex": "^w",
+    "Regex": "dr",
+    "groups": [
+      "BreachWombgiftLevelChance"
+    ],
+    "subGroups": [
+      "Breach"
+    ],
+    "domain": "tablet"
+  },
+  "Unstable Breaches in Map have (##)% increased chance to contain Vruun, Marshal of Xesht": {
+    "mod": "Unstable Breaches in Map have (##)% increased chance to contain Vruun, Marshal of Xesht",
+    "engMod": "Unstable Breaches in Map have (##)% increased chance to contain Vruun, Marshal of Xesht",
+    "value": "20-50",
+    "type": "Suffix",
+    "engRegex": "vr",
+    "Regex": "ta",
+    "groups": [
+      "BreachBossChance"
+    ],
+    "subGroups": [
+      "Breach"
+    ],
+    "domain": "tablet"
+  },
+  "マップの不安定なブリーチは安定化した後レアモンスターが追加で(##)体スポーンする": {
+    "mod": "マップの不安定なブリーチは安定化した後レアモンスターが追加で(##)体スポーンする",
+    "engMod": "Unstable Breaches in Map spawn (##) additional Rare Monsters when Stabilised",
+    "value": "2-5",
+    "type": "Unique",
+    "engRegex": "wh",
+    "Regex": "は安",
+    "groups": [
+      "BreachUnstableAdditionalRares"
+    ],
+    "subGroups": [
+      "Breach"
+    ],
+    "domain": "tablet"
+  },
+  "(##)% increased Effectiveness of Rare Breach Monsters in Map": {
+    "mod": "(##)% increased Effectiveness of Rare Breach Monsters in Map",
+    "engMod": "(##)% increased Effectiveness of Rare Breach Monsters in Map",
+    "value": "5-20",
+    "type": "Suffix",
+    "engRegex": "h m",
+    "Regex": "Ef",
+    "groups": [
+      "BreachRareMonsterPotency"
     ],
     "subGroups": [
       "Breach"
@@ -590,7 +695,7 @@ const tabletModList = {
     "engMod": "(##)% increased quantity of Expedition Artifacts dropped by Monsters in Map",
     "value": "15-30",
     "type": "Suffix",
-    "engRegex": "rt",
+    "engRegex": "rti",
     "Regex": "ンア",
     "groups": [
       "ExpeditionArtifactIncrease"
@@ -605,7 +710,7 @@ const tabletModList = {
     "engMod": "(##)% increased Expedition Explosive Placement Range in Map",
     "value": "15-30",
     "type": "Suffix",
-    "engRegex": "Pl",
+    "engRegex": "pla",
     "Regex": "の設",
     "groups": [
       "ExpeditionExplosionPlacement"
@@ -620,7 +725,7 @@ const tabletModList = {
     "engMod": "Expeditions in Map have +(##) Remnants",
     "value": "1-2",
     "type": "Suffix",
-    "engRegex": "\\+",
+    "engRegex": "tions",
     "Regex": "個さ",
     "groups": [
       "ExpeditionRelicIncrease"
@@ -635,8 +740,8 @@ const tabletModList = {
     "engMod": "(##)% increased Expedition Explosive Radius in Map",
     "value": "15-30",
     "type": "Suffix",
-    "engRegex": "Rad",
-    "Regex": "径が",
+    "engRegex": "diu",
+    "Regex": "半径",
     "groups": [
       "ExpeditionExplosionRadius"
     ],
@@ -650,7 +755,7 @@ const tabletModList = {
     "engMod": "(##)% increased Quantity of Expedition Logbooks dropped by Runic Monsters in Map",
     "value": "15-30",
     "type": "Suffix",
-    "engRegex": "Lo",
+    "engRegex": "Log",
     "Regex": "でル",
     "groups": [
       "ExpeditionLogbookIncrease"
@@ -665,8 +770,8 @@ const tabletModList = {
     "engMod": "(##)% increased number of Rare Expedition Monsters in Map",
     "value": "25-40",
     "type": "Suffix",
-    "engRegex": "re E",
-    "Regex": "ア エ",
+    "engRegex": "re e",
+    "Regex": "レア エク",
     "groups": [
       "ExpeditionRareMonsters"
     ],
@@ -695,7 +800,7 @@ const tabletModList = {
     "engMod": "Map contains (##)% increased number of Runic Monster Markers",
     "value": "15-30",
     "type": "Suffix",
-    "engRegex": "rk",
+    "engRegex": "Mark",
     "Regex": "に出",
     "groups": [
       "ExpeditionRunicMonsters"
@@ -710,25 +815,10 @@ const tabletModList = {
     "engMod": "(##)% increased Stack size of Simulacrum Splinters found in Map",
     "value": "15-30",
     "type": "Suffix",
-    "engRegex": "mu",
+    "engRegex": "tac",
     "Regex": "るシ",
     "groups": [
       "DeliriumMonsterSplinterIncrease"
-    ],
-    "subGroups": [
-      "Delirium"
-    ],
-    "domain": "tablet"
-  },
-  "マップで倒されたデリリウムモンスターが付与する報酬の進行が(##)%増加する": {
-    "mod": "マップで倒されたデリリウムモンスターが付与する報酬の進行が(##)%増加する",
-    "engMod": "Delirious Monsters Killed in Map provide (##)% increased Reward Progress",
-    "value": "15-30",
-    "type": "Unique",
-    "engRegex": "Ki",
-    "Regex": "で倒",
-    "groups": [
-      "DeliriumRewardProgressIncrease"
     ],
     "subGroups": [
       "Delirium"
@@ -740,7 +830,7 @@ const tabletModList = {
     "engMod": "Delirium Fog in Map lasts (##) additional seconds before dissipating",
     "value": "6-12",
     "type": "Suffix",
-    "engRegex": "p l",
+    "engRegex": "bef",
     "Regex": "は消",
     "groups": [
       "DeliriumFogDissipationDelay"
@@ -755,7 +845,7 @@ const tabletModList = {
     "engMod": "Delirium Fog in Map dissipates (##)% slower",
     "value": "-30--20",
     "type": "Suffix",
-    "engRegex": "p d",
+    "engRegex": "slo",
     "Regex": "%遅",
     "groups": [
       "DeliriumFogPersistence"
@@ -770,7 +860,7 @@ const tabletModList = {
     "engMod": "Delirium in Map increases (##)% faster with distance from the mirror",
     "value": "-10-10",
     "type": "Unique",
-    "engRegex": "m i",
+    "engRegex": "fas",
     "Regex": "のせ",
     "groups": [
       "DeliriumDifficultyIncrease"
@@ -785,8 +875,8 @@ const tabletModList = {
     "engMod": "Delirium Monsters in Map have (##)% increased Pack Size",
     "value": "15-30",
     "type": "Suffix",
-    "engRegex": "D.*S",
-    "Regex": "はパ",
+    "engRegex": "ze$",
+    "Regex": "ムモ",
     "groups": [
       "DeliriumPackSizeIncrease"
     ],
@@ -800,7 +890,7 @@ const tabletModList = {
     "engMod": "Delirium Fog in Map spawns (##)% increased Fracturing Mirrors",
     "value": "15-30",
     "type": "Suffix",
-    "engRegex": "Fr",
+    "engRegex": "fra",
     "Regex": "る割",
     "groups": [
       "DeliriumDoodadsIncrease"
@@ -815,7 +905,7 @@ const tabletModList = {
     "engMod": "Slaying Rare Monsters in Map pauses the Delirium Mirror Timer for (##) seconds",
     "value": "3-5",
     "type": "Suffix",
-    "engRegex": "Sl",
+    "engRegex": "yi",
     "Regex": "でレ",
     "groups": [
       "DeliriumRareMonsterPause"
@@ -830,8 +920,8 @@ const tabletModList = {
     "engMod": "Delirium Encounters in Map are (##)% more likely to spawn Unique Bosses",
     "value": "15-30",
     "type": "Suffix",
-    "engRegex": "% m",
-    "Regex": "ーで",
+    "engRegex": "nco",
+    "Regex": "ムエ",
     "groups": [
       "DeliriumBossChance"
     ],
@@ -840,15 +930,15 @@ const tabletModList = {
     ],
     "domain": "tablet"
   },
-  "影響を受けたマップのデリリウムエンカウンターは(##)%の確率で報酬を追加で#種類生成する": {
-    "mod": "影響を受けたマップのデリリウムエンカウンターは(##)%の確率で報酬を追加で#種類生成する",
-    "engMod": "Delirium Encounters in affected Map have (##)% chance to generate an additional Reward",
-    "value": "8-24",
-    "type": "Unique",
-    "engRegex": "af",
-    "Regex": "影響",
+  "マップのデリリウムの霧でスポーンする鏡の破片が(##)%増加する": {
+    "mod": "マップのデリリウムの霧でスポーンする鏡の破片が(##)%増加する",
+    "engMod": "Delirium Fog in Map spawns (##)% increased MirrorShards",
+    "value": "12-26",
+    "type": "Suffix",
+    "engRegex": "har",
+    "Regex": "霧で",
     "groups": [
-      "DeliriumAdditionalRewardType"
+      "DeliriumAdditionalShardsChance"
     ],
     "subGroups": [
       "Delirium"
@@ -860,7 +950,7 @@ const tabletModList = {
     "engMod": "Monsters Sacrificed at Ritual Altars in Map grant (##)% increased Tribute",
     "value": "18-30",
     "type": "Suffix",
-    "engRegex": "Sa",
+    "engRegex": "iced",
     "Regex": "で捧",
     "groups": [
       "RitualTributeIncrease"
@@ -875,7 +965,7 @@ const tabletModList = {
     "engMod": "Rerolling Favours at Ritual Altars in Map costs (##)% reduced Tribute",
     "value": "-30--20",
     "type": "Suffix",
-    "engRegex": "li.*A",
+    "engRegex": "ro.*ts",
     "Regex": "でコ",
     "groups": [
       "RitualRerollCostIncrease"
@@ -905,7 +995,7 @@ const tabletModList = {
     "engMod": "Favours Deferred at Ritual Altars in Map reappear (##)% sooner",
     "value": "25-40",
     "type": "Suffix",
-    "engRegex": "s D",
+    "engRegex": "eap",
     "Regex": "で繰",
     "groups": [
       "RitualDeferSpeed"
@@ -920,7 +1010,7 @@ const tabletModList = {
     "engMod": "Ritual Altars in Map allow rerolling Favours (##) additional times",
     "value": "1-3",
     "type": "Suffix",
-    "engRegex": "llo",
+    "engRegex": "mes",
     "Regex": "壇は",
     "groups": [
       "RitualAdditionalReroll"
@@ -935,7 +1025,7 @@ const tabletModList = {
     "engMod": "Favours Rerolled at Ritual Altars in Map have (##)% chance to cost no Tribute",
     "value": "300-600",
     "type": "Suffix",
-    "engRegex": "t n",
+    "engRegex": "lled",
     "Regex": "ルは",
     "groups": [
       "RitualChanceForNoCost"
@@ -950,7 +1040,7 @@ const tabletModList = {
     "engMod": "Revived Monsters from Ritual Altars in Map have (##)% increased chance to be Magic",
     "value": "35-70",
     "type": "Suffix",
-    "engRegex": "be M",
+    "engRegex": "gic$",
     "Regex": "がマ",
     "groups": [
       "RitualRareMonsters"
@@ -965,8 +1055,8 @@ const tabletModList = {
     "engMod": "Revived Monsters from Ritual Altars in Map have (##)% increased chance to be Rare",
     "value": "25-40",
     "type": "Suffix",
-    "engRegex": "be R",
-    "Regex": "がレ",
+    "engRegex": "are$",
+    "Regex": "ーがレ",
     "groups": [
       "RitualMagicMonsters"
     ],
@@ -980,7 +1070,7 @@ const tabletModList = {
     "engMod": "Ritual Favours in Map have (##)% increased chance to be Omens",
     "value": "35-70",
     "type": "Suffix",
-    "engRegex": "Om",
+    "engRegex": "l fa",
     "Regex": "寵が",
     "groups": [
       "RitualOmenChance"
@@ -995,8 +1085,8 @@ const tabletModList = {
     "engMod": "Map contains (##) additional Strongboxes",
     "value": "1-2",
     "type": "Suffix",
-    "engRegex": "l.*xe",
-    "Regex": "マップにストロングボ",
+    "engRegex": "l st",
+    "Regex": "クスが追",
     "groups": [
       "MapBossAdditionalStrongbox"
     ],
@@ -1010,8 +1100,8 @@ const tabletModList = {
     "engMod": "Map contains (##) additional Shrines",
     "value": "1-2",
     "type": "Suffix",
-    "engRegex": "l.*nes",
-    "Regex": "マップにシュラインが",
+    "engRegex": "l sh",
+    "Regex": "インが追",
     "groups": [
       "MapBossAdditionalShrine"
     ],
@@ -1025,8 +1115,8 @@ const tabletModList = {
     "engMod": "Map contains (##) additional Essences",
     "value": "1-2",
     "type": "Suffix",
-    "engRegex": "l.*nces",
-    "Regex": "マップにエッセンスが",
+    "engRegex": "l e",
+    "Regex": "ンスが追",
     "groups": [
       "MapBossAdditionalEssence"
     ],
@@ -1040,8 +1130,8 @@ const tabletModList = {
     "engMod": "Map contains (##) additional Azmeri Spirits",
     "value": "1-2",
     "type": "Suffix",
-    "engRegex": "l.*its",
-    "Regex": "マップにアズメリの精",
+    "engRegex": "ns.*its",
+    "Regex": "体出",
     "groups": [
       "MapBossAdditionalSpirit"
     ],
@@ -1085,8 +1175,8 @@ const tabletModList = {
     "engMod": "(##)% increased Rarity of Items dropped by Map Bosses",
     "value": "35-60",
     "type": "Suffix",
-    "engRegex": "R.*B",
-    "Regex": "ボ.*レ",
+    "engRegex": "Ra.*dr",
+    "Regex": "するアイテムのレ",
     "groups": [
       "MapBossRarity"
     ],
@@ -1100,8 +1190,8 @@ const tabletModList = {
     "engMod": "(##)% increased Quantity of Items dropped by Map Bosses",
     "value": "13-20",
     "type": "Suffix",
-    "engRegex": "Q.*ms d",
-    "Regex": "スの.*数",
+    "engRegex": "y of i",
+    "Regex": "するアイテムの数",
     "groups": [
       "MapBossQuantity"
     ],
@@ -1110,18 +1200,33 @@ const tabletModList = {
     ],
     "domain": "tablet"
   },
-  "ブリーチは最低#mの半径まで広がる|生存中のブリーチモンスターがいる間ブリーチは開いたままになる": {
-    "mod": "ブリーチは最低#mの半径まで広がる|生存中のブリーチモンスターがいる間ブリーチは開いたままになる",
-    "engMod": "Breaches expand to at least # metres in radius|Breaches remain open while there are alive Breach Monsters",
-    "value": "200|5",
+  "マップの不安定なブリーチはタイマーが終了した後追加で#秒経ってから崩壊する": {
+    "mod": "マップの不安定なブリーチはタイマーが終了した後追加で#秒経ってから崩壊する",
+    "engMod": "Unstable Breaches in Map take # additional seconds to collapse after timer is filled",
+    "value": "120",
     "type": "Unique",
-    "engRegex": "ex",
-    "Regex": "は最",
+    "engRegex": "ap ta",
+    "Regex": "はタ",
     "groups": [
-      "TowerAddUniqueBonus"
+      "BreachCloseTime"
     ],
     "subGroups": [
-      "Tower"
+      "Breach"
+    ],
+    "domain": "tablet"
+  },
+  "マップのブリーチハイヴのハイヴボーン追加で(##)ウェーブ": {
+    "mod": "マップのブリーチハイヴのハイヴボーン追加で(##)ウェーブ",
+    "engMod": "Breach Hives in Map have (##) additional waves of Hiveborn Monsters",
+    "value": "2-5",
+    "type": "Unique",
+    "engRegex": "ch Hi",
+    "Regex": "チハ",
+    "groups": [
+      "BreachHiveAdditionalWaves"
+    ],
+    "subGroups": [
+      "Breach"
     ],
     "domain": "tablet"
   },
@@ -1130,7 +1235,7 @@ const tabletModList = {
     "engMod": "Expedition Monsters in your Maps spawn with half of their Life missing",
     "value": "1",
     "type": "Unique",
-    "engRegex": "lf",
+    "engRegex": "Lif",
     "Regex": "イフ",
     "groups": [
       "TowerAddUniqueBonus"
@@ -1145,7 +1250,7 @@ const tabletModList = {
     "engMod": "Runic Monsters in your Maps are Duplicated",
     "value": "1",
     "type": "Unique",
-    "engRegex": "Du",
+    "engRegex": "Dup",
     "Regex": "のル",
     "groups": [
       "TowerAddUniqueBonus"
@@ -1160,8 +1265,8 @@ const tabletModList = {
     "engMod": "Can Reroll Favours at Ritual Altars in your Maps twice as many times",
     "value": "1",
     "type": "Unique",
-    "engRegex": "ny",
-    "Regex": "ルを",
+    "engRegex": "an Re",
+    "Regex": "を二",
     "groups": [
       "TowerAddUniqueBonus"
     ],
@@ -1175,7 +1280,7 @@ const tabletModList = {
     "engMod": "Favours at Ritual Altars in Area costs (##)% increased Tribute",
     "value": "10-15",
     "type": "Unique",
-    "engRegex": "Are",
+    "engRegex": "Area",
     "Regex": "エリ",
     "groups": [
       "RitualTributeCostIncrease"
@@ -1190,7 +1295,7 @@ const tabletModList = {
     "engMod": "Delirium Fog in your Maps never dissipates",
     "value": "1",
     "type": "Unique",
-    "engRegex": "nev",
+    "engRegex": "ps ne",
     "Regex": "が晴",
     "groups": [
       "TowerAddUniqueBonus"
@@ -1205,7 +1310,7 @@ const tabletModList = {
     "engMod": "Map Bosses are Hunted by Azmeri Spirits",
     "value": "1",
     "type": "Unique",
-    "engRegex": "Hu",
+    "engRegex": "Hun",
     "Regex": "霊に",
     "groups": [
       "MapBossPossessed"
@@ -1220,7 +1325,7 @@ const tabletModList = {
     "engMod": "Map Bosses have # additional Modifier",
     "value": "1",
     "type": "Unique",
-    "engRegex": "es h",
+    "engRegex": "es ha",
     "Regex": "スはモ",
     "groups": [
       "MapAdditionalModifier"
@@ -1235,8 +1340,8 @@ const tabletModList = {
     "engMod": "Can only be applied to Precursor Tower Maps|Completing the Tower makes all nearby Maps accessible",
     "value": "1",
     "type": "Unique",
-    "engRegex": "nl",
-    "Regex": "塔",
+    "engRegex": "Tow",
+    "Regex": "先人",
     "groups": [
       "IrridiatedMaps"
     ],
@@ -1250,8 +1355,8 @@ const tabletModList = {
     "engMod": "If Map was not previously Irradiated, completing Map adds Irradiation instead",
     "value": "1",
     "type": "Unique",
-    "engRegex": ",",
-    "Regex": "もし",
+    "engRegex": "If Ma",
+    "Regex": "と照",
     "groups": [
       "IrridiatedMaps"
     ],
@@ -1260,13 +1365,13 @@ const tabletModList = {
     ],
     "domain": "tablet"
   },
-  "マップにアビスが追加で(##)個出現する|マップはアビサルに蹂躙されている|マップのアビスの穴からレアモンスターが追加で(##)体スポーンする": {
-    "mod": "マップにアビスが追加で(##)個出現する|マップはアビサルに蹂躙されている|マップのアビスの穴からレアモンスターが追加で(##)体スポーンする",
-    "engMod": "Map contains (##) additional Abysses|Map is overrun by the Abyssal|(##) additional Rare Monsters are spawned from Abysses in Map",
-    "value": "14-18|1|4-6|0|0",
+  "マップにアビスが追加で(##)個出現する|マップはアビサルに蹂躙されている": {
+    "mod": "マップにアビスが追加で(##)個出現する|マップはアビサルに蹂躙されている",
+    "engMod": "Map contains (##) additional Abysses|Map is overrun by the Abyssal",
+    "value": "14-18|1|0|0|0|-75",
     "type": "Unique",
-    "engRegex": "ove",
-    "Regex": "ルに",
+    "engRegex": "rru",
+    "Regex": "蹂躙",
     "groups": [
       "MapAbyssalOverrun"
     ],
@@ -1280,7 +1385,7 @@ const tabletModList = {
     "engMod": "Abysses in Map spawn (##)% increased Monsters",
     "value": "20-30",
     "type": "Suffix",
-    "engRegex": "A.*p s",
+    "engRegex": "n \\d+%",
     "Regex": "ビスがス",
     "groups": [
       "AbyssMonsterIncrease"
@@ -1295,8 +1400,8 @@ const tabletModList = {
     "engMod": "(##) additional Rare Monsters are spawned from Abysses in Map",
     "value": "1-2",
     "type": "Suffix",
-    "engRegex": "additional",
-    "Regex": "マップのアビスの穴か",
+    "engRegex": "wne",
+    "Regex": "穴か",
     "groups": [
       "AbyssRareMonsterIncrease"
     ],
@@ -1310,8 +1415,23 @@ const tabletModList = {
     "engMod": "Abyssal Monsters in Map have increased Difficulty and Reward for each closed Pit",
     "value": "1",
     "type": "Suffix",
-    "engRegex": "Di",
+    "engRegex": "Diff",
     "Regex": "の難",
+    "groups": [
+      "AbyssEnhancedMonstersPerChasm"
+    ],
+    "subGroups": [
+      "Abyss"
+    ],
+    "domain": "tablet"
+  },
+  "アビサルモンスターは閉じた穴の数ごとにエフェクティブが(##)%増加する、最大#%": {
+    "mod": "アビサルモンスターは閉じた穴の数ごとにエフェクティブが(##)%増加する、最大#%",
+    "engMod": "Abyssal Monsters have (##)% increased Effectiveness for each closed Pit, up to #%",
+    "value": "8-12",
+    "type": "Suffix",
+    "engRegex": "t,",
+    "Regex": "は閉",
     "groups": [
       "AbyssEnhancedMonstersPerChasm"
     ],
@@ -1325,7 +1445,7 @@ const tabletModList = {
     "engMod": "Abysses in Map have (##)% increased chance to lead to an Abyssal Depths",
     "value": "10-20",
     "type": "Suffix",
-    "engRegex": "ep",
+    "engRegex": "lea",
     "Regex": "の深",
     "groups": [
       "AbyssDepthsChance"
@@ -1340,8 +1460,8 @@ const tabletModList = {
     "engMod": "Map contains an additional Abyss",
     "value": "1",
     "type": "Suffix",
-    "engRegex": "n a.*A",
-    "Regex": "マップにアビスが追加",
+    "engRegex": "ns an.*Ab",
+    "Regex": "にアビスが",
     "groups": [
       "AbyssAdditionalChance"
     ],
@@ -1355,7 +1475,7 @@ const tabletModList = {
     "engMod": "Abyss Pits in Map are twice as likely to have Rewards",
     "value": "-50",
     "type": "Suffix",
-    "engRegex": "s P",
+    "engRegex": "tw",
     "Regex": "穴が",
     "groups": [
       "AbyssIncreasedRewards"
@@ -1370,8 +1490,8 @@ const tabletModList = {
     "engMod": "Map has (##)% chance to contain four additional Abysses",
     "value": "20-40",
     "type": "Suffix",
-    "engRegex": "n f",
-    "Regex": "に%",
+    "engRegex": "four",
+    "Regex": "でア",
     "groups": [
       "Abyss4AdditionalChance"
     ],
@@ -1385,7 +1505,7 @@ const tabletModList = {
     "engMod": "(##)% increased chance for Abyssal monsters in Map to have Abyssal Modifiers",
     "value": "20-30",
     "type": "Suffix",
-    "engRegex": "r A",
+    "engRegex": "r ab",
     "Regex": "ーがア",
     "groups": [
       "AbyssExtraModifiers"
@@ -1400,13 +1520,118 @@ const tabletModList = {
     "engMod": "(##)% increased chance for Desecrated Currency from Abysses in Map",
     "value": "20-30",
     "type": "Suffix",
-    "engRegex": "Cu",
+    "engRegex": "cy",
     "Regex": "スか",
     "groups": [
       "AbyssExtraTickets"
     ],
     "subGroups": [
       "Abyss"
+    ],
+    "domain": "tablet"
+  },
+  "マップのヴァールビーコンの周りのモンスターのパックサイズが(##)%増加する": {
+    "mod": "マップのヴァールビーコンの周りのモンスターのパックサイズが(##)%増加する",
+    "engMod": "(##)% increased Pack Size for Monsters around Vaal Beacons in Map",
+    "value": "10-30",
+    "type": "Suffix",
+    "engRegex": "ze f",
+    "Regex": "りの",
+    "groups": [
+      "IncursionPackSize"
+    ],
+    "subGroups": [
+      "Incursion"
+    ],
+    "domain": "tablet"
+  },
+  "マップのヴァールビーコンの周りに追加で#パックのモンスターが出現する": {
+    "mod": "マップのヴァールビーコンの周りに追加で#パックのモンスターが出現する",
+    "engMod": "# extra pack of Monsters around Vaal Beacons in Map",
+    "value": "1",
+    "type": "Suffix",
+    "engRegex": "k o",
+    "Regex": "^マップのヴァールビーコンの周りに",
+    "groups": [
+      "IncursionExtraPacks"
+    ],
+    "subGroups": [
+      "Incursion"
+    ],
+    "domain": "tablet"
+  },
+  "(##)%の確率でマップのヴァールビーコンの周りに追加で#パックのモンスターが出現する": {
+    "mod": "(##)%の確率でマップのヴァールビーコンの周りに追加で#パックのモンスターが出現する",
+    "engMod": "(##)% chance for an extra packs of Monsters around Vaal Beacons in Map",
+    "value": "30-60",
+    "type": "Suffix",
+    "engRegex": "cks",
+    "Regex": "%の.*ンの",
+    "groups": [
+      "IncursionExtraPacks"
+    ],
+    "subGroups": [
+      "Incursion"
+    ],
+    "domain": "tablet"
+  },
+  "マップでヴァールビーコンが追加のモンスターを召喚する確率が(##)%増加する": {
+    "mod": "マップでヴァールビーコンが追加のモンスターを召喚する確率が(##)%増加する",
+    "engMod": "(##)% increased chance Vaal Beacons summon additional Monsters in Map",
+    "value": "25-50",
+    "type": "Suffix",
+    "engRegex": "ns s",
+    "Regex": "加の",
+    "groups": [
+      "IncursionSecondaryEncounters"
+    ],
+    "subGroups": [
+      "Incursion"
+    ],
+    "domain": "tablet"
+  },
+  "(##)%の確率でマップのヴァールビーコンからクリスタルを追加で#個獲得する": {
+    "mod": "(##)%の確率でマップのヴァールビーコンからクリスタルを追加で#個獲得する",
+    "engMod": "(##)% chance to gain an additional Crystal from Vaal Beacons in Map",
+    "value": "5-10",
+    "type": "Suffix",
+    "engRegex": "o g",
+    "Regex": "ンか",
+    "groups": [
+      "IncursionTokenChance"
+    ],
+    "subGroups": [
+      "Incursion"
+    ],
+    "domain": "tablet"
+  },
+  "(##)%の確率でヴァールビーコンユニークモンスターをマップに追加する": {
+    "mod": "(##)%の確率でヴァールビーコンユニークモンスターをマップに追加する",
+    "engMod": "(##)% chance to add a Vaal Beacon Unique Monster to the Map",
+    "value": "10-25",
+    "type": "Suffix",
+    "engRegex": "a v",
+    "Regex": "ンユ",
+    "groups": [
+      "IncursionBossChance"
+    ],
+    "subGroups": [
+      "Incursion"
+    ],
+    "domain": "tablet"
+  },
+  "マップのヴァールビーコンチェストがレアになる確率が(##)%増加する": {
+    "mod": "マップのヴァールビーコンチェストがレアになる確率が(##)%増加する",
+    "engMod": "(##)% increased chance Vaal Beacon Chests are Rare in Map",
+    "value": "30-60",
+    "type": "Suffix",
+    "engRegex": "n c",
+    "Regex": "ンチ",
+    "groups": [
+      "IncursionRareChestChance"
+    ],
+    "subGroups": [
+      "Incursion"
     ],
     "domain": "tablet"
   }

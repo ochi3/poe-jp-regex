@@ -20,7 +20,7 @@
         <div id="sideMenu">
             <h3>
                 PoE JP Regex
-                <span style="font-size: 0.6em; opacity: 0.8; margin-left: 8px;">0.4</span>
+                <span style="font-size: 0.6em; opacity: 0.8; margin-left: 8px;">0.5</span>
             </h3>
             <div style="display: flex; gap: 8px; margin-top: 10px; margin-bottom: 10px;">
                 <a href="poe1" style="flex: 1; text-align: center; padding: 3px; background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: 4px; color: var(--text-primary); text-decoration: none;">PoE 1</a>
@@ -47,6 +47,15 @@
             </h4>
             <h4>
                 Change log
+                <br/>
+                26/05/25
+                <br/>
+                v0.5 石板 Mod Regex 追加
+                <br/>
+                ウェイストーン・石板 Mod の engRegex 最短化
+                <br/>
+                石板の Language 切替対応
+                <br/>
                 <br/>
                 26/05/25
                 <br/>
@@ -315,6 +324,18 @@
             <div class="card">
                 <h2 class="section-header">Change log</h2>
                 <div class="changelog-list">
+                    <article class="changelog-entry">
+                        <time>26/05/25</time>
+                        <p>v0.5: 石板（Precursor Tower）Mod Regex タブを追加しました（109 Mod）。左クリックで Mod を選択し、日本語または英語 Regex を組み立てられます。</p>
+                    </article>
+                    <article class="changelog-entry">
+                        <time>26/05/25</time>
+                        <p>ウェイストーン・石板 Mod の英語 Regex（engRegex）を .* 等で最短化しました。veiset の Generated.Tablet.json を参照し、PoE フィルタ互換の大文字小文字無視マッチに対応しています。</p>
+                    </article>
+                    <article class="changelog-entry">
+                        <time>26/05/25</time>
+                        <p>石板 Mod でも Language 切替（日本語/英語）に対応しました。英語表示時は engRegex が出力に使われます。</p>
+                    </article>
                     <article class="changelog-entry">
                         <time>26/06/10</time>
                         <p>ウェイストーンドロップ率の入力を数値自由入力に変更しました。（英語: p c.*、日本語: プ確.*）。</p>
