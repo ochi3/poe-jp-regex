@@ -1,7 +1,7 @@
-﻿let ModList = {...mapModList};
+let ModList = {...mapModList};
 let currentLanguage = localStorage.getItem('poe2_poeLanguage') || 'ja';
 if (currentLanguage !== 'ja' && currentLanguage !== 'en') currentLanguage = 'ja';
-const CHANGELOG_VERSION = 'poe2-2026-05-25';
+const CHANGELOG_VERSION = 'poe2-2026-05-25-2';
 const CHANGELOG_STORAGE_KEY = 'poe2ChangelogSeenVersion';
 
 let checkedMods = new Map(); // キー -> 'ng' または 'wanted'
@@ -333,6 +333,15 @@ function updateCombinedRegex() {
         combinedResult += ` ${rarityRegex}`;
     }
 
+    const waystoneValue = document.getElementById('waystoneInput').value;
+    if (waystoneValue) {
+        const waystoneRegex = getFixedRangeRegex(
+            waystoneValue,
+            currentLanguage === 'ja' ? 'プ確.*' : 'p c.*'
+        );
+        combinedResult += ` ${waystoneRegex}`;
+    }
+
     const extraRegex = generateExtraRegex();
     if (extraRegex) {
         combinedResult += ` ${extraRegex}`;
@@ -378,7 +387,6 @@ function toggleSearchMode(mode) {
 function generateExtraRegex() {
     const rareValue = document.getElementById('rareMonsterInput').value;
     const magicValue = document.getElementById('magicMonsterInput').value;
-    const waystoneValue = document.getElementById('waystoneInput').value;
 
     let monsterRegex = [];
     if (rareValue) {
@@ -387,17 +395,6 @@ function generateExtraRegex() {
     if (magicValue) {
         monsterRegex.push(getFixedRangeRegex(magicValue, currentLanguage === 'ja' ? 'ックモ.*数が' : 'c m.*'));
     }
-
-    const waystoneRegexMap = {
-        '100': '": \\+[1-9]\\d\\d"',
-        '200': '": \\+[2-9]\\d\\d"',
-        '300': '": \\+[3-9]\\d\\d"',
-        '400': '": \\+[4-9]\\d\\d"',
-        '500': '": \\+[5-9]\\d\\d"',
-        '600': '": \\+[6-9]\\d\\d"',
-        '700': '": \\+[7-9]\\d\\d"'
-    };
-    let waystoneRegex = waystoneRegexMap[waystoneValue] || '';
 
     let combinedMonster = '';
     if (monsterRegex.length > 0) {
@@ -416,7 +413,6 @@ function generateExtraRegex() {
 
     let finalResult = [];
     if (combinedMonster) finalResult.push(combinedMonster);
-    if (waystoneRegex) finalResult.push(waystoneRegex);
 
     const deliriumValue = document.getElementById('deliriumInput').value;
     if (deliriumValue) {
@@ -1069,6 +1065,7 @@ function validateInputs() {
     'itemQuantityInput',
     'packSizeInput',
     'rarityInput',
+    'waystoneInput',
     'rareMonsterInput',
     'magicMonsterInput'
   ];

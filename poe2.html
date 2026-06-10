@@ -50,6 +50,8 @@
                 <br/>
                 26/05/25
                 <br/>
+                ウェイストーンドロップ率を数値自由入力に変更
+                <br/>
                 装備変換タブ追加
                 <br/>
                 ウェイストーン英語Regex・Language切替対応
@@ -122,16 +124,7 @@
                     <div class="input-group">
                         <label class="input-label">
                             ウェイストーンドロップ率:
-                            <select id="waystoneInput" onchange="updateCombinedRegex(); saveInputState()">
-                                <option value="">なし</option>
-                                <option value="100">100</option>
-                                <option value="200">200</option>
-                                <option value="300">300</option>
-                                <option value="400">400</option>
-                                <option value="500">500</option>
-                                <option value="600">600</option>
-                                <option value="700">700</option>
-                            </select>
+                            <input id="waystoneInput" oninput="updateCombinedRegex(); saveInputState()" type="number"/>
                         </label>
                         <label class="input-label">
                             デリリウム:
@@ -322,6 +315,10 @@
             <div class="card">
                 <h2 class="section-header">Change log</h2>
                 <div class="changelog-list">
+                    <article class="changelog-entry">
+                        <time>26/05/25</time>
+                        <p>ウェイストーンドロップ率の入力を数値自由入力に変更しました。（英語: p c.*、日本語: プ確.*）。</p>
+                    </article>
                     <article class="changelog-entry">
                         <time>26/05/25</time>
                         <p>装備変換タブを追加しました。貼り付けた装備テキストの言語を自動判定し、日本語と英語を相互に変換できます。</p>
