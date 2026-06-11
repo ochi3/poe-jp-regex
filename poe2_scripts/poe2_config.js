@@ -6,6 +6,7 @@ function getPoe2MapProfileSettings() {
     packSize: document.getElementById('packSizeInput')?.value || '',
     rarity: document.getElementById('rarityInput')?.value || '',
     waystone: document.getElementById('waystoneInput')?.value || '',
+    effectiveness: document.getElementById('effectivenessInput')?.value || '',
     delirium: document.getElementById('deliriumInput')?.value || '',
     rareMonster: document.getElementById('rareMonsterInput')?.value || '',
     magicMonster: document.getElementById('magicMonsterInput')?.value || '',
@@ -31,6 +32,7 @@ function applyPoe2MapProfileSettings(settings = {}) {
   setInput('packSizeInput', settings.packSize);
   setInput('rarityInput', settings.rarity);
   setInput('waystoneInput', settings.waystone);
+  setInput('effectivenessInput', settings.effectiveness);
   setInput('deliriumInput', settings.delirium);
   setInput('rareMonsterInput', settings.rareMonster);
   setInput('magicMonsterInput', settings.magicMonster);

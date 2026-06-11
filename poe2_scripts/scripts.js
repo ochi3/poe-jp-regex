@@ -1,7 +1,7 @@
 let ModList = {...mapModList};
 let currentLanguage = localStorage.getItem('poe2_poeLanguage') || 'ja';
 if (currentLanguage !== 'ja' && currentLanguage !== 'en') currentLanguage = 'ja';
-const CHANGELOG_VERSION = 'poe2-2026-05-25-v0.5';
+const CHANGELOG_VERSION = 'poe2-2026-06-11';
 const CHANGELOG_STORAGE_KEY = 'poe2ChangelogSeenVersion';
 
 let checkedMods = new Map(); // キー -> 'ng' または 'wanted'
@@ -46,10 +46,8 @@ function updateLanguageUI() {
 // Mod名の#プレースホルダーを実際の値で置換して表示
 function formatModText(text, value) {
     if (!text) return text || '';
-    if (!value) return text;
-
     const textParts = text.split('|');
-    const valueParts = value.split('|');
+    const valueParts = value ? value.split('|') : [];
 
     const result = textParts.map((part, i) => {
         const v = valueParts[i] !== undefined ? valueParts[i] : valueParts[0];
@@ -222,6 +220,14 @@ function addEffectItem(key, value) {
         magicBadge.textContent = `マジックモンスター ${magicMonsterCount}`;
         badgeContainer.appendChild(magicBadge);
     }
+    const effectiveness = value["map_monster_potency_+%"];
+    if (effectiveness) {
+        const effBadge = document.createElement('span');
+        effBadge.classList.add('badge', 'qty-badge');
+        effBadge.style.backgroundColor = '#8e44ad';
+        effBadge.textContent = `エフェクティブ ${effectiveness}`;
+        badgeContainer.appendChild(effBadge);
+    }
 
     const showDetails = document.getElementById('showModDetailsCheckbox')?.checked ?? true;
     if (!showDetails) {
@@ -342,6 +348,15 @@ function updateCombinedRegex() {
         combinedResult += ` ${waystoneRegex}`;
     }
 
+    const effectivenessValue = document.getElementById('effectivenessInput').value;
+    if (effectivenessValue) {
+        const effectivenessRegex = getFixedRangeRegex(
+            effectivenessValue,
+            currentLanguage === 'ja' ? 'ィブ:.*' : 'ess:.*'
+        );
+        combinedResult += ` ${effectivenessRegex}`;
+    }
+
     const extraRegex = generateExtraRegex();
     if (extraRegex) {
         combinedResult += ` ${extraRegex}`;
@@ -416,10 +431,12 @@ function generateExtraRegex() {
 
     const deliriumValue = document.getElementById('deliriumInput').value;
     if (deliriumValue) {
-        // ユーザー指定形式: ( [X-9]\d+%のせ )
         const firstDigit = deliriumValue.toString()[0];
         if (firstDigit >= '1' && firstDigit <= '9') {
-            finalResult.push(`([${firstDigit}-9]\\d+%のせ)`);
+            const deliriumPattern = currentLanguage === 'ja'
+                ? `([${firstDigit}-9]\\d+%のせ)`
+                : `([${firstDigit}-9]\\d+% Del)`;
+            finalResult.push(deliriumPattern);
         }
     }
 
@@ -465,6 +482,7 @@ function resetAll() {
     document.getElementById('rareMonsterInput').value = '';
     document.getElementById('magicMonsterInput').value = '';
     document.getElementById('waystoneInput').value = '';
+    document.getElementById('effectivenessInput').value = '';
     document.getElementById('deliriumInput').value = '';
     if (document.getElementById('packAdditionCheckbox')) document.getElementById('packAdditionCheckbox').checked = false;
     if (document.getElementById('corruptedCheckbox')) document.getElementById('corruptedCheckbox').checked = false;
@@ -816,6 +834,18 @@ function updateModList() {
                     if (vA !== vB) return vB - vA;
                     break;
                 }
+                case 'effectiveness_asc': {
+                    const vA = valueA["map_monster_potency_+%"] || 0;
+                    const vB = valueB["map_monster_potency_+%"] || 0;
+                    if (vA !== vB) return vA - vB;
+                    break;
+                }
+                case 'effectiveness_desc': {
+                    const vA = valueA["map_monster_potency_+%"] || 0;
+                    const vB = valueB["map_monster_potency_+%"] || 0;
+                    if (vA !== vB) return vB - vA;
+                    break;
+                }
                 case 'default':
                 default:
                     if (valueB.tier !== valueA.tier) return valueB.tier - valueA.tier;
@@ -879,7 +909,7 @@ function saveInputState() {
     const state = {};
     const ids = [
         'itemQuantityInput', 'packSizeInput', 'rarityInput', 'rareMonsterInput', 'magicMonsterInput',
-        'waystoneInput', 'deliriumInput', 'packAdditionCheckbox'
+        'waystoneInput', 'effectivenessInput', 'deliriumInput', 'packAdditionCheckbox'
     ];
     ids.forEach(id => {
         const el = document.getElementById(id);
@@ -900,6 +930,7 @@ function loadInputState() {
         'rareMonsterInput': state.rareMonster || '',
         'magicMonsterInput': state.magicMonster || '',
         'waystoneInput': state.waystone || '',
+        'effectivenessInput': state.effectiveness || '',
         'deliriumInput': state.delirium || '',
         'packAdditionCheckbox': state.packAddition || false
     };
@@ -1066,6 +1097,7 @@ function validateInputs() {
     'packSizeInput',
     'rarityInput',
     'waystoneInput',
+    'effectivenessInput',
     'rareMonsterInput',
     'magicMonsterInput'
   ];

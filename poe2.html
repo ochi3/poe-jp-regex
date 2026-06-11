@@ -136,6 +136,10 @@
                             <input id="waystoneInput" oninput="updateCombinedRegex(); saveInputState()" type="number"/>
                         </label>
                         <label class="input-label">
+                            エフェクティブ:
+                            <input id="effectivenessInput" oninput="updateCombinedRegex(); saveInputState()" type="number"/>
+                        </label>
+                        <label class="input-label">
                             デリリウム:
                             <select id="deliriumInput" onchange="updateCombinedRegex(); saveInputState()">
                                 <option value="">なし</option>
@@ -229,6 +233,8 @@
                         <!-- <option value="rare_asc">レアモンスター 昇順</option> -->
                         <option value="magic_desc">マジックモンスター 降順</option>
                         <!-- <option value="magic_asc">マジックモンスター 昇順</option> -->
+                        <option value="effectiveness_desc">エフェクティブ 降順</option>
+                        <!-- <option value="effectiveness_asc">エフェクティブ 昇順</option> -->
                     </select>
                 </div>
                 <div id="ModListResult" style="display: none;">
@@ -268,7 +274,6 @@
                 <input id="tabletSearch" oninput="filterTabletEffects()" placeholder="Modを検索..." style="flex: 1; margin-top: 0; padding: 10px; border-radius: 4px; border: 1px solid var(--border-color); background: var(--bg-secondary); color: var(--text-primary);" type="text"/>
                 <select id="tabletSortSelect" onchange="updateTabletModList()" style="padding: 10px; border-radius: 4px; border: 1px solid var(--border-color); background: var(--bg-secondary); color: var(--text-primary);">
                     <option value="default">デフォルト順</option>
-                    <option value="unique">Unique</option>
                     <option value="prefix">Prefix</option>
                     <option value="suffix">Suffix</option>
                 </select>
@@ -325,8 +330,8 @@
                 <h2 class="section-header">Change log</h2>
                 <div class="changelog-list">
                     <article class="changelog-entry">
-                        <time>26/06/10</time>
-                        <p>v0.5のMOD追加 Regex不具合あったらお問い合わせください。</p>
+                        <time>26/06/11</time>
+                        <p>タブレットユニーク削除、エフェクティブRegexの追加、ウェイストーンの数値修正。</p>
                     </article>
                     <article class="changelog-entry">
                         <time>26/06/10</time>

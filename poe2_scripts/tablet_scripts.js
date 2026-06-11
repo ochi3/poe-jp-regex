@@ -26,7 +26,7 @@ function updateTabletModList() {
     
     // 初回のみソートオプションを初期化
     const sortSelect = document.getElementById('tabletSortSelect');
-    if (sortSelect && sortSelect.options.length <= 5) { // デフォルト、Unique, Pre, Suf, League の5つの初期状態
+    if (sortSelect && sortSelect.options.length <= 4) { // デフォルト、Pre、Suf、League の4つの初期状態
         const categories = new Set();
         Object.values(tabletModList).forEach(m => {
             if (m.subGroups) m.subGroups.forEach(g => categories.add(g));
@@ -59,9 +59,6 @@ function updateTabletModList() {
         }
 
         switch (tabletSortMode) {
-            case 'unique':
-                if (mod.type === 'Unique') return 0;
-                break;
             case 'prefix':
                 if (mod.type === 'Prefix') return 0;
                 break;
@@ -73,16 +70,16 @@ function updateTabletModList() {
                 break;
         }
 
-        // デフォルトの度
-        if (mod.groups.includes('TowerAddContent')) return 1;
-        if (mod.type === 'Unique') return 2;
-        if (mod.type === 'Prefix') return 3;
-        if (mod.type === 'Suffix') return 4;
-        return 5;
+        // デフォルトの並び
+        if (mod.type === 'Prefix') return 1;
+        if (mod.type === 'Suffix') return 2;
+        return 3;
     };
 
     // 選択中のものを上に、それ以外をタイプ別にソート
-    const sortedKeys = Object.keys(tabletModList).sort((a, b) => {
+    const sortedKeys = Object.keys(tabletModList)
+        .filter(key => tabletModList[key].type !== 'Unique')
+        .sort((a, b) => {
         const aChecked = tabletCheckedMods.has(a);
         const bChecked = tabletCheckedMods.has(b);
         if (aChecked && !bChecked) return -1;
@@ -136,18 +133,9 @@ function updateTabletModList() {
             'Monster': '#d32f2f'
         };
 
-        // バッジ表示順: Unique > Prefix > Suffix > Tower > others
+        // バッジ表示順: Prefix > Suffix > others
         
-        // 1. Unique
-        if (value.type === 'Unique') {
-            const uniqueBadge = document.createElement('span');
-            uniqueBadge.classList.add('badge');
-            uniqueBadge.style.backgroundColor = '#af3ea3';
-            uniqueBadge.textContent = 'Unique';
-            badgeContainer.appendChild(uniqueBadge);
-        }
-        
-        // 2. Prefix
+        // 1. Prefix
         if (value.type === 'Prefix') {
             const prefixBadge = document.createElement('span');
             prefixBadge.classList.add('badge');
@@ -156,7 +144,7 @@ function updateTabletModList() {
             badgeContainer.appendChild(prefixBadge);
         }
         
-        // 3. Suffix
+        // 2. Suffix
         if (value.type === 'Suffix') {
             const suffixBadge = document.createElement('span');
             suffixBadge.classList.add('badge');
@@ -165,7 +153,7 @@ function updateTabletModList() {
             badgeContainer.appendChild(suffixBadge);
         }
 
-        // 4. Mechanic (SubGroups)
+        // 3. Mechanic (SubGroups)
         if (value.subGroups) {
             value.subGroups.forEach(cat => {
                 const exists = Array.from(badgeContainer.children).some(b => b.textContent === cat);

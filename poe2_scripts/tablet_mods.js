@@ -1,140 +1,5 @@
-// veiset Generated.Tablet.json から engRegex を同期
+// tools_poe2/optimize_mod_regex.py によって tablet Regex を最短化しました
 const tabletModList = {
-  "マップに照射状態を追加する": {
-    "mod": "マップに照射状態を追加する",
-    "engMod": "Adds Irradiated to a Map",
-    "value": "1",
-    "type": "Unique",
-    "engRegex": "ted to",
-    "Regex": "プに照",
-    "groups": [
-      "TowerAddContent"
-    ],
-    "subGroups": [
-      "Tower"
-    ],
-    "domain": "tablet"
-  },
-  "マップに異世界からのブリーチを追加する": {
-    "mod": "マップに異世界からのブリーチを追加する",
-    "engMod": "Adds an Otherworldy Breach to a Map",
-    "value": "5",
-    "type": "Unique",
-    "engRegex": "Oth",
-    "Regex": "に異",
-    "groups": [
-      "TowerAddContent"
-    ],
-    "subGroups": [
-      "Tower"
-    ],
-    "domain": "tablet"
-  },
-  "マップにカルグールのエクスペディションを追加する": {
-    "mod": "マップにカルグールのエクスペディションを追加する",
-    "engMod": "Adds a Kalguuran Expedition to a Map",
-    "value": "5",
-    "type": "Unique",
-    "engRegex": "Kal",
-    "Regex": "にカ",
-    "groups": [
-      "TowerAddContent"
-    ],
-    "subGroups": [
-      "Tower"
-    ],
-    "domain": "tablet"
-  },
-  "マップにデリリウムの鏡を追加する": {
-    "mod": "マップにデリリウムの鏡を追加する",
-    "engMod": "Adds a Mirror of Delirium to a Map",
-    "value": "5",
-    "type": "Unique",
-    "engRegex": "or of",
-    "Regex": "にデ",
-    "groups": [
-      "TowerAddContent"
-    ],
-    "subGroups": [
-      "Tower"
-    ],
-    "domain": "tablet"
-  },
-  "マップにリチュアルの祭壇を追加する": {
-    "mod": "マップにリチュアルの祭壇を追加する",
-    "engMod": "Adds Ritual Altars to a Map",
-    "value": "5",
-    "type": "Unique",
-    "engRegex": "ds Ri",
-    "Regex": "にリ",
-    "groups": [
-      "TowerAddContent"
-    ],
-    "subGroups": [
-      "Tower"
-    ],
-    "domain": "tablet"
-  },
-  "マップのマップボスを強化する": {
-    "mod": "マップのマップボスを強化する",
-    "engMod": "Empowers the Map Boss of a Map",
-    "value": "5",
-    "type": "Unique",
-    "engRegex": "Emp",
-    "Regex": "を強",
-    "groups": [
-      "TowerAddContent"
-    ],
-    "subGroups": [
-      "Tower"
-    ],
-    "domain": "tablet"
-  },
-  "マップにアビスを追加する": {
-    "mod": "マップにアビスを追加する",
-    "engMod": "Adds Abysses to a Map",
-    "value": "1",
-    "type": "Unique",
-    "engRegex": "ds Ab",
-    "Regex": "ビスを",
-    "groups": [
-      "TowerAddContent"
-    ],
-    "subGroups": [
-      "Tower"
-    ],
-    "domain": "tablet"
-  },
-  "マップにヴァールビーコンを追加する": {
-    "mod": "マップにヴァールビーコンを追加する",
-    "engMod": "Adds Vaal Beacons to a Map",
-    "value": "10",
-    "type": "Unique",
-    "engRegex": "ds Va",
-    "Regex": "にヴ",
-    "groups": [
-      "TowerAddContent"
-    ],
-    "subGroups": [
-      "Tower"
-    ],
-    "domain": "tablet"
-  },
-  "マップで見つかるアイテムの数量が(##)%増加する": {
-    "mod": "マップで見つかるアイテムの数量が(##)%増加する",
-    "engMod": "(##)% increased Quantity of Items found in Map",
-    "value": "4-10",
-    "type": "Unique",
-    "engRegex": "Qu.*ms fo",
-    "Regex": "かるアイテムの数",
-    "groups": [
-      "MapDroppedItemQuantityIncrease"
-    ],
-    "subGroups": [
-      "Map"
-    ],
-    "domain": "tablet"
-  },
   "モンスターのエフェクティブが(##)%増加する": {
     "mod": "モンスターのエフェクティブが(##)%増加する",
     "engMod": "Monsters have (##)% increased Effectiveness",
@@ -510,103 +375,13 @@ const tabletModList = {
     ],
     "domain": "tablet"
   },
-  "マップのブリーチがスポーンするマジックモンスターが(##)%増加する": {
-    "mod": "マップのブリーチがスポーンするマジックモンスターが(##)%増加する",
-    "engMod": "Breaches in Map spawn (##)% increased Magic Monsters",
-    "value": "40-70",
-    "type": "Unique",
-    "engRegex": "Br.*ag",
-    "Regex": "るマ",
-    "groups": [
-      "BreachMagicMonsterIncrease"
-    ],
-    "subGroups": [
-      "Breach"
-    ],
-    "domain": "tablet"
-  },
-  "マップのブリーチはレアモンスターを追加で(##)体スポーンさせる": {
-    "mod": "マップのブリーチはレアモンスターを追加で(##)体スポーンさせる",
-    "engMod": "Breaches in Map spawn (##) additional Rare Monsters",
-    "value": "1-2",
-    "type": "Unique",
-    "engRegex": "al Rare Monsters$",
-    "Regex": "はレ",
-    "groups": [
-      "BreachRareMonsterIncrease"
-    ],
-    "subGroups": [
-      "Breach"
-    ],
-    "domain": "tablet"
-  },
-  "Breaches in Map have (##)% increased Pack Size": {
-    "mod": "Breaches in Map have (##)% increased Pack Size",
-    "engMod": "Breaches in Map have (##)% increased Pack Size",
-    "value": "-20-10",
-    "type": "Unique",
-    "engRegex": "Br.*ck",
-    "Regex": "Pa",
-    "groups": [
-      "BreachDensityIncrease"
-    ],
-    "subGroups": [
-      "Breach"
-    ],
-    "domain": "tablet"
-  },
-  "マップのブリーチが開閉する速度が(##)%速くなる|Breaches in Map have (##)% increased Pack Size": {
-    "mod": "マップのブリーチが開閉する速度が(##)%速くなる|Breaches in Map have (##)% increased Pack Size",
-    "engMod": "Breaches in Map open and close (##)% faster|Breaches in Map have (##)% increased Pack Size",
-    "value": "10-30|3-8",
-    "type": "Unique",
-    "engRegex": "open",
-    "Regex": "開閉",
-    "groups": [
-      "BreachSpeedIncrease"
-    ],
-    "subGroups": [
-      "Breach"
-    ],
-    "domain": "tablet"
-  },
-  "マップのブリーチモンスターがドロップするブリーチスプリンターの数量が(##)%増加する": {
-    "mod": "マップのブリーチモンスターがドロップするブリーチスプリンターの数量が(##)%増加する",
-    "engMod": "(##)% increased Quantity of Breach Splinters dropped by Breach Monsters in Map",
-    "value": "15-30",
-    "type": "Unique",
-    "engRegex": "of Br",
-    "Regex": "チモ",
-    "groups": [
-      "BreachMonsterSplinterIncrease"
-    ],
-    "subGroups": [
-      "Breach"
-    ],
-    "domain": "tablet"
-  },
-  "マップは(##)%の確率でブリーチが追加で#個出現する": {
-    "mod": "マップは(##)%の確率でブリーチが追加で#個出現する",
-    "engMod": "Map has (##)% chance to contain an additional Breach",
-    "value": "15-30",
-    "type": "Unique",
-    "engRegex": "al Br",
-    "Regex": "でブ",
-    "groups": [
-      "BreachAdditionalChance"
-    ],
-    "subGroups": [
-      "Breach"
-    ],
-    "domain": "tablet"
-  },
   "(##)% increased Quantity of Hiveblood found in Map": {
     "mod": "(##)% increased Quantity of Hiveblood found in Map",
     "engMod": "(##)% increased Quantity of Hiveblood found in Map",
     "value": "30-60",
     "type": "Suffix",
-    "engRegex": "ivebl",
-    "Regex": "eb",
+    "engRegex": "f Hiv",
+    "Regex": "f Hiv",
     "groups": [
       "BreachHivebloodQuantity"
     ],
@@ -621,7 +396,7 @@ const tabletModList = {
     "value": "30-60",
     "type": "Suffix",
     "engRegex": "ts f",
-    "Regex": "of Wo",
+    "Regex": "ts f",
     "groups": [
       "BreachWombgiftQuantity"
     ],
@@ -635,8 +410,8 @@ const tabletModList = {
     "engMod": "Wombgifts have (##)% chance to drop one Level higher in Map",
     "value": "10-30",
     "type": "Suffix",
-    "engRegex": "^w",
-    "Regex": "dr",
+    "engRegex": "^wo",
+    "Regex": "^wo",
     "groups": [
       "BreachWombgiftLevelChance"
     ],
@@ -650,25 +425,10 @@ const tabletModList = {
     "engMod": "Unstable Breaches in Map have (##)% increased chance to contain Vruun, Marshal of Xesht",
     "value": "20-50",
     "type": "Suffix",
-    "engRegex": "vr",
-    "Regex": "ta",
+    "engRegex": "vru",
+    "Regex": "vru",
     "groups": [
       "BreachBossChance"
-    ],
-    "subGroups": [
-      "Breach"
-    ],
-    "domain": "tablet"
-  },
-  "マップの不安定なブリーチは安定化した後レアモンスターが追加で(##)体スポーンする": {
-    "mod": "マップの不安定なブリーチは安定化した後レアモンスターが追加で(##)体スポーンする",
-    "engMod": "Unstable Breaches in Map spawn (##) additional Rare Monsters when Stabilised",
-    "value": "2-5",
-    "type": "Unique",
-    "engRegex": "wh",
-    "Regex": "は安",
-    "groups": [
-      "BreachUnstableAdditionalRares"
     ],
     "subGroups": [
       "Breach"
@@ -681,7 +441,7 @@ const tabletModList = {
     "value": "5-20",
     "type": "Suffix",
     "engRegex": "h m",
-    "Regex": "Ef",
+    "Regex": "h m",
     "groups": [
       "BreachRareMonsterPotency"
     ],
@@ -849,21 +609,6 @@ const tabletModList = {
     "Regex": "%遅",
     "groups": [
       "DeliriumFogPersistence"
-    ],
-    "subGroups": [
-      "Delirium"
-    ],
-    "domain": "tablet"
-  },
-  "マップのデリリウムのせん妄度は鏡から離れるほど(##)%速く増える": {
-    "mod": "マップのデリリウムのせん妄度は鏡から離れるほど(##)%速く増える",
-    "engMod": "Delirium in Map increases (##)% faster with distance from the mirror",
-    "value": "-10-10",
-    "type": "Unique",
-    "engRegex": "fas",
-    "Regex": "のせ",
-    "groups": [
-      "DeliriumDifficultyIncrease"
     ],
     "subGroups": [
       "Delirium"
@@ -1194,186 +939,6 @@ const tabletModList = {
     "Regex": "するアイテムの数",
     "groups": [
       "MapBossQuantity"
-    ],
-    "subGroups": [
-      "Map"
-    ],
-    "domain": "tablet"
-  },
-  "マップの不安定なブリーチはタイマーが終了した後追加で#秒経ってから崩壊する": {
-    "mod": "マップの不安定なブリーチはタイマーが終了した後追加で#秒経ってから崩壊する",
-    "engMod": "Unstable Breaches in Map take # additional seconds to collapse after timer is filled",
-    "value": "120",
-    "type": "Unique",
-    "engRegex": "ap ta",
-    "Regex": "はタ",
-    "groups": [
-      "BreachCloseTime"
-    ],
-    "subGroups": [
-      "Breach"
-    ],
-    "domain": "tablet"
-  },
-  "マップのブリーチハイヴのハイヴボーン追加で(##)ウェーブ": {
-    "mod": "マップのブリーチハイヴのハイヴボーン追加で(##)ウェーブ",
-    "engMod": "Breach Hives in Map have (##) additional waves of Hiveborn Monsters",
-    "value": "2-5",
-    "type": "Unique",
-    "engRegex": "ch Hi",
-    "Regex": "チハ",
-    "groups": [
-      "BreachHiveAdditionalWaves"
-    ],
-    "subGroups": [
-      "Breach"
-    ],
-    "domain": "tablet"
-  },
-  "マップのエクスペディションモンスターはライフの半分を失った状態でスポーンする": {
-    "mod": "マップのエクスペディションモンスターはライフの半分を失った状態でスポーンする",
-    "engMod": "Expedition Monsters in your Maps spawn with half of their Life missing",
-    "value": "1",
-    "type": "Unique",
-    "engRegex": "Lif",
-    "Regex": "イフ",
-    "groups": [
-      "TowerAddUniqueBonus"
-    ],
-    "subGroups": [
-      "Tower"
-    ],
-    "domain": "tablet"
-  },
-  "マップのルーニックモンスターは複製される": {
-    "mod": "マップのルーニックモンスターは複製される",
-    "engMod": "Runic Monsters in your Maps are Duplicated",
-    "value": "1",
-    "type": "Unique",
-    "engRegex": "Dup",
-    "Regex": "のル",
-    "groups": [
-      "TowerAddUniqueBonus"
-    ],
-    "subGroups": [
-      "Tower"
-    ],
-    "domain": "tablet"
-  },
-  "マップのリチュアルの祭壇で恩寵のリロールを二倍の回数行える": {
-    "mod": "マップのリチュアルの祭壇で恩寵のリロールを二倍の回数行える",
-    "engMod": "Can Reroll Favours at Ritual Altars in your Maps twice as many times",
-    "value": "1",
-    "type": "Unique",
-    "engRegex": "an Re",
-    "Regex": "を二",
-    "groups": [
-      "TowerAddUniqueBonus"
-    ],
-    "subGroups": [
-      "Tower"
-    ],
-    "domain": "tablet"
-  },
-  "エリアのリチュアルの祭壇で恩寵のトリビュートコストが(##)%増加する": {
-    "mod": "エリアのリチュアルの祭壇で恩寵のトリビュートコストが(##)%増加する",
-    "engMod": "Favours at Ritual Altars in Area costs (##)% increased Tribute",
-    "value": "10-15",
-    "type": "Unique",
-    "engRegex": "Area",
-    "Regex": "エリ",
-    "groups": [
-      "RitualTributeCostIncrease"
-    ],
-    "subGroups": [
-      "Ritual"
-    ],
-    "domain": "tablet"
-  },
-  "マップのデリリウムの霧が晴れることがなくなる": {
-    "mod": "マップのデリリウムの霧が晴れることがなくなる",
-    "engMod": "Delirium Fog in your Maps never dissipates",
-    "value": "1",
-    "type": "Unique",
-    "engRegex": "ps ne",
-    "Regex": "が晴",
-    "groups": [
-      "TowerAddUniqueBonus"
-    ],
-    "subGroups": [
-      "Tower"
-    ],
-    "domain": "tablet"
-  },
-  "マップボスはアズメリの精霊によって狩られている": {
-    "mod": "マップボスはアズメリの精霊によって狩られている",
-    "engMod": "Map Bosses are Hunted by Azmeri Spirits",
-    "value": "1",
-    "type": "Unique",
-    "engRegex": "Hun",
-    "Regex": "霊に",
-    "groups": [
-      "MapBossPossessed"
-    ],
-    "subGroups": [
-      "Map"
-    ],
-    "domain": "tablet"
-  },
-  "ユニークボスはモッドを追加で#個持つ": {
-    "mod": "ユニークボスはモッドを追加で#個持つ",
-    "engMod": "Map Bosses have # additional Modifier",
-    "value": "1",
-    "type": "Unique",
-    "engRegex": "es ha",
-    "Regex": "スはモ",
-    "groups": [
-      "MapAdditionalModifier"
-    ],
-    "subGroups": [
-      "Map"
-    ],
-    "domain": "tablet"
-  },
-  "先人の塔マップにだけ適用できる|塔マップを完了すると近くの全てのマップがアクセス可能になる": {
-    "mod": "先人の塔マップにだけ適用できる|塔マップを完了すると近くの全てのマップがアクセス可能になる",
-    "engMod": "Can only be applied to Precursor Tower Maps|Completing the Tower makes all nearby Maps accessible",
-    "value": "1",
-    "type": "Unique",
-    "engRegex": "Tow",
-    "Regex": "先人",
-    "groups": [
-      "IrridiatedMaps"
-    ],
-    "subGroups": [
-      "Irradiated"
-    ],
-    "domain": "tablet"
-  },
-  "もしマップがもともと照射状態でなければ、マップを完了すると代わりに照射状態を追加する": {
-    "mod": "もしマップがもともと照射状態でなければ、マップを完了すると代わりに照射状態を追加する",
-    "engMod": "If Map was not previously Irradiated, completing Map adds Irradiation instead",
-    "value": "1",
-    "type": "Unique",
-    "engRegex": "If Ma",
-    "Regex": "と照",
-    "groups": [
-      "IrridiatedMaps"
-    ],
-    "subGroups": [
-      "Irradiated"
-    ],
-    "domain": "tablet"
-  },
-  "マップにアビスが追加で(##)個出現する|マップはアビサルに蹂躙されている": {
-    "mod": "マップにアビスが追加で(##)個出現する|マップはアビサルに蹂躙されている",
-    "engMod": "Map contains (##) additional Abysses|Map is overrun by the Abyssal",
-    "value": "14-18|1|0|0|0|-75",
-    "type": "Unique",
-    "engRegex": "rru",
-    "Regex": "蹂躙",
-    "groups": [
-      "MapAbyssalOverrun"
     ],
     "subGroups": [
       "Map"
