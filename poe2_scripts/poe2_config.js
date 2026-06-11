@@ -7,6 +7,8 @@ function getPoe2MapProfileSettings() {
     rarity: document.getElementById('rarityInput')?.value || '',
     waystone: document.getElementById('waystoneInput')?.value || '',
     effectiveness: document.getElementById('effectivenessInput')?.value || '',
+    mapMonsterRarity: document.getElementById('mapMonsterRarityInput')?.value || '',
+    revive: document.getElementById('reviveInput')?.value || '',
     delirium: document.getElementById('deliriumInput')?.value || '',
     rareMonster: document.getElementById('rareMonsterInput')?.value || '',
     magicMonster: document.getElementById('magicMonsterInput')?.value || '',
@@ -30,9 +32,11 @@ function applyPoe2MapProfileSettings(settings = {}) {
 
   setInput('itemQuantityInput', settings.itemQuantity);
   setInput('packSizeInput', settings.packSize);
-  setInput('rarityInput', settings.rarity);
+  setInput('rarityInput', settings.rarity || settings.mapItemRarity);
   setInput('waystoneInput', settings.waystone);
   setInput('effectivenessInput', settings.effectiveness);
+  setInput('mapMonsterRarityInput', settings.mapMonsterRarity);
+  setInput('reviveInput', settings.revive);
   setInput('deliriumInput', settings.delirium);
   setInput('rareMonsterInput', settings.rareMonster);
   setInput('magicMonsterInput', settings.magicMonster);

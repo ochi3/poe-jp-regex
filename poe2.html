@@ -126,8 +126,12 @@
                             <input id="packSizeInput" oninput="updateCombinedRegex(); saveInputState()" type="number"/>
                         </label>
                         <label class="input-label">
-                            レアリティ:
+                            アイテムレアリティ:
                             <input id="rarityInput" oninput="updateCombinedRegex(); saveInputState()" type="number"/>
+                        </label>
+                        <label class="input-label">
+                            復活:
+                            <input id="reviveInput" max="9" min="0" oninput="updateCombinedRegex(); saveInputState()" type="number"/>
                         </label>
                     </div>
                     <div class="input-group">
@@ -138,6 +142,10 @@
                         <label class="input-label">
                             エフェクティブ:
                             <input id="effectivenessInput" oninput="updateCombinedRegex(); saveInputState()" type="number"/>
+                        </label>
+                        <label class="input-label">
+                            モンスターレアリティ:
+                            <input id="mapMonsterRarityInput" oninput="updateCombinedRegex(); saveInputState()" type="number"/>
                         </label>
                         <label class="input-label">
                             デリリウム:
@@ -329,6 +337,10 @@
             <div class="card">
                 <h2 class="section-header">Change log</h2>
                 <div class="changelog-list">
+                    <article class="changelog-entry">
+                        <time>26/06/12</time>
+                        <p>モンスターレアリティ、復活数の数値入力Regexを追加しました。（英語: ter rar.* / s ava.*、日本語: モ.*ティ:.* / 活が利.*）</p>
+                    </article>
                     <article class="changelog-entry">
                         <time>26/06/11</time>
                         <p>タブレットユニーク削除、エフェクティブRegexの追加、ウェイストーンの数値修正。</p>

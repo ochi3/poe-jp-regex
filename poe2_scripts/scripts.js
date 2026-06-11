@@ -1,7 +1,7 @@
 let ModList = {...mapModList};
 let currentLanguage = localStorage.getItem('poe2_poeLanguage') || 'ja';
 if (currentLanguage !== 'ja' && currentLanguage !== 'en') currentLanguage = 'ja';
-const CHANGELOG_VERSION = 'poe2-2026-06-11';
+const CHANGELOG_VERSION = 'poe2-2026-06-12';
 const CHANGELOG_STORAGE_KEY = 'poe2ChangelogSeenVersion';
 
 let checkedMods = new Map(); // キー -> 'ng' または 'wanted'
@@ -335,7 +335,7 @@ function updateCombinedRegex() {
     }
 
     if (rarityValue) {
-        const rarityRegex = getFixedRangeRegex(rarityValue, currentLanguage === 'ja' ? 'ティ:.*' : 'm rar.*');
+        const rarityRegex = getFixedRangeRegex(rarityValue, currentLanguage === 'ja' ? 'ムレア.*' : 'm rar.*');
         combinedResult += ` ${rarityRegex}`;
     }
 
@@ -355,6 +355,26 @@ function updateCombinedRegex() {
             currentLanguage === 'ja' ? 'ィブ:.*' : 'ess:.*'
         );
         combinedResult += ` ${effectivenessRegex}`;
+    }
+
+    const mapMonsterRarityValue = document.getElementById('mapMonsterRarityInput').value;
+    if (mapMonsterRarityValue) {
+        const mapMonsterRarityRegex = getFixedRangeRegex(
+            mapMonsterRarityValue,
+            currentLanguage === 'ja' ? 'モ.*ティ:.*' : 'ter rar.*'
+        );
+        combinedResult += ` ${mapMonsterRarityRegex}`;
+    }
+
+    const reviveValue = document.getElementById('reviveInput').value;
+    if (reviveValue !== '') {
+        const reviveRegex = getSingleDigitRangeRegex(
+            reviveValue,
+            currentLanguage === 'ja' ? '活が利.*' : 's ava.*'
+        );
+        if (reviveRegex) {
+            combinedResult += ` ${reviveRegex}`;
+        }
     }
 
     const extraRegex = generateExtraRegex();
@@ -483,6 +503,8 @@ function resetAll() {
     document.getElementById('magicMonsterInput').value = '';
     document.getElementById('waystoneInput').value = '';
     document.getElementById('effectivenessInput').value = '';
+    document.getElementById('mapMonsterRarityInput').value = '';
+    document.getElementById('reviveInput').value = '';
     document.getElementById('deliriumInput').value = '';
     if (document.getElementById('packAdditionCheckbox')) document.getElementById('packAdditionCheckbox').checked = false;
     if (document.getElementById('corruptedCheckbox')) document.getElementById('corruptedCheckbox').checked = false;
@@ -592,6 +614,16 @@ function getFixedRangeRegex(num, basePattern, optimize = false) {
   }
 
   return `"${basePattern}${quant >= 10 ? '(' + numberRegex + ')' : numberRegex}%"`;
+}
+
+/** 0〜9 の1桁数値用（復活回数など、% なし） */
+function getSingleDigitRangeRegex(num, basePattern, maxDigit = 9) {
+  num = parseInt(num, 10);
+  if (isNaN(num) || num < 0 || num > maxDigit) return '';
+  if (num === 0) {
+    return `"${basePattern}[0-${maxDigit}]"`;
+  }
+  return `"${basePattern}[${num}-${maxDigit}]"`;
 }
 
 let currentSearchTerm = '';
@@ -909,7 +941,8 @@ function saveInputState() {
     const state = {};
     const ids = [
         'itemQuantityInput', 'packSizeInput', 'rarityInput', 'rareMonsterInput', 'magicMonsterInput',
-        'waystoneInput', 'effectivenessInput', 'deliriumInput', 'packAdditionCheckbox'
+        'waystoneInput', 'effectivenessInput', 'mapMonsterRarityInput', 'reviveInput',
+        'deliriumInput', 'packAdditionCheckbox'
     ];
     ids.forEach(id => {
         const el = document.getElementById(id);
@@ -926,11 +959,13 @@ function loadInputState() {
     const mapping = {
         'itemQuantityInput': state.itemQuantity || '',
         'packSizeInput': state.packSize || '',
-        'rarityInput': state.rarity || '',
+        'rarityInput': state.rarity || state.mapItemRarity || '',
         'rareMonsterInput': state.rareMonster || '',
         'magicMonsterInput': state.magicMonster || '',
         'waystoneInput': state.waystone || '',
         'effectivenessInput': state.effectiveness || '',
+        'mapMonsterRarityInput': state.mapMonsterRarity || '',
+        'reviveInput': state.revive || '',
         'deliriumInput': state.delirium || '',
         'packAdditionCheckbox': state.packAddition || false
     };
@@ -1096,8 +1131,10 @@ function validateInputs() {
     'itemQuantityInput',
     'packSizeInput',
     'rarityInput',
+    'reviveInput',
     'waystoneInput',
     'effectivenessInput',
+    'mapMonsterRarityInput',
     'rareMonsterInput',
     'magicMonsterInput'
   ];
@@ -1106,8 +1143,14 @@ function validateInputs() {
     const el = document.getElementById(id);
     if (!el) continue;
     const value = el.value;
-    if (value && (isNaN(value) || value < 0)) {
+    if (value === '') continue;
+    if (isNaN(value) || value < 0) {
       alert(`${id.replace('Input', '')} には0以上の数値を入力してください`);
+      document.getElementById(id).focus();
+      return false;
+    }
+    if (id === 'reviveInput' && value > 9) {
+      alert('復活 には0〜9の数値を入力してください');
       document.getElementById(id).focus();
       return false;
     }

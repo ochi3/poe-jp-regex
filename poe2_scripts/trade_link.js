@@ -16,6 +16,9 @@ function buildTradeUrl() {
     const iiq = parseInt(document.getElementById('itemQuantityInput').value);
     const packsize = parseInt(document.getElementById('packSizeInput').value);
     const iir = parseInt(document.getElementById('rarityInput').value);
+    const mapMonsterRarity = parseInt(document.getElementById('mapMonsterRarityInput').value);
+    const reviveRaw = document.getElementById('reviveInput').value;
+    const revive = reviveRaw === '' ? NaN : parseInt(reviveRaw, 10);
     const waystoneDrop = parseInt(document.getElementById('waystoneInput').value);
     const delirium = parseInt(document.getElementById('deliriumInput').value);
     const rareMonster = parseInt(document.getElementById('rareMonsterInput').value);
@@ -25,7 +28,11 @@ function buildTradeUrl() {
 
     // checkedModsから選択されたModを取得
     const hasCheckedMods = checkedMods && checkedMods.size > 0;
-    const hasInputs = !!(minModCount || iiq || packsize || iir || waystoneDrop || delirium || rareMonster || magicMonster || mapTierMin || mapTierMax);
+    const hasInputs = !!(
+        minModCount || iiq || packsize || iir || mapMonsterRarity
+        || !isNaN(revive) || waystoneDrop || delirium || rareMonster || magicMonster
+        || mapTierMin || mapTierMax
+    );
 
     if (!hasCheckedMods && !hasInputs) {
         alert("検索条件を一つ以上指定してください。");
@@ -182,7 +189,11 @@ function buildTradeUrl() {
     }
 
     // ウェイストーン（マップ）フィルタ
-    if (mapTierMin || mapTierMax || iiq > 0 || packsize > 0 || iir > 0 || waystoneDrop > 0 || rareMonster > 0 || magicMonster > 0) {
+    const waystoneIir = iir || 0;
+    if (
+        mapTierMin || mapTierMax || iiq > 0 || packsize > 0 || waystoneIir > 0
+        || waystoneDrop > 0 || rareMonster > 0 || magicMonster > 0 || !isNaN(revive)
+    ) {
         filters.map_filters = {
             filters: {}
         };
@@ -196,10 +207,11 @@ function buildTradeUrl() {
 
         if (iiq > 0) filters.map_filters.filters.map_iiq = { min: iiq };
         if (packsize > 0) filters.map_filters.filters.map_packsize = { min: packsize };
-        if (iir > 0) filters.map_filters.filters.map_iir = { min: iir };
+        if (waystoneIir > 0) filters.map_filters.filters.map_iir = { min: waystoneIir };
         if (waystoneDrop > 0) filters.map_filters.filters.map_bonus = { min: waystoneDrop };
         if (rareMonster > 0) filters.map_filters.filters.map_rare_monsters = { min: rareMonster };
         if (magicMonster > 0) filters.map_filters.filters.map_magic_monsters = { min: magicMonster };
+        if (!isNaN(revive)) filters.map_filters.filters.map_revives = { min: revive };
     }
 
     // フィルタをクエリオブジェクトに割り当て
