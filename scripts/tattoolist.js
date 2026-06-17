@@ -4,7 +4,7 @@ const tattoolist = {
     "description": "火耐性 +6%",
     "enDescription": "",
     "attribute": "STR",
-    "chaosValue": "81.15",
+    "chaosValue": "67.27",
     "regex": "火歩",
     "enRegex": "u f"
   },
@@ -31,7 +31,7 @@ const tattoolist = {
     "description": "5%の確率で敵を発火させる",
     "enDescription": "",
     "attribute": "STR",
-    "chaosValue": "100.6",
+    "chaosValue": "108.2",
     "regex": "フのウ",
     "enRegex": "u Warm"
   },
@@ -40,7 +40,7 @@ const tattoolist = {
     "description": "トーテムのライフが5%増加する",
     "enDescription": "",
     "attribute": "STR",
-    "chaosValue": "22.73",
+    "chaosValue": "23.33",
     "regex": "木彫",
     "enRegex": "woo"
   },
@@ -67,7 +67,7 @@ const tattoolist = {
     "description": "アタックダメージの0.5%をライフとしてリーチする",
     "enDescription": "",
     "attribute": "STR",
-    "chaosValue": "1",
+    "chaosValue": "0.8333",
     "regex": "血飲",
     "enRegex": "dri"
   },
@@ -76,7 +76,7 @@ const tattoolist = {
     "description": "10%の確率で出血を無効化する",
     "enDescription": "",
     "attribute": "STR",
-    "chaosValue": "2.14",
+    "chaosValue": "2.5",
     "regex": "反逆",
     "enRegex": "Reb"
   },
@@ -85,7 +85,7 @@ const tattoolist = {
     "description": "物理ダメージが5%増加する",
     "enDescription": "",
     "attribute": "STR",
-    "chaosValue": "13.03",
+    "chaosValue": "12.4",
     "regex": "ァの戦",
     "enRegex": "Phy"
   },
@@ -166,7 +166,7 @@ const tattoolist = {
     "description": "ウォークライクールダウン解消レートが8%増加する",
     "enDescription": "",
     "attribute": "STR",
-    "chaosValue": "9.91",
+    "chaosValue": "9.75",
     "regex": "ーコ",
     "enRegex": "rca"
   },
@@ -193,7 +193,7 @@ const tattoolist = {
     "description": "アーマーが6%増加する",
     "enDescription": "",
     "attribute": "STR",
-    "chaosValue": "6.15",
+    "chaosValue": "8.86",
     "regex": "ライの戦",
     "enRegex": "ai W"
   },
@@ -220,7 +220,7 @@ const tattoolist = {
     "description": "クリティカルストライクから受ける追加ダメージが5%減少する",
     "enDescription": "",
     "attribute": "INT",
-    "chaosValue": "90.9",
+    "chaosValue": "96.22",
     "regex": "イの亀",
     "enRegex": "extr"
   },
@@ -265,7 +265,7 @@ const tattoolist = {
     "description": "10%の確率でスタンを無効化する",
     "enDescription": "",
     "attribute": "DEX",
-    "chaosValue": "2.3",
+    "chaosValue": "2.94",
     "regex": "タイ",
     "enRegex": "tid"
   },
@@ -283,7 +283,7 @@ const tattoolist = {
     "description": "アタックによるヒット時に5%の確率で敵を盲目にする",
     "enDescription": "",
     "attribute": "DEX",
-    "chaosValue": "46",
+    "chaosValue": "44",
     "regex": "オの戦",
     "enRegex": "bli"
   },
@@ -292,7 +292,7 @@ const tattoolist = {
     "description": "呪印の効果が4%増加する",
     "enDescription": "",
     "attribute": "DEX",
-    "chaosValue": "19.94",
+    "chaosValue": "22.53",
     "regex": "オの偵",
     "enRegex": "rks"
   },
@@ -319,7 +319,7 @@ const tattoolist = {
     "description": "冷気耐性 +6%",
     "enDescription": "",
     "attribute": "DEX",
-    "chaosValue": "4.36",
+    "chaosValue": "4.72",
     "regex": "監視",
     "enRegex": "Moo"
   },
@@ -328,7 +328,7 @@ const tattoolist = {
     "description": "10%の確率で冷却を無効化する 10%の確率で凍結を無効化する",
     "enDescription": "",
     "attribute": "DEX",
-    "chaosValue": "4.73",
+    "chaosValue": "5.64",
     "regex": "イの偵",
     "enRegex": "led"
   },
@@ -337,7 +337,7 @@ const tattoolist = {
     "description": "冷気ダメージが5%増加する",
     "enDescription": "",
     "attribute": "DEX",
-    "chaosValue": "5.48",
+    "chaosValue": "7.26",
     "regex": "グイの戦",
     "enRegex": "d Co"
   },
@@ -382,7 +382,7 @@ const tattoolist = {
     "description": "回避力が6%増加する",
     "enDescription": "",
     "attribute": "DEX",
-    "chaosValue": "9.55",
+    "chaosValue": "9.65",
     "regex": "マコの偵",
     "enRegex": "Eva"
   },
@@ -391,7 +391,7 @@ const tattoolist = {
     "description": "グローバル命中力が5%増加する",
     "enDescription": "",
     "attribute": "DEX",
-    "chaosValue": "12.74",
+    "chaosValue": "13.49",
     "regex": "射手",
     "enRegex": "acc"
   },
@@ -400,7 +400,7 @@ const tattoolist = {
     "description": "投射物スピードが5%増加する",
     "enDescription": "",
     "attribute": "DEX",
-    "chaosValue": "13.13",
+    "chaosValue": "14.48",
     "regex": "狙撃",
     "enRegex": "Sni"
   },
@@ -409,7 +409,7 @@ const tattoolist = {
     "description": "移動スピードが2%増加する",
     "enDescription": "",
     "attribute": "DEX",
-    "chaosValue": "586.7",
+    "chaosValue": "586.8",
     "regex": "俊足",
     "enRegex": "fle"
   },
@@ -418,7 +418,7 @@ const tattoolist = {
     "description": "プレイヤーが移動している間のライフ自動回復レートが10%増加する",
     "enDescription": "",
     "attribute": "DEX",
-    "chaosValue": "746.8",
+    "chaosValue": "684.5",
     "regex": "マコのシ",
     "enRegex": "ppr"
   },
@@ -445,7 +445,7 @@ const tattoolist = {
     "description": "最大エナジーシールドが3%増加する",
     "enDescription": "",
     "attribute": "INT",
-    "chaosValue": "42.33",
+    "chaosValue": "64.99",
     "regex": "ラの戦",
     "enRegex": "3% I"
   },
@@ -472,7 +472,7 @@ const tattoolist = {
     "description": "混沌耐性 +3%",
     "enDescription": "",
     "attribute": "INT",
-    "chaosValue": "16.91",
+    "chaosValue": "18.19",
     "regex": "語り",
     "enRegex": "s res"
   },
@@ -535,7 +535,7 @@ const tattoolist = {
     "description": "フラスコ効果の持続時間が4%増加する",
     "enDescription": "",
     "attribute": "DEX",
-    "chaosValue": "2.93",
+    "chaosValue": "2.88",
     "regex": "薬草",
     "enRegex": "erb"
   },
@@ -571,7 +571,7 @@ const tattoolist = {
     "description": "雷耐性 +6%",
     "enDescription": "",
     "attribute": "INT",
-    "chaosValue": "8.16",
+    "chaosValue": "6.68",
     "regex": "のスト",
     "enRegex": "orm"
   },
@@ -580,7 +580,7 @@ const tattoolist = {
     "description": "プレイヤーに対する感電の効果が10%減少する",
     "enDescription": "",
     "attribute": "INT",
-    "chaosValue": "8.39",
+    "chaosValue": "11.16",
     "regex": "ラコの偵",
     "enRegex": "f Sh"
   },
@@ -589,7 +589,7 @@ const tattoolist = {
     "description": "雷ダメージが5%増加する",
     "enDescription": "",
     "attribute": "INT",
-    "chaosValue": "7.67",
+    "chaosValue": "11.71",
     "regex": "コの戦",
     "enRegex": "g d"
   },
@@ -598,7 +598,7 @@ const tattoolist = {
     "description": "アタックブロック率 +1%",
     "enDescription": "",
     "attribute": "STR",
-    "chaosValue": "1304",
+    "chaosValue": "1243",
     "regex": "のシー",
     "enRegex": "mako Sh"
   },
@@ -607,7 +607,7 @@ const tattoolist = {
     "description": "5%の確率で敵を感電させる",
     "enDescription": "",
     "attribute": "INT",
-    "chaosValue": "10.29",
+    "chaosValue": "13.29",
     "regex": "ァラコのシャ",
     "enRegex": "to Sh"
   },
