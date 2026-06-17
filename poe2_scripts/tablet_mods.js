@@ -405,8 +405,8 @@ const tabletModList = {
     ],
     "domain": "tablet"
   },
-  "マップの母胎ギフトは(##)%の確率で#レベル高いものがドロップする": {
-    "mod": "マップの母胎ギフトは(##)%の確率で#レベル高いものがドロップする",
+  "マップの母胎ギフトは(##)%の確率で1レベル高いものがドロップする": {
+    "mod": "マップの母胎ギフトは(##)%の確率で1レベル高いものがドロップする",
     "engMod": "Wombgifts have (##)% chance to drop one Level higher in Map",
     "value": "10-30",
     "type": "Suffix",

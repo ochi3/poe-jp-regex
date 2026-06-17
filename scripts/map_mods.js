@@ -1,9 +1,9 @@
-// tools/extract_map_mods.py によって自動生成されました
+// tools/extract_map_mods.py によって自動生成されました (source: repoe)
 const mapModList = {
   "エリアには多数のトーテムが出現する": {
     "mod": "エリアには多数のトーテムが出現する",
     "engMod": "Area contains many Totems",
-    "value": "1",
+    "value": "10|6|4|1",
     "type": "Prefix",
     "weight": 1000,
     "tier": 9,
@@ -23,7 +23,7 @@ const mapModList = {
   "レアモンスターの数が(##)%増加する": {
     "mod": "レアモンスターの数が(##)%増加する",
     "engMod": "(##)% increased number of Rare Monsters",
-    "value": "20-30",
+    "value": "13|8|5|1|20-30|1",
     "type": "Prefix",
     "weight": 1000,
     "tier": 1,
@@ -43,7 +43,7 @@ const mapModList = {
   "マジックモンスターの数が(##)%増加する": {
     "mod": "マジックモンスターの数が(##)%増加する",
     "engMod": "(##)% increased Magic Monsters",
-    "value": "20-30",
+    "value": "10|6|4|1|20-30|1",
     "type": "Suffix",
     "weight": 1000,
     "tier": 0,
@@ -63,7 +63,7 @@ const mapModList = {
   "エリアにはスケルトンが生息している": {
     "mod": "エリアにはスケルトンが生息している",
     "engMod": "Area is inhabited by Skeletons",
-    "value": "1",
+    "value": "13|8|5|1",
     "type": "Prefix",
     "weight": 150,
     "tier": 4,
@@ -83,7 +83,7 @@ const mapModList = {
   "エリアにはゴートマンが生息している": {
     "mod": "エリアにはゴートマンが生息している",
     "engMod": "Area is inhabited by Goatmen",
-    "value": "1",
+    "value": "13|8|5|1",
     "type": "Prefix",
     "weight": 150,
     "tier": 4,
@@ -103,7 +103,7 @@ const mapModList = {
   "エリアにはシーウィッチとその幼体が生息している": {
     "mod": "エリアにはシーウィッチとその幼体が生息している",
     "engMod": "Area is inhabited by Sea Witches and their Spawn",
-    "value": "1",
+    "value": "13|8|5|1",
     "type": "Prefix",
     "weight": 150,
     "tier": 4,
@@ -123,7 +123,7 @@ const mapModList = {
   "エリアにはアンデッドが生息している": {
     "mod": "エリアにはアンデッドが生息している",
     "engMod": "Area is inhabited by Undead",
-    "value": "1",
+    "value": "13|8|5|1",
     "type": "Prefix",
     "weight": 150,
     "tier": 4,
@@ -143,7 +143,7 @@ const mapModList = {
   "エリアには遠距離攻撃を行うモンスターが生息している": {
     "mod": "エリアには遠距離攻撃を行うモンスターが生息している",
     "engMod": "Area is inhabited by ranged monsters",
-    "value": "1",
+    "value": "13|8|5|1",
     "type": "Prefix",
     "weight": 150,
     "tier": 4,
@@ -163,7 +163,7 @@ const mapModList = {
   "エリアには動物が生息している": {
     "mod": "エリアには動物が生息している",
     "engMod": "Area is inhabited by Animals",
-    "value": "1",
+    "value": "16|9|6|1",
     "type": "Prefix",
     "weight": 150,
     "tier": 4,
@@ -183,7 +183,7 @@ const mapModList = {
   "エリアにはデーモンが生息している": {
     "mod": "エリアにはデーモンが生息している",
     "engMod": "Area is inhabited by Demons",
-    "value": "1",
+    "value": "13|8|5|1",
     "type": "Prefix",
     "weight": 150,
     "tier": 4,
@@ -203,7 +203,7 @@ const mapModList = {
   "エリアにはヒューマノイドが生息している": {
     "mod": "エリアにはヒューマノイドが生息している",
     "engMod": "Area is inhabited by Humanoids",
-    "value": "1",
+    "value": "13|8|5|1",
     "type": "Prefix",
     "weight": 150,
     "tier": 4,
@@ -223,7 +223,7 @@ const mapModList = {
   "エリアにはソラリスの狂信者が出現する": {
     "mod": "エリアにはソラリスの狂信者が出現する",
     "engMod": "Area is inhabited by Solaris fanatics",
-    "value": "1",
+    "value": "13|8|5|1",
     "type": "Prefix",
     "weight": 150,
     "tier": 4,
@@ -243,7 +243,7 @@ const mapModList = {
   "エリアにはルナリスの狂信者が出現する": {
     "mod": "エリアにはルナリスの狂信者が出現する",
     "engMod": "Area is inhabited by Lunaris fanatics",
-    "value": "1",
+    "value": "13|8|5|1",
     "type": "Prefix",
     "weight": 150,
     "tier": 4,
@@ -263,7 +263,7 @@ const mapModList = {
   "エリアにはゴーストが出現する": {
     "mod": "エリアにはゴーストが出現する",
     "engMod": "Area is inhabited by Ghosts",
-    "value": "1",
+    "value": "13|8|5|1",
     "type": "Prefix",
     "weight": 150,
     "tier": 4,
@@ -283,7 +283,7 @@ const mapModList = {
   "エリアにはキタヴァの崇拝者が出現する": {
     "mod": "エリアにはキタヴァの崇拝者が出現する",
     "engMod": "Area is inhabited by Cultists of Kitava",
-    "value": "1",
+    "value": "16|9|6|1",
     "type": "Prefix",
     "weight": 150,
     "tier": 4,
@@ -303,7 +303,7 @@ const mapModList = {
   "エリアのモンスターの種類が増える": {
     "mod": "エリアのモンスターの種類が増える",
     "engMod": "Area has increased monster variety",
-    "value": "3",
+    "value": "10|6|4|3",
     "type": "Prefix",
     "weight": 1000,
     "tier": 8,
@@ -323,7 +323,7 @@ const mapModList = {
   "モンスターのスキルは追加で#回連鎖する": {
     "mod": "モンスターのスキルは追加で#回連鎖する",
     "engMod": "Monsters' skills Chain # additional times",
-    "value": "2",
+    "value": "16|9|6|2",
     "type": "Prefix",
     "weight": 1000,
     "tier": 380,
@@ -343,7 +343,7 @@ const mapModList = {
   "モンスターはヘックスプルーフを持つ": {
     "mod": "モンスターはヘックスプルーフを持つ",
     "engMod": "Monsters are Hexproof",
-    "value": "1",
+    "value": "16|9|6|1",
     "type": "Prefix",
     "weight": 800,
     "tier": 150,
@@ -363,7 +363,7 @@ const mapModList = {
   "モンスターはヒット時に毒を付与する": {
     "mod": "モンスターはヒット時に毒を付与する",
     "engMod": "Monsters Poison on Hit",
-    "value": "1",
+    "value": "16|9|6|1",
     "type": "Suffix",
     "weight": 1000,
     "tier": 390,
@@ -383,7 +383,7 @@ const mapModList = {
   "プレイヤーは曝露を付与することができない": {
     "mod": "プレイヤーは曝露を付与することができない",
     "engMod": "Players cannot inflict Exposure",
-    "value": "1",
+    "value": "10|6|4|1",
     "type": "Suffix",
     "weight": 1000,
     "tier": 150,
@@ -403,7 +403,7 @@ const mapModList = {
   "エリアには#体のユニークボスがいる": {
     "mod": "エリアには#体のユニークボスがいる",
     "engMod": "Area contains two Unique Bosses",
-    "value": "1",
+    "value": "19|11|7|1",
     "type": "Prefix",
     "weight": 1000,
     "tier": 90,
@@ -423,7 +423,7 @@ const mapModList = {
   "モンスターはスタンを受けることがない|モンスターのライフが(##)%上昇する": {
     "mod": "モンスターはスタンを受けることがない|モンスターのライフが(##)%上昇する",
     "engMod": "Monsters cannot be Stunned|(##)% more Monster Life",
-    "value": "1|25-30",
+    "value": "13|8|5|1|25-30",
     "type": "Prefix",
     "weight": 1000,
     "tier": 100,
@@ -444,7 +444,7 @@ const mapModList = {
   "モンスターは投射物を追加で#個放つ": {
     "mod": "モンスターは投射物を追加で#個放つ",
     "engMod": "Monsters fire # additional Projectiles",
-    "value": "2",
+    "value": "19|11|7|2",
     "type": "Prefix",
     "weight": 1000,
     "tier": 440,
@@ -464,7 +464,7 @@ const mapModList = {
   "モンスターの効果範囲が#%増加する": {
     "mod": "モンスターの効果範囲が#%増加する",
     "engMod": "Monsters have #% increased Area of Effect",
-    "value": "100",
+    "value": "13|8|5|100",
     "type": "Suffix",
     "weight": 800,
     "tier": 400,
@@ -484,7 +484,7 @@ const mapModList = {
   "モンスターのクリティカル率が(##)%増加する|モンスターのクリティカルダメージ倍率 +(##)%": {
     "mod": "モンスターのクリティカル率が(##)%増加する|モンスターのクリティカルダメージ倍率 +(##)%",
     "engMod": "Monsters have (##)% increased Critical Strike Chance|+(##)% to Monster Critical Strike Multiplier",
-    "value": "360-400|41-45",
+    "value": "16|9|6|360-400|41-45",
     "type": "Suffix",
     "weight": 800,
     "tier": 500,
@@ -505,7 +505,7 @@ const mapModList = {
   "モンスターの物理ダメージ軽減率 +#%": {
     "mod": "モンスターの物理ダメージ軽減率 +#%",
     "engMod": "+#% Monster Physical Damage Reduction",
-    "value": "40",
+    "value": "13|8|5|40",
     "type": "Prefix",
     "weight": 800,
     "tier": 150,
@@ -525,7 +525,7 @@ const mapModList = {
   "モンスターのライフが(##)%上昇する": {
     "mod": "モンスターのライフが(##)%上昇する",
     "engMod": "(##)% more Monster Life",
-    "value": "40-49",
+    "value": "13|8|5|40-49",
     "type": "Prefix",
     "weight": 1000,
     "tier": 100,
@@ -545,7 +545,7 @@ const mapModList = {
   "モンスターのダメージが(##)%増加する": {
     "mod": "モンスターのダメージが(##)%増加する",
     "engMod": "(##)% increased Monster Damage",
-    "value": "22-25",
+    "value": "19|11|7|22-25",
     "type": "Prefix",
     "weight": 1000,
     "tier": 370,
@@ -565,7 +565,7 @@ const mapModList = {
   "モンスターは物理ダメージの(##)%を追加火ダメージとして与える": {
     "mod": "モンスターは物理ダメージの(##)%を追加火ダメージとして与える",
     "engMod": "Monsters deal (##)% extra Physical Damage as Fire",
-    "value": "90-110",
+    "value": "16|9|6|90-110",
     "type": "Prefix",
     "weight": 1000,
     "tier": 450,
@@ -585,7 +585,7 @@ const mapModList = {
   "モンスターは物理ダメージの(##)%を追加冷気ダメージとして与える": {
     "mod": "モンスターは物理ダメージの(##)%を追加冷気ダメージとして与える",
     "engMod": "Monsters deal (##)% extra Physical Damage as Cold",
-    "value": "90-110",
+    "value": "16|9|6|90-110",
     "type": "Prefix",
     "weight": 1000,
     "tier": 450,
@@ -605,7 +605,7 @@ const mapModList = {
   "モンスターは物理ダメージの(##)%を追加雷ダメージとして与える": {
     "mod": "モンスターは物理ダメージの(##)%を追加雷ダメージとして与える",
     "engMod": "Monsters deal (##)% extra Physical Damage as Lightning",
-    "value": "90-110",
+    "value": "16|9|6|90-110",
     "type": "Prefix",
     "weight": 1000,
     "tier": 450,
@@ -625,7 +625,7 @@ const mapModList = {
   "モンスターはその物理ダメージの(##)%を追加混沌ダメージとして獲得する|モンスターによるヒット時に衰弱を#秒間付与する": {
     "mod": "モンスターはその物理ダメージの(##)%を追加混沌ダメージとして獲得する|モンスターによるヒット時に衰弱を#秒間付与する",
     "engMod": "Monsters gain (##)% of their Physical Damage as Extra Chaos Damage|Monsters Inflict Withered for # seconds on Hit",
-    "value": "31-35|100",
+    "value": "16|9|6|31-35|100",
     "type": "Prefix",
     "weight": 500,
     "tier": 455,
@@ -646,7 +646,7 @@ const mapModList = {
   "モンスターの移動スピードが(##)%増加する|モンスターのアタックスピードが(##)%増加する|モンスターのキャストスピードが(##)%増加する": {
     "mod": "モンスターの移動スピードが(##)%増加する|モンスターのアタックスピードが(##)%増加する|モンスターのキャストスピードが(##)%増加する",
     "engMod": "(##)% increased Monster Movement Speed|(##)% increased Monster Attack Speed|(##)% increased Monster Cast Speed",
-    "value": "25-30|35-45|35-45",
+    "value": "19|11|7|25-30|35-45|35-45",
     "type": "Prefix",
     "weight": 1000,
     "tier": 420,
@@ -668,7 +668,7 @@ const mapModList = {
   "モンスターは物理ダメージの#%を反射する": {
     "mod": "モンスターは物理ダメージの#%を反射する",
     "engMod": "Monsters reflect #% of Physical Damage",
-    "value": "18",
+    "value": "10|6|4|18",
     "type": "Prefix",
     "weight": 600,
     "tier": 1000,
@@ -688,7 +688,7 @@ const mapModList = {
   "モンスターは元素ダメージの#%を反射する": {
     "mod": "モンスターは元素ダメージの#%を反射する",
     "engMod": "Monsters reflect #% of Elemental Damage",
-    "value": "18",
+    "value": "10|6|4|18",
     "type": "Prefix",
     "weight": 600,
     "tier": 1000,
@@ -708,7 +708,7 @@ const mapModList = {
   "全てのプレイヤーのライフとエナジーシールドの回復レートが#%低下する": {
     "mod": "全てのプレイヤーのライフとエナジーシールドの回復レートが#%低下する",
     "engMod": "Players have #% less Recovery Rate of Life and Energy Shield",
-    "value": "60",
+    "value": "-16|-9|-6|60",
     "type": "Suffix",
     "weight": 750,
     "tier": 650,
@@ -728,7 +728,7 @@ const mapModList = {
   "エリアには燃焼領域がまだらに存在する": {
     "mod": "エリアには燃焼領域がまだらに存在する",
     "engMod": "Area has patches of Burning Ground",
-    "value": "16000|28|18",
+    "value": "10|6|4|16000|28|18",
     "type": "Suffix",
     "weight": 250,
     "tier": 310,
@@ -748,7 +748,7 @@ const mapModList = {
   "エリアには冷却領域がまだらに存在する": {
     "mod": "エリアには冷却領域がまだらに存在する",
     "engMod": "Area has patches of Chilled Ground",
-    "value": "30|28|18",
+    "value": "10|6|4|30|28|18",
     "type": "Suffix",
     "weight": 250,
     "tier": 310,
@@ -768,7 +768,7 @@ const mapModList = {
   "エリアには感電領域がまだらに存在し受けるダメージを#%増加させる": {
     "mod": "エリアには感電領域がまだらに存在し受けるダメージを#%増加させる",
     "engMod": "Area has patches of Shocked Ground which increase Damage taken by #%",
-    "value": "50|28|18",
+    "value": "10|6|4|50|28|18",
     "type": "Suffix",
     "weight": 250,
     "tier": 310,
@@ -788,7 +788,7 @@ const mapModList = {
   "エリアには冒涜領域がまだらに存在する": {
     "mod": "エリアには冒涜領域がまだらに存在する",
     "engMod": "Area has patches of desecrated ground",
-    "value": "14000|28|18",
+    "value": "10|6|4|14000|28|18",
     "type": "Suffix",
     "weight": 250,
     "tier": 310,
@@ -808,7 +808,7 @@ const mapModList = {
   "プレイヤーはエレメンタルウィークネスの呪いを受ける": {
     "mod": "プレイヤーはエレメンタルウィークネスの呪いを受ける",
     "engMod": "Players are Cursed with Elemental Weakness",
-    "value": "15",
+    "value": "13|8|5|15",
     "type": "Suffix",
     "weight": 1000,
     "tier": 360,
@@ -828,7 +828,7 @@ const mapModList = {
   "プレイヤーはヴァルネラビリティの呪いを受ける": {
     "mod": "プレイヤーはヴァルネラビリティの呪いを受ける",
     "engMod": "Players are Cursed with Vulnerability",
-    "value": "15",
+    "value": "13|8|5|15",
     "type": "Suffix",
     "weight": 1000,
     "tier": 360,
@@ -848,7 +848,7 @@ const mapModList = {
   "プレイヤーはエンフィーブルの呪いを受ける": {
     "mod": "プレイヤーはエンフィーブルの呪いを受ける",
     "engMod": "Players are Cursed with Enfeeble",
-    "value": "15",
+    "value": "13|8|5|15",
     "type": "Suffix",
     "weight": 1000,
     "tier": 360,
@@ -868,7 +868,7 @@ const mapModList = {
   "プレイヤーはテンポラルチェーンの呪いを受ける": {
     "mod": "プレイヤーはテンポラルチェーンの呪いを受ける",
     "engMod": "Players are Cursed with Temporal Chains",
-    "value": "15",
+    "value": "13|8|5|15",
     "type": "Suffix",
     "weight": 1000,
     "tier": 360,
@@ -888,7 +888,7 @@ const mapModList = {
   "全てのプレイヤーはライフ、マナおよびエナジーシールドを自動回復することができない": {
     "mod": "全てのプレイヤーはライフ、マナおよびエナジーシールドを自動回復することができない",
     "engMod": "Players cannot Regenerate Life, Mana or Energy Shield",
-    "value": "1",
+    "value": "16|9|6|1",
     "type": "Suffix",
     "weight": 600,
     "tier": 700,
@@ -908,7 +908,7 @@ const mapModList = {
   "プレイヤーの全ての耐性の最大値 -(##)%": {
     "mod": "プレイヤーの全ての耐性の最大値 -(##)%",
     "engMod": "Players have -(##)% to all maximum Resistances",
-    "value": "-12--9",
+    "value": "19|11|7|-12--9",
     "type": "Suffix",
     "weight": 1000,
     "tier": 980,
@@ -928,7 +928,7 @@ const mapModList = {
   "ユニークボスのダメージが#%増加する|ユニークボスのアタックスピードおよびキャストスピードが#%増加する": {
     "mod": "ユニークボスのダメージが#%増加する|ユニークボスのアタックスピードおよびキャストスピードが#%増加する",
     "engMod": "Unique Boss deals #% increased Damage|Unique Boss has #% increased Attack and Cast Speed",
-    "value": "25|30",
+    "value": "16|9|6|25|30",
     "type": "Prefix",
     "weight": 1000,
     "tier": 420,
@@ -949,7 +949,7 @@ const mapModList = {
   "ユニークボスのライフが#%増加する|ユニークボスの効果範囲が#%増加する": {
     "mod": "ユニークボスのライフが#%増加する|ユニークボスの効果範囲が#%増加する",
     "engMod": "Unique Boss has #% increased Life|Unique Boss has #% increased Area of Effect",
-    "value": "35|70",
+    "value": "13|8|5|35|70",
     "type": "Prefix",
     "weight": 1000,
     "tier": 400,
@@ -970,7 +970,7 @@ const mapModList = {
   "モンスターからリーチできない": {
     "mod": "モンスターからリーチできない",
     "engMod": "Monsters cannot be Leeched from",
-    "value": "100|100",
+    "value": "16|9|6|100|100",
     "type": "Suffix",
     "weight": 600,
     "tier": 600,
@@ -990,7 +990,7 @@ const mapModList = {
   "モンスターは#%の確率で元素系状態異常を無効化する": {
     "mod": "モンスターは#%の確率で元素系状態異常を無効化する",
     "engMod": "Monsters have #% chance to Avoid Elemental Ailments",
-    "value": "70",
+    "value": "10|6|4|70",
     "type": "Suffix",
     "weight": 800,
     "tier": 150,
@@ -1010,7 +1010,7 @@ const mapModList = {
   "モンスターがクリティカルストライクから受ける追加ダメージが(##)%減少する": {
     "mod": "モンスターがクリティカルストライクから受ける追加ダメージが(##)%減少する",
     "engMod": "Monsters take (##)% reduced Extra Damage from Critical Strikes",
-    "value": "-40--36",
+    "value": "-10|-6|-4|-40--36",
     "type": "Suffix",
     "weight": 800,
     "tier": 250,
@@ -1030,7 +1030,7 @@ const mapModList = {
   "全てのプレイヤーの獲得フラスコチャージが#%減少する": {
     "mod": "全てのプレイヤーの獲得フラスコチャージが#%減少する",
     "engMod": "Players gain #% reduced Flask Charges",
-    "value": "50",
+    "value": "-13|-8|-5|50",
     "type": "Suffix",
     "weight": 800,
     "tier": 210,
@@ -1050,7 +1050,7 @@ const mapModList = {
   "モンスターに対する呪いの効果が#%低下する": {
     "mod": "モンスターに対する呪いの効果が#%低下する",
     "engMod": "#% less effect of Curses on Monsters",
-    "value": "60",
+    "value": "-13|-8|-5|60",
     "type": "Prefix",
     "weight": 800,
     "tier": 363,
@@ -1070,7 +1070,7 @@ const mapModList = {
   "モンスターはヒット時に#%の確率で発火、凍結および感電を付与する": {
     "mod": "モンスターはヒット時に#%の確率で発火、凍結および感電を付与する",
     "engMod": "Monsters have a #% chance to Ignite, Freeze and Shock on Hit",
-    "value": "20",
+    "value": "13|8|5|20",
     "type": "Prefix",
     "weight": 800,
     "tier": 98,
@@ -1090,7 +1090,7 @@ const mapModList = {
   "エリアにはアボミネーションが出現する": {
     "mod": "エリアにはアボミネーションが出現する",
     "engMod": "Area is inhabited by Abominations",
-    "value": "1",
+    "value": "16|9|6|1",
     "type": "Prefix",
     "weight": 150,
     "tier": 4,
@@ -1110,7 +1110,7 @@ const mapModList = {
   "モンスターのアクションスピードは基礎値よりも低く修正されることがない|モンスターの移動スピードは基礎値よりも低く修正されることがない|モンスターは挑発を受けることがない": {
     "mod": "モンスターのアクションスピードは基礎値よりも低く修正されることがない|モンスターの移動スピードは基礎値よりも低く修正されることがない|モンスターは挑発を受けることがない",
     "engMod": "Monsters' Action Speed cannot be modified to below Base Value|Monsters' Movement Speed cannot be modified to below Base Value|Monsters cannot be Taunted",
-    "value": "1|1",
+    "value": "10|6|4|1|1",
     "type": "Prefix",
     "weight": 650,
     "tier": 89,
@@ -1132,7 +1132,7 @@ const mapModList = {
   "モンスターの全てのダメージにより発火が付与される": {
     "mod": "モンスターの全てのダメージにより発火が付与される",
     "engMod": "All Monster Damage from Hits always Ignites",
-    "value": "1",
+    "value": "10|6|4|1",
     "type": "Prefix",
     "weight": 650,
     "tier": 99,
@@ -1152,7 +1152,7 @@ const mapModList = {
   "モンスターの混沌耐性 +#%|モンスターの元素耐性 +#%": {
     "mod": "モンスターの混沌耐性 +#%|モンスターの元素耐性 +#%",
     "engMod": "+#% Monster Chaos Resistance|+#% Monster Elemental Resistances",
-    "value": "25|40",
+    "value": "13|8|5|25|40",
     "type": "Prefix",
     "weight": 800,
     "tier": 100,
@@ -1173,7 +1173,7 @@ const mapModList = {
   "モンスターは#%の確率で毒、串刺しおよび出血を無効化する": {
     "mod": "モンスターは#%の確率で毒、串刺しおよび出血を無効化する",
     "engMod": "Monsters have a #% chance to avoid Poison, Impale, and Bleeding",
-    "value": "50",
+    "value": "10|6|4|50",
     "type": "Prefix",
     "weight": 800,
     "tier": 390,
@@ -1193,7 +1193,7 @@ const mapModList = {
   "全てのプレイヤーのブロック率が#%減少する|全てのプレイヤーのアーマーが#%低下する": {
     "mod": "全てのプレイヤーのブロック率が#%減少する|全てのプレイヤーのアーマーが#%低下する",
     "engMod": "Players have #% reduced Chance to Block|Players have #% less Armour",
-    "value": "40|30",
+    "value": "-13|-8|-5|40|30",
     "type": "Suffix",
     "weight": 800,
     "tier": 295,
@@ -1214,7 +1214,7 @@ const mapModList = {
   "全てのプレイヤーはスペルダメージを抑制して防ぐダメージ割合が#%される|モンスターの命中力が#%増加する": {
     "mod": "全てのプレイヤーはスペルダメージを抑制して防ぐダメージ割合が#%される|モンスターの命中力が#%増加する",
     "engMod": "Players have #% to amount of Suppressed Spell Damage Prevented|Monsters have #% increased Accuracy Rating",
-    "value": "-20|50",
+    "value": "13|8|5|-20|50",
     "type": "Suffix",
     "weight": 800,
     "tier": 365,
@@ -1235,7 +1235,7 @@ const mapModList = {
   "全てのプレイヤーの効果範囲が#%低下する": {
     "mod": "全てのプレイヤーの効果範囲が#%低下する",
     "engMod": "Players have #% less Area of Effect",
-    "value": "25",
+    "value": "-13|-8|-5|25",
     "type": "Suffix",
     "weight": 800,
     "tier": 60,
@@ -1255,7 +1255,7 @@ const mapModList = {
   "モンスターはヒット時にフレンジーチャージを#個獲得する": {
     "mod": "モンスターはヒット時にフレンジーチャージを#個獲得する",
     "engMod": "Monsters gain a Frenzy Charge on Hit",
-    "value": "100",
+    "value": "13|8|5|100",
     "type": "Suffix",
     "weight": 800,
     "tier": 80,
@@ -1275,7 +1275,7 @@ const mapModList = {
   "モンスターはヒット時にエンデュランスチャージを#個獲得する": {
     "mod": "モンスターはヒット時にエンデュランスチャージを#個獲得する",
     "engMod": "Monsters gain an Endurance Charge on Hit",
-    "value": "100",
+    "value": "13|8|5|100",
     "type": "Suffix",
     "weight": 800,
     "tier": 80,
@@ -1295,7 +1295,7 @@ const mapModList = {
   "モンスターはヒット時にパワーチャージを#個獲得する": {
     "mod": "モンスターはヒット時にパワーチャージを#個獲得する",
     "engMod": "Monsters gain a Power Charge on Hit",
-    "value": "100",
+    "value": "13|8|5|100",
     "type": "Suffix",
     "weight": 800,
     "tier": 80,
@@ -1315,7 +1315,7 @@ const mapModList = {
   "モンスターアタックはヒット時に#%の確率で串刺しを付与する": {
     "mod": "モンスターアタックはヒット時に#%の確率で串刺しを付与する",
     "engMod": "Monsters' Attacks have #% chance to Impale on Hit",
-    "value": "60",
+    "value": "16|9|6|60",
     "type": "Prefix",
     "weight": 800,
     "tier": 98,
@@ -1335,7 +1335,7 @@ const mapModList = {
   "モンスターのスペルダメージ抑制確率 +#%": {
     "mod": "モンスターのスペルダメージ抑制確率 +#%",
     "engMod": "Monsters have +#% chance to Suppress Spell Damage",
-    "value": "60",
+    "value": "13|8|5|60",
     "type": "Prefix",
     "weight": 800,
     "tier": 290,
@@ -1355,7 +1355,7 @@ const mapModList = {
   "モンスターは最大ライフの(##)%を追加最大エナジーシールドとして獲得する": {
     "mod": "モンスターは最大ライフの(##)%を追加最大エナジーシールドとして獲得する",
     "engMod": "Monsters gain (##)% of Maximum Life as Extra Maximum Energy Shield",
-    "value": "40-49",
+    "value": "13|8|5|40-49",
     "type": "Prefix",
     "weight": 800,
     "tier": 240,
@@ -1375,7 +1375,7 @@ const mapModList = {
   "ユニークボスは取り憑かれている": {
     "mod": "ユニークボスは取り憑かれている",
     "engMod": "Unique Bosses are Possessed",
-    "value": "1",
+    "value": "16|9|6|1",
     "type": "Prefix",
     "weight": 1000,
     "tier": 90,
@@ -1395,7 +1395,7 @@ const mapModList = {
   "モンスターはヒット時に盲目を付与する": {
     "mod": "モンスターはヒット時に盲目を付与する",
     "engMod": "Monsters Blind on Hit",
-    "value": "100",
+    "value": "10|6|4|100",
     "type": "Suffix",
     "weight": 650,
     "tier": 50,
@@ -1415,7 +1415,7 @@ const mapModList = {
   "モンスターはアタックによるヒット時に重傷を付与する": {
     "mod": "モンスターはアタックによるヒット時に重傷を付与する",
     "engMod": "Monsters Maim on Hit with Attacks",
-    "value": "100",
+    "value": "10|6|4|100",
     "type": "Suffix",
     "weight": 600,
     "tier": 50,
@@ -1435,7 +1435,7 @@ const mapModList = {
   "モンスターはスペルによるヒット時に阻害を付与する": {
     "mod": "モンスターはスペルによるヒット時に阻害を付与する",
     "engMod": "Monsters Hinder on Hit with Spells",
-    "value": "100",
+    "value": "10|6|4|100",
     "type": "Suffix",
     "weight": 600,
     "tier": 50,
@@ -1455,7 +1455,7 @@ const mapModList = {
   "モンスターはヒット時にパワーチャージ、フレンジーチャージおよびエンデュランスチャージのスタックを盗む": {
     "mod": "モンスターはヒット時にパワーチャージ、フレンジーチャージおよびエンデュランスチャージのスタックを盗む",
     "engMod": "Monsters steal Power, Frenzy and Endurance charges on Hit",
-    "value": "100",
+    "value": "10|6|4|100",
     "type": "Suffix",
     "weight": 800,
     "tier": 80,
@@ -1475,7 +1475,7 @@ const mapModList = {
   "エリアにはまだら状に神聖領域がある": {
     "mod": "エリアにはまだら状に神聖領域がある",
     "engMod": "Area has patches of Consecrated Ground",
-    "value": "300|28|18",
+    "value": "10|6|4|300|28|18",
     "type": "Suffix",
     "weight": 250,
     "tier": 310,
@@ -1495,7 +1495,7 @@ const mapModList = {
   "全てのプレイヤーのクールダウン解消レートが#%低下する": {
     "mod": "全てのプレイヤーのクールダウン解消レートが#%低下する",
     "engMod": "Players have #% less Cooldown Recovery Rate",
-    "value": "40",
+    "value": "-13|-8|-5|40",
     "type": "Suffix",
     "weight": 650,
     "tier": 94,
@@ -1515,7 +1515,7 @@ const mapModList = {
   "全てのプレイヤーに対するバフは#%速く消える": {
     "mod": "全てのプレイヤーに対するバフは#%速く消える",
     "engMod": "Buffs on Players expire #% faster",
-    "value": "70",
+    "value": "10|6|4|70",
     "type": "Suffix",
     "weight": 650,
     "tier": 96,
@@ -1535,7 +1535,7 @@ const mapModList = {
   "全てのプレイヤーはスキルによる呪い以外のオーラの効果が#%減少する": {
     "mod": "全てのプレイヤーはスキルによる呪い以外のオーラの効果が#%減少する",
     "engMod": "Players have #% reduced effect of Non-Curse Auras from Skills",
-    "value": "60",
+    "value": "-13|-8|-5|60",
     "type": "Suffix",
     "weight": 800,
     "tier": 990,
@@ -1555,7 +1555,7 @@ const mapModList = {
   "全てのプレイヤーの命中力が#%低下する": {
     "mod": "全てのプレイヤーの命中力が#%低下する",
     "engMod": "Players have #% less Accuracy Rating",
-    "value": "25",
+    "value": "-13|-8|-5|25",
     "type": "Suffix",
     "weight": 800,
     "tier": 85,
@@ -1575,7 +1575,7 @@ const mapModList = {
   "(T17) モンスターのスキルは追加で#回連鎖する|モンスターの投射物は地形と衝突した時に連鎖することができる": {
     "mod": "(T17) モンスターのスキルは追加で#回連鎖する|モンスターの投射物は地形と衝突した時に連鎖することができる",
     "engMod": "(T17) Monsters' skills Chain # additional times|Monsters' Projectiles can Chain when colliding with Terrain",
-    "value": "3|100",
+    "value": "3|100|6|56|16",
     "type": "Prefix",
     "weight": 50,
     "tier": 1639,
@@ -1596,7 +1596,7 @@ const mapModList = {
   "(T17) モンスターはヒット時にパワーチャージを#個獲得する|モンスターの最大パワーチャージ数が+#される": {
     "mod": "(T17) モンスターはヒット時にパワーチャージを#個獲得する|モンスターの最大パワーチャージ数が+#される",
     "engMod": "(T17) Monsters gain a Power Charge on Hit|Monsters have +# to Maximum Power Charges",
-    "value": "100|1",
+    "value": "100|1|5|8|13|35",
     "type": "Suffix",
     "weight": 100,
     "tier": 1287,
@@ -1617,7 +1617,7 @@ const mapModList = {
   "(T17) モンスターはヒット時にフレンジーチャージを#個獲得する|モンスターの最大フレンジーチャージ数が+#される": {
     "mod": "(T17) モンスターはヒット時にフレンジーチャージを#個獲得する|モンスターの最大フレンジーチャージ数が+#される",
     "engMod": "(T17) Monsters gain a Frenzy Charge on Hit|Monsters have +# to Maximum Frenzy Charges",
-    "value": "100|1",
+    "value": "100|1|5|8|13|35",
     "type": "Suffix",
     "weight": 100,
     "tier": 1288,
@@ -1638,7 +1638,7 @@ const mapModList = {
   "(T17) モンスターの最大エンデュランスチャージ数が+#される|モンスターはヒットを受けた時にエンデュランスチャージを#個獲得する": {
     "mod": "(T17) モンスターの最大エンデュランスチャージ数が+#される|モンスターはヒットを受けた時にエンデュランスチャージを#個獲得する",
     "engMod": "(T17) Monsters have +# to Maximum Endurance Charges|Monsters gain an Endurance Charge when hit",
-    "value": "1|100",
+    "value": "1|100|5|8|13|35",
     "type": "Suffix",
     "weight": 100,
     "tier": 1209,
@@ -1659,7 +1659,7 @@ const mapModList = {
   "(T17) プレイヤーの全ての耐性の最大値 #%": {
     "mod": "(T17) プレイヤーの全ての耐性の最大値 #%",
     "engMod": "(T17) Players have #% to all maximum Resistances",
-    "value": "-20",
+    "value": "-20|20|11|19",
     "type": "Suffix",
     "weight": 50,
     "tier": 1111,
@@ -1679,7 +1679,7 @@ const mapModList = {
   "(T17) モンスターは投射物を追加で#個放つ|モンスターの効果範囲が#%増加する": {
     "mod": "(T17) モンスターは投射物を追加で#個放つ|モンスターの効果範囲が#%増加する",
     "engMod": "(T17) Monsters fire # additional Projectiles|Monsters have #% increased Area of Effect",
-    "value": "2|100",
+    "value": "2|100|7|56|19",
     "type": "Prefix",
     "weight": 100,
     "tier": 1644,
@@ -1700,7 +1700,7 @@ const mapModList = {
   "(T17) モンスターのクリティカルダメージ倍率 +(##)%|モンスターのクリティカル率が(##)%増加する": {
     "mod": "(T17) モンスターのクリティカルダメージ倍率 +(##)%|モンスターのクリティカル率が(##)%増加する",
     "engMod": "(T17) +(##)% to Monster Critical Strike Multiplier|Monsters have (##)% increased Critical Strike Chance",
-    "value": "70-75|650-700",
+    "value": "70-75|650-700|6|56|16",
     "type": "Suffix",
     "weight": 100,
     "tier": 1111,
@@ -1721,7 +1721,7 @@ const mapModList = {
   "(T17) モンスターはヒット時に毒を付与する|モンスターによる毒の持続時間が#%増加する|モンスターによる全てのダメージが毒を付与できる": {
     "mod": "(T17) モンスターはヒット時に毒を付与する|モンスターによる毒の持続時間が#%増加する|モンスターによる全てのダメージが毒を付与できる",
     "engMod": "(T17) Monsters Poison on Hit|Monsters have #% increased Poison Duration|All Damage from Monsters' Hits can Poison",
-    "value": "1|100|1",
+    "value": "1|100|1|6|49|16",
     "type": "Suffix",
     "weight": 50,
     "tier": 1605,
@@ -1743,10 +1743,10 @@ const mapModList = {
   "(T17) モンスターのダメージが(##)%増加する": {
     "mod": "(T17) モンスターのダメージが(##)%増加する",
     "engMod": "(T17) (##)% increased Monster Damage",
-    "value": "30-40",
+    "value": "30-40|7|56|19",
     "type": "Prefix",
-    "weight": 100,
-    "tier": 1111,
+    "weight": 1000,
+    "tier": 370,
     "engRegex": "r damage$",
     "Regex": "ターのダ.*増",
     "tradeStatIds": [
@@ -1763,11 +1763,11 @@ const mapModList = {
   "(T17) モンスターは最大ライフの(##)%を追加最大エナジーシールドとして獲得する": {
     "mod": "(T17) モンスターは最大ライフの(##)%を追加最大エナジーシールドとして獲得する",
     "engMod": "(T17) Monsters gain (##)% of Maximum Life as Extra Maximum Energy Shield",
-    "value": "70-80",
+    "value": "70-80|5|8|13|35",
     "type": "Prefix",
-    "weight": 100,
-    "tier": 1111,
-    "engRegex": "of m",
+    "weight": 800,
+    "tier": 240,
+    "engRegex": "m li",
     "Regex": "加最",
     "tradeStatIds": [
       "explicit.stat_2887760183"
@@ -1783,10 +1783,10 @@ const mapModList = {
   "(T17) ユニークボスは取り憑かれている": {
     "mod": "(T17) ユニークボスは取り憑かれている",
     "engMod": "(T17) Unique Bosses are Possessed",
-    "value": "1",
+    "value": "1|6|56|16",
     "type": "Prefix",
-    "weight": 50,
-    "tier": 1110,
+    "weight": 1000,
+    "tier": 90,
     "engRegex": "poss",
     "Regex": "り憑",
     "tradeStatIds": [
@@ -1803,10 +1803,10 @@ const mapModList = {
   "(T17) モンスターのスペルダメージ抑制確率 +#%": {
     "mod": "(T17) モンスターのスペルダメージ抑制確率 +#%",
     "engMod": "(T17) Monsters have +#% chance to Suppress Spell Damage",
-    "value": "100",
+    "value": "100|5|8|13|35",
     "type": "Prefix",
-    "weight": 60,
-    "tier": 1111,
+    "weight": 800,
+    "tier": 290,
     "engRegex": "o su",
     "Regex": "ジ抑",
     "tradeStatIds": [
@@ -1823,7 +1823,7 @@ const mapModList = {
   "(T17) モンスターのアタックダメージブロック確率 +#%": {
     "mod": "(T17) モンスターのアタックダメージブロック確率 +#%",
     "engMod": "(T17) Monsters have +#% Chance to Block Attack Damage",
-    "value": "50",
+    "value": "50|5|8|13|47",
     "type": "Prefix",
     "weight": 60,
     "tier": 1303,
@@ -1843,7 +1843,7 @@ const mapModList = {
   "(T17) プレイヤーはリーチによるライフ、マナおよびエナジーシールドの最大合計回復量が(##)%減少する": {
     "mod": "(T17) プレイヤーはリーチによるライフ、マナおよびエナジーシールドの最大合計回復量が(##)%減少する",
     "engMod": "(T17) Players have (##)% reduced Maximum total Life, Mana and Energy Shield Recovery per second from Leech",
-    "value": "50-60",
+    "value": "50-60|-6|-49|-16",
     "type": "Suffix",
     "weight": 30,
     "tier": 1190,
@@ -1863,7 +1863,7 @@ const mapModList = {
   "(T17) モンスターは物理ダメージの#%を反射する|モンスターは元素ダメージの#%を反射する": {
     "mod": "(T17) モンスターは物理ダメージの#%を反射する|モンスターは元素ダメージの#%を反射する",
     "engMod": "(T17) Monsters reflect #% of Physical Damage|Monsters reflect #% of Elemental Damage",
-    "value": "20|20",
+    "value": "20|20|5|8|10|47",
     "type": "Prefix",
     "weight": 40,
     "tier": 2202,
@@ -1884,7 +1884,7 @@ const mapModList = {
   "(T17) プレイヤーはヴァルネラビリティの呪いを受ける|プレイヤーはテンポラルチェーンの呪いを受ける|プレイヤーはエレメンタルウィークネスの呪いを受ける": {
     "mod": "(T17) プレイヤーはヴァルネラビリティの呪いを受ける|プレイヤーはテンポラルチェーンの呪いを受ける|プレイヤーはエレメンタルウィークネスの呪いを受ける",
     "engMod": "(T17) Players are Cursed with Vulnerability|Players are Cursed with Temporal Chains|Players are Cursed with Elemental Weakness",
-    "value": "15|15|15",
+    "value": "15|15|15|6|11|13",
     "type": "Suffix",
     "weight": 60,
     "tier": 1556,
@@ -1900,16 +1900,16 @@ const mapModList = {
     "map_pack_size_+%": 6,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
-    "map_scarab_drop_chance_+%_final_from_uber_mod": 35,
+    "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
     "modTier17": true
   },
   "(T17) 全てのプレイヤーの効果範囲が(##)%低下する": {
     "mod": "(T17) 全てのプレイヤーの効果範囲が(##)%低下する",
     "engMod": "(T17) Players have (##)% less Area of Effect",
-    "value": "25-30",
+    "value": "25-30|-5|-69|-13",
     "type": "Suffix",
-    "weight": 100,
-    "tier": 1111,
+    "weight": 800,
+    "tier": 60,
     "engRegex": "ss are",
     "Regex": "範.*低",
     "tradeStatIds": [
@@ -1926,10 +1926,10 @@ const mapModList = {
   "(T17) モンスターがクリティカルストライクから受ける追加ダメージが(##)%減少する": {
     "mod": "(T17) モンスターがクリティカルストライクから受ける追加ダメージが(##)%減少する",
     "engMod": "(T17) Monsters take (##)% reduced Extra Damage from Critical Strikes",
-    "value": "-45--35",
+    "value": "-45--35|-5|-56|-10",
     "type": "Suffix",
-    "weight": 30,
-    "tier": 1111,
+    "weight": 800,
+    "tier": 250,
     "engRegex": "kes",
     "Regex": "クか",
     "tradeStatIds": [
@@ -1946,10 +1946,10 @@ const mapModList = {
   "(T17) モンスターのライフが(##)%上昇する": {
     "mod": "(T17) モンスターのライフが(##)%上昇する",
     "engMod": "(T17) (##)% more Monster Life",
-    "value": "90-100",
+    "value": "90-100|5|8|13|47",
     "type": "Prefix",
-    "weight": 100,
-    "tier": 1111,
+    "weight": 1000,
+    "tier": 100,
     "engRegex": "r li",
     "Regex": "フが.*上",
     "tradeStatIds": [
@@ -1966,7 +1966,7 @@ const mapModList = {
   "(T17) それぞれのレアモンスターはモッドを追加で#個持つ|レアモンスターの数が(##)%増加する": {
     "mod": "(T17) それぞれのレアモンスターはモッドを追加で#個持つ|レアモンスターの数が(##)%増加する",
     "engMod": "(T17) Rare Monsters each have # additional Modifier|(##)% increased number of Rare Monsters",
-    "value": "1|35-45",
+    "value": "1|35-45|5|8|13|0",
     "type": "Prefix",
     "weight": 30,
     "tier": 1231,
@@ -1987,7 +1987,7 @@ const mapModList = {
   "(T17) ユニークモンスターはランダムなシュラインバフを#個持つ": {
     "mod": "(T17) ユニークモンスターはランダムなシュラインバフを#個持つ",
     "engMod": "(T17) Unique Monsters have a random Shrine Buff",
-    "value": "1",
+    "value": "1|5|8|13|35",
     "type": "Suffix",
     "weight": 50,
     "tier": 1277,
@@ -2007,7 +2007,7 @@ const mapModList = {
   "(T17) モンスターはヒット時に束縛する蔓を#スタック付与する": {
     "mod": "(T17) モンスターはヒット時に束縛する蔓を#スタック付与する",
     "engMod": "(T17) Monsters inflict # Grasping Vines on Hit",
-    "value": "2",
+    "value": "2|5|8|13|40",
     "type": "Prefix",
     "weight": 50,
     "tier": 1203,
@@ -2027,7 +2027,7 @@ const mapModList = {
   "(T17) レアモンスターはボラタイルコアを持つ": {
     "mod": "(T17) レアモンスターはボラタイルコアを持つ",
     "engMod": "(T17) Rare Monsters have Volatile Cores",
-    "value": "100",
+    "value": "100|5|11|13|53",
     "type": "Prefix",
     "weight": 50,
     "tier": 1186,
@@ -2047,7 +2047,7 @@ const mapModList = {
   "(T17) モンスターはその物理ダメージの(##)%をランダムな元素属性の追加ダメージとして獲得する": {
     "mod": "(T17) モンスターはその物理ダメージの(##)%をランダムな元素属性の追加ダメージとして獲得する",
     "engMod": "(T17) Monsters gain (##)% of their Physical Damage as Extra Damage of a random Element",
-    "value": "180-200",
+    "value": "180-200|6|71|16",
     "type": "Prefix",
     "weight": 100,
     "tier": 1663,
@@ -2067,7 +2067,7 @@ const mapModList = {
   "(T17) モンスターはその物理ダメージの(##)%を追加混沌ダメージとして獲得する": {
     "mod": "(T17) モンスターはその物理ダメージの(##)%を追加混沌ダメージとして獲得する",
     "engMod": "(T17) Monsters gain (##)% of their Physical Damage as Extra Chaos Damage",
-    "value": "80-100",
+    "value": "80-100|6|46|16",
     "type": "Prefix",
     "weight": 50,
     "tier": 1666,
@@ -2087,7 +2087,7 @@ const mapModList = {
   "(T17) モンスターのキャストスピードが(##)%増加する|モンスターのアタックスピードが(##)%増加する|モンスターの移動スピードが(##)%増加する": {
     "mod": "(T17) モンスターのキャストスピードが(##)%増加する|モンスターのアタックスピードが(##)%増加する|モンスターの移動スピードが(##)%増加する",
     "engMod": "(T17) (##)% increased Monster Cast Speed|(##)% increased Monster Attack Speed|(##)% increased Monster Movement Speed",
-    "value": "35-45|35-45|25-30",
+    "value": "35-45|35-45|25-30|7|56|19",
     "type": "Prefix",
     "weight": 100,
     "tier": 1110,
@@ -2109,14 +2109,14 @@ const mapModList = {
   "(T17) プレイヤーは血塗れのノコギリに襲われる": {
     "mod": "(T17) プレイヤーは血塗れのノコギリに襲われる",
     "engMod": "(T17) Players are assaulted by Bloodstained Sawblades",
-    "value": "1",
+    "value": "1|5|8|13|47",
     "type": "Prefix",
     "weight": 50,
     "tier": 1194,
     "engRegex": "wb",
     "Regex": "血塗",
     "tradeStatIds": [
-      "explicit.stat_3052102815",
+      "explicit.stat_3052102815"
     ],
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
@@ -2129,7 +2129,7 @@ const mapModList = {
   "(T17) モンスターはスタンを受けることがない|モンスターのアクションスピードは基礎値よりも低く修正されることがない|モンスターの移動スピードは基礎値よりも低く修正されることがない": {
     "mod": "(T17) モンスターはスタンを受けることがない|モンスターのアクションスピードは基礎値よりも低く修正されることがない|モンスターの移動スピードは基礎値よりも低く修正されることがない",
     "engMod": "(T17) Monsters cannot be Stunned|Monsters' Action Speed cannot be modified to below Base Value|Monsters' Movement Speed cannot be modified to below Base Value",
-    "value": "1|1|1",
+    "value": "1|1|1|5|8|13",
     "type": "Suffix",
     "weight": 40,
     "tier": 1314,
@@ -2144,21 +2144,21 @@ const mapModList = {
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
-    "map_currency_drop_chance_+%_final_from_uber_mod": 47,
+    "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
     "modTier17": true
   },
   "(T17) プレイヤーはフラスコを使用した時に隕石の対象となる": {
     "mod": "(T17) プレイヤーはフラスコを使用した時に隕石の対象となる",
     "engMod": "(T17) Players are targeted by a Meteor when they use a Flask",
-    "value": "100",
+    "value": "5|8|13|100|45",
     "type": "Suffix",
     "weight": 50,
     "tier": 1403,
     "engRegex": "get",
     "Regex": "に隕",
     "tradeStatIds": [
-      "explicit.stat_4102870672",
+      "explicit.stat_4102870672"
     ],
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
@@ -2171,7 +2171,7 @@ const mapModList = {
   "(T17) プレイヤーの防御力が(##)%低下する": {
     "mod": "(T17) プレイヤーの防御力が(##)%低下する",
     "engMod": "(T17) Players have (##)% less Defences",
-    "value": "25-30",
+    "value": "25-30|-5|-8|-13|-35",
     "type": "Suffix",
     "weight": 60,
     "tier": 1191,
@@ -2191,7 +2191,7 @@ const mapModList = {
   "(T17) エリアには溺死のオーブが出現する": {
     "mod": "(T17) エリアには溺死のオーブが出現する",
     "engMod": "(T17) Area contains Drowning Orbs",
-    "value": "1",
+    "value": "1|20|8|16",
     "type": "Prefix",
     "weight": 50,
     "tier": 1224,
@@ -2211,7 +2211,7 @@ const mapModList = {
   "(T17) モンスターの物理ダメージ軽減率 +#%|モンスターの元素耐性 +#%|モンスターの混沌耐性 +#%": {
     "mod": "(T17) モンスターの物理ダメージ軽減率 +#%|モンスターの元素耐性 +#%|モンスターの混沌耐性 +#%",
     "engMod": "(T17) +#% Monster Physical Damage Reduction|+#% Monster Elemental Resistances|+#% Monster Chaos Resistance",
-    "value": "50|55|35",
+    "value": "50|55|35|5|8|13",
     "type": "Prefix",
     "weight": 100,
     "tier": 1378,
@@ -2225,7 +2225,7 @@ const mapModList = {
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
-    "map_map_item_drop_chance_+%_final_from_uber_mod": 35,
+    "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
     "modTier17": true
@@ -2233,7 +2233,7 @@ const mapModList = {
   "(T17) モンスターはヒット時に確率で発火、凍結および感電を付与する|モンスターは全てのダメージで発火、凍結および感電を付与できる": {
     "mod": "(T17) モンスターはヒット時に確率で発火、凍結および感電を付与する|モンスターは全てのダメージで発火、凍結および感電を付与できる",
     "engMod": "(T17) Monsters Ignite, Freeze and Shock on Hit|All Monster Damage can Ignite, Freeze and Shock",
-    "value": "100|1",
+    "value": "100|5|8|13|1|60",
     "type": "Prefix",
     "weight": 50,
     "tier": 1225,
@@ -2254,11 +2254,11 @@ const mapModList = {
   "(T17) 全てのプレイヤーに対するバフは#%速く消える": {
     "mod": "(T17) 全てのプレイヤーに対するバフは#%速く消える",
     "engMod": "(T17) Buffs on Players expire #% faster",
-    "value": "100",
+    "value": "100|4|6|10|35",
     "type": "Suffix",
-    "weight": 60,
-    "tier": 1111,
-    "engRegex": "^buf",
+    "weight": 650,
+    "tier": 96,
+    "engRegex": "fs",
     "Regex": "イ.*速",
     "tradeStatIds": [
       "explicit.stat_1217583941"
@@ -2274,7 +2274,7 @@ const mapModList = {
   "(T17) モンスターのダメージは#%の元素耐性を貫通する": {
     "mod": "(T17) モンスターのダメージは#%の元素耐性を貫通する",
     "engMod": "(T17) Monster Damage Penetrates #% Elemental Resistances",
-    "value": "15",
+    "value": "15|6|72|19",
     "type": "Suffix",
     "weight": 50,
     "tier": 1216,
@@ -2294,7 +2294,7 @@ const mapModList = {
   "(T17) エリアには不安定な触手の悪魔が出現する": {
     "mod": "(T17) エリアには不安定な触手の悪魔が出現する",
     "engMod": "(T17) Area contains Unstable Tentacle Fiends",
-    "value": "1",
+    "value": "100|20|16|11|1",
     "type": "Suffix",
     "weight": 50,
     "tier": 1221,
@@ -2314,7 +2314,7 @@ const mapModList = {
   "(T17) エリアのレアモンスターはシェイパーに触れられている": {
     "mod": "(T17) エリアのレアモンスターはシェイパーに触れられている",
     "engMod": "(T17) Rare monsters in area are Shaper-Touched",
-    "value": "1",
+    "value": "1|20|13|11",
     "type": "Prefix",
     "weight": 50,
     "tier": 1184,
@@ -2334,7 +2334,7 @@ const mapModList = {
   "(T17) マップボスはシンセシスボスを伴う": {
     "mod": "(T17) マップボスはシンセシスボスを伴う",
     "engMod": "(T17) Map Boss is accompanied by a Synthesis Boss",
-    "value": "1",
+    "value": "1|20|13|8",
     "type": "Prefix",
     "weight": 50,
     "tier": 1217,
@@ -2354,7 +2354,7 @@ const mapModList = {
   "(T17) モンスターに対するデバフは#%速く消える": {
     "mod": "(T17) モンスターに対するデバフは#%速く消える",
     "engMod": "(T17) Debuffs on Monsters expire #% faster",
-    "value": "100",
+    "value": "100|6|16|12|64",
     "type": "Suffix",
     "weight": 40,
     "tier": 1314,
@@ -2374,7 +2374,7 @@ const mapModList = {
   "(T17) エリアには灼熱の代行者のルーンが出現する": {
     "mod": "(T17) エリアには灼熱の代行者のルーンが出現する",
     "engMod": "(T17) Area contains Runes of the Searing Exarch",
-    "value": "1",
+    "value": "1|20|13|8",
     "type": "Prefix",
     "weight": 50,
     "tier": 1222,
@@ -2394,7 +2394,7 @@ const mapModList = {
   "(T17) メイヴェンはプレイヤーに干渉する": {
     "mod": "(T17) メイヴェンはプレイヤーに干渉する",
     "engMod": "(T17) The Maven interferes with Players",
-    "value": "1",
+    "value": "1|20|13|8",
     "type": "Suffix",
     "weight": 50,
     "tier": 1183,
@@ -2414,7 +2414,7 @@ const mapModList = {
   "(T17) #%の確率でレアモンスターは死亡時にフラクチャー化する": {
     "mod": "(T17) #%の確率でレアモンスターは死亡時にフラクチャー化する",
     "engMod": "(T17) #% chance for Rare Monsters to Fracture on death",
-    "value": "25",
+    "value": "25|5|8|19",
     "type": "Suffix",
     "weight": 30,
     "tier": 1226,
@@ -2434,7 +2434,7 @@ const mapModList = {
   "(T17) 味方に影響する、プレイヤースキルによるオーラは敵にも影響する": {
     "mod": "(T17) 味方に影響する、プレイヤースキルによるオーラは敵にも影響する",
     "engMod": "(T17) Auras from Player Skills which affect Allies also affect Enemies",
-    "value": "1",
+    "value": "1|5|54|16",
     "type": "Suffix",
     "weight": 50,
     "tier": 2201,
@@ -2454,7 +2454,7 @@ const mapModList = {
   "(T17) エリアのレアモンスターは死亡時に一時的に生き返る": {
     "mod": "(T17) エリアのレアモンスターは死亡時に一時的に生き返る",
     "engMod": "(T17) Rare monsters in area Temporarily Revive on death",
-    "value": "1",
+    "value": "1|17|8|16",
     "type": "Suffix",
     "weight": 50,
     "tier": 1190,
@@ -2474,7 +2474,7 @@ const mapModList = {
   "(T17) エリアにはラビリンスの罠が出現する": {
     "mod": "(T17) エリアにはラビリンスの罠が出現する",
     "engMod": "(T17) Area contains Labyrinth Hazards",
-    "value": "24-30",
+    "value": "24-30|5|54|19",
     "type": "Prefix",
     "weight": 50,
     "tier": 1190,
@@ -2494,7 +2494,7 @@ const mapModList = {
   "(T17) プレイヤーは適用されるフラスコの効果が#%低下する": {
     "mod": "(T17) プレイヤーは適用されるフラスコの効果が#%低下する",
     "engMod": "(T17) Players have #% less effect of Flasks applied to them",
-    "value": "40",
+    "value": "40|-5|-8|-16|-47",
     "type": "Prefix",
     "weight": 50,
     "tier": 2200,
@@ -2514,7 +2514,7 @@ const mapModList = {
   "(T17) エリアの移動する呪印領域がパッチ状に存在し、ランダムな呪印を付与する": {
     "mod": "(T17) エリアの移動する呪印領域がパッチ状に存在し、ランダムな呪印を付与する",
     "engMod": "(T17) Area contains patches of moving Marked Ground, inflicting random Marks",
-    "value": "1",
+    "value": "1|5|8|16|36",
     "type": "Suffix",
     "weight": 50,
     "tier": 1190,
