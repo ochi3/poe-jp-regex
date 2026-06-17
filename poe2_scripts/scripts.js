@@ -1,7 +1,7 @@
 let ModList = {...mapModList};
 let currentLanguage = localStorage.getItem('poe2_poeLanguage') || 'ja';
 if (currentLanguage !== 'ja' && currentLanguage !== 'en') currentLanguage = 'ja';
-const CHANGELOG_VERSION = 'poe2-2026-06-12';
+const CHANGELOG_VERSION = 'poe2-2026-06-17';
 const CHANGELOG_STORAGE_KEY = 'poe2ChangelogSeenVersion';
 
 let checkedMods = new Map(); // キー -> 'ng' または 'wanted'

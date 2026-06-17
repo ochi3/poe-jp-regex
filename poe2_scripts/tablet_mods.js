@@ -1,4 +1,4 @@
-// tools_poe2/optimize_mod_regex.py によって tablet Regex を最短化しました
+// tools_poe2/extract_tablet_mods.py によって自動生成されました (PoE2-DB)
 const tabletModList = {
   "モンスターのエフェクティブが(##)%増加する": {
     "mod": "モンスターのエフェクティブが(##)%増加する",
@@ -360,13 +360,13 @@ const tabletModList = {
     ],
     "domain": "tablet"
   },
-  "ユニークモンスターはモッドを追加で#個持つ": {
-    "mod": "ユニークモンスターはモッドを追加で#個持つ",
+  "ユニークモンスターはレアモッドを追加で#個持つ": {
+    "mod": "ユニークモンスターはレアモッドを追加で#個持つ",
     "engMod": "Unique Monsters have # additional Rare Modifier",
     "value": "1",
     "type": "Suffix",
     "engRegex": "^uni",
-    "Regex": "ーはモ",
+    "Regex": "ーはレ",
     "groups": [
       "MapAdditionalUniqueMonsterModifier"
     ],
@@ -375,13 +375,13 @@ const tabletModList = {
     ],
     "domain": "tablet"
   },
-  "(##)% increased Quantity of Hiveblood found in Map": {
-    "mod": "(##)% increased Quantity of Hiveblood found in Map",
+  "マップで見つかるハイヴブラッドの数量が(##)%増加する": {
+    "mod": "マップで見つかるハイヴブラッドの数量が(##)%増加する",
     "engMod": "(##)% increased Quantity of Hiveblood found in Map",
     "value": "30-60",
     "type": "Suffix",
     "engRegex": "f Hiv",
-    "Regex": "f Hiv",
+    "Regex": "ドの数",
     "groups": [
       "BreachHivebloodQuantity"
     ],
@@ -390,13 +390,13 @@ const tabletModList = {
     ],
     "domain": "tablet"
   },
-  "(##)% increased Quantity of Wombgifts found in Map": {
-    "mod": "(##)% increased Quantity of Wombgifts found in Map",
+  "マップで見つかる母胎ギフトの数量が(##)%増加する": {
+    "mod": "マップで見つかる母胎ギフトの数量が(##)%増加する",
     "engMod": "(##)% increased Quantity of Wombgifts found in Map",
     "value": "30-60",
     "type": "Suffix",
     "engRegex": "ts f",
-    "Regex": "ts f",
+    "Regex": "る母",
     "groups": [
       "BreachWombgiftQuantity"
     ],
@@ -405,13 +405,13 @@ const tabletModList = {
     ],
     "domain": "tablet"
   },
-  "Wombgifts have (##)% chance to drop one Level higher in Map": {
-    "mod": "Wombgifts have (##)% chance to drop one Level higher in Map",
+  "マップの母胎ギフトは(##)%の確率で#レベル高いものがドロップする": {
+    "mod": "マップの母胎ギフトは(##)%の確率で#レベル高いものがドロップする",
     "engMod": "Wombgifts have (##)% chance to drop one Level higher in Map",
     "value": "10-30",
     "type": "Suffix",
     "engRegex": "^wo",
-    "Regex": "^wo",
+    "Regex": "プの母",
     "groups": [
       "BreachWombgiftLevelChance"
     ],
@@ -420,13 +420,13 @@ const tabletModList = {
     ],
     "domain": "tablet"
   },
-  "Unstable Breaches in Map have (##)% increased chance to contain Vruun, Marshal of Xesht": {
-    "mod": "Unstable Breaches in Map have (##)% increased chance to contain Vruun, Marshal of Xesht",
+  "マップの不安定なブリーチにゼシュトの元帥、ヴルーンが出現する確率が(##)%増加する": {
+    "mod": "マップの不安定なブリーチにゼシュトの元帥、ヴルーンが出現する確率が(##)%増加する",
     "engMod": "Unstable Breaches in Map have (##)% increased chance to contain Vruun, Marshal of Xesht",
     "value": "20-50",
     "type": "Suffix",
     "engRegex": "vru",
-    "Regex": "vru",
+    "Regex": "チにゼ",
     "groups": [
       "BreachBossChance"
     ],
@@ -435,15 +435,45 @@ const tabletModList = {
     ],
     "domain": "tablet"
   },
-  "(##)% increased Effectiveness of Rare Breach Monsters in Map": {
-    "mod": "(##)% increased Effectiveness of Rare Breach Monsters in Map",
+  "マップの不安定なブリーチは安定化した後レアモンスターが追加で(##)体スポーンする": {
+    "mod": "マップの不安定なブリーチは安定化した後レアモンスターが追加で(##)体スポーンする",
+    "engMod": "Unstable Breaches in Map spawn (##) additional Rare Monsters when Stabilised",
+    "value": "1-3",
+    "type": "Suffix",
+    "engRegex": "en S",
+    "Regex": "チは安",
+    "groups": [
+      "BreachAdditionalRares"
+    ],
+    "subGroups": [
+      "Breach"
+    ],
+    "domain": "tablet"
+  },
+  "マップに出現するレアブリーチモンスターのエフェクティブが(##)%増加する": {
+    "mod": "マップに出現するレアブリーチモンスターのエフェクティブが(##)%増加する",
     "engMod": "(##)% increased Effectiveness of Rare Breach Monsters in Map",
     "value": "5-20",
     "type": "Suffix",
     "engRegex": "h m",
-    "Regex": "h m",
+    "Regex": "レアブ",
     "groups": [
       "BreachRareMonsterPotency"
+    ],
+    "subGroups": [
+      "Breach"
+    ],
+    "domain": "tablet"
+  },
+  "マップのブリーチのパックサイズが(##)%増加する": {
+    "mod": "マップのブリーチのパックサイズが(##)%増加する",
+    "engMod": "Breaches in Map have (##)% increased Pack Size",
+    "value": "5-15",
+    "type": "Suffix",
+    "engRegex": "Br.*k S",
+    "Regex": "チのパ",
+    "groups": [
+      "BreachMonsterQuantity"
     ],
     "subGroups": [
       "Breach"
@@ -615,6 +645,21 @@ const tabletModList = {
     ],
     "domain": "tablet"
   },
+  "マップのデリリウムのせん妄度は鏡から離れるほど(##)%速く増える": {
+    "mod": "マップのデリリウムのせん妄度は鏡から離れるほど(##)%速く増える",
+    "engMod": "Delirium in Map increases (##)% faster with distance from the mirror",
+    "value": "15-30",
+    "type": "Suffix",
+    "engRegex": "h di",
+    "Regex": "度は鏡",
+    "groups": [
+      "DeliriumDifficultyIncrease"
+    ],
+    "subGroups": [
+      "Delirium"
+    ],
+    "domain": "tablet"
+  },
   "マップのデリリウムモンスターはパックサイズが(##)%増加する": {
     "mod": "マップのデリリウムモンスターはパックサイズが(##)%増加する",
     "engMod": "Delirium Monsters in Map have (##)% increased Pack Size",
@@ -630,13 +675,13 @@ const tabletModList = {
     ],
     "domain": "tablet"
   },
-  "マップのデリリウムの霧がスポーンさせる割れる鏡の数が(##)%増加する": {
-    "mod": "マップのデリリウムの霧がスポーンさせる割れる鏡の数が(##)%増加する",
+  "マップのデリリウムの霧がスポーンさせる割れた鏡の数が(##)%増加する": {
+    "mod": "マップのデリリウムの霧がスポーンさせる割れた鏡の数が(##)%増加する",
     "engMod": "Delirium Fog in Map spawns (##)% increased Fracturing Mirrors",
     "value": "15-30",
     "type": "Suffix",
-    "engRegex": "fra",
-    "Regex": "る割",
+    "engRegex": "ng Mi",
+    "Regex": "た鏡の",
     "groups": [
       "DeliriumDoodadsIncrease"
     ],
