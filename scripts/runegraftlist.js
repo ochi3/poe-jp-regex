@@ -13,7 +13,7 @@ const runegraftlist = {
     "description": "低ライフ時になった時に20%の確率でフルライフまで回復する",
     "enDescription": "",
     "attribute": "STR",
-    "chaosValue": "15",
+    "chaosValue": "14",
     "regex": "川のル",
     "enRegex": "Riv"
   },
@@ -40,7 +40,7 @@ const runegraftlist = {
     "description": "オフハンドのアタックスピードが10%上昇する",
     "enDescription": "",
     "attribute": "DEX",
-    "chaosValue": "4.77",
+    "chaosValue": "2.95",
     "regex": "左手",
     "enRegex": "Sin"
   },
@@ -49,7 +49,7 @@ const runegraftlist = {
     "description": "装備中の靴から得られるボーナスが20%減少する 装備中の手袋から得られるボーナスが20%増加する",
     "enDescription": "",
     "attribute": "DEX",
-    "chaosValue": "11.75",
+    "chaosValue": "5.33",
     "regex": "束縛",
     "enRegex": "e B"
   },
@@ -58,7 +58,7 @@ const runegraftlist = {
     "description": "プレイヤーのバフは30%遅く消える プレイヤーに対するデバフは30%速く消える",
     "enDescription": "",
     "attribute": "INT",
-    "chaosValue": "1087",
+    "chaosValue": "1177",
     "regex": "歪み",
     "enRegex": "Deb"
   },
@@ -67,7 +67,7 @@ const runegraftlist = {
     "description": "毎秒1のヴァールソウルを獲得する",
     "enDescription": "",
     "attribute": "STR",
-    "chaosValue": "114",
+    "chaosValue": "378",
     "regex": "灯火",
     "enRegex": "1 V"
   },
@@ -76,7 +76,7 @@ const runegraftlist = {
     "description": "直近プレイヤーがウォークライをしていなければウォークライスピードが100%増加する",
     "enDescription": "",
     "attribute": "STR",
-    "chaosValue": "2",
+    "chaosValue": "1",
     "regex": "怒号",
     "enRegex": "100"
   },
@@ -85,7 +85,7 @@ const runegraftlist = {
     "description": "全ての希少以外のサポートジェムのレベル +1",
     "enDescription": "",
     "attribute": "ALL",
-    "chaosValue": "2157",
+    "chaosValue": "2354",
     "regex": "ジェ",
     "enRegex": "Gem"
   },
@@ -130,7 +130,7 @@ const runegraftlist = {
     "description": "スキル使用時に20%の確率でクールダウン使用回数を消費しない",
     "enDescription": "",
     "attribute": "INT",
-    "chaosValue": "20",
+    "chaosValue": "27.5",
     "regex": "時のル",
     "enRegex": "a C"
   },
@@ -139,7 +139,7 @@ const runegraftlist = {
     "description": "スキルのリザーブ効率が15%増加する 味方に影響するプレイヤーのスキルによるオーラは敵にも影響する",
     "enDescription": "",
     "attribute": "INT",
-    "chaosValue": "15.9",
+    "chaosValue": "16.3",
     "regex": "裏切",
     "enRegex": "f Tr"
   },
@@ -211,7 +211,7 @@ const runegraftlist = {
     "description": "幸運または不幸の効果が代わりに退屈なものになる",
     "enDescription": "",
     "attribute": "STR",
-    "chaosValue": "55",
+    "chaosValue": "25",
     "regex": "安定",
     "enRegex": "Luc"
   },
@@ -238,7 +238,7 @@ const runegraftlist = {
     "description": "プレイヤーが生成する神聖領域はプレイヤーおよび味方にマナ自動回復レート30%増加を付与する",
     "enDescription": "",
     "attribute": "STR",
-    "chaosValue": "17.73",
+    "chaosValue": "1",
     "regex": "神聖",
     "enRegex": "f Cons"
   },
@@ -274,7 +274,7 @@ const runegraftlist = {
     "description": "プレイヤーがフラスコの影響を受けていない時プレイヤーに適用されるチンキの効果が30%増加する",
     "enDescription": "",
     "attribute": "DEX",
-    "chaosValue": "4.17",
+    "chaosValue": "2.74",
     "regex": "与の",
     "enRegex": "e Im"
   },
