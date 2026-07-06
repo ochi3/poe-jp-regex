@@ -49,24 +49,79 @@ let gemData = [];
 let selectedGems = [];
 let pobImportState = null;
 
-const weaponMapping = {
-  claw: '^鉤爪',
-  dagger: '^短剣',
-  wand: ' wand|s horn',
-  oneHandSword: '^片手剣',
-  thrustingSword: '^刺突剣',
-  oneHandAxe: '^片手斧',
-  oneHandMace: '^片手メイス',
-  sceptre: '^セプター',
-  runeDagger: '^ルーンの短剣',
-  bow: ' bow',
-  staff: '^スタッフ',
-  twoHandSword: '^両手剣',
-  twoHandAxe: '^両手斧',
-  twoHandMace: '^両手メイス',
-  warstaff: '^ウォースタッフ',
-  shield: '^ブロック率'
+/** 複数選択時に接尾辞へまとめられる武器グループ */
+const WEAPON_SUFFIX_GROUPS = [
+  {
+    keys: ['oneHandAxe', 'twoHandAxe'],
+    merged: '斧$',
+    singles: { oneHandAxe: '片手斧$', twoHandAxe: '両手斧$' },
+  },
+  {
+    keys: ['oneHandSword', 'twoHandSword'],
+    merged: '剣$',
+    singles: { oneHandSword: '片手剣$', twoHandSword: '両手剣$' },
+  },
+  {
+    keys: ['oneHandMace', 'twoHandMace'],
+    merged: 'メイス$',
+    singles: { oneHandMace: '片手メイス$', twoHandMace: '両手メイス$' },
+  },
+  {
+    keys: ['staff', 'warstaff'],
+    merged: 'スタッフ$',
+    singles: { staff: 'スタッフ$', warstaff: 'ウォースタッフ$' },
+  },
+  {
+    keys: ['dagger', 'runeDagger'],
+    merged: '短剣$',
+    singles: { dagger: '短剣$', runeDagger: 'ルーンの短剣$' },
+  },
+];
+
+/** 単独武器の Regex（末尾一致 $） */
+const WEAPON_SINGLE_PATTERNS = {
+  claw: '鉤爪$',
+  wand: 'wand$|horn$',
+  thrustingSword: '刺突剣$',
+  sceptre: 'セプター$',
+  bow: 'bow$',
+  shield: 'ブロック率$',
 };
+
+/** 選択された武器から短縮済み Regex パターンを生成 */
+function buildWeaponRegexPatterns(weaponSelections) {
+  const selectedKeys = Object.entries(weaponSelections || {})
+    .filter(([, enabled]) => enabled)
+    .map(([key]) => key);
+
+  if (selectedKeys.length === 0) return [];
+
+  const patterns = [];
+  const usedKeys = new Set();
+
+  WEAPON_SUFFIX_GROUPS.forEach((group) => {
+    const selectedInGroup = group.keys.filter((key) => selectedKeys.includes(key));
+    if (selectedInGroup.length === 0) return;
+
+    if (selectedInGroup.length === group.keys.length) {
+      patterns.push(group.merged);
+    } else {
+      selectedInGroup.forEach((key) => {
+        patterns.push(group.singles[key]);
+      });
+    }
+    selectedInGroup.forEach((key) => usedKeys.add(key));
+  });
+
+  selectedKeys.forEach((key) => {
+    if (usedKeys.has(key)) return;
+    if (WEAPON_SINGLE_PATTERNS[key]) {
+      patterns.push(WEAPON_SINGLE_PATTERNS[key]);
+    }
+  });
+
+  return patterns;
+}
 
 function generateVendorRegex() {
   const parts = [];
@@ -129,10 +184,7 @@ function generateVendorRegex() {
   if (settings.movement.twentyfive) parts.push('ガゼルの');
   if (settings.movement.thirty) parts.push('チーターの');
 
-  const weapons = [];
-  Object.entries(settings.weapon).forEach(([key, value]) => {
-    if (value && weaponMapping[key]) weapons.push(weaponMapping[key]);
-  });
+  const weapons = buildWeaponRegexPatterns(settings.weapon);
   if (weapons.length > 0) parts.push(weapons.join('|'));
 
   if (settings.selectedGems && settings.selectedGems.length > 0) {
@@ -144,10 +196,7 @@ function generateVendorRegex() {
   let mainRegex = parts.join('|');
   let finalRegex = '';
 
-  const excludeWeapons = [];
-  Object.entries(settings.excludeWeapons).forEach(([key, value]) => {
-    if (value && weaponMapping[key]) excludeWeapons.push(weaponMapping[key]);
-  });
+  const excludeWeapons = buildWeaponRegexPatterns(settings.excludeWeapons);
 
   if (mainRegex && excludeWeapons.length > 0) {
     finalRegex = `"${mainRegex}" "!.*(?:${excludeWeapons.join('|')})"`;
