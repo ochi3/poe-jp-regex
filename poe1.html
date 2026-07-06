@@ -901,11 +901,38 @@
                     <h3 style="color: var(--accent-primary); margin-bottom: 16px; text-align: center;">
                         ジェム選択
                     </h3>
+
+                    <div class="pob-import-panel">
+                        <h4 class="pob-import-title">PoB から読み込み</h4>
+                        <p class="pob-import-desc">
+                            PoB の Export コードまたは <code>pobb.in/xxxx</code> の URL を貼り付けると、ビルド内ジェムを自動選択します。
+                        </p>
+                        <input
+                            type="text"
+                            id="pobImportInput"
+                            class="pob-import-input"
+                            placeholder="PoB Export コードまたは pobb.in URL"
+                        >
+                        <div class="pob-import-actions">
+                            <button type="button" id="pobImportBtn" class="pob-import-primary">ビルドからジェムを読み込む</button>
+                            <button type="button" id="pobImportClearBtn">クリア</button>
+                            <label class="pob-import-option">
+                                <input type="checkbox" id="pobExcludeQuestGems" checked>
+                                クエスト報酬を Regex から除外
+                            </label>
+                            <label class="pob-import-option">
+                                <input type="checkbox" id="pobImportReplaceGems">
+                                既存のジェム選択を置き換える
+                            </label>
+                        </div>
+                        <div id="pobImportStatus" class="pob-import-status"></div>
+                        <div id="pobImportMemo" class="pob-import-memo"></div>
+                    </div>
                     
                     <div class="input-group" style="margin-bottom: 20px;">
                         <textarea 
                         id="gemSearch" 
-                        placeholder="英語名でも検索可（改行、カンマで複数検索可能）&#10;pobb.inのジェム欄コピペ出来ます&#10;例: &#10;Poisonous Concoction&#10;Herald of Agony&#10;Faster Attacks" 
+                        placeholder="英語名でも検索可（改行、カンマで複数検索可能）&#10;PoB読込後はビルド内ジェム名が自動入力されます&#10;例: &#10;Poisonous Concoction&#10;Herald of Agony&#10;Faster Attacks" 
                         style="flex: 1; padding: 8px; height: 80px; resize: vertical; font-family: inherit;"
                         ></textarea>
                         <button onclick="document.getElementById('gemSearch').value = ''; filterGems();">検索クリア</button>
@@ -1043,6 +1070,7 @@
         </div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/pako@2.1.0/dist/pako.min.js"></script>
     <script src="scripts/jp-poe-utils-translator.js"></script>
     <script src="scripts/item-translator.js"></script>
     <script src="scripts/map_mods.js"></script>
@@ -1056,6 +1084,7 @@
     <script src="scripts/flask.js"></script>
     <script src="scripts/item.js"></script>
     <script src="scripts/saved-regex.js"></script>
+    <script src="scripts/pob_import.js"></script>
     <script src="scripts/vendor.js"></script>
 
 

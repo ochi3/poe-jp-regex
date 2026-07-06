@@ -47,6 +47,7 @@ let vendorSettings = {
 let vendorProfiles = {};
 let gemData = [];
 let selectedGems = [];
+let pobImportState = null;
 
 const weaponMapping = {
   claw: '^鉤爪',
@@ -460,12 +461,23 @@ function getColorCode(color) {
 function createGemButton(gem) {
   const button = document.createElement('button');
   button.className = 'gem-button';
-  button.textContent = gem.display_name;
-  button.title = gem.regex;
   button.dataset.regex = gem.regex;
   button.dataset.color = gem.color || 'other';
   button.dataset.eng = gem.eng || '';
   button.dataset.name = gem.display_name;
+  button.dataset.gemId = gem.id || '';
+
+  const label = document.createElement('span');
+  label.className = 'gem-button-label';
+  label.textContent = gem.display_name;
+  button.appendChild(label);
+
+  const badges = document.createElement('span');
+  badges.className = 'gem-button-badges';
+  button.appendChild(badges);
+  updateGemButtonBadges(button, gem);
+
+  button.title = buildGemButtonTitle(gem);
   
   updateGemButtonStyle(button);
   
@@ -481,9 +493,6 @@ function createGemButton(gem) {
     word-break: break-word;
     white-space: normal;
     min-height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
     width: 100%;
     line-height: 1.3;
     background: #2a2a2a;
@@ -507,6 +516,517 @@ function createGemButton(gem) {
   });
 
   return button;
+}
+
+function buildGemButtonTitle(gem) {
+  const parts = [gem.regex];
+  if (gem.eng) parts.push(gem.eng);
+  if (gem.quest_reward) {
+    parts.push(`ACT${gem.quest_reward.act} クエスト: ${gem.quest_reward.quest}`);
+  }
+  if (pobImportState?.importedRegexes?.has(gem.regex)) {
+    parts.push('PoBビルド内');
+  }
+  return parts.join(' / ');
+}
+
+function updateGemButtonBadges(button, gem) {
+  const badges = button.querySelector('.gem-button-badges');
+  if (!badges) return;
+  badges.innerHTML = '';
+
+  if (pobImportState?.importedRegexes?.has(gem.regex)) {
+    const pobBadge = document.createElement('span');
+    pobBadge.className = 'gem-badge gem-badge-pob';
+    pobBadge.textContent = 'PoB';
+    badges.appendChild(pobBadge);
+  }
+
+  const classNameJp = pobImportState?.classNameJp;
+  if (classNameJp && isQuestRewardForClass(gem, classNameJp)) {
+    const questBadge = document.createElement('span');
+    questBadge.className = 'gem-badge gem-badge-quest';
+    questBadge.textContent = `ACT${gem.quest_reward.act}Q`;
+    badges.appendChild(questBadge);
+  }
+}
+
+function refreshAllGemBadges() {
+  document.querySelectorAll('.gem-button').forEach((button) => {
+    const regex = button.dataset.regex;
+    const gem = gemData.find((g) => g.regex === regex);
+    if (gem) {
+      updateGemButtonBadges(button, gem);
+      button.title = buildGemButtonTitle(gem);
+    }
+  });
+}
+
+function findGemByRegex(regex) {
+  return gemData.find((g) => g.regex === regex);
+}
+
+function selectGemByRegex(regex, selected = true) {
+  const index = selectedGems.indexOf(regex);
+  if (selected && index === -1) {
+    selectedGems.push(regex);
+  } else if (!selected && index !== -1) {
+    selectedGems.splice(index, 1);
+  }
+}
+
+function applyGemSelectionFromRegexes(regexes, { replace = false } = {}) {
+  if (replace) {
+    selectedGems = [];
+  }
+  regexes.forEach((regex) => selectGemByRegex(regex, true));
+  vendorSettings.selectedGems = [...selectedGems];
+  updateGemButtons();
+  updateVendorRegex();
+  saveVendorSettings();
+}
+
+/** 同一クエストの重複を除いたマッチ結果（クエスト報酬は1クエスト1ジェム） */
+function dedupeMatchedByQuest(matched, questChoices) {
+  const vendorItems = matched.filter((m) => !m.isQuest);
+  const questGroups = new Map();
+
+  matched.filter((m) => m.isQuest).forEach((item) => {
+    const reward = item.localGem.quest_reward;
+    const key = getQuestRewardKey(reward.act, reward.quest);
+    if (!questGroups.has(key)) questGroups.set(key, []);
+    questGroups.get(key).push(item);
+  });
+
+  const questItems = [];
+  questGroups.forEach((items, key) => {
+    const chosenRegex = questChoices?.[key];
+    const pick = items.find((i) => i.localGem.regex === chosenRegex) || items[0];
+    questItems.push(pick);
+  });
+
+  return [...vendorItems, ...questItems];
+}
+
+function getRegexesFromMatchedItems(items) {
+  return items.map((m) => m.localGem.regex);
+}
+
+/** ビルド内ジェムに関係するクエストを ACT 順に整理 */
+function getBuildRelevantQuestGroups(questMemo, importedRegexes) {
+  const byAct = new Map();
+
+  questMemo.forEach(({ act, quests }) => {
+    quests.forEach(({ quest, gems }) => {
+      if (!gems.some((g) => importedRegexes.has(g.regex))) return;
+      if (!byAct.has(act)) byAct.set(act, []);
+      byAct.get(act).push({ quest, gems });
+    });
+  });
+
+  return Array.from(byAct.entries())
+    .sort((a, b) => a[0] - b[0])
+    .map(([act, quests]) => ({ act, quests }));
+}
+
+/** クエスト名 + ジェム選択ボタン行 */
+function renderQuestGemChoiceRow(act, quest, gems, questChoices, importedRegexes) {
+  const key = getQuestRewardKey(act, quest);
+  const chosenRegex = questChoices[key] || gems[0]?.regex;
+
+  let html = '<div class="pob-memo-quest-row">';
+  html += `<div class="pob-memo-quest-name">${quest}</div>`;
+  html += '<div class="pob-memo-quest-gems">';
+  gems.forEach((gem) => {
+    const inBuild = importedRegexes.has(gem.regex);
+    const isChosen = gem.regex === chosenRegex;
+    const selected = selectedGems.includes(gem.regex);
+    const classes = [
+      'pob-quest-gem-btn',
+      isChosen ? 'is-chosen' : '',
+      inBuild ? 'in-build' : '',
+      selected ? 'is-selected' : '',
+    ].filter(Boolean).join(' ');
+    const title = inBuild ? 'ビルド内' : gem.eng || '';
+    html += `<button type="button" class="${classes}"`
+      + ` data-act="${act}" data-quest="${encodeURIComponent(quest)}" data-regex="${gem.regex}"`
+      + ` title="${title}">${gem.display_name}</button>`;
+  });
+  html += '</div></div>';
+  return html;
+}
+
+/** ACT 単位のクエスト選択ブロック */
+function renderQuestGroupsByAct(questGroupsByAct, questChoices, importedRegexes) {
+  let html = '';
+  questGroupsByAct.forEach(({ act, quests }) => {
+    html += `<div class="pob-memo-act"><div class="pob-memo-act-title">ACT ${act}</div>`;
+    quests.forEach(({ quest, gems }) => {
+      html += renderQuestGemChoiceRow(act, quest, gems, questChoices, importedRegexes);
+    });
+    html += '</div>';
+  });
+  return html;
+}
+
+function isBuildRelevantQuest(act, quest, pobImportState) {
+  if (!pobImportState) return false;
+  return getBuildRelevantQuestGroups(pobImportState.questMemo, pobImportState.importedRegexes)
+    .some((group) => group.act === act && group.quests.some((entry) => entry.quest === quest));
+}
+
+/** クエスト報酬ジェムをベンダー Regex に含めるか（ビルド内かつクエストで受け取らないもののみ） */
+function shouldSelectQuestGemForVendor(gem, chosenRegex, importedRegexes, excludeQuest) {
+  if (gem.regex === chosenRegex) {
+    return !excludeQuest;
+  }
+  return importedRegexes.has(gem.regex);
+}
+
+/** PoB ジェム一覧をローカルデータと照合 */
+function matchPobGemsFromBuild(pobGems, classNameJp) {
+  const matched = [];
+  const unmatched = [];
+
+  pobGems.forEach((pobGem) => {
+    const localGem = matchPobGemToLocal(pobGem, gemData);
+    if (localGem) {
+      matched.push({
+        pobGem,
+        localGem,
+        isQuest: isQuestRewardForClass(localGem, classNameJp),
+      });
+    } else {
+      unmatched.push(pobGem);
+    }
+  });
+
+  return { matched, unmatched };
+}
+
+/** pobImportState をロードアウトのジェム照合結果で更新 */
+function updatePobImportFromSkillSets(skillSetIds, { replaceGems = true } = {}) {
+  if (!pobImportState?.build) return;
+
+  const pobGems = getBuildGemsForSkillSets(pobImportState.build, skillSetIds);
+  const { matched, unmatched } = matchPobGemsFromBuild(pobGems, pobImportState.classNameJp);
+  const importedRegexes = new Set(matched.map((m) => m.localGem.regex));
+  const questChoices = initQuestRewardChoices(pobImportState.questMemo, importedRegexes);
+  const dedupedMatched = dedupeMatchedByQuest(matched, questChoices);
+
+  pobImportState.selectedSkillSetIds = [...skillSetIds];
+  pobImportState.matched = matched;
+  pobImportState.unmatched = unmatched;
+  pobImportState.importedRegexes = importedRegexes;
+  pobImportState.dedupedImportedRegexes = new Set(getRegexesFromMatchedItems(dedupedMatched));
+  pobImportState.questChoices = questChoices;
+  pobImportState.questRegexes = dedupedMatched.filter((m) => m.isQuest).map((m) => m.localGem.regex);
+
+  applyPobVendorSelection({ replace: replaceGems });
+
+  const searchInput = document.getElementById('gemSearch');
+  if (searchInput && matched.length > 0) {
+    searchInput.value = matched.map((m) => m.localGem.eng || m.localGem.display_name).join('\n');
+    filterGems();
+  }
+}
+
+function getSelectedPobSkillSetIdsFromUI() {
+  const list = document.getElementById('pobSkillSetList');
+  if (!list) return [];
+  return Array.from(list.querySelectorAll('input[type="checkbox"]:checked')).map((input) => input.value);
+}
+
+function buildSkillSetListHtml(build, selectedSkillSetIds) {
+  const skillSets = build?.skillSets || [];
+  if (skillSets.length <= 1) return '';
+
+  const selectedSet = new Set(selectedSkillSetIds || []);
+  const items = skillSets.map((set) => {
+    const gemCount = set.gems.length;
+    const checked = selectedSet.has(set.id) ? ' checked' : '';
+    return `<label class="pob-import-skillset-item">`
+      + `<input type="checkbox" value="${set.id}"${checked}>`
+      + `<span>${set.title}（${gemCount}）</span>`
+      + `</label>`;
+  }).join('');
+
+  return `
+    <div class="pob-memo-loadout-group">
+      <span class="pob-memo-loadout-label">ジェム・ロードアウト（複数選択可）</span>
+      <div id="pobSkillSetList" class="pob-memo-loadout-list">${items}</div>
+    </div>
+  `;
+}
+
+function changePobSkillSets() {
+  if (!pobImportState) return;
+
+  let selectedIds = getSelectedPobSkillSetIdsFromUI();
+  if (selectedIds.length === 0) {
+    const fallbackId = pobImportState.selectedSkillSetIds?.[0]
+      || pobImportState.build.skillSets?.[0]?.id
+      || pobImportState.build.activeSkillSetId;
+    if (fallbackId) {
+      selectedIds = [fallbackId];
+      const input = document.querySelector(`#pobSkillSetList input[value="${fallbackId}"]`);
+      if (input) input.checked = true;
+    }
+  }
+
+  updatePobImportFromSkillSets(selectedIds, { replaceGems: true });
+  renderPobImportMemo();
+  refreshAllGemBadges();
+  showNotification(`ロードアウト ${selectedIds.length}件を反映しました`);
+}
+
+/** PoB 読込時のベンダー Regex 対象を算出（クエスト選択分を反映） */
+function computePobVendorRegexes(pobImportState, excludeQuest = true) {
+  if (!pobImportState) return [];
+
+  const { matched, questMemo, questChoices, importedRegexes } = pobImportState;
+  const regexSet = new Set();
+
+  matched.filter((m) => !m.isQuest).forEach((m) => regexSet.add(m.localGem.regex));
+
+  getBuildRelevantQuestGroups(questMemo, importedRegexes).forEach(({ act, quests }) => {
+    quests.forEach(({ quest, gems }) => {
+      const key = getQuestRewardKey(act, quest);
+      const chosenRegex = questChoices[key] || gems[0]?.regex;
+      gems.forEach((gem) => {
+        if (shouldSelectQuestGemForVendor(gem, chosenRegex, importedRegexes, excludeQuest)) {
+          regexSet.add(gem.regex);
+        }
+      });
+    });
+  });
+
+  return Array.from(regexSet);
+}
+
+function applyPobVendorSelection({ replace = true } = {}) {
+  if (!pobImportState) return;
+  const excludeQuest = document.getElementById('pobExcludeQuestGems')?.checked !== false;
+  const regexes = computePobVendorRegexes(pobImportState, excludeQuest);
+  pobImportState.vendorRegexes = regexes;
+  applyGemSelectionFromRegexes(regexes, { replace });
+}
+
+function selectQuestRewardChoice(act, quest, regex) {
+  if (!pobImportState) return;
+
+  const key = getQuestRewardKey(act, quest);
+  pobImportState.questChoices[key] = regex;
+
+  if (isBuildRelevantQuest(act, quest, pobImportState)) {
+    applyPobVendorSelection({ replace: true });
+  }
+
+  renderPobImportMemo();
+}
+
+async function importGemsFromPobInput() {
+  const inputEl = document.getElementById('pobImportInput');
+  const statusEl = document.getElementById('pobImportStatus');
+  const replaceCheckbox = document.getElementById('pobImportReplaceGems');
+  if (!inputEl) return;
+
+  const input = inputEl.value.trim();
+  if (!input) {
+    showNotification('PoB コードまたは pobb.in URL を入力してください', true);
+    return;
+  }
+
+  const parsed = parsePobInput(input);
+  if (statusEl) {
+    if (parsed.type === 'url') {
+      statusEl.textContent = 'pobb.in から取得中...';
+    } else {
+      statusEl.textContent = 'ビルドを読み込み中...';
+    }
+    statusEl.style.color = '#FFA500';
+  }
+
+  try {
+    await loadGemData();
+    const build = await loadPobBuildFromInput(input);
+    const defaultSkillSetId = build.skillSets?.[0]?.id
+      || build.activeSkillSetId
+      || '1';
+    const selectedSkillSetIds = [defaultSkillSetId];
+    const pobGems = getBuildGemsForSkillSets(build, selectedSkillSetIds);
+    const { matched, unmatched } = matchPobGemsFromBuild(pobGems, build.classNameJp);
+
+    const importedRegexes = new Set(matched.map((m) => m.localGem.regex));
+    const questMemo = buildQuestRewardMemo(gemData, build.classNameJp);
+    const questChoices = initQuestRewardChoices(questMemo, importedRegexes);
+    const dedupedMatched = dedupeMatchedByQuest(matched, questChoices);
+    const dedupedImportedRegexes = new Set(getRegexesFromMatchedItems(dedupedMatched));
+    const questRegexes = dedupedMatched.filter((m) => m.isQuest).map((m) => m.localGem.regex);
+
+    pobImportState = {
+      build,
+      selectedSkillSetIds,
+      className: build.className,
+      ascendClassName: build.ascendClassName,
+      classNameJp: build.classNameJp,
+      level: build.level,
+      matched,
+      unmatched,
+      importedRegexes,
+      dedupedImportedRegexes,
+      vendorRegexes: [],
+      questRegexes,
+      questMemo,
+      questChoices,
+    };
+
+    const excludeQuest = document.getElementById('pobExcludeQuestGems')?.checked !== false;
+    applyPobVendorSelection({ replace: replaceCheckbox?.checked === true });
+    const vendorCount = pobImportState.vendorRegexes.length;
+
+    renderPobImportMemo();
+    refreshAllGemBadges();
+
+    if (matched.length > 0) {
+      const searchInput = document.getElementById('gemSearch');
+      if (searchInput) {
+        searchInput.value = matched.map((m) => m.localGem.eng || m.localGem.display_name).join('\n');
+        filterGems();
+      }
+    }
+
+    const msg = `PoB読込: ${matched.length}件マッチ`
+      + (unmatched.length ? ` / 未対応 ${unmatched.length}件` : '')
+      + (excludeQuest ? ` / ベンダー購入 ${vendorCount}件` : '');
+    if (statusEl) {
+      statusEl.textContent = msg;
+      statusEl.style.color = '#4CAF50';
+    }
+    showNotification(msg);
+  } catch (error) {
+    console.error('PoB import error:', error);
+    if (statusEl) {
+      statusEl.textContent = `エラー: ${error.message}`;
+      statusEl.style.color = '#FF6B6B';
+    }
+    showNotification(`PoB読込失敗: ${error.message}`, true);
+  }
+}
+
+function renderPobImportMemo() {
+  const panel = document.getElementById('pobImportMemo');
+  if (!panel) return;
+
+  if (!pobImportState) {
+    panel.innerHTML = '';
+    return;
+  }
+
+  const {
+    className,
+    ascendClassName,
+    classNameJp,
+    unmatched,
+    questMemo,
+    questChoices,
+    importedRegexes,
+  } = pobImportState;
+
+  const ascendText = ascendClassName && ascendClassName !== 'None' ? ` / ${ascendClassName}` : '';
+  const buildQuestGroups = getBuildRelevantQuestGroups(questMemo, importedRegexes);
+  const hasBuildQuests = buildQuestGroups.some((g) => g.quests.length > 0);
+  const skillSetHtml = buildSkillSetListHtml(pobImportState.build, pobImportState.selectedSkillSetIds);
+
+  let html = `
+    <div class="pob-memo-toolbar">
+      <div class="pob-memo-build"><strong>ビルド:</strong> ${classNameJp || className}${ascendText}</div>
+      ${skillSetHtml}
+    </div>
+  `;
+
+  html += '<div class="pob-memo-section"><h4>クエスト報酬（このクラス・ビルド内）</h4>';
+  if (!hasBuildQuests) {
+    html += '<p class="pob-memo-note">ビルド内にクエスト報酬ジェムはありません。</p>';
+  } else {
+    html += '<p class="pob-memo-note">同一クエストでは1つだけ選択できます。青枠はビルド内のジェムです。</p>';
+    html += renderQuestGroupsByAct(buildQuestGroups, questChoices, importedRegexes);
+  }
+  html += '</div>';
+
+  if (unmatched.length > 0) {
+    html += '<div class="pob-memo-section pob-memo-warning"><h4>未対応ジェム</h4><ul class="pob-memo-list">';
+    unmatched.forEach((gem) => {
+      html += `<li><span>${gem.nameSpec || gem.skillId}</span></li>`;
+    });
+    html += '</ul><p class="pob-memo-note">gems_regex.json に未登録の可能性があります。手動で検索してください。</p></div>';
+  }
+
+  panel.innerHTML = html;
+}
+
+function selectVendorGemsFromPob() {
+  if (!pobImportState) return;
+  applyPobVendorSelection({ replace: true });
+  renderPobImportMemo();
+  showNotification('ベンダー購入分のみ選択しました');
+}
+
+function clearPobImport() {
+  pobImportState = null;
+  const inputEl = document.getElementById('pobImportInput');
+  const statusEl = document.getElementById('pobImportStatus');
+  if (inputEl) inputEl.value = '';
+  if (statusEl) statusEl.textContent = '';
+  renderPobImportMemo();
+  refreshAllGemBadges();
+}
+
+function setupPobImportUI() {
+  const importBtn = document.getElementById('pobImportBtn');
+  if (importBtn && !importBtn.hasEventListener) {
+    importBtn.addEventListener('click', importGemsFromPobInput);
+    importBtn.hasEventListener = true;
+  }
+
+  const clearBtn = document.getElementById('pobImportClearBtn');
+  if (clearBtn && !clearBtn.hasEventListener) {
+    clearBtn.addEventListener('click', clearPobImport);
+    clearBtn.hasEventListener = true;
+  }
+
+  const memoPanel = document.getElementById('pobImportMemo');
+  if (memoPanel && !memoPanel.hasPobMemoListener) {
+    memoPanel.addEventListener('click', (event) => {
+      const btn = event.target.closest('.pob-quest-gem-btn');
+      if (!btn) return;
+      const act = Number(btn.dataset.act);
+      const quest = decodeURIComponent(btn.dataset.quest || '');
+      const regex = btn.dataset.regex;
+      if (act && quest && regex) {
+        selectQuestRewardChoice(act, quest, regex);
+      }
+    });
+    memoPanel.addEventListener('change', (event) => {
+      if (event.target?.type === 'checkbox' && event.target.closest('#pobSkillSetList')) {
+        changePobSkillSets();
+      }
+    });
+    memoPanel.hasPobMemoListener = true;
+  }
+
+  const excludeQuestCheckbox = document.getElementById('pobExcludeQuestGems');
+  if (excludeQuestCheckbox && !excludeQuestCheckbox.hasEventListener) {
+    excludeQuestCheckbox.addEventListener('change', () => {
+      if (!pobImportState) return;
+      applyPobVendorSelection({ replace: true });
+      renderPobImportMemo();
+      refreshAllGemBadges();
+    });
+    excludeQuestCheckbox.hasEventListener = true;
+  }
+
+  renderPobImportMemo();
 }
 
 function updateGemButtonStyle(button) {
@@ -546,6 +1066,7 @@ function toggleGemSelection(gem, button) {
   updateGemButtonStyle(button);
   updateVendorRegex();
   saveVendorSettings();
+  renderPobImportMemo();
 }
 
 function filterGems() {
@@ -561,7 +1082,7 @@ function filterGems() {
   let matchCount = 0;
   
   buttons.forEach(button => {
-    const gemName = button.textContent.toLowerCase();
+    const gemName = (button.dataset.name || '').toLowerCase();
     const gemRegex = button.dataset.regex || '';
     const gemEng = button.dataset.eng || '';
     const gemDisplayName = button.dataset.name || '';
@@ -867,6 +1388,7 @@ function initializeVendor() {
 
   loadVendorSettings();
   setupVendorEventListeners();
+  setupPobImportUI();
 
   loadGemData().then(() => {
     updateVendorRegex();
@@ -939,4 +1461,6 @@ window.clearGemSearch = clearGemSearch;
 window.resetGemSelection = resetGemSelection;
 window.generateVendorRegex = generateVendorRegex;
 window.generateVendorRegexFromProfile = generateVendorRegexFromProfile;
-window.vendorSettings = vendorSettings;
+window.importGemsFromPobInput = importGemsFromPobInput;
+window.selectVendorGemsFromPob = selectVendorGemsFromPob;
+window.clearPobImport = clearPobImport;
