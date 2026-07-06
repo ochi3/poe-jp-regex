@@ -49,43 +49,43 @@ let gemData = [];
 let selectedGems = [];
 let pobImportState = null;
 
-/** 複数選択時に接尾辞へまとめられる武器グループ */
+/** 複数選択時に接尾辞へまとめられる武器グループ（両方 ON のときのみ $） */
 const WEAPON_SUFFIX_GROUPS = [
   {
     keys: ['oneHandAxe', 'twoHandAxe'],
     merged: '斧$',
-    singles: { oneHandAxe: '片手斧$', twoHandAxe: '両手斧$' },
+    singles: { oneHandAxe: '^片手斧', twoHandAxe: '^両手斧' },
   },
   {
     keys: ['oneHandSword', 'twoHandSword'],
     merged: '剣$',
-    singles: { oneHandSword: '片手剣$', twoHandSword: '両手剣$' },
+    singles: { oneHandSword: '^片手剣', twoHandSword: '^両手剣' },
   },
   {
     keys: ['oneHandMace', 'twoHandMace'],
     merged: 'メイス$',
-    singles: { oneHandMace: '片手メイス$', twoHandMace: '両手メイス$' },
+    singles: { oneHandMace: '^片手メイス', twoHandMace: '^両手メイス' },
   },
   {
     keys: ['staff', 'warstaff'],
     merged: 'スタッフ$',
-    singles: { staff: 'スタッフ$', warstaff: 'ウォースタッフ$' },
+    singles: { staff: '^スタッフ', warstaff: '^ウォースタッフ' },
   },
   {
     keys: ['dagger', 'runeDagger'],
     merged: '短剣$',
-    singles: { dagger: '短剣$', runeDagger: 'ルーンの短剣$' },
+    singles: { dagger: '^短剣', runeDagger: '^ルーンの短剣' },
   },
 ];
 
-/** 単独武器の Regex（末尾一致 $） */
+/** 単独武器の Regex（従来どおり） */
 const WEAPON_SINGLE_PATTERNS = {
-  claw: '鉤爪$',
-  wand: 'wand$|horn$',
-  thrustingSword: '刺突剣$',
-  sceptre: 'セプター$',
-  bow: 'bow$',
-  shield: 'ブロック率$',
+  claw: '^鉤爪',
+  wand: ' wand|s horn',
+  thrustingSword: '^刺突剣',
+  sceptre: '^セプター',
+  bow: ' bow',
+  shield: '^ブロック率',
 };
 
 /** 選択された武器から短縮済み Regex パターンを生成 */
