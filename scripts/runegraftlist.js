@@ -22,7 +22,7 @@ const runegraftlist = {
     "description": "能力値が10%減少する グローバル防御力が40%増加する",
     "enDescription": "",
     "attribute": "ALL",
-    "chaosValue": "672.9",
+    "chaosValue": "320.1",
     "regex": "要塞",
     "enRegex": "Def"
   },
@@ -40,7 +40,7 @@ const runegraftlist = {
     "description": "オフハンドのアタックスピードが10%上昇する",
     "enDescription": "",
     "attribute": "DEX",
-    "chaosValue": "19",
+    "chaosValue": "20.2",
     "regex": "左手",
     "enRegex": "Sin"
   },
@@ -58,7 +58,7 @@ const runegraftlist = {
     "description": "プレイヤーのバフは30%遅く消える プレイヤーに対するデバフは30%速く消える",
     "enDescription": "",
     "attribute": "INT",
-    "chaosValue": "1959",
+    "chaosValue": "1998",
     "regex": "歪み",
     "enRegex": "Deb"
   },
@@ -85,7 +85,7 @@ const runegraftlist = {
     "description": "全ての希少以外のサポートジェムのレベル +1",
     "enDescription": "",
     "attribute": "ALL",
-    "chaosValue": "3673",
+    "chaosValue": "3632",
     "regex": "ジェ",
     "enRegex": "Gem"
   },
@@ -139,7 +139,7 @@ const runegraftlist = {
     "description": "スキルのリザーブ効率が15%増加する 味方に影響するプレイヤーのスキルによるオーラは敵にも影響する",
     "enDescription": "",
     "attribute": "INT",
-    "chaosValue": "1",
+    "chaosValue": "726.4",
     "regex": "裏切",
     "enRegex": "f Tr"
   },
@@ -148,7 +148,7 @@ const runegraftlist = {
     "description": "フラスコによるマナ回復量が25%減少する 即時ではないフラスコによるマナ回復はライフも回復する",
     "enDescription": "",
     "attribute": "DEX",
-    "chaosValue": "9",
+    "chaosValue": "1",
     "regex": "暴飲",
     "enRegex": "25%"
   },
@@ -211,7 +211,7 @@ const runegraftlist = {
     "description": "幸運または不幸の効果が代わりに退屈なものになる",
     "enDescription": "",
     "attribute": "STR",
-    "chaosValue": "377.5",
+    "chaosValue": "384.7",
     "regex": "安定",
     "enRegex": "Luc"
   },
@@ -265,7 +265,7 @@ const runegraftlist = {
     "description": "プレイヤーにより毒を付与された敵はそれが与える物理ダメージの10%が混沌ダメージに変換される",
     "enDescription": "",
     "attribute": "DEX",
-    "chaosValue": "10",
+    "chaosValue": "5",
     "regex": "ロッ",
     "enRegex": " Ro"
   },
@@ -274,7 +274,7 @@ const runegraftlist = {
     "description": "プレイヤーがフラスコの影響を受けていない時プレイヤーに適用されるチンキの効果が30%増加する",
     "enDescription": "",
     "attribute": "DEX",
-    "chaosValue": "5.75",
+    "chaosValue": "11.71",
     "regex": "与の",
     "enRegex": "e Im"
   },
