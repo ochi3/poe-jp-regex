@@ -22,7 +22,7 @@ const runegraftlist = {
     "description": "能力値が10%減少する グローバル防御力が40%増加する",
     "enDescription": "",
     "attribute": "ALL",
-    "chaosValue": "1764",
+    "chaosValue": "2331",
     "regex": "要塞",
     "enRegex": "Def"
   },
@@ -40,7 +40,7 @@ const runegraftlist = {
     "description": "オフハンドのアタックスピードが10%上昇する",
     "enDescription": "",
     "attribute": "DEX",
-    "chaosValue": "1",
+    "chaosValue": "19.67",
     "regex": "左手",
     "enRegex": "Sin"
   },
@@ -58,7 +58,7 @@ const runegraftlist = {
     "description": "プレイヤーのバフは30%遅く消える プレイヤーに対するデバフは30%速く消える",
     "enDescription": "",
     "attribute": "INT",
-    "chaosValue": "750",
+    "chaosValue": "3108",
     "regex": "歪み",
     "enRegex": "Deb"
   },
@@ -85,7 +85,7 @@ const runegraftlist = {
     "description": "全ての希少以外のサポートジェムのレベル +1",
     "enDescription": "",
     "attribute": "ALL",
-    "chaosValue": "85.5",
+    "chaosValue": "79",
     "regex": "ジェ",
     "enRegex": "Gem"
   },
@@ -94,7 +94,7 @@ const runegraftlist = {
     "description": "ヒット時に30%の確率で呪い状態でない敵にランダムな呪術で呪う",
     "enDescription": "",
     "attribute": "INT",
-    "chaosValue": "1.13",
+    "chaosValue": "3",
     "regex": "冒涜",
     "enRegex": "Hex"
   },
@@ -130,7 +130,7 @@ const runegraftlist = {
     "description": "スキル使用時に20%の確率でクールダウン使用回数を消費しない",
     "enDescription": "",
     "attribute": "INT",
-    "chaosValue": "27.5",
+    "chaosValue": "25",
     "regex": "時のル",
     "enRegex": "a C"
   },
@@ -139,7 +139,7 @@ const runegraftlist = {
     "description": "スキルのリザーブ効率が15%増加する 味方に影響するプレイヤーのスキルによるオーラは敵にも影響する",
     "enDescription": "",
     "attribute": "INT",
-    "chaosValue": "630",
+    "chaosValue": "45.12",
     "regex": "裏切",
     "enRegex": "f Tr"
   },
@@ -184,7 +184,7 @@ const runegraftlist = {
     "description": "ノヴァスペルはもし可能ならばプレイヤーの周囲の代わりに呪印を付与した敵にキャストされる",
     "enDescription": "",
     "attribute": "INT",
-    "chaosValue": "8",
+    "chaosValue": "1",
     "regex": "ノヴ",
     "enRegex": "Nov"
   },
@@ -193,7 +193,7 @@ const runegraftlist = {
     "description": "放たれる投射物が最大で1個になる 投射物は分岐する 投射物は追加で1回連鎖する",
     "enDescription": "",
     "attribute": "DEX",
-    "chaosValue": "44",
+    "chaosValue": "39",
     "regex": "屈折",
     "enRegex": "Ref"
   },
@@ -202,7 +202,7 @@ const runegraftlist = {
     "description": "装備中の両手武器にある未リンクのソケットごとにダメージが10%増加する",
     "enDescription": "",
     "attribute": "STR",
-    "chaosValue": "378",
+    "chaosValue": "7",
     "regex": "宝飾",
     "enRegex": "ew"
   },
@@ -211,7 +211,7 @@ const runegraftlist = {
     "description": "幸運または不幸の効果が代わりに退屈なものになる",
     "enDescription": "",
     "attribute": "STR",
-    "chaosValue": "26",
+    "chaosValue": "1165",
     "regex": "安定",
     "enRegex": "Luc"
   },
@@ -283,7 +283,7 @@ const runegraftlist = {
     "description": "プレイヤーに対する身躱しの効果は最初の2秒間代わりに増える",
     "enDescription": "",
     "attribute": "DEX",
-    "chaosValue": "25",
+    "chaosValue": "1",
     "regex": "俊敏",
     "enRegex": "e Agi"
   },
@@ -319,7 +319,7 @@ const runegraftlist = {
     "description": "リンクスキルは範囲が50%増加する",
     "enDescription": "",
     "attribute": "INT",
-    "chaosValue": "1.27",
+    "chaosValue": "3",
     "regex": "接続",
     "enRegex": "onn"
   }
