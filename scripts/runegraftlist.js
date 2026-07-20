@@ -22,7 +22,7 @@ const runegraftlist = {
     "description": "能力値が10%減少する グローバル防御力が40%増加する",
     "enDescription": "",
     "attribute": "ALL",
-    "chaosValue": "2331",
+    "chaosValue": "1812",
     "regex": "要塞",
     "enRegex": "Def"
   },
@@ -40,7 +40,7 @@ const runegraftlist = {
     "description": "オフハンドのアタックスピードが10%上昇する",
     "enDescription": "",
     "attribute": "DEX",
-    "chaosValue": "19.67",
+    "chaosValue": "21",
     "regex": "左手",
     "enRegex": "Sin"
   },
@@ -58,7 +58,7 @@ const runegraftlist = {
     "description": "プレイヤーのバフは30%遅く消える プレイヤーに対するデバフは30%速く消える",
     "enDescription": "",
     "attribute": "INT",
-    "chaosValue": "3108",
+    "chaosValue": "2718",
     "regex": "歪み",
     "enRegex": "Deb"
   },
@@ -85,7 +85,7 @@ const runegraftlist = {
     "description": "全ての希少以外のサポートジェムのレベル +1",
     "enDescription": "",
     "attribute": "ALL",
-    "chaosValue": "79",
+    "chaosValue": "1000",
     "regex": "ジェ",
     "enRegex": "Gem"
   },
@@ -94,7 +94,7 @@ const runegraftlist = {
     "description": "ヒット時に30%の確率で呪い状態でない敵にランダムな呪術で呪う",
     "enDescription": "",
     "attribute": "INT",
-    "chaosValue": "3",
+    "chaosValue": "1",
     "regex": "冒涜",
     "enRegex": "Hex"
   },
@@ -139,7 +139,7 @@ const runegraftlist = {
     "description": "スキルのリザーブ効率が15%増加する 味方に影響するプレイヤーのスキルによるオーラは敵にも影響する",
     "enDescription": "",
     "attribute": "INT",
-    "chaosValue": "45.12",
+    "chaosValue": "74",
     "regex": "裏切",
     "enRegex": "f Tr"
   },
@@ -184,7 +184,7 @@ const runegraftlist = {
     "description": "ノヴァスペルはもし可能ならばプレイヤーの周囲の代わりに呪印を付与した敵にキャストされる",
     "enDescription": "",
     "attribute": "INT",
-    "chaosValue": "1",
+    "chaosValue": "10",
     "regex": "ノヴ",
     "enRegex": "Nov"
   },
@@ -310,7 +310,7 @@ const runegraftlist = {
     "description": "アーケインサージはプレイヤーに対してライフ自動回復レート15%増加も付与する",
     "enDescription": "",
     "attribute": "INT",
-    "chaosValue": "1",
+    "chaosValue": "5",
     "regex": "回復の",
     "enRegex": "esu"
   },
@@ -319,7 +319,7 @@ const runegraftlist = {
     "description": "リンクスキルは範囲が50%増加する",
     "enDescription": "",
     "attribute": "INT",
-    "chaosValue": "3",
+    "chaosValue": "1",
     "regex": "接続",
     "enRegex": "onn"
   }
