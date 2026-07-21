@@ -649,9 +649,12 @@ function dedupeMatchedByQuest(matched, questChoices) {
 
   const questItems = [];
   questGroups.forEach((items, key) => {
-    const chosenRegex = questChoices?.[key];
-    const pick = items.find((i) => i.localGem.regex === chosenRegex) || items[0];
-    questItems.push(pick);
+    const mainRegex = questChoices?.[`${key}::main`];
+    const bonusRegex = questChoices?.[`${key}::bonus`];
+    const picked = items.filter((item) => (
+      item.localGem.regex === mainRegex || item.localGem.regex === bonusRegex
+    ));
+    questItems.push(...(picked.length ? picked : [items[0]]));
   });
 
   return [...vendorItems, ...questItems];
@@ -666,10 +669,13 @@ function getBuildRelevantQuestGroups(questMemo, importedRegexes) {
   const byAct = new Map();
 
   questMemo.forEach(({ act, quests }) => {
-    quests.forEach(({ quest, gems }) => {
-      if (!gems.some((g) => importedRegexes.has(g.regex))) return;
+    quests.forEach((questEntry) => {
+      const gems = questEntry.gems || [];
+      const bonusGems = questEntry.bonusGems || [];
+      const allRewardGems = [...gems, ...bonusGems];
+      if (!allRewardGems.some((gem) => importedRegexes.has(gem.regex))) return;
       if (!byAct.has(act)) byAct.set(act, []);
-      byAct.get(act).push({ quest, gems });
+      byAct.get(act).push(questEntry);
     });
   });
 
@@ -678,14 +684,8 @@ function getBuildRelevantQuestGroups(questMemo, importedRegexes) {
     .map(([act, quests]) => ({ act, quests }));
 }
 
-/** クエスト名 + ジェム選択ボタン行 */
-function renderQuestGemChoiceRow(act, quest, gems, questChoices, importedRegexes) {
-  const key = getQuestRewardKey(act, quest);
-  const chosenRegex = questChoices[key] || gems[0]?.regex;
-
-  let html = '<div class="pob-memo-quest-row">';
-  html += `<div class="pob-memo-quest-name">${quest}</div>`;
-  html += '<div class="pob-memo-quest-gems">';
+function renderQuestChoiceButtons(act, quest, choiceType, gems, chosenRegex, importedRegexes) {
+  let html = '<div class="pob-memo-quest-gems">';
   gems.forEach((gem) => {
     const inBuild = importedRegexes.has(gem.regex);
     const isChosen = gem.regex === chosenRegex;
@@ -698,10 +698,46 @@ function renderQuestGemChoiceRow(act, quest, gems, questChoices, importedRegexes
     ].filter(Boolean).join(' ');
     const title = inBuild ? 'ビルド内' : gem.eng || '';
     html += `<button type="button" class="${classes}"`
-      + ` data-act="${act}" data-quest="${encodeURIComponent(quest)}" data-regex="${gem.regex}"`
+      + ` data-act="${act}" data-quest="${encodeURIComponent(quest)}"`
+      + ` data-choice-type="${choiceType}" data-regex="${gem.regex}"`
       + ` title="${title}">${gem.display_name}</button>`;
   });
-  html += '</div></div>';
+  html += '</div>';
+  return html;
+}
+
+/** クエスト名 + 通常報酬 + 追加報酬 */
+function renderQuestGemChoiceRow(act, questEntry, questChoices, importedRegexes) {
+  const quest = questEntry.quest;
+  const gems = questEntry.gems || [];
+  const bonusGems = questEntry.bonusGems || [];
+  const mainKey = getQuestRewardChoiceKey(act, quest, 'main');
+  const bonusKey = getQuestRewardChoiceKey(act, quest, 'bonus');
+  const chosenMainRegex = questChoices[mainKey] || gems[0]?.regex;
+  const chosenBonusRegex = questChoices[bonusKey] || bonusGems[0]?.regex;
+
+  let html = '<div class="pob-memo-quest-block">';
+  html += `<div class="pob-memo-quest-name">${quest}</div>`;
+
+  if (gems.length > 0) {
+    html += '<div class="pob-memo-quest-line">';
+    html += '<span class="pob-memo-quest-kind">クエスト報酬</span>';
+    html += renderQuestChoiceButtons(
+      act, quest, 'main', gems, chosenMainRegex, importedRegexes,
+    );
+    html += '</div>';
+  }
+
+  if (bonusGems.length > 0) {
+    html += '<div class="pob-memo-quest-line">';
+    html += '<span class="pob-memo-quest-kind pob-memo-quest-kind-bonus">追加報酬</span>';
+    html += renderQuestChoiceButtons(
+      act, quest, 'bonus', bonusGems, chosenBonusRegex, importedRegexes,
+    );
+    html += '</div>';
+  }
+
+  html += '</div>';
   return html;
 }
 
@@ -710,8 +746,8 @@ function renderQuestGroupsByAct(questGroupsByAct, questChoices, importedRegexes)
   let html = '';
   questGroupsByAct.forEach(({ act, quests }) => {
     html += `<div class="pob-memo-act"><div class="pob-memo-act-title">ACT ${act}</div>`;
-    quests.forEach(({ quest, gems }) => {
-      html += renderQuestGemChoiceRow(act, quest, gems, questChoices, importedRegexes);
+    quests.forEach((questEntry) => {
+      html += renderQuestGemChoiceRow(act, questEntry, questChoices, importedRegexes);
     });
     html += '</div>';
   });
@@ -722,14 +758,6 @@ function isBuildRelevantQuest(act, quest, pobImportState) {
   if (!pobImportState) return false;
   return getBuildRelevantQuestGroups(pobImportState.questMemo, pobImportState.importedRegexes)
     .some((group) => group.act === act && group.quests.some((entry) => entry.quest === quest));
-}
-
-/** クエスト報酬ジェムをベンダー Regex に含めるか（ビルド内かつクエストで受け取らないもののみ） */
-function shouldSelectQuestGemForVendor(gem, chosenRegex, importedRegexes, excludeQuest) {
-  if (gem.regex === chosenRegex) {
-    return !excludeQuest;
-  }
-  return importedRegexes.has(gem.regex);
 }
 
 /** PoB ジェム一覧をローカルデータと照合 */
@@ -833,21 +861,47 @@ function changePobSkillSets() {
 function computePobVendorRegexes(pobImportState, excludeQuest = true) {
   if (!pobImportState) return [];
 
-  const { matched, questMemo, questChoices, importedRegexes } = pobImportState;
+  const {
+    matched,
+    questMemo,
+    questChoices,
+    importedRegexes,
+  } = pobImportState;
   const regexSet = new Set();
-
-  matched.filter((m) => !m.isQuest).forEach((m) => regexSet.add(m.localGem.regex));
+  const questRelatedRegexes = new Set();
 
   getBuildRelevantQuestGroups(questMemo, importedRegexes).forEach(({ act, quests }) => {
-    quests.forEach(({ quest, gems }) => {
-      const key = getQuestRewardKey(act, quest);
-      const chosenRegex = questChoices[key] || gems[0]?.regex;
-      gems.forEach((gem) => {
-        if (shouldSelectQuestGemForVendor(gem, chosenRegex, importedRegexes, excludeQuest)) {
+    quests.forEach((questEntry) => {
+      const quest = questEntry.quest;
+      const gems = questEntry.gems || [];
+      const bonusGems = questEntry.bonusGems || [];
+      const mainKey = getQuestRewardChoiceKey(act, quest, 'main');
+      const bonusKey = getQuestRewardChoiceKey(act, quest, 'bonus');
+      const rewardRegexes = new Set([
+        questChoices[mainKey] || gems[0]?.regex,
+        questChoices[bonusKey],
+      ].filter(Boolean));
+
+      const allRewardGems = new Map();
+      [...gems, ...bonusGems].forEach((gem) => {
+        allRewardGems.set(gem.regex, gem);
+      });
+
+      allRewardGems.forEach((gem) => {
+        questRelatedRegexes.add(gem.regex);
+        if (!importedRegexes.has(gem.regex)) return;
+        if (!excludeQuest || !rewardRegexes.has(gem.regex)) {
           regexSet.add(gem.regex);
         }
       });
     });
+  });
+
+  // クエスト非関連のビルド内ジェムはベンダー購入として含める
+  matched.forEach((m) => {
+    const regex = m.localGem.regex;
+    if (questRelatedRegexes.has(regex)) return;
+    regexSet.add(regex);
   });
 
   return Array.from(regexSet);
@@ -861,10 +915,10 @@ function applyPobVendorSelection({ replace = true } = {}) {
   applyGemSelectionFromRegexes(regexes, { replace });
 }
 
-function selectQuestRewardChoice(act, quest, regex) {
+function selectQuestRewardChoice(act, quest, regex, choiceType = 'main') {
   if (!pobImportState) return;
 
-  const key = getQuestRewardKey(act, quest);
+  const key = getQuestRewardChoiceKey(act, quest, choiceType);
   pobImportState.questChoices[key] = regex;
 
   if (isBuildRelevantQuest(act, quest, pobImportState)) {
@@ -998,7 +1052,7 @@ function renderPobImportMemo() {
   if (!hasBuildQuests) {
     html += '<p class="pob-memo-note">ビルド内にクエスト報酬ジェムはありません。</p>';
   } else {
-    html += '<p class="pob-memo-note">同一クエストでは1つだけ選択できます。青枠はビルド内のジェムです。</p>';
+    html += '<p class="pob-memo-note">各報酬枠から1つ選択できます。選択したジェムは Regex から除外します。</p>';
     html += renderQuestGroupsByAct(buildQuestGroups, questChoices, importedRegexes);
   }
   html += '</div>';
@@ -1052,8 +1106,9 @@ function setupPobImportUI() {
       const act = Number(btn.dataset.act);
       const quest = decodeURIComponent(btn.dataset.quest || '');
       const regex = btn.dataset.regex;
+      const choiceType = btn.dataset.choiceType || 'main';
       if (act && quest && regex) {
-        selectQuestRewardChoice(act, quest, regex);
+        selectQuestRewardChoice(act, quest, regex, choiceType);
       }
     });
     memoPanel.addEventListener('change', (event) => {

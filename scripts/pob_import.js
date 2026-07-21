@@ -432,7 +432,18 @@ function getQuestRewardKey(act, quest) {
   return `${act}::${quest || ''}`;
 }
 
-/** クラス向けクエスト報酬ジェムを ACT → クエスト単位に整理 */
+/** 同じクエストに複数の選択枠がある場合の一意キー */
+function getQuestRewardChoiceKey(act, quest, choiceType = 'main') {
+  return `${getQuestRewardKey(act, quest)}::${choiceType}`;
+}
+
+const BREAKING_EGGS_BONUS_GEMS = new Set([
+  'Dash',
+  'Frostblink',
+  'Shield Charge',
+]);
+
+/** クラス向けクエスト報酬を ACT → クエスト単位に整理 */
 function buildQuestRewardMemo(gemData, classNameJp) {
   const byAct = new Map();
 
@@ -466,25 +477,44 @@ function buildQuestRewardMemo(gemData, classNameJp) {
       act,
       quests: Array.from(questMap.entries())
         .sort((a, b) => a[0].localeCompare(b[0], 'ja'))
-        .map(([quest, gems]) => ({
-          quest,
-          gems: gems.sort((a, b) => a.display_name.localeCompare(b.display_name, 'ja')),
-        })),
+        .map(([quest, gems]) => {
+          const sortedGems = gems.sort((a, b) => a.display_name.localeCompare(b.display_name, 'ja'));
+          const bonusGems = quest === '卵の破壊'
+            ? sortedGems.filter((gem) => BREAKING_EGGS_BONUS_GEMS.has(gem.eng))
+            : [];
+          const mainGems = quest === '卵の破壊'
+            ? sortedGems.filter((gem) => !BREAKING_EGGS_BONUS_GEMS.has(gem.eng))
+            : sortedGems;
+          return {
+            quest,
+            gems: mainGems,
+            bonusGems,
+          };
+        }),
     }));
 }
 
-/** 同一クエストで複数ジェムがある場合の初期選択（ビルド内を優先） */
+/** 同一クエストの各選択枠を初期化（ビルド内を優先） */
 function initQuestRewardChoices(questMemo, importedRegexes) {
   const choices = {};
 
   questMemo.forEach(({ act, quests }) => {
-    quests.forEach(({ quest, gems }) => {
-      const key = getQuestRewardKey(act, quest);
-      const inBuild = gems.filter((g) => importedRegexes.has(g.regex));
-      if (inBuild.length > 0) {
-        choices[key] = inBuild[0].regex;
+    quests.forEach(({ quest, gems, bonusGems = [] }) => {
+      const mainKey = getQuestRewardChoiceKey(act, quest, 'main');
+      const mainInBuild = gems.filter((g) => importedRegexes.has(g.regex));
+      if (mainInBuild.length > 0) {
+        choices[mainKey] = mainInBuild[0].regex;
       } else if (gems.length > 0) {
-        choices[key] = gems[0].regex;
+        choices[mainKey] = gems[0].regex;
+      }
+
+      if (bonusGems.length > 0) {
+        const bonusKey = getQuestRewardChoiceKey(act, quest, 'bonus');
+        const bonusInBuild = bonusGems.filter((g) => importedRegexes.has(g.regex));
+        const mainRegex = choices[mainKey];
+        const distinctBonus = bonusInBuild.find((g) => g.regex !== mainRegex)
+          || bonusGems.find((g) => g.regex !== mainRegex);
+        choices[bonusKey] = (distinctBonus || bonusInBuild[0] || bonusGems[0]).regex;
       }
     });
   });
@@ -530,6 +560,7 @@ window.getBuildGemsForSkillSets = getBuildGemsForSkillSets;
 window.matchPobGemToLocal = matchPobGemToLocal;
 window.buildQuestRewardMemo = buildQuestRewardMemo;
 window.getQuestRewardKey = getQuestRewardKey;
+window.getQuestRewardChoiceKey = getQuestRewardChoiceKey;
 window.initQuestRewardChoices = initQuestRewardChoices;
 window.isQuestRewardForClass = isQuestRewardForClass;
 window.loadPobBuildFromInput = loadPobBuildFromInput;
