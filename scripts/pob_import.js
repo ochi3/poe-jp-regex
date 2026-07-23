@@ -443,6 +443,48 @@ const BREAKING_EGGS_BONUS_GEMS = new Set([
   'Shield Charge',
 ]);
 
+const CAGED_BRUTE_BONUS_GEMS = new Set([
+  'Clarity',
+  'Faster Attacks Support',
+  'Melee Splash Support',
+  'Precision',
+  'Vitality',
+]);
+
+/** クエストごとの追加報酬定義 */
+const QUEST_BONUS_REWARD_DEFS = {
+  '卵の破壊': {
+    engNames: BREAKING_EGGS_BONUS_GEMS,
+    sharedAllClasses: false,
+  },
+  '檻の中のけだもの': {
+    engNames: CAGED_BRUTE_BONUS_GEMS,
+    sharedAllClasses: true,
+  },
+};
+
+function toQuestMemoGem(gem, act, quest) {
+  return {
+    regex: gem.regex,
+    display_name: gem.display_name,
+    eng: gem.eng,
+    quest,
+    classes: gem.quest_reward?.classes || [],
+    act,
+  };
+}
+
+/** 追加報酬ジェム一覧を取得 */
+function getQuestBonusGems(gemData, quest, act, classGems, engNames, sharedAllClasses) {
+  if (sharedAllClasses) {
+    return gemData
+      .filter((gem) => engNames.has(gem.eng))
+      .map((gem) => toQuestMemoGem(gem, act, quest))
+      .sort((a, b) => a.display_name.localeCompare(b.display_name, 'ja'));
+  }
+  return classGems.filter((gem) => engNames.has(gem.eng));
+}
+
 /** クラス向けクエスト報酬を ACT → クエスト単位に整理 */
 function buildQuestRewardMemo(gemData, classNameJp) {
   const byAct = new Map();
@@ -461,14 +503,18 @@ function buildQuestRewardMemo(gemData, classNameJp) {
     if (!byQuest.has(quest)) {
       byQuest.set(quest, []);
     }
-    byQuest.get(quest).push({
-      regex: gem.regex,
-      display_name: gem.display_name,
-      eng: gem.eng,
-      quest,
-      classes: reward.classes,
-      act,
-    });
+    byQuest.get(quest).push(toQuestMemoGem(gem, act, quest));
+  });
+
+  // 全クラス共有の追加報酬クエストが、クラス報酬一覧に無い場合も枠を用意する
+  Object.entries(QUEST_BONUS_REWARD_DEFS).forEach(([quest, def]) => {
+    if (!def.sharedAllClasses) return;
+    const sample = gemData.find((gem) => def.engNames.has(gem.eng) && gem.quest_reward?.quest === quest);
+    const act = sample?.quest_reward?.act;
+    if (!act) return;
+    if (!byAct.has(act)) byAct.set(act, new Map());
+    const byQuest = byAct.get(act);
+    if (!byQuest.has(quest)) byQuest.set(quest, []);
   });
 
   return Array.from(byAct.entries())
@@ -479,12 +525,20 @@ function buildQuestRewardMemo(gemData, classNameJp) {
         .sort((a, b) => a[0].localeCompare(b[0], 'ja'))
         .map(([quest, gems]) => {
           const sortedGems = gems.sort((a, b) => a.display_name.localeCompare(b.display_name, 'ja'));
-          const bonusGems = quest === '卵の破壊'
-            ? sortedGems.filter((gem) => BREAKING_EGGS_BONUS_GEMS.has(gem.eng))
-            : [];
-          const mainGems = quest === '卵の破壊'
-            ? sortedGems.filter((gem) => !BREAKING_EGGS_BONUS_GEMS.has(gem.eng))
-            : sortedGems;
+          const bonusDef = QUEST_BONUS_REWARD_DEFS[quest];
+          if (!bonusDef) {
+            return { quest, gems: sortedGems, bonusGems: [] };
+          }
+
+          const bonusGems = getQuestBonusGems(
+            gemData,
+            quest,
+            act,
+            sortedGems,
+            bonusDef.engNames,
+            bonusDef.sharedAllClasses,
+          );
+          const mainGems = sortedGems.filter((gem) => !bonusDef.engNames.has(gem.eng));
           return {
             quest,
             gems: mainGems,
@@ -525,7 +579,17 @@ function initQuestRewardChoices(questMemo, importedRegexes) {
 function isQuestRewardForClass(gemEntry, classNameJp) {
   const reward = gemEntry?.quest_reward;
   if (!reward || !classNameJp) return false;
-  return Array.isArray(reward.classes) && reward.classes.includes(classNameJp);
+  if (Array.isArray(reward.classes) && reward.classes.includes(classNameJp)) return true;
+
+  // 檻の中のけだもの追加報酬は全クラス共有
+  if (
+    reward.quest === '檻の中のけだもの'
+    && CAGED_BRUTE_BONUS_GEMS.has(gemEntry.eng)
+  ) {
+    return true;
+  }
+
+  return false;
 }
 
 /** 入力から PoB ビルドを取得して解析 */
