@@ -1346,7 +1346,7 @@ const scarablist = {
     "engName": "Ultimatum Scarab of Bribing",
     "description": "アルティメイタムモンスターが付与する経験値が150%増加する\nアルティメイタムエンカウンターは追加のラウンドを2回完了したと仮定して報酬を付与する",
     "enDescription": "Ultimatum Monsters grant 150% increased Experience\nUltimatum Encounters grant rewards as though you completed 2 additional Rounds",
-    "chaosValue": "2.01",
+    "chaosValue": "1",
     "regex": "賄賂",
     "enRegex": "dg"
   },
