@@ -40,7 +40,7 @@ const runegraftlist = {
     "description": "オフハンドのアタックスピードが10%上昇する",
     "enDescription": "",
     "attribute": "DEX",
-    "chaosValue": "10.33",
+    "chaosValue": "16",
     "regex": "左手",
     "enRegex": "Sin"
   },
@@ -67,7 +67,7 @@ const runegraftlist = {
     "description": "毎秒1のヴァールソウルを獲得する",
     "enDescription": "",
     "attribute": "STR",
-    "chaosValue": "85",
+    "chaosValue": "67.81",
     "regex": "灯火",
     "enRegex": "1 V"
   },
@@ -130,7 +130,7 @@ const runegraftlist = {
     "description": "スキル使用時に20%の確率でクールダウン使用回数を消費しない",
     "enDescription": "",
     "attribute": "INT",
-    "chaosValue": "25",
+    "chaosValue": "13",
     "regex": "時のル",
     "enRegex": "a C"
   },
@@ -139,7 +139,7 @@ const runegraftlist = {
     "description": "スキルのリザーブ効率が15%増加する 味方に影響するプレイヤーのスキルによるオーラは敵にも影響する",
     "enDescription": "",
     "attribute": "INT",
-    "chaosValue": "789.4",
+    "chaosValue": "80",
     "regex": "裏切",
     "enRegex": "f Tr"
   },
@@ -202,7 +202,7 @@ const runegraftlist = {
     "description": "装備中の両手武器にある未リンクのソケットごとにダメージが10%増加する",
     "enDescription": "",
     "attribute": "STR",
-    "chaosValue": "7",
+    "chaosValue": "1",
     "regex": "宝飾",
     "enRegex": "ew"
   },
