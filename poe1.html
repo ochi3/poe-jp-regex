@@ -16,7 +16,7 @@
     <meta name="keywords" content="path of exile, gaming, action rpg, regex, PoE, Regex, 日本語, マップmod">
     <title>PoE JP Regex</title>
     <link rel="canonical" href="https://ochi3.github.io/poe-jp-regex/poe1">
-    <link rel="stylesheet" href="styles.css?v=2">
+    <link rel="stylesheet" href="styles.css?v=3">
     <link rel="stylesheet" href="poe1_styles.css?v=3">
 </head>
 <body>
@@ -29,6 +29,7 @@
 
         <nav>
             <a href="#map" class="nav-link active" data-tab="mapContent">マップMod</a>
+            <a href="#chart" class="nav-link" data-tab="chartContent">海図Mod</a>
             <a href="#trans" class="nav-link" data-tab="transContent">英語Regex変換</a>
             <a href="#itemtrans" class="nav-link" data-tab="itemTransContent">装備変換</a>
             <a href="#vender" class="nav-link" data-tab="vendorContent">ベンダー(ACT用)</a>
@@ -200,6 +201,58 @@
                 </div>
                 <div id="ModListResult" style="display: none;"></div>
                 <div id="ModList" style="margin-top: 16px;"></div>
+            </div>
+        </div>
+
+        <!-- 海図Modタブ（Deepwater / Voyage Chart） -->
+        <div id="chartContent" class="tab-content">
+            <div class="card">
+                <h2 class="section-header">海図Mod Regex <span style="font-size:0.55em;font-weight:normal;color:var(--text-secondary);">Deepwater / Voyage Chart</span></h2>
+                <p style="color: var(--text-secondary); margin-bottom: 16px; font-size: 0.95em;">
+                    海図に付くプレフィックス / サフィックスと、隣接海図へ波及する効果を選べます。<br>
+                    トレードAPI未対応の文言は tradeStatIds が空のことがあります。
+                </p>
+
+                <div class="output-area" id="chartRegexOutput"></div>
+
+                <div class="input-group">
+                    <button onclick="copyChartRegex()">コピー</button>
+                    <button onclick="resetChartMods()">リセット</button>
+                    <span id="chartCharCount" class="char-count"></span>
+                </div>
+
+                <div class="input-group">
+                    <label class="input-label">
+                        数量:
+                        <input type="number" id="chartQtyInput" oninput="updateChartCombinedRegex()">
+                    </label>
+                    <label class="input-label">
+                        死人の硫黄:
+                        <input type="number" id="chartSulphurInput" oninput="updateChartCombinedRegex()">
+                    </label>
+                    <label class="input-label">
+                        <input type="checkbox" id="chartAdjacentCheckbox" checked onchange="updateChartModList()"> 隣接効果を表示
+                    </label>
+                </div>
+
+                <div class="input-group" style="font-size: 0.9em; color: var(--text-secondary); background: rgba(255,255,255,0.05); padding: 8px 12px; border-radius: 6px;">
+                    <div>
+                        <span style="color: var(--accent-red); font-weight: bold;">左クリック</span>: NG Mod (赤) /
+                        <span style="color: var(--accent-primary); font-weight: bold;">右クリック</span>: 欲しい Mod (緑)
+                    </div>
+                </div>
+
+                <div style="display: flex; gap: 8px; margin-top: 16px; align-items: center;">
+                    <input type="text" id="chartEffectSearch" placeholder="海図Modを検索..." oninput="updateChartModList()" style="flex: 1; margin-top: 0; padding: 10px; border-radius: 4px; border: 1px solid var(--border-color); background: var(--bg-secondary); color: var(--text-primary);">
+                    <select id="chartSortSelect" onchange="updateChartModList()" style="padding: 10px; border-radius: 4px; border: 1px solid var(--border-color); background: var(--bg-secondary); color: var(--text-primary);">
+                        <option value="default">デフォルト順</option>
+                        <option value="type_asc">タイプ順</option>
+                        <option value="quantity_desc">数量 降順</option>
+                        <option value="sulphur_desc">硫黄 降順</option>
+                        <option value="weight_desc">出現ウェイト 降順</option>
+                    </select>
+                </div>
+                <div id="ChartModList" style="margin-top: 16px;"></div>
             </div>
         </div>
 
@@ -1016,7 +1069,9 @@
                 <h2 class="section-header">Change log</h2>
                 <div class="changelog-list">
 
-                    <article class="changelog-entry"><time>26/07/07</time><p>ACT Regex PoB連携機能追加、武器ベース最適化</p></article>                    <article class="changelog-entry"><time>26/05/25</time><p>装備変換タブを追加しました。貼り付けた装備テキストの言語を自動判定し、日本語と英語を相互に変換できます。</p></article>
+                    <article class="changelog-entry"><time>26/07/26</time><p>3.29更新 マップMODの対応。海図MODの追加。Regexは最適化してないので不具合あったら連絡ください。</p></article>
+                    <article class="changelog-entry"><time>26/07/07</time><p>ACT Regex PoB連携機能追加、武器ベース最適化</p></article>
+                    <article class="changelog-entry"><time>26/05/25</time><p>装備変換タブを追加しました。貼り付けた装備テキストの言語を自動判定し、日本語と英語を相互に変換できます。</p></article>
                     <article class="changelog-entry"><time>26/05/24</time><p>内部コードの整理を行いました。不具合や想定と異なる動作がありましたら、フィードバックよりご報告をお願いします。</p></article>
                     <article class="changelog-entry"><time>26/04/09</time><p>トレードリンク設定を追加しました。</p></article>
                     <article class="changelog-entry"><time>26/04/07</time><p>プロファイルエラーを修正しました。</p></article>
@@ -1075,6 +1130,7 @@
     <script src="scripts/jp-poe-utils-translator.js"></script>
     <script src="scripts/item-translator.js"></script>
     <script src="scripts/map_mods.js"></script>
+    <script src="scripts/chart_mods.js"></script>
     <script src="scripts/trade_link.js"></script>
     <script src="scripts/beastlist.js"></script>
     <script src="scripts/scarablist.js"></script>
@@ -1082,6 +1138,7 @@
     <script src="scripts/runegraftlist.js"></script>
     <script src="scripts/convert.js"></script>
     <script src="scripts/scripts.js"></script>
+    <script src="scripts/chart_mods_ui.js"></script>
     <script src="scripts/flask.js"></script>
     <script src="scripts/item.js"></script>
     <script src="scripts/saved-regex.js"></script>
