@@ -5,7 +5,7 @@ function buildTradeUrl() {
     // UIから設定を取得
     const league = (typeof getLeagueName === 'function' ? getLeagueName() : null)
         || document.getElementById('leagueInput')?.value
-        || "Mirage";
+        || "Allflame";
     let tradeMethod = document.getElementById('tradeMethodSelect').value || "any";
     let minModCount = parseInt(document.getElementById('minModCountInput').value) || 0;
 
@@ -272,7 +272,7 @@ function openCustomTrade(queryId) {
     const league = (typeof getLeagueName === 'function' ? getLeagueName() : null)
         || document.getElementById('leagueInput')?.value
         || document.getElementById('leagueSelect')?.value
-        || "Mirage";
+        || "Allflame";
     
     // 現在の言語設定に基づいてベースURLを選択
     const baseUrl = (typeof currentLanguage !== 'undefined' && currentLanguage === 'en') 

@@ -1660,7 +1660,7 @@ function onLeagueSelectChange() {
 function getLeagueName() {
     const select = document.getElementById('leagueSelect');
     if (select.value === '__custom__') {
-        return document.getElementById('leagueInput').value.trim() || 'Mirage';
+        return document.getElementById('leagueInput').value.trim() || 'Allflame';
     }
     return select.value;
 }
@@ -1702,7 +1702,7 @@ function saveTradeSettings() {
 }
 
 function loadTradeSettings() {
-    const league = localStorage.getItem('poeTradeLeague') || "Mirage";
+    const league = localStorage.getItem('poeTradeLeague') || "Allflame";
     const leagueIsCustom = localStorage.getItem('poeTradeLeagueIsCustom') === 'true';
     let method = localStorage.getItem('poeTradeMethod');
     if (method === null) method = "securable";
