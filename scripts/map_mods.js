@@ -672,7 +672,7 @@ const mapModList = {
     "type": "Prefix",
     "weight": 600,
     "tier": 1000,
-    "engRegex": "ysical Th",
+    "engRegex": "cal Th",
     "Regex": "理の棘",
     "tradeStatIds": [
       "explicit.stat_3278889477",
@@ -693,7 +693,7 @@ const mapModList = {
     "type": "Prefix",
     "weight": 600,
     "tier": 1000,
-    "engRegex": "mental Th",
+    "engRegex": "tal Th",
     "Regex": "素の棘",
     "tradeStatIds": [
       "explicit.stat_3938822425",
@@ -1869,7 +1869,7 @@ const mapModList = {
     "type": "Prefix",
     "weight": 40,
     "tier": 2202,
-    "engRegex": "orns] ref",
+    "engRegex": "orns ref",
     "Regex": "の棘を持",
     "tradeStatIds": [
       "explicit.stat_3278889477",
