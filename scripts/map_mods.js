@@ -1461,7 +1461,7 @@ const mapModList = {
     "type": "Suffix",
     "weight": 800,
     "tier": 80,
-    "engRegex": "er,",
+    "engRegex": "wer,",
     "Regex": "盗む",
     "tradeStatIds": [
       "explicit.stat_3222482040"
