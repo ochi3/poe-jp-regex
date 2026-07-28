@@ -488,7 +488,7 @@ const mapModList = {
     "type": "Suffix",
     "weight": 800,
     "tier": 500,
-    "engRegex": "tip",
+    "engRegex": "e Mu",
     "Regex": "ジ倍",
     "tradeStatIds": [
       "explicit.stat_2753083623",
@@ -1159,7 +1159,7 @@ const mapModList = {
     "weight": 800,
     "tier": 100,
     "engRegex": "r el",
-    "Regex": "性 +",
+    "Regex": "ーの元",
     "tradeStatIds": [
       "explicit.stat_365540634",
       "explicit.stat_1054098949"
