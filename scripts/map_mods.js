@@ -996,7 +996,7 @@ const mapModList = {
     "type": "Suffix",
     "weight": 800,
     "tier": 150,
-    "engRegex": "ail",
+    "engRegex": "l Ai",
     "Regex": "系状",
     "tradeStatIds": [
       "explicit.stat_322206271"
