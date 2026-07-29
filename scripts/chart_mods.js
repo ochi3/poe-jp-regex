@@ -1,4 +1,5 @@
 // tools/extract_chart_mods.py によって自動生成されました (source: poe-db)
+// プレフィックス/サフィックスは既存を保持。隣接・航海全体は tools/extract_chart_implicits.js で再抽出。
 const chartModList = {
   "モンスターは#%の確率で元素系状態異常を無効化する": {
     "mod": "モンスターは#%の確率で元素系状態異常を無効化する",
@@ -768,19 +769,20 @@ const chartModList = {
     "map_pack_size_+%": 0,
     "map_deepwater_league_resource_found_+%": 45
   },
-  "(隣接) マジックモンスターの数が#%増加する": {
-    "mod": "(隣接) マジックモンスターの数が#%増加する",
-    "engMod": "(Adjacent) #% increased Magic Monsters",
-    "value": "30",
+  "(隣接) 隣接エリアにアルカニストのストロングボックスが追加で#個出現する": {
+    "mod": "(隣接) 隣接エリアにアルカニストのストロングボックスが追加で#個出現する",
+    "engMod": "(Adjacent) Adjacent Areas contain # additional Arcanist's Strongboxes",
+    "value": "3",
     "type": "Adjacent",
-    "weight": 1000,
-    "tier": 0,
-    "engRegex": "d mag",
-    "Regex": "マ.*増",
+    "weight": 150,
+    "tier": 68,
+    "engRegex": "cont",
+    "Regex": "アルカ",
     "tradeStatIds": [
       ""
     ],
     "adjacent": true,
+    "voyage": false,
     "nameJa": "",
     "nameEn": "",
     "map_item_drop_quantity_+%": 0,
@@ -788,19 +790,20 @@ const chartModList = {
     "map_pack_size_+%": 0,
     "map_deepwater_league_resource_found_+%": 0
   },
-  "(隣接) レアモンスターの数が#%増加する": {
-    "mod": "(隣接) レアモンスターの数が#%増加する",
-    "engMod": "(Adjacent) #% increased number of Rare Monsters",
-    "value": "30",
+  "(隣接) 隣接エリアに樽のクラスターが追加で(##)個出現する": {
+    "mod": "(隣接) 隣接エリアに樽のクラスターが追加で(##)個出現する",
+    "engMod": "(Adjacent) Adjacent Areas contain (##) additional Clusters of Barrels",
+    "value": "16-20",
     "type": "Adjacent",
-    "weight": 1000,
-    "tier": 0,
-    "engRegex": "nu",
-    "Regex": "アモ.*数",
+    "weight": 700,
+    "tier": 68,
+    "engRegex": "addi",
+    "Regex": "樽の",
     "tradeStatIds": [
       ""
     ],
     "adjacent": true,
+    "voyage": false,
     "nameJa": "",
     "nameEn": "",
     "map_item_drop_quantity_+%": 0,
@@ -808,39 +811,20 @@ const chartModList = {
     "map_pack_size_+%": 0,
     "map_deepwater_league_resource_found_+%": 0
   },
-  "(隣接) モンスターは一定確率で#体の原生林のウィスプにより強化されている": {
-    "mod": "(隣接) モンスターは一定確率で#体の原生林のウィスプにより強化されている",
-    "engMod": "(Adjacent) Monsters have a chance to be Empowered by # Wildwood Wisps",
-    "value": "2000",
-    "type": "Adjacent",
-    "weight": 300,
-    "tier": 0,
-    "engRegex": "cent",
-    "Regex": "ーは一",
-    "tradeStatIds": [
-      ""
-    ],
-    "adjacent": true,
-    "nameJa": "",
-    "nameEn": "",
-    "map_item_drop_quantity_+%": 0,
-    "map_item_drop_rarity_+%": 0,
-    "map_pack_size_+%": 0,
-    "map_deepwater_league_resource_found_+%": 0
-  },
-  "(隣接) アッツィリインフルエンス": {
-    "mod": "(隣接) アッツィリインフルエンス",
-    "engMod": "(Adjacent) Atziri's Influence",
-    "value": "",
+  "(隣接) 隣接エリアにアッツィリインフルエンス": {
+    "mod": "(隣接) 隣接エリアにアッツィリインフルエンス",
+    "engMod": "(Adjacent) Atziri's Influence in adjacent Areas",
+    "value": "1",
     "type": "Adjacent",
     "weight": 100,
-    "tier": 0,
-    "engRegex": "entA",
+    "tier": 68,
+    "engRegex": "atzi",
     "Regex": "アッツ",
     "tradeStatIds": [
       ""
     ],
     "adjacent": true,
+    "voyage": false,
     "nameJa": "",
     "nameEn": "",
     "map_item_drop_quantity_+%": 0,
@@ -848,19 +832,20 @@ const chartModList = {
     "map_pack_size_+%": 0,
     "map_deepwater_league_resource_found_+%": 0
   },
-  "(隣接) エリアには奇妙な樽のクラスターが追加で(##)個出現する": {
-    "mod": "(隣接) エリアには奇妙な樽のクラスターが追加で(##)個出現する",
-    "engMod": "(Adjacent) Area contains (##) additional Clusters of Mysterious Barrels",
-    "value": "12-15",
+  "(隣接) 隣接エリアにカニが追加で(##)パック出現する": {
+    "mod": "(隣接) 隣接エリアにカニが追加で(##)パック出現する",
+    "engMod": "(Adjacent) Adjacent Areas contain (##) additional pack of Crabs",
+    "value": "11-14",
     "type": "Adjacent",
-    "weight": 700,
-    "tier": 0,
-    "engRegex": "ntAr",
-    "Regex": "アには",
+    "weight": 500,
+    "tier": 68,
+    "engRegex": "pack",
+    "Regex": "カニ",
     "tradeStatIds": [
       ""
     ],
     "adjacent": true,
+    "voyage": false,
     "nameJa": "",
     "nameEn": "",
     "map_item_drop_quantity_+%": 0,
@@ -868,19 +853,83 @@ const chartModList = {
     "map_pack_size_+%": 0,
     "map_deepwater_league_resource_found_+%": 0
   },
-  "(隣接) ドロップしたアイテムは#%の確率でフラクチャーされている": {
-    "mod": "(隣接) ドロップしたアイテムは#%の確率でフラクチャーされている",
-    "engMod": "(Adjacent) [DNT] Dropped items have #% chance to be Fractured",
+  "(隣接) 隣接エリアに占い師のストロングボックスが追加で#個出現する": {
+    "mod": "(隣接) 隣接エリアに占い師のストロングボックスが追加で#個出現する",
+    "engMod": "(Adjacent) Adjacent Areas contain # additional Diviner's Strongboxes",
+    "value": "3",
+    "type": "Adjacent",
+    "weight": 100,
+    "tier": 68,
+    "engRegex": "divi",
+    "Regex": "占い師",
+    "tradeStatIds": [
+      ""
+    ],
+    "adjacent": true,
+    "voyage": false,
+    "nameJa": "",
+    "nameEn": "",
+    "map_item_drop_quantity_+%": 0,
+    "map_item_drop_rarity_+%": 0,
+    "map_pack_size_+%": 0,
+    "map_deepwater_league_resource_found_+%": 0
+  },
+  "(隣接) 隣接エリアにエッセンスに閉じ込められたモンスターが追加で#体出現する": {
+    "mod": "(隣接) 隣接エリアにエッセンスに閉じ込められたモンスターが追加で#体出現する",
+    "engMod": "(Adjacent) Adjacent Areas contain # additional Imprisoned Monsters",
+    "value": "5",
+    "type": "Adjacent",
+    "weight": 100,
+    "tier": 68,
+    "engRegex": "impr",
+    "Regex": "エッセ",
+    "tradeStatIds": [
+      ""
+    ],
+    "adjacent": true,
+    "voyage": false,
+    "nameJa": "",
+    "nameEn": "",
+    "map_item_drop_quantity_+%": 0,
+    "map_item_drop_rarity_+%": 0,
+    "map_pack_size_+%": 0,
+    "map_deepwater_league_resource_found_+%": 0
+  },
+  "(隣接) 隣接エリアにはとても高価値で珍しい魚が出現する": {
+    "mod": "(隣接) 隣接エリアにはとても高価値で珍しい魚が出現する",
+    "engMod": "(Adjacent) Adjacent Areas contain highly prized and exotic Fish",
+    "value": "1",
+    "type": "Adjacent",
+    "weight": 1,
+    "tier": 68,
+    "engRegex": "high",
+    "Regex": "魚が",
+    "tradeStatIds": [
+      ""
+    ],
+    "adjacent": true,
+    "voyage": false,
+    "nameJa": "",
+    "nameEn": "",
+    "map_item_drop_quantity_+%": 0,
+    "map_item_drop_rarity_+%": 0,
+    "map_pack_size_+%": 0,
+    "map_deepwater_league_resource_found_+%": 0
+  },
+  "(隣接) 隣接エリアでドロップするアイテムは#%の確率でフラクチャー状態になる": {
+    "mod": "(隣接) 隣接エリアでドロップするアイテムは#%の確率でフラクチャー状態になる",
+    "engMod": "(Adjacent) Items dropped in adjacent Areas have #% chance to be Fractured",
     "value": "2",
     "type": "Adjacent",
     "weight": 100,
-    "tier": 0,
-    "engRegex": "ent[",
-    "Regex": "ドロッ",
+    "tier": 68,
+    "engRegex": "item",
+    "Regex": "フラク",
     "tradeStatIds": [
       ""
     ],
     "adjacent": true,
+    "voyage": false,
     "nameJa": "",
     "nameEn": "",
     "map_item_drop_quantity_+%": 0,
@@ -888,19 +937,335 @@ const chartModList = {
     "map_pack_size_+%": 0,
     "map_deepwater_league_resource_found_+%": 0
   },
-  "(隣接) エリアのレアモンスターは#%の確率で憑依されている": {
-    "mod": "(隣接) エリアのレアモンスターは#%の確率で憑依されている",
-    "engMod": "(Adjacent) #% chance for Rare Monsters in Area to be Possessed",
+  "(隣接) 隣接エリアでモンスターがドロップする装備品の#%がゴールドに変換される": {
+    "mod": "(隣接) 隣接エリアでモンスターがドロップする装備品の#%がゴールドに変換される",
+    "engMod": "(Adjacent) #% of Equipment dropped by monsters in adjacent Areas is converted to Gold",
+    "value": "80",
+    "type": "Adjacent",
+    "weight": 100,
+    "tier": 46,
+    "engRegex": "equi",
+    "Regex": "ゴールド",
+    "tradeStatIds": [
+      ""
+    ],
+    "adjacent": true,
+    "voyage": false,
+    "nameJa": "",
+    "nameEn": "",
+    "map_item_drop_quantity_+%": 0,
+    "map_item_drop_rarity_+%": 0,
+    "map_pack_size_+%": 0,
+    "map_deepwater_league_resource_found_+%": 0
+  },
+  "(隣接) 隣接エリアで黄金のランタンが追加で#個出現する": {
+    "mod": "(隣接) 隣接エリアで黄金のランタンが追加で#個出現する",
+    "engMod": "(Adjacent) Adjacent Areas contain # additional Golden Lanterns",
+    "value": "4",
+    "type": "Adjacent",
+    "weight": 500,
+    "tier": 1,
+    "engRegex": "gold",
+    "Regex": "黄金",
+    "tradeStatIds": [
+      ""
+    ],
+    "adjacent": true,
+    "voyage": false,
+    "nameJa": "",
+    "nameEn": "",
+    "map_item_drop_quantity_+%": 0,
+    "map_item_drop_rarity_+%": 0,
+    "map_pack_size_+%": 0,
+    "map_deepwater_league_resource_found_+%": 0
+  },
+  "(隣接) 隣接エリアのマジックモンスターの数が#%増加する": {
+    "mod": "(隣接) 隣接エリアのマジックモンスターの数が#%増加する",
+    "engMod": "(Adjacent) #% increased Magic Monsters in adjacent Areas",
+    "value": "60",
+    "type": "Adjacent",
+    "weight": 300,
+    "tier": 68,
+    "engRegex": "incr",
+    "Regex": "隣.*マジ",
+    "tradeStatIds": [
+      ""
+    ],
+    "adjacent": true,
+    "voyage": false,
+    "nameJa": "",
+    "nameEn": "",
+    "map_item_drop_quantity_+%": 0,
+    "map_item_drop_rarity_+%": 0,
+    "map_pack_size_+%": 0,
+    "map_deepwater_league_resource_found_+%": 0
+  },
+  "(隣接) 隣接エリアのレアモンスターの数が#%増加する": {
+    "mod": "(隣接) 隣接エリアのレアモンスターの数が#%増加する",
+    "engMod": "(Adjacent) #% increased number of Rare Monsters in adjacent Areas",
+    "value": "60",
+    "type": "Adjacent",
+    "weight": 300,
+    "tier": 68,
+    "engRegex": "numb",
+    "Regex": "隣.*レア",
+    "tradeStatIds": [
+      ""
+    ],
+    "adjacent": true,
+    "voyage": false,
+    "nameJa": "",
+    "nameEn": "",
+    "map_item_drop_quantity_+%": 0,
+    "map_item_drop_rarity_+%": 0,
+    "map_pack_size_+%": 0,
+    "map_deepwater_league_resource_found_+%": 0
+  },
+  "(隣接) 隣接エリアに瓶に入った手紙が追加で#個出現する": {
+    "mod": "(隣接) 隣接エリアに瓶に入った手紙が追加で#個出現する",
+    "engMod": "(Adjacent) Adjacent Areas contain # additional Messages in a Bottle",
+    "value": "1",
+    "type": "Adjacent",
+    "weight": 100,
+    "tier": 68,
+    "engRegex": "mess",
+    "Regex": "瓶に",
+    "tradeStatIds": [
+      ""
+    ],
+    "adjacent": true,
+    "voyage": false,
+    "nameJa": "",
+    "nameEn": "",
+    "map_item_drop_quantity_+%": 0,
+    "map_item_drop_rarity_+%": 0,
+    "map_pack_size_+%": 0,
+    "map_deepwater_league_resource_found_+%": 0
+  },
+  "(隣接) 隣接エリアにタコが追加で(##)パック出現する": {
+    "mod": "(隣接) 隣接エリアにタコが追加で(##)パック出現する",
+    "engMod": "(Adjacent) Adjacent Areas contains (##) additional pack of Octopi",
+    "value": "11-14",
+    "type": "Adjacent",
+    "weight": 500,
+    "tier": 68,
+    "engRegex": "octo",
+    "Regex": "タコ",
+    "tradeStatIds": [
+      ""
+    ],
+    "adjacent": true,
+    "voyage": false,
+    "nameJa": "",
+    "nameEn": "",
+    "map_item_drop_quantity_+%": 0,
+    "map_item_drop_rarity_+%": 0,
+    "map_pack_size_+%": 0,
+    "map_deepwater_league_resource_found_+%": 0
+  },
+  "(隣接) 隣接エリアに諜報員のストロングボックスが追加で#個出現する": {
+    "mod": "(隣接) 隣接エリアに諜報員のストロングボックスが追加で#個出現する",
+    "engMod": "(Adjacent) Adjacent Areas contain # additional Operative's Strongboxes",
+    "value": "3",
+    "type": "Adjacent",
+    "weight": 150,
+    "tier": 78,
+    "engRegex": "oper",
+    "Regex": "諜報",
+    "tradeStatIds": [
+      ""
+    ],
+    "adjacent": true,
+    "voyage": false,
+    "nameJa": "",
+    "nameEn": "",
+    "map_item_drop_quantity_+%": 0,
+    "map_item_drop_rarity_+%": 0,
+    "map_pack_size_+%": 0,
+    "map_deepwater_league_resource_found_+%": 0
+  },
+  "(隣接) 隣接エリアのレアモンスターはパンテオンモッドを#個持つ": {
+    "mod": "(隣接) 隣接エリアのレアモンスターはパンテオンモッドを#個持つ",
+    "engMod": "(Adjacent) Rare Monsters in adjacent Areas will have # Pantheon Modifier",
+    "value": "1",
+    "type": "Adjacent",
+    "weight": 300,
+    "tier": 68,
+    "engRegex": "rare",
+    "Regex": "パンテ",
+    "tradeStatIds": [
+      ""
+    ],
+    "adjacent": true,
+    "voyage": false,
+    "nameJa": "",
+    "nameEn": "",
+    "map_item_drop_quantity_+%": 0,
+    "map_item_drop_rarity_+%": 0,
+    "map_pack_size_+%": 0,
+    "map_deepwater_league_resource_found_+%": 0
+  },
+  "(隣接) 隣接エリアに巨大なヒトデが追加で(##)体出現する": {
+    "mod": "(隣接) 隣接エリアに巨大なヒトデが追加で(##)体出現する",
+    "engMod": "(Adjacent) Adjacent Areas contains (##) additional Giant Starfish",
+    "value": "6-7",
+    "type": "Adjacent",
+    "weight": 300,
+    "tier": 68,
+    "engRegex": "gian",
+    "Regex": "ヒトデ",
+    "tradeStatIds": [
+      ""
+    ],
+    "adjacent": true,
+    "voyage": false,
+    "nameJa": "",
+    "nameEn": "",
+    "map_item_drop_quantity_+%": 0,
+    "map_item_drop_rarity_+%": 0,
+    "map_pack_size_+%": 0,
+    "map_deepwater_league_resource_found_+%": 0
+  },
+  "(隣接) 隣接エリアにストロングボックスが追加で#個出現する": {
+    "mod": "(隣接) 隣接エリアにストロングボックスが追加で#個出現する",
+    "engMod": "(Adjacent) Adjacent Areas contains # additional Strongboxes",
+    "value": "5",
+    "type": "Adjacent",
+    "weight": 100,
+    "tier": 68,
+    "engRegex": "stro",
+    "Regex": "ストロ",
+    "tradeStatIds": [
+      ""
+    ],
+    "adjacent": true,
+    "voyage": false,
+    "nameJa": "",
+    "nameEn": "",
+    "map_item_drop_quantity_+%": 0,
+    "map_item_drop_rarity_+%": 0,
+    "map_pack_size_+%": 0,
+    "map_deepwater_league_resource_found_+%": 0
+  },
+  "(隣接) 隣接エリアに拷問された幽霊の檻が追加で#個出現する": {
+    "mod": "(隣接) 隣接エリアに拷問された幽霊の檻が追加で#個出現する",
+    "engMod": "(Adjacent) Adjacent Areas contain # additional cages of Tormented Spirits",
+    "value": "2",
+    "type": "Adjacent",
+    "weight": 350,
+    "tier": 68,
+    "engRegex": "cage",
+    "Regex": "拷問",
+    "tradeStatIds": [
+      ""
+    ],
+    "adjacent": true,
+    "voyage": false,
+    "nameJa": "",
+    "nameEn": "",
+    "map_item_drop_quantity_+%": 0,
+    "map_item_drop_rarity_+%": 0,
+    "map_pack_size_+%": 0,
+    "map_deepwater_league_resource_found_+%": 0
+  },
+  "(隣接) 隣接エリアでドロップするアミュレットは#%の確率で代わりにユニークアミュレットとしてドロップする": {
+    "mod": "(隣接) 隣接エリアでドロップするアミュレットは#%の確率で代わりにユニークアミュレットとしてドロップする",
+    "engMod": "(Adjacent) Amulets dropped in adjacent Areas have #% chance to instead drop as a Unique Amulet",
+    "value": "20",
+    "type": "Adjacent",
+    "weight": 150,
+    "tier": 47,
+    "engRegex": "amul",
+    "Regex": "アミュ",
+    "tradeStatIds": [
+      ""
+    ],
+    "adjacent": true,
+    "voyage": false,
+    "nameJa": "",
+    "nameEn": "",
+    "map_item_drop_quantity_+%": 0,
+    "map_item_drop_rarity_+%": 0,
+    "map_pack_size_+%": 0,
+    "map_deepwater_league_resource_found_+%": 0
+  },
+  "(隣接) 隣接エリアでドロップするベルトは#%の確率で代わりにユニークベルトとしてドロップする": {
+    "mod": "(隣接) 隣接エリアでドロップするベルトは#%の確率で代わりにユニークベルトとしてドロップする",
+    "engMod": "(Adjacent) Belts dropped in adjacent Areas have #% chance to instead drop as a Unique Belt",
+    "value": "20",
+    "type": "Adjacent",
+    "weight": 150,
+    "tier": 47,
+    "engRegex": "belt",
+    "Regex": "ベルト",
+    "tradeStatIds": [
+      ""
+    ],
+    "adjacent": true,
+    "voyage": false,
+    "nameJa": "",
+    "nameEn": "",
+    "map_item_drop_quantity_+%": 0,
+    "map_item_drop_rarity_+%": 0,
+    "map_pack_size_+%": 0,
+    "map_deepwater_league_resource_found_+%": 0
+  },
+  "(隣接) 隣接エリアでドロップする指輪は#%の確率で代わりにユニーク指輪としてドロップする": {
+    "mod": "(隣接) 隣接エリアでドロップする指輪は#%の確率で代わりにユニーク指輪としてドロップする",
+    "engMod": "(Adjacent) Rings dropped in adjacent Areas have #% chance to instead drop as a Unique Ring",
+    "value": "20",
+    "type": "Adjacent",
+    "weight": 150,
+    "tier": 47,
+    "engRegex": "ring",
+    "Regex": "指輪",
+    "tradeStatIds": [
+      ""
+    ],
+    "adjacent": true,
+    "voyage": false,
+    "nameJa": "",
+    "nameEn": "",
+    "map_item_drop_quantity_+%": 0,
+    "map_item_drop_rarity_+%": 0,
+    "map_pack_size_+%": 0,
+    "map_deepwater_league_resource_found_+%": 0
+  },
+  "(隣接) 隣接エリアのモンスターは一定確率で#体の原生林のウィスプにより強化されている": {
+    "mod": "(隣接) 隣接エリアのモンスターは一定確率で#体の原生林のウィスプにより強化されている",
+    "engMod": "(Adjacent) Monsters in adjacent Areas have a chance to be Empowered by # Wildwood Wisps",
+    "value": "2000",
+    "type": "Adjacent",
+    "weight": 300,
+    "tier": 68,
+    "engRegex": "mons",
+    "Regex": "ウィスプ",
+    "tradeStatIds": [
+      ""
+    ],
+    "adjacent": true,
+    "voyage": false,
+    "nameJa": "",
+    "nameEn": "",
+    "map_item_drop_quantity_+%": 0,
+    "map_item_drop_rarity_+%": 0,
+    "map_pack_size_+%": 0,
+    "map_deepwater_league_resource_found_+%": 0
+  },
+  "(航海) 全ての航海エリアで見つかるフラスコは#%の確率で品質20%を持つ": {
+    "mod": "(航海) 全ての航海エリアで見つかるフラスコは#%の確率で品質20%を持つ",
+    "engMod": "(Voyage) Flasks found in all Voyage Areas have #% chance to have 20% Quality",
     "value": "100",
-    "type": "Adjacent",
-    "weight": 50,
-    "tier": 0,
-    "engRegex": "entc",
-    "Regex": "リアの",
+    "type": "Voyage",
+    "weight": 100,
+    "tier": 68,
+    "engRegex": "flas",
+    "Regex": "品質",
     "tradeStatIds": [
       ""
     ],
-    "adjacent": true,
+    "adjacent": false,
+    "voyage": true,
     "nameJa": "",
     "nameEn": "",
     "map_item_drop_quantity_+%": 0,
@@ -908,19 +1273,272 @@ const chartModList = {
     "map_pack_size_+%": 0,
     "map_deepwater_league_resource_found_+%": 0
   },
-  "(隣接) #%の確率でレアモンスターは死亡時にフラクチャー化する": {
-    "mod": "(隣接) #%の確率でレアモンスターは死亡時にフラクチャー化する",
-    "engMod": "(Adjacent) #% chance for Rare Monsters to Fracture on death",
-    "value": "50",
-    "type": "Adjacent",
-    "weight": 50,
-    "tier": 0,
-    "engRegex": "fra",
-    "Regex": "亡時",
+  "(航海) 全ての航海エリアに友好的なクラゲが出現する": {
+    "mod": "(航海) 全ての航海エリアに友好的なクラゲが出現する",
+    "engMod": "(Voyage) All Voyage Areas contain Friendly Jellyfish",
+    "value": "1",
+    "type": "Voyage",
+    "weight": 1000,
+    "tier": 1,
+    "engRegex": "frie",
+    "Regex": "クラゲ",
     "tradeStatIds": [
       ""
     ],
-    "adjacent": true,
+    "adjacent": false,
+    "voyage": true,
+    "nameJa": "",
+    "nameEn": "",
+    "map_item_drop_quantity_+%": 0,
+    "map_item_drop_rarity_+%": 0,
+    "map_pack_size_+%": 0,
+    "map_deepwater_league_resource_found_+%": 0
+  },
+  "(航海) 全ての航海エリアのマジックモンスターの数が#%増加する": {
+    "mod": "(航海) 全ての航海エリアのマジックモンスターの数が#%増加する",
+    "engMod": "(Voyage) #% increased number of Magic Monsters in all Voyage Areas",
+    "value": "25",
+    "type": "Voyage",
+    "weight": 700,
+    "tier": 46,
+    "engRegex": "magi",
+    "Regex": "航.*マジ",
+    "tradeStatIds": [
+      ""
+    ],
+    "adjacent": false,
+    "voyage": true,
+    "nameJa": "",
+    "nameEn": "",
+    "map_item_drop_quantity_+%": 0,
+    "map_item_drop_rarity_+%": 0,
+    "map_pack_size_+%": 0,
+    "map_deepwater_league_resource_found_+%": 0
+  },
+  "(航海) 全ての航海エリアのレアモンスターの数が#%増加する": {
+    "mod": "(航海) 全ての航海エリアのレアモンスターの数が#%増加する",
+    "engMod": "(Voyage) #% increased number of Rare Monsters in all Voyage Areas",
+    "value": "25",
+    "type": "Voyage",
+    "weight": 700,
+    "tier": 46,
+    "engRegex": "inc",
+    "Regex": "航.*レア",
+    "tradeStatIds": [
+      ""
+    ],
+    "adjacent": false,
+    "voyage": true,
+    "nameJa": "",
+    "nameEn": "",
+    "map_item_drop_quantity_+%": 0,
+    "map_item_drop_rarity_+%": 0,
+    "map_pack_size_+%": 0,
+    "map_deepwater_league_resource_found_+%": 0
+  },
+  "(航海) 全ての航海エリアでは全てのモンスターが最低でもマジックになる": {
+    "mod": "(航海) 全ての航海エリアでは全てのモンスターが最低でもマジックになる",
+    "engMod": "(Voyage) Monsters in all Voyage Areas are at least Magic",
+    "value": "100",
+    "type": "Voyage",
+    "weight": 50,
+    "tier": 68,
+    "engRegex": "leas",
+    "Regex": "最低で",
+    "tradeStatIds": [
+      ""
+    ],
+    "adjacent": false,
+    "voyage": true,
+    "nameJa": "",
+    "nameEn": "",
+    "map_item_drop_quantity_+%": 0,
+    "map_item_drop_rarity_+%": 0,
+    "map_pack_size_+%": 0,
+    "map_deepwater_league_resource_found_+%": 0
+  },
+  "(航海) 全ての航海エリアで元々生息しているレアモンスターはエッセンスに閉じ込められている": {
+    "mod": "(航海) 全ての航海エリアで元々生息しているレアモンスターはエッセンスに閉じ込められている",
+    "engMod": "(Voyage) Rare monsters that are natural inhabitants of all Voyage Areas are imprisoned by Essences",
+    "value": "1",
+    "type": "Voyage",
+    "weight": 50,
+    "tier": 68,
+    "engRegex": "that",
+    "Regex": "元々生",
+    "tradeStatIds": [
+      ""
+    ],
+    "adjacent": false,
+    "voyage": true,
+    "nameJa": "",
+    "nameEn": "",
+    "map_item_drop_quantity_+%": 0,
+    "map_item_drop_rarity_+%": 0,
+    "map_pack_size_+%": 0,
+    "map_deepwater_league_resource_found_+%": 0
+  },
+  "(航海) 全ての航海エリアのレアモンスターは#%の確率で憑依されている": {
+    "mod": "(航海) 全ての航海エリアのレアモンスターは#%の確率で憑依されている",
+    "engMod": "(Voyage) #% chance for Rare Monsters in all Voyage Areas to be Possessed",
+    "value": "100",
+    "type": "Voyage",
+    "weight": 50,
+    "tier": 46,
+    "engRegex": "chan",
+    "Regex": "憑依",
+    "tradeStatIds": [
+      ""
+    ],
+    "adjacent": false,
+    "voyage": true,
+    "nameJa": "",
+    "nameEn": "",
+    "map_item_drop_quantity_+%": 0,
+    "map_item_drop_rarity_+%": 0,
+    "map_pack_size_+%": 0,
+    "map_deepwater_league_resource_found_+%": 0
+  },
+  "(航海) 全ての航海エリアのモンスターは装備品、フラスコまたはチンキをドロップしなくなる": {
+    "mod": "(航海) 全ての航海エリアのモンスターは装備品、フラスコまたはチンキをドロップしなくなる",
+    "engMod": "(Voyage) Monsters in all Voyage Areas cannot drop Equipment, Flasks or Tinctures",
+    "value": "1|1",
+    "type": "Voyage",
+    "weight": 10,
+    "tier": 68,
+    "engRegex": "cann",
+    "Regex": "品、フ",
+    "tradeStatIds": [
+      ""
+    ],
+    "adjacent": false,
+    "voyage": true,
+    "nameJa": "",
+    "nameEn": "",
+    "map_item_drop_quantity_+%": 0,
+    "map_item_drop_rarity_+%": 0,
+    "map_pack_size_+%": 0,
+    "map_deepwater_league_resource_found_+%": 0
+  },
+  "(航海) 全ての航海エリアのパックサイズが#%増加する": {
+    "mod": "(航海) 全ての航海エリアのパックサイズが#%増加する",
+    "engMod": "(Voyage) #% increased Pack Size in all Voyage Areas",
+    "value": "7",
+    "type": "Voyage",
+    "weight": 500,
+    "tier": 68,
+    "engRegex": "size",
+    "Regex": "パックサ",
+    "tradeStatIds": [
+      ""
+    ],
+    "adjacent": false,
+    "voyage": true,
+    "nameJa": "",
+    "nameEn": "",
+    "map_item_drop_quantity_+%": 0,
+    "map_item_drop_rarity_+%": 0,
+    "map_pack_size_+%": 7,
+    "map_deepwater_league_resource_found_+%": 0
+  },
+  "(航海) 全ての航海エリアで見つかるアイテムの数量が#%増加する": {
+    "mod": "(航海) 全ての航海エリアで見つかるアイテムの数量が#%増加する",
+    "engMod": "(Voyage) #% increased Quantity of Items found in all Voyage Areas",
+    "value": "10",
+    "type": "Voyage",
+    "weight": 500,
+    "tier": 68,
+    "engRegex": "quan",
+    "Regex": "数量が",
+    "tradeStatIds": [
+      ""
+    ],
+    "adjacent": false,
+    "voyage": true,
+    "nameJa": "",
+    "nameEn": "",
+    "map_item_drop_quantity_+%": 10,
+    "map_item_drop_rarity_+%": 0,
+    "map_pack_size_+%": 0,
+    "map_deepwater_league_resource_found_+%": 0
+  },
+  "(航海) 全ての航海エリアのレアモンスターは死亡時に#%の確率で分割される": {
+    "mod": "(航海) 全ての航海エリアのレアモンスターは死亡時に#%の確率で分割される",
+    "engMod": "(Voyage) Rare Monsters in all Voyage Areas have #% chance to MonsterFracture on death",
+    "value": "50",
+    "type": "Voyage",
+    "weight": 50,
+    "tier": 68,
+    "engRegex": "have",
+    "Regex": "分割",
+    "tradeStatIds": [
+      ""
+    ],
+    "adjacent": false,
+    "voyage": true,
+    "nameJa": "",
+    "nameEn": "",
+    "map_item_drop_quantity_+%": 0,
+    "map_item_drop_rarity_+%": 0,
+    "map_pack_size_+%": 0,
+    "map_deepwater_league_resource_found_+%": 0
+  },
+  "(航海) 全ての航海エリアで見つかるアイテムのレアリティが#%増加する": {
+    "mod": "(航海) 全ての航海エリアで見つかるアイテムのレアリティが#%増加する",
+    "engMod": "(Voyage) #% increased Rarity of Items found in all Voyage Areas",
+    "value": "9",
+    "type": "Voyage",
+    "weight": 500,
+    "tier": 68,
+    "engRegex": "rari",
+    "Regex": "レアリティ",
+    "tradeStatIds": [
+      ""
+    ],
+    "adjacent": false,
+    "voyage": true,
+    "nameJa": "",
+    "nameEn": "",
+    "map_item_drop_quantity_+%": 0,
+    "map_item_drop_rarity_+%": 9,
+    "map_pack_size_+%": 0,
+    "map_deepwater_league_resource_found_+%": 0
+  },
+  "(航海) 全ての航海エリアで見つかる死人の硫黄が#%増加する": {
+    "mod": "(航海) 全ての航海エリアで見つかる死人の硫黄が#%増加する",
+    "engMod": "(Voyage) #% increased Dead Man's Sulphur found in all Voyage Areas",
+    "value": "25",
+    "type": "Voyage",
+    "weight": 300,
+    "tier": 68,
+    "engRegex": "dead",
+    "Regex": "硫黄",
+    "tradeStatIds": [
+      ""
+    ],
+    "adjacent": false,
+    "voyage": true,
+    "nameJa": "",
+    "nameEn": "",
+    "map_item_drop_quantity_+%": 0,
+    "map_item_drop_rarity_+%": 0,
+    "map_pack_size_+%": 0,
+    "map_deepwater_league_resource_found_+%": 25
+  },
+  "(航海) 全ての航海エリアのプレイヤーはソウルイーターを持つ": {
+    "mod": "(航海) 全ての航海エリアのプレイヤーはソウルイーターを持つ",
+    "engMod": "(Voyage) Players in all Voyage Areas have SoulEater",
+    "value": "1",
+    "type": "Voyage",
+    "weight": 400,
+    "tier": 1,
+    "engRegex": "play",
+    "Regex": "ソウル",
+    "tradeStatIds": [
+      ""
+    ],
+    "adjacent": false,
+    "voyage": true,
     "nameJa": "",
     "nameEn": "",
     "map_item_drop_quantity_+%": 0,

@@ -208,10 +208,6 @@
         <div id="chartContent" class="tab-content">
             <div class="card">
                 <h2 class="section-header">海図Mod Regex <span style="font-size:0.55em;font-weight:normal;color:var(--text-secondary);">Deepwater / Voyage Chart</span></h2>
-                <p style="color: var(--text-secondary); margin-bottom: 16px; font-size: 0.95em;">
-                    海図に付くプレフィックス / サフィックスと、隣接海図へ波及する効果を選べます。<br>
-                    トレードAPI未対応の文言は tradeStatIds が空のことがあります。
-                </p>
 
                 <div class="output-area" id="chartRegexOutput"></div>
 
@@ -232,6 +228,9 @@
                     </label>
                     <label class="input-label">
                         <input type="checkbox" id="chartAdjacentCheckbox" checked onchange="updateChartModList()"> 隣接効果を表示
+                    </label>
+                    <label class="input-label">
+                        <input type="checkbox" id="chartVoyageCheckbox" checked onchange="updateChartModList()"> 航海全体を表示
                     </label>
                 </div>
 

@@ -5,6 +5,7 @@
 (function () {
     let chartCheckedMods = new Map(); // key -> 'ng' | 'wanted'
     let chartShowAdjacent = true;
+    let chartShowVoyage = true;
 
     function chartList() {
         return typeof chartModList !== "undefined" ? chartModList : {};
@@ -80,6 +81,9 @@
         } else if (value.type === "Suffix") {
             typeBadge.style.backgroundColor = "var(--accent-blue)";
             typeBadge.textContent = "S";
+        } else if (value.type === "Voyage" || value.voyage) {
+            typeBadge.style.backgroundColor = "var(--accent-primary, #4ecdc4)";
+            typeBadge.textContent = "航";
         } else {
             typeBadge.style.backgroundColor = "var(--accent-gold, #c9a227)";
             typeBadge.textContent = "隣";
@@ -128,11 +132,22 @@
         const search = (document.getElementById("chartEffectSearch")?.value || "").toLowerCase();
         const sortMethod = document.getElementById("chartSortSelect")?.value || "default";
         chartShowAdjacent = !!document.getElementById("chartAdjacentCheckbox")?.checked;
+        chartShowVoyage = !!document.getElementById("chartVoyageCheckbox")?.checked;
 
         const entries = Object.entries(chartList()).filter(([, v]) => {
             if (v.adjacent && !chartShowAdjacent) return false;
+            if ((v.voyage || v.type === "Voyage") && !chartShowVoyage) return false;
             return true;
         });
+
+        // 航海・隣接を先に、その後プレフィックス / サフィックス
+        const typeOrder = (v) => {
+            if (v.voyage || v.type === "Voyage") return 0;
+            if (v.adjacent || v.type === "Adjacent") return 1;
+            if (v.type === "Prefix") return 2;
+            if (v.type === "Suffix") return 3;
+            return 4;
+        };
 
         entries.sort(([keyA, a], [keyB, b]) => {
             const aSel = chartCheckedMods.has(keyA) ? 0 : 1;
@@ -141,7 +156,7 @@
 
             switch (sortMethod) {
                 case "type_asc":
-                    return (a.type || "").localeCompare(b.type || "") || keyA.localeCompare(keyB);
+                    return typeOrder(a) - typeOrder(b) || keyA.localeCompare(keyB);
                 case "quantity_desc":
                     return (b["map_item_drop_quantity_+%"] || 0) - (a["map_item_drop_quantity_+%"] || 0);
                 case "sulphur_desc":
@@ -152,8 +167,7 @@
                 case "weight_desc":
                     return (b.weight || 0) - (a.weight || 0);
                 default:
-                    if (!!a.adjacent !== !!b.adjacent) return a.adjacent ? 1 : -1;
-                    return (a.type || "").localeCompare(b.type || "") || keyA.localeCompare(keyB);
+                    return typeOrder(a) - typeOrder(b) || keyA.localeCompare(keyB);
             }
         });
 
@@ -191,9 +205,9 @@
         const uniqWanted = [...new Set(wanted)];
         let result = "";
         if (uniqNg.length && uniqWanted.length) {
-            result = `"${uniqNg.join("|")}" "${uniqWanted.join("|")}"`;
+            result = `"!${uniqNg.join("|")}" "${uniqWanted.join("|")}"`;
         } else if (uniqNg.length) {
-            result = `"${uniqNg.join("|")}"`;
+            result = `"!${uniqNg.join("|")}"`;
         } else if (uniqWanted.length) {
             result = `"${uniqWanted.join("|")}"`;
         }
