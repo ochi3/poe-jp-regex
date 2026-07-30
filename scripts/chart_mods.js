@@ -1302,7 +1302,7 @@ const chartModList = {
     "weight": 700,
     "tier": 46,
     "engRegex": "magi",
-    "Regex": "全て.*マジ",
+    "Regex": "全.*マジ.*数",
     "tradeStatIds": [
       ""
     ],
@@ -1323,7 +1323,7 @@ const chartModList = {
     "weight": 700,
     "tier": 46,
     "engRegex": "inc",
-    "Regex": "全.*アモ",
+    "Regex": "全.*アモ.*数",
     "tradeStatIds": [
       ""
     ],
