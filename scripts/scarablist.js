@@ -218,7 +218,7 @@ const scarablist = {
     "description": "エリアのユニークモンスターはモンスターモッドを追加で4個持つ",
     "enDescription": "Unique Monsters in Area have 4 additional Monster Modifiers",
     "chaosValue": "1.14",
-    "regex": "伝説",
+    "regex": "伝説の",
     "enRegex": "ccu"
   },
   "錆びたベスティアリースカラベ": {
@@ -592,7 +592,7 @@ const scarablist = {
     "description": "エリアは拷問された幽霊が追加で4体彷徨っている\nエリアの拷問された幽霊は憑りつかれたモンスターが倒された時に10%の確率で解放され\n新たに憑りつかれたモンスターを掘り出す",
     "enDescription": "Area is haunted by 4 additional Tormented Spirits\nTormented Spirits in Area have a 10% chance to\nbe set free when Possessed Monsters are slain\n and dig up a Possessed Monster",
     "chaosValue": "0.7715",
-    "regex": "^ト",
+    "regex": "^トーメ",
     "enRegex": "rim"
   },
   "異様なトーメントスカラベ": {
@@ -1069,6 +1069,22 @@ const scarablist = {
     "regex": "深き",
     "enRegex": "g,"
   },
+  "結晶のアビススカラベ": {
+    "engName": "Abyss Scarab of Crystals",
+    "description": "エリアの報酬を持たないアビスの穴は代わりにアビサルクリスタルを生成する",
+    "enDescription": "Abyss Pits in Area that do not contain a reward instead create an Abyssal Crystal",
+    "chaosValue": "2.28",
+    "regex": "晶のア",
+    "enRegex": "stal"
+  },
+  "コンソートのアビススカラベ": {
+    "engName": "Abyss Scarab of the Consort",
+    "description": "エリアのアビスの穴はアビサルコンソートを1体スポーンさせる",
+    "enDescription": "An Abyss Pit in Area will spawn an Abyssal Consort",
+    "chaosValue": "35",
+    "regex": "コンソ",
+    "enRegex": "nsor"
+  },
   "アナーキースカラベ": {
     "engName": "Anarchy Scarab",
     "description": "エリアにローグエグザイルが5体追加される",
@@ -1486,6 +1502,38 @@ const scarablist = {
     "chaosValue": "1.03",
     "regex": "富裕",
     "enRegex": "nri"
+  },
+  "トラーサススカラベ": {
+    "engName": "Trarthan Scarab",
+    "description": "エリアに傭兵が出現する",
+    "enDescription": "Area is inhabited by a Mercenary",
+    "chaosValue": "0.85",
+    "regex": "^トラ",
+    "enRegex": "y a M"
+  },
+  "悪名のトラーサススカラベ": {
+    "engName": "Trarthan Scarab of Infamy",
+    "description": "エリアで見つかる傭兵は悪名高いものになる\nエリアで見つかる傭兵は2体のワイルド傭兵を伴う",
+    "enDescription": "Mercenaries found in Area are Infamous\nMercenaries found in Area are accompanied by two Wild Mercenaries",
+    "chaosValue": "5.0",
+    "regex": "悪名",
+    "enRegex": "nfam"
+  },
+  "名声のトラーサススカラベ": {
+    "engName": "Trarthan Scarab of Renown",
+    "description": "エリアで見つかる傭兵の全ての装備品はユニークになる",
+    "enDescription": "All Equipment Items on Mercenaries found in Area are Unique",
+    "chaosValue": "16",
+    "regex": "名声",
+    "enRegex": "enow"
+  },
+  "意外な同盟のトラーサススカラベ": {
+    "engName": "Trarthan Scarab of Surprising Alliances",
+    "description": "エリアのワイルドローグエグザイルは50%の確率でワイルド傭兵を伴う\nワイルド傭兵はエリアにいるワイルド傭兵の数ごとに難易度が増加する",
+    "enDescription": "Wild Rogue Exiles in Area have 50% chance to be accompanied by a Wild Mercenary\nWild Mercenaries have increased Difficulty for each Wild Mercenary in Area",
+    "chaosValue": "32",
+    "regex": "意外",
+    "enRegex": "rpri"
   },
   "怪物の系譜のスカラベ": {
     "engName": "Scarab of Monstrous Lineage",
