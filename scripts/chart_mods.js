@@ -1008,7 +1008,7 @@ const chartModList = {
     "weight": 300,
     "tier": 68,
     "engRegex": "numb",
-    "Regex": "隣.*レア",
+    "Regex": "隣.*アのレ.*ーの数",
     "tradeStatIds": [
       ""
     ],
@@ -1323,7 +1323,7 @@ const chartModList = {
     "weight": 700,
     "tier": 46,
     "engRegex": "inc",
-    "Regex": "の航.*レアモ",
+    "Regex": "全.*アモ",
     "tradeStatIds": [
       ""
     ],
