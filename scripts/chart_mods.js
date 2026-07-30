@@ -987,7 +987,7 @@ const chartModList = {
     "weight": 300,
     "tier": 68,
     "engRegex": "incr",
-    "Regex": "隣.*マジ",
+    "Regex": "隣.*ックモ",
     "tradeStatIds": [
       ""
     ],
@@ -1134,7 +1134,7 @@ const chartModList = {
     "weight": 100,
     "tier": 68,
     "engRegex": "stro",
-    "Regex": "ストロ",
+    "Regex": "アにス",
     "tradeStatIds": [
       ""
     ],
@@ -1302,7 +1302,7 @@ const chartModList = {
     "weight": 700,
     "tier": 46,
     "engRegex": "magi",
-    "Regex": "航.*マジ",
+    "Regex": "全て.*マジ",
     "tradeStatIds": [
       ""
     ],
@@ -1323,7 +1323,7 @@ const chartModList = {
     "weight": 700,
     "tier": 46,
     "engRegex": "inc",
-    "Regex": "航.*レア",
+    "Regex": "の航.*レアモ",
     "tradeStatIds": [
       ""
     ],
