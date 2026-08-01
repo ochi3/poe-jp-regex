@@ -151,7 +151,7 @@ const scarablist = {
     "enDescription": "Non-Unique Maps found in Area are Corrupted with 8 Modifiers",
     "chaosValue": "11.99",
     "regex": "れの地",
-    "enRegex": "tw"
+    "enRegex": "etw"
   },
   "群衆の地図製作のスカラベ": {
     "engName": "Cartography Scarab of the Multitude",
@@ -1372,7 +1372,7 @@ const scarablist = {
     "enDescription": "Ultimatum Encounters in Area will always lead to a Unique Boss if possible",
     "chaosValue": "5.04",
     "regex": "決闘",
-    "enRegex": "cto"
+    "enRegex": "moc"
   },
   "触媒のアルティメイタムスカラベ": {
     "engName": "Ultimatum Scarab of Catalysing",
