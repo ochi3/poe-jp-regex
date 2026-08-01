@@ -5,12 +5,237 @@
   ],
   "mods": {
     "prefix": {
+      "ColdDamageWeaponPrefix": [
+        {
+          "key": "ColdDamagePrefixOnWeapon1",
+          "text": "冷気ダメージが(10-19)%増加する",
+          "name": "酷寒の",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 2,
+          "weight": 500
+        },
+        {
+          "key": "ColdDamagePrefixOnWeapon2",
+          "text": "冷気ダメージが(20-29)%増加する",
+          "name": "肌を刺す",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 11,
+          "weight": 500
+        },
+        {
+          "key": "ColdDamagePrefixOnWeapon3_",
+          "text": "冷気ダメージが(30-39)%増加する",
+          "name": "高山の",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 23,
+          "weight": 500
+        },
+        {
+          "key": "ColdDamagePrefixOnWeapon4",
+          "text": "冷気ダメージが(40-54)%増加する",
+          "name": "降雪の",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 35,
+          "weight": 500
+        },
+        {
+          "key": "ColdDamagePrefixOnWeapon5_",
+          "text": "冷気ダメージが(55-69)%増加する",
+          "name": "降雹する",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 46,
+          "weight": 500
+        },
+        {
+          "key": "ColdDamagePrefixOnWeapon6",
+          "text": "冷気ダメージが(70-84)%増加する",
+          "name": "結晶体の",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 58,
+          "weight": 150
+        },
+        {
+          "key": "ColdDamagePrefixOnWeapon7",
+          "text": "冷気ダメージが(85-99)%増加する",
+          "name": "操氷術師の",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 64,
+          "weight": 40
+        },
+        {
+          "key": "ColdDamagePrefixOnWeapon8",
+          "text": "冷気ダメージが(100-109)%増加する",
+          "name": "トゥルよりの",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 84,
+          "weight": 12
+        }
+      ],
+      "FireDamageWeaponPrefix": [
+        {
+          "key": "FireDamagePrefixOnWeapon1",
+          "text": "火ダメージが(10-19)%増加する",
+          "name": "焦がす",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 2,
+          "weight": 500
+        },
+        {
+          "key": "FireDamagePrefixOnWeapon2",
+          "text": "火ダメージが(20-29)%増加する",
+          "name": "焼ける",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 11,
+          "weight": 500
+        },
+        {
+          "key": "FireDamagePrefixOnWeapon3",
+          "text": "火ダメージが(30-39)%増加する",
+          "name": "焼けただれる",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 23,
+          "weight": 500
+        },
+        {
+          "key": "FireDamagePrefixOnWeapon4",
+          "text": "火ダメージが(40-54)%増加する",
+          "name": "焼灼する",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 35,
+          "weight": 500
+        },
+        {
+          "key": "FireDamagePrefixOnWeapon5_",
+          "text": "火ダメージが(55-69)%増加する",
+          "name": "噴火する",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 46,
+          "weight": 500
+        },
+        {
+          "key": "FireDamagePrefixOnWeapon6",
+          "text": "火ダメージが(70-84)%増加する",
+          "name": "溶岩の",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 58,
+          "weight": 150
+        },
+        {
+          "key": "FireDamagePrefixOnWeapon7_",
+          "text": "火ダメージが(85-99)%増加する",
+          "name": "火砕性の",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 64,
+          "weight": 40
+        },
+        {
+          "key": "FireDamagePrefixOnWeapon8_",
+          "text": "火ダメージが(100-109)%増加する",
+          "name": "ゾフの",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 84,
+          "weight": 12
+        }
+      ],
+      "GlobalIncreaseChaosSpellSkillGemLevel": [
+        {
+          "key": "GlobalChaosSpellGemsLevel1",
+          "text": "全ての混沌スペルスキルジェムのレベル +1",
+          "name": "狂える君主の",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 2,
+          "weight": 200
+        }
+      ],
+      "GlobalIncreaseColdSpellSkillGemLevel": [
+        {
+          "key": "GlobalColdSpellGemsLevel1_",
+          "text": "全ての冷気スペルスキルジェムのレベル +1",
+          "name": "霜の歌い手の",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 2,
+          "weight": 250
+        }
+      ],
+      "GlobalIncreaseFireSpellSkillGemLevel": [
+        {
+          "key": "GlobalFireSpellGemsLevel1_",
+          "text": "全ての火スペルスキルジェムのレベル +1",
+          "name": "創炎師の",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 2,
+          "weight": 250
+        }
+      ],
+      "GlobalIncreaseLightningSpellSkillGemLevel": [
+        {
+          "key": "GlobalLightningSpellGemsLevel1",
+          "text": "全ての雷スペルスキルジェムのレベル +1",
+          "name": "雷の手の",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 2,
+          "weight": 250
+        }
+      ],
+      "GlobalIncreaseMinionSpellSkillGemLevel": [
+        {
+          "key": "MinionGemLevel1h1",
+          "text": "全てのミニオンスキルジェムのレベル +1",
+          "name": "規律主義者の",
+          "tag": "weapon_can_roll_minion_modifiers",
+          "generation_type": "prefix",
+          "required_level": 60,
+          "weight": 400
+        }
+      ],
+      "GlobalIncreasePhysicalSpellSkillGemLevel": [
+        {
+          "key": "GlobalPhysicalSpellGemsLevel1",
+          "text": "全ての物理スペルスキルジェムのレベル +1",
+          "name": "操石術師の",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 2,
+          "weight": 200
+        }
+      ],
+      "GlobalIncreaseSpellSkillGemLevel": [
+        {
+          "key": "GlobalSpellGemsLevel1",
+          "text": "全てのスペルスキルジェムのレベル +1",
+          "name": "マギステルの",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 55,
+          "weight": 50
+        }
+      ],
       "IncreasedMana": [
         {
           "key": "IncreasedManaWeapon1",
           "text": "最大マナ +(30-39)",
           "name": "ベリルの",
-          "tag": "sceptre",
+          "tag": "wand",
           "generation_type": "prefix",
           "required_level": 1,
           "weight": 1000
@@ -19,7 +244,7 @@
           "key": "IncreasedManaWeapon2__",
           "text": "最大マナ +(40-49)",
           "name": "コバルトの",
-          "tag": "sceptre",
+          "tag": "wand",
           "generation_type": "prefix",
           "required_level": 11,
           "weight": 1000
@@ -28,7 +253,7 @@
           "key": "IncreasedManaWeapon3_",
           "text": "最大マナ +(50-59)",
           "name": "淡青な",
-          "tag": "sceptre",
+          "tag": "wand",
           "generation_type": "prefix",
           "required_level": 17,
           "weight": 1000
@@ -37,7 +262,7 @@
           "key": "IncreasedManaWeapon4",
           "text": "最大マナ +(60-69)",
           "name": "サファイアの",
-          "tag": "sceptre",
+          "tag": "wand",
           "generation_type": "prefix",
           "required_level": 23,
           "weight": 1000
@@ -46,7 +271,7 @@
           "key": "IncreasedManaWeapon5",
           "text": "最大マナ +(70-79)",
           "name": "空色をした",
-          "tag": "sceptre",
+          "tag": "wand",
           "generation_type": "prefix",
           "required_level": 29,
           "weight": 1000
@@ -55,7 +280,7 @@
           "key": "IncreasedManaWeapon6",
           "text": "最大マナ +(80-89)",
           "name": "アクア",
-          "tag": "sceptre",
+          "tag": "wand",
           "generation_type": "prefix",
           "required_level": 35,
           "weight": 1000
@@ -64,7 +289,7 @@
           "key": "IncreasedManaWeapon7",
           "text": "最大マナ +(90-99)",
           "name": "オパール色をした",
-          "tag": "sceptre",
+          "tag": "wand",
           "generation_type": "prefix",
           "required_level": 42,
           "weight": 1000
@@ -73,7 +298,7 @@
           "key": "IncreasedManaWeapon8",
           "text": "最大マナ +(100-109)",
           "name": "リンドウの",
-          "tag": "sceptre",
+          "tag": "wand",
           "generation_type": "prefix",
           "required_level": 51,
           "weight": 1000
@@ -82,7 +307,7 @@
           "key": "IncreasedManaWeapon9___",
           "text": "最大マナ +(110-119)",
           "name": "青鋼の",
-          "tag": "sceptre",
+          "tag": "wand",
           "generation_type": "prefix",
           "required_level": 60,
           "weight": 1000
@@ -91,7 +316,7 @@
           "key": "IncreasedManaWeapon10",
           "text": "最大マナ +(120-129)",
           "name": "紺色をした",
-          "tag": "sceptre",
+          "tag": "wand",
           "generation_type": "prefix",
           "required_level": 69,
           "weight": 800
@@ -100,7 +325,7 @@
           "key": "IncreasedManaWeapon11",
           "text": "最大マナ +(130-139)",
           "name": "青い",
-          "tag": "sceptre",
+          "tag": "wand",
           "generation_type": "prefix",
           "required_level": 75,
           "weight": 600
@@ -109,10 +334,335 @@
           "key": "IncreasedManaWeapon12",
           "text": "最大マナ +(140-159)",
           "name": "藍色をした",
-          "tag": "sceptre",
+          "tag": "wand",
           "generation_type": "prefix",
           "required_level": 81,
           "weight": 400
+        }
+      ],
+      "IncreasedWeaponElementalDamagePercent": [
+        {
+          "key": "WeaponElementalDamageOnWeapons1_",
+          "text": "アタックスキルの元素ダメージが(11-20)%増加する",
+          "name": "促進する",
+          "tag": "one_hand_weapon",
+          "generation_type": "prefix",
+          "required_level": 4,
+          "weight": 300
+        },
+        {
+          "key": "WeaponElementalDamageOnWeapons2",
+          "text": "アタックスキルの元素ダメージが(21-30)%増加する",
+          "name": "注ぎ込む",
+          "tag": "one_hand_weapon",
+          "generation_type": "prefix",
+          "required_level": 15,
+          "weight": 300
+        },
+        {
+          "key": "WeaponElementalDamageOnWeapons3_",
+          "text": "アタックスキルの元素ダメージが(31-36)%増加する",
+          "name": "力を与える",
+          "tag": "one_hand_weapon",
+          "generation_type": "prefix",
+          "required_level": 30,
+          "weight": 300
+        },
+        {
+          "key": "WeaponElementalDamageOnWeapons4",
+          "text": "アタックスキルの元素ダメージが(37-42)%増加する",
+          "name": "解き放たれた",
+          "tag": "one_hand_weapon",
+          "generation_type": "prefix",
+          "required_level": 60,
+          "weight": 300
+        },
+        {
+          "key": "WeaponElementalDamageOnWeapons5_",
+          "text": "アタックスキルの元素ダメージが(43-50)%増加する",
+          "name": "征圧する",
+          "tag": "one_hand_weapon",
+          "generation_type": "prefix",
+          "required_level": 81,
+          "weight": 300
+        },
+        {
+          "key": "WeaponElementalDamageOnWeapons6",
+          "text": "アタックスキルの元素ダメージが(51-59)%増加する",
+          "name": "壊滅させる",
+          "tag": "one_hand_weapon",
+          "generation_type": "prefix",
+          "required_level": 86,
+          "weight": 300
+        }
+      ],
+      "LightningDamageWeaponPrefix": [
+        {
+          "key": "LightningDamagePrefixOnWeapon1_",
+          "text": "雷ダメージが(10-19)%増加する",
+          "name": "帯電した",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 2,
+          "weight": 500
+        },
+        {
+          "key": "LightningDamagePrefixOnWeapon2",
+          "text": "雷ダメージが(20-29)%増加する",
+          "name": "風切り音の",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 11,
+          "weight": 500
+        },
+        {
+          "key": "LightningDamagePrefixOnWeapon3",
+          "text": "雷ダメージが(30-39)%増加する",
+          "name": "稲妻の",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 23,
+          "weight": 500
+        },
+        {
+          "key": "LightningDamagePrefixOnWeapon4",
+          "text": "雷ダメージが(40-54)%増加する",
+          "name": "駆け巡る",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 35,
+          "weight": 500
+        },
+        {
+          "key": "LightningDamagePrefixOnWeapon5",
+          "text": "雷ダメージが(55-69)%増加する",
+          "name": "落雷の",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 46,
+          "weight": 500
+        },
+        {
+          "key": "LightningDamagePrefixOnWeapon6",
+          "text": "雷ダメージが(70-84)%増加する",
+          "name": "天誅の",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 58,
+          "weight": 150
+        },
+        {
+          "key": "LightningDamagePrefixOnWeapon7",
+          "text": "雷ダメージが(85-99)%増加する",
+          "name": "イオン化する",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 64,
+          "weight": 40
+        },
+        {
+          "key": "LightningDamagePrefixOnWeapon8",
+          "text": "雷ダメージが(100-109)%増加する",
+          "name": "エシュの",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 84,
+          "weight": 12
+        }
+      ],
+      "LocalChaosDamage": [
+        {
+          "key": "LocalAddedChaosDamage1",
+          "text": "(56-87)から(105-160)の混沌ダメージを追加する",
+          "name": "害意ある",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 83,
+          "weight": 250
+        }
+      ],
+      "LocalColdDamage": [
+        {
+          "key": "LocalAddedColdDamage1",
+          "text": "(1-2)から(3-4)の冷気ダメージを追加する",
+          "name": "凍てついた",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 2,
+          "weight": 500
+        },
+        {
+          "key": "LocalAddedColdDamage2",
+          "text": "(7-9)から(14-16)の冷気ダメージを追加する",
+          "name": "冷えた",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 12,
+          "weight": 500
+        },
+        {
+          "key": "LocalAddedColdDamage3",
+          "text": "(11-15)から(23-26)の冷気ダメージを追加する",
+          "name": "凍った",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 19,
+          "weight": 500
+        },
+        {
+          "key": "LocalAddedColdDamage4",
+          "text": "(16-21)から(31-37)の冷気ダメージを追加する",
+          "name": "凍える",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 27,
+          "weight": 500
+        },
+        {
+          "key": "LocalAddedColdDamage5",
+          "text": "(22-30)から(44-51)の冷気ダメージを追加する",
+          "name": "凍りつく",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 34,
+          "weight": 500
+        },
+        {
+          "key": "LocalAddedColdDamage6",
+          "text": "(31-42)から(62-71)の冷気ダメージを追加する",
+          "name": "凍結した",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 43,
+          "weight": 500
+        },
+        {
+          "key": "LocalAddedColdDamage7",
+          "text": "(41-57)から(83-97)の冷気ダメージを追加する",
+          "name": "氷結した",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 52,
+          "weight": 500
+        },
+        {
+          "key": "LocalAddedColdDamage8",
+          "text": "(54-74)から(108-126)の冷気ダメージを追加する",
+          "name": "極地の",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 63,
+          "weight": 400
+        },
+        {
+          "key": "LocalAddedColdDamage9",
+          "text": "(68-92)から(136-157)の冷気ダメージを追加する",
+          "name": "氷葬する",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 75,
+          "weight": 175
+        },
+        {
+          "key": "LocalAddedColdDamage10__",
+          "text": "(81-111)から(163-189)の冷気ダメージを追加する",
+          "name": "結晶化する",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 82,
+          "weight": 45
+        }
+      ],
+      "LocalFireDamage": [
+        {
+          "key": "LocalAddedFireDamage1",
+          "text": "(1-2)から(3-4)の火ダメージを追加する",
+          "name": "熱した",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 500
+        },
+        {
+          "key": "LocalAddedFireDamage2",
+          "text": "(8-10)から(15-18)の火ダメージを追加する",
+          "name": "燻る",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 11,
+          "weight": 500
+        },
+        {
+          "key": "LocalAddedFireDamage3",
+          "text": "(12-17)から(25-29)の火ダメージを追加する",
+          "name": "発煙する",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 18,
+          "weight": 500
+        },
+        {
+          "key": "LocalAddedFireDamage4",
+          "text": "(17-24)から(35-41)の火ダメージを追加する",
+          "name": "燃える",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 26,
+          "weight": 500
+        },
+        {
+          "key": "LocalAddedFireDamage5",
+          "text": "(24-33)から(49-57)の火ダメージを追加する",
+          "name": "燃え立つ",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 33,
+          "weight": 500
+        },
+        {
+          "key": "LocalAddedFireDamage6",
+          "text": "(34-46)から(68-80)の火ダメージを追加する",
+          "name": "焼き焦がす",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 42,
+          "weight": 500
+        },
+        {
+          "key": "LocalAddedFireDamage7",
+          "text": "(46-62)から(93-107)の火ダメージを追加する",
+          "name": "焼却する",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 51,
+          "weight": 500
+        },
+        {
+          "key": "LocalAddedFireDamage8",
+          "text": "(59-81)から(120-140)の火ダメージを追加する",
+          "name": "爆破する",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 62,
+          "weight": 400
+        },
+        {
+          "key": "LocalAddedFireDamage9",
+          "text": "(74-101)から(150-175)の火ダメージを追加する",
+          "name": "火葬する",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 74,
+          "weight": 175
+        },
+        {
+          "key": "LocalAddedFireDamage10_",
+          "text": "(89-121)から(180-210)の火ダメージを追加する",
+          "name": "炭化する",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 82,
+          "weight": 45
         }
       ],
       "LocalIncreasedPhysicalDamagePercentAndAccuracyRating": [
@@ -189,78 +739,127 @@
           "weight": 25
         }
       ],
-      "LocalPhysicalDamagePercent": [
+      "LocalIncreaseSocketedGemLevel": [
         {
-          "key": "LocalIncreasedPhysicalDamagePercent1",
-          "text": "物理ダメージが(40-49)%増加する",
-          "name": "重い",
+          "key": "LocalIncreaseSocketedGemLevel1",
+          "text": "ソケットされたジェムのレベル +1",
+          "name": "模範の",
           "tag": "weapon",
           "generation_type": "prefix",
-          "required_level": 1,
+          "required_level": 50,
+          "weight": 1000
+        }
+      ],
+      "LocalIncreaseSocketedMeleeGemLevel": [
+        {
+          "key": "LocalIncreaseSocketedMeleeGemLevel1",
+          "text": "ソケットされた近接ジェムのレベル +1",
+          "name": "戦闘員の",
+          "tag": "weapon",
+          "generation_type": "prefix",
+          "required_level": 8,
           "weight": 1000
         },
         {
-          "key": "LocalIncreasedPhysicalDamagePercent2",
-          "text": "物理ダメージが(50-64)%増加する",
-          "name": "鋸刃の",
+          "key": "LocalIncreaseSocketedMeleeGemLevel",
+          "text": "ソケットされた近接ジェムのレベル +2",
+          "name": "武器の達人の",
           "tag": "weapon",
           "generation_type": "prefix",
-          "required_level": 11,
+          "required_level": 63,
           "weight": 1000
+        }
+      ],
+      "LocalLightningDamage": [
+        {
+          "key": "LocalAddedLightningDamage1",
+          "text": "1から(5-6)の雷ダメージを追加する",
+          "name": "電音の",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 3,
+          "weight": 500
         },
         {
-          "key": "LocalIncreasedPhysicalDamagePercent3",
-          "text": "物理ダメージが(65-84)%増加する",
-          "name": "邪悪な",
-          "tag": "weapon",
+          "key": "LocalAddedLightningDamage2",
+          "text": "2から(25-29)の雷ダメージを追加する",
+          "name": "電鳴の",
+          "tag": "wand",
           "generation_type": "prefix",
-          "required_level": 23,
-          "weight": 1000
+          "required_level": 13,
+          "weight": 500
         },
         {
-          "key": "LocalIncreasedPhysicalDamagePercent4",
-          "text": "物理ダメージが(85-109)%増加する",
-          "name": "凶悪な",
-          "tag": "weapon",
+          "key": "LocalAddedLightningDamage3",
+          "text": "2から(41-48)の雷ダメージを追加する",
+          "name": "雷音の",
+          "tag": "wand",
           "generation_type": "prefix",
-          "required_level": 35,
+          "required_level": 19,
+          "weight": 500
+        },
+        {
+          "key": "LocalAddedLightningDamage4",
+          "text": "3から(57-67)の雷ダメージを追加する",
+          "name": "雷鳴の",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 31,
+          "weight": 500
+        },
+        {
+          "key": "LocalAddedLightningDamage5",
+          "text": "(4-5)から(80-94)の雷ダメージを追加する",
+          "name": "電光走る",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 34,
+          "weight": 500
+        },
+        {
+          "key": "LocalAddedLightningDamage6",
+          "text": "(5-8)から(112-131)の雷ダメージを追加する",
+          "name": "電弧する",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 42,
+          "weight": 500
+        },
+        {
+          "key": "LocalAddedLightningDamage7",
+          "text": "(8-10)から(152-176)の雷ダメージを追加する",
+          "name": "電撃の",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 51,
+          "weight": 500
+        },
+        {
+          "key": "LocalAddedLightningDamage8",
+          "text": "(10-14)から(197-229)の雷ダメージを追加する",
+          "name": "放電する",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 63,
           "weight": 400
         },
         {
-          "key": "LocalIncreasedPhysicalDamagePercent5",
-          "text": "物理ダメージが(110-134)%増加する",
-          "name": "血に飢えた",
-          "tag": "weapon",
+          "key": "LocalAddedLightningDamage9",
+          "text": "(13-17)から(247-286)の雷ダメージを追加する",
+          "name": "感電する",
+          "tag": "wand",
           "generation_type": "prefix",
-          "required_level": 46,
-          "weight": 200
+          "required_level": 74,
+          "weight": 175
         },
         {
-          "key": "LocalIncreasedPhysicalDamagePercent6",
-          "text": "物理ダメージが(135-154)%増加する",
-          "name": "残酷な",
-          "tag": "weapon",
+          "key": "LocalAddedLightningDamage10",
+          "text": "(15-21)から(296-344)の雷ダメージを追加する",
+          "name": "電殺する",
+          "tag": "wand",
           "generation_type": "prefix",
-          "required_level": 60,
-          "weight": 100
-        },
-        {
-          "key": "LocalIncreasedPhysicalDamagePercent7",
-          "text": "物理ダメージが(155-169)%増加する",
-          "name": "暴虐な",
-          "tag": "weapon",
-          "generation_type": "prefix",
-          "required_level": 73,
-          "weight": 50
-        },
-        {
-          "key": "LocalIncreasedPhysicalDamagePercent8",
-          "text": "物理ダメージが(170-179)%増加する",
-          "name": "無慈悲な",
-          "tag": "weapon",
-          "generation_type": "prefix",
-          "required_level": 83,
-          "weight": 25
+          "required_level": 82,
+          "weight": 45
         }
       ],
       "LocalPhysicalDamage": [
@@ -346,1023 +945,78 @@
           "weight": 200
         }
       ],
-      "LocalFireDamage": [
+      "LocalPhysicalDamagePercent": [
         {
-          "key": "LocalAddedFireDamage1",
-          "text": "(1-2)から(3-4)の火ダメージを追加する",
-          "name": "熱した",
-          "tag": "two_hand_weapon",
+          "key": "LocalIncreasedPhysicalDamagePercent1",
+          "text": "物理ダメージが(40-49)%増加する",
+          "name": "重い",
+          "tag": "weapon",
           "generation_type": "prefix",
           "required_level": 1,
-          "weight": 500
-        },
-        {
-          "key": "LocalAddedFireDamage2",
-          "text": "(8-10)から(15-18)の火ダメージを追加する",
-          "name": "燻る",
-          "tag": "two_hand_weapon",
-          "generation_type": "prefix",
-          "required_level": 11,
-          "weight": 500
-        },
-        {
-          "key": "LocalAddedFireDamage3",
-          "text": "(12-17)から(25-29)の火ダメージを追加する",
-          "name": "発煙する",
-          "tag": "two_hand_weapon",
-          "generation_type": "prefix",
-          "required_level": 18,
-          "weight": 500
-        },
-        {
-          "key": "LocalAddedFireDamage4",
-          "text": "(17-24)から(35-41)の火ダメージを追加する",
-          "name": "燃える",
-          "tag": "two_hand_weapon",
-          "generation_type": "prefix",
-          "required_level": 26,
-          "weight": 500
-        },
-        {
-          "key": "LocalAddedFireDamage5",
-          "text": "(24-33)から(49-57)の火ダメージを追加する",
-          "name": "燃え立つ",
-          "tag": "two_hand_weapon",
-          "generation_type": "prefix",
-          "required_level": 33,
-          "weight": 500
-        },
-        {
-          "key": "LocalAddedFireDamage6",
-          "text": "(34-46)から(68-80)の火ダメージを追加する",
-          "name": "焼き焦がす",
-          "tag": "two_hand_weapon",
-          "generation_type": "prefix",
-          "required_level": 42,
-          "weight": 500
-        },
-        {
-          "key": "LocalAddedFireDamage7",
-          "text": "(46-62)から(93-107)の火ダメージを追加する",
-          "name": "焼却する",
-          "tag": "two_hand_weapon",
-          "generation_type": "prefix",
-          "required_level": 51,
-          "weight": 500
-        },
-        {
-          "key": "LocalAddedFireDamage8",
-          "text": "(59-81)から(120-140)の火ダメージを追加する",
-          "name": "爆破する",
-          "tag": "two_hand_weapon",
-          "generation_type": "prefix",
-          "required_level": 62,
-          "weight": 400
-        },
-        {
-          "key": "LocalAddedFireDamage9",
-          "text": "(74-101)から(150-175)の火ダメージを追加する",
-          "name": "火葬する",
-          "tag": "two_hand_weapon",
-          "generation_type": "prefix",
-          "required_level": 74,
-          "weight": 175
-        },
-        {
-          "key": "LocalAddedFireDamage10_",
-          "text": "(89-121)から(180-210)の火ダメージを追加する",
-          "name": "炭化する",
-          "tag": "two_hand_weapon",
-          "generation_type": "prefix",
-          "required_level": 82,
-          "weight": 45
-        }
-      ],
-      "LocalColdDamage": [
-        {
-          "key": "LocalAddedColdDamage1",
-          "text": "(1-2)から(3-4)の冷気ダメージを追加する",
-          "name": "凍てついた",
-          "tag": "two_hand_weapon",
-          "generation_type": "prefix",
-          "required_level": 2,
-          "weight": 500
-        },
-        {
-          "key": "LocalAddedColdDamage2",
-          "text": "(7-9)から(14-16)の冷気ダメージを追加する",
-          "name": "冷えた",
-          "tag": "two_hand_weapon",
-          "generation_type": "prefix",
-          "required_level": 12,
-          "weight": 500
-        },
-        {
-          "key": "LocalAddedColdDamage3",
-          "text": "(11-15)から(23-26)の冷気ダメージを追加する",
-          "name": "凍った",
-          "tag": "two_hand_weapon",
-          "generation_type": "prefix",
-          "required_level": 19,
-          "weight": 500
-        },
-        {
-          "key": "LocalAddedColdDamage4",
-          "text": "(16-21)から(31-37)の冷気ダメージを追加する",
-          "name": "凍える",
-          "tag": "two_hand_weapon",
-          "generation_type": "prefix",
-          "required_level": 27,
-          "weight": 500
-        },
-        {
-          "key": "LocalAddedColdDamage5",
-          "text": "(22-30)から(44-51)の冷気ダメージを追加する",
-          "name": "凍りつく",
-          "tag": "two_hand_weapon",
-          "generation_type": "prefix",
-          "required_level": 34,
-          "weight": 500
-        },
-        {
-          "key": "LocalAddedColdDamage6",
-          "text": "(31-42)から(62-71)の冷気ダメージを追加する",
-          "name": "凍結した",
-          "tag": "two_hand_weapon",
-          "generation_type": "prefix",
-          "required_level": 43,
-          "weight": 500
-        },
-        {
-          "key": "LocalAddedColdDamage7",
-          "text": "(41-57)から(83-97)の冷気ダメージを追加する",
-          "name": "氷結した",
-          "tag": "two_hand_weapon",
-          "generation_type": "prefix",
-          "required_level": 52,
-          "weight": 500
-        },
-        {
-          "key": "LocalAddedColdDamage8",
-          "text": "(54-74)から(108-126)の冷気ダメージを追加する",
-          "name": "極地の",
-          "tag": "two_hand_weapon",
-          "generation_type": "prefix",
-          "required_level": 63,
-          "weight": 400
-        },
-        {
-          "key": "LocalAddedColdDamage9",
-          "text": "(68-92)から(136-157)の冷気ダメージを追加する",
-          "name": "氷葬する",
-          "tag": "two_hand_weapon",
-          "generation_type": "prefix",
-          "required_level": 75,
-          "weight": 175
-        },
-        {
-          "key": "LocalAddedColdDamage10__",
-          "text": "(81-111)から(163-189)の冷気ダメージを追加する",
-          "name": "結晶化する",
-          "tag": "two_hand_weapon",
-          "generation_type": "prefix",
-          "required_level": 82,
-          "weight": 45
-        }
-      ],
-      "LocalLightningDamage": [
-        {
-          "key": "LocalAddedLightningDamage1",
-          "text": "1から(5-6)の雷ダメージを追加する",
-          "name": "電音の",
-          "tag": "two_hand_weapon",
-          "generation_type": "prefix",
-          "required_level": 3,
-          "weight": 500
-        },
-        {
-          "key": "LocalAddedLightningDamage2",
-          "text": "2から(25-29)の雷ダメージを追加する",
-          "name": "電鳴の",
-          "tag": "two_hand_weapon",
-          "generation_type": "prefix",
-          "required_level": 13,
-          "weight": 500
-        },
-        {
-          "key": "LocalAddedLightningDamage3",
-          "text": "2から(41-48)の雷ダメージを追加する",
-          "name": "雷音の",
-          "tag": "two_hand_weapon",
-          "generation_type": "prefix",
-          "required_level": 19,
-          "weight": 500
-        },
-        {
-          "key": "LocalAddedLightningDamage4",
-          "text": "3から(57-67)の雷ダメージを追加する",
-          "name": "雷鳴の",
-          "tag": "two_hand_weapon",
-          "generation_type": "prefix",
-          "required_level": 31,
-          "weight": 500
-        },
-        {
-          "key": "LocalAddedLightningDamage5",
-          "text": "(4-5)から(80-94)の雷ダメージを追加する",
-          "name": "電光走る",
-          "tag": "two_hand_weapon",
-          "generation_type": "prefix",
-          "required_level": 34,
-          "weight": 500
-        },
-        {
-          "key": "LocalAddedLightningDamage6",
-          "text": "(5-8)から(112-131)の雷ダメージを追加する",
-          "name": "電弧する",
-          "tag": "two_hand_weapon",
-          "generation_type": "prefix",
-          "required_level": 42,
-          "weight": 500
-        },
-        {
-          "key": "LocalAddedLightningDamage7",
-          "text": "(8-10)から(152-176)の雷ダメージを追加する",
-          "name": "電撃の",
-          "tag": "two_hand_weapon",
-          "generation_type": "prefix",
-          "required_level": 51,
-          "weight": 500
-        },
-        {
-          "key": "LocalAddedLightningDamage8",
-          "text": "(10-14)から(197-229)の雷ダメージを追加する",
-          "name": "放電する",
-          "tag": "two_hand_weapon",
-          "generation_type": "prefix",
-          "required_level": 63,
-          "weight": 400
-        },
-        {
-          "key": "LocalAddedLightningDamage9",
-          "text": "(13-17)から(247-286)の雷ダメージを追加する",
-          "name": "感電する",
-          "tag": "two_hand_weapon",
-          "generation_type": "prefix",
-          "required_level": 74,
-          "weight": 175
-        },
-        {
-          "key": "LocalAddedLightningDamage10",
-          "text": "(15-21)から(296-344)の雷ダメージを追加する",
-          "name": "電殺する",
-          "tag": "two_hand_weapon",
-          "generation_type": "prefix",
-          "required_level": 82,
-          "weight": 45
-        }
-      ],
-      "WeaponSpellDamage": [
-        {
-          "key": "SpellDamageOnWeapon1",
-          "text": "スペルダメージが(10-19)%増加する",
-          "name": "弟子の",
-          "tag": "attack_dagger",
-          "generation_type": "prefix",
-          "required_level": 2,
-          "weight": 1500
-        },
-        {
-          "key": "SpellDamageOnWeapon2",
-          "text": "スペルダメージが(20-29)%増加する",
-          "name": "達人の",
-          "tag": "attack_dagger",
-          "generation_type": "prefix",
-          "required_level": 11,
-          "weight": 1500
-        },
-        {
-          "key": "SpellDamageOnWeapon3",
-          "text": "スペルダメージが(30-39)%増加する",
-          "name": "学者の",
-          "tag": "attack_dagger",
-          "generation_type": "prefix",
-          "required_level": 23,
-          "weight": 1500
-        },
-        {
-          "key": "SpellDamageOnWeapon4",
-          "text": "スペルダメージが(40-54)%増加する",
-          "name": "教授の",
-          "tag": "attack_dagger",
-          "generation_type": "prefix",
-          "required_level": 35,
-          "weight": 600
-        },
-        {
-          "key": "SpellDamageOnWeapon5",
-          "text": "スペルダメージが(55-69)%増加する",
-          "name": "オカルティストの",
-          "tag": "attack_dagger",
-          "generation_type": "prefix",
-          "required_level": 46,
-          "weight": 300
-        },
-        {
-          "key": "SpellDamageOnWeapon6",
-          "text": "スペルダメージが(70-84)%増加する",
-          "name": "呪術師の",
-          "tag": "attack_dagger",
-          "generation_type": "prefix",
-          "required_level": 58,
-          "weight": 150
-        },
-        {
-          "key": "SpellDamageOnWeapon7",
-          "text": "スペルダメージが(85-99)%増加する",
-          "name": "グリフの",
-          "tag": "attack_dagger",
-          "generation_type": "prefix",
-          "required_level": 64,
-          "weight": 80
-        },
-        {
-          "key": "SpellDamageOnWeapon8_",
-          "text": "スペルダメージが(100-109)%増加する",
-          "name": "ルーンの",
-          "tag": "attack_dagger",
-          "generation_type": "prefix",
-          "required_level": 84,
-          "weight": 40
-        }
-      ],
-      "WeaponSpellDamageAndMana": [
-        {
-          "key": "SpellDamageAndManaOnWeapon1",
-          "text": "スペルダメージが(5-9)%増加する\n最大マナ +(17-20)",
-          "name": "術者の",
-          "tag": "attack_dagger",
-          "generation_type": "prefix",
-          "required_level": 2,
           "weight": 1000
         },
         {
-          "key": "SpellDamageAndManaOnWeapon2",
-          "text": "スペルダメージが(10-14)%増加する\n最大マナ +(21-24)",
-          "name": "祈祷師の",
-          "tag": "attack_dagger",
+          "key": "LocalIncreasedPhysicalDamagePercent2",
+          "text": "物理ダメージが(50-64)%増加する",
+          "name": "鋸刃の",
+          "tag": "weapon",
           "generation_type": "prefix",
           "required_level": 11,
           "weight": 1000
         },
         {
-          "key": "SpellDamageAndManaOnWeapon3",
-          "text": "スペルダメージが(15-19)%増加する\n最大マナ +(25-28)",
-          "name": "魔法使いの",
-          "tag": "attack_dagger",
+          "key": "LocalIncreasedPhysicalDamagePercent3",
+          "text": "物理ダメージが(65-84)%増加する",
+          "name": "邪悪な",
+          "tag": "weapon",
           "generation_type": "prefix",
           "required_level": 23,
           "weight": 1000
         },
         {
-          "key": "SpellDamageAndManaOnWeapon4",
-          "text": "スペルダメージが(20-24)%増加する\n最大マナ +(29-33)",
-          "name": "黒魔導師の",
-          "tag": "attack_dagger",
+          "key": "LocalIncreasedPhysicalDamagePercent4",
+          "text": "物理ダメージが(85-109)%増加する",
+          "name": "凶悪な",
+          "tag": "weapon",
           "generation_type": "prefix",
           "required_level": 35,
-          "weight": 800
-        },
-        {
-          "key": "SpellDamageAndManaOnWeapon5",
-          "text": "スペルダメージが(25-29)%増加する\n最大マナ +(34-37)",
-          "name": "魔道師の",
-          "tag": "attack_dagger",
-          "generation_type": "prefix",
-          "required_level": 46,
           "weight": 400
         },
         {
-          "key": "SpellDamageAndManaOnWeapon6",
-          "text": "スペルダメージが(30-34)%増加する\n最大マナ +(38-41)",
-          "name": "大魔道師の",
-          "tag": "attack_dagger",
-          "generation_type": "prefix",
-          "required_level": 58,
-          "weight": 200
-        },
-        {
-          "key": "SpellDamageAndManaOnWeapon7",
-          "text": "スペルダメージが(35-39)%増加する\n最大マナ +(42-45)",
-          "name": "リッチの",
-          "tag": "attack_dagger",
-          "generation_type": "prefix",
-          "required_level": 80,
-          "weight": 100
-        }
-      ],
-      "FireDamageWeaponPrefix": [
-        {
-          "key": "FireDamagePrefixOnWeapon1",
-          "text": "火ダメージが(10-19)%増加する",
-          "name": "焦がす",
-          "tag": "focus",
-          "generation_type": "prefix",
-          "required_level": 2,
-          "weight": 500
-        },
-        {
-          "key": "FireDamagePrefixOnWeapon2",
-          "text": "火ダメージが(20-29)%増加する",
-          "name": "焼ける",
-          "tag": "focus",
-          "generation_type": "prefix",
-          "required_level": 11,
-          "weight": 500
-        },
-        {
-          "key": "FireDamagePrefixOnWeapon3",
-          "text": "火ダメージが(30-39)%増加する",
-          "name": "焼けただれる",
-          "tag": "focus",
-          "generation_type": "prefix",
-          "required_level": 23,
-          "weight": 500
-        },
-        {
-          "key": "FireDamagePrefixOnWeapon4",
-          "text": "火ダメージが(40-54)%増加する",
-          "name": "焼灼する",
-          "tag": "focus",
-          "generation_type": "prefix",
-          "required_level": 35,
-          "weight": 200
-        },
-        {
-          "key": "FireDamagePrefixOnWeapon5_",
-          "text": "火ダメージが(55-69)%増加する",
-          "name": "噴火する",
-          "tag": "focus",
+          "key": "LocalIncreasedPhysicalDamagePercent5",
+          "text": "物理ダメージが(110-134)%増加する",
+          "name": "血に飢えた",
+          "tag": "weapon",
           "generation_type": "prefix",
           "required_level": 46,
-          "weight": 100
-        },
-        {
-          "key": "FireDamagePrefixOnWeapon6",
-          "text": "火ダメージが(70-84)%増加する",
-          "name": "溶岩の",
-          "tag": "focus",
-          "generation_type": "prefix",
-          "required_level": 58,
-          "weight": 50
-        },
-        {
-          "key": "FireDamagePrefixOnWeapon7_",
-          "text": "火ダメージが(85-99)%増加する",
-          "name": "火砕性の",
-          "tag": "focus",
-          "generation_type": "prefix",
-          "required_level": 64,
-          "weight": 25
-        },
-        {
-          "key": "FireDamagePrefixOnWeapon8_",
-          "text": "火ダメージが(100-109)%増加する",
-          "name": "ゾフの",
-          "tag": "focus",
-          "generation_type": "prefix",
-          "required_level": 84,
-          "weight": 12
-        }
-      ],
-      "ColdDamageWeaponPrefix": [
-        {
-          "key": "ColdDamagePrefixOnWeapon1",
-          "text": "冷気ダメージが(10-19)%増加する",
-          "name": "酷寒の",
-          "tag": "focus",
-          "generation_type": "prefix",
-          "required_level": 2,
-          "weight": 500
-        },
-        {
-          "key": "ColdDamagePrefixOnWeapon2",
-          "text": "冷気ダメージが(20-29)%増加する",
-          "name": "肌を刺す",
-          "tag": "focus",
-          "generation_type": "prefix",
-          "required_level": 11,
-          "weight": 500
-        },
-        {
-          "key": "ColdDamagePrefixOnWeapon3_",
-          "text": "冷気ダメージが(30-39)%増加する",
-          "name": "高山の",
-          "tag": "focus",
-          "generation_type": "prefix",
-          "required_level": 23,
-          "weight": 500
-        },
-        {
-          "key": "ColdDamagePrefixOnWeapon4",
-          "text": "冷気ダメージが(40-54)%増加する",
-          "name": "降雪の",
-          "tag": "focus",
-          "generation_type": "prefix",
-          "required_level": 35,
           "weight": 200
         },
         {
-          "key": "ColdDamagePrefixOnWeapon5_",
-          "text": "冷気ダメージが(55-69)%増加する",
-          "name": "降雹する",
-          "tag": "focus",
-          "generation_type": "prefix",
-          "required_level": 46,
-          "weight": 100
-        },
-        {
-          "key": "ColdDamagePrefixOnWeapon6",
-          "text": "冷気ダメージが(70-84)%増加する",
-          "name": "結晶体の",
-          "tag": "focus",
-          "generation_type": "prefix",
-          "required_level": 58,
-          "weight": 50
-        },
-        {
-          "key": "ColdDamagePrefixOnWeapon7",
-          "text": "冷気ダメージが(85-99)%増加する",
-          "name": "操氷術師の",
-          "tag": "focus",
-          "generation_type": "prefix",
-          "required_level": 64,
-          "weight": 25
-        },
-        {
-          "key": "ColdDamagePrefixOnWeapon8",
-          "text": "冷気ダメージが(100-109)%増加する",
-          "name": "トゥルよりの",
-          "tag": "focus",
-          "generation_type": "prefix",
-          "required_level": 84,
-          "weight": 12
-        }
-      ],
-      "LightningDamageWeaponPrefix": [
-        {
-          "key": "LightningDamagePrefixOnWeapon1_",
-          "text": "雷ダメージが(10-19)%増加する",
-          "name": "帯電した",
-          "tag": "focus",
-          "generation_type": "prefix",
-          "required_level": 2,
-          "weight": 500
-        },
-        {
-          "key": "LightningDamagePrefixOnWeapon2",
-          "text": "雷ダメージが(20-29)%増加する",
-          "name": "風切り音の",
-          "tag": "focus",
-          "generation_type": "prefix",
-          "required_level": 11,
-          "weight": 500
-        },
-        {
-          "key": "LightningDamagePrefixOnWeapon3",
-          "text": "雷ダメージが(30-39)%増加する",
-          "name": "稲妻の",
-          "tag": "focus",
-          "generation_type": "prefix",
-          "required_level": 23,
-          "weight": 500
-        },
-        {
-          "key": "LightningDamagePrefixOnWeapon4",
-          "text": "雷ダメージが(40-54)%増加する",
-          "name": "駆け巡る",
-          "tag": "focus",
-          "generation_type": "prefix",
-          "required_level": 35,
-          "weight": 200
-        },
-        {
-          "key": "LightningDamagePrefixOnWeapon5",
-          "text": "雷ダメージが(55-69)%増加する",
-          "name": "落雷の",
-          "tag": "focus",
-          "generation_type": "prefix",
-          "required_level": 46,
-          "weight": 100
-        },
-        {
-          "key": "LightningDamagePrefixOnWeapon6",
-          "text": "雷ダメージが(70-84)%増加する",
-          "name": "天誅の",
-          "tag": "focus",
-          "generation_type": "prefix",
-          "required_level": 58,
-          "weight": 50
-        },
-        {
-          "key": "LightningDamagePrefixOnWeapon7",
-          "text": "雷ダメージが(85-99)%増加する",
-          "name": "イオン化する",
-          "tag": "focus",
-          "generation_type": "prefix",
-          "required_level": 64,
-          "weight": 25
-        },
-        {
-          "key": "LightningDamagePrefixOnWeapon8",
-          "text": "雷ダメージが(100-109)%増加する",
-          "name": "エシュの",
-          "tag": "focus",
-          "generation_type": "prefix",
-          "required_level": 84,
-          "weight": 12
-        }
-      ],
-      "IncreasedWeaponElementalDamagePercent": [
-        {
-          "key": "WeaponElementalDamageOnWeapons1_",
-          "text": "アタックスキルの元素ダメージが(11-20)%増加する",
-          "name": "促進する",
-          "tag": "one_hand_weapon",
-          "generation_type": "prefix",
-          "required_level": 4,
-          "weight": 300
-        },
-        {
-          "key": "WeaponElementalDamageOnWeapons2",
-          "text": "アタックスキルの元素ダメージが(21-30)%増加する",
-          "name": "注ぎ込む",
-          "tag": "one_hand_weapon",
-          "generation_type": "prefix",
-          "required_level": 15,
-          "weight": 300
-        },
-        {
-          "key": "WeaponElementalDamageOnWeapons3_",
-          "text": "アタックスキルの元素ダメージが(31-36)%増加する",
-          "name": "力を与える",
-          "tag": "one_hand_weapon",
-          "generation_type": "prefix",
-          "required_level": 30,
-          "weight": 300
-        },
-        {
-          "key": "WeaponElementalDamageOnWeapons4",
-          "text": "アタックスキルの元素ダメージが(37-42)%増加する",
-          "name": "解き放たれた",
-          "tag": "one_hand_weapon",
+          "key": "LocalIncreasedPhysicalDamagePercent6",
+          "text": "物理ダメージが(135-154)%増加する",
+          "name": "残酷な",
+          "tag": "weapon",
           "generation_type": "prefix",
           "required_level": 60,
-          "weight": 300
+          "weight": 100
         },
         {
-          "key": "WeaponElementalDamageOnWeapons5_",
-          "text": "アタックスキルの元素ダメージが(43-50)%増加する",
-          "name": "征圧する",
-          "tag": "one_hand_weapon",
+          "key": "LocalIncreasedPhysicalDamagePercent7",
+          "text": "物理ダメージが(155-169)%増加する",
+          "name": "暴虐な",
+          "tag": "weapon",
           "generation_type": "prefix",
-          "required_level": 81,
-          "weight": 300
-        },
-        {
-          "key": "WeaponElementalDamageOnWeapons6",
-          "text": "アタックスキルの元素ダメージが(51-59)%増加する",
-          "name": "壊滅させる",
-          "tag": "one_hand_weapon",
-          "generation_type": "prefix",
-          "required_level": 86,
-          "weight": 300
-        }
-      ],
-      "GlobalIncreaseSpellSkillGemLevel": [
-        {
-          "key": "GlobalSpellGemsLevel1",
-          "text": "全てのスペルスキルジェムのレベル +1",
-          "name": "マギステルの",
-          "tag": "attack_dagger",
-          "generation_type": "prefix",
-          "required_level": 55,
+          "required_level": 73,
           "weight": 50
-        }
-      ],
-      "GlobalIncreaseFireSpellSkillGemLevel": [
-        {
-          "key": "GlobalFireSpellGemsLevel1_",
-          "text": "全ての火スペルスキルジェムのレベル +1",
-          "name": "創炎師の",
-          "tag": "attack_dagger",
-          "generation_type": "prefix",
-          "required_level": 2,
-          "weight": 250
-        }
-      ],
-      "GlobalIncreaseColdSpellSkillGemLevel": [
-        {
-          "key": "GlobalColdSpellGemsLevel1_",
-          "text": "全ての冷気スペルスキルジェムのレベル +1",
-          "name": "霜の歌い手の",
-          "tag": "attack_dagger",
-          "generation_type": "prefix",
-          "required_level": 2,
-          "weight": 250
-        }
-      ],
-      "GlobalIncreaseLightningSpellSkillGemLevel": [
-        {
-          "key": "GlobalLightningSpellGemsLevel1",
-          "text": "全ての雷スペルスキルジェムのレベル +1",
-          "name": "雷の手の",
-          "tag": "attack_dagger",
-          "generation_type": "prefix",
-          "required_level": 2,
-          "weight": 250
-        }
-      ],
-      "GlobalIncreaseChaosSpellSkillGemLevel": [
-        {
-          "key": "GlobalChaosSpellGemsLevel1",
-          "text": "全ての混沌スペルスキルジェムのレベル +1",
-          "name": "狂える君主の",
-          "tag": "attack_dagger",
-          "generation_type": "prefix",
-          "required_level": 2,
-          "weight": 200
-        }
-      ],
-      "GlobalIncreasePhysicalSpellSkillGemLevel": [
-        {
-          "key": "GlobalPhysicalSpellGemsLevel1",
-          "text": "全ての物理スペルスキルジェムのレベル +1",
-          "name": "操石術師の",
-          "tag": "attack_dagger",
-          "generation_type": "prefix",
-          "required_level": 2,
-          "weight": 200
-        }
-      ],
-      "SpellAddedFireDamage": [
-        {
-          "key": "SpellAddedFireDamage1",
-          "text": "(1-2)から(3-4)の火ダメージをスペルに追加する",
-          "name": "熱した",
-          "tag": "attack_dagger",
-          "generation_type": "prefix",
-          "required_level": 1,
-          "weight": 800
         },
         {
-          "key": "SpellAddedFireDamage2_",
-          "text": "(6-8)から(12-14)の火ダメージをスペルに追加する",
-          "name": "燻る",
-          "tag": "attack_dagger",
-          "generation_type": "prefix",
-          "required_level": 11,
-          "weight": 800
-        },
-        {
-          "key": "SpellAddedFireDamage3",
-          "text": "(10-12)から(19-23)の火ダメージをスペルに追加する",
-          "name": "発煙する",
-          "tag": "attack_dagger",
-          "generation_type": "prefix",
-          "required_level": 18,
-          "weight": 800
-        },
-        {
-          "key": "SpellAddedFireDamage4",
-          "text": "(13-18)から(27-31)の火ダメージをスペルに追加する",
-          "name": "燃える",
-          "tag": "attack_dagger",
-          "generation_type": "prefix",
-          "required_level": 26,
-          "weight": 800
-        },
-        {
-          "key": "SpellAddedFireDamage5",
-          "text": "(19-25)から(37-44)の火ダメージをスペルに追加する",
-          "name": "燃え立つ",
-          "tag": "attack_dagger",
-          "generation_type": "prefix",
-          "required_level": 33,
-          "weight": 800
-        },
-        {
-          "key": "SpellAddedFireDamage6",
-          "text": "(24-33)から(48-57)の火ダメージをスペルに追加する",
-          "name": "焼き焦がす",
-          "tag": "attack_dagger",
-          "generation_type": "prefix",
-          "required_level": 42,
-          "weight": 800
-        },
-        {
-          "key": "SpellAddedFireDamage7",
-          "text": "(31-42)から(64-73)の火ダメージをスペルに追加する",
-          "name": "焼却する",
-          "tag": "attack_dagger",
-          "generation_type": "prefix",
-          "required_level": 51,
-          "weight": 800
-        },
-        {
-          "key": "SpellAddedFireDamage8",
-          "text": "(40-52)から(79-91)の火ダメージをスペルに追加する",
-          "name": "爆破する",
-          "tag": "attack_dagger",
-          "generation_type": "prefix",
-          "required_level": 62,
-          "weight": 800
-        },
-        {
-          "key": "SpellAddedFireDamage9",
-          "text": "(49-66)から(98-115)の火ダメージをスペルに追加する",
-          "name": "火葬する",
-          "tag": "attack_dagger",
-          "generation_type": "prefix",
-          "required_level": 74,
-          "weight": 800
-        }
-      ],
-      "SpellAddedColdDamage": [
-        {
-          "key": "SpellAddedColdDamage1",
-          "text": "1から(2-3)の冷気ダメージをスペルに追加する",
-          "name": "凍てついた",
-          "tag": "attack_dagger",
-          "generation_type": "prefix",
-          "required_level": 1,
-          "weight": 800
-        },
-        {
-          "key": "SpellAddedColdDamage2",
-          "text": "(5-7)から(10-12)の冷気ダメージをスペルに追加する",
-          "name": "冷えた",
-          "tag": "attack_dagger",
-          "generation_type": "prefix",
-          "required_level": 11,
-          "weight": 800
-        },
-        {
-          "key": "SpellAddedColdDamage3",
-          "text": "(8-10)から(16-18)の冷気ダメージをスペルに追加する",
-          "name": "凍った",
-          "tag": "attack_dagger",
-          "generation_type": "prefix",
-          "required_level": 18,
-          "weight": 800
-        },
-        {
-          "key": "SpellAddedColdDamage4",
-          "text": "(11-15)から(22-25)の冷気ダメージをスペルに追加する",
-          "name": "凍える",
-          "tag": "attack_dagger",
-          "generation_type": "prefix",
-          "required_level": 26,
-          "weight": 800
-        },
-        {
-          "key": "SpellAddedColdDamage5",
-          "text": "(16-20)から(30-36)の冷気ダメージをスペルに追加する",
-          "name": "凍りつく",
-          "tag": "attack_dagger",
-          "generation_type": "prefix",
-          "required_level": 33,
-          "weight": 800
-        },
-        {
-          "key": "SpellAddedColdDamage6_",
-          "text": "(20-26)から(40-46)の冷気ダメージをスペルに追加する",
-          "name": "凍結した",
-          "tag": "attack_dagger",
-          "generation_type": "prefix",
-          "required_level": 42,
-          "weight": 800
-        },
-        {
-          "key": "SpellAddedColdDamage7",
-          "text": "(26-35)から(51-60)の冷気ダメージをスペルに追加する",
-          "name": "氷結した",
-          "tag": "attack_dagger",
-          "generation_type": "prefix",
-          "required_level": 51,
-          "weight": 800
-        },
-        {
-          "key": "SpellAddedColdDamage8",
-          "text": "(33-43)から(64-75)の冷気ダメージをスペルに追加する",
-          "name": "極地の",
-          "tag": "attack_dagger",
-          "generation_type": "prefix",
-          "required_level": 62,
-          "weight": 800
-        },
-        {
-          "key": "SpellAddedColdDamage9",
-          "text": "(41-54)から(81-93)の冷気ダメージをスペルに追加する",
-          "name": "氷葬する",
-          "tag": "attack_dagger",
-          "generation_type": "prefix",
-          "required_level": 74,
-          "weight": 800
-        }
-      ],
-      "SpellAddedLightningDamage": [
-        {
-          "key": "SpellAddedLightningDamage1",
-          "text": "1から(4-5)の雷ダメージをスペルに追加する",
-          "name": "電音の",
-          "tag": "attack_dagger",
-          "generation_type": "prefix",
-          "required_level": 1,
-          "weight": 800
-        },
-        {
-          "key": "SpellAddedLightningDamage2",
-          "text": "(1-2)から(21-22)の雷ダメージをスペルに追加する",
-          "name": "電鳴の",
-          "tag": "attack_dagger",
-          "generation_type": "prefix",
-          "required_level": 11,
-          "weight": 800
-        },
-        {
-          "key": "SpellAddedLightningDamage3",
-          "text": "(1-2)から(33-35)の雷ダメージをスペルに追加する",
-          "name": "雷音の",
-          "tag": "attack_dagger",
-          "generation_type": "prefix",
-          "required_level": 18,
-          "weight": 800
-        },
-        {
-          "key": "SpellAddedLightningDamage4",
-          "text": "(1-4)から(46-48)の雷ダメージをスペルに追加する",
-          "name": "雷鳴の",
-          "tag": "attack_dagger",
-          "generation_type": "prefix",
-          "required_level": 26,
-          "weight": 800
-        },
-        {
-          "key": "SpellAddedLightningDamage5",
-          "text": "(2-5)から(64-68)の雷ダメージをスペルに追加する",
-          "name": "電光走る",
-          "tag": "attack_dagger",
-          "generation_type": "prefix",
-          "required_level": 33,
-          "weight": 800
-        },
-        {
-          "key": "SpellAddedLightningDamage6",
-          "text": "(2-7)から(84-88)の雷ダメージをスペルに追加する",
-          "name": "電弧する",
-          "tag": "attack_dagger",
-          "generation_type": "prefix",
-          "required_level": 42,
-          "weight": 800
-        },
-        {
-          "key": "SpellAddedLightningDamage7",
-          "text": "(2-9)から(109-115)の雷ダメージをスペルに追加する",
-          "name": "電撃の",
-          "tag": "attack_dagger",
-          "generation_type": "prefix",
-          "required_level": 51,
-          "weight": 800
-        },
-        {
-          "key": "SpellAddedLightningDamage8",
-          "text": "(4-11)から(136-144)の雷ダメージをスペルに追加する",
-          "name": "放電する",
-          "tag": "attack_dagger",
-          "generation_type": "prefix",
-          "required_level": 62,
-          "weight": 800
-        },
-        {
-          "key": "SpellAddedLightningDamage9",
-          "text": "(4-14)から(170-179)の雷ダメージをスペルに追加する",
-          "name": "感電する",
-          "tag": "attack_dagger",
-          "generation_type": "prefix",
-          "required_level": 74,
-          "weight": 800
-        }
-      ],
-      "LocalChaosDamage": [
-        {
-          "key": "LocalAddedChaosDamage1",
-          "text": "(56-87)から(105-160)の混沌ダメージを追加する",
-          "name": "害意ある",
-          "tag": "two_hand_weapon",
+          "key": "LocalIncreasedPhysicalDamagePercent8",
+          "text": "物理ダメージが(170-179)%増加する",
+          "name": "無慈悲な",
+          "tag": "weapon",
           "generation_type": "prefix",
           "required_level": 83,
-          "weight": 250
+          "weight": 25
         }
       ],
       "MinionDamageOnWeapon": [
@@ -1370,7 +1024,7 @@
           "key": "MinionDamageOnWeapon1",
           "text": "ミニオンのダメージが(10-19)%増加する",
           "name": "女男爵の",
-          "tag": "two_hand_weapon",
+          "tag": "weapon_can_roll_minion_modifiers",
           "generation_type": "prefix",
           "required_level": 2,
           "weight": 3000
@@ -1379,7 +1033,7 @@
           "key": "MinionDamageOnWeapon2",
           "text": "ミニオンのダメージが(20-29)%増加する",
           "name": "女子爵の",
-          "tag": "two_hand_weapon",
+          "tag": "weapon_can_roll_minion_modifiers",
           "generation_type": "prefix",
           "required_level": 11,
           "weight": 3000
@@ -1388,7 +1042,7 @@
           "key": "MinionDamageOnWeapon3",
           "text": "ミニオンのダメージが(30-39)%増加する",
           "name": "女侯爵の",
-          "tag": "two_hand_weapon",
+          "tag": "weapon_can_roll_minion_modifiers",
           "generation_type": "prefix",
           "required_level": 23,
           "weight": 3000
@@ -1397,7 +1051,7 @@
           "key": "MinionDamageOnWeapon4_",
           "text": "ミニオンのダメージが(40-54)%増加する",
           "name": "女伯爵の",
-          "tag": "two_hand_weapon",
+          "tag": "weapon_can_roll_minion_modifiers",
           "generation_type": "prefix",
           "required_level": 35,
           "weight": 1200
@@ -1406,7 +1060,7 @@
           "key": "MinionDamageOnWeapon5",
           "text": "ミニオンのダメージが(55-69)%増加する",
           "name": "女公爵の",
-          "tag": "two_hand_weapon",
+          "tag": "weapon_can_roll_minion_modifiers",
           "generation_type": "prefix",
           "required_level": 46,
           "weight": 600
@@ -1415,7 +1069,7 @@
           "key": "MinionDamageOnWeapon6",
           "text": "ミニオンのダメージが(70-84)%増加する",
           "name": "王女の",
-          "tag": "two_hand_weapon",
+          "tag": "weapon_can_roll_minion_modifiers",
           "generation_type": "prefix",
           "required_level": 58,
           "weight": 300
@@ -1424,7 +1078,7 @@
           "key": "MinionDamageOnWeapon7",
           "text": "ミニオンのダメージが(85-99)%増加する",
           "name": "女王の",
-          "tag": "two_hand_weapon",
+          "tag": "weapon_can_roll_minion_modifiers",
           "generation_type": "prefix",
           "required_level": 64,
           "weight": 160
@@ -1433,7 +1087,7 @@
           "key": "MinionDamageOnWeapon8",
           "text": "ミニオンのダメージが(100-109)%増加する",
           "name": "女帝の",
-          "tag": "two_hand_weapon",
+          "tag": "weapon_can_roll_minion_modifiers",
           "generation_type": "prefix",
           "required_level": 84,
           "weight": 80
@@ -1442,162 +1096,899 @@
       "MinionDamageOnWeaponAndMana": [
         {
           "key": "MinionDamageAndManaOnWeapon1",
-          "text": "ミニオンのダメージが(5-9)%増加する\n最大マナ +(17-20)",
+          "text": "ミニオンのダメージが(8-12)%増加する\n最大マナ +(17-20)",
           "name": "男爵の",
-          "tag": "two_hand_weapon",
+          "tag": "weapon_can_roll_minion_modifiers",
           "generation_type": "prefix",
           "required_level": 2,
           "weight": 2000
         },
         {
           "key": "MinionDamageAndManaOnWeapon2_",
-          "text": "ミニオンのダメージが(10-14)%増加する\n最大マナ +(21-24)",
+          "text": "ミニオンのダメージが(13-18)%増加する\n最大マナ +(21-24)",
           "name": "子爵の",
-          "tag": "two_hand_weapon",
+          "tag": "weapon_can_roll_minion_modifiers",
           "generation_type": "prefix",
           "required_level": 11,
           "weight": 2000
         },
         {
           "key": "MinionDamageAndManaOnWeapon3",
-          "text": "ミニオンのダメージが(15-19)%増加する\n最大マナ +(25-28)",
+          "text": "ミニオンのダメージが(19-24)%増加する\n最大マナ +(25-28)",
           "name": "公爵",
-          "tag": "two_hand_weapon",
+          "tag": "weapon_can_roll_minion_modifiers",
           "generation_type": "prefix",
           "required_level": 23,
           "weight": 2000
         },
         {
           "key": "MinionDamageAndManaOnWeapon4_",
-          "text": "ミニオンのダメージが(20-24)%増加する\n最大マナ +(29-33)",
+          "text": "ミニオンのダメージが(25-30)%増加する\n最大マナ +(29-33)",
           "name": "伯爵の",
-          "tag": "two_hand_weapon",
+          "tag": "weapon_can_roll_minion_modifiers",
           "generation_type": "prefix",
           "required_level": 35,
           "weight": 1600
         },
         {
           "key": "MinionDamageAndManaOnWeapon5",
-          "text": "ミニオンのダメージが(25-29)%増加する\n最大マナ +(34-37)",
+          "text": "ミニオンのダメージが(31-36)%増加する\n最大マナ +(34-37)",
           "name": "公爵の",
-          "tag": "two_hand_weapon",
+          "tag": "weapon_can_roll_minion_modifiers",
           "generation_type": "prefix",
           "required_level": 46,
           "weight": 800
         },
         {
           "key": "MinionDamageAndManaOnWeapon6",
-          "text": "ミニオンのダメージが(30-34)%増加する\n最大マナ +(38-41)",
+          "text": "ミニオンのダメージが(37-43)%増加する\n最大マナ +(38-41)",
           "name": "王子の",
-          "tag": "two_hand_weapon",
+          "tag": "weapon_can_roll_minion_modifiers",
           "generation_type": "prefix",
           "required_level": 58,
           "weight": 400
         },
         {
           "key": "MinionDamageAndManaOnWeapon7_",
-          "text": "ミニオンのダメージが(35-39)%増加する\n最大マナ +(42-45)",
+          "text": "ミニオンのダメージが(44-49)%増加する\n最大マナ +(42-45)",
           "name": "王の",
-          "tag": "two_hand_weapon",
+          "tag": "weapon_can_roll_minion_modifiers",
           "generation_type": "prefix",
           "required_level": 80,
           "weight": 200
         }
       ],
-      "GlobalIncreaseMinionSpellSkillGemLevel": [
+      "SpellAddedColdDamage": [
         {
-          "key": "MinionGemLevel1h1",
-          "text": "全てのミニオンスキルジェムのレベル +1",
-          "name": "規律主義者の",
-          "tag": "two_hand_weapon",
+          "key": "SpellAddedColdDamage1",
+          "text": "(1-2)から(2-3)の冷気ダメージをスペルに追加する",
+          "name": "凍てついた",
+          "tag": "wand",
           "generation_type": "prefix",
-          "required_level": 60,
+          "required_level": 1,
+          "weight": 800
+        },
+        {
+          "key": "SpellAddedColdDamage2",
+          "text": "(5-7)から(11-13)の冷気ダメージをスペルに追加する",
+          "name": "冷えた",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 11,
+          "weight": 800
+        },
+        {
+          "key": "SpellAddedColdDamage3",
+          "text": "(9-11)から(17-20)の冷気ダメージをスペルに追加する",
+          "name": "凍った",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 18,
+          "weight": 800
+        },
+        {
+          "key": "SpellAddedColdDamage4",
+          "text": "(12-17)から(25-28)の冷気ダメージをスペルに追加する",
+          "name": "凍える",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 26,
+          "weight": 800
+        },
+        {
+          "key": "SpellAddedColdDamage5",
+          "text": "(18-23)から(35-41)の冷気ダメージをスペルに追加する",
+          "name": "凍りつく",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 33,
+          "weight": 800
+        },
+        {
+          "key": "SpellAddedColdDamage6_",
+          "text": "(24-31)から(47-54)の冷気ダメージをスペルに追加する",
+          "name": "凍結した",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 42,
+          "weight": 800
+        },
+        {
+          "key": "SpellAddedColdDamage7",
+          "text": "(31-42)から(62-73)の冷気ダメージをスペルに追加する",
+          "name": "氷結した",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 51,
+          "weight": 800
+        },
+        {
+          "key": "SpellAddedColdDamage8",
+          "text": "(41-53)から(79-93)の冷気ダメージをスペルに追加する",
+          "name": "極地の",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 62,
+          "weight": 250
+        },
+        {
+          "key": "SpellAddedColdDamage9",
+          "text": "(52-69)から(103-118)の冷気ダメージをスペルに追加する",
+          "name": "氷葬する",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 74,
+          "weight": 50
+        }
+      ],
+      "SpellAddedFireDamage": [
+        {
+          "key": "SpellAddedFireDamage1",
+          "text": "(1-2)から(3-4)の火ダメージをスペルに追加する",
+          "name": "熱した",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 800
+        },
+        {
+          "key": "SpellAddedFireDamage2_",
+          "text": "(6-8)から(13-15)の火ダメージをスペルに追加する",
+          "name": "燻る",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 11,
+          "weight": 800
+        },
+        {
+          "key": "SpellAddedFireDamage3",
+          "text": "(11-13)から(21-25)の火ダメージをスペルに追加する",
+          "name": "発煙する",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 18,
+          "weight": 800
+        },
+        {
+          "key": "SpellAddedFireDamage4",
+          "text": "(15-20)から(30-35)の火ダメージをスペルに追加する",
+          "name": "燃える",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 26,
+          "weight": 800
+        },
+        {
+          "key": "SpellAddedFireDamage5",
+          "text": "(22-29)から(43-51)の火ダメージをスペルに追加する",
+          "name": "燃え立つ",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 33,
+          "weight": 800
+        },
+        {
+          "key": "SpellAddedFireDamage6",
+          "text": "(28-39)から(57-67)の火ダメージをスペルに追加する",
+          "name": "焼き焦がす",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 42,
+          "weight": 800
+        },
+        {
+          "key": "SpellAddedFireDamage7",
+          "text": "(38-51)から(77-88)の火ダメージをスペルに追加する",
+          "name": "焼却する",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 51,
+          "weight": 800
+        },
+        {
+          "key": "SpellAddedFireDamage8",
+          "text": "(50-64)から(98-113)の火ダメージをスペルに追加する",
+          "name": "爆破する",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 62,
+          "weight": 250
+        },
+        {
+          "key": "SpellAddedFireDamage9",
+          "text": "(62-84)から(124-146)の火ダメージをスペルに追加する",
+          "name": "火葬する",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 74,
+          "weight": 50
+        }
+      ],
+      "SpellAddedLightningDamage": [
+        {
+          "key": "SpellAddedLightningDamage1",
+          "text": "1から(4-5)の雷ダメージをスペルに追加する",
+          "name": "電音の",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 800
+        },
+        {
+          "key": "SpellAddedLightningDamage2",
+          "text": "(1-2)から(22-23)の雷ダメージをスペルに追加する",
+          "name": "電鳴の",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 11,
+          "weight": 800
+        },
+        {
+          "key": "SpellAddedLightningDamage3",
+          "text": "(1-2)から(36-38)の雷ダメージをスペルに追加する",
+          "name": "雷音の",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 18,
+          "weight": 800
+        },
+        {
+          "key": "SpellAddedLightningDamage4",
+          "text": "(1-4)から(52-54)の雷ダメージをスペルに追加する",
+          "name": "雷鳴の",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 26,
+          "weight": 800
+        },
+        {
+          "key": "SpellAddedLightningDamage5",
+          "text": "(2-6)から(74-78)の雷ダメージをスペルに追加する",
+          "name": "電光走る",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 33,
+          "weight": 800
+        },
+        {
+          "key": "SpellAddedLightningDamage6",
+          "text": "(2-8)から(99-104)の雷ダメージをスペルに追加する",
+          "name": "電弧する",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 42,
+          "weight": 800
+        },
+        {
+          "key": "SpellAddedLightningDamage7",
+          "text": "(2-11)から(132-139)の雷ダメージをスペルに追加する",
+          "name": "電撃の",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 51,
+          "weight": 800
+        },
+        {
+          "key": "SpellAddedLightningDamage8",
+          "text": "(5-14)から(169-179)の雷ダメージをスペルに追加する",
+          "name": "放電する",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 62,
+          "weight": 250
+        },
+        {
+          "key": "SpellAddedLightningDamage9",
+          "text": "(5-18)から(216-227)の雷ダメージをスペルに追加する",
+          "name": "感電する",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 74,
+          "weight": 60
+        }
+      ],
+      "WeaponSpellDamage": [
+        {
+          "key": "SpellDamageOnWeapon1",
+          "text": "スペルダメージが(10-19)%増加する",
+          "name": "弟子の",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 2,
+          "weight": 1500
+        },
+        {
+          "key": "SpellDamageOnWeapon2",
+          "text": "スペルダメージが(20-29)%増加する",
+          "name": "達人の",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 11,
+          "weight": 1500
+        },
+        {
+          "key": "SpellDamageOnWeapon3",
+          "text": "スペルダメージが(30-39)%増加する",
+          "name": "学者の",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 23,
+          "weight": 1500
+        },
+        {
+          "key": "SpellDamageOnWeapon4",
+          "text": "スペルダメージが(40-54)%増加する",
+          "name": "教授の",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 35,
+          "weight": 1500
+        },
+        {
+          "key": "SpellDamageOnWeapon5",
+          "text": "スペルダメージが(55-69)%増加する",
+          "name": "オカルティストの",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 46,
+          "weight": 1500
+        },
+        {
+          "key": "SpellDamageOnWeapon6",
+          "text": "スペルダメージが(70-84)%増加する",
+          "name": "呪術師の",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 58,
+          "weight": 500
+        },
+        {
+          "key": "SpellDamageOnWeapon7",
+          "text": "スペルダメージが(85-99)%増加する",
+          "name": "グリフの",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 64,
+          "weight": 150
+        },
+        {
+          "key": "SpellDamageOnWeapon8_",
+          "text": "スペルダメージが(100-109)%増加する",
+          "name": "ルーンの",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 84,
+          "weight": 40
+        }
+      ],
+      "WeaponSpellDamageAndMana": [
+        {
+          "key": "SpellDamageAndManaOnWeapon1",
+          "text": "スペルダメージが(8-12)%増加する\n最大マナ +(17-20)",
+          "name": "術者の",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 2,
+          "weight": 1000
+        },
+        {
+          "key": "SpellDamageAndManaOnWeapon2",
+          "text": "スペルダメージが(13-18)%増加する\n最大マナ +(21-24)",
+          "name": "祈祷師の",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 11,
+          "weight": 1000
+        },
+        {
+          "key": "SpellDamageAndManaOnWeapon3",
+          "text": "スペルダメージが(19-24)%増加する\n最大マナ +(25-28)",
+          "name": "魔法使いの",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 23,
+          "weight": 1000
+        },
+        {
+          "key": "SpellDamageAndManaOnWeapon4",
+          "text": "スペルダメージが(25-30)%増加する\n最大マナ +(29-33)",
+          "name": "黒魔導師の",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 35,
+          "weight": 800
+        },
+        {
+          "key": "SpellDamageAndManaOnWeapon5",
+          "text": "スペルダメージが(31-36)%増加する\n最大マナ +(34-37)",
+          "name": "魔道師の",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 46,
           "weight": 400
+        },
+        {
+          "key": "SpellDamageAndManaOnWeapon6",
+          "text": "スペルダメージが(37-43)%増加する\n最大マナ +(38-41)",
+          "name": "大魔道師の",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 58,
+          "weight": 200
+        },
+        {
+          "key": "SpellDamageAndManaOnWeapon7",
+          "text": "スペルダメージが(44-49)%増加する\n最大マナ +(42-45)",
+          "name": "リッチの",
+          "tag": "wand",
+          "generation_type": "prefix",
+          "required_level": 80,
+          "weight": 100
         }
       ]
     },
     "suffix": {
-      "Intelligence": [
+      "ChanceToFreeze": [
         {
-          "key": "Intelligence1",
-          "text": "知性 +(8-12)",
-          "name": "生徒の",
-          "tag": "ring",
+          "key": "ChanceToFreeze1",
+          "text": "(18-24)%の確率で敵を凍結させる",
+          "name": "凍結の",
+          "tag": "wand",
           "generation_type": "suffix",
-          "required_level": 1,
-          "weight": 333
+          "required_level": 15,
+          "weight": 1000
         },
         {
-          "key": "Intelligence2",
-          "text": "知性 +(13-17)",
-          "name": "学徒の",
-          "tag": "ring",
+          "key": "ChanceToFreeze2",
+          "text": "(25-30)%の確率で敵を凍結させる",
+          "name": "荒涼感の",
+          "tag": "wand",
           "generation_type": "suffix",
-          "required_level": 11,
-          "weight": 333
+          "required_level": 45,
+          "weight": 1000
         },
         {
-          "key": "Intelligence3",
-          "text": "知性 +(18-22)",
-          "name": "神童の",
+          "key": "ChanceToFreeze3",
+          "text": "(31-40)%の確率で敵を凍結させる",
+          "name": "極北の",
+          "tag": "wand",
+          "generation_type": "suffix",
+          "required_level": 75,
+          "weight": 500
+        }
+      ],
+      "ChanceToIgnite": [
+        {
+          "key": "ChanceToIgnite1",
+          "text": "(18-24)%の確率で敵を発火させる",
+          "name": "発火の",
+          "tag": "wand",
+          "generation_type": "suffix",
+          "required_level": 15,
+          "weight": 1000
+        },
+        {
+          "key": "ChanceToIgnite2",
+          "text": "(25-30)%の確率で敵を発火させる",
+          "name": "点火の",
+          "tag": "wand",
+          "generation_type": "suffix",
+          "required_level": 45,
+          "weight": 1000
+        },
+        {
+          "key": "ChanceToIgnite3_",
+          "text": "(31-40)%の確率で敵を発火させる",
+          "name": "着火の",
+          "tag": "wand",
+          "generation_type": "suffix",
+          "required_level": 75,
+          "weight": 500
+        }
+      ],
+      "ChanceToShock": [
+        {
+          "key": "ChanceToShock1",
+          "text": "(18-24)%の確率で敵を感電させる",
+          "name": "感電の",
+          "tag": "wand",
+          "generation_type": "suffix",
+          "required_level": 15,
+          "weight": 1000
+        },
+        {
+          "key": "ChanceToShock2__",
+          "text": "(25-30)%の確率で敵を感電させる",
+          "name": "通電の",
+          "tag": "wand",
+          "generation_type": "suffix",
+          "required_level": 45,
+          "weight": 1000
+        },
+        {
+          "key": "ChanceToShock3",
+          "text": "(31-40)%の確率で敵を感電させる",
+          "name": "電殺の",
+          "tag": "wand",
+          "generation_type": "suffix",
+          "required_level": 75,
+          "weight": 500
+        }
+      ],
+      "ChaosDamageOverTimeMultiplier": [
+        {
+          "key": "ChaosDamageOverTimeMultiplier1_",
+          "text": "混沌継続ダメージ倍率 +(14-18)%",
+          "name": "衰微の",
+          "tag": "wand",
+          "generation_type": "suffix",
+          "required_level": 4,
+          "weight": 400
+        },
+        {
+          "key": "ChaosDamageOverTimeMultiplier2",
+          "text": "混沌継続ダメージ倍率 +(19-23)%",
+          "name": "衰萎の",
+          "tag": "wand",
+          "generation_type": "suffix",
+          "required_level": 12,
+          "weight": 300
+        },
+        {
+          "key": "ChaosDamageOverTimeMultiplier3",
+          "text": "混沌継続ダメージ倍率 +(24-28)%",
+          "name": "衰退の",
+          "tag": "wand",
+          "generation_type": "suffix",
+          "required_level": 36,
+          "weight": 200
+        },
+        {
+          "key": "ChaosDamageOverTimeMultiplier4",
+          "text": "混沌継続ダメージ倍率 +(29-33)%",
+          "name": "萎縮性の",
+          "tag": "wand",
+          "generation_type": "suffix",
+          "required_level": 64,
+          "weight": 100
+        },
+        {
+          "key": "ChaosDamageOverTimeMultiplier5",
+          "text": "混沌継続ダメージ倍率 +(34-38)%",
+          "name": "分解の",
+          "tag": "wand",
+          "generation_type": "suffix",
+          "required_level": 78,
+          "weight": 50
+        }
+      ],
+      "ColdDamageOverTimeMultiplier": [
+        {
+          "key": "ColdDamageOverTimeMultiplier1",
+          "text": "冷気継続ダメージ倍率 +(14-18)%",
+          "name": "悪天候の",
+          "tag": "wand",
+          "generation_type": "suffix",
+          "required_level": 4,
+          "weight": 300
+        },
+        {
+          "key": "ColdDamageOverTimeMultiplier2",
+          "text": "冷気継続ダメージ倍率 +(19-23)%",
+          "name": "寒気の",
+          "tag": "wand",
+          "generation_type": "suffix",
+          "required_level": 12,
+          "weight": 220
+        },
+        {
+          "key": "ColdDamageOverTimeMultiplier3",
+          "text": "冷気継続ダメージ倍率 +(24-28)%",
+          "name": "北風の",
+          "tag": "wand",
+          "generation_type": "suffix",
+          "required_level": 36,
+          "weight": 140
+        },
+        {
+          "key": "ColdDamageOverTimeMultiplier4",
+          "text": "冷気継続ダメージ倍率 +(29-33)%",
+          "name": "冷寒なる者の",
+          "tag": "wand",
+          "generation_type": "suffix",
+          "required_level": 64,
+          "weight": 70
+        },
+        {
+          "key": "ColdDamageOverTimeMultiplier5",
+          "text": "冷気継続ダメージ倍率 +(34-38)%",
+          "name": "心臓麻痺の",
+          "tag": "wand",
+          "generation_type": "suffix",
+          "required_level": 78,
+          "weight": 35
+        }
+      ],
+      "ColdDamagePercentage": [
+        {
+          "key": "ColdDamagePercent1",
+          "text": "冷気ダメージが(10-12)%増加する",
+          "name": "雪の",
+          "tag": "ring",
+          "generation_type": "suffix",
+          "required_level": 12,
+          "weight": 500
+        },
+        {
+          "key": "ColdDamagePercent2",
+          "text": "冷気ダメージが(13-15)%増加する",
+          "name": "霙の",
+          "tag": "ring",
+          "generation_type": "suffix",
+          "required_level": 24,
+          "weight": 500
+        },
+        {
+          "key": "ColdDamagePercent3",
+          "text": "冷気ダメージが(16-18)%増加する",
+          "name": "氷雪の",
+          "tag": "ring",
+          "generation_type": "suffix",
+          "required_level": 36,
+          "weight": 500
+        },
+        {
+          "key": "ColdDamagePercent4",
+          "text": "冷気ダメージが(19-22)%増加する",
+          "name": "霧氷の",
+          "tag": "ring",
+          "generation_type": "suffix",
+          "required_level": 50,
+          "weight": 500
+        },
+        {
+          "key": "ColdDamagePercent5",
+          "text": "冷気ダメージが(23-26)%増加する",
+          "name": "氷原の",
+          "tag": "amulet",
+          "generation_type": "suffix",
+          "required_level": 64,
+          "weight": 500
+        },
+        {
+          "key": "ColdDamagePercent6",
+          "text": "冷気ダメージが(27-30)%増加する",
+          "name": "氷結の",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 76,
+          "weight": 0
+        }
+      ],
+      "CriticalStrikeMultiplier": [
+        {
+          "key": "LocalCriticalMultiplier1",
+          "text": "グローバルクリティカルダメージ倍率 +(10-14)%",
+          "name": "痛憤の",
+          "tag": "weapon",
+          "generation_type": "suffix",
+          "required_level": 8,
+          "weight": 1000
+        },
+        {
+          "key": "LocalCriticalMultiplier2",
+          "text": "グローバルクリティカルダメージ倍率 +(15-19)%",
+          "name": "怒りの",
+          "tag": "weapon",
+          "generation_type": "suffix",
+          "required_level": 21,
+          "weight": 1000
+        },
+        {
+          "key": "LocalCriticalMultiplier3",
+          "text": "グローバルクリティカルダメージ倍率 +(20-24)%",
+          "name": "激怒の",
+          "tag": "weapon",
+          "generation_type": "suffix",
+          "required_level": 30,
+          "weight": 1000
+        },
+        {
+          "key": "LocalCriticalMultiplier4",
+          "text": "グローバルクリティカルダメージ倍率 +(25-29)%",
+          "name": "憤激の",
+          "tag": "weapon",
+          "generation_type": "suffix",
+          "required_level": 44,
+          "weight": 1000
+        },
+        {
+          "key": "LocalCriticalMultiplier5",
+          "text": "グローバルクリティカルダメージ倍率 +(30-34)%",
+          "name": "凶暴性の",
+          "tag": "weapon",
+          "generation_type": "suffix",
+          "required_level": 59,
+          "weight": 1000
+        },
+        {
+          "key": "LocalCriticalMultiplier6",
+          "text": "グローバルクリティカルダメージ倍率 +(35-38)%",
+          "name": "破壊の",
+          "tag": "weapon",
+          "generation_type": "suffix",
+          "required_level": 73,
+          "weight": 1000
+        }
+      ],
+      "FireDamageOverTimeMultiplier": [
+        {
+          "key": "FireDamageOverTimeMultiplier1",
+          "text": "火継続ダメージ倍率 +(14-18)%",
+          "name": "熱心家の",
+          "tag": "wand",
+          "generation_type": "suffix",
+          "required_level": 4,
+          "weight": 300
+        },
+        {
+          "key": "FireDamageOverTimeMultiplier2",
+          "text": "火継続ダメージ倍率 +(19-23)%",
+          "name": "熱意ある者の",
+          "tag": "wand",
+          "generation_type": "suffix",
+          "required_level": 12,
+          "weight": 220
+        },
+        {
+          "key": "FireDamageOverTimeMultiplier3",
+          "text": "火継続ダメージ倍率 +(24-28)%",
+          "name": "熱烈な者の",
+          "tag": "wand",
+          "generation_type": "suffix",
+          "required_level": 36,
+          "weight": 140
+        },
+        {
+          "key": "FireDamageOverTimeMultiplier4__",
+          "text": "火継続ダメージ倍率 +(29-33)%",
+          "name": "熱狂者の",
+          "tag": "wand",
+          "generation_type": "suffix",
+          "required_level": 64,
+          "weight": 70
+        },
+        {
+          "key": "FireDamageOverTimeMultiplier5",
+          "text": "火継続ダメージ倍率 +(34-38)%",
+          "name": "熱中者の",
+          "tag": "wand",
+          "generation_type": "suffix",
+          "required_level": 78,
+          "weight": 35
+        }
+      ],
+      "FireDamagePercentage": [
+        {
+          "key": "FireDamagePercent1",
+          "text": "火ダメージが(10-12)%増加する",
+          "name": "残り火の",
+          "tag": "ring",
+          "generation_type": "suffix",
+          "required_level": 8,
+          "weight": 500
+        },
+        {
+          "key": "FireDamagePercent2",
+          "text": "火ダメージが(13-15)%増加する",
+          "name": "石炭の",
           "tag": "ring",
           "generation_type": "suffix",
           "required_level": 22,
-          "weight": 333
+          "weight": 500
         },
         {
-          "key": "Intelligence4",
-          "text": "知性 +(23-27)",
-          "name": "占師の",
+          "key": "FireDamagePercent3",
+          "text": "火ダメージが(16-18)%増加する",
+          "name": "消し炭の",
           "tag": "ring",
           "generation_type": "suffix",
-          "required_level": 33,
-          "weight": 333
+          "required_level": 36,
+          "weight": 500
         },
         {
-          "key": "Intelligence5",
-          "text": "知性 +(28-32)",
-          "name": "哲学者の",
+          "key": "FireDamagePercent4",
+          "text": "火ダメージが(19-22)%増加する",
+          "name": "炎の",
           "tag": "ring",
+          "generation_type": "suffix",
+          "required_level": 50,
+          "weight": 500
+        },
+        {
+          "key": "FireDamagePercent5",
+          "text": "火ダメージが(23-26)%増加する",
+          "name": "焼棄の",
+          "tag": "amulet",
+          "generation_type": "suffix",
+          "required_level": 64,
+          "weight": 500
+        },
+        {
+          "key": "FireDamagePercent6",
+          "text": "火ダメージが(27-30)%増加する",
+          "name": "灰の",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 76,
+          "weight": 0
+        }
+      ],
+      "GlobalDamageOverTimeMultiplier": [
+        {
+          "key": "GlobalDamageOverTimeMultiplier1h1",
+          "text": "継続ダメージ倍率 +(7-11)%",
+          "name": "辛辣さの",
+          "tag": "one_hand_weapon",
           "generation_type": "suffix",
           "required_level": 44,
-          "weight": 333
+          "weight": 300
         },
         {
-          "key": "Intelligence6",
-          "text": "知性 +(33-37)",
-          "name": "賢者の",
-          "tag": "ring",
+          "key": "GlobalDamageOverTimeMultiplier1h2_",
+          "text": "継続ダメージ倍率 +(12-15)%",
+          "name": "消散の",
+          "tag": "one_hand_weapon",
           "generation_type": "suffix",
           "required_level": 55,
-          "weight": 333
+          "weight": 300
         },
         {
-          "key": "Intelligence7",
-          "text": "知性 +(38-42)",
-          "name": "碩学の",
-          "tag": "ring",
+          "key": "GlobalDamageOverTimeMultiplier1h3",
+          "text": "継続ダメージ倍率 +(16-19)%",
+          "name": "液化の",
+          "tag": "one_hand_weapon",
           "generation_type": "suffix",
-          "required_level": 66,
-          "weight": 333
+          "required_level": 68,
+          "weight": 300
         },
         {
-          "key": "Intelligence8",
-          "text": "知性 +(43-50)",
-          "name": "巨匠の",
-          "tag": "ring",
+          "key": "GlobalDamageOverTimeMultiplier1h4",
+          "text": "継続ダメージ倍率 +(20-23)%",
+          "name": "融解の",
+          "tag": "one_hand_weapon",
           "generation_type": "suffix",
-          "required_level": 74,
-          "weight": 333
+          "required_level": 76,
+          "weight": 300
         },
         {
-          "key": "Intelligence9",
-          "text": "知性 +(51-55)",
-          "name": "天才の",
-          "tag": "ring",
+          "key": "GlobalDamageOverTimeMultiplier1h5",
+          "text": "継続ダメージ倍率 +(24-26)%",
+          "name": "溶解の",
+          "tag": "one_hand_weapon",
           "generation_type": "suffix",
           "required_level": 82,
-          "weight": 333
+          "weight": 300
         }
       ],
       "IncreasedCastSpeed": [
@@ -1611,21 +2002,21 @@
           "weight": 1000
         },
         {
-          "key": "IncreasedCastSpeed2",
-          "text": "キャストスピードが(9-12)%増加する",
-          "name": "軽快さの",
-          "tag": "wand",
-          "generation_type": "suffix",
-          "required_level": 15,
-          "weight": 1000
-        },
-        {
           "key": "IncreasedCastSpeed2Royale",
           "text": "キャストスピードが(8-15)%増加する",
           "name": "軽快さの",
           "tag": "wand",
           "generation_type": "suffix",
           "required_level": 4,
+          "weight": 1000
+        },
+        {
+          "key": "IncreasedCastSpeed2",
+          "text": "キャストスピードが(9-12)%増加する",
+          "name": "軽快さの",
+          "tag": "wand",
+          "generation_type": "suffix",
+          "required_level": 15,
           "weight": 1000
         },
         {
@@ -1662,7 +2053,7 @@
           "tag": "wand",
           "generation_type": "suffix",
           "required_level": 72,
-          "weight": 500
+          "weight": 1000
         },
         {
           "key": "IncreasedCastSpeed7",
@@ -1671,269 +2062,146 @@
           "tag": "wand",
           "generation_type": "suffix",
           "required_level": 83,
-          "weight": 250
+          "weight": 1000
         }
       ],
-      "LocalIncreasedAttackSpeed": [
+      "Intelligence": [
         {
-          "key": "LocalIncreasedAttackSpeed1",
-          "text": "アタックスピードが(5-7)%増加する",
-          "name": "技術の",
+          "key": "Intelligence1",
+          "text": "知性 +(8-12)",
+          "name": "生徒の",
+          "tag": "wand",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 333
+        },
+        {
+          "key": "Intelligence2",
+          "text": "知性 +(13-17)",
+          "name": "学徒の",
+          "tag": "wand",
+          "generation_type": "suffix",
+          "required_level": 11,
+          "weight": 333
+        },
+        {
+          "key": "Intelligence3",
+          "text": "知性 +(18-22)",
+          "name": "神童の",
+          "tag": "wand",
+          "generation_type": "suffix",
+          "required_level": 22,
+          "weight": 333
+        },
+        {
+          "key": "Intelligence4",
+          "text": "知性 +(23-27)",
+          "name": "占師の",
+          "tag": "wand",
+          "generation_type": "suffix",
+          "required_level": 33,
+          "weight": 333
+        },
+        {
+          "key": "Intelligence5",
+          "text": "知性 +(28-32)",
+          "name": "哲学者の",
+          "tag": "wand",
+          "generation_type": "suffix",
+          "required_level": 44,
+          "weight": 333
+        },
+        {
+          "key": "Intelligence6",
+          "text": "知性 +(33-37)",
+          "name": "賢者の",
+          "tag": "wand",
+          "generation_type": "suffix",
+          "required_level": 55,
+          "weight": 333
+        },
+        {
+          "key": "Intelligence7",
+          "text": "知性 +(38-42)",
+          "name": "碩学の",
+          "tag": "wand",
+          "generation_type": "suffix",
+          "required_level": 66,
+          "weight": 333
+        },
+        {
+          "key": "Intelligence8",
+          "text": "知性 +(43-50)",
+          "name": "巨匠の",
+          "tag": "wand",
+          "generation_type": "suffix",
+          "required_level": 74,
+          "weight": 333
+        },
+        {
+          "key": "Intelligence9",
+          "text": "知性 +(51-55)",
+          "name": "天才の",
+          "tag": "wand",
+          "generation_type": "suffix",
+          "required_level": 82,
+          "weight": 333
+        }
+      ],
+      "LifeGainedFromEnemyDeath": [
+        {
+          "key": "LifeGainedFromEnemyDeath1",
+          "text": "倒した敵1体ごとに(7-10)のライフを獲得する",
+          "name": "成功の",
           "tag": "weapon",
           "generation_type": "suffix",
           "required_level": 1,
-          "weight": 1000
-        },
-        {
-          "key": "LocalIncreasedAttackSpeed2",
-          "text": "アタックスピードが(8-10)%増加する",
-          "name": "容易さの",
-          "tag": "weapon",
-          "generation_type": "suffix",
-          "required_level": 11,
-          "weight": 1000
-        },
-        {
-          "key": "LocalIncreasedAttackSpeed2Royale____",
-          "text": "アタックスピードが(15-25)%増加する",
-          "name": "手軽さの",
-          "tag": "weapon",
-          "generation_type": "suffix",
-          "required_level": 4,
-          "weight": 1000
-        },
-        {
-          "key": "LocalIncreasedAttackSpeed3",
-          "text": "アタックスピードが(11-13)%増加する",
-          "name": "熟達の",
-          "tag": "weapon",
-          "generation_type": "suffix",
-          "required_level": 22,
-          "weight": 1000
-        },
-        {
-          "key": "LocalIncreasedAttackSpeed4",
-          "text": "アタックスピードが(14-16)%増加する",
-          "name": "高名の",
-          "tag": "ranged",
-          "generation_type": "suffix",
-          "required_level": 30,
           "weight": 500
         },
         {
-          "key": "LocalIncreasedAttackSpeed5",
-          "text": "アタックスピードが(17-19)%増加する",
-          "name": "絶賛の",
-          "tag": "ranged",
+          "key": "LifeGainedFromEnemyDeath2",
+          "text": "倒した敵1体ごとに(12-18)のライフを獲得する",
+          "name": "戦勝の",
+          "tag": "weapon",
           "generation_type": "suffix",
-          "required_level": 37,
+          "required_level": 23,
           "weight": 500
-        }
-      ],
-      "ManaRegeneration": [
-        {
-          "key": "ManaRegeneration1",
-          "text": "マナ自動回復レートが(10-19)%増加する",
-          "name": "興奮の",
-          "tag": "ring",
-          "generation_type": "suffix",
-          "required_level": 2,
-          "weight": 1000
         },
         {
-          "key": "ManaRegeneration2",
-          "text": "マナ自動回復レートが(20-29)%増加する",
-          "name": "歓喜の",
-          "tag": "ring",
-          "generation_type": "suffix",
-          "required_level": 18,
-          "weight": 1000
-        },
-        {
-          "key": "ManaRegeneration3",
-          "text": "マナ自動回復レートが(30-39)%増加する",
-          "name": "高揚の",
-          "tag": "ring",
-          "generation_type": "suffix",
-          "required_level": 29,
-          "weight": 1000
-        },
-        {
-          "key": "ManaRegeneration4",
-          "text": "マナ自動回復レートが(40-49)%増加する",
-          "name": "至福の",
-          "tag": "ring",
-          "generation_type": "suffix",
-          "required_level": 42,
-          "weight": 1000
-        },
-        {
-          "key": "ManaRegeneration5",
-          "text": "マナ自動回復レートが(50-59)%増加する",
-          "name": "陶酔の",
-          "tag": "ring",
-          "generation_type": "suffix",
-          "required_level": 55,
-          "weight": 1000
-        },
-        {
-          "key": "ManaRegeneration6",
-          "text": "マナ自動回復レートが(60-69)%増加する",
-          "name": "涅槃の",
-          "tag": "ring",
-          "generation_type": "suffix",
-          "required_level": 79,
-          "weight": 1000
-        }
-      ],
-      "StunDurationIncreasePercent": [
-        {
-          "key": "StunDuration1",
-          "text": "敵に対するスタンの持続時間が(11-15)%増加する",
-          "name": "衝撃の",
+          "key": "LifeGainedFromEnemyDeath3",
+          "text": "倒した敵1体ごとに(24-32)のライフを獲得する",
+          "name": "勝利の",
           "tag": "weapon",
           "generation_type": "suffix",
-          "required_level": 5,
-          "weight": 1000
+          "required_level": 40,
+          "weight": 500
         },
         {
-          "key": "StunDuration2",
-          "text": "敵に対するスタンの持続時間が(16-20)%増加する",
-          "name": "放心の",
+          "key": "LifeGainedFromEnemyDeath4",
+          "text": "倒した敵1体ごとに(35-44)のライフを獲得する",
+          "name": "征服の",
           "tag": "weapon",
           "generation_type": "suffix",
-          "required_level": 18,
-          "weight": 1000
+          "required_level": 52,
+          "weight": 500
         },
         {
-          "key": "StunDuration3",
-          "text": "敵に対するスタンの持続時間が(21-25)%増加する",
-          "name": "気絶の",
+          "key": "LifeGainedFromEnemyDeath5",
+          "text": "倒した敵1体ごとに(56-72)のライフを獲得する",
+          "name": "達成の",
           "tag": "weapon",
           "generation_type": "suffix",
-          "required_level": 30,
-          "weight": 1000
+          "required_level": 66,
+          "weight": 500
         },
         {
-          "key": "StunDuration4",
-          "text": "敵に対するスタンの持続時間が(26-30)%増加する",
-          "name": "叩きつけの",
+          "key": "LifeGainedFromEnemyDeath6",
+          "text": "倒した敵1体ごとに(84-110)のライフを獲得する",
+          "name": "名人技の",
           "tag": "weapon",
           "generation_type": "suffix",
-          "required_level": 44,
-          "weight": 1000
-        },
-        {
-          "key": "StunDuration5",
-          "text": "敵に対するスタンの持続時間が(31-35)%増加する",
-          "name": "よろめきの",
-          "tag": "weapon",
-          "generation_type": "suffix",
-          "required_level": 58,
-          "weight": 1000
-        }
-      ],
-      "SpellCriticalStrikeChance": [
-        {
-          "key": "SpellCriticalStrikeChance1",
-          "text": "スペルのクリティカル率が(10-19)%増加する",
-          "name": "脅威の",
-          "tag": "attack_dagger",
-          "generation_type": "suffix",
-          "required_level": 11,
-          "weight": 1000
-        },
-        {
-          "key": "SpellCriticalStrikeChance2",
-          "text": "スペルのクリティカル率が(20-39)%増加する",
-          "name": "致命的な",
-          "tag": "attack_dagger",
-          "generation_type": "suffix",
-          "required_level": 21,
-          "weight": 1000
-        },
-        {
-          "key": "SpellCriticalStrikeChance3",
-          "text": "スペルのクリティカル率が(40-59)%増加する",
-          "name": "災害の",
-          "tag": "attack_dagger",
-          "generation_type": "suffix",
-          "required_level": 28,
-          "weight": 1000
-        },
-        {
-          "key": "SpellCriticalStrikeChance4",
-          "text": "スペルのクリティカル率が(60-79)%増加する",
-          "name": "厄災の",
-          "tag": "attack_dagger",
-          "generation_type": "suffix",
-          "required_level": 41,
-          "weight": 1000
-        },
-        {
-          "key": "SpellCriticalStrikeChance5",
-          "text": "スペルのクリティカル率が(80-99)%増加する",
-          "name": "滅びの",
-          "tag": "attack_dagger",
-          "generation_type": "suffix",
-          "required_level": 59,
-          "weight": 1000
-        },
-        {
-          "key": "SpellCriticalStrikeChance6_",
-          "text": "スペルのクリティカル率が(100-109)%増加する",
-          "name": "帰無の",
-          "tag": "attack_dagger",
-          "generation_type": "suffix",
-          "required_level": 76,
-          "weight": 1000
-        }
-      ],
-      "ProjectileSpeed": [
-        {
-          "key": "ProjectileSpeed1",
-          "text": "投射物スピードが(10-17)%増加する",
-          "name": "投射の",
-          "tag": "ranged",
-          "generation_type": "suffix",
-          "required_level": 14,
-          "weight": 1000
-        },
-        {
-          "key": "ProjectileSpeed2",
-          "text": "投射物スピードが(18-25)%増加する",
-          "name": "飛行の",
-          "tag": "ranged",
-          "generation_type": "suffix",
-          "required_level": 27,
-          "weight": 1000
-        },
-        {
-          "key": "ProjectileSpeed3",
-          "text": "投射物スピードが(26-33)%増加する",
-          "name": "推進力の",
-          "tag": "ranged",
-          "generation_type": "suffix",
-          "required_level": 41,
-          "weight": 1000
-        },
-        {
-          "key": "ProjectileSpeed4",
-          "text": "投射物スピードが(34-41)%増加する",
-          "name": "西風の",
-          "tag": "ranged",
-          "generation_type": "suffix",
-          "required_level": 55,
-          "weight": 1000
-        },
-        {
-          "key": "ProjectileSpeed5",
-          "text": "投射物スピードが(42-46)%増加する",
-          "name": "疾風の",
-          "tag": "ranged",
-          "generation_type": "suffix",
-          "required_level": 82,
-          "weight": 1000
+          "required_level": 81,
+          "weight": 500
         }
       ],
       "LifeGainPerTargetLocal": [
@@ -2010,116 +2278,33 @@
           "weight": 500
         }
       ],
-      "FireDamagePercentage": [
+      "LifeLeechLocalPermyriad": [
         {
-          "key": "FireDamagePercent1",
-          "text": "火ダメージが(10-12)%増加する",
-          "name": "残り火の",
-          "tag": "wand",
+          "key": "LifeLeechPermyriadLocalSuffix1",
+          "text": "物理アタックダメージの(2-2.4)%をライフとしてリーチする",
+          "name": "コバンザメの",
+          "tag": "weapon",
           "generation_type": "suffix",
-          "required_level": 8,
+          "required_level": 20,
           "weight": 1000
         },
         {
-          "key": "FireDamagePercent2",
-          "text": "火ダメージが(13-15)%増加する",
-          "name": "石炭の",
-          "tag": "wand",
+          "key": "LifeLeechPermyriadLocalSuffix2",
+          "text": "物理アタックダメージの(2.6-3.2)%をライフとしてリーチする",
+          "name": "ヤツメウナギの",
+          "tag": "weapon",
           "generation_type": "suffix",
-          "required_level": 22,
-          "weight": 1000
+          "required_level": 45,
+          "weight": 500
         },
         {
-          "key": "FireDamagePercent3",
-          "text": "火ダメージが(16-18)%増加する",
-          "name": "消し炭の",
-          "tag": "wand",
+          "key": "LifeLeechPermyriadLocalSuffix3",
+          "text": "物理アタックダメージの(3.5-4.5)%をライフとしてリーチする",
+          "name": "吸血鬼の",
+          "tag": "weapon",
           "generation_type": "suffix",
-          "required_level": 36,
-          "weight": 1000
-        },
-        {
-          "key": "FireDamagePercent4",
-          "text": "火ダメージが(19-22)%増加する",
-          "name": "炎の",
-          "tag": "wand",
-          "generation_type": "suffix",
-          "required_level": 50,
-          "weight": 1000
-        },
-        {
-          "key": "FireDamagePercent5",
-          "text": "火ダメージが(23-26)%増加する",
-          "name": "焼棄の",
-          "tag": "wand",
-          "generation_type": "suffix",
-          "required_level": 64,
-          "weight": 1000
-        },
-        {
-          "key": "FireDamagePercent6",
-          "text": "火ダメージが(27-30)%増加する",
-          "name": "灰の",
-          "tag": "wand",
-          "generation_type": "suffix",
-          "required_level": 76,
-          "weight": 1000
-        }
-      ],
-      "ColdDamagePercentage": [
-        {
-          "key": "ColdDamagePercent1",
-          "text": "冷気ダメージが(10-12)%増加する",
-          "name": "雪の",
-          "tag": "wand",
-          "generation_type": "suffix",
-          "required_level": 12,
-          "weight": 1000
-        },
-        {
-          "key": "ColdDamagePercent2",
-          "text": "冷気ダメージが(13-15)%増加する",
-          "name": "霙の",
-          "tag": "wand",
-          "generation_type": "suffix",
-          "required_level": 24,
-          "weight": 1000
-        },
-        {
-          "key": "ColdDamagePercent3",
-          "text": "冷気ダメージが(16-18)%増加する",
-          "name": "氷雪の",
-          "tag": "wand",
-          "generation_type": "suffix",
-          "required_level": 36,
-          "weight": 1000
-        },
-        {
-          "key": "ColdDamagePercent4",
-          "text": "冷気ダメージが(19-22)%増加する",
-          "name": "霧氷の",
-          "tag": "wand",
-          "generation_type": "suffix",
-          "required_level": 50,
-          "weight": 1000
-        },
-        {
-          "key": "ColdDamagePercent5",
-          "text": "冷気ダメージが(23-26)%増加する",
-          "name": "氷原の",
-          "tag": "wand",
-          "generation_type": "suffix",
-          "required_level": 64,
-          "weight": 1000
-        },
-        {
-          "key": "ColdDamagePercent6",
-          "text": "冷気ダメージが(27-30)%増加する",
-          "name": "氷結の",
-          "tag": "wand",
-          "generation_type": "suffix",
-          "required_level": 76,
-          "weight": 1000
+          "required_level": 70,
+          "weight": 250
         }
       ],
       "LightningDamagePercentage": [
@@ -2127,110 +2312,298 @@
           "key": "LightningDamagePercent1",
           "text": "雷ダメージが(10-12)%増加する",
           "name": "電光の",
-          "tag": "wand",
+          "tag": "ring",
           "generation_type": "suffix",
           "required_level": 10,
-          "weight": 1000
+          "weight": 500
         },
         {
           "key": "LightningDamagePercent2",
           "text": "雷ダメージが(13-15)%増加する",
           "name": "静電気の",
-          "tag": "wand",
+          "tag": "ring",
           "generation_type": "suffix",
           "required_level": 23,
-          "weight": 1000
+          "weight": 500
         },
         {
           "key": "LightningDamagePercent3",
           "text": "雷ダメージが(16-18)%増加する",
           "name": "電気の",
-          "tag": "wand",
+          "tag": "ring",
           "generation_type": "suffix",
           "required_level": 36,
-          "weight": 1000
+          "weight": 500
         },
         {
           "key": "LightningDamagePercent4",
           "text": "雷ダメージが(19-22)%増加する",
           "name": "電圧の",
-          "tag": "wand",
+          "tag": "ring",
           "generation_type": "suffix",
           "required_level": 50,
-          "weight": 1000
+          "weight": 500
         },
         {
           "key": "LightningDamagePercent5",
           "text": "雷ダメージが(23-26)%増加する",
           "name": "放電の",
-          "tag": "wand",
+          "tag": "amulet",
           "generation_type": "suffix",
           "required_level": 64,
-          "weight": 1000
+          "weight": 500
         },
         {
           "key": "LightningDamagePercent6",
           "text": "雷ダメージが(27-30)%増加する",
           "name": "電弧の",
-          "tag": "wand",
+          "tag": "default",
           "generation_type": "suffix",
           "required_level": 76,
-          "weight": 1000
+          "weight": 0
         }
       ],
-      "LifeGainedFromEnemyDeath": [
+      "LocalAccuracyRating": [
         {
-          "key": "LifeGainedFromEnemyDeath1",
-          "text": "倒した敵1体ごとに(7-10)のライフを獲得する",
-          "name": "成功の",
+          "key": "LocalIncreasedAccuracyNew1",
+          "text": "命中力 +(80-130)",
+          "name": "着実さの",
           "tag": "weapon",
           "generation_type": "suffix",
           "required_level": 1,
-          "weight": 500
+          "weight": 1000
         },
         {
-          "key": "LifeGainedFromEnemyDeath2",
-          "text": "倒した敵1体ごとに(12-18)のライフを獲得する",
-          "name": "戦勝の",
+          "key": "LocalIncreasedAccuracyNew2",
+          "text": "命中力 +(131-215)",
+          "name": "精密さの",
           "tag": "weapon",
           "generation_type": "suffix",
-          "required_level": 23,
-          "weight": 500
+          "required_level": 20,
+          "weight": 1000
         },
         {
-          "key": "LifeGainedFromEnemyDeath3",
-          "text": "倒した敵1体ごとに(24-32)のライフを獲得する",
-          "name": "勝利の",
+          "key": "LocalIncreasedAccuracyNew3",
+          "text": "命中力 +(216-325)",
+          "name": "狙撃手の",
           "tag": "weapon",
           "generation_type": "suffix",
           "required_level": 40,
+          "weight": 1000
+        },
+        {
+          "key": "LocalIncreasedAccuracyNew4",
+          "text": "命中力 +(326-455)",
+          "name": "射手の",
+          "tag": "weapon",
+          "generation_type": "suffix",
+          "required_level": 60,
+          "weight": 1000
+        },
+        {
+          "key": "LocalIncreasedAccuracyNew5",
+          "text": "命中力 +(456-624)",
+          "name": "レンジャーの",
+          "tag": "weapon",
+          "generation_type": "suffix",
+          "required_level": 75,
+          "weight": 1000
+        },
+        {
+          "key": "LocalIncreasedAccuracyNew6",
+          "text": "命中力 +(625-780)",
+          "name": "ライオンアイの",
+          "tag": "wand",
+          "generation_type": "suffix",
+          "required_level": 85,
+          "weight": 1000
+        }
+      ],
+      "LocalAttributeRequirements": [
+        {
+          "key": "ReducedLocalAttributeRequirements1",
+          "text": "要求能力値が18%減少する",
+          "name": "相応しき者の",
+          "tag": "weapon",
+          "generation_type": "suffix",
+          "required_level": 36,
+          "weight": 1000
+        },
+        {
+          "key": "ReducedLocalAttributeRequirements2",
+          "text": "要求能力値が32%減少する",
+          "name": "秀才の",
+          "tag": "weapon",
+          "generation_type": "suffix",
+          "required_level": 60,
+          "weight": 1000
+        }
+      ],
+      "LocalCriticalStrikeChance": [
+        {
+          "key": "LocalCriticalStrikeChance1",
+          "text": "クリティカル率が(10-14)%増加する",
+          "name": "突き刺しの",
+          "tag": "weapon",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 1000
+        },
+        {
+          "key": "LocalCriticalStrikeChance2",
+          "text": "クリティカル率が(15-19)%増加する",
+          "name": "穿刺の",
+          "tag": "weapon",
+          "generation_type": "suffix",
+          "required_level": 20,
+          "weight": 1000
+        },
+        {
+          "key": "LocalCriticalStrikeChance3",
+          "text": "クリティカル率が(20-24)%増加する",
+          "name": "貫通の",
+          "tag": "weapon",
+          "generation_type": "suffix",
+          "required_level": 30,
+          "weight": 1000
+        },
+        {
+          "key": "LocalCriticalStrikeChance4",
+          "text": "クリティカル率が(25-29)%増加する",
+          "name": "刺突の",
+          "tag": "weapon",
+          "generation_type": "suffix",
+          "required_level": 44,
+          "weight": 1000
+        },
+        {
+          "key": "LocalCriticalStrikeChance5",
+          "text": "クリティカル率が(30-34)%増加する",
+          "name": "穿通の",
+          "tag": "weapon",
+          "generation_type": "suffix",
+          "required_level": 59,
+          "weight": 1000
+        },
+        {
+          "key": "LocalCriticalStrikeChance6",
+          "text": "クリティカル率が(35-38)%増加する",
+          "name": "切開の",
+          "tag": "weapon",
+          "generation_type": "suffix",
+          "required_level": 73,
+          "weight": 1000
+        }
+      ],
+      "LocalIncreasedAttackSpeed": [
+        {
+          "key": "LocalIncreasedAttackSpeed1",
+          "text": "アタックスピードが(5-7)%増加する",
+          "name": "技術の",
+          "tag": "weapon",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 1000
+        },
+        {
+          "key": "LocalIncreasedAttackSpeed2Royale____",
+          "text": "アタックスピードが(15-25)%増加する",
+          "name": "手軽さの",
+          "tag": "weapon",
+          "generation_type": "suffix",
+          "required_level": 4,
+          "weight": 1000
+        },
+        {
+          "key": "LocalIncreasedAttackSpeed2",
+          "text": "アタックスピードが(8-10)%増加する",
+          "name": "容易さの",
+          "tag": "weapon",
+          "generation_type": "suffix",
+          "required_level": 11,
+          "weight": 1000
+        },
+        {
+          "key": "LocalIncreasedAttackSpeed3",
+          "text": "アタックスピードが(11-13)%増加する",
+          "name": "熟達の",
+          "tag": "weapon",
+          "generation_type": "suffix",
+          "required_level": 22,
+          "weight": 1000
+        },
+        {
+          "key": "LocalIncreasedAttackSpeed4",
+          "text": "アタックスピードが(14-16)%増加する",
+          "name": "高名の",
+          "tag": "weapon",
+          "generation_type": "suffix",
+          "required_level": 30,
+          "weight": 1000
+        },
+        {
+          "key": "LocalIncreasedAttackSpeed5",
+          "text": "アタックスピードが(17-19)%増加する",
+          "name": "絶賛の",
+          "tag": "weapon",
+          "generation_type": "suffix",
+          "required_level": 37,
+          "weight": 1000
+        },
+        {
+          "key": "LocalIncreasedAttackSpeed6",
+          "text": "アタックスピードが(20-22)%増加する",
+          "name": "名声の",
+          "tag": "weapon",
+          "generation_type": "suffix",
+          "required_level": 45,
+          "weight": 1000
+        },
+        {
+          "key": "LocalIncreasedAttackSpeed7",
+          "text": "アタックスピードが(23-25)%増加する",
+          "name": "汚名の",
+          "tag": "weapon",
+          "generation_type": "suffix",
+          "required_level": 60,
+          "weight": 1000
+        },
+        {
+          "key": "LocalIncreasedAttackSpeed8",
+          "text": "アタックスピードが(26-27)%増加する",
+          "name": "祝賀の",
+          "tag": "weapon",
+          "generation_type": "suffix",
+          "required_level": 77,
+          "weight": 1000
+        }
+      ],
+      "LocalLightRadiusAndAccuracyPercent": [
+        {
+          "key": "LocalLightRadiusAndAccuracyNew1_",
+          "text": "光半径が5%増加する\nグローバル命中力が(9-11)%増加する",
+          "name": "輝きの",
+          "tag": "weapon",
+          "generation_type": "suffix",
+          "required_level": 8,
           "weight": 500
         },
         {
-          "key": "LifeGainedFromEnemyDeath4",
-          "text": "倒した敵1体ごとに(35-44)のライフを獲得する",
-          "name": "征服の",
+          "key": "LocalLightRadiusAndAccuracyNew2",
+          "text": "光半径が10%増加する\nグローバル命中力が(12-15)%増加する",
+          "name": "光の",
           "tag": "weapon",
           "generation_type": "suffix",
-          "required_level": 52,
+          "required_level": 15,
           "weight": 500
         },
         {
-          "key": "LifeGainedFromEnemyDeath5",
-          "text": "倒した敵1体ごとに(56-72)のライフを獲得する",
-          "name": "達成の",
+          "key": "LocalLightRadiusAndAccuracy3",
+          "text": "光半径が15%増加する\nグローバル命中力が(16-20)%増加する",
+          "name": "光輝の",
           "tag": "weapon",
           "generation_type": "suffix",
-          "required_level": 66,
-          "weight": 500
-        },
-        {
-          "key": "LifeGainedFromEnemyDeath6",
-          "text": "倒した敵1体ごとに(84-110)のライフを獲得する",
-          "name": "名人技の",
-          "tag": "weapon",
-          "generation_type": "suffix",
-          "required_level": 81,
+          "required_level": 30,
           "weight": 500
         }
       ],
@@ -2290,234 +2663,6 @@
           "weight": 500
         }
       ],
-      "LocalCriticalStrikeChance": [
-        {
-          "key": "LocalCriticalStrikeChance1",
-          "text": "クリティカル率が(10-14)%増加する",
-          "name": "突き刺しの",
-          "tag": "weapon",
-          "generation_type": "suffix",
-          "required_level": 1,
-          "weight": 1000
-        },
-        {
-          "key": "LocalCriticalStrikeChance2",
-          "text": "クリティカル率が(15-19)%増加する",
-          "name": "穿刺の",
-          "tag": "weapon",
-          "generation_type": "suffix",
-          "required_level": 20,
-          "weight": 1000
-        },
-        {
-          "key": "LocalCriticalStrikeChance3",
-          "text": "クリティカル率が(20-24)%増加する",
-          "name": "貫通の",
-          "tag": "weapon",
-          "generation_type": "suffix",
-          "required_level": 30,
-          "weight": 1000
-        },
-        {
-          "key": "LocalCriticalStrikeChance4",
-          "text": "クリティカル率が(25-29)%増加する",
-          "name": "刺突の",
-          "tag": "weapon",
-          "generation_type": "suffix",
-          "required_level": 44,
-          "weight": 1000
-        },
-        {
-          "key": "LocalCriticalStrikeChance5",
-          "text": "クリティカル率が(30-34)%増加する",
-          "name": "穿通の",
-          "tag": "weapon",
-          "generation_type": "suffix",
-          "required_level": 59,
-          "weight": 1000
-        },
-        {
-          "key": "LocalCriticalStrikeChance6",
-          "text": "クリティカル率が(35-38)%増加する",
-          "name": "切開の",
-          "tag": "weapon",
-          "generation_type": "suffix",
-          "required_level": 73,
-          "weight": 1000
-        }
-      ],
-      "CriticalStrikeMultiplier": [
-        {
-          "key": "LocalCriticalMultiplier1",
-          "text": "グローバルクリティカルダメージ倍率 +(10-14)%",
-          "name": "痛憤の",
-          "tag": "weapon",
-          "generation_type": "suffix",
-          "required_level": 8,
-          "weight": 1000
-        },
-        {
-          "key": "LocalCriticalMultiplier2",
-          "text": "グローバルクリティカルダメージ倍率 +(15-19)%",
-          "name": "怒りの",
-          "tag": "weapon",
-          "generation_type": "suffix",
-          "required_level": 21,
-          "weight": 1000
-        },
-        {
-          "key": "LocalCriticalMultiplier3",
-          "text": "グローバルクリティカルダメージ倍率 +(20-24)%",
-          "name": "激怒の",
-          "tag": "weapon",
-          "generation_type": "suffix",
-          "required_level": 30,
-          "weight": 1000
-        },
-        {
-          "key": "LocalCriticalMultiplier4",
-          "text": "グローバルクリティカルダメージ倍率 +(25-29)%",
-          "name": "憤激の",
-          "tag": "weapon",
-          "generation_type": "suffix",
-          "required_level": 44,
-          "weight": 1000
-        },
-        {
-          "key": "LocalCriticalMultiplier5",
-          "text": "グローバルクリティカルダメージ倍率 +(30-34)%",
-          "name": "凶暴性の",
-          "tag": "weapon",
-          "generation_type": "suffix",
-          "required_level": 59,
-          "weight": 1000
-        },
-        {
-          "key": "LocalCriticalMultiplier6",
-          "text": "グローバルクリティカルダメージ倍率 +(35-38)%",
-          "name": "破壊の",
-          "tag": "weapon",
-          "generation_type": "suffix",
-          "required_level": 73,
-          "weight": 1000
-        }
-      ],
-      "LocalAccuracyRating": [
-        {
-          "key": "LocalIncreasedAccuracyNew1",
-          "text": "命中力 +(80-130)",
-          "name": "着実さの",
-          "tag": "weapon",
-          "generation_type": "suffix",
-          "required_level": 1,
-          "weight": 1000
-        },
-        {
-          "key": "LocalIncreasedAccuracyNew2",
-          "text": "命中力 +(131-215)",
-          "name": "精密さの",
-          "tag": "weapon",
-          "generation_type": "suffix",
-          "required_level": 20,
-          "weight": 1000
-        },
-        {
-          "key": "LocalIncreasedAccuracyNew3",
-          "text": "命中力 +(216-325)",
-          "name": "狙撃手の",
-          "tag": "weapon",
-          "generation_type": "suffix",
-          "required_level": 40,
-          "weight": 1000
-        },
-        {
-          "key": "LocalIncreasedAccuracyNew4",
-          "text": "命中力 +(326-455)",
-          "name": "射手の",
-          "tag": "weapon",
-          "generation_type": "suffix",
-          "required_level": 60,
-          "weight": 1000
-        },
-        {
-          "key": "LocalIncreasedAccuracyNew5",
-          "text": "命中力 +(456-624)",
-          "name": "レンジャーの",
-          "tag": "weapon",
-          "generation_type": "suffix",
-          "required_level": 75,
-          "weight": 1000
-        },
-        {
-          "key": "LocalIncreasedAccuracyNew6",
-          "text": "命中力 +(625-780)",
-          "name": "ライオンアイの",
-          "tag": "bow",
-          "generation_type": "suffix",
-          "required_level": 85,
-          "weight": 1000
-        }
-      ],
-      "LocalAttributeRequirements": [
-        {
-          "key": "ReducedLocalAttributeRequirements1",
-          "text": "要求能力値が18%減少する",
-          "name": "相応しき者の",
-          "tag": "weapon",
-          "generation_type": "suffix",
-          "required_level": 36,
-          "weight": 1000
-        },
-        {
-          "key": "ReducedLocalAttributeRequirements2",
-          "text": "要求能力値が32%減少する",
-          "name": "秀才の",
-          "tag": "weapon",
-          "generation_type": "suffix",
-          "required_level": 60,
-          "weight": 1000
-        }
-      ],
-      "LocalLightRadiusAndAccuracyPercent": [
-        {
-          "key": "LocalLightRadiusAndAccuracy3",
-          "text": "光半径が15%増加する\nグローバル命中力が(16-20)%増加する",
-          "name": "光輝の",
-          "tag": "weapon",
-          "generation_type": "suffix",
-          "required_level": 30,
-          "weight": 500
-        },
-        {
-          "key": "LocalLightRadiusAndAccuracyNew1_",
-          "text": "光半径が5%増加する\nグローバル命中力が(9-11)%増加する",
-          "name": "輝きの",
-          "tag": "weapon",
-          "generation_type": "suffix",
-          "required_level": 8,
-          "weight": 500
-        },
-        {
-          "key": "LocalLightRadiusAndAccuracyNew2",
-          "text": "光半径が10%増加する\nグローバル命中力が(12-15)%増加する",
-          "name": "光の",
-          "tag": "weapon",
-          "generation_type": "suffix",
-          "required_level": 15,
-          "weight": 500
-        }
-      ],
-      "LifeLeechLocalPermyriad": [
-        {
-          "key": "LifeLeechPermyriadLocalSuffix1",
-          "text": "物理アタックダメージの(2-2.4)%をライフとしてリーチする",
-          "name": "コバンザメの",
-          "tag": "weapon",
-          "generation_type": "suffix",
-          "required_level": 20,
-          "weight": 1000
-        }
-      ],
       "ManaLeechLocalPermyriad": [
         {
           "key": "ManaLeechPermyriadLocalSuffix1",
@@ -2529,279 +2674,304 @@
           "weight": 1000
         }
       ],
-      "ChanceToIgnite": [
+      "ManaRegeneration": [
         {
-          "key": "ChanceToIgnite1",
-          "text": "(18-24)%の確率で敵を発火させる",
-          "name": "発火の",
-          "tag": "sceptre",
+          "key": "ManaRegeneration1",
+          "text": "マナ自動回復レートが(10-19)%増加する",
+          "name": "興奮の",
+          "tag": "wand",
           "generation_type": "suffix",
-          "required_level": 15,
+          "required_level": 2,
           "weight": 1000
         },
         {
-          "key": "ChanceToIgnite2",
-          "text": "(25-30)%の確率で敵を発火させる",
-          "name": "点火の",
-          "tag": "sceptre",
+          "key": "ManaRegeneration2",
+          "text": "マナ自動回復レートが(20-29)%増加する",
+          "name": "歓喜の",
+          "tag": "wand",
           "generation_type": "suffix",
-          "required_level": 45,
+          "required_level": 18,
           "weight": 1000
         },
         {
-          "key": "ChanceToIgnite3_",
-          "text": "(31-40)%の確率で敵を発火させる",
-          "name": "着火の",
-          "tag": "sceptre",
+          "key": "ManaRegeneration3",
+          "text": "マナ自動回復レートが(30-39)%増加する",
+          "name": "高揚の",
+          "tag": "wand",
           "generation_type": "suffix",
-          "required_level": 75,
-          "weight": 500
-        }
-      ],
-      "ChanceToFreeze": [
-        {
-          "key": "ChanceToFreeze1",
-          "text": "(18-24)%の確率で敵を凍結させる",
-          "name": "凍結の",
-          "tag": "sceptre",
-          "generation_type": "suffix",
-          "required_level": 15,
+          "required_level": 29,
           "weight": 1000
         },
         {
-          "key": "ChanceToFreeze2",
-          "text": "(25-30)%の確率で敵を凍結させる",
-          "name": "荒涼感の",
-          "tag": "sceptre",
+          "key": "ManaRegeneration4",
+          "text": "マナ自動回復レートが(40-49)%増加する",
+          "name": "至福の",
+          "tag": "wand",
           "generation_type": "suffix",
-          "required_level": 45,
+          "required_level": 42,
           "weight": 1000
         },
         {
-          "key": "ChanceToFreeze3",
-          "text": "(31-40)%の確率で敵を凍結させる",
-          "name": "極北の",
-          "tag": "sceptre",
-          "generation_type": "suffix",
-          "required_level": 75,
-          "weight": 500
-        }
-      ],
-      "ChanceToShock": [
-        {
-          "key": "ChanceToShock1",
-          "text": "(18-24)%の確率で敵を感電させる",
-          "name": "感電の",
-          "tag": "sceptre",
-          "generation_type": "suffix",
-          "required_level": 15,
-          "weight": 1000
-        },
-        {
-          "key": "ChanceToShock2__",
-          "text": "(25-30)%の確率で敵を感電させる",
-          "name": "通電の",
-          "tag": "sceptre",
-          "generation_type": "suffix",
-          "required_level": 45,
-          "weight": 1000
-        },
-        {
-          "key": "ChanceToShock3",
-          "text": "(31-40)%の確率で敵を感電させる",
-          "name": "電殺の",
-          "tag": "sceptre",
-          "generation_type": "suffix",
-          "required_level": 75,
-          "weight": 500
-        }
-      ],
-      "GlobalDamageOverTimeMultiplier": [
-        {
-          "key": "GlobalDamageOverTimeMultiplier1h1",
-          "text": "継続ダメージ倍率 +(7-11)%",
-          "name": "辛辣さの",
-          "tag": "bow",
-          "generation_type": "suffix",
-          "required_level": 44,
-          "weight": 300
-        },
-        {
-          "key": "GlobalDamageOverTimeMultiplier1h2_",
-          "text": "継続ダメージ倍率 +(12-15)%",
-          "name": "消散の",
-          "tag": "bow",
+          "key": "ManaRegeneration5",
+          "text": "マナ自動回復レートが(50-59)%増加する",
+          "name": "陶酔の",
+          "tag": "wand",
           "generation_type": "suffix",
           "required_level": 55,
-          "weight": 300
+          "weight": 1000
         },
         {
-          "key": "GlobalDamageOverTimeMultiplier1h3",
-          "text": "継続ダメージ倍率 +(16-19)%",
-          "name": "液化の",
-          "tag": "bow",
+          "key": "ManaRegeneration6",
+          "text": "マナ自動回復レートが(60-69)%増加する",
+          "name": "涅槃の",
+          "tag": "wand",
           "generation_type": "suffix",
-          "required_level": 68,
-          "weight": 300
+          "required_level": 79,
+          "weight": 1000
+        }
+      ],
+      "MinionAttackSpeedAndCastSpeed": [
+        {
+          "key": "MinionAttackAndCastSpeed1",
+          "text": "ミニオンのアタックスピードおよびキャストスピードが(5-7)%増加する",
+          "name": "奮起の",
+          "tag": "weapon_can_roll_minion_modifiers",
+          "generation_type": "suffix",
+          "required_level": 2,
+          "weight": 2000
         },
         {
-          "key": "GlobalDamageOverTimeMultiplier1h4",
-          "text": "継続ダメージ倍率 +(20-23)%",
-          "name": "融解の",
-          "tag": "bow",
+          "key": "MinionAttackAndCastSpeed2",
+          "text": "ミニオンのアタックスピードおよびキャストスピードが(8-10)%増加する",
+          "name": "脅迫の",
+          "tag": "weapon_can_roll_minion_modifiers",
+          "generation_type": "suffix",
+          "required_level": 15,
+          "weight": 2000
+        },
+        {
+          "key": "MinionAttackAndCastSpeed3_",
+          "text": "ミニオンのアタックスピードおよびキャストスピードが(11-13)%増加する",
+          "name": "刺激の",
+          "tag": "weapon_can_roll_minion_modifiers",
+          "generation_type": "suffix",
+          "required_level": 30,
+          "weight": 2000
+        },
+        {
+          "key": "MinionAttackAndCastSpeed4",
+          "text": "ミニオンのアタックスピードおよびキャストスピードが(14-16)%増加する",
+          "name": "煽りの",
+          "tag": "weapon_can_roll_minion_modifiers",
+          "generation_type": "suffix",
+          "required_level": 40,
+          "weight": 2000
+        },
+        {
+          "key": "MinionAttackAndCastSpeed5",
+          "text": "ミニオンのアタックスピードおよびキャストスピードが(17-19)%増加する",
+          "name": "扇動の",
+          "tag": "weapon_can_roll_minion_modifiers",
+          "generation_type": "suffix",
+          "required_level": 55,
+          "weight": 2000
+        },
+        {
+          "key": "MinionAttackAndCastSpeed6__",
+          "text": "ミニオンのアタックスピードおよびキャストスピードが(20-22)%増加する",
+          "name": "駆り立ての",
+          "tag": "weapon_can_roll_minion_modifiers",
+          "generation_type": "suffix",
+          "required_level": 72,
+          "weight": 1000
+        },
+        {
+          "key": "MinionAttackAndCastSpeed7",
+          "text": "ミニオンのアタックスピードおよびキャストスピードが(23-25)%増加する",
+          "name": "激昂の",
+          "tag": "weapon_can_roll_minion_modifiers",
+          "generation_type": "suffix",
+          "required_level": 83,
+          "weight": 500
+        }
+      ],
+      "MinionCriticalStrikeChanceIncrease": [
+        {
+          "key": "MinionCriticalStrikeChanceIncrease1",
+          "text": "ミニオンのクリティカル率が(10-19)%増加する",
+          "name": "良運の",
+          "tag": "weapon_can_roll_minion_modifiers",
+          "generation_type": "suffix",
+          "required_level": 11,
+          "weight": 2000
+        },
+        {
+          "key": "MinionCriticalStrikeChanceIncrease2",
+          "text": "ミニオンのクリティカル率が(20-39)%増加する",
+          "name": "幸運の",
+          "tag": "weapon_can_roll_minion_modifiers",
+          "generation_type": "suffix",
+          "required_level": 21,
+          "weight": 2000
+        },
+        {
+          "key": "MinionCriticalStrikeChanceIncrease3",
+          "text": "ミニオンのクリティカル率が(40-59)%増加する",
+          "name": "天意の",
+          "tag": "weapon_can_roll_minion_modifiers",
+          "generation_type": "suffix",
+          "required_level": 28,
+          "weight": 2000
+        },
+        {
+          "key": "MinionCriticalStrikeChanceIncrease4",
+          "text": "ミニオンのクリティカル率が(60-79)%増加する",
+          "name": "偶然の",
+          "tag": "weapon_can_roll_minion_modifiers",
+          "generation_type": "suffix",
+          "required_level": 41,
+          "weight": 2000
+        },
+        {
+          "key": "MinionCriticalStrikeChanceIncrease5",
+          "text": "ミニオンのクリティカル率が(80-99)%増加する",
+          "name": "決定論の",
+          "tag": "weapon_can_roll_minion_modifiers",
+          "generation_type": "suffix",
+          "required_level": 59,
+          "weight": 2000
+        },
+        {
+          "key": "MinionCriticalStrikeChanceIncrease6",
+          "text": "ミニオンのクリティカル率が(100-109)%増加する",
+          "name": "運命の",
+          "tag": "weapon_can_roll_minion_modifiers",
           "generation_type": "suffix",
           "required_level": 76,
-          "weight": 300
-        },
-        {
-          "key": "GlobalDamageOverTimeMultiplier1h5",
-          "text": "継続ダメージ倍率 +(24-26)%",
-          "name": "溶解の",
-          "tag": "bow",
-          "generation_type": "suffix",
-          "required_level": 82,
-          "weight": 300
+          "weight": 2000
         }
       ],
-      "ChaosDamageOverTimeMultiplier": [
+      "MinionCriticalStrikeMultiplier": [
         {
-          "key": "ChaosDamageOverTimeMultiplier1_",
-          "text": "混沌継続ダメージ倍率 +(14-18)%",
-          "name": "衰微の",
-          "tag": "wand",
+          "key": "MinionCriticalStrikeMultiplier1",
+          "text": "ミニオンのクリティカルダメージ倍率 +(10-14)%",
+          "name": "襲撃の",
+          "tag": "weapon_can_roll_minion_modifiers",
           "generation_type": "suffix",
-          "required_level": 4,
-          "weight": 400
+          "required_level": 8,
+          "weight": 2000
         },
         {
-          "key": "ChaosDamageOverTimeMultiplier2",
-          "text": "混沌継続ダメージ倍率 +(19-23)%",
-          "name": "衰萎の",
-          "tag": "wand",
+          "key": "MinionCriticalStrikeMultiplier2",
+          "text": "ミニオンのクリティカルダメージ倍率 +(15-19)%",
+          "name": "有象無象の",
+          "tag": "weapon_can_roll_minion_modifiers",
           "generation_type": "suffix",
-          "required_level": 12,
-          "weight": 300
+          "required_level": 21,
+          "weight": 2000
         },
         {
-          "key": "ChaosDamageOverTimeMultiplier3",
-          "text": "混沌継続ダメージ倍率 +(24-28)%",
-          "name": "衰退の",
-          "tag": "wand",
+          "key": "MinionCriticalStrikeMultiplier3",
+          "text": "ミニオンのクリティカルダメージ倍率 +(20-24)%",
+          "name": "群衆の",
+          "tag": "weapon_can_roll_minion_modifiers",
           "generation_type": "suffix",
-          "required_level": 36,
-          "weight": 200
+          "required_level": 30,
+          "weight": 2000
         },
         {
-          "key": "ChaosDamageOverTimeMultiplier4",
-          "text": "混沌継続ダメージ倍率 +(29-33)%",
-          "name": "萎縮性の",
-          "tag": "wand",
+          "key": "MinionCriticalStrikeMultiplier4",
+          "text": "ミニオンのクリティカルダメージ倍率 +(25-29)%",
+          "name": "群れの",
+          "tag": "weapon_can_roll_minion_modifiers",
           "generation_type": "suffix",
-          "required_level": 64,
-          "weight": 100
+          "required_level": 44,
+          "weight": 2000
         },
         {
-          "key": "ChaosDamageOverTimeMultiplier5",
-          "text": "混沌継続ダメージ倍率 +(34-38)%",
-          "name": "分解の",
-          "tag": "wand",
+          "key": "MinionCriticalStrikeMultiplier5",
+          "text": "ミニオンのクリティカルダメージ倍率 +(30-34)%",
+          "name": "侵略の",
+          "tag": "weapon_can_roll_minion_modifiers",
           "generation_type": "suffix",
-          "required_level": 78,
-          "weight": 50
+          "required_level": 59,
+          "weight": 2000
+        },
+        {
+          "key": "MinionCriticalStrikeMultiplier6",
+          "text": "ミニオンのクリティカルダメージ倍率 +(35-38)%",
+          "name": "軍団の",
+          "tag": "weapon_can_roll_minion_modifiers",
+          "generation_type": "suffix",
+          "required_level": 73,
+          "weight": 2000
         }
       ],
-      "ColdDamageOverTimeMultiplier": [
+      "MinionFlatAccuracyRating": [
         {
-          "key": "ColdDamageOverTimeMultiplier1",
-          "text": "冷気継続ダメージ倍率 +(14-18)%",
-          "name": "悪天候の",
-          "tag": "attack_dagger",
+          "key": "MinionAccuracyRatingWeapon1_",
+          "text": "ミニオンの命中力 +(80-130)",
+          "name": "講師の",
+          "tag": "default",
           "generation_type": "suffix",
-          "required_level": 4,
-          "weight": 300
+          "required_level": 1,
+          "weight": 0
         },
         {
-          "key": "ColdDamageOverTimeMultiplier2",
-          "text": "冷気継続ダメージ倍率 +(19-23)%",
-          "name": "寒気の",
-          "tag": "attack_dagger",
+          "key": "MinionAccuracyRatingWeapon2",
+          "text": "ミニオンの命中力 +(131-215)",
+          "name": "教師の",
+          "tag": "default",
           "generation_type": "suffix",
-          "required_level": 12,
-          "weight": 220
+          "required_level": 20,
+          "weight": 0
         },
         {
-          "key": "ColdDamageOverTimeMultiplier3",
-          "text": "冷気継続ダメージ倍率 +(24-28)%",
-          "name": "北風の",
-          "tag": "attack_dagger",
+          "key": "MinionAccuracyRatingWeapon3",
+          "text": "ミニオンの命中力 +(216-325)",
+          "name": "司令官の",
+          "tag": "default",
           "generation_type": "suffix",
-          "required_level": 36,
-          "weight": 140
+          "required_level": 40,
+          "weight": 0
         },
         {
-          "key": "ColdDamageOverTimeMultiplier4",
-          "text": "冷気継続ダメージ倍率 +(29-33)%",
-          "name": "冷寒なる者の",
-          "tag": "attack_dagger",
+          "key": "MinionAccuracyRatingWeapon4",
+          "text": "ミニオンの命中力 +(326-455)",
+          "name": "有力者の",
+          "tag": "default",
           "generation_type": "suffix",
-          "required_level": 64,
-          "weight": 70
+          "required_level": 60,
+          "weight": 0
         },
         {
-          "key": "ColdDamageOverTimeMultiplier5",
-          "text": "冷気継続ダメージ倍率 +(34-38)%",
-          "name": "心臓麻痺の",
-          "tag": "attack_dagger",
+          "key": "MinionAccuracyRatingWeapon5",
+          "text": "ミニオンの命中力 +(456-545)",
+          "name": "統治者の",
+          "tag": "default",
           "generation_type": "suffix",
-          "required_level": 78,
-          "weight": 35
+          "required_level": 75,
+          "weight": 0
+        },
+        {
+          "key": "MinionAccuracyRatingWeapon6",
+          "text": "ミニオンの命中力 +(546-624)",
+          "name": "王の",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 85,
+          "weight": 0
         }
       ],
-      "FireDamageOverTimeMultiplier": [
+      "MinionGrantsConvocation": [
         {
-          "key": "FireDamageOverTimeMultiplier1",
-          "text": "火継続ダメージ倍率 +(14-18)%",
-          "name": "熱心家の",
-          "tag": "wand",
+          "key": "MinionGrantsConvocation1",
+          "text": "レベル1コンヴォケーションスキルを付与する",
+          "name": "招集の",
+          "tag": "weapon_can_roll_minion_modifiers",
           "generation_type": "suffix",
-          "required_level": 4,
-          "weight": 300
-        },
-        {
-          "key": "FireDamageOverTimeMultiplier2",
-          "text": "火継続ダメージ倍率 +(19-23)%",
-          "name": "熱意ある者の",
-          "tag": "wand",
-          "generation_type": "suffix",
-          "required_level": 12,
-          "weight": 220
-        },
-        {
-          "key": "FireDamageOverTimeMultiplier3",
-          "text": "火継続ダメージ倍率 +(24-28)%",
-          "name": "熱烈な者の",
-          "tag": "wand",
-          "generation_type": "suffix",
-          "required_level": 36,
-          "weight": 140
-        },
-        {
-          "key": "FireDamageOverTimeMultiplier4__",
-          "text": "火継続ダメージ倍率 +(29-33)%",
-          "name": "熱狂者の",
-          "tag": "wand",
-          "generation_type": "suffix",
-          "required_level": 64,
-          "weight": 70
-        },
-        {
-          "key": "FireDamageOverTimeMultiplier5",
-          "text": "火継続ダメージ倍率 +(34-38)%",
-          "name": "熱中者の",
-          "tag": "wand",
-          "generation_type": "suffix",
-          "required_level": 78,
-          "weight": 35
+          "required_level": 45,
+          "weight": 1000
         }
       ],
       "PhysicalDamageOverTimeMultiplier": [
@@ -2851,247 +3021,153 @@
           "weight": 35
         }
       ],
-      "MinionAttackSpeedAndCastSpeed": [
+      "ProjectileSpeed": [
         {
-          "key": "MinionAttackAndCastSpeed1",
-          "text": "ミニオンのアタックスピードおよびキャストスピードが(5-7)%増加する",
-          "name": "奮起の",
-          "tag": "two_hand_weapon",
+          "key": "ProjectileSpeed1",
+          "text": "投射物スピードが(10-17)%増加する",
+          "name": "投射の",
+          "tag": "ranged",
           "generation_type": "suffix",
-          "required_level": 2,
-          "weight": 2000
-        },
-        {
-          "key": "MinionAttackAndCastSpeed2",
-          "text": "ミニオンのアタックスピードおよびキャストスピードが(8-10)%増加する",
-          "name": "脅迫の",
-          "tag": "two_hand_weapon",
-          "generation_type": "suffix",
-          "required_level": 15,
-          "weight": 2000
-        },
-        {
-          "key": "MinionAttackAndCastSpeed3_",
-          "text": "ミニオンのアタックスピードおよびキャストスピードが(11-13)%増加する",
-          "name": "刺激の",
-          "tag": "two_hand_weapon",
-          "generation_type": "suffix",
-          "required_level": 30,
-          "weight": 2000
-        },
-        {
-          "key": "MinionAttackAndCastSpeed4",
-          "text": "ミニオンのアタックスピードおよびキャストスピードが(14-16)%増加する",
-          "name": "煽りの",
-          "tag": "two_hand_weapon",
-          "generation_type": "suffix",
-          "required_level": 40,
-          "weight": 2000
-        },
-        {
-          "key": "MinionAttackAndCastSpeed5",
-          "text": "ミニオンのアタックスピードおよびキャストスピードが(17-19)%増加する",
-          "name": "扇動の",
-          "tag": "two_hand_weapon",
-          "generation_type": "suffix",
-          "required_level": 55,
-          "weight": 2000
-        },
-        {
-          "key": "MinionAttackAndCastSpeed6__",
-          "text": "ミニオンのアタックスピードおよびキャストスピードが(20-22)%増加する",
-          "name": "駆り立ての",
-          "tag": "two_hand_weapon",
-          "generation_type": "suffix",
-          "required_level": 72,
+          "required_level": 14,
           "weight": 1000
         },
         {
-          "key": "MinionAttackAndCastSpeed7",
-          "text": "ミニオンのアタックスピードおよびキャストスピードが(23-25)%増加する",
-          "name": "激昂の",
-          "tag": "two_hand_weapon",
+          "key": "ProjectileSpeed2",
+          "text": "投射物スピードが(18-25)%増加する",
+          "name": "飛行の",
+          "tag": "ranged",
           "generation_type": "suffix",
-          "required_level": 83,
-          "weight": 500
-        }
-      ],
-      "MinionFlatAccuracyRating": [
-        {
-          "key": "MinionAccuracyRatingWeapon1_",
-          "text": "ミニオンの命中力 +(80-130)",
-          "name": "講師の",
-          "tag": "two_hand_weapon",
-          "generation_type": "suffix",
-          "required_level": 1,
-          "weight": 2000
+          "required_level": 27,
+          "weight": 1000
         },
         {
-          "key": "MinionAccuracyRatingWeapon2",
-          "text": "ミニオンの命中力 +(131-215)",
-          "name": "教師の",
-          "tag": "two_hand_weapon",
-          "generation_type": "suffix",
-          "required_level": 20,
-          "weight": 2000
-        },
-        {
-          "key": "MinionAccuracyRatingWeapon3",
-          "text": "ミニオンの命中力 +(216-325)",
-          "name": "司令官の",
-          "tag": "two_hand_weapon",
-          "generation_type": "suffix",
-          "required_level": 40,
-          "weight": 2000
-        },
-        {
-          "key": "MinionAccuracyRatingWeapon4",
-          "text": "ミニオンの命中力 +(326-455)",
-          "name": "有力者の",
-          "tag": "two_hand_weapon",
-          "generation_type": "suffix",
-          "required_level": 60,
-          "weight": 2000
-        },
-        {
-          "key": "MinionAccuracyRatingWeapon5",
-          "text": "ミニオンの命中力 +(456-545)",
-          "name": "統治者の",
-          "tag": "two_hand_weapon",
-          "generation_type": "suffix",
-          "required_level": 75,
-          "weight": 2000
-        },
-        {
-          "key": "MinionAccuracyRatingWeapon6",
-          "text": "ミニオンの命中力 +(546-624)",
-          "name": "王の",
-          "tag": "two_hand_weapon",
-          "generation_type": "suffix",
-          "required_level": 85,
-          "weight": 2000
-        }
-      ],
-      "MinionCriticalStrikeChanceIncrease": [
-        {
-          "key": "MinionCriticalStrikeChanceIncrease1",
-          "text": "ミニオンのクリティカル率が(10-19)%増加する",
-          "name": "良運の",
-          "tag": "two_hand_weapon",
-          "generation_type": "suffix",
-          "required_level": 11,
-          "weight": 2000
-        },
-        {
-          "key": "MinionCriticalStrikeChanceIncrease2",
-          "text": "ミニオンのクリティカル率が(20-39)%増加する",
-          "name": "幸運の",
-          "tag": "two_hand_weapon",
-          "generation_type": "suffix",
-          "required_level": 21,
-          "weight": 2000
-        },
-        {
-          "key": "MinionCriticalStrikeChanceIncrease3",
-          "text": "ミニオンのクリティカル率が(40-59)%増加する",
-          "name": "天意の",
-          "tag": "two_hand_weapon",
-          "generation_type": "suffix",
-          "required_level": 28,
-          "weight": 2000
-        },
-        {
-          "key": "MinionCriticalStrikeChanceIncrease4",
-          "text": "ミニオンのクリティカル率が(60-79)%増加する",
-          "name": "偶然の",
-          "tag": "two_hand_weapon",
+          "key": "ProjectileSpeed3",
+          "text": "投射物スピードが(26-33)%増加する",
+          "name": "推進力の",
+          "tag": "ranged",
           "generation_type": "suffix",
           "required_level": 41,
-          "weight": 2000
+          "weight": 1000
         },
         {
-          "key": "MinionCriticalStrikeChanceIncrease5",
-          "text": "ミニオンのクリティカル率が(80-99)%増加する",
-          "name": "決定論の",
-          "tag": "two_hand_weapon",
+          "key": "ProjectileSpeed4",
+          "text": "投射物スピードが(34-41)%増加する",
+          "name": "西風の",
+          "tag": "ranged",
           "generation_type": "suffix",
-          "required_level": 59,
-          "weight": 2000
+          "required_level": 55,
+          "weight": 1000
         },
         {
-          "key": "MinionCriticalStrikeChanceIncrease6",
-          "text": "ミニオンのクリティカル率が(100-109)%増加する",
-          "name": "運命の",
-          "tag": "two_hand_weapon",
+          "key": "ProjectileSpeed5",
+          "text": "投射物スピードが(42-46)%増加する",
+          "name": "疾風の",
+          "tag": "ranged",
           "generation_type": "suffix",
-          "required_level": 76,
-          "weight": 2000
+          "required_level": 82,
+          "weight": 1000
         }
       ],
-      "MinionCriticalStrikeMultiplier": [
+      "SpellCriticalStrikeChance": [
         {
-          "key": "MinionCriticalStrikeMultiplier1",
-          "text": "ミニオンのクリティカルダメージ倍率 +(10-14)%",
-          "name": "襲撃の",
-          "tag": "two_hand_weapon",
+          "key": "SpellCriticalStrikeChance1",
+          "text": "スペルのクリティカル率が(40-49)%増加する",
+          "name": "脅威の",
+          "tag": "wand",
           "generation_type": "suffix",
-          "required_level": 8,
-          "weight": 2000
+          "required_level": 11,
+          "weight": 1000
         },
         {
-          "key": "MinionCriticalStrikeMultiplier2",
-          "text": "ミニオンのクリティカルダメージ倍率 +(15-19)%",
-          "name": "有象無象の",
-          "tag": "two_hand_weapon",
+          "key": "SpellCriticalStrikeChance2",
+          "text": "スペルのクリティカル率が(50-59)%増加する",
+          "name": "致命的な",
+          "tag": "wand",
           "generation_type": "suffix",
           "required_level": 21,
-          "weight": 2000
+          "weight": 1000
         },
         {
-          "key": "MinionCriticalStrikeMultiplier3",
-          "text": "ミニオンのクリティカルダメージ倍率 +(20-24)%",
-          "name": "群衆の",
-          "tag": "two_hand_weapon",
+          "key": "SpellCriticalStrikeChance3",
+          "text": "スペルのクリティカル率が(60-69)%増加する",
+          "name": "災害の",
+          "tag": "wand",
           "generation_type": "suffix",
-          "required_level": 30,
-          "weight": 2000
+          "required_level": 28,
+          "weight": 1000
         },
         {
-          "key": "MinionCriticalStrikeMultiplier4",
-          "text": "ミニオンのクリティカルダメージ倍率 +(25-29)%",
-          "name": "群れの",
-          "tag": "two_hand_weapon",
+          "key": "SpellCriticalStrikeChance4",
+          "text": "スペルのクリティカル率が(70-79)%増加する",
+          "name": "厄災の",
+          "tag": "wand",
           "generation_type": "suffix",
-          "required_level": 44,
-          "weight": 2000
+          "required_level": 41,
+          "weight": 1000
         },
         {
-          "key": "MinionCriticalStrikeMultiplier5",
-          "text": "ミニオンのクリティカルダメージ倍率 +(30-34)%",
-          "name": "侵略の",
-          "tag": "two_hand_weapon",
+          "key": "SpellCriticalStrikeChance5",
+          "text": "スペルのクリティカル率が(80-89)%増加する",
+          "name": "滅びの",
+          "tag": "wand",
           "generation_type": "suffix",
           "required_level": 59,
-          "weight": 2000
+          "weight": 1000
         },
         {
-          "key": "MinionCriticalStrikeMultiplier6",
-          "text": "ミニオンのクリティカルダメージ倍率 +(35-38)%",
-          "name": "軍団の",
-          "tag": "two_hand_weapon",
+          "key": "SpellCriticalStrikeChance6_",
+          "text": "スペルのクリティカル率が(90-109)%増加する",
+          "name": "帰無の",
+          "tag": "wand",
           "generation_type": "suffix",
-          "required_level": 73,
-          "weight": 2000
+          "required_level": 76,
+          "weight": 1000
         }
       ],
-      "MinionGrantsConvocation": [
+      "StunDurationIncreasePercent": [
         {
-          "key": "MinionGrantsConvocation1",
-          "text": "レベル1コンヴォケーションスキルを付与する",
-          "name": "招集の",
-          "tag": "focus_can_roll_minion_modifiers",
+          "key": "StunDuration1",
+          "text": "敵に対するスタンの持続時間が(11-15)%増加する",
+          "name": "衝撃の",
+          "tag": "mace",
           "generation_type": "suffix",
-          "required_level": 45,
+          "required_level": 5,
+          "weight": 1000
+        },
+        {
+          "key": "StunDuration2",
+          "text": "敵に対するスタンの持続時間が(16-20)%増加する",
+          "name": "放心の",
+          "tag": "mace",
+          "generation_type": "suffix",
+          "required_level": 18,
+          "weight": 1000
+        },
+        {
+          "key": "StunDuration3",
+          "text": "敵に対するスタンの持続時間が(21-25)%増加する",
+          "name": "気絶の",
+          "tag": "mace",
+          "generation_type": "suffix",
+          "required_level": 30,
+          "weight": 1000
+        },
+        {
+          "key": "StunDuration4",
+          "text": "敵に対するスタンの持続時間が(26-30)%増加する",
+          "name": "叩きつけの",
+          "tag": "mace",
+          "generation_type": "suffix",
+          "required_level": 44,
+          "weight": 1000
+        },
+        {
+          "key": "StunDuration5",
+          "text": "敵に対するスタンの持続時間が(31-35)%増加する",
+          "name": "よろめきの",
+          "tag": "mace",
+          "generation_type": "suffix",
+          "required_level": 58,
           "weight": 1000
         }
       ]

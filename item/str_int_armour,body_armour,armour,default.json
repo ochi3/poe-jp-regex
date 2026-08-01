@@ -17,12 +17,50 @@
   ],
   "mods": {
     "prefix": {
+      "AttackerTakesDamageNoRange": [
+        {
+          "key": "AttackerTakesDamage1",
+          "text": "(1-4)の物理ダメージを近接アタックしてきた敵に反射する",
+          "name": "有棘の",
+          "tag": "body_armour",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 1000
+        },
+        {
+          "key": "AttackerTakesDamage2",
+          "text": "(5-10)の物理ダメージを近接アタックしてきた敵に反射する",
+          "name": "棘のある",
+          "tag": "body_armour",
+          "generation_type": "prefix",
+          "required_level": 10,
+          "weight": 1000
+        },
+        {
+          "key": "AttackerTakesDamage3",
+          "text": "(11-24)の物理ダメージを近接アタックしてきた敵に反射する",
+          "name": "有刺の",
+          "tag": "body_armour",
+          "generation_type": "prefix",
+          "required_level": 20,
+          "weight": 1000
+        },
+        {
+          "key": "AttackerTakesDamage4",
+          "text": "(25-50)の物理ダメージを近接アタックしてきた敵に反射する",
+          "name": "鋸状の",
+          "tag": "body_armour",
+          "generation_type": "prefix",
+          "required_level": 35,
+          "weight": 1000
+        }
+      ],
       "IncreasedLife": [
         {
           "key": "IncreasedLife0",
           "text": "最大ライフ +(3-9)",
           "name": "強健な",
-          "tag": "fishing_rod",
+          "tag": "default",
           "generation_type": "prefix",
           "required_level": 1,
           "weight": 1000
@@ -31,7 +69,7 @@
           "key": "IncreasedLife1",
           "text": "最大ライフ +(10-24)",
           "name": "健康な",
-          "tag": "fishing_rod",
+          "tag": "default",
           "generation_type": "prefix",
           "required_level": 5,
           "weight": 1000
@@ -40,7 +78,7 @@
           "key": "IncreasedLife2",
           "text": "最大ライフ +(25-39)",
           "name": "血色良い",
-          "tag": "fishing_rod",
+          "tag": "default",
           "generation_type": "prefix",
           "required_level": 11,
           "weight": 1000
@@ -49,7 +87,7 @@
           "key": "IncreasedLife3",
           "text": "最大ライフ +(40-54)",
           "name": "屈強な",
-          "tag": "fishing_rod",
+          "tag": "default",
           "generation_type": "prefix",
           "required_level": 18,
           "weight": 1000
@@ -58,7 +96,7 @@
           "key": "IncreasedLife4",
           "text": "最大ライフ +(55-69)",
           "name": "頑強な",
-          "tag": "fishing_rod",
+          "tag": "default",
           "generation_type": "prefix",
           "required_level": 24,
           "weight": 1000
@@ -67,7 +105,7 @@
           "key": "IncreasedLife5",
           "text": "最大ライフ +(70-84)",
           "name": "頑健な",
-          "tag": "fishing_rod",
+          "tag": "default",
           "generation_type": "prefix",
           "required_level": 30,
           "weight": 1000
@@ -76,7 +114,7 @@
           "key": "IncreasedLife6",
           "text": "最大ライフ +(85-99)",
           "name": "丸々とした",
-          "tag": "fishing_rod",
+          "tag": "default",
           "generation_type": "prefix",
           "required_level": 36,
           "weight": 1000
@@ -85,7 +123,7 @@
           "key": "IncreasedLife7",
           "text": "最大ライフ +(100-114)",
           "name": "雄健な",
-          "tag": "fishing_rod",
+          "tag": "default",
           "generation_type": "prefix",
           "required_level": 44,
           "weight": 1000
@@ -94,7 +132,7 @@
           "key": "IncreasedLife8",
           "text": "最大ライフ +(115-129)",
           "name": "競技者の",
-          "tag": "fishing_rod",
+          "tag": "default",
           "generation_type": "prefix",
           "required_level": 54,
           "weight": 1000
@@ -103,7 +141,7 @@
           "key": "IncreasedLife9",
           "text": "最大ライフ +(130-144)",
           "name": "豊かな",
-          "tag": "fishing_rod",
+          "tag": "default",
           "generation_type": "prefix",
           "required_level": 64,
           "weight": 1000
@@ -112,7 +150,7 @@
           "key": "IncreasedLife10",
           "text": "最大ライフ +(145-159)",
           "name": "活発な",
-          "tag": "shield",
+          "tag": "body_armour",
           "generation_type": "prefix",
           "required_level": 73,
           "weight": 1000
@@ -141,7 +179,7 @@
           "key": "IncreasedMana1",
           "text": "最大マナ +(15-19)",
           "name": "ベリルの",
-          "tag": "ring",
+          "tag": "str_int_armour",
           "generation_type": "prefix",
           "required_level": 1,
           "weight": 1000
@@ -150,7 +188,7 @@
           "key": "IncreasedMana2",
           "text": "最大マナ +(20-24)",
           "name": "コバルトの",
-          "tag": "ring",
+          "tag": "str_int_armour",
           "generation_type": "prefix",
           "required_level": 11,
           "weight": 1000
@@ -159,7 +197,7 @@
           "key": "IncreasedMana3",
           "text": "最大マナ +(25-29)",
           "name": "淡青な",
-          "tag": "ring",
+          "tag": "str_int_armour",
           "generation_type": "prefix",
           "required_level": 17,
           "weight": 1000
@@ -168,7 +206,7 @@
           "key": "IncreasedMana4",
           "text": "最大マナ +(30-34)",
           "name": "サファイアの",
-          "tag": "ring",
+          "tag": "str_int_armour",
           "generation_type": "prefix",
           "required_level": 23,
           "weight": 1000
@@ -177,7 +215,7 @@
           "key": "IncreasedMana5",
           "text": "最大マナ +(35-39)",
           "name": "空色をした",
-          "tag": "ring",
+          "tag": "str_int_armour",
           "generation_type": "prefix",
           "required_level": 29,
           "weight": 1000
@@ -186,7 +224,7 @@
           "key": "IncreasedMana6",
           "text": "最大マナ +(40-44)",
           "name": "アクア",
-          "tag": "ring",
+          "tag": "str_int_armour",
           "generation_type": "prefix",
           "required_level": 35,
           "weight": 1000
@@ -195,7 +233,7 @@
           "key": "IncreasedMana7",
           "text": "最大マナ +(45-49)",
           "name": "オパール色をした",
-          "tag": "ring",
+          "tag": "str_int_armour",
           "generation_type": "prefix",
           "required_level": 42,
           "weight": 1000
@@ -204,7 +242,7 @@
           "key": "IncreasedMana8",
           "text": "最大マナ +(50-54)",
           "name": "リンドウの",
-          "tag": "ring",
+          "tag": "str_int_armour",
           "generation_type": "prefix",
           "required_level": 51,
           "weight": 1000
@@ -213,7 +251,7 @@
           "key": "IncreasedMana9",
           "text": "最大マナ +(55-59)",
           "name": "青鋼の",
-          "tag": "ring",
+          "tag": "str_int_armour",
           "generation_type": "prefix",
           "required_level": 60,
           "weight": 1000
@@ -222,7 +260,7 @@
           "key": "IncreasedMana10",
           "text": "最大マナ +(60-64)",
           "name": "紺色をした",
-          "tag": "ring",
+          "tag": "str_int_armour",
           "generation_type": "prefix",
           "required_level": 69,
           "weight": 1000
@@ -231,7 +269,7 @@
           "key": "IncreasedMana11",
           "text": "最大マナ +(65-68)",
           "name": "青い",
-          "tag": "ring",
+          "tag": "str_int_armour",
           "generation_type": "prefix",
           "required_level": 75,
           "weight": 1000
@@ -240,7 +278,7 @@
           "key": "IncreasedMana12",
           "text": "最大マナ +(69-73)",
           "name": "藍色をした",
-          "tag": "ring",
+          "tag": "str_int_armour",
           "generation_type": "prefix",
           "required_level": 81,
           "weight": 1000
@@ -314,7 +352,7 @@
           "key": "LocalIncreasedArmourAndEnergyShield8",
           "text": "アーマーおよびエナジーシールドが(101-110)%増加する",
           "name": "教浸されし",
-          "tag": "int_armour",
+          "tag": "body_armour",
           "generation_type": "prefix",
           "required_level": 86,
           "weight": 1000
@@ -376,6 +414,28 @@
           "weight": 1000
         }
       ],
+      "LocalArmourAndEvasion": [
+        {
+          "key": "LocalIncreasedArmourAndEvasion8",
+          "text": "アーマーおよび回避力が(101-110)%増加する",
+          "name": "勝者の",
+          "tag": "body_armour",
+          "generation_type": "prefix",
+          "required_level": 86,
+          "weight": 1000
+        }
+      ],
+      "LocalArmourAndEvasionAndEnergyShield": [
+        {
+          "key": "LocalIncreasedArmourEvasionEnergyShield7__",
+          "text": "アーマー、回避力およびエナジーシールドが(101-110)%増加する",
+          "name": "霊的な",
+          "tag": "body_armour",
+          "generation_type": "prefix",
+          "required_level": 85,
+          "weight": 1000
+        }
+      ],
       "LocalBaseArmourAndEnergyShield": [
         {
           "key": "LocalBaseArmourAndEnergyShield1",
@@ -417,7 +477,7 @@
           "key": "LocalBaseArmourAndEnergyShield5",
           "text": "アーマー +(86-145)\n最大エナジーシールド +(29-48)",
           "name": "列福された",
-          "tag": "boots",
+          "tag": "str_int_armour",
           "generation_type": "prefix",
           "required_level": 46,
           "weight": 1000
@@ -426,7 +486,7 @@
           "key": "LocalBaseArmourAndEnergyShield6",
           "text": "アーマー +(146-220)\n最大エナジーシールド +(49-60)",
           "name": "聖別された",
-          "tag": "boots",
+          "tag": "str_int_armour",
           "generation_type": "prefix",
           "required_level": 58,
           "weight": 1000
@@ -435,7 +495,7 @@
           "key": "LocalBaseArmourAndEnergyShield7",
           "text": "アーマー +(221-300)\n最大エナジーシールド +(61-72)",
           "name": "聖人のような",
-          "tag": "boots",
+          "tag": "str_int_armour",
           "generation_type": "prefix",
           "required_level": 69,
           "weight": 1000
@@ -444,7 +504,7 @@
           "key": "LocalBaseArmourAndEnergyShield8",
           "text": "アーマー +(301-375)\n最大エナジーシールド +(73-80)",
           "name": "神々しい",
-          "tag": "shield",
+          "tag": "str_int_armour",
           "generation_type": "prefix",
           "required_level": 79,
           "weight": 1000
@@ -455,7 +515,7 @@
           "key": "LocalBaseArmourAndLife1",
           "text": "アーマー +(20-32)\n最大ライフ +(18-23)",
           "name": "牡蠣の",
-          "tag": "str_armour",
+          "tag": "str_int_armour",
           "generation_type": "prefix",
           "required_level": 30,
           "weight": 500
@@ -464,7 +524,7 @@
           "key": "LocalBaseArmourAndLife2",
           "text": "アーマー +(33-48)\n最大ライフ +(24-28)",
           "name": "雲丹の",
-          "tag": "str_armour",
+          "tag": "str_int_armour",
           "generation_type": "prefix",
           "required_level": 46,
           "weight": 500
@@ -473,7 +533,7 @@
           "key": "LocalBaseArmourAndLife3",
           "text": "アーマー +(49-96)\n最大ライフ +(29-33)",
           "name": "オウムガイの",
-          "tag": "boots",
+          "tag": "str_int_armour",
           "generation_type": "prefix",
           "required_level": 62,
           "weight": 500
@@ -482,7 +542,7 @@
           "key": "LocalBaseArmourAndLife4",
           "text": "アーマー +(97-144)\n最大ライフ +(34-38)",
           "name": "ワニの",
-          "tag": "shield",
+          "tag": "str_int_armour",
           "generation_type": "prefix",
           "required_level": 78,
           "weight": 250
@@ -493,7 +553,7 @@
           "key": "LocalBaseEnergyShieldAndLife1",
           "text": "最大エナジーシールド +(8-10)\n最大ライフ +(18-23)",
           "name": "修道僧の",
-          "tag": "int_armour",
+          "tag": "str_int_armour",
           "generation_type": "prefix",
           "required_level": 30,
           "weight": 500
@@ -502,7 +562,7 @@
           "key": "LocalBaseEnergyShieldAndLife2",
           "text": "最大エナジーシールド +(11-15)\n最大ライフ +(24-28)",
           "name": "修道院次長の",
-          "tag": "int_armour",
+          "tag": "str_int_armour",
           "generation_type": "prefix",
           "required_level": 46,
           "weight": 500
@@ -511,7 +571,7 @@
           "key": "LocalBaseEnergyShieldAndLife3_",
           "text": "最大エナジーシールド +(16-25)\n最大ライフ +(29-33)",
           "name": "修道院長の",
-          "tag": "boots",
+          "tag": "str_int_armour",
           "generation_type": "prefix",
           "required_level": 62,
           "weight": 500
@@ -520,7 +580,7 @@
           "key": "LocalBaseEnergyShieldAndLife4_",
           "text": "最大エナジーシールド +(26-30)\n最大ライフ +(34-38)",
           "name": "エグザルフの",
-          "tag": "shield",
+          "tag": "str_int_armour",
           "generation_type": "prefix",
           "required_level": 78,
           "weight": 250
@@ -531,7 +591,7 @@
           "key": "LocalBaseEnergyShieldAndMana1",
           "text": "最大エナジーシールド +(8-10)\n最大マナ +(11-15)",
           "name": "侍者の",
-          "tag": "int_armour",
+          "tag": "str_int_armour",
           "generation_type": "prefix",
           "required_level": 30,
           "weight": 500
@@ -540,7 +600,7 @@
           "key": "LocalBaseEnergyShieldAndMana2",
           "text": "最大エナジーシールド +(11-15)\n最大マナ +(16-19)",
           "name": "助祭の",
-          "tag": "int_armour",
+          "tag": "str_int_armour",
           "generation_type": "prefix",
           "required_level": 46,
           "weight": 500
@@ -549,7 +609,7 @@
           "key": "LocalBaseEnergyShieldAndMana3",
           "text": "最大エナジーシールド +(16-25)\n最大マナ +(20-22)",
           "name": "神官の",
-          "tag": "boots",
+          "tag": "str_int_armour",
           "generation_type": "prefix",
           "required_level": 62,
           "weight": 500
@@ -558,391 +618,112 @@
           "key": "LocalBaseEnergyShieldAndMana4",
           "text": "最大エナジーシールド +(26-30)\n最大マナ +(23-25)",
           "name": "司教の",
-          "tag": "shield",
+          "tag": "str_int_armour",
           "generation_type": "prefix",
           "required_level": 78,
           "weight": 250
         }
       ],
-      "AttackerTakesDamageNoRange": [
+      "LocalEnergyShieldPercent": [
         {
-          "key": "AttackerTakesDamage1",
-          "text": "(1-4)の物理ダメージを近接アタックしてきた敵に反射する",
-          "name": "有棘の",
+          "key": "LocalIncreasedEnergyShieldPercent8",
+          "text": "エナジーシールドが(101-110)%増加する",
+          "name": "断固たる",
           "tag": "body_armour",
           "generation_type": "prefix",
-          "required_level": 1,
+          "required_level": 86,
           "weight": 1000
-        },
+        }
+      ],
+      "LocalEvasionAndEnergyShield": [
         {
-          "key": "AttackerTakesDamage2",
-          "text": "(5-10)の物理ダメージを近接アタックしてきた敵に反射する",
-          "name": "棘のある",
+          "key": "LocalIncreasedEvasionAndEnergyShield8",
+          "text": "回避力およびエナジーシールドが(101-110)%増加する",
+          "name": "霊的な",
           "tag": "body_armour",
           "generation_type": "prefix",
-          "required_level": 10,
+          "required_level": 86,
           "weight": 1000
-        },
+        }
+      ],
+      "LocalEvasionRatingIncreasePercent": [
         {
-          "key": "AttackerTakesDamage3",
-          "text": "(11-24)の物理ダメージを近接アタックしてきた敵に反射する",
-          "name": "有刺の",
+          "key": "LocalIncreasedEvasionRatingPercent8",
+          "text": "回避力が(101-110)%増加する",
+          "name": "幻術の",
           "tag": "body_armour",
           "generation_type": "prefix",
-          "required_level": 20,
+          "required_level": 86,
           "weight": 1000
-        },
+        }
+      ],
+      "LocalPhysicalDamageReductionRatingPercent": [
         {
-          "key": "AttackerTakesDamage4",
-          "text": "(25-50)の物理ダメージを近接アタックしてきた敵に反射する",
-          "name": "鋸状の",
+          "key": "LocalIncreasedPhysicalDamageReductionRatingPercent8_",
+          "text": "アーマーが(101-110)%増加する",
+          "name": "堅牢な",
           "tag": "body_armour",
           "generation_type": "prefix",
-          "required_level": 35,
+          "required_level": 86,
           "weight": 1000
         }
       ]
     },
     "suffix": {
-      "Strength": [
+      "ChaosResistance": [
         {
-          "key": "Strength1",
-          "text": "筋力 +(8-12)",
-          "name": "蛮人の",
-          "tag": "ring",
+          "key": "ChaosResist1",
+          "text": "混沌耐性 +(5-10)%",
+          "name": "迷い子の",
+          "tag": "armour",
           "generation_type": "suffix",
-          "required_level": 1,
-          "weight": 500
+          "required_level": 16,
+          "weight": 250
         },
         {
-          "key": "Strength2",
-          "text": "筋力 +(13-17)",
-          "name": "レスラーの",
-          "tag": "ring",
+          "key": "ChaosResist2",
+          "text": "混沌耐性 +(11-15)%",
+          "name": "流刑の",
+          "tag": "armour",
           "generation_type": "suffix",
-          "required_level": 11,
-          "weight": 500
+          "required_level": 30,
+          "weight": 250
         },
         {
-          "key": "Strength3",
-          "text": "筋力 +(18-22)",
-          "name": "熊の",
-          "tag": "ring",
-          "generation_type": "suffix",
-          "required_level": 22,
-          "weight": 500
-        },
-        {
-          "key": "Strength4",
-          "text": "筋力 +(23-27)",
-          "name": "ライオンの",
-          "tag": "ring",
-          "generation_type": "suffix",
-          "required_level": 33,
-          "weight": 500
-        },
-        {
-          "key": "Strength5",
-          "text": "筋力 +(28-32)",
-          "name": "ゴリラの",
-          "tag": "ring",
+          "key": "ChaosResist3",
+          "text": "混沌耐性 +(16-20)%",
+          "name": "排出の",
+          "tag": "armour",
           "generation_type": "suffix",
           "required_level": 44,
-          "weight": 500
+          "weight": 250
         },
         {
-          "key": "Strength6",
-          "text": "筋力 +(33-37)",
-          "name": "巨躯の",
-          "tag": "ring",
-          "generation_type": "suffix",
-          "required_level": 55,
-          "weight": 500
-        },
-        {
-          "key": "Strength7",
-          "text": "筋力 +(38-42)",
-          "name": "リヴァイアサンの",
-          "tag": "ring",
-          "generation_type": "suffix",
-          "required_level": 66,
-          "weight": 500
-        },
-        {
-          "key": "Strength8",
-          "text": "筋力 +(43-50)",
-          "name": "タイタンの",
-          "tag": "ring",
-          "generation_type": "suffix",
-          "required_level": 74,
-          "weight": 500
-        },
-        {
-          "key": "Strength9",
-          "text": "筋力 +(51-55)",
-          "name": "神々の",
-          "tag": "ring",
-          "generation_type": "suffix",
-          "required_level": 82,
-          "weight": 500
-        }
-      ],
-      "Intelligence": [
-        {
-          "key": "Intelligence1",
-          "text": "知性 +(8-12)",
-          "name": "生徒の",
-          "tag": "ring",
-          "generation_type": "suffix",
-          "required_level": 1,
-          "weight": 500
-        },
-        {
-          "key": "Intelligence2",
-          "text": "知性 +(13-17)",
-          "name": "学徒の",
-          "tag": "ring",
-          "generation_type": "suffix",
-          "required_level": 11,
-          "weight": 500
-        },
-        {
-          "key": "Intelligence3",
-          "text": "知性 +(18-22)",
-          "name": "神童の",
-          "tag": "ring",
-          "generation_type": "suffix",
-          "required_level": 22,
-          "weight": 500
-        },
-        {
-          "key": "Intelligence4",
-          "text": "知性 +(23-27)",
-          "name": "占師の",
-          "tag": "ring",
-          "generation_type": "suffix",
-          "required_level": 33,
-          "weight": 500
-        },
-        {
-          "key": "Intelligence5",
-          "text": "知性 +(28-32)",
-          "name": "哲学者の",
-          "tag": "ring",
-          "generation_type": "suffix",
-          "required_level": 44,
-          "weight": 500
-        },
-        {
-          "key": "Intelligence6",
-          "text": "知性 +(33-37)",
-          "name": "賢者の",
-          "tag": "ring",
-          "generation_type": "suffix",
-          "required_level": 55,
-          "weight": 500
-        },
-        {
-          "key": "Intelligence7",
-          "text": "知性 +(38-42)",
-          "name": "碩学の",
-          "tag": "ring",
-          "generation_type": "suffix",
-          "required_level": 66,
-          "weight": 500
-        },
-        {
-          "key": "Intelligence8",
-          "text": "知性 +(43-50)",
-          "name": "巨匠の",
-          "tag": "ring",
-          "generation_type": "suffix",
-          "required_level": 74,
-          "weight": 500
-        },
-        {
-          "key": "Intelligence9",
-          "text": "知性 +(51-55)",
-          "name": "天才の",
-          "tag": "ring",
-          "generation_type": "suffix",
-          "required_level": 82,
-          "weight": 500
-        }
-      ],
-      "LifeRegeneration": [
-        {
-          "key": "LifeRegeneration1",
-          "text": "毎秒(1-2)のライフを自動回復する",
-          "name": "イモリの",
-          "tag": "fishing_rod",
-          "generation_type": "suffix",
-          "required_level": 1,
-          "weight": 1000
-        },
-        {
-          "key": "LifeRegeneration2",
-          "text": "毎秒(2.1-8)のライフを自動回復する",
-          "name": "蜥蜴の",
-          "tag": "fishing_rod",
-          "generation_type": "suffix",
-          "required_level": 7,
-          "weight": 1000
-        },
-        {
-          "key": "LifeRegeneration3",
-          "text": "毎秒(8.1-16)のライフを自動回復する",
-          "name": "平虫の",
-          "tag": "fishing_rod",
-          "generation_type": "suffix",
-          "required_level": 19,
-          "weight": 1000
-        },
-        {
-          "key": "LifeRegeneration4",
-          "text": "毎秒(16.1-24)のライフを自動回復する",
-          "name": "ヒトデの",
-          "tag": "fishing_rod",
-          "generation_type": "suffix",
-          "required_level": 31,
-          "weight": 1000
-        },
-        {
-          "key": "LifeRegeneration5",
-          "text": "毎秒(24.1-32)のライフを自動回復する",
-          "name": "ヒュドラの",
-          "tag": "fishing_rod",
-          "generation_type": "suffix",
-          "required_level": 44,
-          "weight": 1000
-        },
-        {
-          "key": "LifeRegeneration6",
-          "text": "毎秒(32.1-48)のライフを自動回復する",
-          "name": "トロルの",
-          "tag": "fishing_rod",
-          "generation_type": "suffix",
-          "required_level": 55,
-          "weight": 1000
-        },
-        {
-          "key": "LifeRegeneration7",
-          "text": "毎秒(48.1-64)のライフを自動回復する",
-          "name": "リスラーサの",
-          "tag": "fishing_rod",
-          "generation_type": "suffix",
-          "required_level": 68,
-          "weight": 1000
-        },
-        {
-          "key": "LifeRegeneration8_",
-          "text": "毎秒(64.1-96)のライフを自動回復する",
-          "name": "不死鳥の",
-          "tag": "fishing_rod",
-          "generation_type": "suffix",
-          "required_level": 74,
-          "weight": 1000
-        },
-        {
-          "key": "LifeRegeneration9",
-          "text": "毎秒(96.1-128)のライフを自動回復する",
-          "name": "療養の",
-          "tag": "fishing_rod",
-          "generation_type": "suffix",
-          "required_level": 78,
-          "weight": 1000
-        },
-        {
-          "key": "LifeRegeneration10__",
-          "text": "毎秒(128.1-152)のライフを自動回復する",
-          "name": "命の",
-          "tag": "shield",
-          "generation_type": "suffix",
-          "required_level": 83,
-          "weight": 1000
-        },
-        {
-          "key": "LifeRegeneration11____",
-          "text": "毎秒(152.1-176)のライフを自動回復する",
-          "name": "再起の",
-          "tag": "body_armour",
-          "generation_type": "suffix",
-          "required_level": 86,
-          "weight": 1000
-        }
-      ],
-      "FireResistance": [
-        {
-          "key": "FireResist1",
-          "text": "火耐性 +(6-11)%",
-          "name": "仔竜の",
+          "key": "ChaosResist4",
+          "text": "混沌耐性 +(21-25)%",
+          "name": "排除の",
           "tag": "armour",
           "generation_type": "suffix",
-          "required_level": 1,
-          "weight": 1000
+          "required_level": 56,
+          "weight": 250
         },
         {
-          "key": "FireResist2",
-          "text": "火耐性 +(12-17)%",
-          "name": "サラマンダーの",
+          "key": "ChaosResist5",
+          "text": "混沌耐性 +(26-30)%",
+          "name": "追放の",
           "tag": "armour",
           "generation_type": "suffix",
-          "required_level": 12,
-          "weight": 1000
+          "required_level": 65,
+          "weight": 250
         },
         {
-          "key": "FireResist3",
-          "text": "火耐性 +(18-23)%",
-          "name": "ドレイクの",
+          "key": "ChaosResist6",
+          "text": "混沌耐性 +(31-35)%",
+          "name": "バメスの",
           "tag": "armour",
           "generation_type": "suffix",
-          "required_level": 24,
-          "weight": 1000
-        },
-        {
-          "key": "FireResist4",
-          "text": "火耐性 +(24-29)%",
-          "name": "窯の",
-          "tag": "armour",
-          "generation_type": "suffix",
-          "required_level": 36,
-          "weight": 1000
-        },
-        {
-          "key": "FireResist5",
-          "text": "火耐性 +(30-35)%",
-          "name": "炉の",
-          "tag": "armour",
-          "generation_type": "suffix",
-          "required_level": 48,
-          "weight": 1000
-        },
-        {
-          "key": "FireResist6",
-          "text": "火耐性 +(36-41)%",
-          "name": "火山の",
-          "tag": "armour",
-          "generation_type": "suffix",
-          "required_level": 60,
-          "weight": 1000
-        },
-        {
-          "key": "FireResist7",
-          "text": "火耐性 +(42-45)%",
-          "name": "マグマの",
-          "tag": "armour",
-          "generation_type": "suffix",
-          "required_level": 72,
-          "weight": 1000
-        },
-        {
-          "key": "FireResist8",
-          "text": "火耐性 +(46-48)%",
-          "name": "ツティオシュの",
-          "tag": "armour",
-          "generation_type": "suffix",
-          "required_level": 84,
-          "weight": 1000
+          "required_level": 81,
+          "weight": 250
         }
       ],
       "ColdResistance": [
@@ -1019,6 +800,405 @@
           "weight": 1000
         }
       ],
+      "EnergyShieldDelay": [
+        {
+          "key": "FasterStartEnergyShieldRecharge1",
+          "text": "エナジーシールドのリチャージが(27-34)%速く始まる",
+          "name": "英気の",
+          "tag": "str_int_armour",
+          "generation_type": "suffix",
+          "required_level": 45,
+          "weight": 500
+        },
+        {
+          "key": "FasterStartEnergyShieldRecharge2",
+          "text": "エナジーシールドのリチャージが(35-42)%速く始まる",
+          "name": "気力の",
+          "tag": "str_int_armour",
+          "generation_type": "suffix",
+          "required_level": 58,
+          "weight": 500
+        },
+        {
+          "key": "FasterStartEnergyShieldRecharge3__",
+          "text": "エナジーシールドのリチャージが(43-50)%速く始まる",
+          "name": "激励の",
+          "tag": "str_int_armour",
+          "generation_type": "suffix",
+          "required_level": 67,
+          "weight": 500
+        },
+        {
+          "key": "FasterStartEnergyShieldRecharge4",
+          "text": "エナジーシールドのリチャージが(51-58)%速く始まる",
+          "name": "元気の",
+          "tag": "str_int_armour",
+          "generation_type": "suffix",
+          "required_level": 77,
+          "weight": 500
+        },
+        {
+          "key": "FasterStartEnergyShieldRecharge5_",
+          "text": "エナジーシールドのリチャージが(59-66)%速く始まる",
+          "name": "持ち直しの",
+          "tag": "str_int_armour",
+          "generation_type": "suffix",
+          "required_level": 86,
+          "weight": 500
+        }
+      ],
+      "EnergyShieldRegeneration": [
+        {
+          "key": "EnergyShieldRechargeRate1",
+          "text": "エナジーシールドリチャージレートが(24-26)%増加する",
+          "name": "緩和の",
+          "tag": "str_int_armour",
+          "generation_type": "suffix",
+          "required_level": 46,
+          "weight": 500
+        },
+        {
+          "key": "EnergyShieldRechargeRate2",
+          "text": "エナジーシールドリチャージレートが(27-29)%増加する",
+          "name": "拡散の",
+          "tag": "str_int_armour",
+          "generation_type": "suffix",
+          "required_level": 57,
+          "weight": 500
+        },
+        {
+          "key": "EnergyShieldRechargeRate3",
+          "text": "エナジーシールドリチャージレートが(30-32)%増加する",
+          "name": "霧散の",
+          "tag": "str_int_armour",
+          "generation_type": "suffix",
+          "required_level": 68,
+          "weight": 500
+        },
+        {
+          "key": "EnergyShieldRechargeRate4",
+          "text": "エナジーシールドリチャージレートが(33-35)%増加する",
+          "name": "緩衝の",
+          "tag": "str_int_armour",
+          "generation_type": "suffix",
+          "required_level": 76,
+          "weight": 500
+        },
+        {
+          "key": "EnergyShieldRechargeRate5______",
+          "text": "エナジーシールドリチャージレートが(36-38)%増加する",
+          "name": "気勢の",
+          "tag": "str_int_armour",
+          "generation_type": "suffix",
+          "required_level": 85,
+          "weight": 500
+        }
+      ],
+      "FireResistance": [
+        {
+          "key": "FireResist1",
+          "text": "火耐性 +(6-11)%",
+          "name": "仔竜の",
+          "tag": "armour",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 1000
+        },
+        {
+          "key": "FireResist2",
+          "text": "火耐性 +(12-17)%",
+          "name": "サラマンダーの",
+          "tag": "armour",
+          "generation_type": "suffix",
+          "required_level": 12,
+          "weight": 1000
+        },
+        {
+          "key": "FireResist3",
+          "text": "火耐性 +(18-23)%",
+          "name": "ドレイクの",
+          "tag": "armour",
+          "generation_type": "suffix",
+          "required_level": 24,
+          "weight": 1000
+        },
+        {
+          "key": "FireResist4",
+          "text": "火耐性 +(24-29)%",
+          "name": "窯の",
+          "tag": "armour",
+          "generation_type": "suffix",
+          "required_level": 36,
+          "weight": 1000
+        },
+        {
+          "key": "FireResist5",
+          "text": "火耐性 +(30-35)%",
+          "name": "炉の",
+          "tag": "armour",
+          "generation_type": "suffix",
+          "required_level": 48,
+          "weight": 1000
+        },
+        {
+          "key": "FireResist6",
+          "text": "火耐性 +(36-41)%",
+          "name": "火山の",
+          "tag": "armour",
+          "generation_type": "suffix",
+          "required_level": 60,
+          "weight": 1000
+        },
+        {
+          "key": "FireResist7",
+          "text": "火耐性 +(42-45)%",
+          "name": "マグマの",
+          "tag": "armour",
+          "generation_type": "suffix",
+          "required_level": 72,
+          "weight": 1000
+        },
+        {
+          "key": "FireResist8",
+          "text": "火耐性 +(46-48)%",
+          "name": "ツティオシュの",
+          "tag": "armour",
+          "generation_type": "suffix",
+          "required_level": 84,
+          "weight": 1000
+        }
+      ],
+      "Intelligence": [
+        {
+          "key": "Intelligence1",
+          "text": "知性 +(8-12)",
+          "name": "生徒の",
+          "tag": "str_int_armour",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 500
+        },
+        {
+          "key": "Intelligence2",
+          "text": "知性 +(13-17)",
+          "name": "学徒の",
+          "tag": "str_int_armour",
+          "generation_type": "suffix",
+          "required_level": 11,
+          "weight": 500
+        },
+        {
+          "key": "Intelligence3",
+          "text": "知性 +(18-22)",
+          "name": "神童の",
+          "tag": "str_int_armour",
+          "generation_type": "suffix",
+          "required_level": 22,
+          "weight": 500
+        },
+        {
+          "key": "Intelligence4",
+          "text": "知性 +(23-27)",
+          "name": "占師の",
+          "tag": "str_int_armour",
+          "generation_type": "suffix",
+          "required_level": 33,
+          "weight": 500
+        },
+        {
+          "key": "Intelligence5",
+          "text": "知性 +(28-32)",
+          "name": "哲学者の",
+          "tag": "str_int_armour",
+          "generation_type": "suffix",
+          "required_level": 44,
+          "weight": 500
+        },
+        {
+          "key": "Intelligence6",
+          "text": "知性 +(33-37)",
+          "name": "賢者の",
+          "tag": "str_int_armour",
+          "generation_type": "suffix",
+          "required_level": 55,
+          "weight": 500
+        },
+        {
+          "key": "Intelligence7",
+          "text": "知性 +(38-42)",
+          "name": "碩学の",
+          "tag": "str_int_armour",
+          "generation_type": "suffix",
+          "required_level": 66,
+          "weight": 500
+        },
+        {
+          "key": "Intelligence8",
+          "text": "知性 +(43-50)",
+          "name": "巨匠の",
+          "tag": "str_int_armour",
+          "generation_type": "suffix",
+          "required_level": 74,
+          "weight": 500
+        },
+        {
+          "key": "Intelligence9",
+          "text": "知性 +(51-55)",
+          "name": "天才の",
+          "tag": "str_int_armour",
+          "generation_type": "suffix",
+          "required_level": 82,
+          "weight": 500
+        }
+      ],
+      "LifeRegeneration": [
+        {
+          "key": "LifeRegeneration1",
+          "text": "毎秒(1-2)のライフを自動回復する",
+          "name": "イモリの",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 1000
+        },
+        {
+          "key": "LifeRegeneration2",
+          "text": "毎秒(2.1-8)のライフを自動回復する",
+          "name": "蜥蜴の",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 7,
+          "weight": 1000
+        },
+        {
+          "key": "LifeRegeneration3",
+          "text": "毎秒(8.1-16)のライフを自動回復する",
+          "name": "平虫の",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 19,
+          "weight": 1000
+        },
+        {
+          "key": "LifeRegeneration4",
+          "text": "毎秒(16.1-24)のライフを自動回復する",
+          "name": "ヒトデの",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 31,
+          "weight": 1000
+        },
+        {
+          "key": "LifeRegeneration5",
+          "text": "毎秒(24.1-32)のライフを自動回復する",
+          "name": "ヒュドラの",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 44,
+          "weight": 1000
+        },
+        {
+          "key": "LifeRegeneration6",
+          "text": "毎秒(32.1-48)のライフを自動回復する",
+          "name": "トロルの",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 55,
+          "weight": 1000
+        },
+        {
+          "key": "LifeRegeneration7",
+          "text": "毎秒(48.1-64)のライフを自動回復する",
+          "name": "リスラーサの",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 68,
+          "weight": 1000
+        },
+        {
+          "key": "LifeRegeneration8_",
+          "text": "毎秒(64.1-96)のライフを自動回復する",
+          "name": "不死鳥の",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 74,
+          "weight": 1000
+        },
+        {
+          "key": "LifeRegeneration9",
+          "text": "毎秒(96.1-128)のライフを自動回復する",
+          "name": "療養の",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 78,
+          "weight": 1000
+        },
+        {
+          "key": "LifeRegeneration10__",
+          "text": "毎秒(128.1-152)のライフを自動回復する",
+          "name": "命の",
+          "tag": "body_armour",
+          "generation_type": "suffix",
+          "required_level": 83,
+          "weight": 1000
+        },
+        {
+          "key": "LifeRegeneration11____",
+          "text": "毎秒(152.1-176)のライフを自動回復する",
+          "name": "再起の",
+          "tag": "body_armour",
+          "generation_type": "suffix",
+          "required_level": 86,
+          "weight": 1000
+        }
+      ],
+      "LifeRegenerationRate": [
+        {
+          "key": "LifeRegenerationRate1",
+          "text": "ライフ自動回復レートが(9-11)%増加する",
+          "name": "心の",
+          "tag": "str_int_armour",
+          "generation_type": "suffix",
+          "required_level": 46,
+          "weight": 500
+        },
+        {
+          "key": "LifeRegenerationRate2",
+          "text": "ライフ自動回復レートが(12-14)%増加する",
+          "name": "永久の",
+          "tag": "str_int_armour",
+          "generation_type": "suffix",
+          "required_level": 57,
+          "weight": 500
+        },
+        {
+          "key": "LifeRegenerationRate3",
+          "text": "ライフ自動回復レートが(15-17)%増加する",
+          "name": "活力の",
+          "tag": "str_int_armour",
+          "generation_type": "suffix",
+          "required_level": 68,
+          "weight": 500
+        },
+        {
+          "key": "LifeRegenerationRate4",
+          "text": "ライフ自動回復レートが(18-19)%増加する",
+          "name": "若さの",
+          "tag": "str_int_armour",
+          "generation_type": "suffix",
+          "required_level": 76,
+          "weight": 500
+        },
+        {
+          "key": "LifeRegenerationRate5",
+          "text": "ライフ自動回復レートが(20-21)%増加する",
+          "name": "悠久の",
+          "tag": "str_int_armour",
+          "generation_type": "suffix",
+          "required_level": 85,
+          "weight": 500
+        }
+      ],
       "LightningResistance": [
         {
           "key": "LightningResist1",
@@ -1093,124 +1273,12 @@
           "weight": 1000
         }
       ],
-      "ChaosResistance": [
-        {
-          "key": "ChaosResist1",
-          "text": "混沌耐性 +(5-10)%",
-          "name": "迷い子の",
-          "tag": "armour",
-          "generation_type": "suffix",
-          "required_level": 16,
-          "weight": 250
-        },
-        {
-          "key": "ChaosResist2",
-          "text": "混沌耐性 +(11-15)%",
-          "name": "流刑の",
-          "tag": "armour",
-          "generation_type": "suffix",
-          "required_level": 30,
-          "weight": 250
-        },
-        {
-          "key": "ChaosResist3",
-          "text": "混沌耐性 +(16-20)%",
-          "name": "排出の",
-          "tag": "armour",
-          "generation_type": "suffix",
-          "required_level": 44,
-          "weight": 250
-        },
-        {
-          "key": "ChaosResist4",
-          "text": "混沌耐性 +(21-25)%",
-          "name": "排除の",
-          "tag": "armour",
-          "generation_type": "suffix",
-          "required_level": 56,
-          "weight": 250
-        },
-        {
-          "key": "ChaosResist5",
-          "text": "混沌耐性 +(26-30)%",
-          "name": "追放の",
-          "tag": "armour",
-          "generation_type": "suffix",
-          "required_level": 65,
-          "weight": 250
-        },
-        {
-          "key": "ChaosResist6",
-          "text": "混沌耐性 +(31-35)%",
-          "name": "バメスの",
-          "tag": "armour",
-          "generation_type": "suffix",
-          "required_level": 81,
-          "weight": 250
-        }
-      ],
-      "StunRecovery": [
-        {
-          "key": "StunRecovery1",
-          "text": "スタンおよびブロック復帰が(11-13)%増加する",
-          "name": "厚い肌の",
-          "tag": "gloves",
-          "generation_type": "suffix",
-          "required_level": 1,
-          "weight": 1000
-        },
-        {
-          "key": "StunRecovery2",
-          "text": "スタンおよびブロック復帰が(14-16)%増加する",
-          "name": "石の肌の",
-          "tag": "gloves",
-          "generation_type": "suffix",
-          "required_level": 17,
-          "weight": 1000
-        },
-        {
-          "key": "StunRecovery3",
-          "text": "スタンおよびブロック復帰が(17-19)%増加する",
-          "name": "鉄の肌の",
-          "tag": "gloves",
-          "generation_type": "suffix",
-          "required_level": 28,
-          "weight": 1000
-        },
-        {
-          "key": "StunRecovery4",
-          "text": "スタンおよびブロック復帰が(20-22)%増加する",
-          "name": "鋼鉄の肌の",
-          "tag": "gloves",
-          "generation_type": "suffix",
-          "required_level": 42,
-          "weight": 1000
-        },
-        {
-          "key": "StunRecovery5",
-          "text": "スタンおよびブロック復帰が(23-25)%増加する",
-          "name": "アダマンタイトの肌の",
-          "tag": "gloves",
-          "generation_type": "suffix",
-          "required_level": 56,
-          "weight": 1000
-        },
-        {
-          "key": "StunRecovery6",
-          "text": "スタンおよびブロック復帰が(26-28)%増加する",
-          "name": "コランダムの肌の",
-          "tag": "gloves",
-          "generation_type": "suffix",
-          "required_level": 79,
-          "weight": 1000
-        }
-      ],
       "LocalAttributeRequirements": [
         {
           "key": "ReducedLocalAttributeRequirements1",
           "text": "要求能力値が18%減少する",
           "name": "相応しき者の",
-          "tag": "weapon",
+          "tag": "body_armour",
           "generation_type": "suffix",
           "required_level": 36,
           "weight": 850
@@ -1219,7 +1287,7 @@
           "key": "ReducedLocalAttributeRequirements2",
           "text": "要求能力値が32%減少する",
           "name": "秀才の",
-          "tag": "weapon",
+          "tag": "body_armour",
           "generation_type": "suffix",
           "required_level": 60,
           "weight": 850
@@ -1230,7 +1298,7 @@
           "key": "AdditionalPhysicalDamageReduction1",
           "text": "物理ダメージ軽減率が4%される",
           "name": "見張りの",
-          "tag": "weapon",
+          "tag": "str_int_armour",
           "generation_type": "suffix",
           "required_level": 45,
           "weight": 500
@@ -1239,7 +1307,7 @@
           "key": "AdditionalPhysicalDamageReduction2",
           "text": "物理ダメージ軽減率が5%される",
           "name": "番兵の",
-          "tag": "weapon",
+          "tag": "str_int_armour",
           "generation_type": "suffix",
           "required_level": 58,
           "weight": 500
@@ -1248,7 +1316,7 @@
           "key": "AdditionalPhysicalDamageReduction3",
           "text": "物理ダメージ軽減率が6%される",
           "name": "番人の",
-          "tag": "weapon",
+          "tag": "str_int_armour",
           "generation_type": "suffix",
           "required_level": 67,
           "weight": 500
@@ -1257,7 +1325,7 @@
           "key": "AdditionalPhysicalDamageReduction4",
           "text": "物理ダメージ軽減率が7%される",
           "name": "守り人の",
-          "tag": "weapon",
+          "tag": "str_int_armour",
           "generation_type": "suffix",
           "required_level": 77,
           "weight": 500
@@ -1266,57 +1334,149 @@
           "key": "AdditionalPhysicalDamageReduction5_",
           "text": "物理ダメージ軽減率が8%される",
           "name": "保護する者の",
-          "tag": "weapon",
+          "tag": "str_int_armour",
           "generation_type": "suffix",
           "required_level": 86,
           "weight": 500
         }
       ],
-      "EnergyShieldDelay": [
+      "Strength": [
         {
-          "key": "FasterStartEnergyShieldRecharge1",
-          "text": "エナジーシールドのリチャージが(27-34)%速く始まる",
-          "name": "英気の",
-          "tag": "weapon",
+          "key": "Strength1",
+          "text": "筋力 +(8-12)",
+          "name": "蛮人の",
+          "tag": "str_int_armour",
           "generation_type": "suffix",
-          "required_level": 45,
+          "required_level": 1,
           "weight": 500
         },
         {
-          "key": "FasterStartEnergyShieldRecharge2",
-          "text": "エナジーシールドのリチャージが(35-42)%速く始まる",
-          "name": "気力の",
-          "tag": "weapon",
+          "key": "Strength2",
+          "text": "筋力 +(13-17)",
+          "name": "レスラーの",
+          "tag": "str_int_armour",
           "generation_type": "suffix",
-          "required_level": 58,
+          "required_level": 11,
           "weight": 500
         },
         {
-          "key": "FasterStartEnergyShieldRecharge3__",
-          "text": "エナジーシールドのリチャージが(43-50)%速く始まる",
-          "name": "激励の",
-          "tag": "weapon",
+          "key": "Strength3",
+          "text": "筋力 +(18-22)",
+          "name": "熊の",
+          "tag": "str_int_armour",
           "generation_type": "suffix",
-          "required_level": 67,
+          "required_level": 22,
           "weight": 500
         },
         {
-          "key": "FasterStartEnergyShieldRecharge4",
-          "text": "エナジーシールドのリチャージが(51-58)%速く始まる",
-          "name": "元気の",
-          "tag": "weapon",
+          "key": "Strength4",
+          "text": "筋力 +(23-27)",
+          "name": "ライオンの",
+          "tag": "str_int_armour",
           "generation_type": "suffix",
-          "required_level": 77,
+          "required_level": 33,
           "weight": 500
         },
         {
-          "key": "FasterStartEnergyShieldRecharge5_",
-          "text": "エナジーシールドのリチャージが(59-66)%速く始まる",
-          "name": "持ち直しの",
-          "tag": "weapon",
+          "key": "Strength5",
+          "text": "筋力 +(28-32)",
+          "name": "ゴリラの",
+          "tag": "str_int_armour",
           "generation_type": "suffix",
-          "required_level": 86,
+          "required_level": 44,
           "weight": 500
+        },
+        {
+          "key": "Strength6",
+          "text": "筋力 +(33-37)",
+          "name": "巨躯の",
+          "tag": "str_int_armour",
+          "generation_type": "suffix",
+          "required_level": 55,
+          "weight": 500
+        },
+        {
+          "key": "Strength7",
+          "text": "筋力 +(38-42)",
+          "name": "リヴァイアサンの",
+          "tag": "str_int_armour",
+          "generation_type": "suffix",
+          "required_level": 66,
+          "weight": 500
+        },
+        {
+          "key": "Strength8",
+          "text": "筋力 +(43-50)",
+          "name": "タイタンの",
+          "tag": "str_int_armour",
+          "generation_type": "suffix",
+          "required_level": 74,
+          "weight": 500
+        },
+        {
+          "key": "Strength9",
+          "text": "筋力 +(51-55)",
+          "name": "神々の",
+          "tag": "str_int_armour",
+          "generation_type": "suffix",
+          "required_level": 82,
+          "weight": 500
+        }
+      ],
+      "StunRecovery": [
+        {
+          "key": "StunRecovery1",
+          "text": "スタンおよびブロック復帰が(11-13)%増加する",
+          "name": "厚い肌の",
+          "tag": "armour",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 1000
+        },
+        {
+          "key": "StunRecovery2",
+          "text": "スタンおよびブロック復帰が(14-16)%増加する",
+          "name": "石の肌の",
+          "tag": "armour",
+          "generation_type": "suffix",
+          "required_level": 17,
+          "weight": 1000
+        },
+        {
+          "key": "StunRecovery3",
+          "text": "スタンおよびブロック復帰が(17-19)%増加する",
+          "name": "鉄の肌の",
+          "tag": "armour",
+          "generation_type": "suffix",
+          "required_level": 28,
+          "weight": 1000
+        },
+        {
+          "key": "StunRecovery4",
+          "text": "スタンおよびブロック復帰が(20-22)%増加する",
+          "name": "鋼鉄の肌の",
+          "tag": "armour",
+          "generation_type": "suffix",
+          "required_level": 42,
+          "weight": 1000
+        },
+        {
+          "key": "StunRecovery5",
+          "text": "スタンおよびブロック復帰が(23-25)%増加する",
+          "name": "アダマンタイトの肌の",
+          "tag": "armour",
+          "generation_type": "suffix",
+          "required_level": 56,
+          "weight": 1000
+        },
+        {
+          "key": "StunRecovery6",
+          "text": "スタンおよびブロック復帰が(26-28)%増加する",
+          "name": "コランダムの肌の",
+          "tag": "armour",
+          "generation_type": "suffix",
+          "required_level": 79,
+          "weight": 1000
         }
       ]
     }

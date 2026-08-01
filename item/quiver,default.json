@@ -21,261 +21,14 @@
   ],
   "mods": {
     "prefix": {
-      "IncreasedLife": [
+      "ChaosDamage": [
         {
-          "key": "IncreasedLife0",
-          "text": "最大ライフ +(3-9)",
-          "name": "強健な",
-          "tag": "fishing_rod",
-          "generation_type": "prefix",
-          "required_level": 1,
-          "weight": 1000
-        },
-        {
-          "key": "IncreasedLife1",
-          "text": "最大ライフ +(10-24)",
-          "name": "健康な",
-          "tag": "fishing_rod",
-          "generation_type": "prefix",
-          "required_level": 5,
-          "weight": 1000
-        },
-        {
-          "key": "IncreasedLife2",
-          "text": "最大ライフ +(25-39)",
-          "name": "血色良い",
-          "tag": "fishing_rod",
-          "generation_type": "prefix",
-          "required_level": 11,
-          "weight": 1000
-        },
-        {
-          "key": "IncreasedLife3",
-          "text": "最大ライフ +(40-54)",
-          "name": "屈強な",
-          "tag": "fishing_rod",
-          "generation_type": "prefix",
-          "required_level": 18,
-          "weight": 1000
-        },
-        {
-          "key": "IncreasedLife4",
-          "text": "最大ライフ +(55-69)",
-          "name": "頑強な",
-          "tag": "fishing_rod",
-          "generation_type": "prefix",
-          "required_level": 24,
-          "weight": 1000
-        },
-        {
-          "key": "IncreasedLife5",
-          "text": "最大ライフ +(70-84)",
-          "name": "頑健な",
-          "tag": "fishing_rod",
-          "generation_type": "prefix",
-          "required_level": 30,
-          "weight": 1000
-        },
-        {
-          "key": "IncreasedLife6",
-          "text": "最大ライフ +(85-99)",
-          "name": "丸々とした",
-          "tag": "fishing_rod",
-          "generation_type": "prefix",
-          "required_level": 36,
-          "weight": 1000
-        },
-        {
-          "key": "IncreasedLife7",
-          "text": "最大ライフ +(100-114)",
-          "name": "雄健な",
-          "tag": "fishing_rod",
-          "generation_type": "prefix",
-          "required_level": 44,
-          "weight": 1000
-        },
-        {
-          "key": "IncreasedLife8",
-          "text": "最大ライフ +(115-129)",
-          "name": "競技者の",
-          "tag": "fishing_rod",
-          "generation_type": "prefix",
-          "required_level": 54,
-          "weight": 1000
-        },
-        {
-          "key": "IncreasedLife9",
-          "text": "最大ライフ +(130-144)",
-          "name": "豊かな",
-          "tag": "fishing_rod",
-          "generation_type": "prefix",
-          "required_level": 64,
-          "weight": 1000
-        }
-      ],
-      "PhysicalDamage": [
-        {
-          "key": "AddedPhysicalDamageQuiver1",
-          "text": "(1-2)から3の物理ダメージをアタックに追加する",
-          "name": "閃く",
+          "key": "AddedChaosDamageQuiver1",
+          "text": "(27-41)から(55-69)の混沌ダメージをアタックに追加する",
+          "name": "害意ある",
           "tag": "quiver",
           "generation_type": "prefix",
-          "required_level": 5,
-          "weight": 500
-        },
-        {
-          "key": "AddedPhysicalDamageQuiver2",
-          "text": "(3-4)から(6-8)の物理ダメージをアタックに追加する",
-          "name": "艶出しされた",
-          "tag": "quiver",
-          "generation_type": "prefix",
-          "required_level": 13,
-          "weight": 500
-        },
-        {
-          "key": "AddedPhysicalDamageQuiver3",
-          "text": "(5-6)から(9-10)の物理ダメージをアタックに追加する",
-          "name": "磨かれた",
-          "tag": "quiver",
-          "generation_type": "prefix",
-          "required_level": 19,
-          "weight": 500
-        },
-        {
-          "key": "AddedPhysicalDamageQuiver4",
-          "text": "(6-9)から(13-16)の物理ダメージをアタックに追加する",
-          "name": "研ぎ澄まされた",
-          "tag": "quiver",
-          "generation_type": "prefix",
-          "required_level": 28,
-          "weight": 500
-        },
-        {
-          "key": "AddedPhysicalDamageQuiver5",
-          "text": "(8-11)から(16-18)の物理ダメージをアタックに追加する",
-          "name": "光沢帯びた",
-          "tag": "quiver",
-          "generation_type": "prefix",
-          "required_level": 35,
-          "weight": 500
-        },
-        {
-          "key": "AddedPhysicalDamageQuiver6",
-          "text": "(10-13)から(19-23)の物理ダメージをアタックに追加する",
-          "name": "鍛えられた",
-          "tag": "quiver",
-          "generation_type": "prefix",
-          "required_level": 44,
-          "weight": 500
-        },
-        {
-          "key": "AddedPhysicalDamageQuiver7",
-          "text": "(11-16)から(23-26)の物理ダメージをアタックに追加する",
-          "name": "鋭利な",
-          "tag": "quiver",
-          "generation_type": "prefix",
-          "required_level": 52,
-          "weight": 500
-        },
-        {
-          "key": "AddedPhysicalDamageQuiver8",
-          "text": "(14-19)から(28-33)の物理ダメージをアタックに追加する",
-          "name": "鍛錬された",
-          "tag": "quiver",
-          "generation_type": "prefix",
-          "required_level": 64,
-          "weight": 500
-        },
-        {
-          "key": "AddedPhysicalDamageQuiver9",
-          "text": "(17-23)から(34-39)の物理ダメージをアタックに追加する",
-          "name": "猛烈な",
-          "tag": "quiver",
-          "generation_type": "prefix",
-          "required_level": 76,
-          "weight": 500
-        }
-      ],
-      "FireDamage": [
-        {
-          "key": "AddedFireDamageQuiver1",
-          "text": "(1-2)から3の火ダメージをアタックに追加する",
-          "name": "熱した",
-          "tag": "quiver",
-          "generation_type": "prefix",
-          "required_level": 1,
-          "weight": 250
-        },
-        {
-          "key": "AddedFireDamageQuiver2",
-          "text": "(5-7)から(10-12)の火ダメージをアタックに追加する",
-          "name": "燻る",
-          "tag": "quiver",
-          "generation_type": "prefix",
-          "required_level": 12,
-          "weight": 250
-        },
-        {
-          "key": "AddedFireDamageQuiver3",
-          "text": "(8-10)から(15-18)の火ダメージをアタックに追加する",
-          "name": "発煙する",
-          "tag": "quiver",
-          "generation_type": "prefix",
-          "required_level": 20,
-          "weight": 250
-        },
-        {
-          "key": "AddedFireDamageQuiver4",
-          "text": "(11-14)から(21-25)の火ダメージをアタックに追加する",
-          "name": "燃える",
-          "tag": "quiver",
-          "generation_type": "prefix",
-          "required_level": 28,
-          "weight": 250
-        },
-        {
-          "key": "AddedFireDamageQuiver5_",
-          "text": "(13-18)から(27-31)の火ダメージをアタックに追加する",
-          "name": "燃え立つ",
-          "tag": "quiver",
-          "generation_type": "prefix",
-          "required_level": 35,
-          "weight": 250
-        },
-        {
-          "key": "AddedFireDamageQuiver6",
-          "text": "(17-22)から(33-38)の火ダメージをアタックに追加する",
-          "name": "焼き焦がす",
-          "tag": "quiver",
-          "generation_type": "prefix",
-          "required_level": 44,
-          "weight": 250
-        },
-        {
-          "key": "AddedFireDamageQuiver7",
-          "text": "(20-27)から(40-47)の火ダメージをアタックに追加する",
-          "name": "焼却する",
-          "tag": "quiver",
-          "generation_type": "prefix",
-          "required_level": 52,
-          "weight": 250
-        },
-        {
-          "key": "AddedFireDamageQuiver8__",
-          "text": "(27-35)から(53-62)の火ダメージをアタックに追加する",
-          "name": "爆破する",
-          "tag": "quiver",
-          "generation_type": "prefix",
-          "required_level": 64,
-          "weight": 250
-        },
-        {
-          "key": "AddedFireDamageQuiver9",
-          "text": "(37-50)から(74-87)の火ダメージをアタックに追加する",
-          "name": "火葬する",
-          "tag": "quiver",
-          "generation_type": "prefix",
-          "required_level": 76,
+          "required_level": 83,
           "weight": 125
         }
       ],
@@ -362,6 +115,237 @@
           "weight": 125
         }
       ],
+      "DamageWithBowSkills": [
+        {
+          "key": "DamageWithBowSkills1",
+          "text": "弓スキルのダメージが(5-10)%増加する",
+          "name": "尖鋭な",
+          "tag": "quiver",
+          "generation_type": "prefix",
+          "required_level": 4,
+          "weight": 1000
+        },
+        {
+          "key": "DamageWithBowSkills2",
+          "text": "弓スキルのダメージが(11-20)%増加する",
+          "name": "鋭い",
+          "tag": "quiver",
+          "generation_type": "prefix",
+          "required_level": 15,
+          "weight": 1000
+        },
+        {
+          "key": "DamageWithBowSkills3",
+          "text": "弓スキルのダメージが(21-30)%増加する",
+          "name": "穿つ",
+          "tag": "quiver",
+          "generation_type": "prefix",
+          "required_level": 30,
+          "weight": 1000
+        },
+        {
+          "key": "DamageWithBowSkills4_",
+          "text": "弓スキルのダメージが(31-36)%増加する",
+          "name": "切り込む",
+          "tag": "quiver",
+          "generation_type": "prefix",
+          "required_level": 60,
+          "weight": 1000
+        },
+        {
+          "key": "DamageWithBowSkills5",
+          "text": "弓スキルのダメージが(37-42)%増加する",
+          "name": "切り裂く",
+          "tag": "quiver",
+          "generation_type": "prefix",
+          "required_level": 81,
+          "weight": 1000
+        },
+        {
+          "key": "DamageWithBowSkills6_",
+          "text": "弓スキルのダメージが(43-50)%増加する",
+          "name": "串刺す",
+          "tag": "quiver",
+          "generation_type": "prefix",
+          "required_level": 86,
+          "weight": 1000
+        }
+      ],
+      "FireDamage": [
+        {
+          "key": "AddedFireDamageQuiver1",
+          "text": "(1-2)から3の火ダメージをアタックに追加する",
+          "name": "熱した",
+          "tag": "quiver",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 250
+        },
+        {
+          "key": "AddedFireDamageQuiver2",
+          "text": "(5-7)から(10-12)の火ダメージをアタックに追加する",
+          "name": "燻る",
+          "tag": "quiver",
+          "generation_type": "prefix",
+          "required_level": 12,
+          "weight": 250
+        },
+        {
+          "key": "AddedFireDamageQuiver3",
+          "text": "(8-10)から(15-18)の火ダメージをアタックに追加する",
+          "name": "発煙する",
+          "tag": "quiver",
+          "generation_type": "prefix",
+          "required_level": 20,
+          "weight": 250
+        },
+        {
+          "key": "AddedFireDamageQuiver4",
+          "text": "(11-14)から(21-25)の火ダメージをアタックに追加する",
+          "name": "燃える",
+          "tag": "quiver",
+          "generation_type": "prefix",
+          "required_level": 28,
+          "weight": 250
+        },
+        {
+          "key": "AddedFireDamageQuiver5_",
+          "text": "(13-18)から(27-31)の火ダメージをアタックに追加する",
+          "name": "燃え立つ",
+          "tag": "quiver",
+          "generation_type": "prefix",
+          "required_level": 35,
+          "weight": 250
+        },
+        {
+          "key": "AddedFireDamageQuiver6",
+          "text": "(17-22)から(33-38)の火ダメージをアタックに追加する",
+          "name": "焼き焦がす",
+          "tag": "quiver",
+          "generation_type": "prefix",
+          "required_level": 44,
+          "weight": 250
+        },
+        {
+          "key": "AddedFireDamageQuiver7",
+          "text": "(20-27)から(40-47)の火ダメージをアタックに追加する",
+          "name": "焼却する",
+          "tag": "quiver",
+          "generation_type": "prefix",
+          "required_level": 52,
+          "weight": 250
+        },
+        {
+          "key": "AddedFireDamageQuiver8__",
+          "text": "(27-35)から(53-62)の火ダメージをアタックに追加する",
+          "name": "爆破する",
+          "tag": "quiver",
+          "generation_type": "prefix",
+          "required_level": 64,
+          "weight": 250
+        },
+        {
+          "key": "AddedFireDamageQuiver9",
+          "text": "(37-50)から(74-87)の火ダメージをアタックに追加する",
+          "name": "火葬する",
+          "tag": "quiver",
+          "generation_type": "prefix",
+          "required_level": 76,
+          "weight": 125
+        }
+      ],
+      "IncreasedLife": [
+        {
+          "key": "IncreasedLife0",
+          "text": "最大ライフ +(3-9)",
+          "name": "強健な",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 1000
+        },
+        {
+          "key": "IncreasedLife1",
+          "text": "最大ライフ +(10-24)",
+          "name": "健康な",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 5,
+          "weight": 1000
+        },
+        {
+          "key": "IncreasedLife2",
+          "text": "最大ライフ +(25-39)",
+          "name": "血色良い",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 11,
+          "weight": 1000
+        },
+        {
+          "key": "IncreasedLife3",
+          "text": "最大ライフ +(40-54)",
+          "name": "屈強な",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 18,
+          "weight": 1000
+        },
+        {
+          "key": "IncreasedLife4",
+          "text": "最大ライフ +(55-69)",
+          "name": "頑強な",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 24,
+          "weight": 1000
+        },
+        {
+          "key": "IncreasedLife5",
+          "text": "最大ライフ +(70-84)",
+          "name": "頑健な",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 30,
+          "weight": 1000
+        },
+        {
+          "key": "IncreasedLife6",
+          "text": "最大ライフ +(85-99)",
+          "name": "丸々とした",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 36,
+          "weight": 1000
+        },
+        {
+          "key": "IncreasedLife7",
+          "text": "最大ライフ +(100-114)",
+          "name": "雄健な",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 44,
+          "weight": 1000
+        },
+        {
+          "key": "IncreasedLife8",
+          "text": "最大ライフ +(115-129)",
+          "name": "競技者の",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 54,
+          "weight": 1000
+        },
+        {
+          "key": "IncreasedLife9",
+          "text": "最大ライフ +(130-144)",
+          "name": "豊かな",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 64,
+          "weight": 1000
+        }
+      ],
       "LightningDamage": [
         {
           "key": "AddedLightningDamageQuiver1",
@@ -445,289 +429,229 @@
           "weight": 125
         }
       ],
-      "ChaosDamage": [
+      "PhysicalDamage": [
         {
-          "key": "AddedChaosDamageQuiver1",
-          "text": "(27-41)から(55-69)の混沌ダメージをアタックに追加する",
-          "name": "害意ある",
+          "key": "AddedPhysicalDamageQuiver1",
+          "text": "(1-2)から3の物理ダメージをアタックに追加する",
+          "name": "閃く",
           "tag": "quiver",
           "generation_type": "prefix",
-          "required_level": 83,
-          "weight": 125
-        }
-      ],
-      "DamageWithBowSkills": [
-        {
-          "key": "DamageWithBowSkills1",
-          "text": "弓スキルのダメージが(5-10)%増加する",
-          "name": "尖鋭な",
-          "tag": "quiver",
-          "generation_type": "prefix",
-          "required_level": 4,
-          "weight": 1000
+          "required_level": 5,
+          "weight": 500
         },
         {
-          "key": "DamageWithBowSkills2",
-          "text": "弓スキルのダメージが(11-20)%増加する",
-          "name": "鋭い",
+          "key": "AddedPhysicalDamageQuiver2",
+          "text": "(3-4)から(6-8)の物理ダメージをアタックに追加する",
+          "name": "艶出しされた",
           "tag": "quiver",
           "generation_type": "prefix",
-          "required_level": 15,
-          "weight": 1000
+          "required_level": 13,
+          "weight": 500
         },
         {
-          "key": "DamageWithBowSkills3",
-          "text": "弓スキルのダメージが(21-30)%増加する",
-          "name": "穿つ",
+          "key": "AddedPhysicalDamageQuiver3",
+          "text": "(5-6)から(9-10)の物理ダメージをアタックに追加する",
+          "name": "磨かれた",
           "tag": "quiver",
           "generation_type": "prefix",
-          "required_level": 30,
-          "weight": 1000
+          "required_level": 19,
+          "weight": 500
         },
         {
-          "key": "DamageWithBowSkills4_",
-          "text": "弓スキルのダメージが(31-36)%増加する",
-          "name": "切り込む",
+          "key": "AddedPhysicalDamageQuiver4",
+          "text": "(6-9)から(13-16)の物理ダメージをアタックに追加する",
+          "name": "研ぎ澄まされた",
           "tag": "quiver",
           "generation_type": "prefix",
-          "required_level": 60,
-          "weight": 1000
+          "required_level": 28,
+          "weight": 500
         },
         {
-          "key": "DamageWithBowSkills5",
-          "text": "弓スキルのダメージが(37-42)%増加する",
-          "name": "切り裂く",
+          "key": "AddedPhysicalDamageQuiver5",
+          "text": "(8-11)から(16-18)の物理ダメージをアタックに追加する",
+          "name": "光沢帯びた",
           "tag": "quiver",
           "generation_type": "prefix",
-          "required_level": 81,
-          "weight": 1000
+          "required_level": 35,
+          "weight": 500
         },
         {
-          "key": "DamageWithBowSkills6_",
-          "text": "弓スキルのダメージが(43-50)%増加する",
-          "name": "串刺す",
+          "key": "AddedPhysicalDamageQuiver6",
+          "text": "(10-13)から(19-23)の物理ダメージをアタックに追加する",
+          "name": "鍛えられた",
           "tag": "quiver",
           "generation_type": "prefix",
-          "required_level": 86,
-          "weight": 1000
+          "required_level": 44,
+          "weight": 500
+        },
+        {
+          "key": "AddedPhysicalDamageQuiver7",
+          "text": "(11-16)から(23-26)の物理ダメージをアタックに追加する",
+          "name": "鋭利な",
+          "tag": "quiver",
+          "generation_type": "prefix",
+          "required_level": 52,
+          "weight": 500
+        },
+        {
+          "key": "AddedPhysicalDamageQuiver8",
+          "text": "(14-19)から(28-33)の物理ダメージをアタックに追加する",
+          "name": "鍛錬された",
+          "tag": "quiver",
+          "generation_type": "prefix",
+          "required_level": 64,
+          "weight": 500
+        },
+        {
+          "key": "AddedPhysicalDamageQuiver9",
+          "text": "(17-23)から(34-39)の物理ダメージをアタックに追加する",
+          "name": "猛烈な",
+          "tag": "quiver",
+          "generation_type": "prefix",
+          "required_level": 76,
+          "weight": 500
         }
       ]
     },
     "suffix": {
-      "Dexterity": [
+      "AdditionalArrows": [
         {
-          "key": "Dexterity1",
-          "text": "器用さ +(8-12)",
-          "name": "マングースの",
-          "tag": "ring",
+          "key": "AdditionalArrowQuiver1_",
+          "text": "弓によるアタックは矢を追加で1本放つ",
+          "name": "枝分かれの",
+          "tag": "quiver",
           "generation_type": "suffix",
-          "required_level": 1,
-          "weight": 1000
+          "required_level": 70,
+          "weight": 250
+        }
+      ],
+      "ChaosResistance": [
+        {
+          "key": "ChaosResist1",
+          "text": "混沌耐性 +(5-10)%",
+          "name": "迷い子の",
+          "tag": "quiver",
+          "generation_type": "suffix",
+          "required_level": 16,
+          "weight": 250
         },
         {
-          "key": "Dexterity2",
-          "text": "器用さ +(13-17)",
-          "name": "リンクスの",
-          "tag": "ring",
+          "key": "ChaosResist2",
+          "text": "混沌耐性 +(11-15)%",
+          "name": "流刑の",
+          "tag": "quiver",
           "generation_type": "suffix",
-          "required_level": 11,
-          "weight": 1000
+          "required_level": 30,
+          "weight": 250
         },
         {
-          "key": "Dexterity3",
-          "text": "器用さ +(18-22)",
-          "name": "狐の",
-          "tag": "ring",
-          "generation_type": "suffix",
-          "required_level": 22,
-          "weight": 1000
-        },
-        {
-          "key": "Dexterity4",
-          "text": "器用さ +(23-27)",
-          "name": "隼の",
-          "tag": "ring",
-          "generation_type": "suffix",
-          "required_level": 33,
-          "weight": 1000
-        },
-        {
-          "key": "Dexterity5",
-          "text": "器用さ +(28-32)",
-          "name": "豹の",
-          "tag": "ring",
+          "key": "ChaosResist3",
+          "text": "混沌耐性 +(16-20)%",
+          "name": "排出の",
+          "tag": "quiver",
           "generation_type": "suffix",
           "required_level": 44,
-          "weight": 1000
+          "weight": 250
         },
         {
-          "key": "Dexterity6",
-          "text": "器用さ +(33-37)",
-          "name": "豹の",
-          "tag": "ring",
+          "key": "ChaosResist4",
+          "text": "混沌耐性 +(21-25)%",
+          "name": "排除の",
+          "tag": "quiver",
           "generation_type": "suffix",
-          "required_level": 55,
-          "weight": 1000
+          "required_level": 56,
+          "weight": 250
         },
         {
-          "key": "Dexterity7",
-          "text": "器用さ +(38-42)",
-          "name": "ジャガーの",
-          "tag": "ring",
+          "key": "ChaosResist5",
+          "text": "混沌耐性 +(26-30)%",
+          "name": "追放の",
+          "tag": "quiver",
           "generation_type": "suffix",
-          "required_level": 66,
-          "weight": 1000
+          "required_level": 65,
+          "weight": 250
         },
         {
-          "key": "Dexterity8",
-          "text": "器用さ +(43-50)",
-          "name": "幻像の",
-          "tag": "ring",
+          "key": "ChaosResist6",
+          "text": "混沌耐性 +(31-35)%",
+          "name": "バメスの",
+          "tag": "quiver",
           "generation_type": "suffix",
-          "required_level": 74,
-          "weight": 1000
-        },
-        {
-          "key": "Dexterity9",
-          "text": "器用さ +(51-55)",
-          "name": "風の",
-          "tag": "ring",
-          "generation_type": "suffix",
-          "required_level": 82,
-          "weight": 1000
-        },
-        {
-          "key": "Dexterity10",
-          "text": "器用さ +(56-60)",
-          "name": "残像の",
-          "tag": "gloves",
-          "generation_type": "suffix",
-          "required_level": 85,
-          "weight": 1000
+          "required_level": 81,
+          "weight": 250
         }
       ],
-      "LifeLeechPermyriad": [
+      "ColdResistance": [
         {
-          "key": "LifeLeechPermyriadSuffix1",
-          "text": "物理アタックダメージの(0.2-0.4)%をライフとしてリーチする",
-          "name": "コバンザメの",
-          "tag": "ring",
+          "key": "ColdResist1",
+          "text": "冷気耐性 +(6-11)%",
+          "name": "イヌイットの",
+          "tag": "quiver",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 1000
+        },
+        {
+          "key": "ColdResist2",
+          "text": "冷気耐性 +(12-17)%",
+          "name": "アシカの",
+          "tag": "quiver",
+          "generation_type": "suffix",
+          "required_level": 14,
+          "weight": 1000
+        },
+        {
+          "key": "ColdResist3",
+          "text": "冷気耐性 +(18-23)%",
+          "name": "ペンギンの",
+          "tag": "quiver",
+          "generation_type": "suffix",
+          "required_level": 26,
+          "weight": 1000
+        },
+        {
+          "key": "ColdResist4",
+          "text": "冷気耐性 +(24-29)%",
+          "name": "イエティの",
+          "tag": "quiver",
+          "generation_type": "suffix",
+          "required_level": 38,
+          "weight": 1000
+        },
+        {
+          "key": "ColdResist5",
+          "text": "冷気耐性 +(30-35)%",
+          "name": "セイウチの",
+          "tag": "quiver",
           "generation_type": "suffix",
           "required_level": 50,
           "weight": 1000
-        }
-      ],
-      "ManaLeechPermyriad": [
-        {
-          "key": "ManaLeechPermyriadSuffix1",
-          "text": "物理アタックダメージの(0.2-0.4)%をマナとしてリーチする",
-          "name": "渇きの",
-          "tag": "ring",
-          "generation_type": "suffix",
-          "required_level": 50,
-          "weight": 1000
-        }
-      ],
-      "IncreasedAttackSpeed": [
-        {
-          "key": "IncreasedAttackSpeed1",
-          "text": "アタックスピードが(5-7)%増加する",
-          "name": "技術の",
-          "tag": "ring",
-          "generation_type": "suffix",
-          "required_level": 1,
-          "weight": 500
         },
         {
-          "key": "IncreasedAttackSpeed2",
-          "text": "アタックスピードが(8-10)%増加する",
-          "name": "容易さの",
-          "tag": "gloves",
-          "generation_type": "suffix",
-          "required_level": 11,
-          "weight": 500
-        },
-        {
-          "key": "IncreasedAttackSpeed2Royale",
-          "text": "アタックスピードが(8-15)%増加する",
-          "name": "手軽さの",
-          "tag": "gloves",
-          "generation_type": "suffix",
-          "required_level": 4,
-          "weight": 500
-        },
-        {
-          "key": "IncreasedAttackSpeed3",
-          "text": "アタックスピードが(11-13)%増加する",
-          "name": "熟達の",
-          "tag": "gloves",
-          "generation_type": "suffix",
-          "required_level": 22,
-          "weight": 500
-        },
-        {
-          "key": "IncreasedAttackSpeed4",
-          "text": "アタックスピードが(14-16)%増加する",
-          "name": "師範級の",
-          "tag": "gloves",
-          "generation_type": "suffix",
-          "required_level": 76,
-          "weight": 500
-        }
-      ],
-      "IncreasedAccuracy": [
-        {
-          "key": "IncreasedAccuracyNew1_",
-          "text": "命中力 +(50-100)",
-          "name": "着実さの",
-          "tag": "gloves",
-          "generation_type": "suffix",
-          "required_level": 1,
-          "weight": 600
-        },
-        {
-          "key": "IncreasedAccuracyNew2",
-          "text": "命中力 +(100-165)",
-          "name": "精密さの",
-          "tag": "gloves",
-          "generation_type": "suffix",
-          "required_level": 20,
-          "weight": 1000
-        },
-        {
-          "key": "IncreasedAccuracyNew3",
-          "text": "命中力 +(166-250)",
-          "name": "狙撃手の",
-          "tag": "gloves",
-          "generation_type": "suffix",
-          "required_level": 40,
-          "weight": 1000
-        },
-        {
-          "key": "IncreasedAccuracyNew4",
-          "text": "命中力 +(251-350)",
-          "name": "射手の",
-          "tag": "gloves",
+          "key": "ColdResist6",
+          "text": "冷気耐性 +(36-41)%",
+          "name": "ホッキョクグマの",
+          "tag": "quiver",
           "generation_type": "suffix",
           "required_level": 60,
           "weight": 1000
         },
         {
-          "key": "IncreasedAccuracyNew5_",
-          "text": "命中力 +(351-480)",
-          "name": "レンジャーの",
-          "tag": "gloves",
+          "key": "ColdResist7",
+          "text": "冷気耐性 +(42-45)%",
+          "name": "氷の",
+          "tag": "quiver",
           "generation_type": "suffix",
-          "required_level": 75,
+          "required_level": 72,
           "weight": 1000
         },
         {
-          "key": "IncreasedAccuracyNew6",
-          "text": "命中力 +(481-600)",
-          "name": "ライオンアイの",
-          "tag": "gloves",
+          "key": "ColdResist8",
+          "text": "冷気耐性 +(46-48)%",
+          "name": "ハーストの",
+          "tag": "quiver",
           "generation_type": "suffix",
-          "required_level": 85,
+          "required_level": 84,
           "weight": 1000
         }
       ],
@@ -796,284 +720,6 @@
           "weight": 1000
         }
       ],
-      "FireResistance": [
-        {
-          "key": "FireResist1",
-          "text": "火耐性 +(6-11)%",
-          "name": "仔竜の",
-          "tag": "armour",
-          "generation_type": "suffix",
-          "required_level": 1,
-          "weight": 1000
-        },
-        {
-          "key": "FireResist2",
-          "text": "火耐性 +(12-17)%",
-          "name": "サラマンダーの",
-          "tag": "armour",
-          "generation_type": "suffix",
-          "required_level": 12,
-          "weight": 1000
-        },
-        {
-          "key": "FireResist3",
-          "text": "火耐性 +(18-23)%",
-          "name": "ドレイクの",
-          "tag": "armour",
-          "generation_type": "suffix",
-          "required_level": 24,
-          "weight": 1000
-        },
-        {
-          "key": "FireResist4",
-          "text": "火耐性 +(24-29)%",
-          "name": "窯の",
-          "tag": "armour",
-          "generation_type": "suffix",
-          "required_level": 36,
-          "weight": 1000
-        },
-        {
-          "key": "FireResist5",
-          "text": "火耐性 +(30-35)%",
-          "name": "炉の",
-          "tag": "armour",
-          "generation_type": "suffix",
-          "required_level": 48,
-          "weight": 1000
-        },
-        {
-          "key": "FireResist6",
-          "text": "火耐性 +(36-41)%",
-          "name": "火山の",
-          "tag": "armour",
-          "generation_type": "suffix",
-          "required_level": 60,
-          "weight": 1000
-        },
-        {
-          "key": "FireResist7",
-          "text": "火耐性 +(42-45)%",
-          "name": "マグマの",
-          "tag": "armour",
-          "generation_type": "suffix",
-          "required_level": 72,
-          "weight": 1000
-        },
-        {
-          "key": "FireResist8",
-          "text": "火耐性 +(46-48)%",
-          "name": "ツティオシュの",
-          "tag": "armour",
-          "generation_type": "suffix",
-          "required_level": 84,
-          "weight": 1000
-        }
-      ],
-      "ColdResistance": [
-        {
-          "key": "ColdResist1",
-          "text": "冷気耐性 +(6-11)%",
-          "name": "イヌイットの",
-          "tag": "armour",
-          "generation_type": "suffix",
-          "required_level": 1,
-          "weight": 1000
-        },
-        {
-          "key": "ColdResist2",
-          "text": "冷気耐性 +(12-17)%",
-          "name": "アシカの",
-          "tag": "armour",
-          "generation_type": "suffix",
-          "required_level": 14,
-          "weight": 1000
-        },
-        {
-          "key": "ColdResist3",
-          "text": "冷気耐性 +(18-23)%",
-          "name": "ペンギンの",
-          "tag": "armour",
-          "generation_type": "suffix",
-          "required_level": 26,
-          "weight": 1000
-        },
-        {
-          "key": "ColdResist4",
-          "text": "冷気耐性 +(24-29)%",
-          "name": "イエティの",
-          "tag": "armour",
-          "generation_type": "suffix",
-          "required_level": 38,
-          "weight": 1000
-        },
-        {
-          "key": "ColdResist5",
-          "text": "冷気耐性 +(30-35)%",
-          "name": "セイウチの",
-          "tag": "armour",
-          "generation_type": "suffix",
-          "required_level": 50,
-          "weight": 1000
-        },
-        {
-          "key": "ColdResist6",
-          "text": "冷気耐性 +(36-41)%",
-          "name": "ホッキョクグマの",
-          "tag": "armour",
-          "generation_type": "suffix",
-          "required_level": 60,
-          "weight": 1000
-        },
-        {
-          "key": "ColdResist7",
-          "text": "冷気耐性 +(42-45)%",
-          "name": "氷の",
-          "tag": "armour",
-          "generation_type": "suffix",
-          "required_level": 72,
-          "weight": 1000
-        },
-        {
-          "key": "ColdResist8",
-          "text": "冷気耐性 +(46-48)%",
-          "name": "ハーストの",
-          "tag": "armour",
-          "generation_type": "suffix",
-          "required_level": 84,
-          "weight": 1000
-        }
-      ],
-      "LightningResistance": [
-        {
-          "key": "LightningResist1",
-          "text": "雷耐性 +(6-11)%",
-          "name": "雲の",
-          "tag": "armour",
-          "generation_type": "suffix",
-          "required_level": 1,
-          "weight": 1000
-        },
-        {
-          "key": "LightningResist2",
-          "text": "雷耐性 +(12-17)%",
-          "name": "スコールの",
-          "tag": "armour",
-          "generation_type": "suffix",
-          "required_level": 13,
-          "weight": 1000
-        },
-        {
-          "key": "LightningResist3",
-          "text": "雷耐性 +(18-23)%",
-          "name": "嵐の",
-          "tag": "armour",
-          "generation_type": "suffix",
-          "required_level": 25,
-          "weight": 1000
-        },
-        {
-          "key": "LightningResist4",
-          "text": "雷耐性 +(24-29)%",
-          "name": "雷雲の",
-          "tag": "armour",
-          "generation_type": "suffix",
-          "required_level": 37,
-          "weight": 1000
-        },
-        {
-          "key": "LightningResist5",
-          "text": "雷耐性 +(30-35)%",
-          "name": "雷雨の",
-          "tag": "armour",
-          "generation_type": "suffix",
-          "required_level": 49,
-          "weight": 1000
-        },
-        {
-          "key": "LightningResist6",
-          "text": "雷耐性 +(36-41)%",
-          "name": "大渦の",
-          "tag": "armour",
-          "generation_type": "suffix",
-          "required_level": 60,
-          "weight": 1000
-        },
-        {
-          "key": "LightningResist7",
-          "text": "雷耐性 +(42-45)%",
-          "name": "雷の",
-          "tag": "armour",
-          "generation_type": "suffix",
-          "required_level": 72,
-          "weight": 1000
-        },
-        {
-          "key": "LightningResist8",
-          "text": "雷耐性 +(46-48)%",
-          "name": "エフィジの",
-          "tag": "armour",
-          "generation_type": "suffix",
-          "required_level": 84,
-          "weight": 1000
-        }
-      ],
-      "ChaosResistance": [
-        {
-          "key": "ChaosResist1",
-          "text": "混沌耐性 +(5-10)%",
-          "name": "迷い子の",
-          "tag": "armour",
-          "generation_type": "suffix",
-          "required_level": 16,
-          "weight": 250
-        },
-        {
-          "key": "ChaosResist2",
-          "text": "混沌耐性 +(11-15)%",
-          "name": "流刑の",
-          "tag": "armour",
-          "generation_type": "suffix",
-          "required_level": 30,
-          "weight": 250
-        },
-        {
-          "key": "ChaosResist3",
-          "text": "混沌耐性 +(16-20)%",
-          "name": "排出の",
-          "tag": "armour",
-          "generation_type": "suffix",
-          "required_level": 44,
-          "weight": 250
-        },
-        {
-          "key": "ChaosResist4",
-          "text": "混沌耐性 +(21-25)%",
-          "name": "排除の",
-          "tag": "armour",
-          "generation_type": "suffix",
-          "required_level": 56,
-          "weight": 250
-        },
-        {
-          "key": "ChaosResist5",
-          "text": "混沌耐性 +(26-30)%",
-          "name": "追放の",
-          "tag": "armour",
-          "generation_type": "suffix",
-          "required_level": 65,
-          "weight": 250
-        },
-        {
-          "key": "ChaosResist6",
-          "text": "混沌耐性 +(31-35)%",
-          "name": "バメスの",
-          "tag": "armour",
-          "generation_type": "suffix",
-          "required_level": 81,
-          "weight": 250
-        }
-      ],
       "CriticalStrikeMultiplierWithBows": [
         {
           "key": "CriticalMultiplierWithBows1",
@@ -1130,221 +776,170 @@
           "weight": 1000
         }
       ],
-      "StunDurationIncreasePercent": [
+      "Dexterity": [
         {
-          "key": "StunDuration1",
-          "text": "敵に対するスタンの持続時間が(11-15)%増加する",
-          "name": "衝撃の",
-          "tag": "weapon",
+          "key": "Dexterity1",
+          "text": "器用さ +(8-12)",
+          "name": "マングースの",
+          "tag": "quiver",
           "generation_type": "suffix",
-          "required_level": 5,
+          "required_level": 1,
           "weight": 1000
         },
         {
-          "key": "StunDuration2",
-          "text": "敵に対するスタンの持続時間が(16-20)%増加する",
-          "name": "放心の",
-          "tag": "weapon",
+          "key": "Dexterity2",
+          "text": "器用さ +(13-17)",
+          "name": "リンクスの",
+          "tag": "quiver",
           "generation_type": "suffix",
-          "required_level": 18,
+          "required_level": 11,
           "weight": 1000
         },
         {
-          "key": "StunDuration3",
-          "text": "敵に対するスタンの持続時間が(21-25)%増加する",
-          "name": "気絶の",
-          "tag": "weapon",
+          "key": "Dexterity3",
+          "text": "器用さ +(18-22)",
+          "name": "狐の",
+          "tag": "quiver",
           "generation_type": "suffix",
-          "required_level": 30,
+          "required_level": 22,
           "weight": 1000
         },
         {
-          "key": "StunDuration4",
-          "text": "敵に対するスタンの持続時間が(26-30)%増加する",
-          "name": "叩きつけの",
-          "tag": "weapon",
+          "key": "Dexterity4",
+          "text": "器用さ +(23-27)",
+          "name": "隼の",
+          "tag": "quiver",
+          "generation_type": "suffix",
+          "required_level": 33,
+          "weight": 1000
+        },
+        {
+          "key": "Dexterity5",
+          "text": "器用さ +(28-32)",
+          "name": "豹の",
+          "tag": "quiver",
           "generation_type": "suffix",
           "required_level": 44,
           "weight": 1000
         },
         {
-          "key": "StunDuration5",
-          "text": "敵に対するスタンの持続時間が(31-35)%増加する",
-          "name": "よろめきの",
-          "tag": "weapon",
-          "generation_type": "suffix",
-          "required_level": 58,
-          "weight": 1000
-        }
-      ],
-      "ProjectileSpeed": [
-        {
-          "key": "ProjectileSpeed1",
-          "text": "投射物スピードが(10-17)%増加する",
-          "name": "投射の",
-          "tag": "ranged",
-          "generation_type": "suffix",
-          "required_level": 14,
-          "weight": 1000
-        },
-        {
-          "key": "ProjectileSpeed2",
-          "text": "投射物スピードが(18-25)%増加する",
-          "name": "飛行の",
-          "tag": "ranged",
-          "generation_type": "suffix",
-          "required_level": 27,
-          "weight": 1000
-        },
-        {
-          "key": "ProjectileSpeed3",
-          "text": "投射物スピードが(26-33)%増加する",
-          "name": "推進力の",
-          "tag": "ranged",
-          "generation_type": "suffix",
-          "required_level": 41,
-          "weight": 1000
-        },
-        {
-          "key": "ProjectileSpeed4",
-          "text": "投射物スピードが(34-41)%増加する",
-          "name": "西風の",
-          "tag": "ranged",
+          "key": "Dexterity6",
+          "text": "器用さ +(33-37)",
+          "name": "豹の",
+          "tag": "quiver",
           "generation_type": "suffix",
           "required_level": 55,
           "weight": 1000
         },
         {
-          "key": "ProjectileSpeed5",
-          "text": "投射物スピードが(42-46)%増加する",
-          "name": "疾風の",
-          "tag": "ranged",
+          "key": "Dexterity7",
+          "text": "器用さ +(38-42)",
+          "name": "ジャガーの",
+          "tag": "quiver",
+          "generation_type": "suffix",
+          "required_level": 66,
+          "weight": 1000
+        },
+        {
+          "key": "Dexterity8",
+          "text": "器用さ +(43-50)",
+          "name": "幻像の",
+          "tag": "quiver",
+          "generation_type": "suffix",
+          "required_level": 74,
+          "weight": 1000
+        },
+        {
+          "key": "Dexterity9",
+          "text": "器用さ +(51-55)",
+          "name": "風の",
+          "tag": "quiver",
           "generation_type": "suffix",
           "required_level": 82,
           "weight": 1000
-        }
-      ],
-      "LifeGainedFromEnemyDeath": [
-        {
-          "key": "LifeGainedFromEnemyDeath1",
-          "text": "倒した敵1体ごとに(7-10)のライフを獲得する",
-          "name": "成功の",
-          "tag": "weapon",
-          "generation_type": "suffix",
-          "required_level": 1,
-          "weight": 500
         },
         {
-          "key": "LifeGainedFromEnemyDeath2",
-          "text": "倒した敵1体ごとに(12-18)のライフを獲得する",
-          "name": "戦勝の",
-          "tag": "weapon",
-          "generation_type": "suffix",
-          "required_level": 23,
-          "weight": 500
-        },
-        {
-          "key": "LifeGainedFromEnemyDeath3",
-          "text": "倒した敵1体ごとに(24-32)のライフを獲得する",
-          "name": "勝利の",
-          "tag": "weapon",
-          "generation_type": "suffix",
-          "required_level": 40,
-          "weight": 500
-        },
-        {
-          "key": "LifeGainedFromEnemyDeath4",
-          "text": "倒した敵1体ごとに(35-44)のライフを獲得する",
-          "name": "征服の",
-          "tag": "weapon",
-          "generation_type": "suffix",
-          "required_level": 52,
-          "weight": 500
-        },
-        {
-          "key": "LifeGainedFromEnemyDeath5",
-          "text": "倒した敵1体ごとに(56-72)のライフを獲得する",
-          "name": "達成の",
-          "tag": "weapon",
-          "generation_type": "suffix",
-          "required_level": 66,
-          "weight": 500
-        },
-        {
-          "key": "LifeGainedFromEnemyDeath6",
-          "text": "倒した敵1体ごとに(84-110)のライフを獲得する",
-          "name": "名人技の",
-          "tag": "weapon",
-          "generation_type": "suffix",
-          "required_level": 81,
-          "weight": 500
-        }
-      ],
-      "ManaGainedFromEnemyDeath": [
-        {
-          "key": "ManaGainedFromEnemyDeath1",
-          "text": "倒した敵1体ごとに(4-6)のマナを獲得する",
-          "name": "吸収の",
-          "tag": "weapon",
-          "generation_type": "suffix",
-          "required_level": 1,
-          "weight": 500
-        },
-        {
-          "key": "ManaGainedFromEnemyDeath2",
-          "text": "倒した敵1体ごとに(7-10)のマナを獲得する",
-          "name": "浸透の",
-          "tag": "weapon",
-          "generation_type": "suffix",
-          "required_level": 24,
-          "weight": 500
-        },
-        {
-          "key": "ManaGainedFromEnemyDeath3",
-          "text": "倒した敵1体ごとに(11-15)のマナを獲得する",
-          "name": "摂食の",
-          "tag": "weapon",
-          "generation_type": "suffix",
-          "required_level": 40,
-          "weight": 500
-        },
-        {
-          "key": "ManaGainedFromEnemyDeath4",
-          "text": "倒した敵1体ごとに(16-25)のマナを獲得する",
-          "name": "拡散の",
-          "tag": "weapon",
-          "generation_type": "suffix",
-          "required_level": 52,
-          "weight": 500
-        },
-        {
-          "key": "ManaGainedFromEnemyDeath5",
-          "text": "倒した敵1体ごとに(26-37)のマナを獲得する",
-          "name": "浸潤の",
-          "tag": "weapon",
-          "generation_type": "suffix",
-          "required_level": 66,
-          "weight": 500
-        },
-        {
-          "key": "ManaGainedFromEnemyDeath6",
-          "text": "倒した敵1体ごとに(38-50)のマナを獲得する",
-          "name": "保持の",
-          "tag": "weapon",
-          "generation_type": "suffix",
-          "required_level": 81,
-          "weight": 500
-        }
-      ],
-      "AdditionalArrows": [
-        {
-          "key": "AdditionalArrowQuiver1_",
-          "text": "弓によるアタックは矢を追加で1本放つ",
-          "name": "枝分かれの",
+          "key": "Dexterity10",
+          "text": "器用さ +(56-60)",
+          "name": "残像の",
           "tag": "quiver",
           "generation_type": "suffix",
-          "required_level": 70,
-          "weight": 250
+          "required_level": 85,
+          "weight": 1000
+        }
+      ],
+      "FireResistance": [
+        {
+          "key": "FireResist1",
+          "text": "火耐性 +(6-11)%",
+          "name": "仔竜の",
+          "tag": "quiver",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 1000
+        },
+        {
+          "key": "FireResist2",
+          "text": "火耐性 +(12-17)%",
+          "name": "サラマンダーの",
+          "tag": "quiver",
+          "generation_type": "suffix",
+          "required_level": 12,
+          "weight": 1000
+        },
+        {
+          "key": "FireResist3",
+          "text": "火耐性 +(18-23)%",
+          "name": "ドレイクの",
+          "tag": "quiver",
+          "generation_type": "suffix",
+          "required_level": 24,
+          "weight": 1000
+        },
+        {
+          "key": "FireResist4",
+          "text": "火耐性 +(24-29)%",
+          "name": "窯の",
+          "tag": "quiver",
+          "generation_type": "suffix",
+          "required_level": 36,
+          "weight": 1000
+        },
+        {
+          "key": "FireResist5",
+          "text": "火耐性 +(30-35)%",
+          "name": "炉の",
+          "tag": "quiver",
+          "generation_type": "suffix",
+          "required_level": 48,
+          "weight": 1000
+        },
+        {
+          "key": "FireResist6",
+          "text": "火耐性 +(36-41)%",
+          "name": "火山の",
+          "tag": "quiver",
+          "generation_type": "suffix",
+          "required_level": 60,
+          "weight": 1000
+        },
+        {
+          "key": "FireResist7",
+          "text": "火耐性 +(42-45)%",
+          "name": "マグマの",
+          "tag": "quiver",
+          "generation_type": "suffix",
+          "required_level": 72,
+          "weight": 1000
+        },
+        {
+          "key": "FireResist8",
+          "text": "火耐性 +(46-48)%",
+          "name": "ツティオシュの",
+          "tag": "quiver",
+          "generation_type": "suffix",
+          "required_level": 84,
+          "weight": 1000
         }
       ],
       "GlobalDamageOverTimeMultiplierWithAttacks": [
@@ -1392,6 +987,494 @@
           "generation_type": "suffix",
           "required_level": 82,
           "weight": 300
+        }
+      ],
+      "IncreasedAccuracy": [
+        {
+          "key": "IncreasedAccuracyNew1_",
+          "text": "命中力 +(50-100)",
+          "name": "着実さの",
+          "tag": "quiver",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 600
+        },
+        {
+          "key": "IncreasedAccuracyNew2",
+          "text": "命中力 +(100-165)",
+          "name": "精密さの",
+          "tag": "quiver",
+          "generation_type": "suffix",
+          "required_level": 20,
+          "weight": 1000
+        },
+        {
+          "key": "IncreasedAccuracyNew3",
+          "text": "命中力 +(166-250)",
+          "name": "狙撃手の",
+          "tag": "quiver",
+          "generation_type": "suffix",
+          "required_level": 40,
+          "weight": 1000
+        },
+        {
+          "key": "IncreasedAccuracyNew4",
+          "text": "命中力 +(251-350)",
+          "name": "射手の",
+          "tag": "quiver",
+          "generation_type": "suffix",
+          "required_level": 60,
+          "weight": 1000
+        },
+        {
+          "key": "IncreasedAccuracyNew5_",
+          "text": "命中力 +(351-480)",
+          "name": "レンジャーの",
+          "tag": "quiver",
+          "generation_type": "suffix",
+          "required_level": 75,
+          "weight": 1000
+        },
+        {
+          "key": "IncreasedAccuracyNew6",
+          "text": "命中力 +(481-600)",
+          "name": "ライオンアイの",
+          "tag": "quiver",
+          "generation_type": "suffix",
+          "required_level": 85,
+          "weight": 1000
+        }
+      ],
+      "IncreasedAttackSpeed": [
+        {
+          "key": "IncreasedAttackSpeed1",
+          "text": "アタックスピードが(5-7)%増加する",
+          "name": "技術の",
+          "tag": "quiver",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 500
+        },
+        {
+          "key": "IncreasedAttackSpeed2Royale",
+          "text": "アタックスピードが(8-15)%増加する",
+          "name": "手軽さの",
+          "tag": "quiver",
+          "generation_type": "suffix",
+          "required_level": 4,
+          "weight": 500
+        },
+        {
+          "key": "IncreasedAttackSpeed2",
+          "text": "アタックスピードが(8-10)%増加する",
+          "name": "容易さの",
+          "tag": "quiver",
+          "generation_type": "suffix",
+          "required_level": 11,
+          "weight": 500
+        },
+        {
+          "key": "IncreasedAttackSpeed3",
+          "text": "アタックスピードが(11-13)%増加する",
+          "name": "熟達の",
+          "tag": "quiver",
+          "generation_type": "suffix",
+          "required_level": 22,
+          "weight": 500
+        },
+        {
+          "key": "IncreasedAttackSpeed4",
+          "text": "アタックスピードが(14-16)%増加する",
+          "name": "師範級の",
+          "tag": "quiver",
+          "generation_type": "suffix",
+          "required_level": 76,
+          "weight": 500
+        }
+      ],
+      "LifeGainedFromEnemyDeath": [
+        {
+          "key": "LifeGainedFromEnemyDeath1",
+          "text": "倒した敵1体ごとに(7-10)のライフを獲得する",
+          "name": "成功の",
+          "tag": "quiver",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 500
+        },
+        {
+          "key": "LifeGainedFromEnemyDeath2",
+          "text": "倒した敵1体ごとに(12-18)のライフを獲得する",
+          "name": "戦勝の",
+          "tag": "quiver",
+          "generation_type": "suffix",
+          "required_level": 23,
+          "weight": 500
+        },
+        {
+          "key": "LifeGainedFromEnemyDeath3",
+          "text": "倒した敵1体ごとに(24-32)のライフを獲得する",
+          "name": "勝利の",
+          "tag": "quiver",
+          "generation_type": "suffix",
+          "required_level": 40,
+          "weight": 500
+        },
+        {
+          "key": "LifeGainedFromEnemyDeath4",
+          "text": "倒した敵1体ごとに(35-44)のライフを獲得する",
+          "name": "征服の",
+          "tag": "quiver",
+          "generation_type": "suffix",
+          "required_level": 52,
+          "weight": 500
+        },
+        {
+          "key": "LifeGainedFromEnemyDeath5",
+          "text": "倒した敵1体ごとに(56-72)のライフを獲得する",
+          "name": "達成の",
+          "tag": "quiver",
+          "generation_type": "suffix",
+          "required_level": 66,
+          "weight": 500
+        },
+        {
+          "key": "LifeGainedFromEnemyDeath6",
+          "text": "倒した敵1体ごとに(84-110)のライフを獲得する",
+          "name": "名人技の",
+          "tag": "quiver",
+          "generation_type": "suffix",
+          "required_level": 81,
+          "weight": 500
+        }
+      ],
+      "LifeLeechPermyriad": [
+        {
+          "key": "LifeLeechPermyriadSuffix1",
+          "text": "物理アタックダメージの(0.2-0.4)%をライフとしてリーチする",
+          "name": "コバンザメの",
+          "tag": "quiver",
+          "generation_type": "suffix",
+          "required_level": 50,
+          "weight": 1000
+        }
+      ],
+      "LifeRegeneration": [
+        {
+          "key": "LifeRegeneration1",
+          "text": "毎秒(1-2)のライフを自動回復する",
+          "name": "イモリの",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 1000
+        },
+        {
+          "key": "LifeRegeneration2",
+          "text": "毎秒(2.1-8)のライフを自動回復する",
+          "name": "蜥蜴の",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 7,
+          "weight": 1000
+        },
+        {
+          "key": "LifeRegeneration3",
+          "text": "毎秒(8.1-16)のライフを自動回復する",
+          "name": "平虫の",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 19,
+          "weight": 1000
+        },
+        {
+          "key": "LifeRegeneration4",
+          "text": "毎秒(16.1-24)のライフを自動回復する",
+          "name": "ヒトデの",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 31,
+          "weight": 1000
+        },
+        {
+          "key": "LifeRegeneration5",
+          "text": "毎秒(24.1-32)のライフを自動回復する",
+          "name": "ヒュドラの",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 44,
+          "weight": 1000
+        },
+        {
+          "key": "LifeRegeneration6",
+          "text": "毎秒(32.1-48)のライフを自動回復する",
+          "name": "トロルの",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 55,
+          "weight": 1000
+        },
+        {
+          "key": "LifeRegeneration7",
+          "text": "毎秒(48.1-64)のライフを自動回復する",
+          "name": "リスラーサの",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 68,
+          "weight": 1000
+        },
+        {
+          "key": "LifeRegeneration8_",
+          "text": "毎秒(64.1-96)のライフを自動回復する",
+          "name": "不死鳥の",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 74,
+          "weight": 1000
+        },
+        {
+          "key": "LifeRegeneration9",
+          "text": "毎秒(96.1-128)のライフを自動回復する",
+          "name": "療養の",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 78,
+          "weight": 1000
+        }
+      ],
+      "LightningResistance": [
+        {
+          "key": "LightningResist1",
+          "text": "雷耐性 +(6-11)%",
+          "name": "雲の",
+          "tag": "quiver",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 1000
+        },
+        {
+          "key": "LightningResist2",
+          "text": "雷耐性 +(12-17)%",
+          "name": "スコールの",
+          "tag": "quiver",
+          "generation_type": "suffix",
+          "required_level": 13,
+          "weight": 1000
+        },
+        {
+          "key": "LightningResist3",
+          "text": "雷耐性 +(18-23)%",
+          "name": "嵐の",
+          "tag": "quiver",
+          "generation_type": "suffix",
+          "required_level": 25,
+          "weight": 1000
+        },
+        {
+          "key": "LightningResist4",
+          "text": "雷耐性 +(24-29)%",
+          "name": "雷雲の",
+          "tag": "quiver",
+          "generation_type": "suffix",
+          "required_level": 37,
+          "weight": 1000
+        },
+        {
+          "key": "LightningResist5",
+          "text": "雷耐性 +(30-35)%",
+          "name": "雷雨の",
+          "tag": "quiver",
+          "generation_type": "suffix",
+          "required_level": 49,
+          "weight": 1000
+        },
+        {
+          "key": "LightningResist6",
+          "text": "雷耐性 +(36-41)%",
+          "name": "大渦の",
+          "tag": "quiver",
+          "generation_type": "suffix",
+          "required_level": 60,
+          "weight": 1000
+        },
+        {
+          "key": "LightningResist7",
+          "text": "雷耐性 +(42-45)%",
+          "name": "雷の",
+          "tag": "quiver",
+          "generation_type": "suffix",
+          "required_level": 72,
+          "weight": 1000
+        },
+        {
+          "key": "LightningResist8",
+          "text": "雷耐性 +(46-48)%",
+          "name": "エフィジの",
+          "tag": "quiver",
+          "generation_type": "suffix",
+          "required_level": 84,
+          "weight": 1000
+        }
+      ],
+      "ManaGainedFromEnemyDeath": [
+        {
+          "key": "ManaGainedFromEnemyDeath1",
+          "text": "倒した敵1体ごとに(4-6)のマナを獲得する",
+          "name": "吸収の",
+          "tag": "quiver",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 500
+        },
+        {
+          "key": "ManaGainedFromEnemyDeath2",
+          "text": "倒した敵1体ごとに(7-10)のマナを獲得する",
+          "name": "浸透の",
+          "tag": "quiver",
+          "generation_type": "suffix",
+          "required_level": 24,
+          "weight": 500
+        },
+        {
+          "key": "ManaGainedFromEnemyDeath3",
+          "text": "倒した敵1体ごとに(11-15)のマナを獲得する",
+          "name": "摂食の",
+          "tag": "quiver",
+          "generation_type": "suffix",
+          "required_level": 40,
+          "weight": 500
+        },
+        {
+          "key": "ManaGainedFromEnemyDeath4",
+          "text": "倒した敵1体ごとに(16-25)のマナを獲得する",
+          "name": "拡散の",
+          "tag": "quiver",
+          "generation_type": "suffix",
+          "required_level": 52,
+          "weight": 500
+        },
+        {
+          "key": "ManaGainedFromEnemyDeath5",
+          "text": "倒した敵1体ごとに(26-37)のマナを獲得する",
+          "name": "浸潤の",
+          "tag": "quiver",
+          "generation_type": "suffix",
+          "required_level": 66,
+          "weight": 500
+        },
+        {
+          "key": "ManaGainedFromEnemyDeath6",
+          "text": "倒した敵1体ごとに(38-50)のマナを獲得する",
+          "name": "保持の",
+          "tag": "quiver",
+          "generation_type": "suffix",
+          "required_level": 81,
+          "weight": 500
+        }
+      ],
+      "ManaLeechPermyriad": [
+        {
+          "key": "ManaLeechPermyriadSuffix1",
+          "text": "物理アタックダメージの(0.2-0.4)%をマナとしてリーチする",
+          "name": "渇きの",
+          "tag": "quiver",
+          "generation_type": "suffix",
+          "required_level": 50,
+          "weight": 1000
+        }
+      ],
+      "ProjectileSpeed": [
+        {
+          "key": "ProjectileSpeed1",
+          "text": "投射物スピードが(10-17)%増加する",
+          "name": "投射の",
+          "tag": "quiver",
+          "generation_type": "suffix",
+          "required_level": 14,
+          "weight": 1000
+        },
+        {
+          "key": "ProjectileSpeed2",
+          "text": "投射物スピードが(18-25)%増加する",
+          "name": "飛行の",
+          "tag": "quiver",
+          "generation_type": "suffix",
+          "required_level": 27,
+          "weight": 1000
+        },
+        {
+          "key": "ProjectileSpeed3",
+          "text": "投射物スピードが(26-33)%増加する",
+          "name": "推進力の",
+          "tag": "quiver",
+          "generation_type": "suffix",
+          "required_level": 41,
+          "weight": 1000
+        },
+        {
+          "key": "ProjectileSpeed4",
+          "text": "投射物スピードが(34-41)%増加する",
+          "name": "西風の",
+          "tag": "quiver",
+          "generation_type": "suffix",
+          "required_level": 55,
+          "weight": 1000
+        },
+        {
+          "key": "ProjectileSpeed5",
+          "text": "投射物スピードが(42-46)%増加する",
+          "name": "疾風の",
+          "tag": "quiver",
+          "generation_type": "suffix",
+          "required_level": 82,
+          "weight": 1000
+        }
+      ],
+      "StunDurationIncreasePercent": [
+        {
+          "key": "StunDuration1",
+          "text": "敵に対するスタンの持続時間が(11-15)%増加する",
+          "name": "衝撃の",
+          "tag": "quiver",
+          "generation_type": "suffix",
+          "required_level": 5,
+          "weight": 1000
+        },
+        {
+          "key": "StunDuration2",
+          "text": "敵に対するスタンの持続時間が(16-20)%増加する",
+          "name": "放心の",
+          "tag": "quiver",
+          "generation_type": "suffix",
+          "required_level": 18,
+          "weight": 1000
+        },
+        {
+          "key": "StunDuration3",
+          "text": "敵に対するスタンの持続時間が(21-25)%増加する",
+          "name": "気絶の",
+          "tag": "quiver",
+          "generation_type": "suffix",
+          "required_level": 30,
+          "weight": 1000
+        },
+        {
+          "key": "StunDuration4",
+          "text": "敵に対するスタンの持続時間が(26-30)%増加する",
+          "name": "叩きつけの",
+          "tag": "quiver",
+          "generation_type": "suffix",
+          "required_level": 44,
+          "weight": 1000
+        },
+        {
+          "key": "StunDuration5",
+          "text": "敵に対するスタンの持続時間が(31-35)%増加する",
+          "name": "よろめきの",
+          "tag": "quiver",
+          "generation_type": "suffix",
+          "required_level": 58,
+          "weight": 1000
         }
       ]
     }

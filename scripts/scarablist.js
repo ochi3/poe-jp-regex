@@ -1404,7 +1404,7 @@ const scarablist = {
     "enDescription": "Delirium Reward Meters fill 100% faster in Area\nDelirium in Area increases 50% faster with distance from the mirror",
     "chaosValue": "1.26",
     "regex": "躁病",
-    "enRegex": "y'"
+    "enRegex": "f Ma"
   },
   "偏執症のデリリウムスカラベ": {
     "engName": "Delirium Scarab of Paranoia",
