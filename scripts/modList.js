@@ -100,7 +100,7 @@ const originalModList = {
    engMod: "Monsters fire 2 additional Projectiles",
    tier: 440,
    engRegex: "oj",
-   Regex: "放つ",
+   Regex: "個放つ",
    modTier17: false,
  },
  "モンスターの移動スピードが#%増加する|モンスターのアタックスピードが#%増加する|モンスターのキャストスピードが%増加する": {
