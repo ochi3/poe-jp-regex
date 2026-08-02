@@ -88,17 +88,6 @@
           "weight": 250
         }
       ],
-      "LocalChaosDamageTwoHand": [
-        {
-          "key": "LocalAddedChaosDamageTwoHand1",
-          "text": "(98-149)から(183-280)の混沌ダメージを追加する",
-          "name": "害意ある",
-          "tag": "mace",
-          "generation_type": "prefix",
-          "required_level": 83,
-          "weight": 250
-        }
-      ],
       "LocalColdDamage": [
         {
           "key": "LocalAddedColdDamage1",
@@ -191,98 +180,6 @@
           "weight": 45
         }
       ],
-      "LocalColdDamageTwoHand": [
-        {
-          "key": "LocalAddedColdDamageTwoHand1",
-          "text": "(2-3)から(6-7)の冷気ダメージを追加する",
-          "name": "凍てついた",
-          "tag": "mace",
-          "generation_type": "prefix",
-          "required_level": 2,
-          "weight": 500
-        },
-        {
-          "key": "LocalAddedColdDamageTwoHand2",
-          "text": "(12-17)から(26-30)の冷気ダメージを追加する",
-          "name": "冷えた",
-          "tag": "mace",
-          "generation_type": "prefix",
-          "required_level": 12,
-          "weight": 500
-        },
-        {
-          "key": "LocalAddedColdDamageTwoHand3",
-          "text": "(21-28)から(42-48)の冷気ダメージを追加する",
-          "name": "凍った",
-          "tag": "mace",
-          "generation_type": "prefix",
-          "required_level": 19,
-          "weight": 500
-        },
-        {
-          "key": "LocalAddedColdDamageTwoHand4",
-          "text": "(29-40)から(58-68)の冷気ダメージを追加する",
-          "name": "凍える",
-          "tag": "mace",
-          "generation_type": "prefix",
-          "required_level": 27,
-          "weight": 500
-        },
-        {
-          "key": "LocalAddedColdDamageTwoHand5",
-          "text": "(41-55)から(81-95)の冷気ダメージを追加する",
-          "name": "凍りつく",
-          "tag": "mace",
-          "generation_type": "prefix",
-          "required_level": 34,
-          "weight": 500
-        },
-        {
-          "key": "LocalAddedColdDamageTwoHand6",
-          "text": "(57-77)から(114-132)の冷気ダメージを追加する",
-          "name": "凍結した",
-          "tag": "mace",
-          "generation_type": "prefix",
-          "required_level": 43,
-          "weight": 500
-        },
-        {
-          "key": "LocalAddedColdDamageTwoHand7",
-          "text": "(77-104)から(154-178)の冷気ダメージを追加する",
-          "name": "氷結した",
-          "tag": "mace",
-          "generation_type": "prefix",
-          "required_level": 52,
-          "weight": 500
-        },
-        {
-          "key": "LocalAddedColdDamageTwoHand8",
-          "text": "(99-136)から(200-232)の冷気ダメージを追加する",
-          "name": "極地の",
-          "tag": "mace",
-          "generation_type": "prefix",
-          "required_level": 63,
-          "weight": 400
-        },
-        {
-          "key": "LocalAddedColdDamageTwoHand9",
-          "text": "(124-170)から(250-290)の冷気ダメージを追加する",
-          "name": "氷葬する",
-          "tag": "mace",
-          "generation_type": "prefix",
-          "required_level": 75,
-          "weight": 175
-        },
-        {
-          "key": "LocalAddedColdDamageTwoHand10",
-          "text": "(149-204)から(300-348)の冷気ダメージを追加する",
-          "name": "結晶化する",
-          "tag": "mace",
-          "generation_type": "prefix",
-          "required_level": 82,
-          "weight": 45
-        }
-      ],
       "LocalFireDamage": [
         {
           "key": "LocalAddedFireDamage1",
@@ -368,98 +265,6 @@
         {
           "key": "LocalAddedFireDamage10_",
           "text": "(89-121)から(180-210)の火ダメージを追加する",
-          "name": "炭化する",
-          "tag": "mace",
-          "generation_type": "prefix",
-          "required_level": 82,
-          "weight": 45
-        }
-      ],
-      "LocalFireDamageTwoHand": [
-        {
-          "key": "LocalAddedFireDamageTwoHand1",
-          "text": "(3-5)から(6-7)の火ダメージを追加する",
-          "name": "熱した",
-          "tag": "mace",
-          "generation_type": "prefix",
-          "required_level": 1,
-          "weight": 500
-        },
-        {
-          "key": "LocalAddedFireDamageTwoHand2",
-          "text": "(14-20)から(29-33)の火ダメージを追加する",
-          "name": "燻る",
-          "tag": "mace",
-          "generation_type": "prefix",
-          "required_level": 11,
-          "weight": 500
-        },
-        {
-          "key": "LocalAddedFireDamageTwoHand3",
-          "text": "(23-31)から(47-54)の火ダメージを追加する",
-          "name": "発煙する",
-          "tag": "mace",
-          "generation_type": "prefix",
-          "required_level": 18,
-          "weight": 500
-        },
-        {
-          "key": "LocalAddedFireDamageTwoHand4",
-          "text": "(32-44)から(65-76)の火ダメージを追加する",
-          "name": "燃える",
-          "tag": "mace",
-          "generation_type": "prefix",
-          "required_level": 26,
-          "weight": 500
-        },
-        {
-          "key": "LocalAddedFireDamageTwoHand5",
-          "text": "(45-61)から(91-106)の火ダメージを追加する",
-          "name": "燃え立つ",
-          "tag": "mace",
-          "generation_type": "prefix",
-          "required_level": 33,
-          "weight": 500
-        },
-        {
-          "key": "LocalAddedFireDamageTwoHand6",
-          "text": "(63-85)から(128-148)の火ダメージを追加する",
-          "name": "焼き焦がす",
-          "tag": "mace",
-          "generation_type": "prefix",
-          "required_level": 42,
-          "weight": 500
-        },
-        {
-          "key": "LocalAddedFireDamageTwoHand7",
-          "text": "(85-115)から(172-200)の火ダメージを追加する",
-          "name": "焼却する",
-          "tag": "mace",
-          "generation_type": "prefix",
-          "required_level": 51,
-          "weight": 500
-        },
-        {
-          "key": "LocalAddedFireDamageTwoHand8_",
-          "text": "(110-150)から(223-260)の火ダメージを追加する",
-          "name": "爆破する",
-          "tag": "mace",
-          "generation_type": "prefix",
-          "required_level": 62,
-          "weight": 400
-        },
-        {
-          "key": "LocalAddedFireDamageTwoHand9",
-          "text": "(137-188)から(279-325)の火ダメージを追加する",
-          "name": "火葬する",
-          "tag": "mace",
-          "generation_type": "prefix",
-          "required_level": 74,
-          "weight": 175
-        },
-        {
-          "key": "LocalAddedFireDamageTwoHand10",
-          "text": "(165-225)から(335-390)の火ダメージを追加する",
           "name": "炭化する",
           "tag": "mace",
           "generation_type": "prefix",
@@ -657,98 +462,6 @@
         {
           "key": "LocalAddedLightningDamage10",
           "text": "(15-21)から(296-344)の雷ダメージを追加する",
-          "name": "電殺する",
-          "tag": "mace",
-          "generation_type": "prefix",
-          "required_level": 82,
-          "weight": 45
-        }
-      ],
-      "LocalLightningDamageTwoHand": [
-        {
-          "key": "LocalAddedLightningDamageTwoHand1_",
-          "text": "2から(10-11)の雷ダメージを追加する",
-          "name": "電音の",
-          "tag": "mace",
-          "generation_type": "prefix",
-          "required_level": 3,
-          "weight": 500
-        },
-        {
-          "key": "LocalAddedLightningDamageTwoHand2",
-          "text": "3から(46-53)の雷ダメージを追加する",
-          "name": "電鳴の",
-          "tag": "mace",
-          "generation_type": "prefix",
-          "required_level": 13,
-          "weight": 500
-        },
-        {
-          "key": "LocalAddedLightningDamageTwoHand3",
-          "text": "(4-5)から(76-88)の雷ダメージを追加する",
-          "name": "雷音の",
-          "tag": "mace",
-          "generation_type": "prefix",
-          "required_level": 19,
-          "weight": 500
-        },
-        {
-          "key": "LocalAddedLightningDamageTwoHand4",
-          "text": "(5-8)から(106-123)の雷ダメージを追加する",
-          "name": "雷鳴の",
-          "tag": "mace",
-          "generation_type": "prefix",
-          "required_level": 31,
-          "weight": 500
-        },
-        {
-          "key": "LocalAddedLightningDamageTwoHand5",
-          "text": "(8-10)から(148-173)の雷ダメージを追加する",
-          "name": "電光走る",
-          "tag": "mace",
-          "generation_type": "prefix",
-          "required_level": 34,
-          "weight": 500
-        },
-        {
-          "key": "LocalAddedLightningDamageTwoHand6",
-          "text": "(11-14)から(208-242)の雷ダメージを追加する",
-          "name": "電弧する",
-          "tag": "mace",
-          "generation_type": "prefix",
-          "required_level": 42,
-          "weight": 500
-        },
-        {
-          "key": "LocalAddedLightningDamageTwoHand7",
-          "text": "(14-20)から(281-327)の雷ダメージを追加する",
-          "name": "電撃の",
-          "tag": "mace",
-          "generation_type": "prefix",
-          "required_level": 51,
-          "weight": 500
-        },
-        {
-          "key": "LocalAddedLightningDamageTwoHand8",
-          "text": "(19-25)から(366-425)の雷ダメージを追加する",
-          "name": "放電する",
-          "tag": "mace",
-          "generation_type": "prefix",
-          "required_level": 63,
-          "weight": 400
-        },
-        {
-          "key": "LocalAddedLightningDamageTwoHand9",
-          "text": "(23-32)から(458-531)の雷ダメージを追加する",
-          "name": "感電する",
-          "tag": "mace",
-          "generation_type": "prefix",
-          "required_level": 74,
-          "weight": 175
-        },
-        {
-          "key": "LocalAddedLightningDamageTwoHand10",
-          "text": "(28-38)から(549-638)の雷ダメージを追加する",
           "name": "電殺する",
           "tag": "mace",
           "generation_type": "prefix",
@@ -1308,15 +1021,6 @@
           "tag": "weapon",
           "generation_type": "suffix",
           "required_level": 1,
-          "weight": 1000
-        },
-        {
-          "key": "LocalIncreasedAttackSpeed2Royale____",
-          "text": "アタックスピードが(15-25)%増加する",
-          "name": "手軽さの",
-          "tag": "weapon",
-          "generation_type": "suffix",
-          "required_level": 4,
           "weight": 1000
         },
         {

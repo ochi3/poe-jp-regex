@@ -418,24 +418,6 @@
           "generation_type": "prefix",
           "required_level": 44,
           "weight": 1000
-        },
-        {
-          "key": "IncreasedLife8",
-          "text": "最大ライフ +(115-129)",
-          "name": "競技者の",
-          "tag": "default",
-          "generation_type": "prefix",
-          "required_level": 54,
-          "weight": 1000
-        },
-        {
-          "key": "IncreasedLife9",
-          "text": "最大ライフ +(130-144)",
-          "name": "豊かな",
-          "tag": "default",
-          "generation_type": "prefix",
-          "required_level": 64,
-          "weight": 1000
         }
       ],
       "IncreasedMana": [
@@ -1617,24 +1599,6 @@
           "tag": "default",
           "generation_type": "suffix",
           "required_level": 68,
-          "weight": 1000
-        },
-        {
-          "key": "LifeRegeneration8_",
-          "text": "毎秒(64.1-96)のライフを自動回復する",
-          "name": "不死鳥の",
-          "tag": "default",
-          "generation_type": "suffix",
-          "required_level": 74,
-          "weight": 1000
-        },
-        {
-          "key": "LifeRegeneration9",
-          "text": "毎秒(96.1-128)のライフを自動回復する",
-          "name": "療養の",
-          "tag": "default",
-          "generation_type": "suffix",
-          "required_level": 78,
           "weight": 1000
         }
       ],

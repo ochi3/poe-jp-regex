@@ -632,15 +632,6 @@
           "generation_type": "prefix",
           "required_level": 54,
           "weight": 1000
-        },
-        {
-          "key": "IncreasedLife9",
-          "text": "最大ライフ +(130-144)",
-          "name": "豊かな",
-          "tag": "default",
-          "generation_type": "prefix",
-          "required_level": 64,
-          "weight": 1000
         }
       ],
       "IncreasedMana": [
@@ -1808,15 +1799,6 @@
           "weight": 800
         },
         {
-          "key": "IncreasedCastSpeed2Royale",
-          "text": "キャストスピードが(8-15)%増加する",
-          "name": "軽快さの",
-          "tag": "amulet",
-          "generation_type": "suffix",
-          "required_level": 4,
-          "weight": 800
-        },
-        {
           "key": "IncreasedCastSpeed2",
           "text": "キャストスピードが(9-12)%増加する",
           "name": "軽快さの",
@@ -2150,15 +2132,6 @@
           "tag": "default",
           "generation_type": "suffix",
           "required_level": 74,
-          "weight": 1000
-        },
-        {
-          "key": "LifeRegeneration9",
-          "text": "毎秒(96.1-128)のライフを自動回復する",
-          "name": "療養の",
-          "tag": "default",
-          "generation_type": "suffix",
-          "required_level": 78,
           "weight": 1000
         }
       ],

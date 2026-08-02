@@ -199,15 +199,6 @@
           "generation_type": "prefix",
           "required_level": 62,
           "weight": 1000
-        },
-        {
-          "key": "LocalBaseEvasionRatingAndLife4",
-          "text": "回避力 +(96-120)\n最大ライフ +(34-38)",
-          "name": "アイベックスの",
-          "tag": "dex_armour",
-          "generation_type": "prefix",
-          "required_level": 78,
-          "weight": 500
         }
       ],
       "LocalEvasionRating": [
@@ -281,33 +272,6 @@
           "tag": "dex_armour",
           "generation_type": "prefix",
           "required_level": 51,
-          "weight": 1000
-        },
-        {
-          "key": "LocalIncreasedEvasionRating9___",
-          "text": "回避力 +(201-300)",
-          "name": "巧妙な",
-          "tag": "dex_armour",
-          "generation_type": "prefix",
-          "required_level": 60,
-          "weight": 1000
-        },
-        {
-          "key": "LocalIncreasedEvasionRating10",
-          "text": "回避力 +(301-400)",
-          "name": "俊敏な",
-          "tag": "dex_armour",
-          "generation_type": "prefix",
-          "required_level": 69,
-          "weight": 1000
-        },
-        {
-          "key": "LocalIncreasedEvasionRating11",
-          "text": "回避力 +(401-500)",
-          "name": "逃亡する",
-          "tag": "dex_armour",
-          "generation_type": "prefix",
-          "required_level": 77,
           "weight": 1000
         }
       ],
@@ -436,15 +400,6 @@
     "suffix": {
       "ChanceToSuppressSpells": [
         {
-          "key": "ChanceToSuppressSpellsHigh1__",
-          "text": "スペルダメージ抑制確率 +(8-10)%",
-          "name": "反論の",
-          "tag": "dex_armour",
-          "generation_type": "suffix",
-          "required_level": 45,
-          "weight": 1000
-        },
-        {
           "key": "ChanceToSuppressSpells1_",
           "text": "スペルダメージ抑制確率 +(5-6)%",
           "name": "反論の",
@@ -460,24 +415,6 @@
           "tag": "dex_armour",
           "generation_type": "suffix",
           "required_level": 57,
-          "weight": 1000
-        },
-        {
-          "key": "ChanceToSuppressSpellsHigh2__",
-          "text": "スペルダメージ抑制確率 +(11-13)%",
-          "name": "打ち消しの",
-          "tag": "dex_armour",
-          "generation_type": "suffix",
-          "required_level": 58,
-          "weight": 1000
-        },
-        {
-          "key": "ChanceToSuppressSpellsHigh3",
-          "text": "スペルダメージ抑制確率 +(14-16)%",
-          "name": "取り消しの",
-          "tag": "dex_armour",
-          "generation_type": "suffix",
-          "required_level": 67,
           "weight": 1000
         },
         {
@@ -499,30 +436,12 @@
           "weight": 1000
         },
         {
-          "key": "ChanceToSuppressSpellsHigh4_",
-          "text": "スペルダメージ抑制確率 +(17-19)%",
-          "name": "放棄の",
-          "tag": "dex_armour",
-          "generation_type": "suffix",
-          "required_level": 77,
-          "weight": 1000
-        },
-        {
           "key": "ChanceToSuppressSpells5__",
           "text": "スペルダメージ抑制確率 +(13-14)%",
           "name": "無効化の",
           "tag": "dex_armour",
           "generation_type": "suffix",
           "required_level": 85,
-          "weight": 1000
-        },
-        {
-          "key": "ChanceToSuppressSpellsHigh5___",
-          "text": "スペルダメージ抑制確率 +(20-22)%",
-          "name": "無効化の",
-          "tag": "dex_armour",
-          "generation_type": "suffix",
-          "required_level": 86,
           "weight": 1000
         }
       ],

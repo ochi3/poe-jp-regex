@@ -1056,15 +1056,6 @@
           "weight": 500
         },
         {
-          "key": "IncreasedAttackSpeed2Royale",
-          "text": "アタックスピードが(8-15)%増加する",
-          "name": "手軽さの",
-          "tag": "quiver",
-          "generation_type": "suffix",
-          "required_level": 4,
-          "weight": 500
-        },
-        {
           "key": "IncreasedAttackSpeed2",
           "text": "アタックスピードが(8-10)%増加する",
           "name": "容易さの",
@@ -1156,89 +1147,6 @@
           "tag": "quiver",
           "generation_type": "suffix",
           "required_level": 50,
-          "weight": 1000
-        }
-      ],
-      "LifeRegeneration": [
-        {
-          "key": "LifeRegeneration1",
-          "text": "毎秒(1-2)のライフを自動回復する",
-          "name": "イモリの",
-          "tag": "default",
-          "generation_type": "suffix",
-          "required_level": 1,
-          "weight": 1000
-        },
-        {
-          "key": "LifeRegeneration2",
-          "text": "毎秒(2.1-8)のライフを自動回復する",
-          "name": "蜥蜴の",
-          "tag": "default",
-          "generation_type": "suffix",
-          "required_level": 7,
-          "weight": 1000
-        },
-        {
-          "key": "LifeRegeneration3",
-          "text": "毎秒(8.1-16)のライフを自動回復する",
-          "name": "平虫の",
-          "tag": "default",
-          "generation_type": "suffix",
-          "required_level": 19,
-          "weight": 1000
-        },
-        {
-          "key": "LifeRegeneration4",
-          "text": "毎秒(16.1-24)のライフを自動回復する",
-          "name": "ヒトデの",
-          "tag": "default",
-          "generation_type": "suffix",
-          "required_level": 31,
-          "weight": 1000
-        },
-        {
-          "key": "LifeRegeneration5",
-          "text": "毎秒(24.1-32)のライフを自動回復する",
-          "name": "ヒュドラの",
-          "tag": "default",
-          "generation_type": "suffix",
-          "required_level": 44,
-          "weight": 1000
-        },
-        {
-          "key": "LifeRegeneration6",
-          "text": "毎秒(32.1-48)のライフを自動回復する",
-          "name": "トロルの",
-          "tag": "default",
-          "generation_type": "suffix",
-          "required_level": 55,
-          "weight": 1000
-        },
-        {
-          "key": "LifeRegeneration7",
-          "text": "毎秒(48.1-64)のライフを自動回復する",
-          "name": "リスラーサの",
-          "tag": "default",
-          "generation_type": "suffix",
-          "required_level": 68,
-          "weight": 1000
-        },
-        {
-          "key": "LifeRegeneration8_",
-          "text": "毎秒(64.1-96)のライフを自動回復する",
-          "name": "不死鳥の",
-          "tag": "default",
-          "generation_type": "suffix",
-          "required_level": 74,
-          "weight": 1000
-        },
-        {
-          "key": "LifeRegeneration9",
-          "text": "毎秒(96.1-128)のライフを自動回復する",
-          "name": "療養の",
-          "tag": "default",
-          "generation_type": "suffix",
-          "required_level": 78,
           "weight": 1000
         }
       ],

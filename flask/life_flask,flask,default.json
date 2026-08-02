@@ -110,17 +110,6 @@
           "weight": 600
         }
       ],
-      "FlaskEffectNotRemovedOnFullManaReducedRecovery": [
-        {
-          "key": "FlaskEffectNotRemovedOnFullMana1",
-          "text": "未リザーブマナがフルになっても効果は取り除かれない\n効果は累積しない\n回復量が66%減少する",
-          "name": "持続する",
-          "tag": "default",
-          "generation_type": "prefix",
-          "required_level": 16,
-          "weight": 3000
-        }
-      ],
       "FlaskExtraLifeCostsMana": [
         {
           "key": "FlaskExtraLifeCostsMana1",
@@ -162,53 +151,6 @@
           "key": "FlaskExtraLifeCostsMana5_",
           "text": "ライフ回復量が(56-60)%増加する\n使用した時に回復したライフの10%をマナから取り除く",
           "name": "搾り取る",
-          "tag": "default",
-          "generation_type": "prefix",
-          "required_level": 81,
-          "weight": 600
-        }
-      ],
-      "FlaskExtraManaCostsLife": [
-        {
-          "key": "FlaskExtraManaCostsLife1",
-          "text": "マナ回復量が(41-46)%増加する\n使用した時に回復したマナの15%をライフから取り除く",
-          "name": "熟成した",
-          "tag": "default",
-          "generation_type": "prefix",
-          "required_level": 13,
-          "weight": 600
-        },
-        {
-          "key": "FlaskExtraManaCostsLife2",
-          "text": "マナ回復量が(47-52)%増加する\n使用した時に回復したマナの15%をライフから取り除く",
-          "name": "発酵した",
-          "tag": "default",
-          "generation_type": "prefix",
-          "required_level": 30,
-          "weight": 600
-        },
-        {
-          "key": "FlaskExtraManaCostsLife3_",
-          "text": "マナ回復量が(53-58)%増加する\n使用した時に回復したマナの15%をライフから取り除く",
-          "name": "凝結した",
-          "tag": "default",
-          "generation_type": "prefix",
-          "required_level": 47,
-          "weight": 600
-        },
-        {
-          "key": "FlaskExtraManaCostsLife4",
-          "text": "マナ回復量が(59-64)%増加する\n使用した時に回復したマナの15%をライフから取り除く",
-          "name": "混濁した",
-          "tag": "default",
-          "generation_type": "prefix",
-          "required_level": 64,
-          "weight": 600
-        },
-        {
-          "key": "FlaskExtraManaCostsLife5_",
-          "text": "マナ回復量が(65-70)%増加する\n使用した時に回復したマナの15%をライフから取り除く",
-          "name": "腐食する",
           "tag": "default",
           "generation_type": "prefix",
           "required_level": 81,
@@ -582,17 +524,6 @@
           "generation_type": "prefix",
           "required_level": 81,
           "weight": 600
-        }
-      ],
-      "FlaskManaRecoveryAtEnd": [
-        {
-          "key": "FlaskManaRecoveryAtEnd1_",
-          "text": "マナ回復は効果終了時に即時に起きる\n回復量が66%増加する",
-          "name": "予示する",
-          "tag": "default",
-          "generation_type": "prefix",
-          "required_level": 16,
-          "weight": 3000
         }
       ],
       "FlaskPartialInstantRecovery": [
@@ -1008,44 +939,6 @@
         {
           "key": "LocalLifeFlaskHinderNearbyEnemies4",
           "text": "フルライフでない時に使用すると近くの敵に阻害を与えその移動スピードを(35-40)%減少させる",
-          "name": "拘束の",
-          "tag": "default",
-          "generation_type": "suffix",
-          "required_level": 84,
-          "weight": 750
-        }
-      ],
-      "LocalManaFlaskHinderNearbyEnemies": [
-        {
-          "key": "LocalManaFlaskHinderNearbyEnemies1_",
-          "text": "フルマナでない時に使用すると近くの敵に阻害を与えその移動スピードを(17-22)%減少させる",
-          "name": "邪魔の",
-          "tag": "default",
-          "generation_type": "suffix",
-          "required_level": 30,
-          "weight": 750
-        },
-        {
-          "key": "LocalManaFlaskHinderNearbyEnemies2",
-          "text": "フルマナでない時に使用すると近くの敵に阻害を与えその移動スピードを(23-28)%減少させる",
-          "name": "妨害の",
-          "tag": "default",
-          "generation_type": "suffix",
-          "required_level": 48,
-          "weight": 750
-        },
-        {
-          "key": "LocalManaFlaskHinderNearbyEnemies3",
-          "text": "フルマナでない時に使用すると近くの敵に阻害を与えその移動スピードを(29-34)%減少させる",
-          "name": "閉鎖の",
-          "tag": "default",
-          "generation_type": "suffix",
-          "required_level": 66,
-          "weight": 750
-        },
-        {
-          "key": "LocalManaFlaskHinderNearbyEnemies4",
-          "text": "フルマナでない時に使用すると近くの敵に阻害を与えその移動スピードを(35-40)%減少させる",
           "name": "拘束の",
           "tag": "default",
           "generation_type": "suffix",

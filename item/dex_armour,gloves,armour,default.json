@@ -203,15 +203,6 @@
           "generation_type": "prefix",
           "required_level": 54,
           "weight": 1000
-        },
-        {
-          "key": "IncreasedLife9",
-          "text": "最大ライフ +(130-144)",
-          "name": "豊かな",
-          "tag": "default",
-          "generation_type": "prefix",
-          "required_level": 64,
-          "weight": 1000
         }
       ],
       "ItemFoundRarityIncreasePrefix": [
@@ -308,24 +299,6 @@
           "generation_type": "prefix",
           "required_level": 46,
           "weight": 1000
-        },
-        {
-          "key": "LocalBaseEvasionRatingAndLife3",
-          "text": "回避力 +(43-95)\n最大ライフ +(29-33)",
-          "name": "雄羊の",
-          "tag": "dex_armour",
-          "generation_type": "prefix",
-          "required_level": 62,
-          "weight": 1000
-        },
-        {
-          "key": "LocalBaseEvasionRatingAndLife4",
-          "text": "回避力 +(96-120)\n最大ライフ +(34-38)",
-          "name": "アイベックスの",
-          "tag": "dex_armour",
-          "generation_type": "prefix",
-          "required_level": 78,
-          "weight": 500
         }
       ],
       "LocalEvasionRating": [
@@ -390,42 +363,6 @@
           "tag": "dex_armour",
           "generation_type": "prefix",
           "required_level": 43,
-          "weight": 1000
-        },
-        {
-          "key": "LocalIncreasedEvasionRating8",
-          "text": "回避力 +(151-200)",
-          "name": "捕らえがたい",
-          "tag": "dex_armour",
-          "generation_type": "prefix",
-          "required_level": 51,
-          "weight": 1000
-        },
-        {
-          "key": "LocalIncreasedEvasionRating9___",
-          "text": "回避力 +(201-300)",
-          "name": "巧妙な",
-          "tag": "dex_armour",
-          "generation_type": "prefix",
-          "required_level": 60,
-          "weight": 1000
-        },
-        {
-          "key": "LocalIncreasedEvasionRating10",
-          "text": "回避力 +(301-400)",
-          "name": "俊敏な",
-          "tag": "dex_armour",
-          "generation_type": "prefix",
-          "required_level": 69,
-          "weight": 1000
-        },
-        {
-          "key": "LocalIncreasedEvasionRating11",
-          "text": "回避力 +(401-500)",
-          "name": "逃亡する",
-          "tag": "dex_armour",
-          "generation_type": "prefix",
-          "required_level": 77,
           "weight": 1000
         }
       ],
@@ -592,15 +529,6 @@
     "suffix": {
       "ChanceToSuppressSpells": [
         {
-          "key": "ChanceToSuppressSpellsHigh1__",
-          "text": "スペルダメージ抑制確率 +(8-10)%",
-          "name": "反論の",
-          "tag": "dex_armour",
-          "generation_type": "suffix",
-          "required_level": 45,
-          "weight": 1000
-        },
-        {
           "key": "ChanceToSuppressSpells1_",
           "text": "スペルダメージ抑制確率 +(5-6)%",
           "name": "反論の",
@@ -616,24 +544,6 @@
           "tag": "dex_armour",
           "generation_type": "suffix",
           "required_level": 57,
-          "weight": 1000
-        },
-        {
-          "key": "ChanceToSuppressSpellsHigh2__",
-          "text": "スペルダメージ抑制確率 +(11-13)%",
-          "name": "打ち消しの",
-          "tag": "dex_armour",
-          "generation_type": "suffix",
-          "required_level": 58,
-          "weight": 1000
-        },
-        {
-          "key": "ChanceToSuppressSpellsHigh3",
-          "text": "スペルダメージ抑制確率 +(14-16)%",
-          "name": "取り消しの",
-          "tag": "dex_armour",
-          "generation_type": "suffix",
-          "required_level": 67,
           "weight": 1000
         },
         {
@@ -655,30 +565,12 @@
           "weight": 1000
         },
         {
-          "key": "ChanceToSuppressSpellsHigh4_",
-          "text": "スペルダメージ抑制確率 +(17-19)%",
-          "name": "放棄の",
-          "tag": "dex_armour",
-          "generation_type": "suffix",
-          "required_level": 77,
-          "weight": 1000
-        },
-        {
           "key": "ChanceToSuppressSpells5__",
           "text": "スペルダメージ抑制確率 +(13-14)%",
           "name": "無効化の",
           "tag": "dex_armour",
           "generation_type": "suffix",
           "required_level": 85,
-          "weight": 1000
-        },
-        {
-          "key": "ChanceToSuppressSpellsHigh5___",
-          "text": "スペルダメージ抑制確率 +(20-22)%",
-          "name": "無効化の",
-          "tag": "dex_armour",
-          "generation_type": "suffix",
-          "required_level": 86,
           "weight": 1000
         }
       ],
@@ -1045,15 +937,6 @@
           "weight": 500
         },
         {
-          "key": "IncreasedAttackSpeed2Royale",
-          "text": "アタックスピードが(8-15)%増加する",
-          "name": "手軽さの",
-          "tag": "gloves",
-          "generation_type": "suffix",
-          "required_level": 4,
-          "weight": 500
-        },
-        {
           "key": "IncreasedAttackSpeed2",
           "text": "アタックスピードが(8-10)%増加する",
           "name": "容易さの",
@@ -1078,17 +961,6 @@
           "tag": "gloves",
           "generation_type": "suffix",
           "required_level": 76,
-          "weight": 500
-        }
-      ],
-      "IncreasedCastSpeed": [
-        {
-          "key": "IncreasedCastSpeed2Royale",
-          "text": "キャストスピードが(8-15)%増加する",
-          "name": "軽快さの",
-          "tag": "gloves",
-          "generation_type": "suffix",
-          "required_level": 4,
           "weight": 500
         }
       ],
@@ -1262,15 +1134,6 @@
           "generation_type": "suffix",
           "required_level": 74,
           "weight": 1000
-        },
-        {
-          "key": "LifeRegeneration9",
-          "text": "毎秒(96.1-128)のライフを自動回復する",
-          "name": "療養の",
-          "tag": "default",
-          "generation_type": "suffix",
-          "required_level": 78,
-          "weight": 1000
         }
       ],
       "LightningResistance": [
@@ -1431,62 +1294,6 @@
           "tag": "gloves",
           "generation_type": "suffix",
           "required_level": 50,
-          "weight": 1000
-        }
-      ],
-      "StunRecovery": [
-        {
-          "key": "StunRecovery1",
-          "text": "スタンおよびブロック復帰が(11-13)%増加する",
-          "name": "厚い肌の",
-          "tag": "armour",
-          "generation_type": "suffix",
-          "required_level": 1,
-          "weight": 1000
-        },
-        {
-          "key": "StunRecovery2",
-          "text": "スタンおよびブロック復帰が(14-16)%増加する",
-          "name": "石の肌の",
-          "tag": "armour",
-          "generation_type": "suffix",
-          "required_level": 17,
-          "weight": 1000
-        },
-        {
-          "key": "StunRecovery3",
-          "text": "スタンおよびブロック復帰が(17-19)%増加する",
-          "name": "鉄の肌の",
-          "tag": "armour",
-          "generation_type": "suffix",
-          "required_level": 28,
-          "weight": 1000
-        },
-        {
-          "key": "StunRecovery4",
-          "text": "スタンおよびブロック復帰が(20-22)%増加する",
-          "name": "鋼鉄の肌の",
-          "tag": "armour",
-          "generation_type": "suffix",
-          "required_level": 42,
-          "weight": 1000
-        },
-        {
-          "key": "StunRecovery5",
-          "text": "スタンおよびブロック復帰が(23-25)%増加する",
-          "name": "アダマンタイトの肌の",
-          "tag": "armour",
-          "generation_type": "suffix",
-          "required_level": 56,
-          "weight": 1000
-        },
-        {
-          "key": "StunRecovery6",
-          "text": "スタンおよびブロック復帰が(26-28)%増加する",
-          "name": "コランダムの肌の",
-          "tag": "armour",
-          "generation_type": "suffix",
-          "required_level": 79,
           "weight": 1000
         }
       ]

@@ -739,37 +739,6 @@
           "weight": 25
         }
       ],
-      "LocalIncreaseSocketedGemLevel": [
-        {
-          "key": "LocalIncreaseSocketedGemLevel1",
-          "text": "ソケットされたジェムのレベル +1",
-          "name": "模範の",
-          "tag": "weapon",
-          "generation_type": "prefix",
-          "required_level": 50,
-          "weight": 1000
-        }
-      ],
-      "LocalIncreaseSocketedMeleeGemLevel": [
-        {
-          "key": "LocalIncreaseSocketedMeleeGemLevel1",
-          "text": "ソケットされた近接ジェムのレベル +1",
-          "name": "戦闘員の",
-          "tag": "weapon",
-          "generation_type": "prefix",
-          "required_level": 8,
-          "weight": 1000
-        },
-        {
-          "key": "LocalIncreaseSocketedMeleeGemLevel",
-          "text": "ソケットされた近接ジェムのレベル +2",
-          "name": "武器の達人の",
-          "tag": "weapon",
-          "generation_type": "prefix",
-          "required_level": 63,
-          "weight": 1000
-        }
-      ],
       "LocalLightningDamage": [
         {
           "key": "LocalAddedLightningDamage1",
@@ -1729,62 +1698,6 @@
           "weight": 35
         }
       ],
-      "ColdDamagePercentage": [
-        {
-          "key": "ColdDamagePercent1",
-          "text": "冷気ダメージが(10-12)%増加する",
-          "name": "雪の",
-          "tag": "ring",
-          "generation_type": "suffix",
-          "required_level": 12,
-          "weight": 500
-        },
-        {
-          "key": "ColdDamagePercent2",
-          "text": "冷気ダメージが(13-15)%増加する",
-          "name": "霙の",
-          "tag": "ring",
-          "generation_type": "suffix",
-          "required_level": 24,
-          "weight": 500
-        },
-        {
-          "key": "ColdDamagePercent3",
-          "text": "冷気ダメージが(16-18)%増加する",
-          "name": "氷雪の",
-          "tag": "ring",
-          "generation_type": "suffix",
-          "required_level": 36,
-          "weight": 500
-        },
-        {
-          "key": "ColdDamagePercent4",
-          "text": "冷気ダメージが(19-22)%増加する",
-          "name": "霧氷の",
-          "tag": "ring",
-          "generation_type": "suffix",
-          "required_level": 50,
-          "weight": 500
-        },
-        {
-          "key": "ColdDamagePercent5",
-          "text": "冷気ダメージが(23-26)%増加する",
-          "name": "氷原の",
-          "tag": "amulet",
-          "generation_type": "suffix",
-          "required_level": 64,
-          "weight": 500
-        },
-        {
-          "key": "ColdDamagePercent6",
-          "text": "冷気ダメージが(27-30)%増加する",
-          "name": "氷結の",
-          "tag": "default",
-          "generation_type": "suffix",
-          "required_level": 76,
-          "weight": 0
-        }
-      ],
       "CriticalStrikeMultiplier": [
         {
           "key": "LocalCriticalMultiplier1",
@@ -1888,62 +1801,6 @@
           "weight": 35
         }
       ],
-      "FireDamagePercentage": [
-        {
-          "key": "FireDamagePercent1",
-          "text": "火ダメージが(10-12)%増加する",
-          "name": "残り火の",
-          "tag": "ring",
-          "generation_type": "suffix",
-          "required_level": 8,
-          "weight": 500
-        },
-        {
-          "key": "FireDamagePercent2",
-          "text": "火ダメージが(13-15)%増加する",
-          "name": "石炭の",
-          "tag": "ring",
-          "generation_type": "suffix",
-          "required_level": 22,
-          "weight": 500
-        },
-        {
-          "key": "FireDamagePercent3",
-          "text": "火ダメージが(16-18)%増加する",
-          "name": "消し炭の",
-          "tag": "ring",
-          "generation_type": "suffix",
-          "required_level": 36,
-          "weight": 500
-        },
-        {
-          "key": "FireDamagePercent4",
-          "text": "火ダメージが(19-22)%増加する",
-          "name": "炎の",
-          "tag": "ring",
-          "generation_type": "suffix",
-          "required_level": 50,
-          "weight": 500
-        },
-        {
-          "key": "FireDamagePercent5",
-          "text": "火ダメージが(23-26)%増加する",
-          "name": "焼棄の",
-          "tag": "amulet",
-          "generation_type": "suffix",
-          "required_level": 64,
-          "weight": 500
-        },
-        {
-          "key": "FireDamagePercent6",
-          "text": "火ダメージが(27-30)%増加する",
-          "name": "灰の",
-          "tag": "default",
-          "generation_type": "suffix",
-          "required_level": 76,
-          "weight": 0
-        }
-      ],
       "GlobalDamageOverTimeMultiplier": [
         {
           "key": "GlobalDamageOverTimeMultiplier1h1",
@@ -1999,15 +1856,6 @@
           "tag": "wand",
           "generation_type": "suffix",
           "required_level": 2,
-          "weight": 1000
-        },
-        {
-          "key": "IncreasedCastSpeed2Royale",
-          "text": "キャストスピードが(8-15)%増加する",
-          "name": "軽快さの",
-          "tag": "wand",
-          "generation_type": "suffix",
-          "required_level": 4,
           "weight": 1000
         },
         {
@@ -2287,80 +2135,6 @@
           "generation_type": "suffix",
           "required_level": 20,
           "weight": 1000
-        },
-        {
-          "key": "LifeLeechPermyriadLocalSuffix2",
-          "text": "物理アタックダメージの(2.6-3.2)%をライフとしてリーチする",
-          "name": "ヤツメウナギの",
-          "tag": "weapon",
-          "generation_type": "suffix",
-          "required_level": 45,
-          "weight": 500
-        },
-        {
-          "key": "LifeLeechPermyriadLocalSuffix3",
-          "text": "物理アタックダメージの(3.5-4.5)%をライフとしてリーチする",
-          "name": "吸血鬼の",
-          "tag": "weapon",
-          "generation_type": "suffix",
-          "required_level": 70,
-          "weight": 250
-        }
-      ],
-      "LightningDamagePercentage": [
-        {
-          "key": "LightningDamagePercent1",
-          "text": "雷ダメージが(10-12)%増加する",
-          "name": "電光の",
-          "tag": "ring",
-          "generation_type": "suffix",
-          "required_level": 10,
-          "weight": 500
-        },
-        {
-          "key": "LightningDamagePercent2",
-          "text": "雷ダメージが(13-15)%増加する",
-          "name": "静電気の",
-          "tag": "ring",
-          "generation_type": "suffix",
-          "required_level": 23,
-          "weight": 500
-        },
-        {
-          "key": "LightningDamagePercent3",
-          "text": "雷ダメージが(16-18)%増加する",
-          "name": "電気の",
-          "tag": "ring",
-          "generation_type": "suffix",
-          "required_level": 36,
-          "weight": 500
-        },
-        {
-          "key": "LightningDamagePercent4",
-          "text": "雷ダメージが(19-22)%増加する",
-          "name": "電圧の",
-          "tag": "ring",
-          "generation_type": "suffix",
-          "required_level": 50,
-          "weight": 500
-        },
-        {
-          "key": "LightningDamagePercent5",
-          "text": "雷ダメージが(23-26)%増加する",
-          "name": "放電の",
-          "tag": "amulet",
-          "generation_type": "suffix",
-          "required_level": 64,
-          "weight": 500
-        },
-        {
-          "key": "LightningDamagePercent6",
-          "text": "雷ダメージが(27-30)%増加する",
-          "name": "電弧の",
-          "tag": "default",
-          "generation_type": "suffix",
-          "required_level": 76,
-          "weight": 0
         }
       ],
       "LocalAccuracyRating": [
@@ -2506,15 +2280,6 @@
           "weight": 1000
         },
         {
-          "key": "LocalIncreasedAttackSpeed2Royale____",
-          "text": "アタックスピードが(15-25)%増加する",
-          "name": "手軽さの",
-          "tag": "weapon",
-          "generation_type": "suffix",
-          "required_level": 4,
-          "weight": 1000
-        },
-        {
           "key": "LocalIncreasedAttackSpeed2",
           "text": "アタックスピードが(8-10)%増加する",
           "name": "容易さの",
@@ -2536,46 +2301,19 @@
           "key": "LocalIncreasedAttackSpeed4",
           "text": "アタックスピードが(14-16)%増加する",
           "name": "高名の",
-          "tag": "weapon",
+          "tag": "ranged",
           "generation_type": "suffix",
           "required_level": 30,
-          "weight": 1000
+          "weight": 500
         },
         {
           "key": "LocalIncreasedAttackSpeed5",
           "text": "アタックスピードが(17-19)%増加する",
           "name": "絶賛の",
-          "tag": "weapon",
+          "tag": "ranged",
           "generation_type": "suffix",
           "required_level": 37,
-          "weight": 1000
-        },
-        {
-          "key": "LocalIncreasedAttackSpeed6",
-          "text": "アタックスピードが(20-22)%増加する",
-          "name": "名声の",
-          "tag": "weapon",
-          "generation_type": "suffix",
-          "required_level": 45,
-          "weight": 1000
-        },
-        {
-          "key": "LocalIncreasedAttackSpeed7",
-          "text": "アタックスピードが(23-25)%増加する",
-          "name": "汚名の",
-          "tag": "weapon",
-          "generation_type": "suffix",
-          "required_level": 60,
-          "weight": 1000
-        },
-        {
-          "key": "LocalIncreasedAttackSpeed8",
-          "text": "アタックスピードが(26-27)%増加する",
-          "name": "祝賀の",
-          "tag": "weapon",
-          "generation_type": "suffix",
-          "required_level": 77,
-          "weight": 1000
+          "weight": 500
         }
       ],
       "LocalLightRadiusAndAccuracyPercent": [
@@ -2907,62 +2645,6 @@
           "weight": 2000
         }
       ],
-      "MinionFlatAccuracyRating": [
-        {
-          "key": "MinionAccuracyRatingWeapon1_",
-          "text": "ミニオンの命中力 +(80-130)",
-          "name": "講師の",
-          "tag": "default",
-          "generation_type": "suffix",
-          "required_level": 1,
-          "weight": 0
-        },
-        {
-          "key": "MinionAccuracyRatingWeapon2",
-          "text": "ミニオンの命中力 +(131-215)",
-          "name": "教師の",
-          "tag": "default",
-          "generation_type": "suffix",
-          "required_level": 20,
-          "weight": 0
-        },
-        {
-          "key": "MinionAccuracyRatingWeapon3",
-          "text": "ミニオンの命中力 +(216-325)",
-          "name": "司令官の",
-          "tag": "default",
-          "generation_type": "suffix",
-          "required_level": 40,
-          "weight": 0
-        },
-        {
-          "key": "MinionAccuracyRatingWeapon4",
-          "text": "ミニオンの命中力 +(326-455)",
-          "name": "有力者の",
-          "tag": "default",
-          "generation_type": "suffix",
-          "required_level": 60,
-          "weight": 0
-        },
-        {
-          "key": "MinionAccuracyRatingWeapon5",
-          "text": "ミニオンの命中力 +(456-545)",
-          "name": "統治者の",
-          "tag": "default",
-          "generation_type": "suffix",
-          "required_level": 75,
-          "weight": 0
-        },
-        {
-          "key": "MinionAccuracyRatingWeapon6",
-          "text": "ミニオンの命中力 +(546-624)",
-          "name": "王の",
-          "tag": "default",
-          "generation_type": "suffix",
-          "required_level": 85,
-          "weight": 0
-        }
-      ],
       "MinionGrantsConvocation": [
         {
           "key": "MinionGrantsConvocation1",
@@ -3121,53 +2803,6 @@
           "tag": "wand",
           "generation_type": "suffix",
           "required_level": 76,
-          "weight": 1000
-        }
-      ],
-      "StunDurationIncreasePercent": [
-        {
-          "key": "StunDuration1",
-          "text": "敵に対するスタンの持続時間が(11-15)%増加する",
-          "name": "衝撃の",
-          "tag": "mace",
-          "generation_type": "suffix",
-          "required_level": 5,
-          "weight": 1000
-        },
-        {
-          "key": "StunDuration2",
-          "text": "敵に対するスタンの持続時間が(16-20)%増加する",
-          "name": "放心の",
-          "tag": "mace",
-          "generation_type": "suffix",
-          "required_level": 18,
-          "weight": 1000
-        },
-        {
-          "key": "StunDuration3",
-          "text": "敵に対するスタンの持続時間が(21-25)%増加する",
-          "name": "気絶の",
-          "tag": "mace",
-          "generation_type": "suffix",
-          "required_level": 30,
-          "weight": 1000
-        },
-        {
-          "key": "StunDuration4",
-          "text": "敵に対するスタンの持続時間が(26-30)%増加する",
-          "name": "叩きつけの",
-          "tag": "mace",
-          "generation_type": "suffix",
-          "required_level": 44,
-          "weight": 1000
-        },
-        {
-          "key": "StunDuration5",
-          "text": "敵に対するスタンの持続時間が(31-35)%増加する",
-          "name": "よろめきの",
-          "tag": "mace",
-          "generation_type": "suffix",
-          "required_level": 58,
           "weight": 1000
         }
       ]

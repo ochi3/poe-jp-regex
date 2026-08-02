@@ -284,39 +284,6 @@
           "weight": 1000
         }
       ],
-      "LocalArmourAndEnergyShield": [
-        {
-          "key": "LocalIncreasedArmourAndEnergyShield8",
-          "text": "アーマーおよびエナジーシールドが(101-110)%増加する",
-          "name": "教浸されし",
-          "tag": "body_armour",
-          "generation_type": "prefix",
-          "required_level": 86,
-          "weight": 1000
-        }
-      ],
-      "LocalArmourAndEvasion": [
-        {
-          "key": "LocalIncreasedArmourAndEvasion8",
-          "text": "アーマーおよび回避力が(101-110)%増加する",
-          "name": "勝者の",
-          "tag": "body_armour",
-          "generation_type": "prefix",
-          "required_level": 86,
-          "weight": 1000
-        }
-      ],
-      "LocalArmourAndEvasionAndEnergyShield": [
-        {
-          "key": "LocalIncreasedArmourEvasionEnergyShield7__",
-          "text": "アーマー、回避力およびエナジーシールドが(101-110)%増加する",
-          "name": "霊的な",
-          "tag": "body_armour",
-          "generation_type": "prefix",
-          "required_level": 85,
-          "weight": 1000
-        }
-      ],
       "LocalBaseEnergyShieldAndLife": [
         {
           "key": "LocalBaseEnergyShieldAndLife1",
@@ -623,39 +590,6 @@
           "required_level": 86,
           "weight": 1000
         }
-      ],
-      "LocalEvasionAndEnergyShield": [
-        {
-          "key": "LocalIncreasedEvasionAndEnergyShield8",
-          "text": "回避力およびエナジーシールドが(101-110)%増加する",
-          "name": "霊的な",
-          "tag": "body_armour",
-          "generation_type": "prefix",
-          "required_level": 86,
-          "weight": 1000
-        }
-      ],
-      "LocalEvasionRatingIncreasePercent": [
-        {
-          "key": "LocalIncreasedEvasionRatingPercent8",
-          "text": "回避力が(101-110)%増加する",
-          "name": "幻術の",
-          "tag": "body_armour",
-          "generation_type": "prefix",
-          "required_level": 86,
-          "weight": 1000
-        }
-      ],
-      "LocalPhysicalDamageReductionRatingPercent": [
-        {
-          "key": "LocalIncreasedPhysicalDamageReductionRatingPercent8_",
-          "text": "アーマーが(101-110)%増加する",
-          "name": "堅牢な",
-          "tag": "body_armour",
-          "generation_type": "prefix",
-          "required_level": 86,
-          "weight": 1000
-        }
       ]
     },
     "suffix": {
@@ -833,53 +767,6 @@
           "tag": "int_armour",
           "generation_type": "suffix",
           "required_level": 86,
-          "weight": 1000
-        }
-      ],
-      "EnergyShieldRegeneration": [
-        {
-          "key": "EnergyShieldRechargeRate1",
-          "text": "エナジーシールドリチャージレートが(24-26)%増加する",
-          "name": "緩和の",
-          "tag": "int_armour",
-          "generation_type": "suffix",
-          "required_level": 46,
-          "weight": 1000
-        },
-        {
-          "key": "EnergyShieldRechargeRate2",
-          "text": "エナジーシールドリチャージレートが(27-29)%増加する",
-          "name": "拡散の",
-          "tag": "int_armour",
-          "generation_type": "suffix",
-          "required_level": 57,
-          "weight": 1000
-        },
-        {
-          "key": "EnergyShieldRechargeRate3",
-          "text": "エナジーシールドリチャージレートが(30-32)%増加する",
-          "name": "霧散の",
-          "tag": "int_armour",
-          "generation_type": "suffix",
-          "required_level": 68,
-          "weight": 1000
-        },
-        {
-          "key": "EnergyShieldRechargeRate4",
-          "text": "エナジーシールドリチャージレートが(33-35)%増加する",
-          "name": "緩衝の",
-          "tag": "int_armour",
-          "generation_type": "suffix",
-          "required_level": 76,
-          "weight": 1000
-        },
-        {
-          "key": "EnergyShieldRechargeRate5______",
-          "text": "エナジーシールドリチャージレートが(36-38)%増加する",
-          "name": "気勢の",
-          "tag": "int_armour",
-          "generation_type": "suffix",
-          "required_level": 85,
           "weight": 1000
         }
       ],

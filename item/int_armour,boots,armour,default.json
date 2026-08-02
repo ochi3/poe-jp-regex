@@ -91,15 +91,6 @@
           "generation_type": "prefix",
           "required_level": 54,
           "weight": 1000
-        },
-        {
-          "key": "IncreasedLife9",
-          "text": "最大ライフ +(130-144)",
-          "name": "豊かな",
-          "tag": "default",
-          "generation_type": "prefix",
-          "required_level": 64,
-          "weight": 1000
         }
       ],
       "IncreasedMana": [
@@ -250,24 +241,6 @@
           "generation_type": "prefix",
           "required_level": 46,
           "weight": 1000
-        },
-        {
-          "key": "LocalBaseEnergyShieldAndLife3_",
-          "text": "最大エナジーシールド +(16-25)\n最大ライフ +(29-33)",
-          "name": "修道院長の",
-          "tag": "int_armour",
-          "generation_type": "prefix",
-          "required_level": 62,
-          "weight": 1000
-        },
-        {
-          "key": "LocalBaseEnergyShieldAndLife4_",
-          "text": "最大エナジーシールド +(26-30)\n最大ライフ +(34-38)",
-          "name": "エグザルフの",
-          "tag": "int_armour",
-          "generation_type": "prefix",
-          "required_level": 78,
-          "weight": 500
         }
       ],
       "LocalBaseEnergyShieldAndMana": [
@@ -288,24 +261,6 @@
           "generation_type": "prefix",
           "required_level": 46,
           "weight": 1000
-        },
-        {
-          "key": "LocalBaseEnergyShieldAndMana3",
-          "text": "最大エナジーシールド +(16-25)\n最大マナ +(20-22)",
-          "name": "神官の",
-          "tag": "int_armour",
-          "generation_type": "prefix",
-          "required_level": 62,
-          "weight": 1000
-        },
-        {
-          "key": "LocalBaseEnergyShieldAndMana4",
-          "text": "最大エナジーシールド +(26-30)\n最大マナ +(23-25)",
-          "name": "司教の",
-          "tag": "int_armour",
-          "generation_type": "prefix",
-          "required_level": 78,
-          "weight": 500
         }
       ],
       "LocalEnergyShield": [
@@ -370,42 +325,6 @@
           "tag": "int_armour",
           "generation_type": "prefix",
           "required_level": 43,
-          "weight": 1000
-        },
-        {
-          "key": "LocalIncreasedEnergyShield8",
-          "text": "最大エナジーシールド +(50-61)",
-          "name": "焼き付く",
-          "tag": "int_armour",
-          "generation_type": "prefix",
-          "required_level": 51,
-          "weight": 1000
-        },
-        {
-          "key": "LocalIncreasedEnergyShield9",
-          "text": "最大エナジーシールド +(62-76)",
-          "name": "耀う",
-          "tag": "int_armour",
-          "generation_type": "prefix",
-          "required_level": 60,
-          "weight": 1000
-        },
-        {
-          "key": "LocalIncreasedEnergyShield10",
-          "text": "最大エナジーシールド +(77-90)",
-          "name": "光り輝く",
-          "tag": "int_armour",
-          "generation_type": "prefix",
-          "required_level": 69,
-          "weight": 1000
-        },
-        {
-          "key": "LocalIncreasedEnergyShield11",
-          "text": "最大エナジーシールド +(91-100)",
-          "name": "きらびやかな",
-          "tag": "int_armour",
-          "generation_type": "prefix",
-          "required_level": 75,
           "weight": 1000
         }
       ],
@@ -538,15 +457,6 @@
           "tag": "boots",
           "generation_type": "prefix",
           "required_level": 1,
-          "weight": 1000
-        },
-        {
-          "key": "MovementVelocity2Royale",
-          "text": "移動スピードが(15-25)%増加する",
-          "name": "競走者の",
-          "tag": "boots",
-          "generation_type": "prefix",
-          "required_level": 5,
           "weight": 1000
         },
         {
@@ -724,53 +634,6 @@
           "tag": "armour",
           "generation_type": "suffix",
           "required_level": 84,
-          "weight": 1000
-        }
-      ],
-      "EnergyShieldDelay": [
-        {
-          "key": "FasterStartEnergyShieldRecharge1",
-          "text": "エナジーシールドのリチャージが(27-34)%速く始まる",
-          "name": "英気の",
-          "tag": "int_armour",
-          "generation_type": "suffix",
-          "required_level": 45,
-          "weight": 1000
-        },
-        {
-          "key": "FasterStartEnergyShieldRecharge2",
-          "text": "エナジーシールドのリチャージが(35-42)%速く始まる",
-          "name": "気力の",
-          "tag": "int_armour",
-          "generation_type": "suffix",
-          "required_level": 58,
-          "weight": 1000
-        },
-        {
-          "key": "FasterStartEnergyShieldRecharge3__",
-          "text": "エナジーシールドのリチャージが(43-50)%速く始まる",
-          "name": "激励の",
-          "tag": "int_armour",
-          "generation_type": "suffix",
-          "required_level": 67,
-          "weight": 1000
-        },
-        {
-          "key": "FasterStartEnergyShieldRecharge4",
-          "text": "エナジーシールドのリチャージが(51-58)%速く始まる",
-          "name": "元気の",
-          "tag": "int_armour",
-          "generation_type": "suffix",
-          "required_level": 77,
-          "weight": 1000
-        },
-        {
-          "key": "FasterStartEnergyShieldRecharge5_",
-          "text": "エナジーシールドのリチャージが(59-66)%速く始まる",
-          "name": "持ち直しの",
-          "tag": "int_armour",
-          "generation_type": "suffix",
-          "required_level": 86,
           "weight": 1000
         }
       ],
@@ -1069,15 +932,6 @@
           "tag": "default",
           "generation_type": "suffix",
           "required_level": 74,
-          "weight": 1000
-        },
-        {
-          "key": "LifeRegeneration9",
-          "text": "毎秒(96.1-128)のライフを自動回復する",
-          "name": "療養の",
-          "tag": "default",
-          "generation_type": "suffix",
-          "required_level": 78,
           "weight": 1000
         }
       ],

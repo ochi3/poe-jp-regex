@@ -74,17 +74,6 @@
           "weight": 300
         }
       ],
-      "LocalChaosDamage": [
-        {
-          "key": "LocalAddedChaosDamage1",
-          "text": "(56-87)から(105-160)の混沌ダメージを追加する",
-          "name": "害意ある",
-          "tag": "axe",
-          "generation_type": "prefix",
-          "required_level": 83,
-          "weight": 600
-        }
-      ],
       "LocalChaosDamageTwoHand": [
         {
           "key": "LocalAddedChaosDamageTwoHand1",
@@ -94,98 +83,6 @@
           "generation_type": "prefix",
           "required_level": 83,
           "weight": 600
-        }
-      ],
-      "LocalColdDamage": [
-        {
-          "key": "LocalAddedColdDamage1",
-          "text": "(1-2)から(3-4)の冷気ダメージを追加する",
-          "name": "凍てついた",
-          "tag": "axe",
-          "generation_type": "prefix",
-          "required_level": 2,
-          "weight": 1200
-        },
-        {
-          "key": "LocalAddedColdDamage2",
-          "text": "(7-9)から(14-16)の冷気ダメージを追加する",
-          "name": "冷えた",
-          "tag": "axe",
-          "generation_type": "prefix",
-          "required_level": 12,
-          "weight": 1200
-        },
-        {
-          "key": "LocalAddedColdDamage3",
-          "text": "(11-15)から(23-26)の冷気ダメージを追加する",
-          "name": "凍った",
-          "tag": "axe",
-          "generation_type": "prefix",
-          "required_level": 19,
-          "weight": 1200
-        },
-        {
-          "key": "LocalAddedColdDamage4",
-          "text": "(16-21)から(31-37)の冷気ダメージを追加する",
-          "name": "凍える",
-          "tag": "axe",
-          "generation_type": "prefix",
-          "required_level": 27,
-          "weight": 1200
-        },
-        {
-          "key": "LocalAddedColdDamage5",
-          "text": "(22-30)から(44-51)の冷気ダメージを追加する",
-          "name": "凍りつく",
-          "tag": "axe",
-          "generation_type": "prefix",
-          "required_level": 34,
-          "weight": 1200
-        },
-        {
-          "key": "LocalAddedColdDamage6",
-          "text": "(31-42)から(62-71)の冷気ダメージを追加する",
-          "name": "凍結した",
-          "tag": "axe",
-          "generation_type": "prefix",
-          "required_level": 43,
-          "weight": 1200
-        },
-        {
-          "key": "LocalAddedColdDamage7",
-          "text": "(41-57)から(83-97)の冷気ダメージを追加する",
-          "name": "氷結した",
-          "tag": "axe",
-          "generation_type": "prefix",
-          "required_level": 52,
-          "weight": 1200
-        },
-        {
-          "key": "LocalAddedColdDamage8",
-          "text": "(54-74)から(108-126)の冷気ダメージを追加する",
-          "name": "極地の",
-          "tag": "axe",
-          "generation_type": "prefix",
-          "required_level": 63,
-          "weight": 960
-        },
-        {
-          "key": "LocalAddedColdDamage9",
-          "text": "(68-92)から(136-157)の冷気ダメージを追加する",
-          "name": "氷葬する",
-          "tag": "axe",
-          "generation_type": "prefix",
-          "required_level": 75,
-          "weight": 420
-        },
-        {
-          "key": "LocalAddedColdDamage10__",
-          "text": "(81-111)から(163-189)の冷気ダメージを追加する",
-          "name": "結晶化する",
-          "tag": "axe",
-          "generation_type": "prefix",
-          "required_level": 82,
-          "weight": 108
         }
       ],
       "LocalColdDamageTwoHand": [
@@ -274,98 +171,6 @@
           "key": "LocalAddedColdDamageTwoHand10",
           "text": "(149-204)から(300-348)の冷気ダメージを追加する",
           "name": "結晶化する",
-          "tag": "axe",
-          "generation_type": "prefix",
-          "required_level": 82,
-          "weight": 108
-        }
-      ],
-      "LocalFireDamage": [
-        {
-          "key": "LocalAddedFireDamage1",
-          "text": "(1-2)から(3-4)の火ダメージを追加する",
-          "name": "熱した",
-          "tag": "axe",
-          "generation_type": "prefix",
-          "required_level": 1,
-          "weight": 1200
-        },
-        {
-          "key": "LocalAddedFireDamage2",
-          "text": "(8-10)から(15-18)の火ダメージを追加する",
-          "name": "燻る",
-          "tag": "axe",
-          "generation_type": "prefix",
-          "required_level": 11,
-          "weight": 1200
-        },
-        {
-          "key": "LocalAddedFireDamage3",
-          "text": "(12-17)から(25-29)の火ダメージを追加する",
-          "name": "発煙する",
-          "tag": "axe",
-          "generation_type": "prefix",
-          "required_level": 18,
-          "weight": 1200
-        },
-        {
-          "key": "LocalAddedFireDamage4",
-          "text": "(17-24)から(35-41)の火ダメージを追加する",
-          "name": "燃える",
-          "tag": "axe",
-          "generation_type": "prefix",
-          "required_level": 26,
-          "weight": 1200
-        },
-        {
-          "key": "LocalAddedFireDamage5",
-          "text": "(24-33)から(49-57)の火ダメージを追加する",
-          "name": "燃え立つ",
-          "tag": "axe",
-          "generation_type": "prefix",
-          "required_level": 33,
-          "weight": 1200
-        },
-        {
-          "key": "LocalAddedFireDamage6",
-          "text": "(34-46)から(68-80)の火ダメージを追加する",
-          "name": "焼き焦がす",
-          "tag": "axe",
-          "generation_type": "prefix",
-          "required_level": 42,
-          "weight": 1200
-        },
-        {
-          "key": "LocalAddedFireDamage7",
-          "text": "(46-62)から(93-107)の火ダメージを追加する",
-          "name": "焼却する",
-          "tag": "axe",
-          "generation_type": "prefix",
-          "required_level": 51,
-          "weight": 1200
-        },
-        {
-          "key": "LocalAddedFireDamage8",
-          "text": "(59-81)から(120-140)の火ダメージを追加する",
-          "name": "爆破する",
-          "tag": "axe",
-          "generation_type": "prefix",
-          "required_level": 62,
-          "weight": 960
-        },
-        {
-          "key": "LocalAddedFireDamage9",
-          "text": "(74-101)から(150-175)の火ダメージを追加する",
-          "name": "火葬する",
-          "tag": "axe",
-          "generation_type": "prefix",
-          "required_level": 74,
-          "weight": 420
-        },
-        {
-          "key": "LocalAddedFireDamage10_",
-          "text": "(89-121)から(180-210)の火ダメージを追加する",
-          "name": "炭化する",
           "tag": "axe",
           "generation_type": "prefix",
           "required_level": 82,
@@ -567,98 +372,6 @@
           "generation_type": "prefix",
           "required_level": 63,
           "weight": 1000
-        }
-      ],
-      "LocalLightningDamage": [
-        {
-          "key": "LocalAddedLightningDamage1",
-          "text": "1から(5-6)の雷ダメージを追加する",
-          "name": "電音の",
-          "tag": "axe",
-          "generation_type": "prefix",
-          "required_level": 3,
-          "weight": 1200
-        },
-        {
-          "key": "LocalAddedLightningDamage2",
-          "text": "2から(25-29)の雷ダメージを追加する",
-          "name": "電鳴の",
-          "tag": "axe",
-          "generation_type": "prefix",
-          "required_level": 13,
-          "weight": 1200
-        },
-        {
-          "key": "LocalAddedLightningDamage3",
-          "text": "2から(41-48)の雷ダメージを追加する",
-          "name": "雷音の",
-          "tag": "axe",
-          "generation_type": "prefix",
-          "required_level": 19,
-          "weight": 1200
-        },
-        {
-          "key": "LocalAddedLightningDamage4",
-          "text": "3から(57-67)の雷ダメージを追加する",
-          "name": "雷鳴の",
-          "tag": "axe",
-          "generation_type": "prefix",
-          "required_level": 31,
-          "weight": 1200
-        },
-        {
-          "key": "LocalAddedLightningDamage5",
-          "text": "(4-5)から(80-94)の雷ダメージを追加する",
-          "name": "電光走る",
-          "tag": "axe",
-          "generation_type": "prefix",
-          "required_level": 34,
-          "weight": 1200
-        },
-        {
-          "key": "LocalAddedLightningDamage6",
-          "text": "(5-8)から(112-131)の雷ダメージを追加する",
-          "name": "電弧する",
-          "tag": "axe",
-          "generation_type": "prefix",
-          "required_level": 42,
-          "weight": 1200
-        },
-        {
-          "key": "LocalAddedLightningDamage7",
-          "text": "(8-10)から(152-176)の雷ダメージを追加する",
-          "name": "電撃の",
-          "tag": "axe",
-          "generation_type": "prefix",
-          "required_level": 51,
-          "weight": 1200
-        },
-        {
-          "key": "LocalAddedLightningDamage8",
-          "text": "(10-14)から(197-229)の雷ダメージを追加する",
-          "name": "放電する",
-          "tag": "axe",
-          "generation_type": "prefix",
-          "required_level": 63,
-          "weight": 960
-        },
-        {
-          "key": "LocalAddedLightningDamage9",
-          "text": "(13-17)から(247-286)の雷ダメージを追加する",
-          "name": "感電する",
-          "tag": "axe",
-          "generation_type": "prefix",
-          "required_level": 74,
-          "weight": 420
-        },
-        {
-          "key": "LocalAddedLightningDamage10",
-          "text": "(15-21)から(296-344)の雷ダメージを追加する",
-          "name": "電殺する",
-          "tag": "axe",
-          "generation_type": "prefix",
-          "required_level": 82,
-          "weight": 108
         }
       ],
       "LocalLightningDamageTwoHand": [
@@ -1388,15 +1101,6 @@
           "tag": "weapon",
           "generation_type": "suffix",
           "required_level": 1,
-          "weight": 1000
-        },
-        {
-          "key": "LocalIncreasedAttackSpeed2Royale____",
-          "text": "アタックスピードが(15-25)%増加する",
-          "name": "手軽さの",
-          "tag": "weapon",
-          "generation_type": "suffix",
-          "required_level": 4,
           "weight": 1000
         },
         {

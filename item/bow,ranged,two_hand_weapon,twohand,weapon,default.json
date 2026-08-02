@@ -378,26 +378,6 @@
           "weight": 1000
         }
       ],
-      "LocalIncreaseSocketedMeleeGemLevel": [
-        {
-          "key": "LocalIncreaseSocketedMeleeGemLevel1",
-          "text": "ソケットされた近接ジェムのレベル +1",
-          "name": "戦闘員の",
-          "tag": "weapon",
-          "generation_type": "prefix",
-          "required_level": 8,
-          "weight": 1000
-        },
-        {
-          "key": "LocalIncreaseSocketedMeleeGemLevel",
-          "text": "ソケットされた近接ジェムのレベル +2",
-          "name": "武器の達人の",
-          "tag": "weapon",
-          "generation_type": "prefix",
-          "required_level": 63,
-          "weight": 1000
-        }
-      ],
       "LocalLightningDamageTwoHand": [
         {
           "key": "LocalAddedLightningDamageTwoHand1_",
@@ -819,28 +799,10 @@
           "weight": 300
         },
         {
-          "key": "GlobalDamageOverTimeMultiplier2h1__",
-          "text": "継続ダメージ倍率 +(16-21)%",
-          "name": "辛辣さの",
-          "tag": "two_hand_weapon",
-          "generation_type": "suffix",
-          "required_level": 44,
-          "weight": 300
-        },
-        {
           "key": "GlobalDamageOverTimeMultiplier1h2_",
           "text": "継続ダメージ倍率 +(12-15)%",
           "name": "消散の",
           "tag": "bow",
-          "generation_type": "suffix",
-          "required_level": 55,
-          "weight": 300
-        },
-        {
-          "key": "GlobalDamageOverTimeMultiplier2h2",
-          "text": "継続ダメージ倍率 +(24-29)%",
-          "name": "消散の",
-          "tag": "two_hand_weapon",
           "generation_type": "suffix",
           "required_level": 55,
           "weight": 300
@@ -855,15 +817,6 @@
           "weight": 300
         },
         {
-          "key": "GlobalDamageOverTimeMultiplier2h3___",
-          "text": "継続ダメージ倍率 +(31-35)%",
-          "name": "液化の",
-          "tag": "two_hand_weapon",
-          "generation_type": "suffix",
-          "required_level": 68,
-          "weight": 300
-        },
-        {
           "key": "GlobalDamageOverTimeMultiplier1h4",
           "text": "継続ダメージ倍率 +(20-23)%",
           "name": "融解の",
@@ -873,28 +826,10 @@
           "weight": 300
         },
         {
-          "key": "GlobalDamageOverTimeMultiplier2h4_",
-          "text": "継続ダメージ倍率 +(36-40)%",
-          "name": "融解の",
-          "tag": "two_hand_weapon",
-          "generation_type": "suffix",
-          "required_level": 76,
-          "weight": 300
-        },
-        {
           "key": "GlobalDamageOverTimeMultiplier1h5",
           "text": "継続ダメージ倍率 +(24-26)%",
           "name": "溶解の",
           "tag": "bow",
-          "generation_type": "suffix",
-          "required_level": 82,
-          "weight": 300
-        },
-        {
-          "key": "GlobalDamageOverTimeMultiplier2h5____",
-          "text": "継続ダメージ倍率 +(41-45)%",
-          "name": "溶解の",
-          "tag": "two_hand_weapon",
           "generation_type": "suffix",
           "required_level": 82,
           "weight": 300
@@ -1039,24 +974,6 @@
           "generation_type": "suffix",
           "required_level": 20,
           "weight": 1000
-        },
-        {
-          "key": "LifeLeechPermyriadLocalSuffix2",
-          "text": "物理アタックダメージの(2.6-3.2)%をライフとしてリーチする",
-          "name": "ヤツメウナギの",
-          "tag": "weapon",
-          "generation_type": "suffix",
-          "required_level": 45,
-          "weight": 500
-        },
-        {
-          "key": "LifeLeechPermyriadLocalSuffix3",
-          "text": "物理アタックダメージの(3.5-4.5)%をライフとしてリーチする",
-          "name": "吸血鬼の",
-          "tag": "weapon",
-          "generation_type": "suffix",
-          "required_level": 70,
-          "weight": 250
         }
       ],
       "LocalAccuracyRating": [
@@ -1202,15 +1119,6 @@
           "weight": 1000
         },
         {
-          "key": "LocalIncreasedAttackSpeed2Royale____",
-          "text": "アタックスピードが(15-25)%増加する",
-          "name": "手軽さの",
-          "tag": "weapon",
-          "generation_type": "suffix",
-          "required_level": 4,
-          "weight": 1000
-        },
-        {
           "key": "LocalIncreasedAttackSpeed2",
           "text": "アタックスピードが(8-10)%増加する",
           "name": "容易さの",
@@ -1232,46 +1140,19 @@
           "key": "LocalIncreasedAttackSpeed4",
           "text": "アタックスピードが(14-16)%増加する",
           "name": "高名の",
-          "tag": "weapon",
+          "tag": "ranged",
           "generation_type": "suffix",
           "required_level": 30,
-          "weight": 1000
+          "weight": 500
         },
         {
           "key": "LocalIncreasedAttackSpeed5",
           "text": "アタックスピードが(17-19)%増加する",
           "name": "絶賛の",
-          "tag": "weapon",
+          "tag": "ranged",
           "generation_type": "suffix",
           "required_level": 37,
-          "weight": 1000
-        },
-        {
-          "key": "LocalIncreasedAttackSpeed6",
-          "text": "アタックスピードが(20-22)%増加する",
-          "name": "名声の",
-          "tag": "weapon",
-          "generation_type": "suffix",
-          "required_level": 45,
-          "weight": 1000
-        },
-        {
-          "key": "LocalIncreasedAttackSpeed7",
-          "text": "アタックスピードが(23-25)%増加する",
-          "name": "汚名の",
-          "tag": "weapon",
-          "generation_type": "suffix",
-          "required_level": 60,
-          "weight": 1000
-        },
-        {
-          "key": "LocalIncreasedAttackSpeed8",
-          "text": "アタックスピードが(26-27)%増加する",
-          "name": "祝賀の",
-          "tag": "weapon",
-          "generation_type": "suffix",
-          "required_level": 77,
-          "weight": 1000
+          "weight": 500
         }
       ],
       "LocalLightRadiusAndAccuracyPercent": [

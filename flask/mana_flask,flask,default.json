@@ -118,53 +118,6 @@
           "weight": 3000
         }
       ],
-      "FlaskExtraLifeCostsMana": [
-        {
-          "key": "FlaskExtraLifeCostsMana1",
-          "text": "ライフ回復量が(35-39)%増加する\n使用した時に回復したライフの10%をマナから取り除く",
-          "name": "阻害する",
-          "tag": "default",
-          "generation_type": "prefix",
-          "required_level": 13,
-          "weight": 600
-        },
-        {
-          "key": "FlaskExtraLifeCostsMana2",
-          "text": "ライフ回復量が(40-44)%増加する\n使用した時に回復したライフの10%をマナから取り除く",
-          "name": "目眩のする",
-          "tag": "default",
-          "generation_type": "prefix",
-          "required_level": 30,
-          "weight": 600
-        },
-        {
-          "key": "FlaskExtraLifeCostsMana3",
-          "text": "ライフ回復量が(46-50)%増加する\n使用した時に回復したライフの10%をマナから取り除く",
-          "name": "消耗する",
-          "tag": "default",
-          "generation_type": "prefix",
-          "required_level": 47,
-          "weight": 600
-        },
-        {
-          "key": "FlaskExtraLifeCostsMana4",
-          "text": "ライフ回復量が(51-55)%増加する\n使用した時に回復したライフの10%をマナから取り除く",
-          "name": "弱化する",
-          "tag": "default",
-          "generation_type": "prefix",
-          "required_level": 64,
-          "weight": 600
-        },
-        {
-          "key": "FlaskExtraLifeCostsMana5_",
-          "text": "ライフ回復量が(56-60)%増加する\n使用した時に回復したライフの10%をマナから取り除く",
-          "name": "搾り取る",
-          "tag": "default",
-          "generation_type": "prefix",
-          "required_level": 81,
-          "weight": 600
-        }
-      ],
       "FlaskExtraManaCostsLife": [
         {
           "key": "FlaskExtraManaCostsLife1",
@@ -440,53 +393,6 @@
           "weight": 600
         }
       ],
-      "FlaskIncreasedRecoveryOnLowLife": [
-        {
-          "key": "FlaskIncreasedRecoveryOnLowLife1",
-          "text": "低ライフ時に使用すると回復量が(101-106)%上昇する",
-          "name": "慎重な",
-          "tag": "default",
-          "generation_type": "prefix",
-          "required_level": 6,
-          "weight": 600
-        },
-        {
-          "key": "FlaskIncreasedRecoveryOnLowLife2_",
-          "text": "低ライフ時に使用すると回復量が(107-112)%上昇する",
-          "name": "準備のいい",
-          "tag": "default",
-          "generation_type": "prefix",
-          "required_level": 25,
-          "weight": 600
-        },
-        {
-          "key": "FlaskIncreasedRecoveryOnLowLife3",
-          "text": "低ライフ時に使用すると回復量が(113-118)%上昇する",
-          "name": "入念な",
-          "tag": "default",
-          "generation_type": "prefix",
-          "required_level": 44,
-          "weight": 600
-        },
-        {
-          "key": "FlaskIncreasedRecoveryOnLowLife4",
-          "text": "低ライフ時に使用すると回復量が(119-124)%上昇する",
-          "name": "注意深い",
-          "tag": "default",
-          "generation_type": "prefix",
-          "required_level": 63,
-          "weight": 600
-        },
-        {
-          "key": "FlaskIncreasedRecoveryOnLowLife5",
-          "text": "低ライフ時に使用すると回復量が(125-130)%上昇する",
-          "name": "用心深い",
-          "tag": "default",
-          "generation_type": "prefix",
-          "required_level": 82,
-          "weight": 600
-        }
-      ],
       "FlaskIncreasedRecoverySpeed": [
         {
           "key": "FlaskIncreasedRecoverySpeed1",
@@ -528,53 +434,6 @@
           "key": "FlaskIncreasedRecoverySpeed5",
           "text": "回復レートが(65-70)%増加する",
           "name": "触媒作用の",
-          "tag": "default",
-          "generation_type": "prefix",
-          "required_level": 81,
-          "weight": 600
-        }
-      ],
-      "FlaskInstantRecoveryOnLowLife": [
-        {
-          "key": "FlaskInstantRecoveryOnLowLife1",
-          "text": "低ライフ時に即時回復になる\n回復量が(30-27)%減少する",
-          "name": "驚く",
-          "tag": "default",
-          "generation_type": "prefix",
-          "required_level": 9,
-          "weight": 600
-        },
-        {
-          "key": "FlaskInstantRecoveryOnLowLife2",
-          "text": "低ライフ時に即時回復になる\n回復量が(26-23)%減少する",
-          "name": "恐れる",
-          "tag": "default",
-          "generation_type": "prefix",
-          "required_level": 27,
-          "weight": 600
-        },
-        {
-          "key": "FlaskInstantRecoveryOnLowLife3",
-          "text": "低ライフ時に即時回復になる\n回復量が(22-19)%減少する",
-          "name": "警戒する",
-          "tag": "default",
-          "generation_type": "prefix",
-          "required_level": 45,
-          "weight": 600
-        },
-        {
-          "key": "FlaskInstantRecoveryOnLowLife4",
-          "text": "低ライフ時に即時回復になる\n回復量が(18-15)%減少する",
-          "name": "恐怖する",
-          "tag": "default",
-          "generation_type": "prefix",
-          "required_level": 63,
-          "weight": 600
-        },
-        {
-          "key": "FlaskInstantRecoveryOnLowLife5__",
-          "text": "低ライフ時に即時回復になる\n回復量が(14-11)%減少する",
-          "name": "狼狽する",
           "tag": "default",
           "generation_type": "prefix",
           "required_level": 81,
@@ -728,53 +587,6 @@
           "weight": 3000
         }
       ],
-      "FlaskHealsMinions": [
-        {
-          "key": "FlaskHealsMinions1",
-          "text": "ライフ回復の(100-119)%をミニオンに付与する",
-          "name": "初心者の",
-          "tag": "default",
-          "generation_type": "suffix",
-          "required_level": 10,
-          "weight": 600
-        },
-        {
-          "key": "FlaskHealsMinions2",
-          "text": "ライフ回復の(120-139)%をミニオンに付与する",
-          "name": "侍祭の",
-          "tag": "default",
-          "generation_type": "suffix",
-          "required_level": 28,
-          "weight": 600
-        },
-        {
-          "key": "FlaskHealsMinions3",
-          "text": "ライフ回復の(140-159)%をミニオンに付与する",
-          "name": "召喚師の",
-          "tag": "default",
-          "generation_type": "suffix",
-          "required_level": 46,
-          "weight": 600
-        },
-        {
-          "key": "FlaskHealsMinions4____",
-          "text": "ライフ回復の(160-179)%をミニオンに付与する",
-          "name": "祈祷師の",
-          "tag": "default",
-          "generation_type": "suffix",
-          "required_level": 64,
-          "weight": 600
-        },
-        {
-          "key": "FlaskHealsMinions5",
-          "text": "ライフ回復の(180-200)%をミニオンに付与する",
-          "name": "死霊術師の",
-          "tag": "default",
-          "generation_type": "suffix",
-          "required_level": 82,
-          "weight": 600
-        }
-      ],
       "FlaskIgniteImmunity": [
         {
           "key": "FlaskIgniteImmunity1",
@@ -924,44 +736,6 @@
           "tag": "default",
           "generation_type": "suffix",
           "required_level": 82,
-          "weight": 750
-        }
-      ],
-      "LocalLifeFlaskHinderNearbyEnemies": [
-        {
-          "key": "LocalLifeFlaskHinderNearbyEnemies1_",
-          "text": "フルライフでない時に使用すると近くの敵に阻害を与えその移動スピードを(17-22)%減少させる",
-          "name": "邪魔の",
-          "tag": "default",
-          "generation_type": "suffix",
-          "required_level": 30,
-          "weight": 750
-        },
-        {
-          "key": "LocalLifeFlaskHinderNearbyEnemies2_",
-          "text": "フルライフでない時に使用すると近くの敵に阻害を与えその移動スピードを(23-28)%減少させる",
-          "name": "妨害の",
-          "tag": "default",
-          "generation_type": "suffix",
-          "required_level": 48,
-          "weight": 750
-        },
-        {
-          "key": "LocalLifeFlaskHinderNearbyEnemies3_",
-          "text": "フルライフでない時に使用すると近くの敵に阻害を与えその移動スピードを(29-34)%減少させる",
-          "name": "閉鎖の",
-          "tag": "default",
-          "generation_type": "suffix",
-          "required_level": 66,
-          "weight": 750
-        },
-        {
-          "key": "LocalLifeFlaskHinderNearbyEnemies4",
-          "text": "フルライフでない時に使用すると近くの敵に阻害を与えその移動スピードを(35-40)%減少させる",
-          "name": "拘束の",
-          "tag": "default",
-          "generation_type": "suffix",
-          "required_level": 84,
           "weight": 750
         }
       ],

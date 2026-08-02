@@ -622,15 +622,6 @@
           "weight": 1000
         },
         {
-          "key": "LocalIncreasedAttackSpeed2Royale____",
-          "text": "アタックスピードが(15-25)%増加する",
-          "name": "手軽さの",
-          "tag": "weapon",
-          "generation_type": "suffix",
-          "required_level": 4,
-          "weight": 1000
-        },
-        {
           "key": "LocalIncreasedAttackSpeed2",
           "text": "アタックスピードが(8-10)%増加する",
           "name": "容易さの",
@@ -787,53 +778,6 @@
           "tag": "weapon",
           "generation_type": "suffix",
           "required_level": 50,
-          "weight": 1000
-        }
-      ],
-      "StunDurationIncreasePercent": [
-        {
-          "key": "StunDuration1",
-          "text": "敵に対するスタンの持続時間が(11-15)%増加する",
-          "name": "衝撃の",
-          "tag": "mace",
-          "generation_type": "suffix",
-          "required_level": 5,
-          "weight": 1000
-        },
-        {
-          "key": "StunDuration2",
-          "text": "敵に対するスタンの持続時間が(16-20)%増加する",
-          "name": "放心の",
-          "tag": "mace",
-          "generation_type": "suffix",
-          "required_level": 18,
-          "weight": 1000
-        },
-        {
-          "key": "StunDuration3",
-          "text": "敵に対するスタンの持続時間が(21-25)%増加する",
-          "name": "気絶の",
-          "tag": "mace",
-          "generation_type": "suffix",
-          "required_level": 30,
-          "weight": 1000
-        },
-        {
-          "key": "StunDuration4",
-          "text": "敵に対するスタンの持続時間が(26-30)%増加する",
-          "name": "叩きつけの",
-          "tag": "mace",
-          "generation_type": "suffix",
-          "required_level": 44,
-          "weight": 1000
-        },
-        {
-          "key": "StunDuration5",
-          "text": "敵に対するスタンの持続時間が(31-35)%増加する",
-          "name": "よろめきの",
-          "tag": "mace",
-          "generation_type": "suffix",
-          "required_level": 58,
           "weight": 1000
         }
       ]

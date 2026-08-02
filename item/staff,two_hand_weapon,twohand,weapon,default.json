@@ -610,17 +610,6 @@
           "weight": 25
         }
       ],
-      "LocalIncreaseSocketedGemLevel": [
-        {
-          "key": "LocalIncreaseSocketedGemLevel1",
-          "text": "ソケットされたジェムのレベル +1",
-          "name": "模範の",
-          "tag": "weapon",
-          "generation_type": "prefix",
-          "required_level": 50,
-          "weight": 1000
-        }
-      ],
       "LocalIncreaseSocketedMeleeGemLevel": [
         {
           "key": "LocalIncreaseSocketedMeleeGemLevel1",
@@ -1795,62 +1784,6 @@
           "weight": 50
         }
       ],
-      "ColdDamagePercentage": [
-        {
-          "key": "ColdDamagePercentTwoHand1",
-          "text": "冷気ダメージが(18-22)%増加する",
-          "name": "雪の",
-          "tag": "default",
-          "generation_type": "suffix",
-          "required_level": 12,
-          "weight": 0
-        },
-        {
-          "key": "ColdDamagePercentTwoHand2",
-          "text": "冷気ダメージが(23-28)%増加する",
-          "name": "霙の",
-          "tag": "default",
-          "generation_type": "suffix",
-          "required_level": 24,
-          "weight": 0
-        },
-        {
-          "key": "ColdDamagePercentTwoHand3",
-          "text": "冷気ダメージが(29-34)%増加する",
-          "name": "氷雪の",
-          "tag": "default",
-          "generation_type": "suffix",
-          "required_level": 36,
-          "weight": 0
-        },
-        {
-          "key": "ColdDamagePercentTwoHand4",
-          "text": "冷気ダメージが(35-39)%増加する",
-          "name": "霧氷の",
-          "tag": "default",
-          "generation_type": "suffix",
-          "required_level": 50,
-          "weight": 0
-        },
-        {
-          "key": "ColdDamagePercentTwoHand5",
-          "text": "冷気ダメージが(40-44)%増加する",
-          "name": "氷原の",
-          "tag": "default",
-          "generation_type": "suffix",
-          "required_level": 64,
-          "weight": 0
-        },
-        {
-          "key": "ColdDamagePercentTwoHand6",
-          "text": "冷気ダメージが(45-50)%増加する",
-          "name": "氷結の",
-          "tag": "default",
-          "generation_type": "suffix",
-          "required_level": 76,
-          "weight": 0
-        }
-      ],
       "CriticalStrikeMultiplier": [
         {
           "key": "LocalCriticalMultiplier1",
@@ -1952,62 +1885,6 @@
           "generation_type": "suffix",
           "required_level": 78,
           "weight": 50
-        }
-      ],
-      "FireDamagePercentage": [
-        {
-          "key": "FireDamagePercentTwoHand1",
-          "text": "火ダメージが(18-22)%増加する",
-          "name": "残り火の",
-          "tag": "default",
-          "generation_type": "suffix",
-          "required_level": 8,
-          "weight": 0
-        },
-        {
-          "key": "FireDamagePercentTwoHand2",
-          "text": "火ダメージが(23-28)%増加する",
-          "name": "石炭の",
-          "tag": "default",
-          "generation_type": "suffix",
-          "required_level": 22,
-          "weight": 0
-        },
-        {
-          "key": "FireDamagePercentTwoHand3",
-          "text": "火ダメージが(29-34)%増加する",
-          "name": "消し炭の",
-          "tag": "default",
-          "generation_type": "suffix",
-          "required_level": 36,
-          "weight": 0
-        },
-        {
-          "key": "FireDamagePercentTwoHand4",
-          "text": "火ダメージが(35-39)%増加する",
-          "name": "炎の",
-          "tag": "default",
-          "generation_type": "suffix",
-          "required_level": 50,
-          "weight": 0
-        },
-        {
-          "key": "FireDamagePercentTwoHand5",
-          "text": "火ダメージが(40-44)%増加する",
-          "name": "焼棄の",
-          "tag": "default",
-          "generation_type": "suffix",
-          "required_level": 64,
-          "weight": 0
-        },
-        {
-          "key": "FireDamagePercentTwoHand6",
-          "text": "火ダメージが(45-50)%増加する",
-          "name": "灰の",
-          "tag": "default",
-          "generation_type": "suffix",
-          "required_level": 76,
-          "weight": 0
         }
       ],
       "GlobalDamageOverTimeMultiplier": [
@@ -2364,62 +2241,6 @@
           "weight": 250
         }
       ],
-      "LightningDamagePercentage": [
-        {
-          "key": "LightningDamagePercentTwoHand1",
-          "text": "雷ダメージが(18-22)%増加する",
-          "name": "電光の",
-          "tag": "default",
-          "generation_type": "suffix",
-          "required_level": 10,
-          "weight": 0
-        },
-        {
-          "key": "LightningDamagePercentTwoHand2",
-          "text": "雷ダメージが(23-28)%増加する",
-          "name": "静電気の",
-          "tag": "default",
-          "generation_type": "suffix",
-          "required_level": 23,
-          "weight": 0
-        },
-        {
-          "key": "LightningDamagePercentTwoHand3",
-          "text": "雷ダメージが(29-34)%増加する",
-          "name": "電気の",
-          "tag": "default",
-          "generation_type": "suffix",
-          "required_level": 36,
-          "weight": 0
-        },
-        {
-          "key": "LightningDamagePercentTwoHand4",
-          "text": "雷ダメージが(35-39)%増加する",
-          "name": "電圧の",
-          "tag": "default",
-          "generation_type": "suffix",
-          "required_level": 50,
-          "weight": 0
-        },
-        {
-          "key": "LightningDamagePercentTwoHand5",
-          "text": "雷ダメージが(40-44)%増加する",
-          "name": "放電の",
-          "tag": "default",
-          "generation_type": "suffix",
-          "required_level": 64,
-          "weight": 0
-        },
-        {
-          "key": "LightningDamagePercentTwoHand6",
-          "text": "雷ダメージが(45-50)%増加する",
-          "name": "電弧の",
-          "tag": "default",
-          "generation_type": "suffix",
-          "required_level": 76,
-          "weight": 0
-        }
-      ],
       "LocalAccuracyRating": [
         {
           "key": "LocalIncreasedAccuracyNew1",
@@ -2551,15 +2372,6 @@
           "tag": "weapon",
           "generation_type": "suffix",
           "required_level": 1,
-          "weight": 1000
-        },
-        {
-          "key": "LocalIncreasedAttackSpeed2Royale____",
-          "text": "アタックスピードが(15-25)%増加する",
-          "name": "手軽さの",
-          "tag": "weapon",
-          "generation_type": "suffix",
-          "required_level": 4,
           "weight": 1000
         },
         {
@@ -2827,30 +2639,12 @@
       ],
       "SpellCriticalStrikeChance": [
         {
-          "key": "SpellCriticalStrikeChance1",
-          "text": "スペルのクリティカル率が(40-49)%増加する",
-          "name": "脅威の",
-          "tag": "focus",
-          "generation_type": "suffix",
-          "required_level": 11,
-          "weight": 1000
-        },
-        {
           "key": "SpellCriticalStrikeChanceTwoHand1",
           "text": "スペルのクリティカル率が(60-74)%増加する",
           "name": "脅威の",
           "tag": "staff",
           "generation_type": "suffix",
           "required_level": 11,
-          "weight": 1000
-        },
-        {
-          "key": "SpellCriticalStrikeChance2",
-          "text": "スペルのクリティカル率が(50-59)%増加する",
-          "name": "致命的な",
-          "tag": "focus",
-          "generation_type": "suffix",
-          "required_level": 21,
           "weight": 1000
         },
         {
@@ -2863,30 +2657,12 @@
           "weight": 1000
         },
         {
-          "key": "SpellCriticalStrikeChance3",
-          "text": "スペルのクリティカル率が(60-69)%増加する",
-          "name": "災害の",
-          "tag": "focus",
-          "generation_type": "suffix",
-          "required_level": 28,
-          "weight": 1000
-        },
-        {
           "key": "SpellCriticalStrikeChanceTwoHand3",
           "text": "スペルのクリティカル率が(90-104)%増加する",
           "name": "災害の",
           "tag": "staff",
           "generation_type": "suffix",
           "required_level": 28,
-          "weight": 1000
-        },
-        {
-          "key": "SpellCriticalStrikeChance4",
-          "text": "スペルのクリティカル率が(70-79)%増加する",
-          "name": "厄災の",
-          "tag": "focus",
-          "generation_type": "suffix",
-          "required_level": 41,
           "weight": 1000
         },
         {
@@ -2899,30 +2675,12 @@
           "weight": 1000
         },
         {
-          "key": "SpellCriticalStrikeChance5",
-          "text": "スペルのクリティカル率が(80-89)%増加する",
-          "name": "滅びの",
-          "tag": "focus",
-          "generation_type": "suffix",
-          "required_level": 59,
-          "weight": 1000
-        },
-        {
           "key": "SpellCriticalStrikeChanceTwoHand5",
           "text": "スペルのクリティカル率が(120-134)%増加する",
           "name": "滅びの",
           "tag": "staff",
           "generation_type": "suffix",
           "required_level": 59,
-          "weight": 1000
-        },
-        {
-          "key": "SpellCriticalStrikeChance6_",
-          "text": "スペルのクリティカル率が(90-109)%増加する",
-          "name": "帰無の",
-          "tag": "focus",
-          "generation_type": "suffix",
-          "required_level": 76,
           "weight": 1000
         },
         {
@@ -3016,100 +2774,6 @@
           "generation_type": "suffix",
           "required_level": 82,
           "weight": 500
-        }
-      ],
-      "StunDurationIncreasePercent": [
-        {
-          "key": "StunDuration1",
-          "text": "敵に対するスタンの持続時間が(11-15)%増加する",
-          "name": "衝撃の",
-          "tag": "mace",
-          "generation_type": "suffix",
-          "required_level": 5,
-          "weight": 1000
-        },
-        {
-          "key": "StunDuration2",
-          "text": "敵に対するスタンの持続時間が(16-20)%増加する",
-          "name": "放心の",
-          "tag": "mace",
-          "generation_type": "suffix",
-          "required_level": 18,
-          "weight": 1000
-        },
-        {
-          "key": "StunDuration3",
-          "text": "敵に対するスタンの持続時間が(21-25)%増加する",
-          "name": "気絶の",
-          "tag": "mace",
-          "generation_type": "suffix",
-          "required_level": 30,
-          "weight": 1000
-        },
-        {
-          "key": "StunDuration4",
-          "text": "敵に対するスタンの持続時間が(26-30)%増加する",
-          "name": "叩きつけの",
-          "tag": "mace",
-          "generation_type": "suffix",
-          "required_level": 44,
-          "weight": 1000
-        },
-        {
-          "key": "StunDuration5",
-          "text": "敵に対するスタンの持続時間が(31-35)%増加する",
-          "name": "よろめきの",
-          "tag": "mace",
-          "generation_type": "suffix",
-          "required_level": 58,
-          "weight": 1000
-        }
-      ],
-      "StunThresholdReduction": [
-        {
-          "key": "StunThresholdReduction1",
-          "text": "敵スタン閾値が(5-7)%減少する",
-          "name": "拳闘士の",
-          "tag": "mace",
-          "generation_type": "suffix",
-          "required_level": 5,
-          "weight": 1000
-        },
-        {
-          "key": "StunThresholdReduction2",
-          "text": "敵スタン閾値が(8-9)%減少する",
-          "name": "喧嘩屋の",
-          "tag": "mace",
-          "generation_type": "suffix",
-          "required_level": 20,
-          "weight": 1000
-        },
-        {
-          "key": "StunThresholdReduction3",
-          "text": "敵スタン閾値が(10-11)%減少する",
-          "name": "ボクサーの",
-          "tag": "mace",
-          "generation_type": "suffix",
-          "required_level": 30,
-          "weight": 1000
-        },
-        {
-          "key": "StunThresholdReduction4",
-          "text": "敵スタン閾値が(12-13)%減少する",
-          "name": "戦闘者の",
-          "tag": "mace",
-          "generation_type": "suffix",
-          "required_level": 44,
-          "weight": 1000
-        },
-        {
-          "key": "StunThresholdReduction5",
-          "text": "敵スタン閾値が(14-15)%減少する",
-          "name": "剣闘士の",
-          "tag": "mace",
-          "generation_type": "suffix",
-          "required_level": 58,
-          "weight": 1000
         }
       ]
     }

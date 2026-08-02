@@ -338,33 +338,6 @@
           "generation_type": "prefix",
           "required_level": 46,
           "weight": 1000
-        },
-        {
-          "key": "LocalBaseArmourAndEvasionRating6_",
-          "text": "アーマー +(146-220)\n回避力 +(146-220)",
-          "name": "弾性の",
-          "tag": "str_dex_armour",
-          "generation_type": "prefix",
-          "required_level": 58,
-          "weight": 1000
-        },
-        {
-          "key": "LocalBaseArmourAndEvasionRating7",
-          "text": "アーマー +(221-300)\n回避力 +(221-300)",
-          "name": "適応する",
-          "tag": "str_dex_armour",
-          "generation_type": "prefix",
-          "required_level": 69,
-          "weight": 1000
-        },
-        {
-          "key": "LocalBaseArmourAndEvasionRating8",
-          "text": "アーマー +(301-375)\n回避力 +(301-375)",
-          "name": "臨機応変の",
-          "tag": "str_dex_armour",
-          "generation_type": "prefix",
-          "required_level": 79,
-          "weight": 1000
         }
       ],
       "LocalBaseArmourAndLife": [
@@ -394,15 +367,6 @@
           "generation_type": "prefix",
           "required_level": 62,
           "weight": 500
-        },
-        {
-          "key": "LocalBaseArmourAndLife4",
-          "text": "アーマー +(97-144)\n最大ライフ +(34-38)",
-          "name": "ワニの",
-          "tag": "str_dex_armour",
-          "generation_type": "prefix",
-          "required_level": 78,
-          "weight": 250
         }
       ],
       "LocalBaseEvasionRatingAndLife": [
@@ -432,29 +396,11 @@
           "generation_type": "prefix",
           "required_level": 62,
           "weight": 500
-        },
-        {
-          "key": "LocalBaseEvasionRatingAndLife4",
-          "text": "回避力 +(96-120)\n最大ライフ +(34-38)",
-          "name": "アイベックスの",
-          "tag": "str_dex_armour",
-          "generation_type": "prefix",
-          "required_level": 78,
-          "weight": 250
         }
       ]
     },
     "suffix": {
       "ChanceToSuppressSpells": [
-        {
-          "key": "ChanceToSuppressSpellsHigh1__",
-          "text": "スペルダメージ抑制確率 +(8-10)%",
-          "name": "反論の",
-          "tag": "str_dex_armour",
-          "generation_type": "suffix",
-          "required_level": 45,
-          "weight": 500
-        },
         {
           "key": "ChanceToSuppressSpells1_",
           "text": "スペルダメージ抑制確率 +(5-6)%",
@@ -471,24 +417,6 @@
           "tag": "str_dex_armour",
           "generation_type": "suffix",
           "required_level": 57,
-          "weight": 500
-        },
-        {
-          "key": "ChanceToSuppressSpellsHigh2__",
-          "text": "スペルダメージ抑制確率 +(11-13)%",
-          "name": "打ち消しの",
-          "tag": "str_dex_armour",
-          "generation_type": "suffix",
-          "required_level": 58,
-          "weight": 500
-        },
-        {
-          "key": "ChanceToSuppressSpellsHigh3",
-          "text": "スペルダメージ抑制確率 +(14-16)%",
-          "name": "取り消しの",
-          "tag": "str_dex_armour",
-          "generation_type": "suffix",
-          "required_level": 67,
           "weight": 500
         },
         {
@@ -510,30 +438,12 @@
           "weight": 500
         },
         {
-          "key": "ChanceToSuppressSpellsHigh4_",
-          "text": "スペルダメージ抑制確率 +(17-19)%",
-          "name": "放棄の",
-          "tag": "str_dex_armour",
-          "generation_type": "suffix",
-          "required_level": 77,
-          "weight": 500
-        },
-        {
           "key": "ChanceToSuppressSpells5__",
           "text": "スペルダメージ抑制確率 +(13-14)%",
           "name": "無効化の",
           "tag": "str_dex_armour",
           "generation_type": "suffix",
           "required_level": 85,
-          "weight": 500
-        },
-        {
-          "key": "ChanceToSuppressSpellsHigh5___",
-          "text": "スペルダメージ抑制確率 +(20-22)%",
-          "name": "無効化の",
-          "tag": "str_dex_armour",
-          "generation_type": "suffix",
-          "required_level": 86,
           "weight": 500
         }
       ],
@@ -1261,53 +1171,6 @@
           "generation_type": "suffix",
           "required_level": 60,
           "weight": 650
-        }
-      ],
-      "ReducedPhysicalDamageTaken": [
-        {
-          "key": "AdditionalPhysicalDamageReduction1",
-          "text": "物理ダメージ軽減率が4%される",
-          "name": "見張りの",
-          "tag": "str_dex_armour",
-          "generation_type": "suffix",
-          "required_level": 45,
-          "weight": 500
-        },
-        {
-          "key": "AdditionalPhysicalDamageReduction2",
-          "text": "物理ダメージ軽減率が5%される",
-          "name": "番兵の",
-          "tag": "str_dex_armour",
-          "generation_type": "suffix",
-          "required_level": 58,
-          "weight": 500
-        },
-        {
-          "key": "AdditionalPhysicalDamageReduction3",
-          "text": "物理ダメージ軽減率が6%される",
-          "name": "番人の",
-          "tag": "str_dex_armour",
-          "generation_type": "suffix",
-          "required_level": 67,
-          "weight": 500
-        },
-        {
-          "key": "AdditionalPhysicalDamageReduction4",
-          "text": "物理ダメージ軽減率が7%される",
-          "name": "守り人の",
-          "tag": "str_dex_armour",
-          "generation_type": "suffix",
-          "required_level": 77,
-          "weight": 500
-        },
-        {
-          "key": "AdditionalPhysicalDamageReduction5_",
-          "text": "物理ダメージ軽減率が8%される",
-          "name": "保護する者の",
-          "tag": "str_dex_armour",
-          "generation_type": "suffix",
-          "required_level": 86,
-          "weight": 500
         }
       ],
       "Strength": [

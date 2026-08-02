@@ -392,17 +392,6 @@
           "weight": 1000
         }
       ],
-      "LocalArmourAndEvasion": [
-        {
-          "key": "LocalIncreasedArmourAndEvasion8",
-          "text": "アーマーおよび回避力が(101-110)%増加する",
-          "name": "勝者の",
-          "tag": "shield",
-          "generation_type": "prefix",
-          "required_level": 86,
-          "weight": 1000
-        }
-      ],
       "LocalBaseArmourAndEnergyShield": [
         {
           "key": "LocalBaseArmourAndEnergyShield1",
@@ -466,15 +455,6 @@
           "generation_type": "prefix",
           "required_level": 69,
           "weight": 1000
-        },
-        {
-          "key": "LocalBaseArmourAndEnergyShield8",
-          "text": "アーマー +(301-375)\n最大エナジーシールド +(73-80)",
-          "name": "神々しい",
-          "tag": "str_int_armour",
-          "generation_type": "prefix",
-          "required_level": 79,
-          "weight": 1000
         }
       ],
       "LocalBaseArmourAndLife": [
@@ -504,15 +484,6 @@
           "generation_type": "prefix",
           "required_level": 62,
           "weight": 500
-        },
-        {
-          "key": "LocalBaseArmourAndLife4",
-          "text": "アーマー +(97-144)\n最大ライフ +(34-38)",
-          "name": "ワニの",
-          "tag": "str_int_armour",
-          "generation_type": "prefix",
-          "required_level": 78,
-          "weight": 250
         }
       ],
       "LocalBaseEnergyShieldAndLife": [
@@ -542,15 +513,6 @@
           "generation_type": "prefix",
           "required_level": 62,
           "weight": 500
-        },
-        {
-          "key": "LocalBaseEnergyShieldAndLife4_",
-          "text": "最大エナジーシールド +(26-30)\n最大ライフ +(34-38)",
-          "name": "エグザルフの",
-          "tag": "str_int_armour",
-          "generation_type": "prefix",
-          "required_level": 78,
-          "weight": 250
         }
       ],
       "LocalBaseEnergyShieldAndMana": [
@@ -580,48 +542,6 @@
           "generation_type": "prefix",
           "required_level": 62,
           "weight": 500
-        },
-        {
-          "key": "LocalBaseEnergyShieldAndMana4",
-          "text": "最大エナジーシールド +(26-30)\n最大マナ +(23-25)",
-          "name": "司教の",
-          "tag": "str_int_armour",
-          "generation_type": "prefix",
-          "required_level": 78,
-          "weight": 250
-        }
-      ],
-      "LocalEnergyShieldPercent": [
-        {
-          "key": "LocalIncreasedEnergyShieldPercent8",
-          "text": "エナジーシールドが(101-110)%増加する",
-          "name": "断固たる",
-          "tag": "shield",
-          "generation_type": "prefix",
-          "required_level": 86,
-          "weight": 1000
-        }
-      ],
-      "LocalEvasionAndEnergyShield": [
-        {
-          "key": "LocalIncreasedEvasionAndEnergyShield8",
-          "text": "回避力およびエナジーシールドが(101-110)%増加する",
-          "name": "霊的な",
-          "tag": "shield",
-          "generation_type": "prefix",
-          "required_level": 86,
-          "weight": 1000
-        }
-      ],
-      "LocalEvasionRatingIncreasePercent": [
-        {
-          "key": "LocalIncreasedEvasionRatingPercent8",
-          "text": "回避力が(101-110)%増加する",
-          "name": "幻術の",
-          "tag": "shield",
-          "generation_type": "prefix",
-          "required_level": 86,
-          "weight": 1000
         }
       ],
       "LocalIncreasedBlockPercentage": [
@@ -706,17 +626,6 @@
           "tag": "shield",
           "generation_type": "prefix",
           "required_level": 63,
-          "weight": 1000
-        }
-      ],
-      "LocalPhysicalDamageReductionRatingPercent": [
-        {
-          "key": "LocalIncreasedPhysicalDamageReductionRatingPercent8_",
-          "text": "アーマーが(101-110)%増加する",
-          "name": "堅牢な",
-          "tag": "shield",
-          "generation_type": "prefix",
-          "required_level": 86,
           "weight": 1000
         }
       ],
@@ -1049,53 +958,6 @@
           "weight": 500
         }
       ],
-      "EnergyShieldRegeneration": [
-        {
-          "key": "EnergyShieldRechargeRate1",
-          "text": "エナジーシールドリチャージレートが(24-26)%増加する",
-          "name": "緩和の",
-          "tag": "str_int_armour",
-          "generation_type": "suffix",
-          "required_level": 46,
-          "weight": 500
-        },
-        {
-          "key": "EnergyShieldRechargeRate2",
-          "text": "エナジーシールドリチャージレートが(27-29)%増加する",
-          "name": "拡散の",
-          "tag": "str_int_armour",
-          "generation_type": "suffix",
-          "required_level": 57,
-          "weight": 500
-        },
-        {
-          "key": "EnergyShieldRechargeRate3",
-          "text": "エナジーシールドリチャージレートが(30-32)%増加する",
-          "name": "霧散の",
-          "tag": "str_int_armour",
-          "generation_type": "suffix",
-          "required_level": 68,
-          "weight": 500
-        },
-        {
-          "key": "EnergyShieldRechargeRate4",
-          "text": "エナジーシールドリチャージレートが(33-35)%増加する",
-          "name": "緩衝の",
-          "tag": "str_int_armour",
-          "generation_type": "suffix",
-          "required_level": 76,
-          "weight": 500
-        },
-        {
-          "key": "EnergyShieldRechargeRate5______",
-          "text": "エナジーシールドリチャージレートが(36-38)%増加する",
-          "name": "気勢の",
-          "tag": "str_int_armour",
-          "generation_type": "suffix",
-          "required_level": 85,
-          "weight": 500
-        }
-      ],
       "FireResistance": [
         {
           "key": "FireResist1",
@@ -1167,17 +1029,6 @@
           "tag": "armour",
           "generation_type": "suffix",
           "required_level": 84,
-          "weight": 1000
-        }
-      ],
-      "IncreasedCastSpeed": [
-        {
-          "key": "IncreasedCastSpeed2Royale",
-          "text": "キャストスピードが(8-15)%増加する",
-          "name": "軽快さの",
-          "tag": "str_int_shield",
-          "generation_type": "suffix",
-          "required_level": 4,
           "weight": 1000
         }
       ],
@@ -1354,53 +1205,6 @@
           "generation_type": "suffix",
           "required_level": 83,
           "weight": 1000
-        }
-      ],
-      "LifeRegenerationRate": [
-        {
-          "key": "LifeRegenerationRate1",
-          "text": "ライフ自動回復レートが(9-11)%増加する",
-          "name": "心の",
-          "tag": "str_int_armour",
-          "generation_type": "suffix",
-          "required_level": 46,
-          "weight": 500
-        },
-        {
-          "key": "LifeRegenerationRate2",
-          "text": "ライフ自動回復レートが(12-14)%増加する",
-          "name": "永久の",
-          "tag": "str_int_armour",
-          "generation_type": "suffix",
-          "required_level": 57,
-          "weight": 500
-        },
-        {
-          "key": "LifeRegenerationRate3",
-          "text": "ライフ自動回復レートが(15-17)%増加する",
-          "name": "活力の",
-          "tag": "str_int_armour",
-          "generation_type": "suffix",
-          "required_level": 68,
-          "weight": 500
-        },
-        {
-          "key": "LifeRegenerationRate4",
-          "text": "ライフ自動回復レートが(18-19)%増加する",
-          "name": "若さの",
-          "tag": "str_int_armour",
-          "generation_type": "suffix",
-          "required_level": 76,
-          "weight": 500
-        },
-        {
-          "key": "LifeRegenerationRate5",
-          "text": "ライフ自動回復レートが(20-21)%増加する",
-          "name": "悠久の",
-          "tag": "str_int_armour",
-          "generation_type": "suffix",
-          "required_level": 85,
-          "weight": 500
         }
       ],
       "LightningResistance": [

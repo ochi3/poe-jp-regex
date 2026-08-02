@@ -91,15 +91,6 @@
           "generation_type": "prefix",
           "required_level": 54,
           "weight": 1000
-        },
-        {
-          "key": "IncreasedLife9",
-          "text": "最大ライフ +(130-144)",
-          "name": "豊かな",
-          "tag": "default",
-          "generation_type": "prefix",
-          "required_level": 64,
-          "weight": 1000
         }
       ],
       "ItemFoundRarityIncreasePrefix": [
@@ -140,24 +131,6 @@
           "generation_type": "prefix",
           "required_level": 46,
           "weight": 1000
-        },
-        {
-          "key": "LocalBaseArmourAndLife3",
-          "text": "アーマー +(49-96)\n最大ライフ +(29-33)",
-          "name": "オウムガイの",
-          "tag": "str_armour",
-          "generation_type": "prefix",
-          "required_level": 62,
-          "weight": 1000
-        },
-        {
-          "key": "LocalBaseArmourAndLife4",
-          "text": "アーマー +(97-144)\n最大ライフ +(34-38)",
-          "name": "ワニの",
-          "tag": "str_armour",
-          "generation_type": "prefix",
-          "required_level": 78,
-          "weight": 500
         }
       ],
       "LocalPhysicalDamageReductionRating": [
@@ -222,42 +195,6 @@
           "tag": "str_armour",
           "generation_type": "prefix",
           "required_level": 43,
-          "weight": 1000
-        },
-        {
-          "key": "LocalIncreasedPhysicalDamageReductionRating8",
-          "text": "アーマー +(151-200)",
-          "name": "防護された",
-          "tag": "str_armour",
-          "generation_type": "prefix",
-          "required_level": 51,
-          "weight": 1000
-        },
-        {
-          "key": "LocalIncreasedPhysicalDamageReductionRating9_",
-          "text": "アーマー +(201-300)",
-          "name": "和らげる",
-          "tag": "str_armour",
-          "generation_type": "prefix",
-          "required_level": 60,
-          "weight": 1000
-        },
-        {
-          "key": "LocalIncreasedPhysicalDamageReductionRating10",
-          "text": "アーマー +(301-400)",
-          "name": "動かざる",
-          "tag": "str_armour",
-          "generation_type": "prefix",
-          "required_level": 69,
-          "weight": 1000
-        },
-        {
-          "key": "LocalIncreasedPhysicalDamageReductionRating11",
-          "text": "アーマー +(401-500)",
-          "name": "無効化する",
-          "tag": "str_armour",
-          "generation_type": "prefix",
-          "required_level": 77,
           "weight": 1000
         }
       ],
@@ -390,15 +327,6 @@
           "tag": "boots",
           "generation_type": "prefix",
           "required_level": 1,
-          "weight": 1000
-        },
-        {
-          "key": "MovementVelocity2Royale",
-          "text": "移動スピードが(15-25)%増加する",
-          "name": "競走者の",
-          "tag": "boots",
-          "generation_type": "prefix",
-          "required_level": 5,
           "weight": 1000
         },
         {
@@ -745,15 +673,6 @@
           "generation_type": "suffix",
           "required_level": 74,
           "weight": 1000
-        },
-        {
-          "key": "LifeRegeneration9",
-          "text": "毎秒(96.1-128)のライフを自動回復する",
-          "name": "療養の",
-          "tag": "default",
-          "generation_type": "suffix",
-          "required_level": 78,
-          "weight": 1000
         }
       ],
       "LifeRegenerationRate": [
@@ -895,53 +814,6 @@
           "generation_type": "suffix",
           "required_level": 60,
           "weight": 550
-        }
-      ],
-      "ReducedPhysicalDamageTaken": [
-        {
-          "key": "AdditionalPhysicalDamageReduction1",
-          "text": "物理ダメージ軽減率が4%される",
-          "name": "見張りの",
-          "tag": "str_armour",
-          "generation_type": "suffix",
-          "required_level": 45,
-          "weight": 1000
-        },
-        {
-          "key": "AdditionalPhysicalDamageReduction2",
-          "text": "物理ダメージ軽減率が5%される",
-          "name": "番兵の",
-          "tag": "str_armour",
-          "generation_type": "suffix",
-          "required_level": 58,
-          "weight": 1000
-        },
-        {
-          "key": "AdditionalPhysicalDamageReduction3",
-          "text": "物理ダメージ軽減率が6%される",
-          "name": "番人の",
-          "tag": "str_armour",
-          "generation_type": "suffix",
-          "required_level": 67,
-          "weight": 1000
-        },
-        {
-          "key": "AdditionalPhysicalDamageReduction4",
-          "text": "物理ダメージ軽減率が7%される",
-          "name": "守り人の",
-          "tag": "str_armour",
-          "generation_type": "suffix",
-          "required_level": 77,
-          "weight": 1000
-        },
-        {
-          "key": "AdditionalPhysicalDamageReduction5_",
-          "text": "物理ダメージ軽減率が8%される",
-          "name": "保護する者の",
-          "tag": "str_armour",
-          "generation_type": "suffix",
-          "required_level": 86,
-          "weight": 1000
         }
       ],
       "Strength": [

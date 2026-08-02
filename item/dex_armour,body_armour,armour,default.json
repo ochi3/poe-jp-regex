@@ -174,39 +174,6 @@
           "weight": 1000
         }
       ],
-      "LocalArmourAndEnergyShield": [
-        {
-          "key": "LocalIncreasedArmourAndEnergyShield8",
-          "text": "アーマーおよびエナジーシールドが(101-110)%増加する",
-          "name": "教浸されし",
-          "tag": "body_armour",
-          "generation_type": "prefix",
-          "required_level": 86,
-          "weight": 1000
-        }
-      ],
-      "LocalArmourAndEvasion": [
-        {
-          "key": "LocalIncreasedArmourAndEvasion8",
-          "text": "アーマーおよび回避力が(101-110)%増加する",
-          "name": "勝者の",
-          "tag": "body_armour",
-          "generation_type": "prefix",
-          "required_level": 86,
-          "weight": 1000
-        }
-      ],
-      "LocalArmourAndEvasionAndEnergyShield": [
-        {
-          "key": "LocalIncreasedArmourEvasionEnergyShield7__",
-          "text": "アーマー、回避力およびエナジーシールドが(101-110)%増加する",
-          "name": "霊的な",
-          "tag": "body_armour",
-          "generation_type": "prefix",
-          "required_level": 85,
-          "weight": 1000
-        }
-      ],
       "LocalBaseEvasionRatingAndLife": [
         {
           "key": "LocalBaseEvasionRatingAndLife1",
@@ -243,28 +210,6 @@
           "generation_type": "prefix",
           "required_level": 78,
           "weight": 500
-        }
-      ],
-      "LocalEnergyShieldPercent": [
-        {
-          "key": "LocalIncreasedEnergyShieldPercent8",
-          "text": "エナジーシールドが(101-110)%増加する",
-          "name": "断固たる",
-          "tag": "body_armour",
-          "generation_type": "prefix",
-          "required_level": 86,
-          "weight": 1000
-        }
-      ],
-      "LocalEvasionAndEnergyShield": [
-        {
-          "key": "LocalIncreasedEvasionAndEnergyShield8",
-          "text": "回避力およびエナジーシールドが(101-110)%増加する",
-          "name": "霊的な",
-          "tag": "body_armour",
-          "generation_type": "prefix",
-          "required_level": 86,
-          "weight": 1000
         }
       ],
       "LocalEvasionRating": [
@@ -497,17 +442,6 @@
           "required_level": 86,
           "weight": 1000
         }
-      ],
-      "LocalPhysicalDamageReductionRatingPercent": [
-        {
-          "key": "LocalIncreasedPhysicalDamageReductionRatingPercent8_",
-          "text": "アーマーが(101-110)%増加する",
-          "name": "堅牢な",
-          "tag": "body_armour",
-          "generation_type": "prefix",
-          "required_level": 86,
-          "weight": 1000
-        }
       ]
     },
     "suffix": {
@@ -519,24 +453,6 @@
           "tag": "dex_armour",
           "generation_type": "suffix",
           "required_level": 45,
-          "weight": 1000
-        },
-        {
-          "key": "ChanceToSuppressSpells1_",
-          "text": "スペルダメージ抑制確率 +(5-6)%",
-          "name": "反論の",
-          "tag": "dex_armour",
-          "generation_type": "suffix",
-          "required_level": 46,
-          "weight": 1000
-        },
-        {
-          "key": "ChanceToSuppressSpells2",
-          "text": "スペルダメージ抑制確率 +(7-8)%",
-          "name": "打ち消しの",
-          "tag": "dex_armour",
-          "generation_type": "suffix",
-          "required_level": 57,
           "weight": 1000
         },
         {
@@ -558,39 +474,12 @@
           "weight": 1000
         },
         {
-          "key": "ChanceToSuppressSpells3",
-          "text": "スペルダメージ抑制確率 +(9-10)%",
-          "name": "取り消しの",
-          "tag": "dex_armour",
-          "generation_type": "suffix",
-          "required_level": 68,
-          "weight": 1000
-        },
-        {
-          "key": "ChanceToSuppressSpells4",
-          "text": "スペルダメージ抑制確率 +(11-12)%",
-          "name": "放棄の",
-          "tag": "dex_armour",
-          "generation_type": "suffix",
-          "required_level": 76,
-          "weight": 1000
-        },
-        {
           "key": "ChanceToSuppressSpellsHigh4_",
           "text": "スペルダメージ抑制確率 +(17-19)%",
           "name": "放棄の",
           "tag": "dex_armour",
           "generation_type": "suffix",
           "required_level": 77,
-          "weight": 1000
-        },
-        {
-          "key": "ChanceToSuppressSpells5__",
-          "text": "スペルダメージ抑制確率 +(13-14)%",
-          "name": "無効化の",
-          "tag": "dex_armour",
-          "generation_type": "suffix",
-          "required_level": 85,
           "weight": 1000
         },
         {

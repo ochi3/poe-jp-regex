@@ -9,116 +9,6 @@
   ],
   "mods": {
     "prefix": {
-      "IncreasedMana": [
-        {
-          "key": "IncreasedManaTwoHandWeapon1",
-          "text": "最大マナ +(40-49)",
-          "name": "ベリルの",
-          "tag": "staff",
-          "generation_type": "prefix",
-          "required_level": 1,
-          "weight": 1000
-        },
-        {
-          "key": "IncreasedManaTwoHandWeapon2_",
-          "text": "最大マナ +(50-59)",
-          "name": "コバルトの",
-          "tag": "staff",
-          "generation_type": "prefix",
-          "required_level": 11,
-          "weight": 1000
-        },
-        {
-          "key": "IncreasedManaTwoHandWeapon3_",
-          "text": "最大マナ +(60-69)",
-          "name": "淡青な",
-          "tag": "staff",
-          "generation_type": "prefix",
-          "required_level": 17,
-          "weight": 1000
-        },
-        {
-          "key": "IncreasedManaTwoHandWeapon4",
-          "text": "最大マナ +(70-79)",
-          "name": "サファイアの",
-          "tag": "staff",
-          "generation_type": "prefix",
-          "required_level": 23,
-          "weight": 1000
-        },
-        {
-          "key": "IncreasedManaTwoHandWeapon5",
-          "text": "最大マナ +(80-89)",
-          "name": "空色をした",
-          "tag": "staff",
-          "generation_type": "prefix",
-          "required_level": 29,
-          "weight": 1000
-        },
-        {
-          "key": "IncreasedManaTwoHandWeapon6",
-          "text": "最大マナ +(90-99)",
-          "name": "アクア",
-          "tag": "staff",
-          "generation_type": "prefix",
-          "required_level": 35,
-          "weight": 1000
-        },
-        {
-          "key": "IncreasedManaTwoHandWeapon7",
-          "text": "最大マナ +(100-119)",
-          "name": "オパール色をした",
-          "tag": "staff",
-          "generation_type": "prefix",
-          "required_level": 42,
-          "weight": 1000
-        },
-        {
-          "key": "IncreasedManaTwoHandWeapon8_",
-          "text": "最大マナ +(120-139)",
-          "name": "リンドウの",
-          "tag": "staff",
-          "generation_type": "prefix",
-          "required_level": 51,
-          "weight": 1000
-        },
-        {
-          "key": "IncreasedManaTwoHandWeapon9",
-          "text": "最大マナ +(140-159)",
-          "name": "青鋼の",
-          "tag": "staff",
-          "generation_type": "prefix",
-          "required_level": 60,
-          "weight": 1000
-        },
-        {
-          "key": "IncreasedManaTwoHandWeapon10",
-          "text": "最大マナ +(160-179)",
-          "name": "紺色をした",
-          "tag": "staff",
-          "generation_type": "prefix",
-          "required_level": 69,
-          "weight": 800
-        },
-        {
-          "key": "IncreasedManaTwoHandWeapon11",
-          "text": "最大マナ +(180-199)",
-          "name": "青い",
-          "tag": "staff",
-          "generation_type": "prefix",
-          "required_level": 75,
-          "weight": 600
-        },
-        {
-          "key": "IncreasedManaTwoHandWeapon12",
-          "text": "最大マナ +(200-229)",
-          "name": "藍色をした",
-          "tag": "staff",
-          "generation_type": "prefix",
-          "required_level": 81,
-          "weight": 400
-        }
-      ],
       "IncreasedWeaponElementalDamagePercent": [
         {
           "key": "WeaponElementalDamageOnTwohandWeapon1",
@@ -867,245 +757,55 @@
           "key": "StaffSpellBlockPercentage1",
           "text": "スペルブロック率 +(8-9)%",
           "name": "神秘化の",
-          "tag": "staff",
+          "tag": "warstaff",
           "generation_type": "suffix",
           "required_level": 16,
-          "weight": 1000
+          "weight": 500
         },
         {
           "key": "StaffSpellBlockPercentage2",
           "text": "スペルブロック率 +(10-11)%",
           "name": "千里眼の",
-          "tag": "staff",
+          "tag": "warstaff",
           "generation_type": "suffix",
           "required_level": 28,
-          "weight": 1000
+          "weight": 500
         },
         {
           "key": "StaffSpellBlockPercentage3",
           "text": "スペルブロック率 +(12-13)%",
           "name": "謎多き",
-          "tag": "staff",
+          "tag": "warstaff",
           "generation_type": "suffix",
           "required_level": 40,
-          "weight": 1000
+          "weight": 500
         },
         {
           "key": "StaffSpellBlockPercentage4",
           "text": "スペルブロック率 +(14-15)%",
           "name": "覚者の",
-          "tag": "staff",
+          "tag": "warstaff",
           "generation_type": "suffix",
           "required_level": 55,
-          "weight": 1000
+          "weight": 500
         },
         {
           "key": "StaffSpellBlockPercentage5",
           "text": "スペルブロック率 +(16-17)%",
           "name": "予見者の",
-          "tag": "staff",
+          "tag": "warstaff",
           "generation_type": "suffix",
           "required_level": 66,
-          "weight": 1000
+          "weight": 500
         },
         {
           "key": "StaffSpellBlockPercentage6",
           "text": "スペルブロック率 +(18-20)%",
           "name": "神託者の",
-          "tag": "staff",
+          "tag": "warstaff",
           "generation_type": "suffix",
           "required_level": 77,
-          "weight": 1000
-        }
-      ],
-      "ChanceToFreeze": [
-        {
-          "key": "TwoHandChanceToFreeze1",
-          "text": "(25-32)%の確率で敵を凍結させる",
-          "name": "凍結の",
-          "tag": "staff",
-          "generation_type": "suffix",
-          "required_level": 15,
-          "weight": 1000
-        },
-        {
-          "key": "TwoHandChanceToFreeze2",
-          "text": "(33-42)%の確率で敵を凍結させる",
-          "name": "荒涼感の",
-          "tag": "staff",
-          "generation_type": "suffix",
-          "required_level": 45,
-          "weight": 1000
-        },
-        {
-          "key": "TwoHandChanceToFreeze3____",
-          "text": "(43-55)%の確率で敵を凍結させる",
-          "name": "極北の",
-          "tag": "staff",
-          "generation_type": "suffix",
-          "required_level": 75,
           "weight": 500
-        }
-      ],
-      "ChanceToIgnite": [
-        {
-          "key": "TwoHandChanceToIgnite1",
-          "text": "(25-32)%の確率で敵を発火させる",
-          "name": "発火の",
-          "tag": "staff",
-          "generation_type": "suffix",
-          "required_level": 15,
-          "weight": 1000
-        },
-        {
-          "key": "TwoHandChanceToIgnite2_",
-          "text": "(33-42)%の確率で敵を発火させる",
-          "name": "点火の",
-          "tag": "staff",
-          "generation_type": "suffix",
-          "required_level": 45,
-          "weight": 1000
-        },
-        {
-          "key": "TwoHandChanceToIgnite3",
-          "text": "(43-55)%の確率で敵を発火させる",
-          "name": "着火の",
-          "tag": "staff",
-          "generation_type": "suffix",
-          "required_level": 75,
-          "weight": 500
-        }
-      ],
-      "ChanceToShock": [
-        {
-          "key": "TwoHandChanceToShock1__",
-          "text": "(25-32)%の確率で敵を感電させる",
-          "name": "感電の",
-          "tag": "staff",
-          "generation_type": "suffix",
-          "required_level": 15,
-          "weight": 1000
-        },
-        {
-          "key": "TwoHandChanceToShock2_",
-          "text": "(33-42)%の確率で敵を感電させる",
-          "name": "通電の",
-          "tag": "staff",
-          "generation_type": "suffix",
-          "required_level": 45,
-          "weight": 1000
-        },
-        {
-          "key": "TwoHandChanceToShock3",
-          "text": "(43-55)%の確率で敵を感電させる",
-          "name": "電殺の",
-          "tag": "staff",
-          "generation_type": "suffix",
-          "required_level": 75,
-          "weight": 500
-        }
-      ],
-      "ChaosDamageOverTimeMultiplier": [
-        {
-          "key": "ChaosDamageOverTimeMultiplierTwoHand1_",
-          "text": "混沌継続ダメージ倍率 +(26-35)%",
-          "name": "衰微の",
-          "tag": "staff",
-          "generation_type": "suffix",
-          "required_level": 4,
-          "weight": 400
-        },
-        {
-          "key": "ChaosDamageOverTimeMultiplierTwoHand2__",
-          "text": "混沌継続ダメージ倍率 +(36-45)%",
-          "name": "衰萎の",
-          "tag": "staff",
-          "generation_type": "suffix",
-          "required_level": 12,
-          "weight": 300
-        },
-        {
-          "key": "ChaosDamageOverTimeMultiplierTwoHand3_",
-          "text": "混沌継続ダメージ倍率 +(46-55)%",
-          "name": "衰退の",
-          "tag": "staff",
-          "generation_type": "suffix",
-          "required_level": 36,
-          "weight": 200
-        },
-        {
-          "key": "ChaosDamageOverTimeMultiplierTwoHand4__",
-          "text": "混沌継続ダメージ倍率 +(56-65)%",
-          "name": "萎縮性の",
-          "tag": "staff",
-          "generation_type": "suffix",
-          "required_level": 64,
-          "weight": 100
-        },
-        {
-          "key": "ChaosDamageOverTimeMultiplierTwoHand5___",
-          "text": "混沌継続ダメージ倍率 +(66-75)%",
-          "name": "分解の",
-          "tag": "staff",
-          "generation_type": "suffix",
-          "required_level": 78,
-          "weight": 50
-        }
-      ],
-      "ColdDamagePercentage": [
-        {
-          "key": "ColdDamagePercentTwoHand1",
-          "text": "冷気ダメージが(18-22)%増加する",
-          "name": "雪の",
-          "tag": "default",
-          "generation_type": "suffix",
-          "required_level": 12,
-          "weight": 0
-        },
-        {
-          "key": "ColdDamagePercentTwoHand2",
-          "text": "冷気ダメージが(23-28)%増加する",
-          "name": "霙の",
-          "tag": "default",
-          "generation_type": "suffix",
-          "required_level": 24,
-          "weight": 0
-        },
-        {
-          "key": "ColdDamagePercentTwoHand3",
-          "text": "冷気ダメージが(29-34)%増加する",
-          "name": "氷雪の",
-          "tag": "default",
-          "generation_type": "suffix",
-          "required_level": 36,
-          "weight": 0
-        },
-        {
-          "key": "ColdDamagePercentTwoHand4",
-          "text": "冷気ダメージが(35-39)%増加する",
-          "name": "霧氷の",
-          "tag": "default",
-          "generation_type": "suffix",
-          "required_level": 50,
-          "weight": 0
-        },
-        {
-          "key": "ColdDamagePercentTwoHand5",
-          "text": "冷気ダメージが(40-44)%増加する",
-          "name": "氷原の",
-          "tag": "default",
-          "generation_type": "suffix",
-          "required_level": 64,
-          "weight": 0
-        },
-        {
-          "key": "ColdDamagePercentTwoHand6",
-          "text": "冷気ダメージが(45-50)%増加する",
-          "name": "氷結の",
-          "tag": "default",
-          "generation_type": "suffix",
-          "required_level": 76,
-          "weight": 0
         }
       ],
       "CriticalStrikeMultiplier": [
@@ -1164,109 +864,6 @@
           "weight": 1000
         }
       ],
-      "FireDamageOverTimeMultiplier": [
-        {
-          "key": "FireDamageOverTimeMultiplierTwoHand1_",
-          "text": "火継続ダメージ倍率 +(26-35)%",
-          "name": "熱心家の",
-          "tag": "staff",
-          "generation_type": "suffix",
-          "required_level": 4,
-          "weight": 400
-        },
-        {
-          "key": "FireDamageOverTimeMultiplierTwoHand2_",
-          "text": "火継続ダメージ倍率 +(36-45)%",
-          "name": "熱意ある者の",
-          "tag": "staff",
-          "generation_type": "suffix",
-          "required_level": 12,
-          "weight": 300
-        },
-        {
-          "key": "FireDamageOverTimeMultiplierTwoHand3",
-          "text": "火継続ダメージ倍率 +(46-55)%",
-          "name": "熱烈な者の",
-          "tag": "staff",
-          "generation_type": "suffix",
-          "required_level": 36,
-          "weight": 200
-        },
-        {
-          "key": "FireDamageOverTimeMultiplierTwoHand4",
-          "text": "火継続ダメージ倍率 +(56-65)%",
-          "name": "熱狂者の",
-          "tag": "staff",
-          "generation_type": "suffix",
-          "required_level": 64,
-          "weight": 100
-        },
-        {
-          "key": "FireDamageOverTimeMultiplierTwoHand5_",
-          "text": "火継続ダメージ倍率 +(66-75)%",
-          "name": "熱中者の",
-          "tag": "staff",
-          "generation_type": "suffix",
-          "required_level": 78,
-          "weight": 50
-        }
-      ],
-      "FireDamagePercentage": [
-        {
-          "key": "FireDamagePercentTwoHand1",
-          "text": "火ダメージが(18-22)%増加する",
-          "name": "残り火の",
-          "tag": "default",
-          "generation_type": "suffix",
-          "required_level": 8,
-          "weight": 0
-        },
-        {
-          "key": "FireDamagePercentTwoHand2",
-          "text": "火ダメージが(23-28)%増加する",
-          "name": "石炭の",
-          "tag": "default",
-          "generation_type": "suffix",
-          "required_level": 22,
-          "weight": 0
-        },
-        {
-          "key": "FireDamagePercentTwoHand3",
-          "text": "火ダメージが(29-34)%増加する",
-          "name": "消し炭の",
-          "tag": "default",
-          "generation_type": "suffix",
-          "required_level": 36,
-          "weight": 0
-        },
-        {
-          "key": "FireDamagePercentTwoHand4",
-          "text": "火ダメージが(35-39)%増加する",
-          "name": "炎の",
-          "tag": "default",
-          "generation_type": "suffix",
-          "required_level": 50,
-          "weight": 0
-        },
-        {
-          "key": "FireDamagePercentTwoHand5",
-          "text": "火ダメージが(40-44)%増加する",
-          "name": "焼棄の",
-          "tag": "default",
-          "generation_type": "suffix",
-          "required_level": 64,
-          "weight": 0
-        },
-        {
-          "key": "FireDamagePercentTwoHand6",
-          "text": "火ダメージが(45-50)%増加する",
-          "name": "灰の",
-          "tag": "default",
-          "generation_type": "suffix",
-          "required_level": 76,
-          "weight": 0
-        }
-      ],
       "GlobalDamageOverTimeMultiplier": [
         {
           "key": "GlobalDamageOverTimeMultiplier2h1__",
@@ -1312,89 +909,6 @@
           "generation_type": "suffix",
           "required_level": 82,
           "weight": 300
-        }
-      ],
-      "Intelligence": [
-        {
-          "key": "Intelligence1",
-          "text": "知性 +(8-12)",
-          "name": "生徒の",
-          "tag": "staff",
-          "generation_type": "suffix",
-          "required_level": 1,
-          "weight": 500
-        },
-        {
-          "key": "Intelligence2",
-          "text": "知性 +(13-17)",
-          "name": "学徒の",
-          "tag": "staff",
-          "generation_type": "suffix",
-          "required_level": 11,
-          "weight": 500
-        },
-        {
-          "key": "Intelligence3",
-          "text": "知性 +(18-22)",
-          "name": "神童の",
-          "tag": "staff",
-          "generation_type": "suffix",
-          "required_level": 22,
-          "weight": 500
-        },
-        {
-          "key": "Intelligence4",
-          "text": "知性 +(23-27)",
-          "name": "占師の",
-          "tag": "staff",
-          "generation_type": "suffix",
-          "required_level": 33,
-          "weight": 500
-        },
-        {
-          "key": "Intelligence5",
-          "text": "知性 +(28-32)",
-          "name": "哲学者の",
-          "tag": "staff",
-          "generation_type": "suffix",
-          "required_level": 44,
-          "weight": 500
-        },
-        {
-          "key": "Intelligence6",
-          "text": "知性 +(33-37)",
-          "name": "賢者の",
-          "tag": "staff",
-          "generation_type": "suffix",
-          "required_level": 55,
-          "weight": 500
-        },
-        {
-          "key": "Intelligence7",
-          "text": "知性 +(38-42)",
-          "name": "碩学の",
-          "tag": "staff",
-          "generation_type": "suffix",
-          "required_level": 66,
-          "weight": 500
-        },
-        {
-          "key": "Intelligence8",
-          "text": "知性 +(43-50)",
-          "name": "巨匠の",
-          "tag": "staff",
-          "generation_type": "suffix",
-          "required_level": 74,
-          "weight": 500
-        },
-        {
-          "key": "Intelligence9",
-          "text": "知性 +(51-55)",
-          "name": "天才の",
-          "tag": "staff",
-          "generation_type": "suffix",
-          "required_level": 82,
-          "weight": 500
         }
       ],
       "LifeGainedFromEnemyDeath": [
@@ -1556,62 +1070,6 @@
           "weight": 250
         }
       ],
-      "LightningDamagePercentage": [
-        {
-          "key": "LightningDamagePercentTwoHand1",
-          "text": "雷ダメージが(18-22)%増加する",
-          "name": "電光の",
-          "tag": "default",
-          "generation_type": "suffix",
-          "required_level": 10,
-          "weight": 0
-        },
-        {
-          "key": "LightningDamagePercentTwoHand2",
-          "text": "雷ダメージが(23-28)%増加する",
-          "name": "静電気の",
-          "tag": "default",
-          "generation_type": "suffix",
-          "required_level": 23,
-          "weight": 0
-        },
-        {
-          "key": "LightningDamagePercentTwoHand3",
-          "text": "雷ダメージが(29-34)%増加する",
-          "name": "電気の",
-          "tag": "default",
-          "generation_type": "suffix",
-          "required_level": 36,
-          "weight": 0
-        },
-        {
-          "key": "LightningDamagePercentTwoHand4",
-          "text": "雷ダメージが(35-39)%増加する",
-          "name": "電圧の",
-          "tag": "default",
-          "generation_type": "suffix",
-          "required_level": 50,
-          "weight": 0
-        },
-        {
-          "key": "LightningDamagePercentTwoHand5",
-          "text": "雷ダメージが(40-44)%増加する",
-          "name": "放電の",
-          "tag": "default",
-          "generation_type": "suffix",
-          "required_level": 64,
-          "weight": 0
-        },
-        {
-          "key": "LightningDamagePercentTwoHand6",
-          "text": "雷ダメージが(45-50)%増加する",
-          "name": "電弧の",
-          "tag": "default",
-          "generation_type": "suffix",
-          "required_level": 76,
-          "weight": 0
-        }
-      ],
       "LocalAccuracyRating": [
         {
           "key": "LocalIncreasedAccuracyNew1",
@@ -1743,15 +1201,6 @@
           "tag": "weapon",
           "generation_type": "suffix",
           "required_level": 1,
-          "weight": 1000
-        },
-        {
-          "key": "LocalIncreasedAttackSpeed2Royale____",
-          "text": "アタックスピードが(15-25)%増加する",
-          "name": "手軽さの",
-          "tag": "weapon",
-          "generation_type": "suffix",
-          "required_level": 4,
           "weight": 1000
         },
         {
@@ -1912,192 +1361,6 @@
           "generation_type": "suffix",
           "required_level": 50,
           "weight": 1000
-        }
-      ],
-      "ManaRegeneration": [
-        {
-          "key": "ManaRegenerationTwoHand1",
-          "text": "マナ自動回復レートが(20-32)%増加する",
-          "name": "興奮の",
-          "tag": "staff",
-          "generation_type": "suffix",
-          "required_level": 2,
-          "weight": 1000
-        },
-        {
-          "key": "ManaRegenerationTwoHand2",
-          "text": "マナ自動回復レートが(33-45)%増加する",
-          "name": "歓喜の",
-          "tag": "staff",
-          "generation_type": "suffix",
-          "required_level": 18,
-          "weight": 1000
-        },
-        {
-          "key": "ManaRegenerationTwoHand3",
-          "text": "マナ自動回復レートが(46-58)%増加する",
-          "name": "高揚の",
-          "tag": "staff",
-          "generation_type": "suffix",
-          "required_level": 29,
-          "weight": 1000
-        },
-        {
-          "key": "ManaRegenerationTwoHand4",
-          "text": "マナ自動回復レートが(59-72)%増加する",
-          "name": "至福の",
-          "tag": "staff",
-          "generation_type": "suffix",
-          "required_level": 42,
-          "weight": 1000
-        },
-        {
-          "key": "ManaRegenerationTwoHand5",
-          "text": "マナ自動回復レートが(73-85)%増加する",
-          "name": "陶酔の",
-          "tag": "staff",
-          "generation_type": "suffix",
-          "required_level": 55,
-          "weight": 1000
-        },
-        {
-          "key": "ManaRegenerationTwoHand6",
-          "text": "マナ自動回復レートが(86-105)%増加する",
-          "name": "涅槃の",
-          "tag": "staff",
-          "generation_type": "suffix",
-          "required_level": 79,
-          "weight": 1000
-        }
-      ],
-      "PhysicalDamageOverTimeMultiplier": [
-        {
-          "key": "PhysicalDamageOverTimeMultiplierTwoHand1",
-          "text": "物理継続ダメージ倍率 +(26-35)%",
-          "name": "染み込みの",
-          "tag": "staff",
-          "generation_type": "suffix",
-          "required_level": 4,
-          "weight": 400
-        },
-        {
-          "key": "PhysicalDamageOverTimeMultiplierTwoHand2",
-          "text": "物理継続ダメージ倍率 +(36-45)%",
-          "name": "流血の",
-          "tag": "staff",
-          "generation_type": "suffix",
-          "required_level": 12,
-          "weight": 300
-        },
-        {
-          "key": "PhysicalDamageOverTimeMultiplierTwoHand3",
-          "text": "物理継続ダメージ倍率 +(46-55)%",
-          "name": "静脈切開の",
-          "tag": "staff",
-          "generation_type": "suffix",
-          "required_level": 36,
-          "weight": 200
-        },
-        {
-          "key": "PhysicalDamageOverTimeMultiplierTwoHand4",
-          "text": "物理継続ダメージ倍率 +(56-65)%",
-          "name": "大出血の",
-          "tag": "staff",
-          "generation_type": "suffix",
-          "required_level": 64,
-          "weight": 100
-        },
-        {
-          "key": "PhysicalDamageOverTimeMultiplierTwoHand5",
-          "text": "物理継続ダメージ倍率 +(66-75)%",
-          "name": "放血の",
-          "tag": "staff",
-          "generation_type": "suffix",
-          "required_level": 78,
-          "weight": 50
-        }
-      ],
-      "Strength": [
-        {
-          "key": "Strength1",
-          "text": "筋力 +(8-12)",
-          "name": "蛮人の",
-          "tag": "staff",
-          "generation_type": "suffix",
-          "required_level": 1,
-          "weight": 500
-        },
-        {
-          "key": "Strength2",
-          "text": "筋力 +(13-17)",
-          "name": "レスラーの",
-          "tag": "staff",
-          "generation_type": "suffix",
-          "required_level": 11,
-          "weight": 500
-        },
-        {
-          "key": "Strength3",
-          "text": "筋力 +(18-22)",
-          "name": "熊の",
-          "tag": "staff",
-          "generation_type": "suffix",
-          "required_level": 22,
-          "weight": 500
-        },
-        {
-          "key": "Strength4",
-          "text": "筋力 +(23-27)",
-          "name": "ライオンの",
-          "tag": "staff",
-          "generation_type": "suffix",
-          "required_level": 33,
-          "weight": 500
-        },
-        {
-          "key": "Strength5",
-          "text": "筋力 +(28-32)",
-          "name": "ゴリラの",
-          "tag": "staff",
-          "generation_type": "suffix",
-          "required_level": 44,
-          "weight": 500
-        },
-        {
-          "key": "Strength6",
-          "text": "筋力 +(33-37)",
-          "name": "巨躯の",
-          "tag": "staff",
-          "generation_type": "suffix",
-          "required_level": 55,
-          "weight": 500
-        },
-        {
-          "key": "Strength7",
-          "text": "筋力 +(38-42)",
-          "name": "リヴァイアサンの",
-          "tag": "staff",
-          "generation_type": "suffix",
-          "required_level": 66,
-          "weight": 500
-        },
-        {
-          "key": "Strength8",
-          "text": "筋力 +(43-50)",
-          "name": "タイタンの",
-          "tag": "staff",
-          "generation_type": "suffix",
-          "required_level": 74,
-          "weight": 500
-        },
-        {
-          "key": "Strength9",
-          "text": "筋力 +(51-55)",
-          "name": "神々の",
-          "tag": "staff",
-          "generation_type": "suffix",
-          "required_level": 82,
-          "weight": 500
         }
       ],
       "StunDurationIncreasePercent": [
