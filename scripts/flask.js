@@ -214,6 +214,9 @@ function addFlaskGroupToColumn(group, container) {
   groupItem.className = `mod-group-item ${group.generationType}`;
   groupItem.dataset.groupKey = group.baseKey;
   groupItem.dataset.generationType = group.generationType;
+  groupItem.dataset.searchText = (typeof getRecombGroupSearchText === 'function')
+    ? getRecombGroupSearchText(group)
+    : group.baseKey;
   
   const selectedCount = group.mods.filter(mod => flaskCheckedMods.has(mod.name)).length;
   const isSelected = selectedCount > 0;
@@ -226,7 +229,9 @@ function addFlaskGroupToColumn(group, container) {
   groupHeader.className = 'mod-group-header';
   
   const groupTitle = document.createElement('span');
-  groupTitle.textContent = group.displayName;
+  groupTitle.textContent = (typeof getRecombModDisplayText === 'function')
+    ? getRecombModDisplayText(group.highestTierMod)
+    : (group.displayName);
   
   const groupCount = document.createElement('span');
   groupCount.className = 'mod-group-count';
@@ -265,7 +270,10 @@ function openFlaskGroupModal(group) {
   const modalModList = document.getElementById('flaskModalModList');
   
   const titleColor = group.generationType === 'prefix' ? '#E74C3C' : '#3498DB';
-  modalTitle.innerHTML = `<span style="color: ${titleColor}">${group.displayName}</span> (${group.generationType === 'prefix' ? 'Prefix' : 'Suffix'})`;
+  const titleText = (typeof getRecombModDisplayText === 'function')
+    ? getRecombModDisplayText(group.highestTierMod)
+    : group.displayName;
+  modalTitle.innerHTML = `<span style="color: ${titleColor}">${titleText}</span> (${group.generationType === 'prefix' ? 'Prefix' : 'Suffix'})`;
   modalModList.innerHTML = '';
   
   const sortedMods = group.mods.sort((a, b) => {
@@ -315,11 +323,15 @@ function addFlaskModToModal(mod, container, group) {
   
   const modName = document.createElement('div');
   modName.className = 'modal-mod-name';
-  modName.textContent = mod.name;
+  modName.textContent = (typeof getRecombModDisplayName === 'function')
+    ? getRecombModDisplayName(mod)
+    : mod.name;
   
   const modDesc = document.createElement('div');
   modDesc.className = 'modal-mod-desc';
-  modDesc.textContent = mod.text;
+  modDesc.textContent = (typeof getRecombModDisplayText === 'function')
+    ? getRecombModDisplayText(mod)
+    : mod.text;
   
   modInfo.appendChild(modName);
   modInfo.appendChild(modDesc);
@@ -392,11 +404,20 @@ function closeFlaskModal() {
 
 function updateCombinedFlaskRegex() {
   const selectedMods = Array.from(flaskCheckedMods);
-  const regex = selectedMods.join('|');
+  const regex = selectedMods.map(modName => {
+    const mod = rawFlaskMods.find(m => m.name === modName);
+    if (!mod) return modName;
+    return (typeof getRecombModDisplayName === 'function')
+      ? getRecombModDisplayName(mod)
+      : mod.name;
+  }).join('|');
+  const emptyMsg = (typeof currentLanguage !== 'undefined' && currentLanguage === 'en')
+    ? 'No mods selected'
+    : '選択されたModがありません';
   
   const outputElement = document.getElementById('combinedFlaskRegexOutput');
   if (outputElement) {
-    outputElement.textContent = regex || '選択されたModがありません';
+    outputElement.textContent = regex || emptyMsg;
     
     const charCount = regex.length;
     const charCountElement = document.getElementById('flaskCharCount');
@@ -409,14 +430,15 @@ function updateCombinedFlaskRegex() {
         }
       });
       
-      charCountElement.innerHTML = `文字数: ${charCount}`;
+      const isEn = typeof currentLanguage !== 'undefined' && currentLanguage === 'en';
+      charCountElement.innerHTML = isEn ? `Chars: ${charCount}` : `文字数: ${charCount}`;
       if (maxLevel > 0) {
-        charCountElement.innerHTML += ` | 必要Lv: ${maxLevel}`;
+        charCountElement.innerHTML += isEn ? ` | Req Lv: ${maxLevel}` : ` | 必要Lv: ${maxLevel}`;
       }
       
       if (charCount > 250) {
         charCountElement.style.color = 'red';
-        charCountElement.innerHTML += ' (250文字を超えています)';
+        charCountElement.innerHTML += isEn ? ' (over 250 characters)' : ' (250文字を超えています)';
       } else {
         charCountElement.style.color = '';
       }
@@ -433,23 +455,20 @@ function filterFlaskMods() {
   
   let anyVisible = false;
   
-  prefixGroups.forEach(group => {
+  const applyFilter = (group) => {
+    const searchText = (group.dataset.searchText || '').toLowerCase();
     const groupTitle = group.querySelector('.mod-group-header span:first-child').textContent.toLowerCase();
     const groupDesc = group.querySelector('.mod-group-desc').textContent.toLowerCase();
-    
-    const isVisible = groupTitle.includes(currentFlaskSearchTerm) || groupDesc.includes(currentFlaskSearchTerm);
+    const isVisible = !currentFlaskSearchTerm
+      || searchText.includes(currentFlaskSearchTerm)
+      || groupTitle.includes(currentFlaskSearchTerm)
+      || groupDesc.includes(currentFlaskSearchTerm);
     group.style.display = isVisible ? 'block' : 'none';
     if (isVisible) anyVisible = true;
-  });
+  };
   
-  suffixGroups.forEach(group => {
-    const groupTitle = group.querySelector('.mod-group-header span:first-child').textContent.toLowerCase();
-    const groupDesc = group.querySelector('.mod-group-desc').textContent.toLowerCase();
-    
-    const isVisible = groupTitle.includes(currentFlaskSearchTerm) || groupDesc.includes(currentFlaskSearchTerm);
-    group.style.display = isVisible ? 'block' : 'none';
-    if (isVisible) anyVisible = true;
-  });
+  prefixGroups.forEach(applyFilter);
+  suffixGroups.forEach(applyFilter);
   
   const prefixContainer = document.getElementById('flaskPrefixModList');
   const suffixContainer = document.getElementById('flaskSuffixModList');
@@ -460,7 +479,10 @@ function filterFlaskMods() {
       const message = document.createElement('div');
       message.className = 'no-results-message';
       message.style.cssText = 'color: #888; text-align: center; padding: 20px;';
-      message.textContent = `"${currentFlaskSearchTerm}" に一致する${type}Modが見つかりません`;
+      const isEn = typeof currentLanguage !== 'undefined' && currentLanguage === 'en';
+      message.textContent = isEn
+        ? `No ${type} mods matching "${currentFlaskSearchTerm}"`
+        : `"${currentFlaskSearchTerm}" に一致する${type}Modが見つかりません`;
       container.appendChild(message);
     } else if (existingMsg && currentFlaskSearchTerm === '') {
       existingMsg.remove();
@@ -488,7 +510,8 @@ function resetFlaskMods() {
 
 function copyFlaskRegex() {
   const regex = document.getElementById('combinedFlaskRegexOutput').textContent;
-  if (regex && regex !== '選択されたModがありません') {
+  const emptyMsgs = ['選択されたModがありません', 'No mods selected'];
+  if (regex && !emptyMsgs.includes(regex)) {
     navigator.clipboard.writeText(regex)
       .then(() => {
         if (typeof showNotification === 'function') {

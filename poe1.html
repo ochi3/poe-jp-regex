@@ -29,7 +29,7 @@
 
         <nav>
             <a href="#map" class="nav-link active" data-tab="mapContent">マップMod</a>
-            <a href="#chart" class="nav-link" data-tab="chartContent">海図Mod</a>
+            <a href="#chart" class="nav-link" data-tab="chartContent">海図Mod（仮EN）</a>
             <a href="#trans" class="nav-link" data-tab="transContent">英語Regex変換</a>
             <a href="#itemtrans" class="nav-link" data-tab="itemTransContent">装備変換</a>
             <a href="#vender" class="nav-link" data-tab="vendorContent">ベンダー(ACT用)</a>
@@ -37,7 +37,7 @@
             <a href="#beast" class="nav-link" data-tab="beastContent">ビースト</a>
             <a href="#tattoo" class="nav-link" data-tab="tattooContent">タトゥー</a>
             <a href="#runegraft" class="nav-link" data-tab="runegraftContent">ルーングラフト</a>
-            <a href="#item" class="nav-link" data-tab="itemContent">リコンビMod</a>
+            <a href="#item" class="nav-link" data-tab="itemContent">装備Mod</a>
             <a href="#flask" class="nav-link" data-tab="flaskContent">フラスコMod</a>
             <a href="#saved" class="nav-link" data-tab="savedContent">保存済みRegex</a>
             <a href="#trade" class="nav-link" data-tab="tradeContent">トレードリンク集</a>
@@ -60,12 +60,15 @@
     <div id="contentArea">
         <!-- グローバル言語切り替えボタン -->
         <div id="globalLangToggleContainer" style="position: absolute; top: 16px; right: 24px; z-index: 1001;">
-            <button id="globalLangToggle" onclick="toggleLanguage()" style="background: var(--bg-secondary); color: var(--accent-primary); border: 1px solid var(--border-color); padding: 8px 16px; border-radius: 8px; font-weight: bold; box-shadow: 0 4px 12px rgba(0,0,0,0.5);">Language: JA</button>
+            <button id="globalLangToggle" class="lang-toggle-btn" title="言語切替 / Language toggle" aria-label="Language toggle">
+                <span class="lang-badge" data-lang="ja" title="日本語に切替">JA</span>
+                <span class="lang-badge" data-lang="en" title="Switch to English">EN</span>
+            </button>
         </div>
         <!-- マップModタブ -->
         <div id="mapContent" class="tab-content">
             <div class="card">
-                <h2 class="section-header">マップMod Regex</h2>
+                <h2 class="section-header" data-lang-support="ja en">マップMod Regex</h2>
                 <div class="input-group">
                     <input type="text" id="profileName" placeholder="プロファイル名を入力してください。" class="large-input">
                     <button onclick="saveProfile()">保存</button>
@@ -207,7 +210,10 @@
         <!-- 海図Modタブ（Deepwater / Voyage Chart） -->
         <div id="chartContent" class="tab-content">
             <div class="card">
-                <h2 class="section-header">海図Mod Regex <span style="font-size:0.55em;font-weight:normal;color:var(--text-secondary);">Deepwater / Voyage Chart</span></h2>
+                <h2 class="section-header">海図Mod Regex <span class="lang-support" title="クリックで言語切替（英語は仮実装）">
+                    <span class="lang-badge" data-lang="ja" title="日本語に切替">JA</span>
+                    <span class="lang-badge" data-lang="en" title="Switch to English (provisional)">仮EN</span>
+                </span></h2>
 
                 <div class="output-area" id="chartRegexOutput"></div>
 
@@ -258,7 +264,7 @@
         <!-- 英語Regex変換タブ -->
         <div id="transContent" class="tab-content">
             <div class="card">
-                <h2 class="section-header">英語Regex変換</h2>
+                <h2 class="section-header" data-lang-support="ja">英語Regex変換</h2>
                 <p style="color: var(--text-secondary); margin-bottom: 20px;">
                     poe.reの参考を辞めて、英文でRegex検索するようになりました。<br>
                     テスト中なので、反応しないやつや、反応してしまうものもあるかもしれません。<br>
@@ -287,7 +293,7 @@
         <!-- 装備変換タブ -->
         <div id="itemTransContent" class="tab-content">
             <div class="card item-trans-card">
-                <h2 class="section-header item-trans-header">装備変換</h2>
+                <h2 class="section-header item-trans-header" data-lang-support="ja">装備変換</h2>
 
                 <p style="margin: 0 0 12px; color: var(--text-secondary); font-size: 14px;">
                     アイテムのテキストを英語に変換します。<br>
@@ -318,7 +324,7 @@
         <!-- フラスコModタブ -->
         <div id="flaskContent" class="tab-content">
             <div class="card">
-                <h2 class="section-header">フラスコMod Regex</h2>
+                <h2 class="section-header" data-lang-support="ja en">フラスコMod Regex</h2>
                 
                 <div id="flaskModLoadingStatus" style="display: none; margin-bottom: 15px; padding: 10px; background: var(--bg-tertiary); border-radius: 8px;">
                     フラスコModデータを読み込み中...
@@ -372,7 +378,7 @@
         <!-- アイテムModタブ -->
         <div id="itemContent" class="tab-content">
             <div class="card">
-                <h2 class="section-header">リコンビMod Regex</h2>
+                <h2 class="section-header" data-lang-support="ja en">装備Mod Regex</h2>
                 
                 <div id="itemModLoadingStatus" style="display: none; margin-bottom: 15px; padding: 10px; background: var(--bg-tertiary); border-radius: 8px;">
                     アイテムModデータを読み込み中...
@@ -429,7 +435,7 @@
         <!-- ビースト-->
         <div id="beastContent" class="tab-content">
             <div class="card">
-                <h2 class="section-header">ビースト</h2>
+                <h2 class="section-header" data-lang-support="ja en">ビースト</h2>
                 
                 <!-- プロファイル管理セクションを追加 -->
                 <div class="input-group">
@@ -475,7 +481,7 @@
         <!-- スカラベ-->
         <div id="scarabContent" class="tab-content">
             <div class="card">
-                <h2 class="section-header">スカラベ</h2>
+                <h2 class="section-header" data-lang-support="ja en">スカラベ</h2>
                 
                 <div class="input-group">
                     <input type="text" id="scarabProfileName" placeholder="プロファイル名を入力してください。" class="large-input">
@@ -520,7 +526,7 @@
         <!-- タトゥー-->
         <div id="tattooContent" class="tab-content">
             <div class="card">
-                <h2 class="section-header">タトゥー</h2>
+                <h2 class="section-header" data-lang-support="ja en">タトゥー</h2>
                 
                 <div class="input-group">
                     <input type="text" id="tattooProfileName" placeholder="プロファイル名を入力してください。" class="large-input">
@@ -565,7 +571,7 @@
         <!-- ルーングラフト-->
         <div id="runegraftContent" class="tab-content">
             <div class="card">
-                <h2 class="section-header">ルーングラフト</h2>
+                <h2 class="section-header" data-lang-support="ja en">ルーングラフト</h2>
                 
                 <div class="input-group">
                     <input type="text" id="runegraftProfileName" placeholder="プロファイル名を入力してください。" class="large-input">
@@ -610,7 +616,7 @@
         <!-- 保存済みRegexタブ -->
         <div id="savedContent" class="tab-content">
             <div class="card">
-                <h2 class="section-header">保存済みRegex一覧</h2>
+                <h2 class="section-header" data-lang-support="ja en">保存済みRegex一覧</h2>
                 
                 <div style="display: flex; gap: 8px; align-items: center; margin-bottom: 8px;">
                     <input type="text" id="savedRegexSearch" placeholder="Regexを検索...ドラッグ&ドロップで並び替えできます" style="flex: 1; margin-bottom: 0;">
@@ -627,7 +633,7 @@
         <!-- ベンダーRegexタブ -->
         <div id="vendorContent" class="tab-content">
             <div class="card">
-                <h2 class="section-header">ベンダー(ACT用) Regex</h2>
+                <h2 class="section-header" data-lang-support="ja">ベンダー(ACT用) Regex</h2>
                 <!-- プロファイル管理 -->
                 <div class="input-group">
                     <input type="text" id="vendorProfileName" placeholder="プロファイル名を入力してください。" class="large-input">
@@ -1003,7 +1009,7 @@
         <!-- トレードリンク集タブ -->
         <div id="tradeContent" class="tab-content">
             <div class="card">
-                <h2 class="section-header">トレードリンク集</h2>
+                <h2 class="section-header" data-lang-support="ja en">トレードリンク集</h2>
                 
                 <h3 style="margin-top: 24px; margin-bottom: 16px;">粉</h3>
                 <ul>
@@ -1068,10 +1074,7 @@
                 <h2 class="section-header">Change log</h2>
                 <div class="changelog-list">
 
-
-
-
-
+                    <article class="changelog-entry"><time>26/08/03</time><p>リコンビMOD→装備MODに変更(マジックアイテム以外も対応されました。)また、英語対応も行いました。</p></article>                    <article class="changelog-entry"><time>26/08/03</time><p>リコンビMOD / フラスコMODの英語対応（Language切替で表示・Regexを英語化）。各機能見出しにJA/EN対応バッジを追加。スロット別spawn除外の修正も反映。</p></article>
                     <article class="changelog-entry"><time>26/08/02</time><p>リコンビMOD修正</p></article>                    <article class="changelog-entry"><time>26/08/01</time><p>リコンビMOD3.29対応。一部スカラベRegex更新。</p></article>                    <article class="changelog-entry"><time>26/07/31</time><p>3.29スカラベ</p></article>                    <article class="changelog-entry"><time>26/07/28</time><p>3.29アップデートでマップ詳細にタグや説明文がつきました。一部反応してしまうRegexがあるので気をつけてください。分かり次第報告を貰えると助かります。
 修正済み 
 Monsters steal Power, Frenzy and Endurance charges on Hit

@@ -274,16 +274,28 @@
     }
 
     // 言語切替時に再描画
-    const origToggle = window.toggleLanguage;
-    if (typeof origToggle === "function") {
-        window.toggleLanguage = function () {
-            origToggle();
+    const origSetLanguage = window.setLanguage;
+    if (typeof origSetLanguage === "function") {
+        window.setLanguage = function (lang) {
+            origSetLanguage(lang);
             const chart = document.getElementById("chartContent");
             if (chart && chart.style.display !== "none") {
                 updateChartModList();
                 updateChartCombinedRegex();
             }
         };
+    } else {
+        const origToggle = window.toggleLanguage;
+        if (typeof origToggle === "function") {
+            window.toggleLanguage = function () {
+                origToggle();
+                const chart = document.getElementById("chartContent");
+                if (chart && chart.style.display !== "none") {
+                    updateChartModList();
+                    updateChartCombinedRegex();
+                }
+            };
+        }
     }
 
     // トップナビ切替後に海図リストを描画

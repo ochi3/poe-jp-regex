@@ -5,6 +5,33 @@ let currentItemModalGroup = null;
 let itemModalSelectedMods = new Set();
 window.rawItemMods = [];
 
+/** リコンビModの表示用テキスト（効果文） */
+function getRecombModDisplayText(mod) {
+  if (!mod) return '';
+  if (typeof currentLanguage !== 'undefined' && currentLanguage === 'en') {
+    return mod.engText || mod.text || mod.engName || mod.name || '';
+  }
+  return mod.text || mod.name || '';
+}
+
+/** リコンビModの表示用・Regex用接辞名 */
+function getRecombModDisplayName(mod) {
+  if (!mod) return '';
+  if (typeof currentLanguage !== 'undefined' && currentLanguage === 'en') {
+    return mod.engName || mod.name || '';
+  }
+  return mod.name || '';
+}
+
+/** グループ検索用（日英両方を対象） */
+function getRecombGroupSearchText(group) {
+  const parts = [group.baseKey, group.familyName];
+  (group.mods || []).forEach(mod => {
+    parts.push(mod.name, mod.text, mod.engName, mod.engText, mod.family);
+  });
+  return parts.filter(Boolean).join(' ').toLowerCase();
+}
+
 // アイテムデータ
 const itemData = {
   "oneHanded": [
@@ -302,6 +329,7 @@ function addGroupToColumn(group, container, type) {
   groupItem.className = `mod-group-item ${group.generationType}`;
   groupItem.dataset.groupKey = group.baseKey;
   groupItem.dataset.generationType = group.generationType;
+  groupItem.dataset.searchText = getRecombGroupSearchText(group);
   
   const selectedCount = group.mods.filter(mod => checkedModsSet.has(mod.name)).length;
   if (selectedCount > 0) groupItem.classList.add('selected');
@@ -310,7 +338,7 @@ function addGroupToColumn(group, container, type) {
   groupHeader.className = 'mod-group-header';
   
   const groupTitle = document.createElement('span');
-  groupTitle.textContent = group.displayName;
+  groupTitle.textContent = getRecombModDisplayText(group.highestTierMod);
   
   const groupCount = document.createElement('span');
   groupCount.className = 'mod-group-count';
@@ -346,7 +374,11 @@ function openItemGroupModal(group) {
   const modalModList = document.getElementById('itemModalModList');
   
   const titleColor = group.generationType === 'prefix' ? '#E74C3C' : '#3498DB';
-  modalTitle.innerHTML = `<span style="color: ${titleColor}">${group.displayName}</span> (${group.generationType === 'prefix' ? 'Prefix' : '接尾辞'})`;
+  const titleText = getRecombModDisplayText(group.highestTierMod);
+  const affixLabel = group.generationType === 'prefix'
+    ? 'Prefix'
+    : (typeof currentLanguage !== 'undefined' && currentLanguage === 'en' ? 'Suffix' : '接尾辞');
+  modalTitle.innerHTML = `<span style="color: ${titleColor}">${titleText}</span> (${affixLabel})`;
   modalModList.innerHTML = '';
   
   const sortedMods = group.mods.sort((a, b) => (b.required_level || 0) - (a.required_level || 0));
@@ -385,12 +417,12 @@ function addModToModal(mod, container, type) {
   
   const modName = document.createElement('div');
   modName.className = 'modal-mod-name';
-  modName.textContent = mod.name;
+  modName.textContent = getRecombModDisplayName(mod);
   modName.style.cssText = 'font-weight: bold; min-width: 80px;';
   
   const modDesc = document.createElement('div');
   modDesc.className = 'modal-mod-desc';
-  modDesc.textContent = mod.text;
+  modDesc.textContent = getRecombModDisplayText(mod);
   modDesc.style.cssText = 'color: #aaa; flex: 1;';
   
   modNameAndDesc.appendChild(modName);
@@ -449,11 +481,17 @@ function closeItemModal() {
 
 function updateCombinedItemRegex() {
   const selectedMods = Array.from(itemCheckedMods);
-  const regex = selectedMods.join('|');
+  const regex = selectedMods.map(modName => {
+    const mod = rawItemMods.find(m => m.name === modName);
+    return mod ? getRecombModDisplayName(mod) : modName;
+  }).join('|');
+  const emptyMsg = (typeof currentLanguage !== 'undefined' && currentLanguage === 'en')
+    ? 'No mods selected'
+    : '選択されたModがありません';
   
   const outputElement = document.getElementById('combinedItemRegexOutput');
   if (outputElement) {
-    outputElement.textContent = regex || '選択されたModがありません';
+    outputElement.textContent = regex || emptyMsg;
     
     const charCount = regex.length;
     const charCountElement = document.getElementById('itemCharCount');
@@ -466,14 +504,15 @@ function updateCombinedItemRegex() {
         }
       });
       
-      charCountElement.innerHTML = `文字数: ${charCount}`;
+      const isEn = typeof currentLanguage !== 'undefined' && currentLanguage === 'en';
+      charCountElement.innerHTML = isEn ? `Chars: ${charCount}` : `文字数: ${charCount}`;
       if (maxLevel > 0) {
-        charCountElement.innerHTML += ` | 必要Lv: ${maxLevel}`;
+        charCountElement.innerHTML += isEn ? ` | Req Lv: ${maxLevel}` : ` | 必要Lv: ${maxLevel}`;
       }
       
       if (charCount > 250) {
         charCountElement.style.color = 'red';
-        charCountElement.innerHTML += ' (250文字を超えています)';
+        charCountElement.innerHTML += isEn ? ' (over 250 characters)' : ' (250文字を超えています)';
       } else {
         charCountElement.style.color = '';
       }
@@ -492,10 +531,14 @@ function filterItemMods() {
   
   [prefixGroups, suffixGroups].forEach(groups => {
     groups.forEach(group => {
+      const searchText = (group.dataset.searchText || '').toLowerCase();
       const groupTitle = group.querySelector('.mod-group-header span:first-child').textContent.toLowerCase();
       const groupDesc = group.querySelector('.mod-group-desc').textContent.toLowerCase();
       
-      const isVisible = groupTitle.includes(currentItemSearchTerm) || groupDesc.includes(currentItemSearchTerm);
+      const isVisible = !currentItemSearchTerm
+        || searchText.includes(currentItemSearchTerm)
+        || groupTitle.includes(currentItemSearchTerm)
+        || groupDesc.includes(currentItemSearchTerm);
       group.style.display = isVisible ? 'block' : 'none';
       if (isVisible) anyVisible = true;
     });
@@ -509,7 +552,10 @@ function filterItemMods() {
         const message = document.createElement('div');
         message.className = 'no-results-message';
         message.style.cssText = 'color: #888; text-align: center; padding: 20px;';
-        message.textContent = `"${currentItemSearchTerm}" に一致するModが見つかりません`;
+        const isEn = typeof currentLanguage !== 'undefined' && currentLanguage === 'en';
+        message.textContent = isEn
+          ? `No mods matching "${currentItemSearchTerm}"`
+          : `"${currentItemSearchTerm}" に一致するModが見つかりません`;
         container.appendChild(message);
       }
     });
@@ -533,7 +579,8 @@ function resetItemMods() {
 
 function copyItemRegex() {
   const regex = document.getElementById('combinedItemRegexOutput').textContent;
-  if (regex && regex !== '選択されたModがありません') {
+  const emptyMsgs = ['選択されたModがありません', 'No mods selected'];
+  if (regex && !emptyMsgs.includes(regex)) {
     navigator.clipboard.writeText(regex)
       .then(() => {
         if (typeof showNotification === 'function') {

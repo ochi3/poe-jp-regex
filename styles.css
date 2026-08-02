@@ -582,6 +582,116 @@ button.btn-secondary-highlight:hover {
 .sulphur-badge { background: #6b5b2e; }
 .name-badge { background: #444; font-weight: normal; }
 
+/* 言語対応・現在言語バッジ */
+.lang-support {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+.lang-badge {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    line-height: 1.2;
+    padding: 3px 8px;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    color: #e8e8e8;
+    background: #4a4a4a;
+    opacity: 0.82;
+    transition: opacity 0.15s ease, background 0.15s ease, color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+    cursor: pointer;
+    user-select: none;
+}
+
+.lang-badge[data-lang="ja"] {
+    background: rgba(180, 83, 9, 0.45);
+    border-color: rgba(217, 119, 6, 0.55);
+    color: #fde68a;
+}
+
+.lang-badge[data-lang="en"] {
+    background: rgba(29, 78, 216, 0.4);
+    border-color: rgba(59, 130, 246, 0.55);
+    color: #bfdbfe;
+}
+
+.lang-badge:hover {
+    opacity: 1;
+    filter: brightness(1.12);
+}
+
+.lang-badge.is-active {
+    opacity: 1;
+    color: #fff;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.2);
+}
+
+.lang-badge[data-lang="ja"].is-active {
+    background: #b45309;
+    border-color: #f59e0b;
+}
+
+.lang-badge[data-lang="en"].is-active {
+    background: #1d4ed8;
+    border-color: #60a5fa;
+}
+
+/* 単一言語対応: クリック不可のみ。明るさは is-active を優先 */
+.lang-badge.is-disabled {
+    cursor: default;
+    filter: none;
+}
+
+.lang-badge.is-disabled:hover {
+    filter: none;
+}
+
+.lang-toggle-btn {
+    display: inline-flex !important;
+    align-items: center;
+    gap: 6px;
+    background: var(--bg-secondary) !important;
+    color: var(--accent-primary) !important;
+    border: 1px solid var(--border-color) !important;
+    padding: 8px 10px !important;
+    border-radius: 8px !important;
+    font-weight: bold !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5) !important;
+    cursor: default;
+}
+
+.lang-toggle-btn .lang-badge {
+    font-size: 0.85rem;
+    opacity: 0.85;
+}
+
+.lang-toggle-btn .lang-badge.is-active {
+    opacity: 1;
+}
+
+.section-header .lang-support {
+    font-weight: normal;
+}
+
+.section-provisional-badge {
+    display: inline-block;
+    margin-left: 6px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.55em;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    vertical-align: middle;
+    color: #fde68a;
+    background: rgba(180, 83, 9, 0.55);
+    border: 1px solid rgba(245, 158, 11, 0.7);
+}
+
 /* マップ / 海図 サブタブ */
 .map-subnav {
     display: flex;
