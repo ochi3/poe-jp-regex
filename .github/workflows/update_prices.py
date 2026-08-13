@@ -6,10 +6,10 @@ import re
 # 定数
 USER_AGENT = 'PoE-JP-Regex-Tool/1.0 (contact: user)'
 LEAGUE_API_URL = "https://api.pathofexile.com/leagues?type=main"
-DEFAULT_LEAGUE = "Mirage"
+DEFAULT_LEAGUE = "Allflame"
 
 # poe.ninja API URL
-NINJA_BEAST_API = "https://poe.ninja/api/data/itemoverview?league={league}&type=Beast"
+NINJA_BEAST_API = "https://poe.ninja/poe1/api/economy/stash/current/item/overview?league={league}&type=Beast"
 NINJA_SCARAB_API = "https://poe.ninja/poe1/api/economy/exchange/current/overview?league={league}&type=Scarab"
 NINJA_TATTOO_API = "https://poe.ninja/poe1/api/economy/exchange/current/overview?league={league}&type=Tattoo"
 NINJA_RUNEGRAFT_API = "https://poe.ninja/poe1/api/economy/exchange/current/overview?league={league}&type=Runegraft"
