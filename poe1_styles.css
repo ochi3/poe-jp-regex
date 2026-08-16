@@ -50,7 +50,8 @@
 .beast-item > div:nth-child(1),
 .scarab-item > div:nth-child(1),
 .tattoo-item > div:nth-child(1),
-.runegraft-item > div:nth-child(1) {
+.runegraft-item > div:nth-child(1),
+.essence-item > div:nth-child(1) {
     text-align: center;
     display: flex;
     align-items: center;
@@ -61,7 +62,8 @@
 .beast-item > div:nth-child(2),
 .scarab-item > div:nth-child(2),
 .tattoo-item > div:nth-child(2),
-.runegraft-item > div:nth-child(2) {
+.runegraft-item > div:nth-child(2),
+.essence-item > div:nth-child(2) {
     text-align: center;
     font-weight: bold;
     color: var(--accent-primary);
@@ -74,7 +76,8 @@
 .beast-item > div:nth-child(3),
 .scarab-item > div:nth-child(3),
 .tattoo-item > div:nth-child(3),
-.runegraft-item > div:nth-child(3) {
+.runegraft-item > div:nth-child(3),
+.essence-item > div:nth-child(3) {
     color: var(--accent-gold);
     font-weight: bold;
     white-space: nowrap;
@@ -144,11 +147,77 @@
     align-items: center;
 }
 
-.scarab-item:hover {
+.scarab-item:hover,
+.essence-item:hover {
     background: var(--bg-tertiary);
 }
 
-.scarab-item > div, .tattoo-item > div, .runegraft-item > div {
+.essence-item {
+    display: grid;
+    grid-template-columns: 60px 100px 1fr;
+    padding: 12px 8px;
+    border-bottom: 1px solid var(--border-color);
+    cursor: pointer;
+    transition: background 0.2s ease;
+    align-items: center;
+}
+
+.essence-header {
+    display: grid;
+    grid-template-columns: 60px 100px 1fr;
+    background: var(--bg-tertiary);
+    font-weight: bold;
+    padding: 12px 8px;
+    border-bottom: 1px solid var(--border-color);
+    align-items: center;
+}
+
+.essence-header > div {
+    user-select: none;
+    padding: 0 8px;
+}
+
+.essence-header > div:hover {
+    background: var(--bg-input);
+    border-radius: 4px;
+}
+
+.essence-name-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 16px;
+}
+
+.essence-name-header > span:hover {
+    background: var(--bg-input);
+    border-radius: 4px;
+    padding: 0 4px;
+}
+
+.essence-name-cell {
+    display: flex !important;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    min-width: 0;
+}
+
+.essence-name-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    min-width: 0;
+}
+
+.essence-tier {
+    flex-shrink: 0;
+    font-weight: bold;
+    color: var(--accent-gold);
+    text-align: left;
+}
+
+.scarab-item > div, .tattoo-item > div, .runegraft-item > div, .essence-item > div {
     padding: 0 8px;
     overflow: hidden;
 }

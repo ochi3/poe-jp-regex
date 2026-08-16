@@ -1,23 +1,27 @@
 let ModList = {...mapModList};
 let currentLanguage = localStorage.getItem('poeLanguage') || 'ja';
 if (currentLanguage !== 'ja' && currentLanguage !== 'en') currentLanguage = 'ja';
-const CHANGELOG_VERSION = 'poe1-2026-08-13';
+const CHANGELOG_VERSION = 'poe1-2026-08-16';
 const CHANGELOG_STORAGE_KEY = 'poe1ChangelogSeenVersion';
 
 let checkedMods = new Map(); // キー -> 'ng' または 'wanted'
 let checkedBeasts = new Set();
 let checkedScarabs = new Set();
+let checkedEssences = new Set();
 let checkedTattoos = new Set();
 let checkedRunegrafts = new Set();
 
 let scarabSortColumn = 'price';
 let scarabSortDirection = 'desc';
+let essenceSortColumn = 'price';
+let essenceSortDirection = 'desc';
 let tattooSortColumn = 'price';
 let tattooSortDirection = 'desc';
 let runegraftSortColumn = 'price';
 let runegraftSortDirection = 'desc';
 
 let scarabProfiles = {};
+let essenceProfiles = {};
 let tattooProfiles = {};
 let runegraftProfiles = {};
 
@@ -37,10 +41,12 @@ function setLanguage(lang) {
     updateModList();
     updateCombinedRegex();
     renderscarablist();
+    renderessencelist();
     rendertattoolist();
     renderrunegraftlist();
     renderbeastlist();
     updateScarabRegex();
+    updateEssenceRegex();
     updateBeastRegex();
     updateTattooRegex();
     updateRunegraftRegex();
@@ -909,7 +915,9 @@ function saveInputState() {
         tattooBulkThreshold: document.getElementById('tattooBulkThreshold')?.value || '',
         tattooBulkThresholdMax: document.getElementById('tattooBulkThresholdMax')?.value || '',
         runegraftBulkThreshold: document.getElementById('runegraftBulkThreshold')?.value || '',
-        runegraftBulkThresholdMax: document.getElementById('runegraftBulkThresholdMax')?.value || ''
+        runegraftBulkThresholdMax: document.getElementById('runegraftBulkThresholdMax')?.value || '',
+        essenceBulkThreshold: document.getElementById('essenceBulkThreshold')?.value || '',
+        essenceBulkThresholdMax: document.getElementById('essenceBulkThresholdMax')?.value || ''
     };
     localStorage.setItem('inputState', JSON.stringify(state));
 }
@@ -930,6 +938,8 @@ function loadInputState() {
     if (document.getElementById('tattooBulkThresholdMax')) document.getElementById('tattooBulkThresholdMax').value = state.tattooBulkThresholdMax || '';
     if (document.getElementById('runegraftBulkThreshold')) document.getElementById('runegraftBulkThreshold').value = state.runegraftBulkThreshold || '10';
     if (document.getElementById('runegraftBulkThresholdMax')) document.getElementById('runegraftBulkThresholdMax').value = state.runegraftBulkThresholdMax || '';
+    if (document.getElementById('essenceBulkThreshold')) document.getElementById('essenceBulkThreshold').value = state.essenceBulkThreshold || '10';
+    if (document.getElementById('essenceBulkThresholdMax')) document.getElementById('essenceBulkThresholdMax').value = state.essenceBulkThresholdMax || '';
 }
 
 const ngModCheckboxEl = document.getElementById('ngModCheckbox');
@@ -2239,6 +2249,324 @@ function updateScarabProfileList() {
   });
 }
 
+// --- エッセンス関連ロジック ---
+// 表示番号は慟哭=1、下位ほど大きく（特殊は「特殊」）
+const ESSENCE_TIERS = [
+  { en: 'Deafening', ja: '慟哭', level: 1 },
+  { en: 'Shrieking', ja: '喚き', level: 2 },
+  { en: 'Screaming', ja: '叫び', level: 3 },
+  { en: 'Wailing', ja: '呻き', level: 4 },
+  { en: 'Weeping', ja: '嘆き', level: 5 },
+  { en: 'Muttering', ja: '呟き', level: 6 },
+  { en: 'Whispering', ja: '囁き', level: 7 },
+];
+
+function getEssenceTierInfo(data) {
+  const engName = data?.engName || '';
+  for (const tier of ESSENCE_TIERS) {
+    if (engName.startsWith(tier.en + ' ')) {
+      return { ...tier, label: String(tier.level), isSpecial: false };
+    }
+  }
+  // ヒステリー等の上位エッセンス
+  return { en: 'Special', ja: '特殊', level: 0, label: '特殊', isSpecial: true };
+}
+
+function getEssenceTierLabel(data) {
+  return getEssenceTierInfo(data).label;
+}
+
+function renderessencelist() {
+  const container = document.getElementById('essencelistContainer');
+  if (!container || typeof essencelist === 'undefined') return;
+  container.innerHTML = '';
+  
+  let essences = Object.entries(essencelist);
+  
+  if (essenceSortColumn) {
+    essences.sort((a, b) => {
+      const [nameA, dataA] = a;
+      const [nameB, dataB] = b;
+      let valueA, valueB;
+      
+      switch (essenceSortColumn) {
+        case 'price':
+          valueA = parseFloat(dataA.chaosValue);
+          valueB = parseFloat(dataB.chaosValue);
+          break;
+        case 'name':
+          valueA = nameA;
+          valueB = nameB;
+          break;
+        case 'tier':
+          valueA = getEssenceTierInfo(dataA).level;
+          valueB = getEssenceTierInfo(dataB).level;
+          break;
+        default:
+          return 0;
+      }
+      
+      let comparison = 0;
+      if (typeof valueA === 'number') {
+        comparison = valueA - valueB;
+      } else {
+        comparison = valueA.localeCompare(valueB);
+      }
+      
+      return essenceSortDirection === 'asc' ? comparison : -comparison;
+    });
+  }
+
+  // 0cのアイテムを除外
+  essences = essences.filter(([name, data]) => parseFloat(data.chaosValue) > 0);
+
+  essences.forEach(([name, data]) => {
+    const essenceItem = document.createElement('div');
+    essenceItem.className = 'essence-item';
+    essenceItem.dataset.jpName = name;
+    essenceItem.dataset.engName = data.engName;
+    const tierInfo = getEssenceTierInfo(data);
+    essenceItem.dataset.tierJa = tierInfo.ja;
+    essenceItem.dataset.tierEn = tierInfo.en;
+    essenceItem.dataset.tierLabel = tierInfo.label;
+    
+    essenceItem.addEventListener('click', function(e) {
+      if (e.target.tagName !== 'INPUT') {
+        const checkbox = essenceItem.querySelector('input');
+        checkbox.checked = !checkbox.checked;
+        const event = new Event('change', { bubbles: true });
+        checkbox.dispatchEvent(event);
+      }
+    });
+    
+    const displayName = currentLanguage === 'ja' ? name : data.engName;
+    const displayTier = getEssenceTierLabel(data);
+    
+    essenceItem.innerHTML = `
+      <div class="scarab-select">
+        <input type="checkbox" id="essence-${name}" value="${name}">
+      </div>
+      <div class="scarab-price">${data.chaosValue}</div>
+      <div class="scarab-name essence-name-cell">
+        <span class="essence-name-text">${displayName}</span>
+        <span class="essence-tier">${displayTier}</span>
+      </div>
+    `;
+
+    const checkbox = essenceItem.querySelector('input');
+    checkbox.checked = checkedEssences.has(name);
+    checkbox.addEventListener('change', function() {
+      if (this.checked) {
+        checkedEssences.add(name);
+      } else {
+        checkedEssences.delete(name);
+      }
+      updateEssenceRegex();
+      saveEssenceCheckboxState();
+    });
+    
+    container.appendChild(essenceItem);
+  });
+}
+
+function sortEssences(column) {
+  if (essenceSortColumn === column) {
+    essenceSortDirection = essenceSortDirection === 'asc' ? 'desc' : 'asc';
+  } else {
+    essenceSortColumn = column;
+    essenceSortDirection = 'asc';
+  }
+  updateEssenceSortIcons();
+  renderessencelist();
+}
+
+function updateEssenceSortIcons() {
+  const headers = document.querySelectorAll('#essenceContent .essence-header [data-column]');
+  headers.forEach(header => {
+    header.innerHTML = header.innerHTML.replace(/ ↑| ↓/g, '');
+    if (header.dataset.column === essenceSortColumn) {
+      header.innerHTML += essenceSortDirection === 'asc' ? ' ↑' : ' ↓';
+    }
+  });
+}
+
+function updateEssenceRegex() {
+  const selectedRegexes = Array.from(checkedEssences).map(name => {
+    const item = essencelist[name];
+    return currentLanguage === 'en' ? (item.enRegex || item.regex) : item.regex;
+  });
+  const regex = selectedRegexes.length > 0 ? `"${selectedRegexes.join('|')}"` : '';
+  
+  document.getElementById('essenceRegexOutput').textContent = regex;
+  
+  const charCount = regex.length;
+  const charCountElement = document.getElementById('essenceCharCount');
+  charCountElement.textContent = `文字数: ${charCount}`;
+  
+  if (charCount > 250) {
+    charCountElement.style.color = 'red';
+    charCountElement.textContent += ' (250文字を超えています)';
+  } else {
+    charCountElement.style.color = '';
+  }
+}
+
+function resetEssenceSelection() {
+  checkedEssences.clear();
+  document.querySelectorAll('#essencelistContainer input[type="checkbox"]').forEach(checkbox => {
+    checkbox.checked = false;
+  });
+  updateEssenceRegex();
+  saveEssenceCheckboxState();
+}
+
+function bulkSelectEssences() {
+    const thresholdInput = document.getElementById('essenceBulkThreshold');
+    const thresholdMaxInput = document.getElementById('essenceBulkThresholdMax');
+    if (!thresholdInput) return;
+    const threshold = parseFloat(thresholdInput.value);
+    const thresholdMax = thresholdMaxInput ? parseFloat(thresholdMaxInput.value) : NaN;
+    if (isNaN(threshold) && isNaN(thresholdMax)) return;
+
+    checkedEssences.clear();
+    Object.entries(essencelist).forEach(([name, data]) => {
+        const price = parseFloat(data.chaosValue);
+        if (!isNaN(price)) {
+            const matchMin = isNaN(threshold) || price >= threshold;
+            const matchMax = isNaN(thresholdMax) || price <= thresholdMax;
+            if (matchMin && matchMax && price > 0) {
+                checkedEssences.add(name);
+            }
+        }
+    });
+
+    renderessencelist();
+    saveEssenceCheckboxState();
+    updateEssenceRegex();
+}
+
+function copyEssenceRegex() {
+  const regex = document.getElementById('essenceRegexOutput').textContent;
+  if (regex) {
+    copyTextToClipboard(regex);
+  }
+}
+
+function filterEssences() {
+  const term = document.getElementById('essenceSearch').value.toLowerCase();
+  
+  document.querySelectorAll('#essencelistContainer .essence-item').forEach(item => {
+    const jpName = (item.dataset.jpName || '').toLowerCase();
+    const engName = (item.dataset.engName || '').toLowerCase();
+    const tierJa = (item.dataset.tierJa || '').toLowerCase();
+    const tierEn = (item.dataset.tierEn || '').toLowerCase();
+    const tierLabel = (item.dataset.tierLabel || '').toLowerCase();
+    
+    const match = 
+      jpName.includes(term) || 
+      engName.includes(term) || 
+      tierJa.includes(term) ||
+      tierEn.includes(term) ||
+      tierLabel.includes(term);
+    
+    item.style.display = match ? '' : 'none';
+  });
+}
+
+function saveEssenceCheckboxState() {
+  const state = Array.from(checkedEssences);
+  localStorage.setItem('essenceCheckboxState', JSON.stringify(state));
+}
+
+function loadEssenceCheckboxState() {
+  const saved = localStorage.getItem('essenceCheckboxState');
+  if (saved) {
+    try {
+      checkedEssences = new Set(JSON.parse(saved));
+    } catch (e) {
+      console.error('essenceCheckboxState 読み込みエラー:', e);
+      checkedEssences = new Set();
+    }
+  }
+}
+
+function saveEssenceProfile() {
+  const profileName = document.getElementById('essenceProfileName').value.trim();
+  if (!profileName) {
+    showNotification('プロファイル名を入力してください', true);
+    return;
+  }
+
+  if (essenceProfiles[profileName] && !confirm(`${profileName} は既に存在します。上書きしますか？`)) {
+    return;
+  }
+
+  essenceProfiles[profileName] = {
+    essences: Array.from(checkedEssences),
+    timestamp: Date.now()
+  };
+
+  localStorage.setItem('essenceProfiles', JSON.stringify(essenceProfiles));
+  updateEssenceProfileList();
+  saveEssenceCheckboxState();
+
+  showNotification(`"${profileName}" を保存しました`);
+  document.getElementById('essenceProfileName').value = '';
+}
+
+function loadEssenceProfile() {
+  const profileName = document.getElementById('essenceProfileList').value;
+  if (!profileName || !essenceProfiles[profileName]) {
+    showNotification('プロファイルを選択してください', true);
+    return;
+  }
+
+  try {
+    const profile = essenceProfiles[profileName];
+    checkedEssences.clear();
+    profile.essences.forEach(essence => {
+      if (essencelist[essence]) checkedEssences.add(essence);
+    });
+    document.getElementById('essenceProfileName').value = profileName;
+    renderessencelist();
+    updateEssenceRegex();
+    saveEssenceCheckboxState();
+    showNotification(`"${profileName}" を読み込みました`);
+  } catch (error) {
+    console.error('エッセンスプロファイル読み込みエラー:', error);
+    showNotification('プロファイルの読み込みに失敗しました', true);
+  }
+}
+
+function deleteEssenceProfile() {
+  const profileName = document.getElementById('essenceProfileList').value;
+  if (!profileName || !essenceProfiles[profileName]) {
+    showNotification('削除するプロファイルを選択してください', true);
+    return;
+  }
+
+  if (confirm(`本当に "${profileName}" を完全に削除しますか？\nこの操作は元に戻せません！`)) {
+    delete essenceProfiles[profileName];
+    localStorage.setItem('essenceProfiles', JSON.stringify(essenceProfiles));
+    updateEssenceProfileList();
+    showNotification(`"${profileName}" を削除しました`);
+  }
+}
+
+function updateEssenceProfileList() {
+  const select = document.getElementById('essenceProfileList');
+  if (!select) return;
+  const currentValue = select.value;
+  select.innerHTML = '<option value="">-- プロファイル選択 --</option>';
+  Object.keys(essenceProfiles).sort().forEach(name => {
+    const option = document.createElement('option');
+    option.value = name;
+    option.textContent = name;
+    option.selected = (name === currentValue);
+    select.appendChild(option);
+  });
+}
+
 // --- タトゥー関連ロジック ---
 function rendertattoolist() {
   const container = document.getElementById('tattoolistContainer');
@@ -2874,6 +3202,11 @@ function initializeApplication() {
     updateScarabSortIcons();
     updateScarabRegex();
 
+    loadEssenceCheckboxState();
+    renderessencelist();
+    updateEssenceSortIcons();
+    updateEssenceRegex();
+
     loadTattooCheckboxState();
     rendertattoolist();
     updateTattooSortIcons();
@@ -2888,6 +3221,10 @@ function initializeApplication() {
     const savedScarabProfiles = localStorage.getItem('scarabProfiles');
     if (savedScarabProfiles) scarabProfiles = JSON.parse(savedScarabProfiles) || {};
     updateScarabProfileList();
+
+    const savedEssenceProfiles = localStorage.getItem('essenceProfiles');
+    if (savedEssenceProfiles) essenceProfiles = JSON.parse(savedEssenceProfiles) || {};
+    updateEssenceProfileList();
 
     const savedTattooProfiles = localStorage.getItem('tattooProfiles');
     if (savedTattooProfiles) tattooProfiles = JSON.parse(savedTattooProfiles) || {};

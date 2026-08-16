@@ -13,12 +13,14 @@ NINJA_BEAST_API = "https://poe.ninja/poe1/api/economy/stash/current/item/overvie
 NINJA_SCARAB_API = "https://poe.ninja/poe1/api/economy/exchange/current/overview?league={league}&type=Scarab"
 NINJA_TATTOO_API = "https://poe.ninja/poe1/api/economy/exchange/current/overview?league={league}&type=Tattoo"
 NINJA_RUNEGRAFT_API = "https://poe.ninja/poe1/api/economy/exchange/current/overview?league={league}&type=Runegraft"
+NINJA_ESSENCE_API = "https://poe.ninja/poe1/api/economy/exchange/current/overview?league={league}&type=Essence"
 
 # リポジトリルートからの相対パス
 BEAST_LIST_PATH = "scripts/beastlist.js"
 SCARAB_LIST_PATH = "scripts/scarablist.js"
 TATTOO_LIST_PATH = "scripts/tattoolist.js"
 RUNEGRAFT_LIST_PATH = "scripts/runegraftlist.js"
+ESSENCE_LIST_PATH = "scripts/essencelist.js"
 
 def fetch_json(url):
     print(f"Fetching {url}...")
@@ -49,7 +51,7 @@ def load_js_data(path, var_name):
             
             json_str = match.group(1)
             # 有効なJSONにするためにJavaScript固有の記述をクリーンアップ
-            keys = ["engName", "family", "effect", "regex", "enRegex", "chaosValue", "description", "enDescription", "jaName", "enName"]
+            keys = ["engName", "family", "effect", "regex", "enRegex", "chaosValue", "description", "enDescription", "jaName", "enName", "attribute"]
             for k in keys:
                 json_str = re.sub(fr'(?<!"){k}\s*:', fr'"{k}":', json_str)
             
@@ -112,10 +114,11 @@ def main():
         beast_prices = {item['name']: item['chaosValue'] for item in beast_data.get('lines', []) if 'name' in item}
         update_js_prices(BEAST_LIST_PATH, "beastlist", beast_prices)
 
-    # 各種カテゴリ（スカラベ、タトゥー、ルーングラフト）の価格を更新
+    # 各種カテゴリ（スカラベ、タトゥー、ルーングラフト、エッセンス）の価格を更新
     update_exchange_type(SCARAB_LIST_PATH, "scarablist", NINJA_SCARAB_API.format(league=league))
     update_exchange_type(TATTOO_LIST_PATH, "tattoolist", NINJA_TATTOO_API.format(league=league))
     update_exchange_type(RUNEGRAFT_LIST_PATH, "runegraftlist", NINJA_RUNEGRAFT_API.format(league=league))
+    update_exchange_type(ESSENCE_LIST_PATH, "essencelist", NINJA_ESSENCE_API.format(league=league))
 
 if __name__ == "__main__":
     main()

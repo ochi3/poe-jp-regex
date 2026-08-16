@@ -16,8 +16,8 @@
     <meta name="keywords" content="path of exile, gaming, action rpg, regex, PoE, Regex, 日本語, マップmod">
     <title>PoE JP Regex</title>
     <link rel="canonical" href="https://ochi3.github.io/poe-jp-regex/poe1">
-    <link rel="stylesheet" href="styles.css?v=3">
-    <link rel="stylesheet" href="poe1_styles.css?v=3">
+    <link rel="stylesheet" href="styles.css?v=4">
+    <link rel="stylesheet" href="poe1_styles.css?v=4">
 </head>
 <body>
     <div id="sideMenu">
@@ -34,6 +34,7 @@
             <a href="#itemtrans" class="nav-link" data-tab="itemTransContent">装備変換</a>
             <a href="#vender" class="nav-link" data-tab="vendorContent">ベンダー(ACT用)</a>
             <a href="#scarab" class="nav-link" data-tab="scarabContent">スカラベ</a>
+            <a href="#essence" class="nav-link" data-tab="essenceContent">エッセンス</a>
             <a href="#beast" class="nav-link" data-tab="beastContent">ビースト</a>
             <a href="#tattoo" class="nav-link" data-tab="tattooContent">タトゥー</a>
             <a href="#runegraft" class="nav-link" data-tab="runegraftContent">ルーングラフト</a>
@@ -520,6 +521,52 @@
                         <div class="beast-col-effect" data-column="description" onclick="sortScarabs('description')" style="cursor: pointer;">効果</div>
                     </div>
                     <div id="scarablistContainer" class="beast-list"></div>
+                </div>
+            </div>
+        </div>
+        <!-- エッセンス-->
+        <div id="essenceContent" class="tab-content">
+            <div class="card">
+                <h2 class="section-header" data-lang-support="ja en">エッセンス</h2>
+                
+                <div class="input-group">
+                    <input type="text" id="essenceProfileName" placeholder="プロファイル名を入力してください。" class="large-input">
+                    <button onclick="saveEssenceProfile()">保存</button>
+                    <button onclick="loadEssenceProfile()">読み込み</button>
+                    <button onclick="deleteEssenceProfile()">削除</button>
+                    <select id="essenceProfileList" class="large-input">
+                        <option value="">-- プロファイル選択 --</option>
+                    </select>
+                </div>
+
+                <div class="output-area" id="essenceRegexOutput"></div>
+                <div class="input-group">
+                    <button onclick="copyEssenceRegex()">コピー</button>
+                    <button onclick="resetEssenceSelection()">リセット</button>
+                    <span id="essenceCharCount" class="char-count"></span>
+                </div>
+
+                <div class="input-group">
+                    <div style="display: flex; align-items: center; gap: 8px;">
+                        <button class="btn-secondary-highlight" onclick="bulkSelectEssences()">一括選択</button>
+                        <input type="number" id="essenceBulkThreshold" placeholder="10" value="10" style="width: 70px;" oninput="saveInputState()">
+                        <span style="font-size: 14px; color: var(--text-secondary);">〜</span>
+                        <input type="number" id="essenceBulkThresholdMax" placeholder="max" style="width: 70px;" oninput="saveInputState()">
+                        <span style="font-size: 14px; color: var(--text-secondary);"></span>
+                    </div>
+                    <input type="text" id="essenceSearch" placeholder="エッセンスを検索..." oninput="filterEssences()" style="flex: 1;">
+                </div>
+                
+                <div class="table-container" style="margin-top: 20px;">
+                    <div class="scarab-header essence-header">
+                        <div class="beast-col-select" style="cursor: default;">選択</div>
+                        <div class="beast-col-price" data-column="price" onclick="sortEssences('price')" style="cursor: pointer;">価格</div>
+                        <div class="beast-col-name essence-name-header">
+                            <span data-column="name" onclick="sortEssences('name')" style="cursor: pointer;">エッセンス名</span>
+                            <span data-column="tier" onclick="sortEssences('tier')" style="cursor: pointer;">Tier</span>
+                        </div>
+                    </div>
+                    <div id="essencelistContainer" class="beast-list"></div>
                 </div>
             </div>
         </div>
@@ -1075,6 +1122,7 @@
                 <div class="changelog-list">
 
 
+                    <article class="changelog-entry"><time>26/08/16</time><p>エッセンスタブ追加。poe.ninjaから価格を自動同期します。</p></article>
                     <article class="changelog-entry"><time>26/08/13</time><p>ビースト更新</p></article>                                        <article class="changelog-entry"><time>26/08/13</time><p>ビースト3.29対応。クレイシアンのキメラル削除、クローカー追加。タリスマン関連レシピ・価格更新。</p></article>
 <article class="changelog-entry"><time>26/08/03</time><p>リコンビMOD→装備MODに変更(マジックアイテム以外も対応されました。)また、英語対応も行いました。</p></article>                    <article class="changelog-entry"><time>26/08/03</time><p>リコンビMOD / フラスコMODの英語対応（Language切替で表示・Regexを英語化）。各機能見出しにJA/EN対応バッジを追加。スロット別spawn除外の修正も反映。</p></article>
                     <article class="changelog-entry"><time>26/08/02</time><p>リコンビMOD修正</p></article>                    <article class="changelog-entry"><time>26/08/01</time><p>リコンビMOD3.29対応。一部スカラベRegex更新。</p></article>                    <article class="changelog-entry"><time>26/07/31</time><p>3.29スカラベ</p></article>                    <article class="changelog-entry"><time>26/07/28</time><p>3.29アップデートでマップ詳細にタグや説明文がつきました。一部反応してしまうRegexがあるので気をつけてください。分かり次第報告を貰えると助かります。
@@ -1147,6 +1195,7 @@ Monsters have #% chance to Avoid Elemental Ailments
     <script src="scripts/trade_link.js"></script>
     <script src="scripts/beastlist.js"></script>
     <script src="scripts/scarablist.js"></script>
+    <script src="scripts/essencelist.js"></script>
     <script src="scripts/tattoolist.js"></script>
     <script src="scripts/runegraftlist.js"></script>
     <script src="scripts/convert.js"></script>
