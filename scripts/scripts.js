@@ -2347,10 +2347,8 @@ function renderessencelist() {
         <input type="checkbox" id="essence-${name}" value="${name}">
       </div>
       <div class="scarab-price">${data.chaosValue}</div>
-      <div class="scarab-name essence-name-cell">
-        <span class="essence-name-text">${displayName}</span>
-        <span class="essence-tier">${displayTier}</span>
-      </div>
+      <div class="scarab-name">${displayName}</div>
+      <div class="beast-family essence-tier">${displayTier}</div>
     `;
 
     const checkbox = essenceItem.querySelector('input');
@@ -2367,6 +2365,32 @@ function renderessencelist() {
     
     container.appendChild(essenceItem);
   });
+
+  // 一番長い名前の幅に合わせて Tier をすぐ横に揃える
+  syncEssenceNameColumnWidth();
+}
+
+function syncEssenceNameColumnWidth() {
+  const table = document.querySelector('#essenceContent .essence-table-container');
+  const container = document.getElementById('essencelistContainer');
+  if (!table || !container) return;
+
+  table.style.removeProperty('--essence-name-width');
+
+  const nameEls = container.querySelectorAll('.scarab-name');
+  let maxWidth = 0;
+  nameEls.forEach(el => {
+    maxWidth = Math.max(maxWidth, el.scrollWidth);
+  });
+
+  const headerName = document.querySelector('#essenceContent .essence-header .beast-col-name');
+  if (headerName) {
+    maxWidth = Math.max(maxWidth, headerName.scrollWidth);
+  }
+
+  if (maxWidth > 0) {
+    table.style.setProperty('--essence-name-width', `${Math.ceil(maxWidth)}px`);
+  }
 }
 
 function sortEssences(column) {
@@ -2381,7 +2405,7 @@ function sortEssences(column) {
 }
 
 function updateEssenceSortIcons() {
-  const headers = document.querySelectorAll('#essenceContent .essence-header [data-column]');
+  const headers = document.querySelectorAll('#essenceContent .essence-header > div');
   headers.forEach(header => {
     header.innerHTML = header.innerHTML.replace(/ ↑| ↓/g, '');
     if (header.dataset.column === essenceSortColumn) {

@@ -89,7 +89,8 @@
 .beast-col-attribute,
 .beast-item > div:nth-child(4),
 .tattoo-item > div:nth-child(4),
-.runegraft-item > div:nth-child(4) {
+.runegraft-item > div:nth-child(4),
+.essence-item > div:nth-child(4) {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -152,9 +153,30 @@
     background: var(--bg-tertiary);
 }
 
+.essence-table-container {
+    width: fit-content;
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: auto;
+    scrollbar-gutter: stable;
+}
+
+.essence-table-container .essence-header {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+.essence-list {
+    overflow: visible;
+    flex-grow: 0;
+}
+
 .essence-item {
     display: grid;
-    grid-template-columns: 60px 100px 1fr;
+    grid-template-columns: 60px 100px var(--essence-name-width, max-content) 80px;
+    width: max-content;
+    max-width: 100%;
     padding: 12px 8px;
     border-bottom: 1px solid var(--border-color);
     cursor: pointer;
@@ -164,7 +186,9 @@
 
 .essence-header {
     display: grid;
-    grid-template-columns: 60px 100px 1fr;
+    grid-template-columns: 60px 100px var(--essence-name-width, max-content) 80px;
+    width: max-content;
+    max-width: 100%;
     background: var(--bg-tertiary);
     font-weight: bold;
     padding: 12px 8px;
@@ -173,6 +197,7 @@
 }
 
 .essence-header > div {
+    cursor: pointer;
     user-select: none;
     padding: 0 8px;
 }
@@ -182,39 +207,23 @@
     border-radius: 4px;
 }
 
-.essence-name-header {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 16px;
-}
-
-.essence-name-header > span:hover {
-    background: var(--bg-input);
-    border-radius: 4px;
-    padding: 0 4px;
-}
-
-.essence-name-cell {
-    display: flex !important;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 10px;
-    min-width: 0;
-}
-
-.essence-name-text {
+.essence-item > div:nth-child(3),
+.essence-header > div:nth-child(3) {
+    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    white-space: nowrap;
-    min-width: 0;
+}
+
+.essence-item > div:nth-child(4),
+.essence-header > div:nth-child(4) {
+    text-align: center;
+    justify-content: center;
 }
 
 .essence-tier {
-    flex-shrink: 0;
     font-weight: bold;
     color: var(--accent-gold);
-    text-align: left;
+    text-align: center;
 }
 
 .scarab-item > div, .tattoo-item > div, .runegraft-item > div, .essence-item > div {

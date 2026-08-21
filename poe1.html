@@ -557,16 +557,14 @@
                     <input type="text" id="essenceSearch" placeholder="エッセンスを検索..." oninput="filterEssences()" style="flex: 1;">
                 </div>
                 
-                <div class="table-container" style="margin-top: 20px;">
+                <div class="table-container essence-table-container" style="margin-top: 20px;">
                     <div class="scarab-header essence-header">
                         <div class="beast-col-select" style="cursor: default;">選択</div>
                         <div class="beast-col-price" data-column="price" onclick="sortEssences('price')" style="cursor: pointer;">価格</div>
-                        <div class="beast-col-name essence-name-header">
-                            <span data-column="name" onclick="sortEssences('name')" style="cursor: pointer;">エッセンス名</span>
-                            <span data-column="tier" onclick="sortEssences('tier')" style="cursor: pointer;">Tier</span>
-                        </div>
+                        <div class="beast-col-name" data-column="name" onclick="sortEssences('name')" style="cursor: pointer;">エッセンス名</div>
+                        <div class="beast-col-family" data-column="tier" onclick="sortEssences('tier')" style="cursor: pointer;">Tier</div>
                     </div>
-                    <div id="essencelistContainer" class="beast-list"></div>
+                    <div id="essencelistContainer" class="beast-list essence-list"></div>
                 </div>
             </div>
         </div>
