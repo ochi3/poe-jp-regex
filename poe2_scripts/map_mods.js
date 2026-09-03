@@ -207,7 +207,7 @@ const mapModList = {
     "type": "Prefix",
     "weight": 1,
     "tier": 200,
-    "engRegex": "Dam",
+    "engRegex": "a F",
     "Regex": "加火",
     "tradeStatIds": [
       "explicit.stat_92381065"
@@ -227,7 +227,7 @@ const mapModList = {
     "type": "Prefix",
     "weight": 1,
     "tier": 200,
-    "engRegex": "Dam",
+    "engRegex": "ra Co",
     "Regex": "加冷",
     "tradeStatIds": [
       "explicit.stat_211727"
@@ -247,7 +247,7 @@ const mapModList = {
     "type": "Prefix",
     "weight": 1,
     "tier": 200,
-    "engRegex": "Dam",
+    "engRegex": "ra Li",
     "Regex": "加雷",
     "tradeStatIds": [
       "explicit.stat_512071314"
@@ -267,7 +267,7 @@ const mapModList = {
     "type": "Prefix",
     "weight": 1,
     "tier": 200,
-    "engRegex": "Dam",
+    "engRegex": "d Monster D",
     "Regex": "のダメージが",
     "tradeStatIds": [
       "explicit.stat_1890519597"
@@ -287,7 +287,7 @@ const mapModList = {
     "type": "Prefix",
     "weight": 1,
     "tier": 200,
-    "engRegex": "Att",
+    "engRegex": "d At",
     "Regex": "アタ",
     "tradeStatIds": [
       "explicit.stat_3909654181"
@@ -307,7 +307,7 @@ const mapModList = {
     "type": "Prefix",
     "weight": 1,
     "tier": 0,
-    "engRegex": "Dam",
+    "engRegex": "d Cr",
     "Regex": "ト率",
     "tradeStatIds": [
       "explicit.stat_2753083623",
@@ -489,7 +489,7 @@ const mapModList = {
     "type": "Prefix",
     "weight": 1,
     "tier": 1,
-    "engRegex": "Dam",
+    "engRegex": "e de",
     "Regex": "は与",
     "tradeStatIds": [
       "explicit.stat_1879340377"
@@ -529,7 +529,7 @@ const mapModList = {
     "type": "Prefix",
     "weight": 1,
     "tier": 500,
-    "engRegex": "Dam",
+    "engRegex": "ra Ch",
     "Regex": "加混",
     "tradeStatIds": [
       "explicit.stat_2200661314"
@@ -730,7 +730,7 @@ const mapModList = {
     "type": "Prefix",
     "weight": 1,
     "tier": 500,
-    "engRegex": "Dam",
+    "engRegex": "e Pen",
     "Regex": "ジは",
     "tradeStatIds": [
       "explicit.stat_1898978455"
@@ -830,7 +830,7 @@ const mapModList = {
     "type": "Suffix",
     "weight": 1,
     "tier": 0,
-    "engRegex": "Dam",
+    "engRegex": "om Cr",
     "Regex": "がク",
     "tradeStatIds": [
       "explicit.stat_337935900"

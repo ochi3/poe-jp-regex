@@ -1,7 +1,16 @@
+/** 変換対象のMod一覧を取得（PoE2ではウェイストーン/石板を切替） */
+function getConvertModList() {
+  if (typeof window.getPoe2ConvertModList === 'function') {
+    return window.getPoe2ConvertModList() || {};
+  }
+  return typeof ModList !== 'undefined' ? ModList : {};
+}
+
 function convertRegex() {
   const engRegex = document.getElementById('engRegexInput').value;
   let jpRegexParts = new Set();
   let details = [];
+  const sourceList = getConvertModList();
 
   // !確認
   const isNegated = engRegex.startsWith('"!');
@@ -17,7 +26,7 @@ function convertRegex() {
     
     // 完全一致を優先して検索
     let foundExact = false;
-    for (const [key, value] of Object.entries(ModList)) {
+    for (const [key, value] of Object.entries(sourceList)) {
       if (value.engRegex === trimmedPart) {
         jpRegexParts.add(value.Regex);
         details.push(value.mod);
@@ -75,14 +84,15 @@ function convertRegex() {
  */
 function findMatchingMods(pattern) {
   const matches = [];
+  const sourceList = getConvertModList();
   
   try {
     // パターンを正規表現として扱う
     const regex = new RegExp(pattern, 'i'); // 大文字小文字を区別しない
     
-    for (const [key, value] of Object.entries(ModList)) {
+    for (const [key, value] of Object.entries(sourceList)) {
       // engRegexとengModの両方でマッチングを試みる
-      if (regex.test(value.engRegex) || regex.test(value.engMod)) {
+      if (regex.test(value.engRegex || '') || regex.test(value.engMod || '')) {
         matches.push(value);
       }
     }
@@ -91,9 +101,9 @@ function findMatchingMods(pattern) {
     console.warn(`正規表現エラー: ${e.message}. 部分一致で検索します。`);
     
     const lowerPattern = pattern.toLowerCase();
-    for (const [key, value] of Object.entries(ModList)) {
-      const engRegexLower = value.engRegex.toLowerCase();
-      const engModLower = value.engMod.toLowerCase();
+    for (const [key, value] of Object.entries(sourceList)) {
+      const engRegexLower = (value.engRegex || '').toLowerCase();
+      const engModLower = (value.engMod || '').toLowerCase();
       
       if (engRegexLower.includes(lowerPattern) || engModLower.includes(lowerPattern)) {
         matches.push(value);
@@ -111,6 +121,7 @@ function convertRegexWithDetails() {
   const engRegex = document.getElementById('engRegexInput').value;
   let jpRegexParts = new Set();
   let detailsWithMatch = [];
+  const sourceList = getConvertModList();
 
   const isNegated = engRegex.startsWith('"!');
   const cleanEngRegex = engRegex.replace(/^"|"$/g, '').replace(/^!/, '');
@@ -122,7 +133,7 @@ function convertRegexWithDetails() {
     
     // 完全一致チェック
     let foundExact = false;
-    for (const [key, value] of Object.entries(ModList)) {
+    for (const [key, value] of Object.entries(sourceList)) {
       if (value.engRegex === trimmedPart) {
         jpRegexParts.add(value.Regex);
         detailsWithMatch.push({

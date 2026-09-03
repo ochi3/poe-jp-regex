@@ -29,6 +29,7 @@
             <nav>
                 <a class="nav-link active" data-tab="mapContent" href="#map">ウェイストーン</a>
                 <a class="nav-link" data-tab="tabletContent" href="#tablet">石板</a>
+                <a class="nav-link" data-tab="transContent" href="#trans">英語Regex変換</a>
                 <a class="nav-link" data-tab="itemTransContent" href="#itemTrans">装備変換</a>
                 <a class="nav-link" data-tab="vendorContent" href="#vendor">ベンダー(ACT用)</a>
                 <a class="nav-link" data-tab="savedContent" href="#saved">保存済みRegex</a>
@@ -47,6 +48,11 @@
             </h4>
             <h4>
                 Change log
+                <br/>
+                26/09/03
+                <br/>
+                英語Regex変換タブ追加
+                <br/>
                 <br/>
                 26/05/25
                 <br/>
@@ -289,6 +295,44 @@
             <div id="TabletModList" style="margin-top: 16px;">
             </div>
         </div>
+        <!-- 英語Regex変換タブ -->
+        <div id="transContent" class="tab-content">
+            <div class="card">
+                <h2 class="section-header">英語Regex変換</h2>
+                <p style="color: var(--text-secondary); margin-bottom: 20px;">
+                    英語のMod Regexを日本語Regexに変換します。<br>
+                    対象（ウェイストーン / 石板）を選んでから変換・適用してください。<br>
+                    テスト中なので、反応しないものや反応しすぎるものがあるかもしれません。
+                </p>
+
+                <div class="input-group" style="align-items: center; gap: 16px;">
+                    <span style="color: var(--text-secondary); white-space: nowrap;">対象:</span>
+                    <label style="display: flex; align-items: center; gap: 6px; cursor: pointer;">
+                        <input type="radio" name="convertTarget" value="waystone" checked onchange="onConvertTargetChange()">
+                        ウェイストーン
+                    </label>
+                    <label style="display: flex; align-items: center; gap: 6px; cursor: pointer;">
+                        <input type="radio" name="convertTarget" value="tablet" onchange="onConvertTargetChange()">
+                        石板
+                    </label>
+                </div>
+
+                <div class="input-group">
+                    <input type="text" id="engRegexInput" placeholder="例: Unde|Bea">
+                    <button onclick="convertRegexWithDetails()">日本語に変換</button>
+                </div>
+
+                <div class="input-group" style="margin-top: 16px;">
+                    <button id="applyConvertedBtn" onclick="applyConvertedMods()">ウェイストーンに適用</button>
+                </div>
+
+                <div class="output-area" id="jpRegexOutput"></div>
+                <button onclick="copyJpRegex()">コピー</button>
+
+                <h3 style="margin-top: 24px; margin-bottom: 12px;">Mod一覧</h3>
+                <ul id="detailsList" style="list-style-position: inside;"></ul>
+            </div>
+        </div>
         <!-- 装備変換タブ -->
         <div id="itemTransContent" class="tab-content">
             <div class="card item-trans-card">
@@ -338,6 +382,10 @@
                 <h2 class="section-header">Change log</h2>
                 <div class="changelog-list">
 
+                    <article class="changelog-entry">
+                        <time>26/09/03</time>
+                        <p>英語Regex変換タブを追加しました。ウェイストーン / 石板を選んで英語Regexを日本語に変換・適用できます。</p>
+                    </article>
                     <article class="changelog-entry">
                         <time>26/06/17</time>
                         <p>ブリーチmod+デリ新規modの日本語追加</p>
@@ -405,6 +453,7 @@
     <script src="poe2_scripts/trade_link.js"></script>
     <script src="poe2_scripts/scripts.js"></script>
     <script src="poe2_scripts/tablet_scripts.js"></script>
+    <script src="scripts/convert.js"></script>
     <script src="poe2_scripts/vendor.js"></script>
     <script src="poe2_scripts/saved-regex.js"></script>
     <script src="poe2_scripts/jp-poe2-utils-translator.js"></script>
