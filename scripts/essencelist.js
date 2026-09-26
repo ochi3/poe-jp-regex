@@ -40,7 +40,7 @@ const essencelist = {
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "2.5",
+    "chaosValue": "2",
     "regex": "叫.*憎悪",
     "enRegex": "Sc.*red"
   },
@@ -58,7 +58,7 @@ const essencelist = {
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "3.38",
+    "chaosValue": "3.31",
     "regex": "慟.*憎悪",
     "enRegex": "De.*red"
   },
@@ -76,7 +76,7 @@ const essencelist = {
     "description": "ノーマルアイテムを、保証されたモッドを1個含むレアアイテムにアップグレードする。",
     "enDescription": "Upgrades a normal item to rare with one guaranteed property",
     "attribute": "",
-    "chaosValue": "3.22",
+    "chaosValue": "3.12",
     "regex": "呟き.*痛",
     "enRegex": "Mu.*oe"
   },
@@ -85,7 +85,7 @@ const essencelist = {
     "description": "ノーマルアイテムを、保証されたモッドを1個含むレアアイテムにアップグレードする。",
     "enDescription": "Upgrades a normal item to rare with one guaranteed property",
     "attribute": "",
-    "chaosValue": "6.53",
+    "chaosValue": "3.98",
     "regex": "嘆.*悲痛",
     "enRegex": "We.*oe"
   },
@@ -103,7 +103,7 @@ const essencelist = {
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "6.11",
+    "chaosValue": "7.98",
     "regex": "叫.*悲痛",
     "enRegex": "Sc.*oe"
   },
@@ -112,7 +112,7 @@ const essencelist = {
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "6.48",
+    "chaosValue": "5.35",
     "regex": "喚.*悲痛",
     "enRegex": "Sh.*oe"
   },
@@ -121,7 +121,7 @@ const essencelist = {
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "9.09",
+    "chaosValue": "8.86",
     "regex": "慟.*悲痛",
     "enRegex": "De.*oe"
   },
@@ -166,7 +166,7 @@ const essencelist = {
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "0.4",
+    "chaosValue": "0.8815",
     "regex": "叫.*欲",
     "enRegex": "Sc.*eed"
   },
@@ -175,7 +175,7 @@ const essencelist = {
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "1.84",
+    "chaosValue": "2.74",
     "regex": "喚.*欲",
     "enRegex": "Sh.*eed"
   },
@@ -184,7 +184,7 @@ const essencelist = {
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "2.44",
+    "chaosValue": "2.65",
     "regex": "慟.*欲",
     "enRegex": "De.*reed"
   },
@@ -229,7 +229,7 @@ const essencelist = {
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "0.8953",
+    "chaosValue": "0.7949",
     "regex": "叫.*侮蔑",
     "enRegex": "Sc.*pt"
   },
@@ -238,7 +238,7 @@ const essencelist = {
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "7.38",
+    "chaosValue": "7.4",
     "regex": "喚.*侮蔑",
     "enRegex": "Sh.*pt"
   },
@@ -247,7 +247,7 @@ const essencelist = {
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "4.85",
+    "chaosValue": "4.98",
     "regex": "慟.*侮蔑",
     "enRegex": "De.*pt"
   },
@@ -274,7 +274,7 @@ const essencelist = {
     "description": "ノーマルアイテムを、保証されたモッドを1個含むレアアイテムにアップグレードする。",
     "enDescription": "Upgrades a normal item to rare with one guaranteed property",
     "attribute": "",
-    "chaosValue": "0.2",
+    "chaosValue": "2.43",
     "regex": "呻.*哀",
     "enRegex": "Wa.*ow"
   },
@@ -283,7 +283,7 @@ const essencelist = {
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "2.56",
+    "chaosValue": "2.32",
     "regex": "叫.*哀",
     "enRegex": "Sc.*ow"
   },
@@ -292,7 +292,7 @@ const essencelist = {
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "10",
+    "chaosValue": "4.63",
     "regex": "喚.*哀",
     "enRegex": "Sh.*ow"
   },
@@ -301,7 +301,7 @@ const essencelist = {
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "5.59",
+    "chaosValue": "5.86",
     "regex": "慟.*哀",
     "enRegex": "De.*ow"
   },
@@ -337,7 +337,7 @@ const essencelist = {
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "2.65",
+    "chaosValue": "2.39",
     "regex": "叫.*り",
     "enRegex": "Sc.*ger"
   },
@@ -346,7 +346,7 @@ const essencelist = {
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "2.18",
+    "chaosValue": "1",
     "regex": "喚.*り",
     "enRegex": "Sh.*ger"
   },
@@ -355,7 +355,7 @@ const essencelist = {
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "4.18",
+    "chaosValue": "3.99",
     "regex": "慟.*り",
     "enRegex": "De.*ger"
   },
@@ -382,7 +382,7 @@ const essencelist = {
     "description": "ノーマルアイテムを、保証されたモッドを1個含むレアアイテムにアップグレードする。",
     "enDescription": "Upgrades a normal item to rare with one guaranteed property",
     "attribute": "",
-    "chaosValue": "1",
+    "chaosValue": "0.8478",
     "regex": "呻.*悩",
     "enRegex": "Wa.*ent"
   },
@@ -400,7 +400,7 @@ const essencelist = {
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "0.9934",
+    "chaosValue": "3",
     "regex": "喚.*悩",
     "enRegex": "Sh.*ent"
   },
@@ -409,7 +409,7 @@ const essencelist = {
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "2.5",
+    "chaosValue": "2.32",
     "regex": "慟.*悩",
     "enRegex": "De.*ent"
   },
@@ -436,7 +436,7 @@ const essencelist = {
     "description": "ノーマルアイテムを、保証されたモッドを1個含むレアアイテムにアップグレードする。",
     "enDescription": "Upgrades a normal item to rare with one guaranteed property",
     "attribute": "",
-    "chaosValue": "1.83",
+    "chaosValue": "1.75",
     "regex": "呻.*安",
     "enRegex": "Wa.*ar"
   },
@@ -445,7 +445,7 @@ const essencelist = {
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "3",
+    "chaosValue": "0.25",
     "regex": "叫.*安",
     "enRegex": "Sc.*ar"
   },
@@ -454,7 +454,7 @@ const essencelist = {
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "1.18",
+    "chaosValue": "1.91",
     "regex": "喚.*安",
     "enRegex": "Sh.*ar"
   },
@@ -463,7 +463,7 @@ const essencelist = {
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "3.44",
+    "chaosValue": "3.97",
     "regex": "慟.*安",
     "enRegex": "De.*ear"
   },
@@ -481,7 +481,7 @@ const essencelist = {
     "description": "ノーマルアイテムを、保証されたモッドを1個含むレアアイテムにアップグレードする。",
     "enDescription": "Upgrades a normal item to rare with one guaranteed property",
     "attribute": "",
-    "chaosValue": "1",
+    "chaosValue": "0.5429",
     "regex": "呻.*苦痛",
     "enRegex": "Wa.*ring"
   },
@@ -508,7 +508,7 @@ const essencelist = {
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "2.06",
+    "chaosValue": "2.04",
     "regex": "慟.*苦痛",
     "enRegex": "De.*ring"
   },
@@ -517,7 +517,7 @@ const essencelist = {
     "description": "ノーマルアイテムを、保証されたモッドを1個含むレアアイテムにアップグレードする。",
     "enDescription": "Upgrades a normal item to rare with one guaranteed property",
     "attribute": "",
-    "chaosValue": "0.7692",
+    "chaosValue": "0.2222",
     "regex": "嘆.*激",
     "enRegex": "We.*age"
   },
@@ -535,7 +535,7 @@ const essencelist = {
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "1.57",
+    "chaosValue": "1.74",
     "regex": "叫.*激",
     "enRegex": "Sc.*age"
   },
@@ -544,7 +544,7 @@ const essencelist = {
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "6.59",
+    "chaosValue": "6.5",
     "regex": "喚.*激",
     "enRegex": "Sh.*age"
   },
@@ -553,7 +553,7 @@ const essencelist = {
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "6.61",
+    "chaosValue": "8.23",
     "regex": "慟.*激",
     "enRegex": "De.*age"
   },
@@ -580,7 +580,7 @@ const essencelist = {
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "1",
+    "chaosValue": "2.73",
     "regex": "叫.*憤",
     "enRegex": "Sc.*rath"
   },
@@ -589,7 +589,7 @@ const essencelist = {
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "1",
+    "chaosValue": "0.5556",
     "regex": "喚.*憤",
     "enRegex": "Sh.*rath"
   },
@@ -598,7 +598,7 @@ const essencelist = {
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "3.26",
+    "chaosValue": "3.13",
     "regex": "慟.*憤",
     "enRegex": "De.*rath"
   },
@@ -607,7 +607,7 @@ const essencelist = {
     "description": "ノーマルアイテムを、保証されたモッドを1個含むレアアイテムにアップグレードする。",
     "enDescription": "Upgrades a normal item to rare with one guaranteed property",
     "attribute": "",
-    "chaosValue": "5",
+    "chaosValue": "4.46",
     "regex": "嘆.*心",
     "enRegex": "We.*bt"
   },
@@ -616,7 +616,7 @@ const essencelist = {
     "description": "ノーマルアイテムを、保証されたモッドを1個含むレアアイテムにアップグレードする。",
     "enDescription": "Upgrades a normal item to rare with one guaranteed property",
     "attribute": "",
-    "chaosValue": "1.21",
+    "chaosValue": "1",
     "regex": "呻.*心",
     "enRegex": "Wa.*bt"
   },
@@ -625,7 +625,7 @@ const essencelist = {
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "0.4118",
+    "chaosValue": "0.3846",
     "regex": "叫.*心",
     "enRegex": "Sc.*bt"
   },
@@ -643,7 +643,7 @@ const essencelist = {
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "3.03",
+    "chaosValue": "3.02",
     "regex": "慟.*心",
     "enRegex": "De.*bt"
   },
@@ -670,7 +670,7 @@ const essencelist = {
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "0.3333",
+    "chaosValue": "0.5",
     "regex": "喚.*悶",
     "enRegex": "Sh.*sh"
   },
@@ -679,7 +679,7 @@ const essencelist = {
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "2.12",
+    "chaosValue": "2.68",
     "regex": "慟.*悶",
     "enRegex": "De.*sh"
   },
@@ -706,7 +706,7 @@ const essencelist = {
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "1",
+    "chaosValue": "1.18",
     "regex": "喚.*嫌悪",
     "enRegex": "Sh.*hing"
   },
@@ -715,7 +715,7 @@ const essencelist = {
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "4.89",
+    "chaosValue": "4.25",
     "regex": "慟.*嫌悪",
     "enRegex": "De.*hing"
   },
@@ -724,7 +724,7 @@ const essencelist = {
     "description": "ノーマルアイテムを、保証されたモッドを1個含むレアアイテムにアップグレードする。",
     "enDescription": "Upgrades a normal item to rare with one guaranteed property",
     "attribute": "",
-    "chaosValue": "0.3",
+    "chaosValue": "0.2143",
     "regex": "呻.*意",
     "enRegex": "Wa.*ite"
   },
@@ -733,7 +733,7 @@ const essencelist = {
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "0.625",
+    "chaosValue": "0.6667",
     "regex": "叫.*意",
     "enRegex": "Sc.*ite"
   },
@@ -742,7 +742,7 @@ const essencelist = {
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "3.21",
+    "chaosValue": "2.47",
     "regex": "喚.*意",
     "enRegex": "Sh.*ite"
   },
@@ -751,7 +751,7 @@ const essencelist = {
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "5.77",
+    "chaosValue": "5.64",
     "regex": "慟.*意",
     "enRegex": "De.*pite"
   },
@@ -778,7 +778,7 @@ const essencelist = {
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "3.53",
+    "chaosValue": "3.42",
     "regex": "喚.*狂",
     "enRegex": "Sh.*al"
   },
@@ -787,7 +787,7 @@ const essencelist = {
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "4.91",
+    "chaosValue": "4.92",
     "regex": "慟.*狂",
     "enRegex": "De.*eal"
   },
@@ -805,7 +805,7 @@ const essencelist = {
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "1",
+    "chaosValue": "0.75",
     "regex": "喚.*惨",
     "enRegex": "Sh.*ry"
   },
@@ -814,7 +814,7 @@ const essencelist = {
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "5.71",
+    "chaosValue": "3.13",
     "regex": "慟.*惨",
     "enRegex": "De.*ry"
   },
@@ -823,7 +823,7 @@ const essencelist = {
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "5",
+    "chaosValue": "4.98",
     "regex": "叫.*怖",
     "enRegex": "Sc.*ad"
   },
@@ -832,7 +832,7 @@ const essencelist = {
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "5.2",
+    "chaosValue": "3",
     "regex": "喚.*怖",
     "enRegex": "Sh.*ad"
   },
@@ -841,7 +841,7 @@ const essencelist = {
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "2.43",
+    "chaosValue": "2.3",
     "regex": "慟.*怖",
     "enRegex": "De.*ad"
   },
@@ -850,7 +850,7 @@ const essencelist = {
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "1",
+    "chaosValue": "1.01",
     "regex": "叫.*軽蔑",
     "enRegex": "Scr.*rn"
   },
@@ -859,7 +859,7 @@ const essencelist = {
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "5.09",
+    "chaosValue": "5.12",
     "regex": "喚.*軽蔑",
     "enRegex": "Sh.*rn"
   },
@@ -868,7 +868,7 @@ const essencelist = {
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "21.11",
+    "chaosValue": "20.65",
     "regex": "哭.*軽",
     "enRegex": "De.*rn"
   },
@@ -877,7 +877,7 @@ const essencelist = {
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "0.3333",
+    "chaosValue": "0.7368",
     "regex": "叫.*妬",
     "enRegex": "Sc.*vy"
   },
@@ -886,7 +886,7 @@ const essencelist = {
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "2.05",
+    "chaosValue": "2.33",
     "regex": "喚.*妬",
     "enRegex": "Sh.*vy"
   },
@@ -895,7 +895,7 @@ const essencelist = {
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "5.77",
+    "chaosValue": "5.61",
     "regex": "慟.*妬",
     "enRegex": "De.*vy"
   },
@@ -904,7 +904,7 @@ const essencelist = {
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "16.17",
+    "chaosValue": "29.88",
     "regex": "ヒス",
     "enRegex": " Hy"
   },
@@ -913,7 +913,7 @@ const essencelist = {
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "17.18",
+    "chaosValue": "19.95",
     "regex": "狂気",
     "enRegex": "f I"
   },
@@ -922,7 +922,7 @@ const essencelist = {
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "39.76",
+    "chaosValue": "36.69",
     "regex": "戦慄",
     "enRegex": " Ho"
   },
@@ -931,7 +931,7 @@ const essencelist = {
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "26.46",
+    "chaosValue": "27.94",
     "regex": "錯乱",
     "enRegex": "Del"
   },
