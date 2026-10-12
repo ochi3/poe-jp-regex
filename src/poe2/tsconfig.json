@@ -1,0 +1,42 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "composite": true,
+    "declaration": true,
+    "outFile": "../../.cache/typescript/poe2.js",
+    "tsBuildInfoFile": "../../.cache/typescript/poe2.tsbuildinfo"
+  },
+  "files": [
+    "../../src/types/models.d.ts",
+    "../../src/types/browser.d.ts",
+    "../../src/types/data.d.ts",
+    "../../src/poe2/types/elements.d.ts",
+    "../../src/poe2/types/browser-api.d.ts",
+    "../../src/shared/core/dom.ts",
+    "../../src/shared/core/storage.ts",
+    "../../src/shared/core/regex.ts",
+    "../../src/shared/features/trade.ts",
+    "../../src/shared/features/map.ts",
+    "../../src/shared/ui/navigation.ts",
+    "../../src/shared/ui/notifications.ts",
+    "../../src/shared/ui/feedback.ts",
+    "../../src/shared/features/saved-regex.ts",
+    "../../src/shared/features/vendor.ts",
+    "../../src/poe2/app/config.ts",
+    "../../src/poe2/features/trade/query.ts",
+    "../../src/poe2/app/state.ts",
+    "../../src/poe2/ui/language.ts",
+    "../../src/poe2/features/map/regex.ts",
+    "../../src/poe2/features/map/storage.ts",
+    "../../src/poe2/features/map/profiles.ts",
+    "../../src/poe2/features/map/conversion.ts",
+    "../../src/poe2/features/trade/settings.ts",
+    "../../src/poe2/ui/feedback.ts",
+    "../../src/poe2/app/bootstrap.ts",
+    "../../src/poe2/features/tablets.ts",
+    "../../src/shared/features/regex-converter.ts",
+    "../../src/poe2/features/vendor.ts",
+    "../../src/poe2/features/saved-regex.ts",
+    "../../src/shared/features/item-translator.ts"
+  ]
+}

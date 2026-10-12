@@ -3,3 +3,17 @@ update.bat
 tools/
 archive/
 tools_poe2/
+node_modules/
+coverage/
+*.tsbuildinfo
+__pycache__/
+# Temporary working copies used only by data:legacy.
+scripts/
+poe2_scripts/
+item/
+flask/
+gems/
+
+.cache/
+playwright-report/
+test-results/

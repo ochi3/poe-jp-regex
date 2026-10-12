@@ -1,0 +1,11 @@
+{
+  "files": [],
+  "references": [
+    {
+      "path": "./src/poe1"
+    },
+    {
+      "path": "./src/poe2"
+    }
+  ]
+}

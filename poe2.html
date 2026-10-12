@@ -14,7 +14,7 @@
         <meta content="path of exile, gaming, action rpg, regex, PoE, Regex, 日本語, マップmod" name="keywords"/>
         <title>PoE JP Regex</title>
         <link rel="canonical" href="https://ochi3.github.io/poe-jp-regex/poe2">
-        <link href="styles.css?v=2" rel="stylesheet"/>
+        <link href="assets/css/shared.css?v=2" rel="stylesheet"/>
     </head>
     <body>
         <div id="sideMenu">
@@ -37,7 +37,6 @@
             </nav>
             <button onclick="openFeedbackModal()" style="width: 100%; margin-bottom: 16px; background: var(--bg-tertiary); color: var(--accent-primary); border: 1px solid var(--border-color);">要望・不具合を送信</button>
             <div class="support-links" aria-label="支援リンク">
-                <a class="support-link patreon" href="https://www.patreon.com/cw/ochi3c" target="_blank" rel="noopener noreferrer">Patreonで支援</a>
                 <a class="support-link kofi" href="https://ko-fi.com/ochi3c" target="_blank" rel="noopener noreferrer">Ko-Fiで支援</a>
             </div>
             <h4>
@@ -49,6 +48,7 @@
             <h4>
                 Change log
                 <br/>
+                26/10/13<br/>サイト内部構造を再整理。不具合が発生する可能性があります。<br/><br/>
                 26/09/03
                 <br/>
                 英語Regex変換タブ追加
@@ -381,6 +381,7 @@
             <div class="card">
                 <h2 class="section-header">Change log</h2>
                 <div class="changelog-list">
+                    <article class="changelog-entry"><time>26/10/13</time><p>サイトの内部構造を作り直し、コードとフォルダ構成を整理しました。変更範囲が広いため、これまでになかった不具合や想定と異なる動作が発生する可能性があります。問題がありましたら「要望・不具合を送信」からご報告いただけると助かります。</p></article>
 
                     <article class="changelog-entry">
                         <time>26/09/03</time>
@@ -447,17 +448,9 @@
             </div>
         </div>
     </div>
-    <script src="poe2_scripts/poe2_config.js"></script>
-    <script src="poe2_scripts/map_mods.js"></script>
-    <script src="poe2_scripts/tablet_mods.js"></script>
-    <script src="poe2_scripts/trade_link.js"></script>
-    <script src="poe2_scripts/scripts.js"></script>
-    <script src="poe2_scripts/tablet_scripts.js"></script>
-    <script src="scripts/convert.js"></script>
-    <script src="poe2_scripts/vendor.js"></script>
-    <script src="poe2_scripts/saved-regex.js"></script>
-    <script src="poe2_scripts/jp-poe2-utils-translator.js"></script>
-    <script src="poe2_scripts/item-translator.js"></script>
+    <script src="assets/vendor/jp-poe2-utils-translator.js"></script>
+    <script src="assets/js/data-poe2.js"></script>
+    <script src="assets/js/poe2.js"></script>
     <!-- トレード設定サイドパネル -->
     <div class="side-panel" id="tradeSettingsPanel">
         <div class="side-panel-content">

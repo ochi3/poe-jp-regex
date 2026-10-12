@@ -1,0 +1,3 @@
+{
+  "extends": "./src/poe1/tsconfig.json"
+}

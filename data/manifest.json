@@ -1,0 +1,42 @@
+{
+  "poe1": [
+    {
+      "path": "data/poe1/map-mods.json",
+      "variable": "mapModList"
+    },
+    {
+      "path": "data/poe1/chart-mods.json",
+      "variable": "chartModList"
+    },
+    {
+      "path": "data/poe1/beastlist.json",
+      "variable": "beastlist"
+    },
+    {
+      "path": "data/poe1/scarablist.json",
+      "variable": "scarablist"
+    },
+    {
+      "path": "data/poe1/essencelist.json",
+      "variable": "essencelist"
+    },
+    {
+      "path": "data/poe1/tattoolist.json",
+      "variable": "tattoolist"
+    },
+    {
+      "path": "data/poe1/runegraftlist.json",
+      "variable": "runegraftlist"
+    }
+  ],
+  "poe2": [
+    {
+      "path": "data/poe2/map-mods.json",
+      "variable": "mapModList"
+    },
+    {
+      "path": "data/poe2/tablet-mods.json",
+      "variable": "tabletModList"
+    }
+  ]
+}

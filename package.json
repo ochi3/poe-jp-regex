@@ -1,0 +1,19 @@
+{
+  "name": "poe-jp-regex",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "node tooling/build.mjs",
+    "typecheck": "tsc -b --pretty false",
+    "test": "node --test tests/*.test.mjs",
+    "dev": "node tooling/dev.mjs",
+    "data:legacy": "node tooling/data/legacy.mjs",
+    "check": "npm run typecheck && npm run build && npm test",
+    "test:browser": "playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.64.0",
+    "jsdom": "^27.0.0",
+    "typescript": "^5.9.3"
+  }
+}

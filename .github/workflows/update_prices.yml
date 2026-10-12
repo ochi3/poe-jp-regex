@@ -22,13 +22,24 @@ jobs:
           python-version: '3.x'
 
       - name: Run update script
-        run: python .github/workflows/update_prices.py
+        run: python tooling/data/update-prices.py
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+
+      - name: Build updated price data
+        run: |
+          npm ci --ignore-scripts
+          npm run build
 
       - name: Commit and push changes
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add scripts/beastlist.js scripts/scarablist.js scripts/tattoolist.js scripts/runegraftlist.js scripts/essencelist.js
+          git add data/poe1/beastlist.json data/poe1/scarablist.json data/poe1/tattoolist.json data/poe1/runegraftlist.json data/poe1/essencelist.json assets/js/data-poe1.js
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else

@@ -1,0 +1,430 @@
+// tablet_mods.js が先に読み込まれている必要がある
+// tabletModList は tablet_mods.js で定義済み
+
+let tabletCheckedMods: Set<string> = new Set<string>(); // 選択されたModのキー（modテキスト）
+let tabletProfiles = {};
+
+function formatTabletModText(text: string, value: string) {
+    if (!text) return text || '';
+    if (!value) return text;
+    const textParts = text.split('|');
+    const valueParts = value.split('|');
+    const result = textParts.map((part, i) => {
+        const v = valueParts[i] !== undefined ? valueParts[i] : valueParts[0];
+        if (!v || v === '1') return part;
+        return part
+            .replace(/\(##\)/g, `(${v})`)
+            .replace(/##/g, v)
+            .replace(/#/g, v);
+    });
+    return result.join('\n');
+}
+
+function updateTabletModList() {
+    const listDiv = getElement('TabletModList');
+    if (!listDiv) return;
+    
+    // 初回のみソートオプションを初期化
+    const sortSelect = getElement('tabletSortSelect');
+    if (sortSelect && sortSelect.options.length <= 4) { // デフォルト、Pre、Suf、League の4つの初期状態
+        const categories = new Set<string>();
+        Object.values(tabletModList).forEach(m => {
+            if (m.subGroups) m.subGroups.forEach(g => categories.add(g));
+        });
+        
+        // カテゴリー順オプションを消して個別のカテゴリーを追加
+        const leagueOpt = Array.from(sortSelect.options).find(o => o.value === 'league');
+        if (leagueOpt) leagueOpt.remove();
+        
+        // カテゴリーを五十音順に追加
+        Array.from(categories).sort().forEach(cat => {
+            if (cat === 'Map') return; // Mapは一般的すぎるので除外
+            const opt = document.createElement('option');
+            opt.value = `cat_${cat}`;
+            opt.textContent = `${cat} `;
+            sortSelect.appendChild(opt);
+        });
+    }
+
+    listDiv.innerHTML = '';
+    
+    // デフォルト並び順のウェイト
+    const tabletSortMode = sortSelect?.value || 'default';
+    const getTypeWeight = (key) => {
+        const mod = tabletModList[key];
+        
+        if (tabletSortMode.startsWith('cat_')) {
+            const targetCat = tabletSortMode.replace('cat_', '');
+            if (mod.subGroups && mod.subGroups.includes(targetCat)) return 0;
+        }
+
+        switch (tabletSortMode) {
+            case 'prefix':
+                if (mod.type === 'Prefix') return 0;
+                break;
+            case 'suffix':
+                if (mod.type === 'Suffix') return 0;
+                break;
+            case 'league':
+                if (mod.subGroups && mod.subGroups.length > 0 && mod.subGroups[0] !== 'Map') return 0;
+                break;
+        }
+
+        // デフォルトの並び
+        if (mod.type === 'Prefix') return 1;
+        if (mod.type === 'Suffix') return 2;
+        return 3;
+    };
+
+    // 選択中のものを上に、それ以外をタイプ別にソート
+    const sortedKeys = Object.keys(tabletModList)
+        .filter(key => tabletModList[key].type !== 'Unique')
+        .sort((a, b) => {
+        const aChecked = tabletCheckedMods.has(a);
+        const bChecked = tabletCheckedMods.has(b);
+        if (aChecked && !bChecked) return -1;
+        if (!aChecked && bChecked) return 1;
+        
+        const aWeight = getTypeWeight(a);
+        const bWeight = getTypeWeight(b);
+        if (aWeight !== bWeight) return aWeight - bWeight;
+        
+        return a.localeCompare(b);
+    });
+
+    sortedKeys.forEach(key => {
+        const value = tabletModList[key];
+        const effectItem = document.createElement('div');
+        effectItem.classList.add('effect-item');
+        if (tabletCheckedMods.has(key)) {
+            effectItem.classList.add('wanted');
+        }
+
+        const textSpan = document.createElement('span');
+        textSpan.classList.add('mod-text');
+        textSpan.style.paddingRight = '80px'; // バッジ用の余白
+        const rawText = (typeof currentLanguage !== 'undefined' && currentLanguage === 'en')
+            ? (value.engMod || value.mod)
+            : value.mod;
+        textSpan.textContent = formatTabletModText(rawText, value.value);
+        
+        effectItem.appendChild(textSpan);
+
+        // バッジコンテナ
+        const badgeContainer = document.createElement('div');
+        badgeContainer.classList.add('badge-container');
+        badgeContainer.style.position = 'absolute';
+        badgeContainer.style.right = '12px';
+        badgeContainer.style.top = '50%';
+        badgeContainer.style.transform = 'translateY(-50%)';
+        badgeContainer.style.display = 'flex';
+        badgeContainer.style.gap = '6px';
+        badgeContainer.style.pointerEvents = 'none';
+
+        const colorMap = {
+            'Ritual': '#cf3c3c',
+            'Delirium': '#607d8b',
+            'Breach': '#9c27b0',
+            'Abyss': '#212121',
+            'Expedition': '#bf9b30',
+            'Irradiated': '#4caf50',
+            'Map': '#1976d2',
+            'Tower': 'var(--accent-gold)',
+            'Monster': '#d32f2f'
+        };
+
+        // バッジ表示順: Prefix > Suffix > others
+        
+        // 1. Prefix
+        if (value.type === 'Prefix') {
+            const prefixBadge = document.createElement('span');
+            prefixBadge.classList.add('badge');
+            prefixBadge.style.backgroundColor = 'var(--accent-red)';
+            prefixBadge.textContent = 'Prefix';
+            badgeContainer.appendChild(prefixBadge);
+        }
+        
+        // 2. Suffix
+        if (value.type === 'Suffix') {
+            const suffixBadge = document.createElement('span');
+            suffixBadge.classList.add('badge');
+            suffixBadge.style.backgroundColor = 'var(--accent-blue)';
+            suffixBadge.textContent = 'Suffix';
+            badgeContainer.appendChild(suffixBadge);
+        }
+
+        // 3. Mechanic (SubGroups)
+        if (value.subGroups) {
+            value.subGroups.forEach(cat => {
+                const exists = Array.from(badgeContainer.children).some(b => b.textContent === cat);
+                if (!exists) {
+                    const badge = document.createElement('span');
+                    badge.classList.add('badge');
+                    badge.style.backgroundColor = colorMap[cat] || '#555';
+                    if (cat === 'Tower') badge.style.color = '#000';
+                    badge.textContent = cat;
+                    badgeContainer.appendChild(badge);
+                }
+            });
+        }
+
+        effectItem.appendChild(badgeContainer);
+
+        effectItem.addEventListener('click', () => {
+            if (tabletCheckedMods.has(key)) {
+                tabletCheckedMods.delete(key);
+                effectItem.classList.remove('wanted');
+            } else {
+                tabletCheckedMods.add(key);
+                effectItem.classList.add('wanted');
+            }
+            updateTabletCombinedRegex();
+            saveTabletState();
+        });
+
+        listDiv.appendChild(effectItem);
+    });
+    filterTabletEffects();
+}
+
+function updateTabletCombinedRegex() {
+    const results = [];
+    tabletCheckedMods.forEach(key => {
+        const modData = tabletModList[key];
+        const useEnglish = typeof currentLanguage !== 'undefined' && currentLanguage === 'en';
+        const reg = useEnglish
+            ? (modData.engRegex || modData.Regex || (modData.engMod || modData.mod).split('|')[0].substring(0, 8))
+            : (modData.Regex || modData.mod.split('|')[0].substring(0, 8));
+        results.push(reg);
+    });
+
+    const combined = results.length > 0 ? `"${results.join('|')}"` : '';
+    const outputElem = getElement('tabletRegexOutput');
+    if (outputElem) outputElem.textContent = combined;
+    
+    const charCount = combined.length;
+    const charCountElement = getElement('tabletCharCount');
+    if (charCountElement) {
+        charCountElement.textContent = `文字数: ${charCount}`;
+        if (charCount > POE2_REGEX_CHAR_LIMIT) {
+            charCountElement.style.color = 'red';
+            charCountElement.textContent += ` (${POE2_REGEX_CHAR_LIMIT}文字を超えています)`;
+        } else {
+            charCountElement.style.color = '';
+        }
+    }
+}
+
+function filterTabletEffects() {
+    const searchInput = getElement('tabletSearch');
+    if (!searchInput) return;
+    const term = searchInput.value.toLowerCase();
+    const items = document.querySelectorAll<HTMLElement>('#TabletModList .effect-item');
+    items.forEach(item => {
+        // 全体のテキスト（モッド文 + バッジテキスト）を検索対象にする
+        const text = item.textContent.toLowerCase();
+        if (text.includes(term)) {
+            item.classList.remove('hidden');
+        } else {
+            item.classList.add('hidden');
+        }
+    });
+}
+
+function copyTabletToClipboard() {
+    const outputElem = getElement('tabletRegexOutput');
+    if (!outputElem) return;
+    const text = outputElem.textContent;
+    if (!text) return;
+    navigator.clipboard.writeText(text).then(() => {
+        showNotification ? showNotification('コピーしました！') : alert('コピーしました！');
+    });
+}
+
+function resetTabletAll() {
+    tabletCheckedMods.clear();
+    const searchInput = getElement('tabletSearch');
+    if (searchInput) searchInput.value = '';
+    updateTabletModList();
+    updateTabletCombinedRegex();
+    saveTabletState();
+}
+
+function saveTabletState() {
+    writeStoredJson('poe2_tablet_checked_v2', [...tabletCheckedMods]);
+}
+
+function loadTabletState() {
+    const saved = readStoredText('poe2_tablet_checked_v2');
+    if (saved) {
+        const keys = readStoredJson('poe2_tablet_checked_v2');
+        keys.forEach(k => {
+            if (tabletModList[k]) tabletCheckedMods.add(k);
+        });
+    }
+}
+
+function applyTabletMods(mods) {
+    tabletCheckedMods.clear();
+    (mods || []).forEach(key => {
+        if (tabletModList[key]) tabletCheckedMods.add(key);
+    });
+    updateTabletModList();
+    updateTabletCombinedRegex();
+    saveTabletState();
+}
+
+function saveTabletProfile() {
+    const profileName = getElement('tabletProfileName')?.value.trim();
+    if (!profileName) {
+        showNotification('プロファイル名を入力してください', true);
+        return;
+    }
+
+    if (tabletProfiles[profileName] && !confirm(`${profileName} は既に存在します。上書きしますか?`)) {
+        return;
+    }
+
+    tabletProfiles[profileName] = {
+        mods: Array.from(tabletCheckedMods),
+        timestamp: Date.now()
+    };
+
+    if (!writeStoredJson('poe2_tabletProfiles', tabletProfiles)) return false;
+    updateTabletProfileList();
+    showNotification(`"${profileName}" を保存しました`);
+    getElement('tabletProfileName').value = '';
+
+    if (typeof updateSavedRegexDisplay === 'function') {
+        updateSavedRegexDisplay();
+    }
+}
+
+function loadTabletProfile() {
+    const profileName = getElement('tabletProfileList')?.value;
+    if (!profileName) {
+        getElement('tabletProfileName').value = '';
+        return;
+    }
+    if (!tabletProfiles[profileName]) {
+        showNotification('プロファイルを選択してください', true);
+        return;
+    }
+
+    try {
+        applyTabletMods(tabletProfiles[profileName].mods);
+        getElement('tabletProfileName').value = profileName;
+        showNotification(`"${profileName}" を読み込みました`);
+    } catch (error) {
+        console.error('石板プロファイル読み込みエラー:', error);
+        showNotification('プロファイルの読み込みに失敗しました', true);
+    }
+}
+
+function deleteTabletProfile() {
+    const profileName = getElement('tabletProfileList')?.value;
+    if (!profileName || !tabletProfiles[profileName]) {
+        showNotification('削除するプロファイルを選択してください', true);
+        return;
+    }
+
+    if (confirm(`本当に "${profileName}" を削除しますか?`)) {
+        delete tabletProfiles[profileName];
+        if (!writeStoredJson('poe2_tabletProfiles', tabletProfiles)) return false;
+        updateTabletProfileList();
+        getElement('tabletProfileName').value = '';
+        showNotification(`"${profileName}" を削除しました`);
+
+        if (typeof updateSavedRegexDisplay === 'function') {
+            updateSavedRegexDisplay();
+        }
+    }
+}
+
+function updateTabletProfileList() {
+    const select = getElement('tabletProfileList');
+    if (!select) return;
+
+    select.innerHTML = '<option value="">-- プロファイル選択 --</option>';
+    Object.keys(tabletProfiles).sort().forEach(name => {
+        const option = document.createElement('option');
+        option.value = name;
+        option.textContent = name;
+        select.appendChild(option);
+    });
+}
+
+function loadTabletProfileDirectly(profileName) {
+    const profile = tabletProfiles[profileName];
+    if (!profile) {
+        showNotification('プロファイルが見つかりません', true);
+        return;
+    }
+
+    applyTabletMods(profile.mods);
+
+    const profileNameInput = getElement('tabletProfileName');
+    const profileList = getElement('tabletProfileList');
+    if (profileNameInput) profileNameInput.value = profileName;
+    if (profileList) profileList.value = profileName;
+
+    showNotification(`"${profileName}" を読み込みました`);
+}
+
+function generateTabletRegexFromProfile(profile) {
+    const mods = profile?.mods || [];
+    const results = mods.map(key => {
+        const modData = tabletModList[key];
+        if (!modData) return null;
+        return modData.Regex || modData.mod.split('|')[0].substring(0, 8);
+    }).filter(Boolean);
+
+    return results.length > 0 ? `"${results.join('|')}"` : '(空のRegex)';
+}
+
+function initializeTabletProfiles() {
+    const savedProfiles = readStoredText('poe2_tabletProfiles');
+    if (savedProfiles) {
+        try {
+            tabletProfiles = readStoredJson('poe2_tabletProfiles');
+            updateTabletProfileList();
+        } catch (e) {
+            console.error('石板プロファイル読み込みエラー:', e);
+            tabletProfiles = {};
+        }
+    }
+
+    const profileList = getElement('tabletProfileList');
+    if (profileList && !profileList.hasEventListener) {
+        profileList.addEventListener('change', function() {
+            if (this.value) loadTabletProfile();
+            else getElement('tabletProfileName').value = '';
+        });
+        profileList.hasEventListener = true;
+    }
+}
+
+function syncTabletProfiles(profiles) {
+    tabletProfiles = profiles;
+    updateTabletProfileList();
+}
+
+window.saveTabletProfile = saveTabletProfile;
+window.loadTabletProfile = loadTabletProfile;
+window.deleteTabletProfile = deleteTabletProfile;
+window.loadTabletProfileDirectly = loadTabletProfileDirectly;
+window.generateTabletRegexFromProfile = generateTabletRegexFromProfile;
+window.syncTabletProfiles = syncTabletProfiles;
+
+// 初期化
+// 注意: scripts.js と共存するため、重複して window.onload 等を使わないよう検討
+// ここでは poe2.html から直接初期化関数として呼び出すか、DOMContentLoaded を使う
+window.addEventListener('DOMContentLoaded', () => {
+    // ページ内に Tablet 用の要素がある場合のみ初期化
+    if (getElement('tabletContent')) {
+        initializeTabletProfiles();
+        loadTabletState();
+        updateTabletModList();
+        updateTabletCombinedRegex();
+    }
+});
