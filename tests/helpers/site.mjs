@@ -97,6 +97,8 @@ export async function exercise(site, game) {
     result.pob=w.parsePobBuildXml('<PathOfBuilding><Build className="Witch" ascendClassName="Elementalist" level="90"/><Skills activeSkillSet="1"><SkillSet id="1" title="Main"><Skill><Gem nameSpec="Fireball" skillId="Fireball" level="20" quality="20" enabled="true"/></Skill></SkillSet></Skills></PathOfBuilding>');
     w.switchTab('vendorContent');
     await w.initializeVendor();
+    // Exercise persistence explicitly rather than relying on delayed UI events.
+    w.saveVendorSettings();
     result.vendor=w.generateVendorRegexFromProfile({settings:{colors:{rgb:true},movement:{ten:true},weapon:{wand:true},selectedGems:[]}});
     w.switchTab('chartContent');
     result.chart=output('chartCombinedRegexOutput');
