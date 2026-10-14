@@ -12,7 +12,7 @@ scripts/
 poe2_scripts/
 item/
 flask/
-gems/
+/gems/
 
 .cache/
 playwright-report/

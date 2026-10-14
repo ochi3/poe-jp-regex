@@ -70,3 +70,16 @@ test('a direct essence bookmark and persisted English language use aligned colum
   expect(names).toEqual([...names].sort((a,b)=>b.localeCompare(a,'en')));
   await assertEssenceColumns(page);
 });
+test('PoE1 loads the published gem JSON and renders the vendor gem list', async ({page}) => {
+  const errors = []; page.on('pageerror', error => errors.push(error.message));
+  const responsePromise = page.waitForResponse(response => response.url().endsWith('/data/poe1/gems/gems_regex.json'));
+  await page.goto('/poe-jp-regex/poe1.html#vendor');
+  const response = await responsePromise;
+  expect(response.ok()).toBe(true);
+  const gems = await response.json();
+  expect(Array.isArray(gems)).toBe(true);
+  expect(gems.length).toBeGreaterThan(0);
+  await expect(page.locator('#gemListContainer .gem-button-label')).toHaveCount(gems.length);
+  await expect(page.locator('#gemListContainer')).toContainText('ファイヤーボール');
+  expect(errors).toEqual([]);
+});
