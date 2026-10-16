@@ -4,6 +4,62 @@ test.beforeEach(async ({page}) => {
     return new URL(route.request().url()).origin === 'http://127.0.0.1:5174' ? route.continue() : route.abort();
   });
 });
+
+test('ACT options preserve profiles and keep legacy colors collapsed below weapons', async ({page}, testInfo) => {
+  const errors=[];page.on('pageerror', error=>errors.push(error.message));
+  await page.goto('/poe1.html#vendor');
+  await expect(page.locator('#gemListContainer .gem-button').first()).toBeVisible();
+  await expect(page.locator('#vendor-link-colors')).not.toHaveAttribute('open');
+  await expect(page.locator('#vendor-color-rrr')).toBeHidden();
+  await expect(page.locator('#vendor-accessory-options input')).toHaveCount(14);
+  await expect(page.locator('#vendor-accessory-options a')).toHaveCount(0);
+  await expect(page.locator('#vendor-accessory-options h4')).toHaveText(['アミュレット','ベルト','指輪']);
+  for (const [key, pattern] of Object.entries({amber:'珀のア',jade:'翠のア',lapis:'璃のア',onyx:'キスのア',turquoise:'イズのア',agate:'瑙のア',rusticSash:'朴な飾',heavyBelt:'ビーベ',leatherBelt:'革のベ',ironRing:'鉄の指',coralRing:'瑚の指',topazRing:'ズの指',sapphireRing:'アの指',rubyRing:'ーの指'})) {
+    const checkbox=page.locator(`#vendor-accessory-${key}`);
+    await checkbox.check();
+    await expect(page.locator('#vendorRegexOutput')).toHaveText(`"${pattern}"`);
+    await checkbox.uncheck();
+  }
+  await page.locator('#vendor-accessory-ironRing').check();
+  await page.locator('#vendor-extra-fireGem').check();
+  await page.locator('#vendor-extra-coldDotMulti').check();
+  const output=page.locator('#vendorRegexOutput');
+  await expect(output).toContainText('鉄の指');
+  await expect(output).toContainText('ての火ス');
+  await expect(output).toContainText('^冷気継.*率 \\+');
+  const before=await output.textContent();
+  const expression = new RegExp(before.slice(1,-1),'im');
+  expect(expression.test('鉄の指\nレアリティ: ノーマル')).toBe(true);
+  expect(expression.test('全ての火スペルスキルジェムのレベル +1')).toBe(true);
+  expect(expression.test('全ての雷スペルスキルジェムのレベル +1')).toBe(false);
+  expect(expression.test('冷気継続ダメージ倍率 +15%')).toBe(true);
+  expect(expression.test('火継続ダメージ倍率 +15%')).toBe(false);
+  await page.locator('#vendorProfileName').fill('ACT new options');
+  await page.getByRole('button',{name:'保存',exact:true}).filter({visible:true}).click();
+  await page.reload();
+  await expect(page.locator('#vendor-accessory-ironRing')).toBeChecked();
+  await expect(page.locator('#vendor-extra-fireGem')).toBeChecked();
+  await page.getByRole('button',{name:'リセット',exact:true}).filter({visible:true}).click();
+  await expect(page.locator('#vendor-accessory-ironRing')).not.toBeChecked();
+  await expect(page.locator('#vendor-extra-fireGem')).not.toBeChecked();
+  await page.locator('#vendorProfileList').selectOption('ACT new options');
+  await expect(output).toHaveText(before);
+  await expect(page.locator('#vendor-extra-coldDotMulti')).toBeChecked();
+  await page.locator('#vendor-link-colors summary').click();
+  await page.locator('#vendor-color-rrr').check();
+  await expect(output).toContainText('r-r-r');
+  const positions=await page.locator('.vendor-act-layout').evaluate(el=>[...el.children].map(child=>{const r=child.getBoundingClientRect();return {x:r.x,y:r.y};}));
+  if(testInfo.project.name==='desktop') {
+    expect(positions[1].x).toBeGreaterThan(positions[0].x);
+    const borders=await page.locator('.vendor-act-layout').evaluate(el=>[...el.children].map(child=>child.querySelector('h3').getBoundingClientRect().bottom));
+    expect(Math.max(...borders)-Math.min(...borders)).toBeLessThanOrEqual(0.5);
+  }
+  else expect(positions[1].y).toBeGreaterThan(positions[0].y);
+  await page.locator('#vendor-link-colors summary').click();
+  await page.locator('.vendor-act-layout').scrollIntoViewIfNeeded();
+  await page.screenshot({path:testInfo.outputPath('act-options.png')});
+  expect(errors).toEqual([]);
+});
 async function assertEssenceColumns(page) {
   const deviations = await page.evaluate(() => {
     const header = [...document.querySelectorAll('#essenceContent .essence-header > div')].map(el => el.getBoundingClientRect());
@@ -82,4 +138,23 @@ test('PoE1 loads the published gem JSON and renders the vendor gem list', async 
   await expect(page.locator('#gemListContainer .gem-button-label')).toHaveCount(gems.length);
   await expect(page.locator('#gemListContainer')).toContainText('ファイヤーボール');
   expect(errors).toEqual([]);
+});
+test('PoE-DB tags and reminder text appear in map details and follow the language toggle', async ({page}) => {
+  await page.goto('/poe1.html#map');
+  const poison=page.locator('.effect-item[data-mod-key="モンスターは#%の確率で毒、串刺しおよび出血を無効化する"]');
+  const vulnerability=page.locator('.effect-item[data-mod-key="プレイヤーはヴァルネラビリティの呪いを受ける"]');
+  await expect(poison.locator('.mod-tags')).toHaveText('物理 · 混沌 · アタック · 状態異常');
+  await expect(vulnerability.locator('.mod-reminder')).toContainText('物理ダメージが15%増加');
+  await expect(vulnerability.locator('.mod-reminder')).toContainText('出血確率を+20%');
+  await expect(vulnerability.locator('.mod-reminder')).toContainText('持続時間は8秒');
+  await page.locator('#showModDetailsCheckbox').uncheck();
+  await expect(poison.locator('.mod-extra-details')).toBeHidden();
+  await page.locator('#showModDetailsCheckbox').check();
+  await expect(poison.locator('.mod-extra-details')).toBeVisible();
+  await page.locator('#effectSearch').fill('状態異常');
+  await expect(poison).toBeVisible();
+  await page.locator('#effectSearch').fill('');
+  await page.locator('#globalLangToggle [data-lang="en"]').click();
+  await expect(poison.locator('.mod-tags')).toHaveText('Physical · Chaos · Attack · Ailment');
+  await expect(vulnerability.locator('.mod-reminder')).toContainText('Vulnerability is a Hex');
 });

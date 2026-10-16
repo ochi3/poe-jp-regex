@@ -577,6 +577,10 @@ function createProfileSummary(profile, type) {
     if (linkSettings.length > 0) parts.push(linkSettings.join(','));
     const weaponCount = Object.values(settings.weapon || {}).filter(Boolean).length;
     if (weaponCount > 0) parts.push(`${weaponCount}武器`);
+    const accessoryCount = Object.values(settings.accessory || {}).filter(Boolean).length;
+    if (accessoryCount > 0) parts.push(`${accessoryCount}アクセ`);
+    const extraCount = Object.values(settings.extra || {}).filter(Boolean).length;
+    if (extraCount > 0) parts.push(`その他${extraCount}件`);
     const gemCount = (settings.selectedGems || []).length;
     if (gemCount > 0) {
       const gemNames = [];
@@ -822,6 +826,13 @@ function createDetailedView(profile, type) {
     if (settings.movement?.twentyfive) movementSettings.push('25%');
     if (settings.movement?.thirty) movementSettings.push('30%');
     if (movementSettings.length > 0) container.appendChild(createDetailRow(isEn ? 'MS' : '移動速度', movementSettings.join(', ')));
+    for (const [group, title, options] of [
+      ['accessory', 'アクセ', VENDOR_ACCESSORY_OPTIONS],
+      ['extra', 'その他', VENDOR_EXTRA_OPTIONS],
+    ] as const) {
+      const names = Object.entries(options).filter(([key]) => settings[group]?.[key]).map(([, option]) => option.label);
+      if (names.length) container.appendChild(createDetailRow(title, names.join(', ')));
+    }
     const enabledWeapons = Object.entries(settings.weapon || {})
       .filter(([key, value]) => value)
       .map(([key]) => key);

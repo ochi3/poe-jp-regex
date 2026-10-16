@@ -17,7 +17,7 @@
     <title>PoE JP Regex</title>
     <link rel="canonical" href="https://ochi3.github.io/poe-jp-regex/poe1">
     <link rel="stylesheet" href="assets/css/shared.css?v=4">
-    <link rel="stylesheet" href="assets/css/poe1.css?v=5">
+    <link rel="stylesheet" href="assets/css/poe1.css?v=7">
 </head>
 <body>
     <div id="sideMenu">
@@ -695,8 +695,173 @@
                     <span id="vendorCharCount" class="char-count"></span>
                 </div>
 
-                <div class="three-columns" style="margin-top: 30px;">
-                    <div class="half-width">
+                <div class="three-columns vendor-act-layout" style="margin-top: 30px;"><div class="vendor-main-options"><h3>リンク</h3>
+                        
+                        <div style="margin-bottom: 8px;">
+                            <label class="input-label">
+                                <input type="checkbox" id="vendor-anyThreeLink"> ⚪-⚪-⚪ (3リンク)
+                            </label>
+                        </div>
+                        <div style="margin-bottom: 8px;">
+                            <label class="input-label">
+                                <input type="checkbox" id="vendor-anyFourLink"> ⚪-⚪-⚪-⚪ (4リンク)
+                            </label>
+                        </div>
+                        <div style="margin-bottom: 8px;">
+                            <label class="input-label">
+                                <input type="checkbox" id="vendor-anyFiveLink"> ⚪-⚪-⚪-⚪-⚪ (5リンク)
+                            </label>
+                        </div>
+                        <div style="margin-bottom: 8px;">
+                            <label class="input-label">
+                                <input type="checkbox" id="vendor-anySixLink"> 6リンク (Any)
+                            </label>
+                        </div>
+                        <div style="margin-bottom: 8px;">
+                            <label class="input-label">
+                                <input type="checkbox" id="vendor-anySixSocket"> 6ソケット (Any)
+                            </label>
+                        </div>
+                        <h3 style="color: var(--accent-primary); margin-bottom: 16px; border-bottom: 2px solid var(--accent-primary); padding-bottom: 8px;">
+                            移動速度
+                        </h3>
+                        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 8px;">
+                        <label class="input-label" style="font-size: 0.9em;">
+                            <input type="checkbox" id="vendor-movement-ten"> 10%
+                        </label>
+                        <label class="input-label" style="font-size: 0.9em;">
+                            <input type="checkbox" id="vendor-movement-fifteen"> 15%
+                        </label>
+                        <label class="input-label" style="font-size: 0.9em;">
+                            <input type="checkbox" id="vendor-movement-twenty"> 20%
+                        </label>
+                        <label class="input-label" style="font-size: 0.9em;">
+                            <input type="checkbox" id="vendor-movement-twentyfive"> 25%
+                        </label>
+                        <label class="input-label" style="font-size: 0.9em;">
+                            <input type="checkbox" id="vendor-movement-thirty"> 30%
+                        </label>
+                        </div>
+
+                    <section><h3>アクセ</h3><div id="vendor-accessory-options"></div></section></div><section class="vendor-other-options"><h3>その他</h3><div id="vendor-extra-options"></div></section><div class="vendor-weapon-section">
+                        <!-- 武器ベース -->
+                        <h3 style="color: var(--accent-primary); margin-bottom: 16px; border-bottom: 2px solid var(--accent-primary); padding-bottom: 8px;">
+                        武器ベース
+                        </h3>
+                        <p style="color: #FCA5A5; font-size: 0.85em; margin-bottom: 12px;">
+                        選択した武器タイプは、ソケットやリンクに関係なく常にハイライトされます
+                        </p>
+
+                        <div class="vendor-weapon-grid">
+                        <label class="input-label" style="font-size: 0.9em;">
+                            <input type="checkbox" id="vendor-weapon-claw"> 鉤爪
+                        </label>
+                        <label class="input-label" style="font-size: 0.9em;">
+                            <input type="checkbox" id="vendor-weapon-dagger"> 短剣
+                        </label>
+                        <label class="input-label" style="font-size: 0.9em;">
+                            <input type="checkbox" id="vendor-weapon-wand"> ワンド
+                        </label>
+                        <label class="input-label" style="font-size: 0.9em;">
+                            <input type="checkbox" id="vendor-weapon-oneHandSword"> 片手剣
+                        </label>
+                        <label class="input-label" style="font-size: 0.9em;">
+                            <input type="checkbox" id="vendor-weapon-thrustingSword"> 刺突剣
+                        </label>
+                        <label class="input-label" style="font-size: 0.9em;">
+                            <input type="checkbox" id="vendor-weapon-oneHandAxe"> 片手斧
+                        </label>
+                        <label class="input-label" style="font-size: 0.9em;">
+                            <input type="checkbox" id="vendor-weapon-oneHandMace"> 片手メイス
+                        </label>
+                        <label class="input-label" style="font-size: 0.9em;">
+                            <input type="checkbox" id="vendor-weapon-runeDagger"> ルーンの短剣
+                        </label>
+                        <label class="input-label" style="font-size: 0.9em;">
+                            <input type="checkbox" id="vendor-weapon-sceptre"> セプター
+                        </label>
+                        <label class="input-label" style="font-size: 0.9em;">
+                            <input type="checkbox" id="vendor-weapon-bow"> 弓
+                        </label>
+                        <label class="input-label" style="font-size: 0.9em;">
+                            <input type="checkbox" id="vendor-weapon-staff"> スタッフ
+                        </label>
+                        <label class="input-label" style="font-size: 0.9em;">
+                            <input type="checkbox" id="vendor-weapon-twoHandSword"> 両手剣
+                        </label>
+                        <label class="input-label" style="font-size: 0.9em;">
+                            <input type="checkbox" id="vendor-weapon-twoHandAxe"> 両手斧
+                        </label>
+                        <label class="input-label" style="font-size: 0.9em;">
+                            <input type="checkbox" id="vendor-weapon-twoHandMace"> 両手メイス
+                        </label>
+                        <label class="input-label" style="font-size: 0.9em;">
+                            <input type="checkbox" id="vendor-weapon-warstaff"> ウォースタッフ
+                        </label>
+                        <label class="input-label" style="font-size: 0.9em;">
+                            <input type="checkbox" id="vendor-weapon-shield"> 盾
+                        </label>
+                        </div>
+                        
+                        <!-- NG武器ベースセクション -->
+                            <h3 style="color: #FCA5A5; margin: 24px 0 16px 0; border-bottom: 2px solid #FCA5A5; padding-bottom: 8px;">
+                                NG武器ベース（除外）
+                            </h3>
+                            <p style="color: #FCA5A5; font-size: 0.85em; margin-bottom: 12px;">
+                                選択した武器タイプを除外します（これらの武器はハイライトされません）
+                            </p>
+
+                            <div class="vendor-weapon-grid">
+                                <label class="input-label" style="font-size: 0.9em;">
+                                    <input type="checkbox" id="vendor-exclude-claw"> 鉤爪
+                                </label>
+                                <label class="input-label" style="font-size: 0.9em;">
+                                    <input type="checkbox" id="vendor-exclude-dagger"> 短剣
+                                </label>
+                                <label class="input-label" style="font-size: 0.9em;">
+                                    <input type="checkbox" id="vendor-exclude-wand"> ワンド
+                                </label>
+                                <label class="input-label" style="font-size: 0.9em;">
+                                    <input type="checkbox" id="vendor-exclude-oneHandSword"> 片手剣
+                                </label>
+                                <label class="input-label" style="font-size: 0.9em;">
+                                    <input type="checkbox" id="vendor-exclude-thrustingSword"> 刺突剣
+                                </label>
+                                <label class="input-label" style="font-size: 0.9em;">
+                                    <input type="checkbox" id="vendor-exclude-oneHandAxe"> 片手斧
+                                </label>
+                                <label class="input-label" style="font-size: 0.9em;">
+                                    <input type="checkbox" id="vendor-exclude-oneHandMace"> 片手メイス
+                                </label>
+                                <label class="input-label" style="font-size: 0.9em;">
+                                    <input type="checkbox" id="vendor-exclude-runeDagger"> ルーンの短剣
+                                </label>
+                                <label class="input-label" style="font-size: 0.9em;">
+                                    <input type="checkbox" id="vendor-exclude-sceptre"> セプター
+                                </label>
+                                <label class="input-label" style="font-size: 0.9em;">
+                                    <input type="checkbox" id="vendor-exclude-bow"> 弓
+                                </label>
+                                <label class="input-label" style="font-size: 0.9em;">
+                                    <input type="checkbox" id="vendor-exclude-staff"> スタッフ
+                                </label>
+                                <label class="input-label" style="font-size: 0.9em;">
+                                    <input type="checkbox" id="vendor-exclude-twoHandSword"> 両手剣
+                                </label>
+                                <label class="input-label" style="font-size: 0.9em;">
+                                    <input type="checkbox" id="vendor-exclude-twoHandAxe"> 両手斧
+                                </label>
+                                <label class="input-label" style="font-size: 0.9em;">
+                                    <input type="checkbox" id="vendor-exclude-twoHandMace"> 両手メイス
+                                </label>
+                                <label class="input-label" style="font-size: 0.9em;">
+                                    <input type="checkbox" id="vendor-exclude-warstaff"> ウォースタッフ
+                                </label>
+                                <label class="input-label" style="font-size: 0.9em;">
+                                    <input type="checkbox" id="vendor-exclude-shield"> 盾
+                                </label>
+                            </div>
+                    <details id="vendor-link-colors" class="vendor-link-colors"><summary>リンクカラー</summary><div class="vendor-color-options"><div class="half-width">
                         <h3 style="color: var(--accent-primary); margin-bottom: 16px; border-bottom: 2px solid var(--accent-primary); padding-bottom: 8px;">
                             リンクカラー (3L)
                         </h3>
@@ -785,9 +950,7 @@
                                 <input type="checkbox" id="vendor-color-baa"> 🔵-⚪-⚪
                             </label>
                         </div>
-                    </div>
-
-                    <div class="half-width">
+                    </div><div>
                         <h3 style="color: var(--accent-primary); margin: 24px 0 16px 0; border-bottom: 2px solid var(--accent-primary); padding-bottom: 8px;">
                             リンクカラー (2L)
                         </h3>
@@ -824,178 +987,7 @@
                             </label>
                         </div>
 
-                        <h3 style="color: var(--accent-primary); margin: 24px 0 16px 0; border-bottom: 2px solid var(--accent-primary); padding-bottom: 8px;">
-                            任意リンク
-                        </h3>
-                        
-                        <div style="margin-bottom: 8px;">
-                            <label class="input-label">
-                                <input type="checkbox" id="vendor-anyThreeLink"> ⚪-⚪-⚪ (3リンク)
-                            </label>
-                        </div>
-                        <div style="margin-bottom: 8px;">
-                            <label class="input-label">
-                                <input type="checkbox" id="vendor-anyFourLink"> ⚪-⚪-⚪-⚪ (4リンク)
-                            </label>
-                        </div>
-                        <div style="margin-bottom: 8px;">
-                            <label class="input-label">
-                                <input type="checkbox" id="vendor-anyFiveLink"> ⚪-⚪-⚪-⚪-⚪ (5リンク)
-                            </label>
-                        </div>
-                        <div style="margin-bottom: 8px;">
-                            <label class="input-label">
-                                <input type="checkbox" id="vendor-anySixLink"> 6リンク (Any)
-                            </label>
-                        </div>
-                        <div style="margin-bottom: 8px;">
-                            <label class="input-label">
-                                <input type="checkbox" id="vendor-anySixSocket"> 6ソケット (Any)
-                            </label>
-                        </div>
-                        <h3 style="color: var(--accent-primary); margin-bottom: 16px; border-bottom: 2px solid var(--accent-primary); padding-bottom: 8px;">
-                            移動速度
-                        </h3>
-                        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 8px;">
-                        <label class="input-label" style="font-size: 0.9em;">
-                            <input type="checkbox" id="vendor-movement-ten"> 10%
-                        </label>
-                        <label class="input-label" style="font-size: 0.9em;">
-                            <input type="checkbox" id="vendor-movement-fifteen"> 15%
-                        </label>
-                        <label class="input-label" style="font-size: 0.9em;">
-                            <input type="checkbox" id="vendor-movement-twenty"> 20%
-                        </label>
-                        <label class="input-label" style="font-size: 0.9em;">
-                            <input type="checkbox" id="vendor-movement-twentyfive"> 25%
-                        </label>
-                        <label class="input-label" style="font-size: 0.9em;">
-                            <input type="checkbox" id="vendor-movement-thirty"> 30%
-                        </label>
-                        </div>
-
-                    </div>
-
-                    <div>
-                        <!-- 武器ベース -->
-                        <h3 style="color: var(--accent-primary); margin-bottom: 16px; border-bottom: 2px solid var(--accent-primary); padding-bottom: 8px;">
-                        武器ベース
-                        </h3>
-                        <p style="color: #FCA5A5; font-size: 0.85em; margin-bottom: 12px;">
-                        選択した武器タイプは、ソケットやリンクに関係なく常にハイライトされます
-                        </p>
-
-                        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-bottom: 8px;">
-                        <label class="input-label" style="font-size: 0.9em;">
-                            <input type="checkbox" id="vendor-weapon-claw"> 鉤爪
-                        </label>
-                        <label class="input-label" style="font-size: 0.9em;">
-                            <input type="checkbox" id="vendor-weapon-dagger"> 短剣
-                        </label>
-                        <label class="input-label" style="font-size: 0.9em;">
-                            <input type="checkbox" id="vendor-weapon-wand"> ワンド
-                        </label>
-                        <label class="input-label" style="font-size: 0.9em;">
-                            <input type="checkbox" id="vendor-weapon-oneHandSword"> 片手剣
-                        </label>
-                        <label class="input-label" style="font-size: 0.9em;">
-                            <input type="checkbox" id="vendor-weapon-thrustingSword"> 刺突剣
-                        </label>
-                        <label class="input-label" style="font-size: 0.9em;">
-                            <input type="checkbox" id="vendor-weapon-oneHandAxe"> 片手斧
-                        </label>
-                        <label class="input-label" style="font-size: 0.9em;">
-                            <input type="checkbox" id="vendor-weapon-oneHandMace"> 片手メイス
-                        </label>
-                        <label class="input-label" style="font-size: 0.9em;">
-                            <input type="checkbox" id="vendor-weapon-runeDagger"> ルーンの短剣
-                        </label>
-                        <label class="input-label" style="font-size: 0.9em;">
-                            <input type="checkbox" id="vendor-weapon-sceptre"> セプター
-                        </label>
-                        <label class="input-label" style="font-size: 0.9em;">
-                            <input type="checkbox" id="vendor-weapon-bow"> 弓
-                        </label>
-                        <label class="input-label" style="font-size: 0.9em;">
-                            <input type="checkbox" id="vendor-weapon-staff"> スタッフ
-                        </label>
-                        <label class="input-label" style="font-size: 0.9em;">
-                            <input type="checkbox" id="vendor-weapon-twoHandSword"> 両手剣
-                        </label>
-                        <label class="input-label" style="font-size: 0.9em;">
-                            <input type="checkbox" id="vendor-weapon-twoHandAxe"> 両手斧
-                        </label>
-                        <label class="input-label" style="font-size: 0.9em;">
-                            <input type="checkbox" id="vendor-weapon-twoHandMace"> 両手メイス
-                        </label>
-                        <label class="input-label" style="font-size: 0.9em;">
-                            <input type="checkbox" id="vendor-weapon-warstaff"> ウォースタッフ
-                        </label>
-                        <label class="input-label" style="font-size: 0.9em;">
-                            <input type="checkbox" id="vendor-weapon-shield"> 盾
-                        </label>
-                        </div>
-                        
-                        <!-- NG武器ベースセクション -->
-                            <h3 style="color: #FCA5A5; margin: 24px 0 16px 0; border-bottom: 2px solid #FCA5A5; padding-bottom: 8px;">
-                                NG武器ベース（除外）
-                            </h3>
-                            <p style="color: #FCA5A5; font-size: 0.85em; margin-bottom: 12px;">
-                                選択した武器タイプを除外します（これらの武器はハイライトされません）
-                            </p>
-
-                            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-bottom: 8px;">
-                                <label class="input-label" style="font-size: 0.9em;">
-                                    <input type="checkbox" id="vendor-exclude-claw"> 鉤爪
-                                </label>
-                                <label class="input-label" style="font-size: 0.9em;">
-                                    <input type="checkbox" id="vendor-exclude-dagger"> 短剣
-                                </label>
-                                <label class="input-label" style="font-size: 0.9em;">
-                                    <input type="checkbox" id="vendor-exclude-wand"> ワンド
-                                </label>
-                                <label class="input-label" style="font-size: 0.9em;">
-                                    <input type="checkbox" id="vendor-exclude-oneHandSword"> 片手剣
-                                </label>
-                                <label class="input-label" style="font-size: 0.9em;">
-                                    <input type="checkbox" id="vendor-exclude-thrustingSword"> 刺突剣
-                                </label>
-                                <label class="input-label" style="font-size: 0.9em;">
-                                    <input type="checkbox" id="vendor-exclude-oneHandAxe"> 片手斧
-                                </label>
-                                <label class="input-label" style="font-size: 0.9em;">
-                                    <input type="checkbox" id="vendor-exclude-oneHandMace"> 片手メイス
-                                </label>
-                                <label class="input-label" style="font-size: 0.9em;">
-                                    <input type="checkbox" id="vendor-exclude-runeDagger"> ルーンの短剣
-                                </label>
-                                <label class="input-label" style="font-size: 0.9em;">
-                                    <input type="checkbox" id="vendor-exclude-sceptre"> セプター
-                                </label>
-                                <label class="input-label" style="font-size: 0.9em;">
-                                    <input type="checkbox" id="vendor-exclude-bow"> 弓
-                                </label>
-                                <label class="input-label" style="font-size: 0.9em;">
-                                    <input type="checkbox" id="vendor-exclude-staff"> スタッフ
-                                </label>
-                                <label class="input-label" style="font-size: 0.9em;">
-                                    <input type="checkbox" id="vendor-exclude-twoHandSword"> 両手剣
-                                </label>
-                                <label class="input-label" style="font-size: 0.9em;">
-                                    <input type="checkbox" id="vendor-exclude-twoHandAxe"> 両手斧
-                                </label>
-                                <label class="input-label" style="font-size: 0.9em;">
-                                    <input type="checkbox" id="vendor-exclude-twoHandMace"> 両手メイス
-                                </label>
-                                <label class="input-label" style="font-size: 0.9em;">
-                                    <input type="checkbox" id="vendor-exclude-warstaff"> ウォースタッフ
-                                </label>
-                                <label class="input-label" style="font-size: 0.9em;">
-                                    <input type="checkbox" id="vendor-exclude-shield"> 盾
-                                </label>
-                            </div>
-                    </div>
-                </div>
+                        </div></div></details></div></div>
 
         <!-- ジェム選択セクション - 全幅で下部に移動 -->
                 <div style="margin-top: 40px; border-top: 2px solid var(--accent-primary); padding-top: 20px;">

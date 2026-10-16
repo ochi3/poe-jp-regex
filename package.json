@@ -9,7 +9,9 @@
     "dev": "node tooling/dev.mjs",
     "data:legacy": "node tooling/data/legacy.mjs",
     "check": "npm run typecheck && npm run build && npm test",
-    "test:browser": "playwright test"
+    "test:browser": "playwright test",
+    "data:map": "node tooling/data/map-update.mjs",
+    "regex:check": "node tooling/data/check-regex.mjs"
   },
   "devDependencies": {
     "@playwright/test": "^1.64.0",

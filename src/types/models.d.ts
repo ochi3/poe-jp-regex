@@ -14,6 +14,12 @@ interface ModDefinition {
   tier?: number;
   modTier17?: boolean;
   tradeStatIds?: string[];
+  sourceIds?: string[];
+  tagIds?: string[];
+  modTags?: {id: string; ja: string; en: string}[];
+  reminderIds?: string[];
+  reminderText?: {ja: string[]; en: string[]};
+  detailsSource?: string;
   /** Generated data includes game-specific numeric stats. */
   [stat: string]: any;
 }
@@ -78,6 +84,8 @@ interface TradeQuery {
 }
 type TradeFilters = Record<string, { filters: Record<string, TradeValue> }>;
 interface VendorSettings {
+  accessory?: Record<string, boolean>;
+  extra?: Record<string, boolean>;
   colors?: Record<string, boolean>;
   movement?: Record<string, boolean>;
   weapon: Record<string, boolean>;

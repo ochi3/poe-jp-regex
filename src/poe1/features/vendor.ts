@@ -2,6 +2,63 @@ let vendorInitialized = false;
 let vendorInitPromise = null;
 let vendorInitResolve = null;
 
+
+const VENDOR_ACCESSORY_OPTIONS = {
+  amber: { category: 'アミュレット', label: '琥珀(STR)', pattern: '珀のア' },
+  jade: { category: 'アミュレット', label: '翡翠(DEX)', pattern: '翠のア' },
+  lapis: { category: 'アミュレット', label: '瑠璃(INT)', pattern: '璃のア' },
+  onyx: { category: 'アミュレット', label: 'オニキス', pattern: 'キスのア' },
+  turquoise: { category: 'アミュレット', label: 'ターコイズ', pattern: 'イズのア' },
+  agate: { category: 'アミュレット', label: '瑪瑙', pattern: '瑙のア' },
+  rusticSash: { category: 'ベルト', label: '素朴な飾り帯', pattern: '朴な飾' },
+  heavyBelt: { category: 'ベルト', label: 'ヘビーベルト', pattern: 'ビーベ' },
+  leatherBelt: { category: 'ベルト', label: '革のベルト', pattern: '革のベ' },
+  ironRing: { category: '指輪', label: '鉄', pattern: '鉄の指' },
+  coralRing: { category: '指輪', label: '珊瑚', pattern: '瑚の指' },
+  topazRing: { category: '指輪', label: 'トパーズ', pattern: 'ズの指' },
+  sapphireRing: { category: '指輪', label: 'サファイア', pattern: 'アの指' },
+  rubyRing: { category: '指輪', label: 'ルビー', pattern: 'ーの指' },
+};
+const VENDOR_EXTRA_OPTIONS = {
+  allGem: { label: '全スキルジェム +1', pattern: '全スキ.*ム +' },
+  minionGem: { label: 'ミニオンスキルジェム +1', pattern: 'てのミニ' },
+  spellGem: { label: '全スペルスキルジェム +1', pattern: 'てのスペ' },
+  fireGem: { label: '火スペルスキルジェム +1', pattern: 'ての火ス' },
+  coldGem: { label: '冷気スペルスキルジェム +1', pattern: 'ての冷気ス' },
+  lightningGem: { label: '雷スペルスキルジェム +1', pattern: 'ての雷ス' },
+  physicalGem: { label: '物理スペルスキルジェム +1', pattern: 'ての物理ス' },
+  chaosGem: { label: '混沌スペルスキルジェム +1', pattern: 'ての混沌ス' },
+  dotMulti: { label: '継続ダメージ倍率', pattern: '^継.*率 \\+' },
+  fireDotMulti: { label: '火継続ダメージ倍率', pattern: '^火継.*率 \\+' },
+  coldDotMulti: { label: '冷気継続ダメージ倍率', pattern: '^冷気継.*率 \\+' },
+  physicalDotMulti: { label: '物理継続ダメージ倍率', pattern: '^物理継.*率 \\+' },
+  chaosDotMulti: { label: '混沌継続ダメージ倍率', pattern: '^混沌継.*率 \\+' },
+};
+
+function setupVendorExtraOptions() {
+  for (const [group, options] of [['accessory', VENDOR_ACCESSORY_OPTIONS], ['extra', VENDOR_EXTRA_OPTIONS]] as const) {
+    const container = getElement(`vendor-${group}-options`);
+    if (!container) continue;
+    container.replaceChildren();
+    let category = '';
+    for (const [key, option] of Object.entries(options)) {
+      if ('category' in option && typeof option.category === 'string' && category !== option.category) {
+        category = option.category;
+        const heading = document.createElement('h4');
+        heading.textContent = category;
+        container.appendChild(heading);
+      }
+      const label = document.createElement('label');
+      label.className = 'input-label vendor-option';
+      const checkbox = document.createElement('input');
+      checkbox.type = 'checkbox';
+      checkbox.id = `vendor-${group}-${key}`;
+      label.append(checkbox, document.createTextNode(' ' + option.label));
+      container.appendChild(label);
+    }
+  }
+}
+
 let vendorSettings: VendorSettings = {
   colors: {
     rrr: false, ggg: false, bbb: false,
@@ -126,6 +183,11 @@ function buildWeaponRegexPatterns(weaponSelections) {
 function generateVendorRegex() {
   const parts = [];
   const settings = vendorSettings;
+  for (const [group, options] of [['accessory', VENDOR_ACCESSORY_OPTIONS], ['extra', VENDOR_EXTRA_OPTIONS]] as const) {
+    for (const [key, option] of Object.entries(options)) {
+      if (settings[group]?.[key]) parts.push(option.pattern);
+    }
+  }
 
   const color3L = [];
   if (settings.colors.rrA) color3L.push('r-r-|-r-r|r-.-r');
@@ -321,6 +383,8 @@ function loadVendorSettings() {
         },
         weapon: { ...vendorSettings.weapon, ...parsed.weapon },
         excludeWeapons: { ...vendorSettings.excludeWeapons, ...parsed.excludeWeapons },
+        accessory: { ...parsed.accessory },
+        extra: { ...parsed.extra },
         selectedGems: parsed.selectedGems || []
       };
       applyVendorSettings();
@@ -331,6 +395,12 @@ function loadVendorSettings() {
 }
 
 function applyVendorSettings() {
+  for (const [group, options] of [['accessory', VENDOR_ACCESSORY_OPTIONS], ['extra', VENDOR_EXTRA_OPTIONS]] as const) {
+    for (const key of Object.keys(options)) {
+      const checkbox = getElement<HTMLInputElement>(`vendor-${group}-${key}`);
+      if (checkbox) checkbox.checked = vendorSettings[group]?.[key] || false;
+    }
+  }
   Object.entries(vendorSettings.colors).forEach(([key, value]) => {
     const checkbox = getElement<HTMLInputElement>(`vendor-color-${key}`);
     if (checkbox) checkbox.checked = value;
@@ -371,7 +441,11 @@ function applyVendorSettings() {
 function handleVendorCheckboxChange(checkbox) {
   const id = checkbox.id.replace('vendor-', '');
   
-  if (id.startsWith('color-')) {
+  if (id.startsWith('accessory-') || id.startsWith('extra-')) {
+    const [group, key] = id.split('-');
+    vendorSettings[group] ??= {};
+    vendorSettings[group][key] = checkbox.checked;
+  } else if (id.startsWith('color-')) {
     const colorKey = id.replace('color-', '');
     vendorSettings.colors[colorKey] = checkbox.checked;
   } else if (id.startsWith('weapon-')) {
@@ -1468,6 +1542,7 @@ function initializeVendor() {
   window.loadVendorProfileDirectly = loadVendorProfileDirectly;
   window.generateVendorRegexFromProfile = generateVendorRegexFromProfile;
 
+  setupVendorExtraOptions();
   loadVendorSettings();
   setupVendorEventListeners();
   setupPobImportUI();

@@ -11,13 +11,24 @@
     "tradeStatIds": [
       "explicit.stat_1000591322"
     ],
+    "sourceIds": [
+      "MapTotemsMapWorlds"
+    ],
     "map_item_drop_quantity_+%": 10,
     "map_item_drop_rarity_+%": 6,
     "map_pack_size_+%": 4,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": false
+    "modTier17": false,
+    "tagIds": [],
+    "modTags": [],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "レアモンスターの数が(##)%増加する": {
     "mod": "レアモンスターの数が(##)%増加する",
@@ -31,13 +42,24 @@
     "tradeStatIds": [
       "explicit.stat_3793155082"
     ],
+    "sourceIds": [
+      "MapNemesisModOnRaresMapWorlds"
+    ],
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": false
+    "modTier17": false,
+    "tagIds": [],
+    "modTags": [],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "マジックモンスターの数が(##)%増加する": {
     "mod": "マジックモンスターの数が(##)%増加する",
@@ -51,13 +73,24 @@
     "tradeStatIds": [
       "explicit.stat_3873704640"
     ],
+    "sourceIds": [
+      "MapBloodlinesModOnMagicsMapWorlds"
+    ],
     "map_item_drop_quantity_+%": 10,
     "map_item_drop_rarity_+%": 6,
     "map_pack_size_+%": 4,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": false
+    "modTier17": false,
+    "tagIds": [],
+    "modTags": [],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "エリアにはスケルトンが生息している": {
     "mod": "エリアにはスケルトンが生息している",
@@ -71,13 +104,24 @@
     "tradeStatIds": [
       "explicit.stat_45546355"
     ],
+    "sourceIds": [
+      "MapMonsterPacksSkeletonsMapWorlds_"
+    ],
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": false
+    "modTier17": false,
+    "tagIds": [],
+    "modTags": [],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "エリアにはゴートマンが生息している": {
     "mod": "エリアにはゴートマンが生息している",
@@ -91,13 +135,24 @@
     "tradeStatIds": [
       "explicit.stat_1813544255"
     ],
+    "sourceIds": [
+      "MapMonsterPacksGoatmenMapWorlds"
+    ],
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": false
+    "modTier17": false,
+    "tagIds": [],
+    "modTags": [],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "エリアにはシーウィッチとその幼体が生息している": {
     "mod": "エリアにはシーウィッチとその幼体が生息している",
@@ -111,13 +166,24 @@
     "tradeStatIds": [
       "explicit.stat_25085466"
     ],
+    "sourceIds": [
+      "MapMonsterPacksSpawnsSeaWitchesMapWorlds"
+    ],
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": false
+    "modTier17": false,
+    "tagIds": [],
+    "modTags": [],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "エリアにはアンデッドが生息している": {
     "mod": "エリアにはアンデッドが生息している",
@@ -131,13 +197,24 @@
     "tradeStatIds": [
       "explicit.stat_808491979"
     ],
+    "sourceIds": [
+      "MapMonsterPacksUndeadMapWorlds_"
+    ],
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": false
+    "modTier17": false,
+    "tagIds": [],
+    "modTags": [],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "エリアには遠距離攻撃を行うモンスターが生息している": {
     "mod": "エリアには遠距離攻撃を行うモンスターが生息している",
@@ -151,13 +228,24 @@
     "tradeStatIds": [
       "explicit.stat_645841425"
     ],
+    "sourceIds": [
+      "MapMonsterPacksRangedMapWorlds"
+    ],
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": false
+    "modTier17": false,
+    "tagIds": [],
+    "modTags": [],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "エリアには動物が生息している": {
     "mod": "エリアには動物が生息している",
@@ -171,13 +259,24 @@
     "tradeStatIds": [
       "explicit.stat_4198346809"
     ],
+    "sourceIds": [
+      "MapMonsterPacksAnimalsMapWorlds"
+    ],
     "map_item_drop_quantity_+%": 16,
     "map_item_drop_rarity_+%": 9,
     "map_pack_size_+%": 6,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": false
+    "modTier17": false,
+    "tagIds": [],
+    "modTags": [],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "エリアにはデーモンが生息している": {
     "mod": "エリアにはデーモンが生息している",
@@ -191,13 +290,24 @@
     "tradeStatIds": [
       "explicit.stat_3916182167"
     ],
+    "sourceIds": [
+      "MapMonsterPacksDemonsMapWorlds"
+    ],
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": false
+    "modTier17": false,
+    "tagIds": [],
+    "modTags": [],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "エリアにはヒューマノイドが生息している": {
     "mod": "エリアにはヒューマノイドが生息している",
@@ -211,13 +321,24 @@
     "tradeStatIds": [
       "explicit.stat_2651141461"
     ],
+    "sourceIds": [
+      "MapMonsterPacksHumanoidsMapWorlds"
+    ],
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": false
+    "modTier17": false,
+    "tagIds": [],
+    "modTags": [],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "エリアにはソラリスの狂信者が出現する": {
     "mod": "エリアにはソラリスの狂信者が出現する",
@@ -231,13 +352,24 @@
     "tradeStatIds": [
       "explicit.stat_2457517302"
     ],
+    "sourceIds": [
+      "MapMonsterPacksSolarisMapWorlds_"
+    ],
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": false
+    "modTier17": false,
+    "tagIds": [],
+    "modTags": [],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "エリアにはルナリスの狂信者が出現する": {
     "mod": "エリアにはルナリスの狂信者が出現する",
@@ -251,13 +383,24 @@
     "tradeStatIds": [
       "explicit.stat_3134632618"
     ],
+    "sourceIds": [
+      "MapMonsterPacksLunarisMapWorlds_"
+    ],
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": false
+    "modTier17": false,
+    "tagIds": [],
+    "modTags": [],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "エリアにはゴーストが出現する": {
     "mod": "エリアにはゴーストが出現する",
@@ -271,13 +414,24 @@
     "tradeStatIds": [
       "explicit.stat_3516340048"
     ],
+    "sourceIds": [
+      "MapMonsterPacksGhostsMapWorlds"
+    ],
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": false
+    "modTier17": false,
+    "tagIds": [],
+    "modTags": [],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "エリアにはキタヴァの崇拝者が出現する": {
     "mod": "エリアにはキタヴァの崇拝者が出現する",
@@ -291,13 +445,24 @@
     "tradeStatIds": [
       "explicit.stat_4252630904"
     ],
+    "sourceIds": [
+      "MapMonsterPacksKitavaMapWorlds_"
+    ],
     "map_item_drop_quantity_+%": 16,
     "map_item_drop_rarity_+%": 9,
     "map_pack_size_+%": 6,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": false
+    "modTier17": false,
+    "tagIds": [],
+    "modTags": [],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "エリアのモンスターの種類が増える": {
     "mod": "エリアのモンスターの種類が増える",
@@ -311,13 +476,24 @@
     "tradeStatIds": [
       "explicit.stat_3561450806"
     ],
+    "sourceIds": [
+      "MapMoreMonsterPackVarietyMapWorlds_"
+    ],
     "map_item_drop_quantity_+%": 10,
     "map_item_drop_rarity_+%": 6,
     "map_pack_size_+%": 4,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": false
+    "modTier17": false,
+    "tagIds": [],
+    "modTags": [],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "モンスターのスキルは追加で#回連鎖する": {
     "mod": "モンスターのスキルは追加で#回連鎖する",
@@ -331,13 +507,24 @@
     "tradeStatIds": [
       "explicit.stat_3183973644"
     ],
+    "sourceIds": [
+      "MapMonsterChainMapWorlds"
+    ],
     "map_item_drop_quantity_+%": 16,
     "map_item_drop_rarity_+%": 9,
     "map_pack_size_+%": 6,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": false
+    "modTier17": false,
+    "tagIds": [],
+    "modTags": [],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "モンスターはヘックスプルーフを持つ": {
     "mod": "モンスターはヘックスプルーフを持つ",
@@ -351,13 +538,38 @@
     "tradeStatIds": [
       "explicit.stat_4154059009"
     ],
+    "sourceIds": [
+      "MapHexproofMapWorlds"
+    ],
     "map_item_drop_quantity_+%": 16,
     "map_item_drop_rarity_+%": 9,
     "map_pack_size_+%": 6,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": false
+    "modTier17": false,
+    "tagIds": [
+      "caster",
+      "curse"
+    ],
+    "modTags": [
+      {
+        "id": "caster",
+        "ja": "キャスター",
+        "en": "Caster"
+      },
+      {
+        "id": "curse",
+        "ja": "呪い",
+        "en": "Curse"
+      }
+    ],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "モンスターはヒット時に毒を付与する": {
     "mod": "モンスターはヒット時に毒を付与する",
@@ -371,13 +583,45 @@
     "tradeStatIds": [
       "explicit.stat_3350803563"
     ],
+    "sourceIds": [
+      "MapPoisoningMapWorlds"
+    ],
     "map_item_drop_quantity_+%": 16,
     "map_item_drop_rarity_+%": 9,
     "map_pack_size_+%": 6,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": false
+    "modTier17": false,
+    "tagIds": [
+      "poison",
+      "chaos",
+      "ailment"
+    ],
+    "modTags": [
+      {
+        "id": "chaos",
+        "ja": "混沌",
+        "en": "Chaos"
+      },
+      {
+        "id": "ailment",
+        "ja": "状態異常",
+        "en": "Ailment"
+      }
+    ],
+    "reminderIds": [
+      "ReminderTextPoison"
+    ],
+    "reminderText": {
+      "ja": [
+        "(Poison: 毒は、スキルの基礎物理ダメージと基礎混沌ダメージに基づいて混沌継続ダメージを与える。複数インスタンスの毒がスタックできる)"
+      ],
+      "en": [
+        "(Poison deals Chaos Damage over time, based on the base Physical and Chaos Damage of the Skill. Multiple instances of Poison stack)"
+      ]
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "プレイヤーは曝露を付与することができない": {
     "mod": "プレイヤーは曝露を付与することができない",
@@ -391,13 +635,39 @@
     "tradeStatIds": [
       "explicit.stat_1026390635"
     ],
+    "sourceIds": [
+      "MapPlayerElementalEquilibriumMapWorlds"
+    ],
     "map_item_drop_quantity_+%": 10,
     "map_item_drop_rarity_+%": 6,
     "map_pack_size_+%": 4,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": false
+    "modTier17": false,
+    "tagIds": [
+      "elemental_damage",
+      "damage",
+      "elemental"
+    ],
+    "modTags": [
+      {
+        "id": "damage",
+        "ja": "ダメージ",
+        "en": "Damage"
+      },
+      {
+        "id": "elemental",
+        "ja": "元素",
+        "en": "Elemental"
+      }
+    ],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "エリアには#体のユニークボスがいる": {
     "mod": "エリアには#体のユニークボスがいる",
@@ -411,13 +681,24 @@
     "tradeStatIds": [
       "explicit.stat_799271621"
     ],
+    "sourceIds": [
+      "MapTwoBossesMapWorlds"
+    ],
     "map_item_drop_quantity_+%": 19,
     "map_item_drop_rarity_+%": 11,
     "map_pack_size_+%": 7,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": false
+    "modTier17": false,
+    "tagIds": [],
+    "modTags": [],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "モンスターはスタンを受けることがない|モンスターのライフが(##)%上昇する": {
     "mod": "モンスターはスタンを受けることがない|モンスターのライフが(##)%上昇する",
@@ -432,13 +713,33 @@
       "explicit.stat_1041951480",
       "explicit.stat_95249895"
     ],
+    "sourceIds": [
+      "MapMonsterCannotBeStunned3MapWorlds_"
+    ],
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": false
+    "modTier17": false,
+    "tagIds": [
+      "resource",
+      "life"
+    ],
+    "modTags": [
+      {
+        "id": "life",
+        "ja": "ライフ",
+        "en": "Life"
+      }
+    ],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "モンスターは投射物を追加で#個放つ": {
     "mod": "モンスターは投射物を追加で#個放つ",
@@ -452,13 +753,24 @@
     "tradeStatIds": [
       "explicit.stat_1309819744"
     ],
+    "sourceIds": [
+      "MapMonsterMultipleProjectilesWorlds"
+    ],
     "map_item_drop_quantity_+%": 19,
     "map_item_drop_rarity_+%": 11,
     "map_pack_size_+%": 7,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": false
+    "modTier17": false,
+    "tagIds": [],
+    "modTags": [],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "モンスターの効果範囲が#%増加する": {
     "mod": "モンスターの効果範囲が#%増加する",
@@ -472,13 +784,24 @@
     "tradeStatIds": [
       "explicit.stat_1708461270"
     ],
+    "sourceIds": [
+      "MapMonsterAreaOfEffect3MapWorlds"
+    ],
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": false
+    "modTier17": false,
+    "tagIds": [],
+    "modTags": [],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "モンスターのクリティカル率が(##)%増加する|モンスターのクリティカルダメージ倍率 +(##)%": {
     "mod": "モンスターのクリティカル率が(##)%増加する|モンスターのクリティカルダメージ倍率 +(##)%",
@@ -493,13 +816,38 @@
       "explicit.stat_2753083623",
       "explicit.stat_57326096"
     ],
+    "sourceIds": [
+      "MapMonsterCriticalStrikesAndDamage3MapWorlds"
+    ],
     "map_item_drop_quantity_+%": 16,
     "map_item_drop_rarity_+%": 9,
     "map_pack_size_+%": 6,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": false
+    "modTier17": false,
+    "tagIds": [
+      "damage",
+      "critical"
+    ],
+    "modTags": [
+      {
+        "id": "damage",
+        "ja": "ダメージ",
+        "en": "Damage"
+      },
+      {
+        "id": "critical",
+        "ja": "クリティカル",
+        "en": "Critical"
+      }
+    ],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "モンスターの物理ダメージ軽減率 +#%": {
     "mod": "モンスターの物理ダメージ軽減率 +#%",
@@ -513,13 +861,32 @@
     "tradeStatIds": [
       "explicit.stat_839186746"
     ],
+    "sourceIds": [
+      "MapMonsterPhysicalResistance3MapWorlds_"
+    ],
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": false
+    "modTier17": false,
+    "tagIds": [
+      "physical"
+    ],
+    "modTags": [
+      {
+        "id": "physical",
+        "ja": "物理",
+        "en": "Physical"
+      }
+    ],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "モンスターのライフが(##)%上昇する": {
     "mod": "モンスターのライフが(##)%上昇する",
@@ -533,13 +900,33 @@
     "tradeStatIds": [
       "explicit.stat_95249895"
     ],
+    "sourceIds": [
+      "MapMonsterLife3MapWorlds"
+    ],
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": false
+    "modTier17": false,
+    "tagIds": [
+      "resource",
+      "life"
+    ],
+    "modTags": [
+      {
+        "id": "life",
+        "ja": "ライフ",
+        "en": "Life"
+      }
+    ],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "モンスターのダメージが(##)%増加する": {
     "mod": "モンスターのダメージが(##)%増加する",
@@ -553,13 +940,32 @@
     "tradeStatIds": [
       "explicit.stat_1890519597"
     ],
+    "sourceIds": [
+      "MapMonsterDamage3MapWorlds"
+    ],
     "map_item_drop_quantity_+%": 19,
     "map_item_drop_rarity_+%": 11,
     "map_pack_size_+%": 7,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": false
+    "modTier17": false,
+    "tagIds": [
+      "damage"
+    ],
+    "modTags": [
+      {
+        "id": "damage",
+        "ja": "ダメージ",
+        "en": "Damage"
+      }
+    ],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "モンスターは物理ダメージの(##)%を追加火ダメージとして与える": {
     "mod": "モンスターは物理ダメージの(##)%を追加火ダメージとして与える",
@@ -573,13 +979,52 @@
     "tradeStatIds": [
       "explicit.stat_1497673356"
     ],
+    "sourceIds": [
+      "MapMonsterFireDamage3MapWorlds"
+    ],
     "map_item_drop_quantity_+%": 16,
     "map_item_drop_rarity_+%": 9,
     "map_pack_size_+%": 6,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": false
+    "modTier17": false,
+    "tagIds": [
+      "physical_damage",
+      "elemental_damage",
+      "damage",
+      "physical",
+      "elemental",
+      "fire"
+    ],
+    "modTags": [
+      {
+        "id": "damage",
+        "ja": "ダメージ",
+        "en": "Damage"
+      },
+      {
+        "id": "physical",
+        "ja": "物理",
+        "en": "Physical"
+      },
+      {
+        "id": "elemental",
+        "ja": "元素",
+        "en": "Elemental"
+      },
+      {
+        "id": "fire",
+        "ja": "火",
+        "en": "Fire"
+      }
+    ],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "モンスターは物理ダメージの(##)%を追加冷気ダメージとして与える": {
     "mod": "モンスターは物理ダメージの(##)%を追加冷気ダメージとして与える",
@@ -593,13 +1038,52 @@
     "tradeStatIds": [
       "explicit.stat_3448216135"
     ],
+    "sourceIds": [
+      "MapMonsterColdDamage3MapWorlds_"
+    ],
     "map_item_drop_quantity_+%": 16,
     "map_item_drop_rarity_+%": 9,
     "map_pack_size_+%": 6,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": false
+    "modTier17": false,
+    "tagIds": [
+      "physical_damage",
+      "elemental_damage",
+      "damage",
+      "physical",
+      "elemental",
+      "cold"
+    ],
+    "modTags": [
+      {
+        "id": "damage",
+        "ja": "ダメージ",
+        "en": "Damage"
+      },
+      {
+        "id": "physical",
+        "ja": "物理",
+        "en": "Physical"
+      },
+      {
+        "id": "elemental",
+        "ja": "元素",
+        "en": "Elemental"
+      },
+      {
+        "id": "cold",
+        "ja": "冷気",
+        "en": "Cold"
+      }
+    ],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "モンスターは物理ダメージの(##)%を追加雷ダメージとして与える": {
     "mod": "モンスターは物理ダメージの(##)%を追加雷ダメージとして与える",
@@ -613,13 +1097,52 @@
     "tradeStatIds": [
       "explicit.stat_3416853625"
     ],
+    "sourceIds": [
+      "MapMonsterLightningDamage3MapWorlds"
+    ],
     "map_item_drop_quantity_+%": 16,
     "map_item_drop_rarity_+%": 9,
     "map_pack_size_+%": 6,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": false
+    "modTier17": false,
+    "tagIds": [
+      "physical_damage",
+      "elemental_damage",
+      "damage",
+      "physical",
+      "elemental",
+      "lightning"
+    ],
+    "modTags": [
+      {
+        "id": "damage",
+        "ja": "ダメージ",
+        "en": "Damage"
+      },
+      {
+        "id": "physical",
+        "ja": "物理",
+        "en": "Physical"
+      },
+      {
+        "id": "elemental",
+        "ja": "元素",
+        "en": "Elemental"
+      },
+      {
+        "id": "lightning",
+        "ja": "雷",
+        "en": "Lightning"
+      }
+    ],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "モンスターはその物理ダメージの(##)%を追加混沌ダメージとして獲得する|モンスターによるヒット時に衰弱を#秒間付与する": {
     "mod": "モンスターはその物理ダメージの(##)%を追加混沌ダメージとして獲得する|モンスターによるヒット時に衰弱を#秒間付与する",
@@ -634,13 +1157,52 @@
       "explicit.stat_1840747977",
       "explicit.stat_3044826007"
     ],
+    "sourceIds": [
+      "MapMonsterChaosDamage3MapWorlds"
+    ],
     "map_item_drop_quantity_+%": 16,
     "map_item_drop_rarity_+%": 9,
     "map_pack_size_+%": 6,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": false
+    "modTier17": false,
+    "tagIds": [
+      "physical_damage",
+      "chaos_damage",
+      "damage",
+      "physical",
+      "chaos"
+    ],
+    "modTags": [
+      {
+        "id": "damage",
+        "ja": "ダメージ",
+        "en": "Damage"
+      },
+      {
+        "id": "physical",
+        "ja": "物理",
+        "en": "Physical"
+      },
+      {
+        "id": "chaos",
+        "ja": "混沌",
+        "en": "Chaos"
+      }
+    ],
+    "reminderIds": [
+      "ReminderTextWithered"
+    ],
+    "reminderText": {
+      "ja": [
+        "(Withered: 衰弱は、受ける混沌ダメージ6%増加させる。最大15スタックまで与えられる)"
+      ],
+      "en": [
+        "(Withered applies 6% increased Chaos Damage Taken, and can be inflicted up to 15 times)"
+      ]
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "モンスターの移動スピードが(##)%増加する|モンスターのアタックスピードが(##)%増加する|モンスターのキャストスピードが(##)%増加する": {
     "mod": "モンスターの移動スピードが(##)%増加する|モンスターのアタックスピードが(##)%増加する|モンスターのキャストスピードが(##)%増加する",
@@ -656,13 +1218,44 @@
       "explicit.stat_1913583994",
       "explicit.stat_2488361432"
     ],
+    "sourceIds": [
+      "MapMonsterFast3MapWorlds"
+    ],
     "map_item_drop_quantity_+%": 19,
     "map_item_drop_rarity_+%": 11,
     "map_pack_size_+%": 7,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": false
+    "modTier17": false,
+    "tagIds": [
+      "attack",
+      "caster",
+      "speed"
+    ],
+    "modTags": [
+      {
+        "id": "attack",
+        "ja": "アタック",
+        "en": "Attack"
+      },
+      {
+        "id": "caster",
+        "ja": "キャスター",
+        "en": "Caster"
+      },
+      {
+        "id": "speed",
+        "ja": "スピード",
+        "en": "Speed"
+      }
+    ],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "レアモンスターは物理の棘を持ち#の物理ダメージを反射する": {
     "mod": "レアモンスターは物理の棘を持ち#の物理ダメージを反射する",
@@ -677,13 +1270,39 @@
       "explicit.stat_3278889477",
       ""
     ],
+    "sourceIds": [
+      "MapMonsterPhysicalReflection3MapWorlds"
+    ],
     "map_item_drop_quantity_+%": 10,
     "map_item_drop_rarity_+%": 6,
     "map_pack_size_+%": 4,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": false
+    "modTier17": false,
+    "tagIds": [
+      "physical_damage",
+      "damage",
+      "physical"
+    ],
+    "modTags": [
+      {
+        "id": "damage",
+        "ja": "ダメージ",
+        "en": "Damage"
+      },
+      {
+        "id": "physical",
+        "ja": "物理",
+        "en": "Physical"
+      }
+    ],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "レアモンスターは元素の棘を持ち#の元素ダメージを反射する": {
     "mod": "レアモンスターは元素の棘を持ち#の元素ダメージを反射する",
@@ -698,13 +1317,39 @@
       "explicit.stat_3938822425",
       ""
     ],
+    "sourceIds": [
+      "MapMonsterElementalReflection3MapWorlds"
+    ],
     "map_item_drop_quantity_+%": 10,
     "map_item_drop_rarity_+%": 6,
     "map_pack_size_+%": 4,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": false
+    "modTier17": false,
+    "tagIds": [
+      "elemental_damage",
+      "damage",
+      "elemental"
+    ],
+    "modTags": [
+      {
+        "id": "damage",
+        "ja": "ダメージ",
+        "en": "Damage"
+      },
+      {
+        "id": "elemental",
+        "ja": "元素",
+        "en": "Elemental"
+      }
+    ],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "全てのプレイヤーのライフとエナジーシールドの回復レートが#%低下する": {
     "mod": "全てのプレイヤーのライフとエナジーシールドの回復レートが#%低下する",
@@ -718,13 +1363,45 @@
     "tradeStatIds": [
       "explicit.stat_4181072906"
     ],
+    "sourceIds": [
+      "MapPlayerReducedRegen3MapWorlds"
+    ],
     "map_item_drop_quantity_+%": 16,
     "map_item_drop_rarity_+%": 9,
     "map_pack_size_+%": 6,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": false
+    "modTier17": false,
+    "tagIds": [
+      "resource",
+      "life",
+      "defences",
+      "energy_shield"
+    ],
+    "modTags": [
+      {
+        "id": "life",
+        "ja": "ライフ",
+        "en": "Life"
+      },
+      {
+        "id": "defences",
+        "ja": "防御",
+        "en": "Defences"
+      },
+      {
+        "id": "energy_shield",
+        "ja": "エナジーシールド",
+        "en": "Energy Shield"
+      }
+    ],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "エリアには燃焼領域がまだらに存在する": {
     "mod": "エリアには燃焼領域がまだらに存在する",
@@ -738,13 +1415,45 @@
     "tradeStatIds": [
       "explicit.stat_133340941"
     ],
+    "sourceIds": [
+      "MapBurningGround3MapWorlds"
+    ],
     "map_item_drop_quantity_+%": 10,
     "map_item_drop_rarity_+%": 6,
     "map_pack_size_+%": 4,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": false
+    "modTier17": false,
+    "tagIds": [
+      "elemental_damage",
+      "damage",
+      "elemental",
+      "fire"
+    ],
+    "modTags": [
+      {
+        "id": "damage",
+        "ja": "ダメージ",
+        "en": "Damage"
+      },
+      {
+        "id": "elemental",
+        "ja": "元素",
+        "en": "Elemental"
+      },
+      {
+        "id": "fire",
+        "ja": "火",
+        "en": "Fire"
+      }
+    ],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "エリアには冷却領域がまだらに存在する": {
     "mod": "エリアには冷却領域がまだらに存在する",
@@ -758,13 +1467,30 @@
     "tradeStatIds": [
       "explicit.stat_349586058"
     ],
+    "sourceIds": [
+      "MapChilledGroundSuffix3MapWorlds_"
+    ],
     "map_item_drop_quantity_+%": 10,
     "map_item_drop_rarity_+%": 6,
     "map_pack_size_+%": 4,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": false
+    "modTier17": false,
+    "tagIds": [],
+    "modTags": [],
+    "reminderIds": [
+      "ReminderTextChilledGround"
+    ],
+    "reminderText": {
+      "ja": [
+        "(Chilled Ground: 冷却領域上では、冷却状態になる)"
+      ],
+      "en": [
+        "(You are Chilled while standing in Chilled Ground)"
+      ]
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "エリアには感電領域がまだらに存在し受けるダメージを#%増加させる": {
     "mod": "エリアには感電領域がまだらに存在し受けるダメージを#%増加させる",
@@ -778,13 +1504,24 @@
     "tradeStatIds": [
       "explicit.stat_3246076198"
     ],
+    "sourceIds": [
+      "MapShockedGround3MapWorlds"
+    ],
     "map_item_drop_quantity_+%": 10,
     "map_item_drop_rarity_+%": 6,
     "map_pack_size_+%": 4,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": false
+    "modTier17": false,
+    "tagIds": [],
+    "modTags": [],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "エリアには冒涜領域がまだらに存在する": {
     "mod": "エリアには冒涜領域がまだらに存在する",
@@ -798,13 +1535,39 @@
     "tradeStatIds": [
       "explicit.stat_3577222856"
     ],
+    "sourceIds": [
+      "MapDesecratedGround3MapWorlds"
+    ],
     "map_item_drop_quantity_+%": 10,
     "map_item_drop_rarity_+%": 6,
     "map_pack_size_+%": 4,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": false
+    "modTier17": false,
+    "tagIds": [
+      "chaos_damage",
+      "damage",
+      "chaos"
+    ],
+    "modTags": [
+      {
+        "id": "damage",
+        "ja": "ダメージ",
+        "en": "Damage"
+      },
+      {
+        "id": "chaos",
+        "ja": "混沌",
+        "en": "Chaos"
+      }
+    ],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "プレイヤーはエレメンタルウィークネスの呪いを受ける": {
     "mod": "プレイヤーはエレメンタルウィークネスの呪いを受ける",
@@ -818,13 +1581,44 @@
     "tradeStatIds": [
       "explicit.stat_558910024"
     ],
+    "sourceIds": [
+      "MapPlayerCurseElementalWeakness2MapWorlds"
+    ],
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": false
+    "modTier17": false,
+    "tagIds": [
+      "caster",
+      "curse"
+    ],
+    "modTags": [
+      {
+        "id": "caster",
+        "ja": "キャスター",
+        "en": "Caster"
+      },
+      {
+        "id": "curse",
+        "ja": "呪い",
+        "en": "Curse"
+      }
+    ],
+    "reminderIds": [
+      "ReminderTextCurseElementalWeakness"
+    ],
+    "reminderText": {
+      "ja": [
+        "(エレメンタルウィークネスは呪術の一種で、全ての元素耐性を-15%する。持続時間は8秒)"
+      ],
+      "en": [
+        "(Elemental Weakness is a Hex which inficts -15% to all Elemental Resistances. It lasts 8 seconds)"
+      ]
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "プレイヤーはヴァルネラビリティの呪いを受ける": {
     "mod": "プレイヤーはヴァルネラビリティの呪いを受ける",
@@ -838,13 +1632,44 @@
     "tradeStatIds": [
       "explicit.stat_1366534040"
     ],
+    "sourceIds": [
+      "MapPlayerCurseVulnerability2MapWorlds"
+    ],
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": false
+    "modTier17": false,
+    "tagIds": [
+      "caster",
+      "curse"
+    ],
+    "modTags": [
+      {
+        "id": "caster",
+        "ja": "キャスター",
+        "en": "Caster"
+      },
+      {
+        "id": "curse",
+        "ja": "呪い",
+        "en": "Curse"
+      }
+    ],
+    "reminderIds": [
+      "ReminderTextCurseVulnerability"
+    ],
+    "reminderText": {
+      "ja": [
+        "(ヴァルネラビリティは呪術の一種で、対象が受ける物理ダメージが15%増加、対象がヒットを受けた際の出血確率を+20%する。持続時間は8秒)"
+      ],
+      "en": [
+        "(Vulnerability is a Hex which increases Physical Damage taken by 15% and causes Hits to have +25% chance to inflict Bleeding on the target. It lasts 8 seconds)"
+      ]
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "プレイヤーはエンフィーブルの呪いを受ける": {
     "mod": "プレイヤーはエンフィーブルの呪いを受ける",
@@ -858,13 +1683,44 @@
     "tradeStatIds": [
       "explicit.stat_4103440490"
     ],
+    "sourceIds": [
+      "MapPlayerCurseEnfeeblement2MapWorlds"
+    ],
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": false
+    "modTier17": false,
+    "tagIds": [
+      "caster",
+      "curse"
+    ],
+    "modTags": [
+      {
+        "id": "caster",
+        "ja": "キャスター",
+        "en": "Caster"
+      },
+      {
+        "id": "curse",
+        "ja": "呪い",
+        "en": "Curse"
+      }
+    ],
+    "reminderIds": [
+      "ReminderTextCurseEnfeeble"
+    ],
+    "reminderText": {
+      "ja": [
+        "(エンフィーブルの呪術の一種で、対象の命中力を10%、ダメージを15%(レアやユニーク相手の場合9%)減少させる。持続時間は8秒)"
+      ],
+      "en": [
+        "(Enfeeble is a Hex which reduces the targets' Accuracy Rating by 10% and Damage by 15%, or 9% on Rare or Unique targets. It lasts 8 seconds)"
+      ]
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "プレイヤーはテンポラルチェーンの呪いを受ける": {
     "mod": "プレイヤーはテンポラルチェーンの呪いを受ける",
@@ -878,13 +1734,44 @@
     "tradeStatIds": [
       "explicit.stat_2326202293"
     ],
+    "sourceIds": [
+      "MapPlayerCurseTemporalChains2MapWorlds"
+    ],
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": false
+    "modTier17": false,
+    "tagIds": [
+      "caster",
+      "curse"
+    ],
+    "modTags": [
+      {
+        "id": "caster",
+        "ja": "キャスター",
+        "en": "Caster"
+      },
+      {
+        "id": "curse",
+        "ja": "呪い",
+        "en": "Curse"
+      }
+    ],
+    "reminderIds": [
+      "ReminderTextCurseTemporalChains"
+    ],
+    "reminderText": {
+      "ja": [
+        "(テンポラルチェーンは呪術の一種で、対象のアクションスピードを15%減少させる。レアやユニークの敵は9%減少させる。また対象の他のエフェクトの消失を40%遅くする。プレイヤーに対しては効果が50%低下する。持続時間は5秒)"
+      ],
+      "en": [
+        "(Temporal Chains is a Hex which reduces Action Speed by 15%, or 9% on Rare or Unique targets, and makes other effects on the target expire 40% slower. It has 50% less effect on Players and lasts 5 seconds)"
+      ]
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "全てのプレイヤーはライフ、マナおよびエナジーシールドを自動回復することができない": {
     "mod": "全てのプレイヤーはライフ、マナおよびエナジーシールドを自動回復することができない",
@@ -898,13 +1785,51 @@
     "tradeStatIds": [
       "explicit.stat_1910157106"
     ],
+    "sourceIds": [
+      "MapPlayerNoLifeESRegenMapWorlds"
+    ],
     "map_item_drop_quantity_+%": 16,
     "map_item_drop_rarity_+%": 9,
     "map_pack_size_+%": 6,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": false
+    "modTier17": false,
+    "tagIds": [
+      "resource",
+      "life",
+      "mana",
+      "defences",
+      "energy_shield"
+    ],
+    "modTags": [
+      {
+        "id": "life",
+        "ja": "ライフ",
+        "en": "Life"
+      },
+      {
+        "id": "mana",
+        "ja": "マナ",
+        "en": "Mana"
+      },
+      {
+        "id": "defences",
+        "ja": "防御",
+        "en": "Defences"
+      },
+      {
+        "id": "energy_shield",
+        "ja": "エナジーシールド",
+        "en": "Energy Shield"
+      }
+    ],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "プレイヤーの全ての耐性の最大値 -(##)%": {
     "mod": "プレイヤーの全ての耐性の最大値 -(##)%",
@@ -918,13 +1843,38 @@
     "tradeStatIds": [
       "explicit.stat_3376488707"
     ],
+    "sourceIds": [
+      "MapPlayerMaxResists2MapWorlds"
+    ],
     "map_item_drop_quantity_+%": 19,
     "map_item_drop_rarity_+%": 11,
     "map_pack_size_+%": 7,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": false
+    "modTier17": false,
+    "tagIds": [
+      "elemental",
+      "resistance"
+    ],
+    "modTags": [
+      {
+        "id": "elemental",
+        "ja": "元素",
+        "en": "Elemental"
+      },
+      {
+        "id": "resistance",
+        "ja": "耐性",
+        "en": "Resistance"
+      }
+    ],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "ユニークボスのダメージが#%増加する|ユニークボスのアタックスピードおよびキャストスピードが#%増加する": {
     "mod": "ユニークボスのダメージが#%増加する|ユニークボスのアタックスピードおよびキャストスピードが#%増加する",
@@ -939,13 +1889,44 @@
       "explicit.stat_124877078",
       "explicit.stat_2109106920"
     ],
+    "sourceIds": [
+      "MapDangerousBoss3MapWorlds"
+    ],
     "map_item_drop_quantity_+%": 16,
     "map_item_drop_rarity_+%": 9,
     "map_pack_size_+%": 6,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": false
+    "modTier17": false,
+    "tagIds": [
+      "attack",
+      "caster",
+      "speed"
+    ],
+    "modTags": [
+      {
+        "id": "attack",
+        "ja": "アタック",
+        "en": "Attack"
+      },
+      {
+        "id": "caster",
+        "ja": "キャスター",
+        "en": "Caster"
+      },
+      {
+        "id": "speed",
+        "ja": "スピード",
+        "en": "Speed"
+      }
+    ],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "ユニークボスのライフが#%増加する|ユニークボスの効果範囲が#%増加する": {
     "mod": "ユニークボスのライフが#%増加する|ユニークボスの効果範囲が#%増加する",
@@ -960,13 +1941,33 @@
       "explicit.stat_1959158336",
       "explicit.stat_3040667106"
     ],
+    "sourceIds": [
+      "MapMassiveBoss3MapWorlds"
+    ],
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": false
+    "modTier17": false,
+    "tagIds": [
+      "resource",
+      "life"
+    ],
+    "modTags": [
+      {
+        "id": "life",
+        "ja": "ライフ",
+        "en": "Life"
+      }
+    ],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "モンスターからリーチできない": {
     "mod": "モンスターからリーチできない",
@@ -980,13 +1981,24 @@
     "tradeStatIds": [
       "explicit.stat_1140978125"
     ],
+    "sourceIds": [
+      "MapMonsterLifeLeechImmunityMapWorlds"
+    ],
     "map_item_drop_quantity_+%": 16,
     "map_item_drop_rarity_+%": 9,
     "map_pack_size_+%": 6,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": false
+    "modTier17": false,
+    "tagIds": [],
+    "modTags": [],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "モンスターは#%の確率で元素系状態異常を無効化する": {
     "mod": "モンスターは#%の確率で元素系状態異常を無効化する",
@@ -1000,13 +2012,62 @@
     "tradeStatIds": [
       "explicit.stat_322206271"
     ],
+    "sourceIds": [
+      "MapMonsterStatusAilmentImmunityMapWorlds"
+    ],
     "map_item_drop_quantity_+%": 10,
     "map_item_drop_rarity_+%": 6,
     "map_pack_size_+%": 4,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": false
+    "modTier17": false,
+    "tagIds": [
+      "elemental",
+      "fire",
+      "cold",
+      "lightning",
+      "ailment"
+    ],
+    "modTags": [
+      {
+        "id": "elemental",
+        "ja": "元素",
+        "en": "Elemental"
+      },
+      {
+        "id": "fire",
+        "ja": "火",
+        "en": "Fire"
+      },
+      {
+        "id": "cold",
+        "ja": "冷気",
+        "en": "Cold"
+      },
+      {
+        "id": "lightning",
+        "ja": "雷",
+        "en": "Lightning"
+      },
+      {
+        "id": "ailment",
+        "ja": "状態異常",
+        "en": "Ailment"
+      }
+    ],
+    "reminderIds": [
+      "ReminderTextElementalAilments"
+    ],
+    "reminderText": {
+      "ja": [
+        "(Elemental Ailments: 元素系状態異常には発火、焦げ、冷却、凍結、脆弱、感電、消耗がある)"
+      ],
+      "en": [
+        "(Elemental Ailments are Ignited, Scorched, Chilled, Frozen, Brittle, Shocked, and Sapped)"
+      ]
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "モンスターがクリティカルストライクから受ける追加ダメージが(##)%減少する": {
     "mod": "モンスターがクリティカルストライクから受ける追加ダメージが(##)%減少する",
@@ -1020,13 +2081,38 @@
     "tradeStatIds": [
       "explicit.stat_337935900"
     ],
+    "sourceIds": [
+      "MapMonstersBaseSelfCriticalMultiplier3MapWorlds"
+    ],
     "map_item_drop_quantity_+%": 10,
     "map_item_drop_rarity_+%": 6,
     "map_pack_size_+%": 4,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": false
+    "modTier17": false,
+    "tagIds": [
+      "damage",
+      "critical"
+    ],
+    "modTags": [
+      {
+        "id": "damage",
+        "ja": "ダメージ",
+        "en": "Damage"
+      },
+      {
+        "id": "critical",
+        "ja": "クリティカル",
+        "en": "Critical"
+      }
+    ],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "全てのプレイヤーの獲得フラスコチャージが#%減少する": {
     "mod": "全てのプレイヤーの獲得フラスコチャージが#%減少する",
@@ -1040,13 +2126,24 @@
     "tradeStatIds": [
       "explicit.stat_2549889921"
     ],
+    "sourceIds": [
+      "MapPlayersGainReducedFlaskCharges3MapWorlds_"
+    ],
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": false
+    "modTier17": false,
+    "tagIds": [],
+    "modTags": [],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "モンスターに対する呪いの効果が#%低下する": {
     "mod": "モンスターに対する呪いの効果が#%低下する",
@@ -1060,13 +2157,38 @@
     "tradeStatIds": [
       "explicit.stat_3796523155"
     ],
+    "sourceIds": [
+      "MapMonstersCurseEffectOnSelfFinal3MapWorlds"
+    ],
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": false
+    "modTier17": false,
+    "tagIds": [
+      "caster",
+      "curse"
+    ],
+    "modTags": [
+      {
+        "id": "caster",
+        "ja": "キャスター",
+        "en": "Caster"
+      },
+      {
+        "id": "curse",
+        "ja": "呪い",
+        "en": "Curse"
+      }
+    ],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "モンスターはヒット時に#%の確率で発火、凍結および感電を付与する": {
     "mod": "モンスターはヒット時に#%の確率で発火、凍結および感電を付与する",
@@ -1080,13 +2202,56 @@
     "tradeStatIds": [
       "explicit.stat_2553656203"
     ],
+    "sourceIds": [
+      "MapMonstersChanceToInflictStatusAilments2MapWorlds"
+    ],
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": false
+    "modTier17": false,
+    "tagIds": [
+      "elemental",
+      "fire",
+      "cold",
+      "lightning",
+      "ailment"
+    ],
+    "modTags": [
+      {
+        "id": "elemental",
+        "ja": "元素",
+        "en": "Elemental"
+      },
+      {
+        "id": "fire",
+        "ja": "火",
+        "en": "Fire"
+      },
+      {
+        "id": "cold",
+        "ja": "冷気",
+        "en": "Cold"
+      },
+      {
+        "id": "lightning",
+        "ja": "雷",
+        "en": "Lightning"
+      },
+      {
+        "id": "ailment",
+        "ja": "状態異常",
+        "en": "Ailment"
+      }
+    ],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "エリアにはアボミネーションが出現する": {
     "mod": "エリアにはアボミネーションが出現する",
@@ -1100,13 +2265,24 @@
     "tradeStatIds": [
       "explicit.stat_2961018200"
     ],
+    "sourceIds": [
+      "MapMonsterPacksAbominationMapWorlds"
+    ],
     "map_item_drop_quantity_+%": 16,
     "map_item_drop_rarity_+%": 9,
     "map_pack_size_+%": 6,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": false
+    "modTier17": false,
+    "tagIds": [],
+    "modTags": [],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "モンスターのアクションスピードは基礎値よりも低く修正されることがない|モンスターの移動スピードは基礎値よりも低く修正されることがない|モンスターは挑発を受けることがない": {
     "mod": "モンスターのアクションスピードは基礎値よりも低く修正されることがない|モンスターの移動スピードは基礎値よりも低く修正されることがない|モンスターは挑発を受けることがない",
@@ -1122,13 +2298,32 @@
       "explicit.stat_777421120",
       "explicit.stat_1106651798"
     ],
+    "sourceIds": [
+      "MapMonstersCantBeSlowedOrTauntedMapWorlds_"
+    ],
     "map_item_drop_quantity_+%": 10,
     "map_item_drop_rarity_+%": 6,
     "map_pack_size_+%": 4,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": false
+    "modTier17": false,
+    "tagIds": [
+      "speed"
+    ],
+    "modTags": [
+      {
+        "id": "speed",
+        "ja": "スピード",
+        "en": "Speed"
+      }
+    ],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "モンスターの全てのダメージにより発火が付与される": {
     "mod": "モンスターの全てのダメージにより発火が付与される",
@@ -1142,13 +2337,50 @@
     "tradeStatIds": [
       "explicit.stat_816367946"
     ],
+    "sourceIds": [
+      "MapMonstersAllDamageAlwaysIgnitesMapWorlds_"
+    ],
     "map_item_drop_quantity_+%": 10,
     "map_item_drop_rarity_+%": 6,
     "map_pack_size_+%": 4,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": false
+    "modTier17": false,
+    "tagIds": [
+      "elemental",
+      "fire",
+      "ailment"
+    ],
+    "modTags": [
+      {
+        "id": "elemental",
+        "ja": "元素",
+        "en": "Elemental"
+      },
+      {
+        "id": "fire",
+        "ja": "火",
+        "en": "Fire"
+      },
+      {
+        "id": "ailment",
+        "ja": "状態異常",
+        "en": "Ailment"
+      }
+    ],
+    "reminderIds": [
+      "ReminderTextIgnite"
+    ],
+    "reminderText": {
+      "ja": [
+        "(Ignite: 発火は、スキルの基礎火ダメージに基づいて火継続ダメージを与える。持続時間は4秒)"
+      ],
+      "en": [
+        "(Ignite deals Fire Damage over time, based on the base Fire Damage of the Skill, for 4 seconds)"
+      ]
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "モンスターの混沌耐性 +#%|モンスターの元素耐性 +#%": {
     "mod": "モンスターの混沌耐性 +#%|モンスターの元素耐性 +#%",
@@ -1163,13 +2395,44 @@
       "explicit.stat_365540634",
       "explicit.stat_1054098949"
     ],
+    "sourceIds": [
+      "MapMonstersAllResistances3MapWorlds"
+    ],
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": false
+    "modTier17": false,
+    "tagIds": [
+      "elemental",
+      "chaos",
+      "resistance"
+    ],
+    "modTags": [
+      {
+        "id": "elemental",
+        "ja": "元素",
+        "en": "Elemental"
+      },
+      {
+        "id": "chaos",
+        "ja": "混沌",
+        "en": "Chaos"
+      },
+      {
+        "id": "resistance",
+        "ja": "耐性",
+        "en": "Resistance"
+      }
+    ],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "モンスターは#%の確率で毒、串刺しおよび出血を無効化する": {
     "mod": "モンスターは#%の確率で毒、串刺しおよび出血を無効化する",
@@ -1183,13 +2446,52 @@
     "tradeStatIds": [
       "explicit.stat_144665660"
     ],
+    "sourceIds": [
+      "MapMonstersAvoidPoisonBleedBlind3MapWorlds"
+    ],
     "map_item_drop_quantity_+%": 10,
     "map_item_drop_rarity_+%": 6,
     "map_pack_size_+%": 4,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": false
+    "modTier17": false,
+    "tagIds": [
+      "bleed",
+      "poison",
+      "physical",
+      "chaos",
+      "attack",
+      "ailment"
+    ],
+    "modTags": [
+      {
+        "id": "physical",
+        "ja": "物理",
+        "en": "Physical"
+      },
+      {
+        "id": "chaos",
+        "ja": "混沌",
+        "en": "Chaos"
+      },
+      {
+        "id": "attack",
+        "ja": "アタック",
+        "en": "Attack"
+      },
+      {
+        "id": "ailment",
+        "ja": "状態異常",
+        "en": "Ailment"
+      }
+    ],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "全てのプレイヤーのブロック率が#%減少する|全てのプレイヤーのアーマーが#%低下する": {
     "mod": "全てのプレイヤーのブロック率が#%減少する|全てのプレイヤーのアーマーが#%低下する",
@@ -1204,13 +2506,39 @@
       "explicit.stat_3729221884",
       "explicit.stat_272758639"
     ],
+    "sourceIds": [
+      "MapPlayersBlockAndArmour3MapWorlds"
+    ],
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": false
+    "modTier17": false,
+    "tagIds": [
+      "block",
+      "defences",
+      "armour"
+    ],
+    "modTags": [
+      {
+        "id": "defences",
+        "ja": "防御",
+        "en": "Defences"
+      },
+      {
+        "id": "armour",
+        "ja": "アーマー",
+        "en": "Armour"
+      }
+    ],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "全てのプレイヤーはスペルダメージを抑制して防ぐダメージ割合が#%される|モンスターの命中力が#%増加する": {
     "mod": "全てのプレイヤーはスペルダメージを抑制して防ぐダメージ割合が#%される|モンスターの命中力が#%増加する",
@@ -1225,13 +2553,38 @@
       "explicit.stat_286947568",
       "explicit.stat_1588049749"
     ],
+    "sourceIds": [
+      "MapPlayersEvasionAndUnluckyDodge3MapWorlds"
+    ],
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": false
+    "modTier17": false,
+    "tagIds": [
+      "attack"
+    ],
+    "modTags": [
+      {
+        "id": "attack",
+        "ja": "アタック",
+        "en": "Attack"
+      }
+    ],
+    "reminderIds": [
+      "ReminderTextSuppression"
+    ],
+    "reminderText": {
+      "ja": [
+        "(抑制したヒットによるダメージとそのヒットが付与した\n状態異常によるダメージの40%を防ぐ)"
+      ],
+      "en": [
+        "(40% of Damage from Suppressed Hits and Ailments they inflict is prevented)"
+      ]
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "全てのプレイヤーの効果範囲が#%低下する": {
     "mod": "全てのプレイヤーの効果範囲が#%低下する",
@@ -1245,13 +2598,24 @@
     "tradeStatIds": [
       "explicit.stat_2312028586"
     ],
+    "sourceIds": [
+      "MapPlayersLessAoERadius3MapWorlds"
+    ],
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": false
+    "modTier17": false,
+    "tagIds": [],
+    "modTags": [],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "モンスターはヒット時にフレンジーチャージを#個獲得する": {
     "mod": "モンスターはヒット時にフレンジーチャージを#個獲得する",
@@ -1265,13 +2629,26 @@
     "tradeStatIds": [
       "explicit.stat_1742567045"
     ],
+    "sourceIds": [
+      "MapMonstersFrenzyChargeOnHitMapWorlds"
+    ],
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": false
+    "modTier17": false,
+    "tagIds": [
+      "frenzy_charge"
+    ],
+    "modTags": [],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "モンスターはヒット時にエンデュランスチャージを#個獲得する": {
     "mod": "モンスターはヒット時にエンデュランスチャージを#個獲得する",
@@ -1285,13 +2662,26 @@
     "tradeStatIds": [
       "explicit.stat_687813731"
     ],
+    "sourceIds": [
+      "MapMonstersEnduranceChargeOnHitMapWorlds"
+    ],
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": false
+    "modTier17": false,
+    "tagIds": [
+      "endurance_charge"
+    ],
+    "modTags": [],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "モンスターはヒット時にパワーチャージを#個獲得する": {
     "mod": "モンスターはヒット時にパワーチャージを#個獲得する",
@@ -1305,13 +2695,26 @@
     "tradeStatIds": [
       "explicit.stat_406353061"
     ],
+    "sourceIds": [
+      "MapMonstersPowerChargeOnHitMapWorlds"
+    ],
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": false
+    "modTier17": false,
+    "tagIds": [
+      "power_charge"
+    ],
+    "modTags": [],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "モンスターアタックはヒット時に#%の確率で串刺しを付与する": {
     "mod": "モンスターアタックはヒット時に#%の確率で串刺しを付与する",
@@ -1325,13 +2728,30 @@
     "tradeStatIds": [
       "explicit.stat_1541224187"
     ],
+    "sourceIds": [
+      "MapMonstersImpaleOnHit3MapWorlds_"
+    ],
     "map_item_drop_quantity_+%": 16,
     "map_item_drop_rarity_+%": 9,
     "map_pack_size_+%": 6,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": false
+    "modTier17": false,
+    "tagIds": [],
+    "modTags": [],
+    "reminderIds": [
+      "ReminderTextImpale"
+    ],
+    "reminderText": {
+      "ja": [
+        "(Impale: 串刺された敵がヒットを受けた際、串刺しは串刺しを与えたヒットの物理ダメージの10%を敵に反射する。串刺しは5ヒットまたは8秒間持続する)"
+      ],
+      "en": [
+        "(When an Impaled enemy is hit, the Impale reflects 10% of the physical damage of the Impaling hit to that enemy. Impale lasts for 5 hits or 8 seconds)"
+      ]
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "モンスターのスペルダメージ抑制確率 +#%": {
     "mod": "モンスターのスペルダメージ抑制確率 +#%",
@@ -1345,13 +2765,30 @@
     "tradeStatIds": [
       "explicit.stat_2138205941"
     ],
+    "sourceIds": [
+      "MapMonstersChanceToSuppressSpells3MapWorlds"
+    ],
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": false
+    "modTier17": false,
+    "tagIds": [],
+    "modTags": [],
+    "reminderIds": [
+      "ReminderTextSuppression"
+    ],
+    "reminderText": {
+      "ja": [
+        "(抑制したヒットによるダメージとそのヒットが付与した\n状態異常によるダメージの40%を防ぐ)"
+      ],
+      "en": [
+        "(40% of Damage from Suppressed Hits and Ailments they inflict is prevented)"
+      ]
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "モンスターは最大ライフの(##)%を追加最大エナジーシールドとして獲得する": {
     "mod": "モンスターは最大ライフの(##)%を追加最大エナジーシールドとして獲得する",
@@ -1365,13 +2802,24 @@
     "tradeStatIds": [
       "explicit.stat_2887760183"
     ],
+    "sourceIds": [
+      "MapMonstersMaximumLifeAddedEnergyShield3MapWorlds"
+    ],
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": false
+    "modTier17": false,
+    "tagIds": [],
+    "modTags": [],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "ユニークボスは取り憑かれている": {
     "mod": "ユニークボスは取り憑かれている",
@@ -1385,13 +2833,24 @@
     "tradeStatIds": [
       "explicit.stat_2588474575"
     ],
+    "sourceIds": [
+      "MapBossPossessedMapWorlds"
+    ],
     "map_item_drop_quantity_+%": 16,
     "map_item_drop_rarity_+%": 9,
     "map_pack_size_+%": 6,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": false
+    "modTier17": false,
+    "tagIds": [],
+    "modTags": [],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "モンスターはヒット時に盲目を付与する": {
     "mod": "モンスターはヒット時に盲目を付与する",
@@ -1405,13 +2864,30 @@
     "tradeStatIds": [
       "explicit.stat_1629869774"
     ],
+    "sourceIds": [
+      "MapMonstersBlindOnHitMapWorlds"
+    ],
     "map_item_drop_quantity_+%": 10,
     "map_item_drop_rarity_+%": 6,
     "map_pack_size_+%": 4,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": false
+    "modTier17": false,
+    "tagIds": [],
+    "modTags": [],
+    "reminderIds": [
+      "ReminderTextBlind"
+    ],
+    "reminderText": {
+      "ja": [
+        "(Blind: 盲目は、命中率と回避力を20%低下させる。持続時間は4秒)"
+      ],
+      "en": [
+        "(Being Blinded causes 20% less Accuracy Rating and Evasion Rating, for 4 seconds)"
+      ]
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "モンスターはアタックによるヒット時に重傷を付与する": {
     "mod": "モンスターはアタックによるヒット時に重傷を付与する",
@@ -1425,13 +2901,30 @@
     "tradeStatIds": [
       "explicit.stat_4164174520"
     ],
+    "sourceIds": [
+      "MapMonstersMaimOnHitMapWorlds"
+    ],
     "map_item_drop_quantity_+%": 10,
     "map_item_drop_rarity_+%": 6,
     "map_pack_size_+%": 4,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": false
+    "modTier17": false,
+    "tagIds": [],
+    "modTags": [],
+    "reminderIds": [
+      "ReminderTextMaim"
+    ],
+    "reminderText": {
+      "ja": [
+        "(Maim: 重傷の敵は移動スピードが30%減少する)"
+      ],
+      "en": [
+        "(Maimed enemies have 30% reduced Movement Speed)"
+      ]
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "モンスターはスペルによるヒット時に阻害を付与する": {
     "mod": "モンスターはスペルによるヒット時に阻害を付与する",
@@ -1445,13 +2938,30 @@
     "tradeStatIds": [
       "explicit.stat_962720646"
     ],
+    "sourceIds": [
+      "MapMonstersHinderOnHitMapWorlds"
+    ],
     "map_item_drop_quantity_+%": 10,
     "map_item_drop_rarity_+%": 6,
     "map_pack_size_+%": 4,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": false
+    "modTier17": false,
+    "tagIds": [],
+    "modTags": [],
+    "reminderIds": [
+      "ReminderTextHinder"
+    ],
+    "reminderText": {
+      "ja": [
+        "(Hinder: 阻害された敵は、移動スピードが30%減少する。持続時間は4秒)"
+      ],
+      "en": [
+        "(Hinder reduces movement speed by 30% for 4 seconds)"
+      ]
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "モンスターはヒット時にパワーチャージ、フレンジーチャージおよびエンデュランスチャージのスタックを盗む": {
     "mod": "モンスターはヒット時にパワーチャージ、フレンジーチャージおよびエンデュランスチャージのスタックを盗む",
@@ -1465,13 +2975,24 @@
     "tradeStatIds": [
       "explicit.stat_3222482040"
     ],
+    "sourceIds": [
+      "MapMonstersStealChargesOnHitMapWorlds"
+    ],
     "map_item_drop_quantity_+%": 10,
     "map_item_drop_rarity_+%": 6,
     "map_pack_size_+%": 4,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": false
+    "modTier17": false,
+    "tagIds": [],
+    "modTags": [],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "エリアにはまだら状に神聖領域がある": {
     "mod": "エリアにはまだら状に神聖領域がある",
@@ -1485,13 +3006,24 @@
     "tradeStatIds": [
       "explicit.stat_1948962470"
     ],
+    "sourceIds": [
+      "MapConsecratedGround3MapWorlds__"
+    ],
     "map_item_drop_quantity_+%": 10,
     "map_item_drop_rarity_+%": 6,
     "map_pack_size_+%": 4,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": false
+    "modTier17": false,
+    "tagIds": [],
+    "modTags": [],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "全てのプレイヤーのクールダウン解消レートが#%低下する": {
     "mod": "全てのプレイヤーのクールダウン解消レートが#%低下する",
@@ -1505,13 +3037,24 @@
     "tradeStatIds": [
       "explicit.stat_941368244"
     ],
+    "sourceIds": [
+      "MapPlayersLessCooldownRecovery3MapWorlds"
+    ],
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": false
+    "modTier17": false,
+    "tagIds": [],
+    "modTags": [],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "全てのプレイヤーに対するバフは#%速く消える": {
     "mod": "全てのプレイヤーに対するバフは#%速く消える",
@@ -1525,13 +3068,24 @@
     "tradeStatIds": [
       "explicit.stat_1217583941"
     ],
+    "sourceIds": [
+      "MapPlayersBuffsExpireFaster3MapWorlds"
+    ],
     "map_item_drop_quantity_+%": 10,
     "map_item_drop_rarity_+%": 6,
     "map_pack_size_+%": 4,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": false
+    "modTier17": false,
+    "tagIds": [],
+    "modTags": [],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "全てのプレイヤーはスキルによる呪い以外のオーラの効果が#%減少する": {
     "mod": "全てのプレイヤーはスキルによる呪い以外のオーラの効果が#%減少する",
@@ -1545,13 +3099,24 @@
     "tradeStatIds": [
       "explicit.stat_2450628570"
     ],
+    "sourceIds": [
+      "MapPlayersReducedAuraEffect3MapWorlds_"
+    ],
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": false
+    "modTier17": false,
+    "tagIds": [],
+    "modTags": [],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "全てのプレイヤーの命中力が#%低下する": {
     "mod": "全てのプレイヤーの命中力が#%低下する",
@@ -1565,13 +3130,24 @@
     "tradeStatIds": [
       "explicit.stat_3667574329"
     ],
+    "sourceIds": [
+      "MapPlayersAccuracyRating3MapWorlds"
+    ],
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": false
+    "modTier17": false,
+    "tagIds": [],
+    "modTags": [],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "(T17) モンスターのスキルは追加で#回連鎖する|モンスターの投射物は地形と衝突した時に連鎖することができる": {
     "mod": "(T17) モンスターのスキルは追加で#回連鎖する|モンスターの投射物は地形と衝突した時に連鎖することができる",
@@ -1586,13 +3162,24 @@
       "explicit.stat_3183973644",
       "explicit.stat_2753403220"
     ],
+    "sourceIds": [
+      "MapUberModChain"
+    ],
     "map_item_drop_quantity_+%": 16,
     "map_item_drop_rarity_+%": 56,
     "map_pack_size_+%": 6,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": true
+    "modTier17": true,
+    "tagIds": [],
+    "modTags": [],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "(T17) モンスターはヒット時にパワーチャージを#個獲得する|モンスターの最大パワーチャージ数が+#される": {
     "mod": "(T17) モンスターはヒット時にパワーチャージを#個獲得する|モンスターの最大パワーチャージ数が+#される",
@@ -1607,13 +3194,24 @@
       "explicit.stat_406353061",
       "explicit.stat_1103106414"
     ],
+    "sourceIds": [
+      "MapUberModPowerCharges"
+    ],
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 35,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": true
+    "modTier17": true,
+    "tagIds": [],
+    "modTags": [],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "(T17) モンスターはヒット時にフレンジーチャージを#個獲得する|モンスターの最大フレンジーチャージ数が+#される": {
     "mod": "(T17) モンスターはヒット時にフレンジーチャージを#個獲得する|モンスターの最大フレンジーチャージ数が+#される",
@@ -1628,13 +3226,24 @@
       "explicit.stat_1742567045",
       "explicit.stat_3900284865"
     ],
+    "sourceIds": [
+      "MapUberModFrenzyCharges"
+    ],
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 35,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": true
+    "modTier17": true,
+    "tagIds": [],
+    "modTags": [],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "(T17) モンスターの最大エンデュランスチャージ数が+#される|モンスターはヒットを受けた時にエンデュランスチャージを#個獲得する": {
     "mod": "(T17) モンスターの最大エンデュランスチャージ数が+#される|モンスターはヒットを受けた時にエンデュランスチャージを#個獲得する",
@@ -1649,13 +3258,24 @@
       "explicit.stat_4067268731",
       "explicit.stat_3707756896"
     ],
+    "sourceIds": [
+      "MapUberModEnduranceCharges"
+    ],
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 35,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": true
+    "modTier17": true,
+    "tagIds": [],
+    "modTags": [],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "(T17) プレイヤーの全ての耐性の最大値 #%": {
     "mod": "(T17) プレイヤーの全ての耐性の最大値 #%",
@@ -1669,13 +3289,24 @@
     "tradeStatIds": [
       "explicit.stat_3376488707"
     ],
+    "sourceIds": [
+      "MapUberModMinusMax"
+    ],
     "map_item_drop_quantity_+%": 19,
     "map_item_drop_rarity_+%": 11,
     "map_pack_size_+%": 20,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": true
+    "modTier17": true,
+    "tagIds": [],
+    "modTags": [],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "(T17) モンスターは投射物を追加で#個放つ|モンスターの効果範囲が#%増加する": {
     "mod": "(T17) モンスターは投射物を追加で#個放つ|モンスターの効果範囲が#%増加する",
@@ -1690,13 +3321,24 @@
       "explicit.stat_1309819744",
       "explicit.stat_1708461270"
     ],
+    "sourceIds": [
+      "MapUberModProjAOE"
+    ],
     "map_item_drop_quantity_+%": 19,
     "map_item_drop_rarity_+%": 56,
     "map_pack_size_+%": 7,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": true
+    "modTier17": true,
+    "tagIds": [],
+    "modTags": [],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "(T17) モンスターのクリティカルダメージ倍率 +(##)%|モンスターのクリティカル率が(##)%増加する": {
     "mod": "(T17) モンスターのクリティカルダメージ倍率 +(##)%|モンスターのクリティカル率が(##)%増加する",
@@ -1711,13 +3353,24 @@
       "explicit.stat_57326096",
       "explicit.stat_2753083623"
     ],
+    "sourceIds": [
+      "MapUberModCrit"
+    ],
     "map_item_drop_quantity_+%": 16,
     "map_item_drop_rarity_+%": 56,
     "map_pack_size_+%": 6,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": true
+    "modTier17": true,
+    "tagIds": [],
+    "modTags": [],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "(T17) モンスターはヒット時に毒を付与する|モンスターによる毒の持続時間が#%増加する|モンスターによる全てのダメージが毒を付与できる": {
     "mod": "(T17) モンスターはヒット時に毒を付与する|モンスターによる毒の持続時間が#%増加する|モンスターによる全てのダメージが毒を付与できる",
@@ -1733,13 +3386,30 @@
       "explicit.stat_134839587",
       "explicit.stat_3555807120"
     ],
+    "sourceIds": [
+      "MapUberModPoison"
+    ],
     "map_item_drop_quantity_+%": 16,
     "map_item_drop_rarity_+%": 49,
     "map_pack_size_+%": 6,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": true
+    "modTier17": true,
+    "tagIds": [],
+    "modTags": [],
+    "reminderIds": [
+      "ReminderTextPoison"
+    ],
+    "reminderText": {
+      "ja": [
+        "(Poison: 毒は、スキルの基礎物理ダメージと基礎混沌ダメージに基づいて混沌継続ダメージを与える。複数インスタンスの毒がスタックできる)"
+      ],
+      "en": [
+        "(Poison deals Chaos Damage over time, based on the base Physical and Chaos Damage of the Skill. Multiple instances of Poison stack)"
+      ]
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "(T17) モンスターのダメージが(##)%増加する": {
     "mod": "(T17) モンスターのダメージが(##)%増加する",
@@ -1753,13 +3423,24 @@
     "tradeStatIds": [
       "explicit.stat_1890519597"
     ],
+    "sourceIds": [
+      "MapUberModMonsterDamage"
+    ],
     "map_item_drop_quantity_+%": 19,
     "map_item_drop_rarity_+%": 56,
     "map_pack_size_+%": 7,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": true
+    "modTier17": true,
+    "tagIds": [],
+    "modTags": [],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "(T17) モンスターは最大ライフの(##)%を追加最大エナジーシールドとして獲得する": {
     "mod": "(T17) モンスターは最大ライフの(##)%を追加最大エナジーシールドとして獲得する",
@@ -1773,13 +3454,24 @@
     "tradeStatIds": [
       "explicit.stat_2887760183"
     ],
+    "sourceIds": [
+      "MapUberModLifeAsEnergyShield"
+    ],
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 35,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": true
+    "modTier17": true,
+    "tagIds": [],
+    "modTags": [],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "(T17) ユニークボスは取り憑かれている": {
     "mod": "(T17) ユニークボスは取り憑かれている",
@@ -1793,13 +3485,24 @@
     "tradeStatIds": [
       "explicit.stat_2588474575"
     ],
+    "sourceIds": [
+      "MapUberModPossessedBoss"
+    ],
     "map_item_drop_quantity_+%": 16,
     "map_item_drop_rarity_+%": 56,
     "map_pack_size_+%": 6,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": true
+    "modTier17": true,
+    "tagIds": [],
+    "modTags": [],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "(T17) モンスターのスペルダメージ抑制確率 +#%": {
     "mod": "(T17) モンスターのスペルダメージ抑制確率 +#%",
@@ -1813,13 +3516,30 @@
     "tradeStatIds": [
       "explicit.stat_2138205941"
     ],
+    "sourceIds": [
+      "MapUberModMonsterSuppress"
+    ],
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 35,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": true
+    "modTier17": true,
+    "tagIds": [],
+    "modTags": [],
+    "reminderIds": [
+      "ReminderTextSuppression"
+    ],
+    "reminderText": {
+      "ja": [
+        "(抑制したヒットによるダメージとそのヒットが付与した\n状態異常によるダメージの40%を防ぐ)"
+      ],
+      "en": [
+        "(40% of Damage from Suppressed Hits and Ailments they inflict is prevented)"
+      ]
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "(T17) モンスターのアタックダメージブロック確率 +#%": {
     "mod": "(T17) モンスターのアタックダメージブロック確率 +#%",
@@ -1833,13 +3553,24 @@
     "tradeStatIds": [
       "explicit.stat_881836292"
     ],
+    "sourceIds": [
+      "MapUberModMonsterAttackBlock"
+    ],
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 47,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": true
+    "modTier17": true,
+    "tagIds": [],
+    "modTags": [],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "(T17) プレイヤーはリーチによるライフ、マナおよびエナジーシールドの最大合計回復量が(##)%減少する": {
     "mod": "(T17) プレイヤーはリーチによるライフ、マナおよびエナジーシールドの最大合計回復量が(##)%減少する",
@@ -1853,13 +3584,24 @@
     "tradeStatIds": [
       "explicit.stat_2946888410"
     ],
+    "sourceIds": [
+      "MapUberModLessPlayerLeech"
+    ],
     "map_item_drop_quantity_+%": 16,
     "map_item_drop_rarity_+%": 49,
     "map_pack_size_+%": 6,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": true
+    "modTier17": true,
+    "tagIds": [],
+    "modTags": [],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "(T17) レアモンスターは物理の棘を持ち#の物理ダメージを反射する|レアモンスターは元素の棘を持ち#の元素ダメージを反射する": {
     "mod": "(T17) レアモンスターは物理の棘を持ち#の物理ダメージを反射する|レアモンスターは元素の棘を持ち#の元素ダメージを反射する",
@@ -1876,13 +3618,24 @@
       "",
       ""
     ],
+    "sourceIds": [
+      "MapUberModReflect"
+    ],
     "map_item_drop_quantity_+%": 10,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 47,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": true
+    "modTier17": true,
+    "tagIds": [],
+    "modTags": [],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "(T17) プレイヤーはヴァルネラビリティの呪いを受ける|プレイヤーはテンポラルチェーンの呪いを受ける|プレイヤーはエレメンタルウィークネスの呪いを受ける": {
     "mod": "(T17) プレイヤーはヴァルネラビリティの呪いを受ける|プレイヤーはテンポラルチェーンの呪いを受ける|プレイヤーはエレメンタルウィークネスの呪いを受ける",
@@ -1898,13 +3651,36 @@
       "explicit.stat_2326202293",
       "explicit.stat_558910024"
     ],
+    "sourceIds": [
+      "MapUberModCurses"
+    ],
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 11,
     "map_pack_size_+%": 6,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 35,
-    "modTier17": true
+    "modTier17": true,
+    "tagIds": [],
+    "modTags": [],
+    "reminderIds": [
+      "ReminderTextCurseVulnerability",
+      "ReminderTextCurseTemporalChains",
+      "ReminderTextCurseElementalWeakness"
+    ],
+    "reminderText": {
+      "ja": [
+        "(ヴァルネラビリティは呪術の一種で、対象が受ける物理ダメージが15%増加、対象がヒットを受けた際の出血確率を+20%する。持続時間は8秒)",
+        "(テンポラルチェーンは呪術の一種で、対象のアクションスピードを15%減少させる。レアやユニークの敵は9%減少させる。また対象の他のエフェクトの消失を40%遅くする。プレイヤーに対しては効果が50%低下する。持続時間は5秒)",
+        "(エレメンタルウィークネスは呪術の一種で、全ての元素耐性を-15%する。持続時間は8秒)"
+      ],
+      "en": [
+        "(Vulnerability is a Hex which increases Physical Damage taken by 15% and causes Hits to have +25% chance to inflict Bleeding on the target. It lasts 8 seconds)",
+        "(Temporal Chains is a Hex which reduces Action Speed by 15%, or 9% on Rare or Unique targets, and makes other effects on the target expire 40% slower. It has 50% less effect on Players and lasts 5 seconds)",
+        "(Elemental Weakness is a Hex which inficts -15% to all Elemental Resistances. It lasts 8 seconds)"
+      ]
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "(T17) 全てのプレイヤーの効果範囲が(##)%低下する": {
     "mod": "(T17) 全てのプレイヤーの効果範囲が(##)%低下する",
@@ -1918,13 +3694,24 @@
     "tradeStatIds": [
       "explicit.stat_2312028586"
     ],
+    "sourceIds": [
+      "MapUberModAOEPlayer"
+    ],
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 69,
     "map_pack_size_+%": 5,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": true
+    "modTier17": true,
+    "tagIds": [],
+    "modTags": [],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "(T17) モンスターがクリティカルストライクから受ける追加ダメージが(##)%減少する": {
     "mod": "(T17) モンスターがクリティカルストライクから受ける追加ダメージが(##)%減少する",
@@ -1938,13 +3725,24 @@
     "tradeStatIds": [
       "explicit.stat_337935900"
     ],
+    "sourceIds": [
+      "MapUberModCritDefence"
+    ],
     "map_item_drop_quantity_+%": 10,
     "map_item_drop_rarity_+%": 56,
     "map_pack_size_+%": 5,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": true
+    "modTier17": true,
+    "tagIds": [],
+    "modTags": [],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "(T17) モンスターのライフが(##)%上昇する": {
     "mod": "(T17) モンスターのライフが(##)%上昇する",
@@ -1958,13 +3756,24 @@
     "tradeStatIds": [
       "explicit.stat_95249895"
     ],
+    "sourceIds": [
+      "MapUberModMonsterLife"
+    ],
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 47,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": true
+    "modTier17": true,
+    "tagIds": [],
+    "modTags": [],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "(T17) それぞれのレアモンスターはモッドを追加で#個持つ|レアモンスターの数が(##)%増加する": {
     "mod": "(T17) それぞれのレアモンスターはモッドを追加で#個持つ|レアモンスターの数が(##)%増加する",
@@ -1979,13 +3788,24 @@
       "explicit.stat_2550456553",
       "explicit.stat_3793155082"
     ],
+    "sourceIds": [
+      "MapUberModRareMonsters"
+    ],
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": true
+    "modTier17": true,
+    "tagIds": [],
+    "modTags": [],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "(T17) ユニークモンスターはランダムなシュラインバフを#個持つ": {
     "mod": "(T17) ユニークモンスターはランダムなシュラインバフを#個持つ",
@@ -1999,13 +3819,24 @@
     "tradeStatIds": [
       "explicit.stat_872972810"
     ],
+    "sourceIds": [
+      "MapUberModShrineBuff"
+    ],
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 35,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": true
+    "modTier17": true,
+    "tagIds": [],
+    "modTags": [],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "(T17) モンスターはヒット時に束縛する蔓を#スタック付与する": {
     "mod": "(T17) モンスターはヒット時に束縛する蔓を#スタック付与する",
@@ -2019,13 +3850,30 @@
     "tradeStatIds": [
       "explicit.stat_1751584857"
     ],
+    "sourceIds": [
+      "MapUberModVines"
+    ],
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 40,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": true
+    "modTier17": true,
+    "tagIds": [],
+    "modTags": [],
+    "reminderIds": [
+      "ReminderTextGraspingVines"
+    ],
+    "reminderText": {
+      "ja": [
+        "(Grasping Vines: プレイヤーは最大10本の蔓を受け、蔓1本につき移動スピードが8%低下する。蔓は移動することにより破壊される)"
+      ],
+      "en": [
+        "(Up to 10 Vines can grasp you, inflicting 8% less Movement Speed per Vine. Broken by moving)"
+      ]
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "(T17) レアモンスターはボラタイルコアを持つ": {
     "mod": "(T17) レアモンスターはボラタイルコアを持つ",
@@ -2039,13 +3887,24 @@
     "tradeStatIds": [
       "explicit.stat_1706239920"
     ],
+    "sourceIds": [
+      "MapUberModVolatiles"
+    ],
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 11,
     "map_pack_size_+%": 5,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 53,
-    "modTier17": true
+    "modTier17": true,
+    "tagIds": [],
+    "modTags": [],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "(T17) モンスターはその物理ダメージの(##)%をランダムな元素属性の追加ダメージとして獲得する": {
     "mod": "(T17) モンスターはその物理ダメージの(##)%をランダムな元素属性の追加ダメージとして獲得する",
@@ -2059,13 +3918,24 @@
     "tradeStatIds": [
       "explicit.stat_4062840317"
     ],
+    "sourceIds": [
+      "MapUberModDamageAsElemental"
+    ],
     "map_item_drop_quantity_+%": 16,
     "map_item_drop_rarity_+%": 71,
     "map_pack_size_+%": 6,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": true
+    "modTier17": true,
+    "tagIds": [],
+    "modTags": [],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "(T17) モンスターはその物理ダメージの(##)%を追加混沌ダメージとして獲得する": {
     "mod": "(T17) モンスターはその物理ダメージの(##)%を追加混沌ダメージとして獲得する",
@@ -2079,13 +3949,24 @@
     "tradeStatIds": [
       "explicit.stat_1840747977"
     ],
+    "sourceIds": [
+      "MapUberModDamageAsChaos"
+    ],
     "map_item_drop_quantity_+%": 16,
     "map_item_drop_rarity_+%": 46,
     "map_pack_size_+%": 6,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": true
+    "modTier17": true,
+    "tagIds": [],
+    "modTags": [],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "(T17) モンスターのキャストスピードが(##)%増加する|モンスターのアタックスピードが(##)%増加する|モンスターの移動スピードが(##)%増加する": {
     "mod": "(T17) モンスターのキャストスピードが(##)%増加する|モンスターのアタックスピードが(##)%増加する|モンスターの移動スピードが(##)%増加する",
@@ -2101,13 +3982,24 @@
       "explicit.stat_1913583994",
       "explicit.stat_2306522833"
     ],
+    "sourceIds": [
+      "MapUberModTurbo"
+    ],
     "map_item_drop_quantity_+%": 19,
     "map_item_drop_rarity_+%": 56,
     "map_pack_size_+%": 7,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": true
+    "modTier17": true,
+    "tagIds": [],
+    "modTags": [],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "(T17) プレイヤーは血塗れのノコギリに襲われる": {
     "mod": "(T17) プレイヤーは血塗れのノコギリに襲われる",
@@ -2121,13 +4013,24 @@
     "tradeStatIds": [
       "explicit.stat_3052102815"
     ],
+    "sourceIds": [
+      "MapUberModSawblades"
+    ],
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 47,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": true
+    "modTier17": true,
+    "tagIds": [],
+    "modTags": [],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "(T17) モンスターはスタンを受けることがない|モンスターのアクションスピードは基礎値よりも低く修正されることがない|モンスターの移動スピードは基礎値よりも低く修正されることがない": {
     "mod": "(T17) モンスターはスタンを受けることがない|モンスターのアクションスピードは基礎値よりも低く修正されることがない|モンスターの移動スピードは基礎値よりも低く修正されることがない",
@@ -2143,13 +4046,24 @@
       "explicit.stat_2758454849",
       "explicit.stat_777421120"
     ],
+    "sourceIds": [
+      "MapUberModJuggernaut"
+    ],
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 47,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": true
+    "modTier17": true,
+    "tagIds": [],
+    "modTags": [],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "(T17) プレイヤーはフラスコを使用した時に隕石の対象となる": {
     "mod": "(T17) プレイヤーはフラスコを使用した時に隕石の対象となる",
@@ -2163,13 +4077,24 @@
     "tradeStatIds": [
       "explicit.stat_4102870672"
     ],
+    "sourceIds": [
+      "MapUberModFlaskMeteor"
+    ],
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 45,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": true
+    "modTier17": true,
+    "tagIds": [],
+    "modTags": [],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "(T17) プレイヤーの防御力が(##)%低下する": {
     "mod": "(T17) プレイヤーの防御力が(##)%低下する",
@@ -2183,13 +4108,30 @@
     "tradeStatIds": [
       "explicit.stat_943960754"
     ],
+    "sourceIds": [
+      "MapUberModGlobalDefences"
+    ],
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 35,
-    "modTier17": true
+    "modTier17": true,
+    "tagIds": [],
+    "modTags": [],
+    "reminderIds": [
+      "ReminderTextDefences"
+    ],
+    "reminderText": {
+      "ja": [
+        "(アーマー、回避力、エナジーシールドは標準的な防御力である)"
+      ],
+      "en": [
+        "(Armour, Evasion Rating and Energy Shield are the standard Defences)"
+      ]
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "(T17) エリアには溺死のオーブが出現する": {
     "mod": "(T17) エリアには溺死のオーブが出現する",
@@ -2203,13 +4145,24 @@
     "tradeStatIds": [
       "explicit.stat_25225034"
     ],
+    "sourceIds": [
+      "MapUberModDrowningOrbs"
+    ],
     "map_item_drop_quantity_+%": 16,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 20,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": true
+    "modTier17": true,
+    "tagIds": [],
+    "modTags": [],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "(T17) モンスターの物理ダメージ軽減率 +#%|モンスターの元素耐性 +#%|モンスターの混沌耐性 +#%": {
     "mod": "(T17) モンスターの物理ダメージ軽減率 +#%|モンスターの元素耐性 +#%|モンスターの混沌耐性 +#%",
@@ -2225,13 +4178,24 @@
       "explicit.stat_1054098949",
       "explicit.stat_365540634"
     ],
+    "sourceIds": [
+      "MapUberModResistancePDR"
+    ],
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 35,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": true
+    "modTier17": true,
+    "tagIds": [],
+    "modTags": [],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "(T17) モンスターはヒット時に確率で発火、凍結および感電を付与する|モンスターは全てのダメージで発火、凍結および感電を付与できる": {
     "mod": "(T17) モンスターはヒット時に確率で発火、凍結および感電を付与する|モンスターは全てのダメージで発火、凍結および感電を付与できる",
@@ -2246,13 +4210,36 @@
       "explicit.stat_2553656203",
       "explicit.stat_2919181457"
     ],
+    "sourceIds": [
+      "MapUberModMonsterAilments"
+    ],
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 60,
-    "modTier17": true
+    "modTier17": true,
+    "tagIds": [],
+    "modTags": [],
+    "reminderIds": [
+      "ReminderTextFreeze",
+      "ReminderTextIgnite",
+      "ReminderTextShock"
+    ],
+    "reminderText": {
+      "ja": [
+        "(Freeze: 凍結は、敵のアクションスピードを0まで低下させ、行動を妨げる。持続時間はヒットにより受けた冷気ダメージに基づく)",
+        "(Ignite: 発火は、スキルの基礎火ダメージに基づいて火継続ダメージを与える。持続時間は4秒)",
+        "(Shock: 感電は、ヒットが与えた雷ダメージに基づいて受けるダメージを最大50%増加させる。持続時間は2秒)"
+      ],
+      "en": [
+        "(Freeze lowers Enemy Action Speed to zero, preventing them from acting. Duration is based on the Cold Damage of the Hit)",
+        "(Ignite deals Fire Damage over time, based on the base Fire Damage of the Skill, for 4 seconds)",
+        "(Shock increases Damage taken by up to 50%, depending on the amount of Lightning Damage in the hit, for 2 seconds)"
+      ]
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "(T17) 全てのプレイヤーに対するバフは#%速く消える": {
     "mod": "(T17) 全てのプレイヤーに対するバフは#%速く消える",
@@ -2266,13 +4253,24 @@
     "tradeStatIds": [
       "explicit.stat_1217583941"
     ],
+    "sourceIds": [
+      "MapUberModBuffExpiry"
+    ],
     "map_item_drop_quantity_+%": 10,
     "map_item_drop_rarity_+%": 6,
     "map_pack_size_+%": 4,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 35,
-    "modTier17": true
+    "modTier17": true,
+    "tagIds": [],
+    "modTags": [],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "(T17) モンスターのダメージは#%の元素耐性を貫通する": {
     "mod": "(T17) モンスターのダメージは#%の元素耐性を貫通する",
@@ -2286,13 +4284,24 @@
     "tradeStatIds": [
       "explicit.stat_1898978455"
     ],
+    "sourceIds": [
+      "MapUberModEleDamagePenetration"
+    ],
     "map_item_drop_quantity_+%": 19,
     "map_item_drop_rarity_+%": 72,
     "map_pack_size_+%": 6,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": true
+    "modTier17": true,
+    "tagIds": [],
+    "modTags": [],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "(T17) エリアには不安定な触手の悪魔が出現する": {
     "mod": "(T17) エリアには不安定な触手の悪魔が出現する",
@@ -2306,13 +4315,24 @@
     "tradeStatIds": [
       "explicit.stat_1943574423"
     ],
+    "sourceIds": [
+      "MapUberModElderNovas"
+    ],
     "map_item_drop_quantity_+%": 16,
     "map_item_drop_rarity_+%": 11,
     "map_pack_size_+%": 20,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": true
+    "modTier17": true,
+    "tagIds": [],
+    "modTags": [],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "(T17) エリアのレアモンスターはシェイパーに触れられている": {
     "mod": "(T17) エリアのレアモンスターはシェイパーに触れられている",
@@ -2326,13 +4346,24 @@
     "tradeStatIds": [
       "explicit.stat_2931889194"
     ],
+    "sourceIds": [
+      "MapUberModShaperTouched"
+    ],
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 11,
     "map_pack_size_+%": 20,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": true
+    "modTier17": true,
+    "tagIds": [],
+    "modTags": [],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "(T17) マップボスはシンセシスボスを伴う": {
     "mod": "(T17) マップボスはシンセシスボスを伴う",
@@ -2346,13 +4377,24 @@
     "tradeStatIds": [
       "explicit.stat_4150353141"
     ],
+    "sourceIds": [
+      "MapUberModSynthMiniboss"
+    ],
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 20,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": true
+    "modTier17": true,
+    "tagIds": [],
+    "modTags": [],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "(T17) モンスターに対するデバフは#%速く消える": {
     "mod": "(T17) モンスターに対するデバフは#%速く消える",
@@ -2366,13 +4408,30 @@
     "tradeStatIds": [
       "explicit.stat_1200027417"
     ],
+    "sourceIds": [
+      "MapUberModMonsterDebuffSpeed"
+    ],
     "map_item_drop_quantity_+%": 16,
     "map_item_drop_rarity_+%": 12,
     "map_pack_size_+%": 6,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 64,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": true
+    "modTier17": true,
+    "tagIds": [],
+    "modTags": [],
+    "reminderIds": [
+      "ReminderTextSlowTimeEffects"
+    ],
+    "reminderText": {
+      "ja": [
+        "(エフェクトは通常の消失速度の25%よりさらに消失速度が遅くなることはない)"
+      ],
+      "en": [
+        "(Effects cannot be slowed below 25% of their normal expiry rate)"
+      ]
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "(T17) エリアにはシアリング・エグザークのルーンが出現する": {
     "mod": "(T17) エリアにはシアリング・エグザークのルーンが出現する",
@@ -2386,13 +4445,24 @@
     "tradeStatIds": [
       "explicit.stat_2073168229"
     ],
+    "sourceIds": [
+      "MapUberModExarch"
+    ],
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 20,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": true
+    "modTier17": true,
+    "tagIds": [],
+    "modTags": [],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "(T17) メイヴェンはプレイヤーに干渉する": {
     "mod": "(T17) メイヴェンはプレイヤーに干渉する",
@@ -2406,13 +4476,24 @@
     "tradeStatIds": [
       "explicit.stat_1594156261"
     ],
+    "sourceIds": [
+      "MapUberModMavenFollower"
+    ],
     "map_item_drop_quantity_+%": 13,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 20,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": true
+    "modTier17": true,
+    "tagIds": [],
+    "modTags": [],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "(T17) #%の確率でレアモンスターは死亡時にフラクチャー化する": {
     "mod": "(T17) #%の確率でレアモンスターは死亡時にフラクチャー化する",
@@ -2426,13 +4507,24 @@
     "tradeStatIds": [
       "explicit.stat_3097694855"
     ],
+    "sourceIds": [
+      "MapUberModRareFracture"
+    ],
     "map_item_drop_quantity_+%": 19,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": true
+    "modTier17": true,
+    "tagIds": [],
+    "modTags": [],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "(T17) 味方に影響する、プレイヤースキルによるオーラは敵にも影響する": {
     "mod": "(T17) 味方に影響する、プレイヤースキルによるオーラは敵にも影響する",
@@ -2446,13 +4538,24 @@
     "tradeStatIds": [
       "explicit.stat_2156372077"
     ],
+    "sourceIds": [
+      "MapUberModAurasAffectMonsters"
+    ],
     "map_item_drop_quantity_+%": 16,
     "map_item_drop_rarity_+%": 54,
     "map_pack_size_+%": 5,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": true
+    "modTier17": true,
+    "tagIds": [],
+    "modTags": [],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "(T17) エリアのレアモンスターは死亡時に一時的に生き返る": {
     "mod": "(T17) エリアのレアモンスターは死亡時に一時的に生き返る",
@@ -2466,13 +4569,24 @@
     "tradeStatIds": [
       "explicit.stat_1593763475"
     ],
+    "sourceIds": [
+      "MapUberModRaresLastGasp"
+    ],
     "map_item_drop_quantity_+%": 16,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 17,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": true
+    "modTier17": true,
+    "tagIds": [],
+    "modTags": [],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "(T17) エリアにはラビリンスの罠が出現する": {
     "mod": "(T17) エリアにはラビリンスの罠が出現する",
@@ -2486,13 +4600,24 @@
     "tradeStatIds": [
       "explicit.stat_2577650864"
     ],
+    "sourceIds": [
+      "MapUberModLabyrinthHazards"
+    ],
     "map_item_drop_quantity_+%": 19,
     "map_item_drop_rarity_+%": 54,
     "map_pack_size_+%": 5,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": true
+    "modTier17": true,
+    "tagIds": [],
+    "modTags": [],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "(T17) プレイヤーは適用されるフラスコの効果が#%低下する": {
     "mod": "(T17) プレイヤーは適用されるフラスコの効果が#%低下する",
@@ -2506,13 +4631,24 @@
     "tradeStatIds": [
       "explicit.stat_1207482628"
     ],
+    "sourceIds": [
+      "MapUberModLessFlaskEffect"
+    ],
     "map_item_drop_quantity_+%": 16,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 47,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 0,
-    "modTier17": true
+    "modTier17": true,
+    "tagIds": [],
+    "modTags": [],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   },
   "(T17) エリアの移動する呪印領域がパッチ状に存在し、ランダムな呪印を付与する": {
     "mod": "(T17) エリアの移動する呪印領域がパッチ状に存在し、ランダムな呪印を付与する",
@@ -2526,12 +4662,23 @@
     "tradeStatIds": [
       "explicit.stat_2796704737"
     ],
+    "sourceIds": [
+      "MapUberModPlayerMarked"
+    ],
     "map_item_drop_quantity_+%": 16,
     "map_item_drop_rarity_+%": 8,
     "map_pack_size_+%": 5,
     "map_map_item_drop_chance_+%_final_from_uber_mod": 0,
     "map_currency_drop_chance_+%_final_from_uber_mod": 0,
     "map_scarab_drop_chance_+%_final_from_uber_mod": 36,
-    "modTier17": true
+    "modTier17": true,
+    "tagIds": [],
+    "modTags": [],
+    "reminderIds": [],
+    "reminderText": {
+      "ja": [],
+      "en": []
+    },
+    "detailsSource": "PoE-DB/export/game/mod_details.json"
   }
 }

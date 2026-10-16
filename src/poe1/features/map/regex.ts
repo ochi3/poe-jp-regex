@@ -15,6 +15,12 @@ function addEffectItem(key, value) {
 
     const effectItem = document.createElement('div');
     effectItem.classList.add('effect-item');
+    const selectedRegex = currentLanguage === 'ja' ? value.Regex : value.engRegex;
+    if (!selectedRegex) {
+        checkbox.disabled = true;
+        effectItem.setAttribute('aria-disabled', 'true');
+        effectItem.title = currentLanguage === 'ja' ? 'Regex未設定：手動で設定してください' : 'Regex is not configured';
+    }
     effectItem.dataset.modKey = key;  // キーをdata属性に保持
     
     // 初期状態のクラスを設定
@@ -85,7 +91,29 @@ function addEffectItem(key, value) {
     label.appendChild(checkbox);
     label.appendChild(textSpan);
 
-    effectItem.appendChild(label);
+    const content = document.createElement('div');
+    content.className = 'mod-label-block';
+    content.style.flex = '1';
+    content.style.minWidth = '0';
+    content.appendChild(label);
+    const extra = document.createElement('div');
+    extra.className = 'mod-extra-details';
+    const tags = (value.modTags || []).map(tag => tag[currentLanguage]).filter(Boolean);
+    if (tags.length) {
+        const tagText = document.createElement('div');
+        tagText.className = 'mod-tags';
+        tagText.textContent = tags.join(' · ');
+        extra.appendChild(tagText);
+    }
+    for (const text of value.reminderText?.[currentLanguage] || []) {
+        const reminder = document.createElement('p');
+        reminder.className = 'mod-reminder';
+        reminder.textContent = text;
+        extra.appendChild(reminder);
+    }
+    if (getElement('showModDetailsCheckbox')?.checked === false) extra.classList.add('hidden');
+    content.appendChild(extra);
+    effectItem.appendChild(content);
 
     // メタデータバッジ (数量、パックサイズなど)
     const badgeContainer = document.createElement('div');
@@ -164,6 +192,7 @@ function updateCombinedRegex() {
         const mod = ModList[key];
         if (mod) {
             const regex = currentLanguage === 'ja' ? mod.Regex : mod.engRegex;
+            if (!regex) return;
             if (state === 'ng') {
                 ngResults.push(regex);
             } else {

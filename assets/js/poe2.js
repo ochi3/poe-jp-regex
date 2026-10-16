@@ -339,8 +339,8 @@ function filterEffects() {
         const displayedText = textSpan ? textSpan.textContent.toLowerCase() : '';
         const modKey = effects[i].dataset.modKey;
         const mod = modKey ? ModList[modKey] : null;
-        const rawJa = mod ? (mod.mod || '') : '';
-        const rawEn = mod ? (mod.engMod || '') : '';
+        const rawJa = mod ? [mod.mod || '', ...(mod.modTags || []).map(tag => tag.ja), ...(mod.reminderText?.ja || [])].join(' ') : '';
+        const rawEn = mod ? [mod.engMod || '', ...(mod.modTags || []).map(tag => tag.en), ...(mod.reminderText?.en || [])].join(' ') : '';
         const match = terms.every(term => displayedText.includes(term) ||
             rawJa.toLowerCase().includes(term) ||
             rawEn.toLowerCase().includes(term));

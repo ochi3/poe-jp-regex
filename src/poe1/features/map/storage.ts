@@ -162,7 +162,7 @@ function toggleModDetails() {
     const showDetails = getElement('showModDetailsCheckbox').checked;
     writeStoredText('showModDetails', String(showDetails));
     
-    document.querySelectorAll<HTMLElement>('.badge-container').forEach(container => {
+    document.querySelectorAll<HTMLElement>('.badge-container, .mod-extra-details').forEach(container => {
         if (showDetails) {
             container.classList.remove('hidden');
         } else {

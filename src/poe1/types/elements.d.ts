@@ -1,5 +1,8 @@
 /** Element IDs in poe1.html. Update when the page structure changes. */
 interface PageElements {
+  "vendor-accessory-options": HTMLElement;
+  "vendor-extra-options": HTMLElement;
+  "vendor-link-colors": HTMLElement;
   "sideMenu": HTMLElement;
   "changelogNewBadge": HTMLElement;
   "contentArea": HTMLElement;

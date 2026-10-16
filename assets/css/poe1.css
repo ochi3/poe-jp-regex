@@ -377,3 +377,48 @@
         min-height: 280px;
     }
 }
+
+/* Metadata exported from the local PoE-DB client data. */
+.mod-extra-details {margin-top: 6px; font-size: 0.85em; line-height: 1.5; color: var(--text-secondary); overflow-wrap: anywhere;}
+.mod-extra-details:empty, .mod-extra-details.hidden {display:none;}
+.mod-tags {color: var(--accent-primary);}
+.mod-reminder {margin: 4px 0 0;}
+#vendorContent .vendor-act-layout {
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr) minmax(0, 1.4fr);
+  align-items: start;
+  gap: 24px;
+}
+#vendorContent .vendor-act-layout > * { min-width: 0; }
+#vendorContent .vendor-act-layout h3 {
+  font-size: 1.17em;
+  color: var(--accent-primary);
+  border-bottom: 2px solid var(--accent-primary);
+  padding-bottom: 8px;
+  margin: 0 0 16px;
+}
+#vendorContent .vendor-main-options section { margin-top: 24px; }
+#vendorContent .vendor-option { display: flex; align-items: baseline; gap: 6px; margin-bottom: 12px; }
+#vendor-accessory-options {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px 6px;
+}
+#vendor-accessory-options h4 { grid-column: 1 / -1; margin: 8px 0 2px; }
+#vendorContent #vendor-accessory-options .vendor-option {
+  min-width: 0;
+  margin-bottom: 0;
+  gap: 4px;
+  font-size: 0.85em;
+  overflow-wrap: anywhere;
+}
+#vendor-accessory-options input { flex-shrink: 0; }
+#vendorContent .vendor-link-colors { margin-top: 24px; }
+#vendorContent .vendor-link-colors summary { cursor: pointer; color: var(--accent-primary); padding: 12px 0; }
+#vendorContent .vendor-color-options { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; padding-top: 12px; }
+@media (max-width: 900px) {
+  #vendorContent .vendor-act-layout { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  #vendorContent .vendor-weapon-section { grid-column: 1 / -1; }
+}
+@media (max-width: 600px) {
+  #vendorContent .vendor-act-layout { grid-template-columns: minmax(0, 1fr); }
+}

@@ -30,5 +30,7 @@ jobs:
         with:
           python-version: '3.x'
       - run: python tests/update_prices_test.py
+      - run: python tests/mod_identity_test.py
+      - run: python tests/mod_details_test.py
       - name: Verify committed bundles
         run: git diff --exit-code -- assets/js
