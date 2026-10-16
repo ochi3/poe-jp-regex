@@ -31,7 +31,7 @@
     "description": "ノーマルアイテムを、保証されたモッドを1個含むレアアイテムにアップグレードする。",
     "enDescription": "Upgrades a normal item to rare with one guaranteed property",
     "attribute": "",
-    "chaosValue": "1",
+    "chaosValue": "10.33",
     "regex": "呻.*憎悪",
     "enRegex": "Wa.*red"
   },
@@ -40,7 +40,7 @@
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "1",
+    "chaosValue": "0.8649",
     "regex": "叫.*憎悪",
     "enRegex": "Sc.*red"
   },
@@ -49,7 +49,7 @@
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "1.61",
+    "chaosValue": "2.43",
     "regex": "喚.*憎悪",
     "enRegex": "Sh.*red"
   },
@@ -58,7 +58,7 @@
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "4.26",
+    "chaosValue": "4.23",
     "regex": "慟.*憎悪",
     "enRegex": "De.*red"
   },
@@ -112,7 +112,7 @@
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "1.55",
+    "chaosValue": "2.04",
     "regex": "喚.*悲痛",
     "enRegex": "Sh.*oe"
   },
@@ -121,7 +121,7 @@
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "9.73",
+    "chaosValue": "10.32",
     "regex": "慟.*悲痛",
     "enRegex": "De.*oe"
   },
@@ -166,7 +166,7 @@
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "0.287",
+    "chaosValue": "1.09",
     "regex": "叫.*欲",
     "enRegex": "Sc.*eed"
   },
@@ -175,7 +175,7 @@
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "3.89",
+    "chaosValue": "1",
     "regex": "喚.*欲",
     "enRegex": "Sh.*eed"
   },
@@ -184,7 +184,7 @@
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "3.39",
+    "chaosValue": "4.21",
     "regex": "慟.*欲",
     "enRegex": "De.*reed"
   },
@@ -229,7 +229,7 @@
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "0.25",
+    "chaosValue": "0.2529",
     "regex": "叫.*侮蔑",
     "enRegex": "Sc.*pt"
   },
@@ -238,7 +238,7 @@
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "9.81",
+    "chaosValue": "6.93",
     "regex": "喚.*侮蔑",
     "enRegex": "Sh.*pt"
   },
@@ -247,7 +247,7 @@
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "10.17",
+    "chaosValue": "10.06",
     "regex": "慟.*侮蔑",
     "enRegex": "De.*pt"
   },
@@ -283,7 +283,7 @@
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "0.2597",
+    "chaosValue": "0.2566",
     "regex": "叫.*哀",
     "enRegex": "Sc.*ow"
   },
@@ -292,7 +292,7 @@
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "1.29",
+    "chaosValue": "1.24",
     "regex": "喚.*哀",
     "enRegex": "Sh.*ow"
   },
@@ -301,7 +301,7 @@
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "6.63",
+    "chaosValue": "6.67",
     "regex": "慟.*哀",
     "enRegex": "De.*ow"
   },
@@ -337,7 +337,7 @@
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "1.31",
+    "chaosValue": "1.37",
     "regex": "叫.*り",
     "enRegex": "Sc.*ger"
   },
@@ -346,7 +346,7 @@
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "0.8788",
+    "chaosValue": "1",
     "regex": "喚.*り",
     "enRegex": "Sh.*ger"
   },
@@ -355,7 +355,7 @@
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "5",
+    "chaosValue": "4.29",
     "regex": "慟.*り",
     "enRegex": "De.*ger"
   },
@@ -382,7 +382,7 @@
     "description": "ノーマルアイテムを、保証されたモッドを1個含むレアアイテムにアップグレードする。",
     "enDescription": "Upgrades a normal item to rare with one guaranteed property",
     "attribute": "",
-    "chaosValue": "1",
+    "chaosValue": "1.33",
     "regex": "呻.*悩",
     "enRegex": "Wa.*ent"
   },
@@ -391,7 +391,7 @@
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "1.56",
+    "chaosValue": "1",
     "regex": "叫.*悩",
     "enRegex": "Sc.*ent"
   },
@@ -400,7 +400,7 @@
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "4.81",
+    "chaosValue": "1",
     "regex": "喚.*悩",
     "enRegex": "Sh.*ent"
   },
@@ -409,7 +409,7 @@
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "4.06",
+    "chaosValue": "4.03",
     "regex": "慟.*悩",
     "enRegex": "De.*ent"
   },
@@ -418,7 +418,7 @@
     "description": "ノーマルアイテムを、保証されたモッドを1個含むレアアイテムにアップグレードする。",
     "enDescription": "Upgrades a normal item to rare with one guaranteed property",
     "attribute": "",
-    "chaosValue": "1.5",
+    "chaosValue": "1.67",
     "regex": "呟き.*安",
     "enRegex": "Mu.*ar"
   },
@@ -436,7 +436,7 @@
     "description": "ノーマルアイテムを、保証されたモッドを1個含むレアアイテムにアップグレードする。",
     "enDescription": "Upgrades a normal item to rare with one guaranteed property",
     "attribute": "",
-    "chaosValue": "1.14",
+    "chaosValue": "2",
     "regex": "呻.*安",
     "enRegex": "Wa.*ar"
   },
@@ -463,7 +463,7 @@
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "5.14",
+    "chaosValue": "5.1",
     "regex": "慟.*安",
     "enRegex": "De.*ear"
   },
@@ -508,7 +508,7 @@
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "3.46",
+    "chaosValue": "0.8947",
     "regex": "慟.*苦痛",
     "enRegex": "De.*ring"
   },
@@ -517,7 +517,7 @@
     "description": "ノーマルアイテムを、保証されたモッドを1個含むレアアイテムにアップグレードする。",
     "enDescription": "Upgrades a normal item to rare with one guaranteed property",
     "attribute": "",
-    "chaosValue": "1.14",
+    "chaosValue": "1.67",
     "regex": "嘆.*激",
     "enRegex": "We.*age"
   },
@@ -526,7 +526,7 @@
     "description": "ノーマルアイテムを、保証されたモッドを1個含むレアアイテムにアップグレードする。",
     "enDescription": "Upgrades a normal item to rare with one guaranteed property",
     "attribute": "",
-    "chaosValue": "2.69",
+    "chaosValue": "2.18",
     "regex": "呻.*激",
     "enRegex": "Wa.*age"
   },
@@ -535,7 +535,7 @@
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "1.53",
+    "chaosValue": "2.53",
     "regex": "叫.*激",
     "enRegex": "Sc.*age"
   },
@@ -544,7 +544,7 @@
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "4.89",
+    "chaosValue": "2.31",
     "regex": "喚.*激",
     "enRegex": "Sh.*age"
   },
@@ -553,7 +553,7 @@
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "9.87",
+    "chaosValue": "9.67",
     "regex": "慟.*激",
     "enRegex": "De.*age"
   },
@@ -589,7 +589,7 @@
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "0.169",
+    "chaosValue": "0.1875",
     "regex": "喚.*憤",
     "enRegex": "Sh.*rath"
   },
@@ -598,7 +598,7 @@
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "4.16",
+    "chaosValue": "4.25",
     "regex": "慟.*憤",
     "enRegex": "De.*rath"
   },
@@ -607,7 +607,7 @@
     "description": "ノーマルアイテムを、保証されたモッドを1個含むレアアイテムにアップグレードする。",
     "enDescription": "Upgrades a normal item to rare with one guaranteed property",
     "attribute": "",
-    "chaosValue": "2",
+    "chaosValue": "16",
     "regex": "嘆.*心",
     "enRegex": "We.*bt"
   },
@@ -625,7 +625,7 @@
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "0.25",
+    "chaosValue": "1.07",
     "regex": "叫.*心",
     "enRegex": "Sc.*bt"
   },
@@ -643,7 +643,7 @@
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "3.11",
+    "chaosValue": "1.93",
     "regex": "慟.*心",
     "enRegex": "De.*bt"
   },
@@ -670,7 +670,7 @@
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "1",
+    "chaosValue": "1.21",
     "regex": "喚.*悶",
     "enRegex": "Sh.*sh"
   },
@@ -706,7 +706,7 @@
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "15.48",
+    "chaosValue": "1.14",
     "regex": "喚.*嫌悪",
     "enRegex": "Sh.*hing"
   },
@@ -715,7 +715,7 @@
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "4.4",
+    "chaosValue": "5.59",
     "regex": "慟.*嫌悪",
     "enRegex": "De.*hing"
   },
@@ -751,7 +751,7 @@
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "5.46",
+    "chaosValue": "6.93",
     "regex": "慟.*意",
     "enRegex": "De.*pite"
   },
@@ -769,7 +769,7 @@
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "13.45",
+    "chaosValue": "10",
     "regex": "叫.*狂",
     "enRegex": "Sc.*al"
   },
@@ -778,7 +778,7 @@
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "2.59",
+    "chaosValue": "3.34",
     "regex": "喚.*狂",
     "enRegex": "Sh.*al"
   },
@@ -787,7 +787,7 @@
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "5.17",
+    "chaosValue": "5.37",
     "regex": "慟.*狂",
     "enRegex": "De.*eal"
   },
@@ -814,7 +814,7 @@
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "6.99",
+    "chaosValue": "6.93",
     "regex": "慟.*惨",
     "enRegex": "De.*ry"
   },
@@ -823,7 +823,7 @@
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "1.65",
+    "chaosValue": "2.67",
     "regex": "叫.*怖",
     "enRegex": "Sc.*ad"
   },
@@ -832,7 +832,7 @@
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "11.26",
+    "chaosValue": "8.58",
     "regex": "喚.*怖",
     "enRegex": "Sh.*ad"
   },
@@ -841,7 +841,7 @@
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "12.95",
+    "chaosValue": "0.4828",
     "regex": "慟.*怖",
     "enRegex": "De.*ad"
   },
@@ -850,7 +850,7 @@
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "0.4",
+    "chaosValue": "0.3951",
     "regex": "叫.*軽蔑",
     "enRegex": "Scr.*rn"
   },
@@ -859,7 +859,7 @@
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "6.15",
+    "chaosValue": "3",
     "regex": "喚.*軽蔑",
     "enRegex": "Sh.*rn"
   },
@@ -868,7 +868,7 @@
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "24.82",
+    "chaosValue": "26.43",
     "regex": "哭.*軽",
     "enRegex": "De.*rn"
   },
@@ -877,7 +877,7 @@
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "0.3333",
+    "chaosValue": "0.35",
     "regex": "叫.*妬",
     "enRegex": "Sc.*vy"
   },
@@ -886,7 +886,7 @@
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "9.54",
+    "chaosValue": "2.45",
     "regex": "喚.*妬",
     "enRegex": "Sh.*vy"
   },
@@ -895,7 +895,7 @@
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "6.31",
+    "chaosValue": "6.28",
     "regex": "慟.*妬",
     "enRegex": "De.*vy"
   },
@@ -904,7 +904,7 @@
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "24.36",
+    "chaosValue": "25.43",
     "regex": "ヒス",
     "enRegex": " Hy"
   },
@@ -913,7 +913,7 @@
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "27.97",
+    "chaosValue": "28.64",
     "regex": "狂気",
     "enRegex": "f I"
   },
@@ -922,7 +922,7 @@
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "40.61",
+    "chaosValue": "39.22",
     "regex": "戦慄",
     "enRegex": " Ho"
   },
@@ -931,7 +931,7 @@
     "description": "ノーマルアイテムをレアアイテムにアップグレードまたはレアアイテムをリフォージし、保証されたモッドを1個含むレアアイテムにする。",
     "enDescription": "Upgrades a normal item to rare or reforges a rare item, guaranteeing one property",
     "attribute": "",
-    "chaosValue": "32.32",
+    "chaosValue": "22.68",
     "regex": "錯乱",
     "enRegex": "Del"
   },
