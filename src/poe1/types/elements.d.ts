@@ -26,6 +26,7 @@ interface PageElements {
   "ngModCheckbox": HTMLInputElement;
   "mapTierCheckbox": HTMLInputElement;
   "showModDetailsCheckbox": HTMLInputElement;
+  "showModBadgesCheckbox": HTMLInputElement;
   "effectSearch": HTMLInputElement;
   "modSortSelect": HTMLSelectElement;
   "ModListResult": HTMLElement;

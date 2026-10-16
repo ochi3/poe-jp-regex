@@ -98,13 +98,6 @@ function addEffectItem(key, value) {
     content.appendChild(label);
     const extra = document.createElement('div');
     extra.className = 'mod-extra-details';
-    const tags = (value.modTags || []).map(tag => tag[currentLanguage]).filter(Boolean);
-    if (tags.length) {
-        const tagText = document.createElement('div');
-        tagText.className = 'mod-tags';
-        tagText.textContent = tags.join(' · ');
-        extra.appendChild(tagText);
-    }
     for (const text of value.reminderText?.[currentLanguage] || []) {
         const reminder = document.createElement('p');
         reminder.className = 'mod-reminder';
@@ -167,8 +160,8 @@ function addEffectItem(key, value) {
         badgeContainer.appendChild(scarabBadge);
     }
 
-    const showDetails = getElement('showModDetailsCheckbox') ? getElement('showModDetailsCheckbox').checked : true;
-    if (!showDetails) {
+    const showBadges = getElement('showModBadgesCheckbox')?.checked !== false;
+    if (!showBadges) {
         badgeContainer.classList.add('hidden');
     }
 

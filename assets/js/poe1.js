@@ -1556,13 +1556,6 @@ function addEffectItem(key, value) {
     content.appendChild(label);
     const extra = document.createElement('div');
     extra.className = 'mod-extra-details';
-    const tags = (value.modTags || []).map(tag => tag[currentLanguage]).filter(Boolean);
-    if (tags.length) {
-        const tagText = document.createElement('div');
-        tagText.className = 'mod-tags';
-        tagText.textContent = tags.join(' · ');
-        extra.appendChild(tagText);
-    }
     for (const text of value.reminderText?.[currentLanguage] || []) {
         const reminder = document.createElement('p');
         reminder.className = 'mod-reminder';
@@ -1623,8 +1616,8 @@ function addEffectItem(key, value) {
         scarabBadge.textContent = `スカラベ ${value["map_scarab_drop_chance_+%_final_from_uber_mod"]}`;
         badgeContainer.appendChild(scarabBadge);
     }
-    const showDetails = getElement('showModDetailsCheckbox') ? getElement('showModDetailsCheckbox').checked : true;
-    if (!showDetails) {
+    const showBadges = getElement('showModBadgesCheckbox')?.checked !== false;
+    if (!showBadges) {
         badgeContainer.classList.add('hidden');
     }
     effectItem.appendChild(badgeContainer);
@@ -1949,7 +1942,7 @@ function updateModList() {
 function toggleModDetails() {
     const showDetails = getElement('showModDetailsCheckbox').checked;
     writeStoredText('showModDetails', String(showDetails));
-    document.querySelectorAll('.badge-container, .mod-extra-details').forEach(container => {
+    document.querySelectorAll('#ModList .mod-extra-details').forEach(container => {
         if (showDetails) {
             container.classList.remove('hidden');
         }
@@ -1958,9 +1951,18 @@ function toggleModDetails() {
         }
     });
 }
+function toggleModBadges() {
+    const showBadges = getElement('showModBadgesCheckbox').checked;
+    writeStoredText('showModBadges', String(showBadges));
+    document.querySelectorAll('#ModList .badge-container').forEach(container => {
+        container.classList.toggle('hidden', !showBadges);
+    });
+}
 function loadModDetailsState() {
     const showDetails = readStoredText('showModDetails') !== 'false'; // デフォルトは表示
     getElement('showModDetailsCheckbox').checked = showDetails;
+    // Preserve the old combined visibility until the badge setting is chosen separately.
+    getElement('showModBadgesCheckbox').checked = (readStoredText('showModBadges') ?? String(showDetails)) !== 'false';
 }
 function loadModCheckboxState() {
     const saved = readStoredText('modCheckboxState');

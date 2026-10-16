@@ -162,7 +162,7 @@ function toggleModDetails() {
     const showDetails = getElement('showModDetailsCheckbox').checked;
     writeStoredText('showModDetails', String(showDetails));
     
-    document.querySelectorAll<HTMLElement>('.badge-container, .mod-extra-details').forEach(container => {
+    document.querySelectorAll<HTMLElement>('#ModList .mod-extra-details').forEach(container => {
         if (showDetails) {
             container.classList.remove('hidden');
         } else {
@@ -171,9 +171,19 @@ function toggleModDetails() {
     });
 }
 
+function toggleModBadges() {
+    const showBadges = getElement('showModBadgesCheckbox').checked;
+    writeStoredText('showModBadges', String(showBadges));
+    document.querySelectorAll<HTMLElement>('#ModList .badge-container').forEach(container => {
+        container.classList.toggle('hidden', !showBadges);
+    });
+}
+
 function loadModDetailsState() {
     const showDetails = readStoredText('showModDetails') !== 'false'; // デフォルトは表示
     getElement('showModDetailsCheckbox').checked = showDetails;
+    // Preserve the old combined visibility until the badge setting is chosen separately.
+    getElement('showModBadgesCheckbox').checked = (readStoredText('showModBadges') ?? String(showDetails)) !== 'false';
 }
 
 function loadModCheckboxState() {
