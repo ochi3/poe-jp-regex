@@ -6363,13 +6363,13 @@ function createDetailedView(profile, type) {
             .map(([key]) => key);
         if (enabledExcludeWeapons.length > 0) {
             const weaponNames = isEn ? {
-                claw: 'Claw', dagger: 'Dagger', wand: 'Wand', oneHandSword: '1H Sword',
+                claw: 'Claw', dagger: 'Dagger', wand: 'Wand', goatHorn: "Goat's Horn", oneHandSword: '1H Sword',
                 thrustingSword: 'Thrusting Sword', oneHandAxe: '1H Axe', oneHandMace: '1H Mace',
                 sceptre: 'Sceptre', runeDagger: 'Rune Dagger', bow: 'Bow', staff: 'Staff',
                 twoHandSword: '2H Sword', twoHandAxe: '2H Axe', twoHandMace: '2H Mace',
                 warstaff: 'Warstaff', shield: 'Shield'
             } : {
-                claw: '鉤爪', dagger: '短剣', wand: 'ワンド', oneHandSword: '片手剣',
+                claw: '鉤爪', dagger: '短剣', wand: 'ワンド', goatHorn: 'ヤギの角', oneHandSword: '片手剣',
                 thrustingSword: '刺突剣', oneHandAxe: '片手斧', oneHandMace: '片手メイス',
                 sceptre: 'セプター', runeDagger: 'ルーンの短剣', bow: '弓', staff: 'スタッフ',
                 twoHandSword: '両手剣', twoHandAxe: '両手斧', twoHandMace: '両手メイス',
@@ -6417,12 +6417,12 @@ function createDetailedView(profile, type) {
             .map(([key]) => key);
         if (enabledWeapons.length > 0) {
             const weaponNames = isEn ? {
-                claw: 'Claw', dagger: 'Dagger', wand: 'Wand', oneHandSword: '1H Sword',
+                claw: 'Claw', dagger: 'Dagger', wand: 'Wand', goatHorn: "Goat's Horn", oneHandSword: '1H Sword',
                 thrustingSword: 'Thrusting Sword', oneHandAxe: '1H Axe', oneHandMace: '1H Mace',
                 sceptre: 'Sceptre', runeDagger: 'Rune Dagger', bow: 'Bow', staff: 'Staff',
                 twoHandSword: '2H Sword', twoHandAxe: '2H Axe', twoHandMace: '2H Mace', warstaff: 'Warstaff'
             } : {
-                claw: '鉤爪', dagger: '短剣', wand: 'ワンド', oneHandSword: '片手剣',
+                claw: '鉤爪', dagger: '短剣', wand: 'ワンド', goatHorn: 'ヤギの角', oneHandSword: '片手剣',
                 thrustingSword: '刺突剣', oneHandAxe: '片手斧', oneHandMace: '片手メイス',
                 sceptre: 'セプター', runeDagger: 'ルーンの短剣', bow: '弓', staff: 'スタッフ',
                 twoHandSword: '両手剣', twoHandAxe: '両手斧', twoHandMace: '両手メイス', warstaff: 'ウォースタッフ'
@@ -7622,11 +7622,11 @@ const VENDOR_ACCESSORY_OPTIONS = {
     rusticSash: { category: 'ベルト', label: '素朴な飾り帯', pattern: '朴な飾' },
     heavyBelt: { category: 'ベルト', label: 'ヘビーベルト', pattern: 'ビーベ' },
     leatherBelt: { category: 'ベルト', label: '革のベルト', pattern: '革のベ' },
+    rubyRing: { category: '指輪', label: 'ルビー', pattern: 'ーの指' },
+    sapphireRing: { category: '指輪', label: 'サファイア', pattern: 'アの指' },
+    topazRing: { category: '指輪', label: 'トパーズ', pattern: 'ズの指' },
     ironRing: { category: '指輪', label: '鉄', pattern: '鉄の指' },
     coralRing: { category: '指輪', label: '珊瑚', pattern: '瑚の指' },
-    topazRing: { category: '指輪', label: 'トパーズ', pattern: 'ズの指' },
-    sapphireRing: { category: '指輪', label: 'サファイア', pattern: 'アの指' },
-    rubyRing: { category: '指輪', label: 'ルビー', pattern: 'ーの指' },
 };
 const VENDOR_EXTRA_OPTIONS = {
     allGem: { label: '全スキルジェム +1', pattern: '全スキ.*ム +' },
@@ -7742,6 +7742,7 @@ const WEAPON_SUFFIX_GROUPS = [
 ];
 /** 単独武器の Regex（従来どおり） */
 const WEAPON_SINGLE_PATTERNS = {
+    goatHorn: 'ギの角',
     claw: '^鉤爪',
     wand: ' wand|s horn',
     thrustingSword: '^刺突剣',
@@ -8014,6 +8015,7 @@ function loadVendorSettings() {
     }
 }
 function applyVendorSettings() {
+    getElement('vendor-weapon-goatHorn').checked = vendorSettings.weapon?.goatHorn === true;
     for (const [group, options] of [['accessory', VENDOR_ACCESSORY_OPTIONS], ['extra', VENDOR_EXTRA_OPTIONS]]) {
         for (const key of Object.keys(options)) {
             const checkbox = getElement(`vendor-${group}-${key}`);

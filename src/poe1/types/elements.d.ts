@@ -159,6 +159,7 @@ interface PageElements {
   "vendor-weapon-claw": HTMLInputElement;
   "vendor-weapon-dagger": HTMLInputElement;
   "vendor-weapon-wand": HTMLInputElement;
+  "vendor-weapon-goatHorn": HTMLInputElement;
   "vendor-weapon-oneHandSword": HTMLInputElement;
   "vendor-weapon-thrustingSword": HTMLInputElement;
   "vendor-weapon-oneHandAxe": HTMLInputElement;

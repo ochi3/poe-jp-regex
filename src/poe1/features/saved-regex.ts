@@ -796,13 +796,13 @@ function createDetailedView(profile, type) {
       .map(([key]) => key);
     if (enabledExcludeWeapons.length > 0) {
       const weaponNames = isEn ? {
-        claw: 'Claw', dagger: 'Dagger', wand: 'Wand', oneHandSword: '1H Sword',
+        claw: 'Claw', dagger: 'Dagger', wand: 'Wand', goatHorn: "Goat's Horn", oneHandSword: '1H Sword',
         thrustingSword: 'Thrusting Sword', oneHandAxe: '1H Axe', oneHandMace: '1H Mace',
         sceptre: 'Sceptre', runeDagger: 'Rune Dagger', bow: 'Bow', staff: 'Staff',
         twoHandSword: '2H Sword', twoHandAxe: '2H Axe', twoHandMace: '2H Mace',
         warstaff: 'Warstaff', shield: 'Shield'
       } : {
-        claw: '鉤爪', dagger: '短剣', wand: 'ワンド', oneHandSword: '片手剣',
+        claw: '鉤爪', dagger: '短剣', wand: 'ワンド', goatHorn: 'ヤギの角', oneHandSword: '片手剣',
         thrustingSword: '刺突剣', oneHandAxe: '片手斧', oneHandMace: '片手メイス',
         sceptre: 'セプター', runeDagger: 'ルーンの短剣', bow: '弓', staff: 'スタッフ',
         twoHandSword: '両手剣', twoHandAxe: '両手斧', twoHandMace: '両手メイス',
@@ -838,12 +838,12 @@ function createDetailedView(profile, type) {
       .map(([key]) => key);
     if (enabledWeapons.length > 0) {
       const weaponNames = isEn ? {
-        claw: 'Claw', dagger: 'Dagger', wand: 'Wand', oneHandSword: '1H Sword',
+        claw: 'Claw', dagger: 'Dagger', wand: 'Wand', goatHorn: "Goat's Horn", oneHandSword: '1H Sword',
         thrustingSword: 'Thrusting Sword', oneHandAxe: '1H Axe', oneHandMace: '1H Mace',
         sceptre: 'Sceptre', runeDagger: 'Rune Dagger', bow: 'Bow', staff: 'Staff',
         twoHandSword: '2H Sword', twoHandAxe: '2H Axe', twoHandMace: '2H Mace', warstaff: 'Warstaff'
       } : {
-        claw: '鉤爪', dagger: '短剣', wand: 'ワンド', oneHandSword: '片手剣',
+        claw: '鉤爪', dagger: '短剣', wand: 'ワンド', goatHorn: 'ヤギの角', oneHandSword: '片手剣',
         thrustingSword: '刺突剣', oneHandAxe: '片手斧', oneHandMace: '片手メイス',
         sceptre: 'セプター', runeDagger: 'ルーンの短剣', bow: '弓', staff: 'スタッフ',
         twoHandSword: '両手剣', twoHandAxe: '両手斧', twoHandMace: '両手メイス', warstaff: 'ウォースタッフ'

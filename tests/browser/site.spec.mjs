@@ -21,10 +21,12 @@ test('ACT options preserve profiles and keep legacy colors collapsed below weapo
     await checkbox.uncheck();
   }
   await page.locator('#vendor-accessory-ironRing').check();
+  await page.locator('#vendor-weapon-goatHorn').check();
   await page.locator('#vendor-extra-fireGem').check();
   await page.locator('#vendor-extra-coldDotMulti').check();
   const output=page.locator('#vendorRegexOutput');
   await expect(output).toContainText('鉄の指');
+  await expect(output).toContainText('ギの角');
   await expect(output).toContainText('ての火ス');
   await expect(output).toContainText('^冷気継.*率 \\+');
   const before=await output.textContent();
@@ -38,9 +40,11 @@ test('ACT options preserve profiles and keep legacy colors collapsed below weapo
   await page.getByRole('button',{name:'保存',exact:true}).filter({visible:true}).click();
   await page.reload();
   await expect(page.locator('#vendor-accessory-ironRing')).toBeChecked();
+  await expect(page.locator('#vendor-weapon-goatHorn')).toBeChecked();
   await expect(page.locator('#vendor-extra-fireGem')).toBeChecked();
   await page.getByRole('button',{name:'リセット',exact:true}).filter({visible:true}).click();
   await expect(page.locator('#vendor-accessory-ironRing')).not.toBeChecked();
+  await expect(page.locator('#vendor-weapon-goatHorn')).not.toBeChecked();
   await expect(page.locator('#vendor-extra-fireGem')).not.toBeChecked();
   await page.locator('#vendorProfileList').selectOption('ACT new options');
   await expect(output).toHaveText(before);

@@ -13,11 +13,11 @@ const VENDOR_ACCESSORY_OPTIONS = {
   rusticSash: { category: 'ベルト', label: '素朴な飾り帯', pattern: '朴な飾' },
   heavyBelt: { category: 'ベルト', label: 'ヘビーベルト', pattern: 'ビーベ' },
   leatherBelt: { category: 'ベルト', label: '革のベルト', pattern: '革のベ' },
+  rubyRing: { category: '指輪', label: 'ルビー', pattern: 'ーの指' },
+  sapphireRing: { category: '指輪', label: 'サファイア', pattern: 'アの指' },
+  topazRing: { category: '指輪', label: 'トパーズ', pattern: 'ズの指' },
   ironRing: { category: '指輪', label: '鉄', pattern: '鉄の指' },
   coralRing: { category: '指輪', label: '珊瑚', pattern: '瑚の指' },
-  topazRing: { category: '指輪', label: 'トパーズ', pattern: 'ズの指' },
-  sapphireRing: { category: '指輪', label: 'サファイア', pattern: 'アの指' },
-  rubyRing: { category: '指輪', label: 'ルビー', pattern: 'ーの指' },
 };
 const VENDOR_EXTRA_OPTIONS = {
   allGem: { label: '全スキルジェム +1', pattern: '全スキ.*ム +' },
@@ -137,6 +137,7 @@ const WEAPON_SUFFIX_GROUPS = [
 
 /** 単独武器の Regex（従来どおり） */
 const WEAPON_SINGLE_PATTERNS = {
+  goatHorn: 'ギの角',
   claw: '^鉤爪',
   wand: ' wand|s horn',
   thrustingSword: '^刺突剣',
@@ -395,6 +396,7 @@ function loadVendorSettings() {
 }
 
 function applyVendorSettings() {
+  getElement('vendor-weapon-goatHorn').checked = vendorSettings.weapon?.goatHorn === true;
   for (const [group, options] of [['accessory', VENDOR_ACCESSORY_OPTIONS], ['extra', VENDOR_EXTRA_OPTIONS]] as const) {
     for (const key of Object.keys(options)) {
       const checkbox = getElement<HTMLInputElement>(`vendor-${group}-${key}`);
