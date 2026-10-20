@@ -84,6 +84,7 @@ interface TradeQuery {
 }
 type TradeFilters = Record<string, { filters: Record<string, TradeValue> }>;
 interface VendorSettings {
+  customRegex?: string;
   accessory?: Record<string, boolean>;
   extra?: Record<string, boolean>;
   colors?: Record<string, boolean>;

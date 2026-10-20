@@ -165,6 +165,7 @@ function generateRegexFromProfile(profile: SavedProfile, type: string) {
 function generateMapRegexFromProfile(profile: SavedProfile) {
   const originalCheckedMods = new Map(checkedMods);
   const originalInputState = {
+    customRegex: getElement('mapCustomRegex').value,
     itemQuantity: getElement('itemQuantityInput')?.value || '',
     packSize: getElement('packSizeInput')?.value || '',
     rarity: getElement('rarityInput')?.value || '',
@@ -197,6 +198,7 @@ function generateMapRegexFromProfile(profile: SavedProfile) {
       }
     }
 
+    getElement('mapCustomRegex').value = profile.settings?.customRegex || '';
     if (profile.settings) {
       const settings = profile.settings;
       if (getElement('itemQuantityInput')) getElement('itemQuantityInput').value = settings.itemQuantity || '';
@@ -222,6 +224,7 @@ function generateMapRegexFromProfile(profile: SavedProfile) {
   } finally {
     checkedMods.clear();
     originalCheckedMods.forEach((state, mod) => checkedMods.set(mod, state));
+    getElement('mapCustomRegex').value = originalInputState.customRegex;
 
     if (getElement('itemQuantityInput')) getElement('itemQuantityInput').value = originalInputState.itemQuantity;
     if (getElement('packSizeInput')) getElement('packSizeInput').value = originalInputState.packSize;
@@ -577,6 +580,7 @@ function createProfileSummary(profile, type) {
     if (linkSettings.length > 0) parts.push(linkSettings.join(','));
     const weaponCount = Object.values(settings.weapon || {}).filter(Boolean).length;
     if (weaponCount > 0) parts.push(`${weaponCount}武器`);
+    if (settings.customRegex?.trim()) parts.push('カスタム');
     const accessoryCount = Object.values(settings.accessory || {}).filter(Boolean).length;
     if (accessoryCount > 0) parts.push(`${accessoryCount}アクセ`);
     const extraCount = Object.values(settings.extra || {}).filter(Boolean).length;
@@ -660,6 +664,7 @@ function createDetailedView(profile, type) {
       settingsDiv.style.cssText = 'margin-bottom: 12px;';
       const rows = [];
       if (settings.itemQuantity) rows.push(createDetailRow(isEn ? 'Min Quality' : '数量', `${settings.itemQuantity}%`));
+      if (settings.customRegex) rows.push(createDetailRow(isEn ? 'Custom' : 'カスタム', settings.customRegex));
       if (settings.packSize) rows.push(createDetailRow(isEn ? 'Min Pack' : 'パックサイズ', `${settings.packSize}%`));
       if (settings.rarity) rows.push(createDetailRow(isEn ? 'Min Rarity' : 'レアリティ', `${settings.rarity}%`));
       if (settings.scarab) rows.push(createDetailRow(isEn ? 'Min Scarab' : 'スカラベ', `${settings.scarab}%`));
@@ -826,11 +831,12 @@ function createDetailedView(profile, type) {
     if (settings.movement?.twentyfive) movementSettings.push('25%');
     if (settings.movement?.thirty) movementSettings.push('30%');
     if (movementSettings.length > 0) container.appendChild(createDetailRow(isEn ? 'MS' : '移動速度', movementSettings.join(', ')));
+    if (settings.customRegex?.trim()) container.appendChild(createDetailRow(isEn ? 'Custom' : 'カスタム', settings.customRegex));
     for (const [group, title, options] of [
       ['accessory', 'アクセ', VENDOR_ACCESSORY_OPTIONS],
       ['extra', 'その他', VENDOR_EXTRA_OPTIONS],
     ] as const) {
-      const names = Object.entries(options).filter(([key]) => settings[group]?.[key]).map(([, option]) => option.label);
+      const names = Object.entries(options).filter(([key]) => settings[group]?.[key]).map(([, option]) => group === 'extra' ? `${option.category}：${option.label}` : option.label);
       if (names.length) container.appendChild(createDetailRow(title, names.join(', ')));
     }
     const enabledWeapons = Object.entries(settings.weapon || {})

@@ -22,6 +22,7 @@ function validStoredSettings(value: unknown): boolean {
     if (/^(?:anyThreeLink|anyFourLink|anyFiveLink|anySixLink|anySixSocket|ngModChecked|mapTierChecked)$/.test(key)) return typeof item === 'boolean';
     if (['colors', 'movement', 'weapon', 'excludeWeapons', 'selected', 'rarities', 'rarityChecked'].includes(key)) return storageRecord(item) && Object.values(item).every(flag => typeof flag === 'boolean');
     if (key === 'selectedGems') return storageStrings(item);
+    if (key === 'customRegex') return typeof item === 'string';
     if (key === 'gemInfo') return Array.isArray(item) && item.every(gem => storageRecord(gem) && typeof gem.regex === 'string');
     return typeof item === 'string' || typeof item === 'boolean' || typeof item === 'number' ||
       (storageRecord(item) && Object.values(item).every(flag => typeof flag === 'boolean'));

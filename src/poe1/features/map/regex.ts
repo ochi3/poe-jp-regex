@@ -178,6 +178,8 @@ function updateCombinedRegex() {
     let combinedResult = '';
     const ngResults = [];
     const wantedResults = [];
+    const customPatterns = getElement('mapCustomRegex').value.split(/\r?\n/).map(line => line.trim()).filter(Boolean);
+    wantedResults.push(...customPatterns);
 
     const validCheckedMods = new Map();
     
@@ -297,6 +299,7 @@ function updateCharCount() {
 }
 
 function resetAll() {
+    getElement('mapCustomRegex').value = '';
     if (getElement('itemQuantityInput')) getElement('itemQuantityInput').value = '';
     if (getElement('packSizeInput')) getElement('packSizeInput').value = '';
     if (getElement('rarityInput')) getElement('rarityInput').value = '';

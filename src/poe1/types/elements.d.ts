@@ -1,5 +1,7 @@
 /** Element IDs in poe1.html. Update when the page structure changes. */
 interface PageElements {
+  "mapCustomRegex": HTMLTextAreaElement;
+  "vendor-customRegex": HTMLTextAreaElement;
   "vendor-accessory-options": HTMLElement;
   "vendor-extra-options": HTMLElement;
   "vendor-link-colors": HTMLElement;

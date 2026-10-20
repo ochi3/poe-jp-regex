@@ -14,6 +14,9 @@ test('ACT options preserve profiles and keep legacy colors collapsed below weapo
   await expect(page.locator('#vendor-accessory-options input')).toHaveCount(14);
   await expect(page.locator('#vendor-accessory-options a')).toHaveCount(0);
   await expect(page.locator('#vendor-accessory-options h4')).toHaveText(['アミュレット','ベルト','指輪']);
+  await expect(page.locator('#vendor-extra-options h4')).toHaveText(['ジェムレベル+','継続ダメージ倍率']);
+  await expect(page.locator('#vendor-extra-fireGem').locator('..')).toHaveText('火');
+  expect(await page.locator('#vendor-extra-options').evaluate(el=>getComputedStyle(el).gridTemplateColumns.split(' ').length)).toBe(3);
   for (const [key, pattern] of Object.entries({amber:'珀のア',jade:'翠のア',lapis:'璃のア',onyx:'キスのア',turquoise:'イズのア',agate:'瑙のア',rusticSash:'朴な飾',heavyBelt:'ビーベ',leatherBelt:'革のベ',ironRing:'鉄の指',coralRing:'瑚の指',topazRing:'ズの指',sapphireRing:'アの指',rubyRing:'ーの指'})) {
     const checkbox=page.locator(`#vendor-accessory-${key}`);
     await checkbox.check();
@@ -24,7 +27,11 @@ test('ACT options preserve profiles and keep legacy colors collapsed below weapo
   await page.locator('#vendor-weapon-goatHorn').check();
   await page.locator('#vendor-extra-fireGem').check();
   await page.locator('#vendor-extra-coldDotMulti').check();
+  const custom=page.locator('#vendor-customRegex');
+  const customText='^テスト\\d+$\n珀のア';
+  await custom.fill(customText);
   const output=page.locator('#vendorRegexOutput');
+  await expect(output).toContainText('^テスト\\d+$|珀のア');
   await expect(output).toContainText('鉄の指');
   await expect(output).toContainText('ギの角');
   await expect(output).toContainText('ての火ス');
@@ -41,13 +48,16 @@ test('ACT options preserve profiles and keep legacy colors collapsed below weapo
   await page.reload();
   await expect(page.locator('#vendor-accessory-ironRing')).toBeChecked();
   await expect(page.locator('#vendor-weapon-goatHorn')).toBeChecked();
+  await expect(custom).toHaveValue(customText);
   await expect(page.locator('#vendor-extra-fireGem')).toBeChecked();
   await page.getByRole('button',{name:'リセット',exact:true}).filter({visible:true}).click();
   await expect(page.locator('#vendor-accessory-ironRing')).not.toBeChecked();
   await expect(page.locator('#vendor-weapon-goatHorn')).not.toBeChecked();
+  await expect(custom).toHaveValue('');
   await expect(page.locator('#vendor-extra-fireGem')).not.toBeChecked();
   await page.locator('#vendorProfileList').selectOption('ACT new options');
   await expect(output).toHaveText(before);
+  await expect(custom).toHaveValue(customText);
   await expect(page.locator('#vendor-extra-coldDotMulti')).toBeChecked();
   await page.locator('#vendor-link-colors summary').click();
   await page.locator('#vendor-color-rrr').check();
@@ -62,6 +72,32 @@ test('ACT options preserve profiles and keep legacy colors collapsed below weapo
   await page.locator('#vendor-link-colors summary').click();
   await page.locator('.vendor-act-layout').scrollIntoViewIfNeeded();
   await page.screenshot({path:testInfo.outputPath('act-options.png')});
+  expect(errors).toEqual([]);
+});
+test('map custom Regex survives reload, profile loading and reset',async({page})=>{
+  const errors=[];page.on('pageerror',error=>errors.push(error.message));
+  await page.goto('/poe1.html#map');
+  const custom=page.locator('#mapCustomRegex'),output=page.locator('#combinedRegexOutput');
+  await expect(custom).toBeHidden();
+  await custom.locator('..').locator('summary').click();
+  const text='^テスト\\d+$\n追加Mod';
+  await custom.fill(text);
+  await expect(output).toHaveText('"^テスト\\d+$|追加Mod"');
+  await page.locator('#profileName').fill('Map custom');
+  await page.locator('#mapContent').getByRole('button',{name:'保存',exact:true}).click();
+  await page.reload();
+  await expect(custom).toHaveValue(text);
+  await page.locator('#mapContent').getByRole('button',{name:'リセット',exact:true}).click();
+  await expect(custom).toHaveValue('');
+  await expect(output).not.toContainText('追加Mod');
+  await page.locator('#profileList').selectOption('Map custom');
+  await page.locator('#mapContent').getByRole('button',{name:'読み込み',exact:true}).click();
+  await expect(custom).toHaveValue(text);
+  await expect(output).toHaveText('"^テスト\\d+$|追加Mod"');
+  await page.locator('a[data-tab="savedContent"]').click();
+  await expect(page.locator('#savedContent')).toContainText('追加Mod');
+  await page.locator('a[data-tab="mapContent"]').click();
+  await expect(custom).toHaveValue(text);
   expect(errors).toEqual([]);
 });
 async function assertEssenceColumns(page) {

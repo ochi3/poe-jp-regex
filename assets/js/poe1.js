@@ -33,6 +33,8 @@ function validStoredSettings(value) {
             return storageRecord(item) && Object.values(item).every(flag => typeof flag === 'boolean');
         if (key === 'selectedGems')
             return storageStrings(item);
+        if (key === 'customRegex')
+            return typeof item === 'string';
         if (key === 'gemInfo')
             return Array.isArray(item) && item.every(gem => storageRecord(gem) && typeof gem.regex === 'string');
         return typeof item === 'string' || typeof item === 'boolean' || typeof item === 'number' ||
@@ -1631,6 +1633,8 @@ function updateCombinedRegex() {
     let combinedResult = '';
     const ngResults = [];
     const wantedResults = [];
+    const customPatterns = getElement('mapCustomRegex').value.split(/\r?\n/).map(line => line.trim()).filter(Boolean);
+    wantedResults.push(...customPatterns);
     const validCheckedMods = new Map();
     checkedMods.forEach((state, key) => {
         const mod = ModList[key];
@@ -1732,6 +1736,7 @@ function updateCharCount() {
     }
 }
 function resetAll() {
+    getElement('mapCustomRegex').value = '';
     if (getElement('itemQuantityInput'))
         getElement('itemQuantityInput').value = '';
     if (getElement('packSizeInput'))
@@ -1982,6 +1987,7 @@ function loadModCheckboxState() {
 }
 function saveInputState() {
     const state = {
+        ...(getElement('mapCustomRegex').value ? { customRegex: getElement('mapCustomRegex').value } : {}),
         itemQuantity: getElement('itemQuantityInput')?.value || '',
         packSize: getElement('packSizeInput')?.value || '',
         rarity: getElement('rarityInput')?.value || '',
@@ -2003,6 +2009,7 @@ function saveInputState() {
 }
 function loadInputState() {
     const state = readStoredJson('inputState');
+    getElement('mapCustomRegex').value = state.customRegex || '';
     if (getElement('itemQuantityInput'))
         getElement('itemQuantityInput').value = state.itemQuantity || '';
     if (getElement('packSizeInput'))
@@ -2084,6 +2091,7 @@ function saveProfile() {
     profiles[profileName] = {
         mods: Array.from(checkedMods), // [[id, state], ...] の形式で保存
         settings: {
+            ...(getElement('mapCustomRegex').value ? { customRegex: getElement('mapCustomRegex').value } : {}),
             itemQuantity: getElement('itemQuantityInput').value,
             packSize: getElement('packSizeInput').value,
             rarity: getElement('rarityInput').value,
@@ -2122,6 +2130,7 @@ function loadProfile() {
         // 完全リセット
         resetAll();
         const profile = profiles[profileName];
+        getElement('mapCustomRegex').value = profile.settings?.customRegex || '';
         // 入力値復元
         if (getElement('itemQuantityInput'))
             getElement('itemQuantityInput').value = profile.settings?.itemQuantity || '';
@@ -2175,6 +2184,8 @@ function loadProfile() {
         saveModCheckboxState();
         updateModList();
         updateCombinedRegex();
+        if (profile.settings?.customRegex)
+            saveInputState();
         ['change', 'input'].forEach(event => {
             const tierCb = getElement('mapTierCheckbox');
             if (tierCb)
@@ -5714,6 +5725,7 @@ function generateRegexFromProfile(profile, type) {
 function generateMapRegexFromProfile(profile) {
     const originalCheckedMods = new Map(checkedMods);
     const originalInputState = {
+        customRegex: getElement('mapCustomRegex').value,
         itemQuantity: getElement('itemQuantityInput')?.value || '',
         packSize: getElement('packSizeInput')?.value || '',
         rarity: getElement('rarityInput')?.value || '',
@@ -5747,6 +5759,7 @@ function generateMapRegexFromProfile(profile) {
                 Object.entries(profile.mods).forEach(([mod, state]) => checkedMods.set(mod, state));
             }
         }
+        getElement('mapCustomRegex').value = profile.settings?.customRegex || '';
         if (profile.settings) {
             const settings = profile.settings;
             if (getElement('itemQuantityInput'))
@@ -5780,6 +5793,7 @@ function generateMapRegexFromProfile(profile) {
     finally {
         checkedMods.clear();
         originalCheckedMods.forEach((state, mod) => checkedMods.set(mod, state));
+        getElement('mapCustomRegex').value = originalInputState.customRegex;
         if (getElement('itemQuantityInput'))
             getElement('itemQuantityInput').value = originalInputState.itemQuantity;
         if (getElement('packSizeInput'))
@@ -6128,6 +6142,8 @@ function createProfileSummary(profile, type) {
         const weaponCount = Object.values(settings.weapon || {}).filter(Boolean).length;
         if (weaponCount > 0)
             parts.push(`${weaponCount}武器`);
+        if (settings.customRegex?.trim())
+            parts.push('カスタム');
         const accessoryCount = Object.values(settings.accessory || {}).filter(Boolean).length;
         if (accessoryCount > 0)
             parts.push(`${accessoryCount}アクセ`);
@@ -6217,6 +6233,8 @@ function createDetailedView(profile, type) {
             const rows = [];
             if (settings.itemQuantity)
                 rows.push(createDetailRow(isEn ? 'Min Quality' : '数量', `${settings.itemQuantity}%`));
+            if (settings.customRegex)
+                rows.push(createDetailRow(isEn ? 'Custom' : 'カスタム', settings.customRegex));
             if (settings.packSize)
                 rows.push(createDetailRow(isEn ? 'Min Pack' : 'パックサイズ', `${settings.packSize}%`));
             if (settings.rarity)
@@ -6404,11 +6422,13 @@ function createDetailedView(profile, type) {
             movementSettings.push('30%');
         if (movementSettings.length > 0)
             container.appendChild(createDetailRow(isEn ? 'MS' : '移動速度', movementSettings.join(', ')));
+        if (settings.customRegex?.trim())
+            container.appendChild(createDetailRow(isEn ? 'Custom' : 'カスタム', settings.customRegex));
         for (const [group, title, options] of [
             ['accessory', 'アクセ', VENDOR_ACCESSORY_OPTIONS],
             ['extra', 'その他', VENDOR_EXTRA_OPTIONS],
         ]) {
-            const names = Object.entries(options).filter(([key]) => settings[group]?.[key]).map(([, option]) => option.label);
+            const names = Object.entries(options).filter(([key]) => settings[group]?.[key]).map(([, option]) => group === 'extra' ? `${option.category}：${option.label}` : option.label);
             if (names.length)
                 container.appendChild(createDetailRow(title, names.join(', ')));
         }
@@ -7629,19 +7649,19 @@ const VENDOR_ACCESSORY_OPTIONS = {
     coralRing: { category: '指輪', label: '珊瑚', pattern: '瑚の指' },
 };
 const VENDOR_EXTRA_OPTIONS = {
-    allGem: { label: '全スキルジェム +1', pattern: '全スキ.*ム +' },
-    minionGem: { label: 'ミニオンスキルジェム +1', pattern: 'てのミニ' },
-    spellGem: { label: '全スペルスキルジェム +1', pattern: 'てのスペ' },
-    fireGem: { label: '火スペルスキルジェム +1', pattern: 'ての火ス' },
-    coldGem: { label: '冷気スペルスキルジェム +1', pattern: 'ての冷気ス' },
-    lightningGem: { label: '雷スペルスキルジェム +1', pattern: 'ての雷ス' },
-    physicalGem: { label: '物理スペルスキルジェム +1', pattern: 'ての物理ス' },
-    chaosGem: { label: '混沌スペルスキルジェム +1', pattern: 'ての混沌ス' },
-    dotMulti: { label: '継続ダメージ倍率', pattern: '^継.*率 \\+' },
-    fireDotMulti: { label: '火継続ダメージ倍率', pattern: '^火継.*率 \\+' },
-    coldDotMulti: { label: '冷気継続ダメージ倍率', pattern: '^冷気継.*率 \\+' },
-    physicalDotMulti: { label: '物理継続ダメージ倍率', pattern: '^物理継.*率 \\+' },
-    chaosDotMulti: { label: '混沌継続ダメージ倍率', pattern: '^混沌継.*率 \\+' },
+    allGem: { category: 'ジェムレベル+', label: '全て', pattern: '全スキ.*ム +' },
+    minionGem: { category: 'ジェムレベル+', label: 'ミニオン', pattern: 'てのミニ' },
+    spellGem: { category: 'ジェムレベル+', label: 'スペル', pattern: 'てのスペ' },
+    fireGem: { category: 'ジェムレベル+', label: '火', pattern: 'ての火ス' },
+    coldGem: { category: 'ジェムレベル+', label: '冷気', pattern: 'ての冷気ス' },
+    lightningGem: { category: 'ジェムレベル+', label: '雷', pattern: 'ての雷ス' },
+    physicalGem: { category: 'ジェムレベル+', label: '物理', pattern: 'ての物理ス' },
+    chaosGem: { category: 'ジェムレベル+', label: '混沌', pattern: 'ての混沌ス' },
+    dotMulti: { category: '継続ダメージ倍率', label: '全て', pattern: '^継.*率 \\+' },
+    fireDotMulti: { category: '継続ダメージ倍率', label: '火', pattern: '^火継.*率 \\+' },
+    coldDotMulti: { category: '継続ダメージ倍率', label: '冷気', pattern: '^冷気継.*率 \\+' },
+    physicalDotMulti: { category: '継続ダメージ倍率', label: '物理', pattern: '^物理継.*率 \\+' },
+    chaosDotMulti: { category: '継続ダメージ倍率', label: '混沌', pattern: '^混沌継.*率 \\+' },
 };
 function setupVendorExtraOptions() {
     for (const [group, options] of [['accessory', VENDOR_ACCESSORY_OPTIONS], ['extra', VENDOR_EXTRA_OPTIONS]]) {
@@ -7785,6 +7805,9 @@ function buildWeaponRegexPatterns(weaponSelections) {
 function generateVendorRegex() {
     const parts = [];
     const settings = vendorSettings;
+    const customPatterns = (settings.customRegex || '').split(/\r?\n/).map(line => line.trim()).filter(Boolean);
+    if (customPatterns.length)
+        parts.push(customPatterns.join('|'));
     for (const [group, options] of [['accessory', VENDOR_ACCESSORY_OPTIONS], ['extra', VENDOR_EXTRA_OPTIONS]]) {
         for (const [key, option] of Object.entries(options)) {
             if (settings[group]?.[key])
@@ -7929,6 +7952,7 @@ function copyVendorRegex() {
     }
 }
 function resetVendorSettings() {
+    getElement('vendor-customRegex').value = '';
     document.querySelectorAll('#vendorContent input[type="checkbox"]').forEach(cb => {
         cb.checked = false;
     });
@@ -8007,6 +8031,8 @@ function loadVendorSettings() {
                 extra: { ...parsed.extra },
                 selectedGems: parsed.selectedGems || []
             };
+            if (typeof parsed.customRegex === 'string')
+                vendorSettings.customRegex = parsed.customRegex;
             applyVendorSettings();
         }
         catch (e) {
@@ -8015,6 +8041,7 @@ function loadVendorSettings() {
     }
 }
 function applyVendorSettings() {
+    getElement('vendor-customRegex').value = vendorSettings.customRegex || '';
     getElement('vendor-weapon-goatHorn').checked = vendorSettings.weapon?.goatHorn === true;
     for (const [group, options] of [['accessory', VENDOR_ACCESSORY_OPTIONS], ['extra', VENDOR_EXTRA_OPTIONS]]) {
         for (const key of Object.keys(options)) {
@@ -8098,6 +8125,11 @@ function handleVendorCheckboxChange(checkbox) {
     updateVendorRegex();
 }
 function setupVendorEventListeners() {
+    getElement('vendor-customRegex').addEventListener('input', function () {
+        vendorSettings.customRegex = this.value;
+        updateVendorRegex();
+        saveVendorSettings();
+    });
     document.querySelectorAll('#vendorContent input[type="checkbox"]').forEach(checkbox => {
         checkbox.addEventListener('change', function () {
             handleVendorCheckboxChange(this);

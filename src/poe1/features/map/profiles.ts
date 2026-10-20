@@ -17,6 +17,7 @@ function saveProfile() {
   profiles[profileName] = {
     mods: Array.from(checkedMods), // [[id, state], ...] の形式で保存
     settings: {
+      ...(getElement('mapCustomRegex').value ? {customRegex: getElement('mapCustomRegex').value} : {}),
       itemQuantity: getElement('itemQuantityInput').value,
       packSize: getElement('packSizeInput').value,
       rarity: getElement('rarityInput').value,
@@ -60,6 +61,7 @@ function loadProfile() {
     resetAll();
 
     const profile = profiles[profileName];
+    getElement('mapCustomRegex').value = profile.settings?.customRegex || '';
 
     // 入力値復元
     if (getElement('itemQuantityInput')) getElement('itemQuantityInput').value = profile.settings?.itemQuantity || '';
@@ -105,6 +107,7 @@ function loadProfile() {
 
     updateModList();
     updateCombinedRegex();
+    if (profile.settings?.customRegex) saveInputState();
 
     ['change', 'input'].forEach(event => {
       const tierCb = getElement('mapTierCheckbox');

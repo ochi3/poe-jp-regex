@@ -398,20 +398,24 @@
 }
 #vendorContent .vendor-main-options section { margin-top: 24px; }
 #vendorContent .vendor-option { display: flex; align-items: baseline; gap: 6px; margin-bottom: 12px; }
-#vendor-accessory-options {
+#vendor-accessory-options,
+#vendor-extra-options {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 10px 6px;
 }
-#vendor-accessory-options h4 { grid-column: 1 / -1; margin: 8px 0 2px; }
-#vendorContent #vendor-accessory-options .vendor-option {
+#vendor-accessory-options h4,
+#vendor-extra-options h4 { grid-column: 1 / -1; margin: 8px 0 2px; }
+#vendorContent #vendor-accessory-options .vendor-option,
+#vendorContent #vendor-extra-options .vendor-option {
   min-width: 0;
   margin-bottom: 0;
   gap: 4px;
   font-size: 0.85em;
   overflow-wrap: anywhere;
 }
-#vendor-accessory-options input { flex-shrink: 0; }
+#vendor-accessory-options input,
+#vendor-extra-options input { flex-shrink: 0; }
 #vendorContent .vendor-link-colors { margin-top: 24px; }
 #vendorContent .vendor-link-colors summary { cursor: pointer; color: var(--accent-primary); padding: 12px 0; }
 #vendorContent .vendor-color-options { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; padding-top: 12px; }

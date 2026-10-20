@@ -135,6 +135,7 @@
                     </label>
                 </div>
 
+                <details style="margin: 16px 0;"><summary style="cursor: pointer; color: var(--accent-primary);">カスタム</summary><label for="mapCustomRegex" style="display: block; font-size: 0.85em; margin: 8px 0;">1行に1つのRegexを入力。欲しいModとORで結合します。外側の引用符は不要です。</label><textarea id="mapCustomRegex" rows="3" oninput="updateCombinedRegex(); saveInputState()" spellcheck="false" placeholder="カスタムRegexを入力" style="width: 100%; box-sizing: border-box; resize: vertical;"></textarea></details>
                 <div class="input-group">
                     <button onclick="copyUnidentified()">未鑑定</button>
                     <button onclick="copyNormal()">ノーマル</button>
@@ -746,7 +747,7 @@
                         </label>
                         </div>
 
-                    <section><h3>アクセ</h3><div id="vendor-accessory-options"></div></section></div><section class="vendor-other-options"><h3>武器</h3><label class="input-label vendor-option"><input type="checkbox" id="vendor-weapon-goatHorn"> ヤギの角</label><h3>その他</h3><div id="vendor-extra-options"></div></section><div class="vendor-weapon-section">
+                    <section><h3>アクセ</h3><div id="vendor-accessory-options"></div></section></div><section class="vendor-other-options"><h3>武器</h3><label class="input-label vendor-option"><input type="checkbox" id="vendor-weapon-goatHorn"> ヤギの角</label><h3>その他</h3><div id="vendor-extra-options"></div><section style="margin-top: 24px;"><h3><label for="vendor-customRegex">カスタム</label></h3><p style="font-size: 0.85em; color: var(--text-secondary);">1行に1つのRegexを入力。既存の項目とORで結合します。外側の引用符は不要です。</p><textarea id="vendor-customRegex" rows="4" placeholder="例: ギの角&#10;珀のア" spellcheck="false" style="width: 100%; box-sizing: border-box; resize: vertical;"></textarea></section></section><div class="vendor-weapon-section">
                         <!-- 武器ベース -->
                         <h3 style="color: var(--accent-primary); margin-bottom: 16px; border-bottom: 2px solid var(--accent-primary); padding-bottom: 8px;">
                         武器ベース

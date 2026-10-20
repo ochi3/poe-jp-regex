@@ -20,19 +20,19 @@ const VENDOR_ACCESSORY_OPTIONS = {
   coralRing: { category: '指輪', label: '珊瑚', pattern: '瑚の指' },
 };
 const VENDOR_EXTRA_OPTIONS = {
-  allGem: { label: '全スキルジェム +1', pattern: '全スキ.*ム +' },
-  minionGem: { label: 'ミニオンスキルジェム +1', pattern: 'てのミニ' },
-  spellGem: { label: '全スペルスキルジェム +1', pattern: 'てのスペ' },
-  fireGem: { label: '火スペルスキルジェム +1', pattern: 'ての火ス' },
-  coldGem: { label: '冷気スペルスキルジェム +1', pattern: 'ての冷気ス' },
-  lightningGem: { label: '雷スペルスキルジェム +1', pattern: 'ての雷ス' },
-  physicalGem: { label: '物理スペルスキルジェム +1', pattern: 'ての物理ス' },
-  chaosGem: { label: '混沌スペルスキルジェム +1', pattern: 'ての混沌ス' },
-  dotMulti: { label: '継続ダメージ倍率', pattern: '^継.*率 \\+' },
-  fireDotMulti: { label: '火継続ダメージ倍率', pattern: '^火継.*率 \\+' },
-  coldDotMulti: { label: '冷気継続ダメージ倍率', pattern: '^冷気継.*率 \\+' },
-  physicalDotMulti: { label: '物理継続ダメージ倍率', pattern: '^物理継.*率 \\+' },
-  chaosDotMulti: { label: '混沌継続ダメージ倍率', pattern: '^混沌継.*率 \\+' },
+  allGem: { category: 'ジェムレベル+', label: '全て', pattern: '全スキ.*ム +' },
+  minionGem: { category: 'ジェムレベル+', label: 'ミニオン', pattern: 'てのミニ' },
+  spellGem: { category: 'ジェムレベル+', label: 'スペル', pattern: 'てのスペ' },
+  fireGem: { category: 'ジェムレベル+', label: '火', pattern: 'ての火ス' },
+  coldGem: { category: 'ジェムレベル+', label: '冷気', pattern: 'ての冷気ス' },
+  lightningGem: { category: 'ジェムレベル+', label: '雷', pattern: 'ての雷ス' },
+  physicalGem: { category: 'ジェムレベル+', label: '物理', pattern: 'ての物理ス' },
+  chaosGem: { category: 'ジェムレベル+', label: '混沌', pattern: 'ての混沌ス' },
+  dotMulti: { category: '継続ダメージ倍率', label: '全て', pattern: '^継.*率 \\+' },
+  fireDotMulti: { category: '継続ダメージ倍率', label: '火', pattern: '^火継.*率 \\+' },
+  coldDotMulti: { category: '継続ダメージ倍率', label: '冷気', pattern: '^冷気継.*率 \\+' },
+  physicalDotMulti: { category: '継続ダメージ倍率', label: '物理', pattern: '^物理継.*率 \\+' },
+  chaosDotMulti: { category: '継続ダメージ倍率', label: '混沌', pattern: '^混沌継.*率 \\+' },
 };
 
 function setupVendorExtraOptions() {
@@ -184,6 +184,8 @@ function buildWeaponRegexPatterns(weaponSelections) {
 function generateVendorRegex() {
   const parts = [];
   const settings = vendorSettings;
+  const customPatterns = (settings.customRegex || '').split(/\r?\n/).map(line => line.trim()).filter(Boolean);
+  if (customPatterns.length) parts.push(customPatterns.join('|'));
   for (const [group, options] of [['accessory', VENDOR_ACCESSORY_OPTIONS], ['extra', VENDOR_EXTRA_OPTIONS]] as const) {
     for (const [key, option] of Object.entries(options)) {
       if (settings[group]?.[key]) parts.push(option.pattern);
@@ -305,6 +307,7 @@ function copyVendorRegex() {
 }
 
 function resetVendorSettings() {
+  getElement('vendor-customRegex').value = '';
   document.querySelectorAll<HTMLInputElement>('#vendorContent input[type="checkbox"]').forEach(cb => {
     cb.checked = false;
   });
@@ -388,6 +391,7 @@ function loadVendorSettings() {
         extra: { ...parsed.extra },
         selectedGems: parsed.selectedGems || []
       };
+      if (typeof parsed.customRegex === 'string') vendorSettings.customRegex = parsed.customRegex;
       applyVendorSettings();
     } catch (e) {
       console.error('設定の読み込みエラー:', e);
@@ -396,6 +400,7 @@ function loadVendorSettings() {
 }
 
 function applyVendorSettings() {
+  getElement('vendor-customRegex').value = vendorSettings.customRegex || '';
   getElement('vendor-weapon-goatHorn').checked = vendorSettings.weapon?.goatHorn === true;
   for (const [group, options] of [['accessory', VENDOR_ACCESSORY_OPTIONS], ['extra', VENDOR_EXTRA_OPTIONS]] as const) {
     for (const key of Object.keys(options)) {
@@ -474,6 +479,11 @@ function handleVendorCheckboxChange(checkbox) {
 }
 
 function setupVendorEventListeners() {
+  getElement('vendor-customRegex').addEventListener('input', function() {
+    vendorSettings.customRegex = this.value;
+    updateVendorRegex();
+    saveVendorSettings();
+  });
   document.querySelectorAll<HTMLInputElement>('#vendorContent input[type="checkbox"]').forEach(checkbox => {
     checkbox.addEventListener('change', function() {
       handleVendorCheckboxChange(this);
