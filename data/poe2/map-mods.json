@@ -889,8 +889,8 @@
     "type": "Suffix",
     "weight": 1,
     "tier": 0,
-    "engRegex": "",
-    "Regex": "",
+    "engRegex": "nt ap",
+    "Regex": "異常付",
     "tradeStatIds": [
       "explicit.stat_3877264671"
     ],

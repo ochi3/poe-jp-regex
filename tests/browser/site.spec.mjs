@@ -5,6 +5,33 @@ test.beforeEach(async ({page}) => {
   });
 });
 
+test('PoE2 elemental ailment Mod produces usable Regex and skips missing patterns',async({page})=>{
+  await page.goto('/poe2.html#map');
+  const key='モンスターの元素系状態異常付与率が(##)%増加する|エリアで見つかるウェイストーンの量が#%上昇する|エリアで見つかるアイテムのレアリティが#%上昇する';
+  const row=page.locator('.effect-item').filter({has:page.locator('.mod-text',{hasText:'元素系状態異常付与率'})});
+  const output=page.locator('#combinedRegexOutput');
+  await row.click();
+  await expect(output).toHaveText('"!異常付"');
+  await row.click({button:'right'});
+  await expect(output).toHaveText('"異常付"');
+  await page.locator('#globalLangToggle').click();
+  await expect(output).toHaveText('"nt ap"');
+  await page.reload();
+  await expect(output).toHaveText('"nt ap"');
+  await page.evaluate(key=>{
+    mapModList[key].engRegex='';
+    checkedMods.set(key,'ng');
+    updateModList();updateCombinedRegex();
+  },key);
+  const disabled=page.locator('.effect-item[aria-disabled="true"]');
+  await expect(disabled).toHaveCount(1);
+  await disabled.dispatchEvent('click');
+  await disabled.dispatchEvent('contextmenu');
+  await expect(output).not.toHaveText('"!"');
+  await expect(output).not.toHaveText('""');
+  await expect(output).toHaveText('');
+});
+
 test('ACT options preserve profiles and keep legacy colors collapsed below weapons', async ({page}, testInfo) => {
   const errors=[];page.on('pageerror', error=>errors.push(error.message));
   await page.goto('/poe1.html#vendor');

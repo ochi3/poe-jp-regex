@@ -15,6 +15,12 @@ function addEffectItem(key, value) {
 
     const effectItem = document.createElement('div');
     effectItem.classList.add('effect-item');
+    const selectedRegex = currentLanguage === 'ja' ? value.Regex : value.engRegex;
+    if (!selectedRegex?.trim()) {
+        checkbox.disabled = true;
+        effectItem.setAttribute('aria-disabled', 'true');
+        effectItem.title = currentLanguage === 'ja' ? 'Regex未設定：手動で設定してください' : 'Regex is not configured';
+    }
     effectItem.dataset.modKey = key;  // キーをdata属性に保持
     
     // 初期状態のクラスを設定
@@ -27,6 +33,7 @@ function addEffectItem(key, value) {
     // 左クリック -> NG
     effectItem.addEventListener('click', function(e) {
         e.preventDefault();
+        if (!selectedRegex?.trim()) return;
         const currentState = checkedMods.get(key);
         if (currentState === 'ng') {
             checkedMods.delete(key);
@@ -44,6 +51,7 @@ function addEffectItem(key, value) {
     // 右クリック -> Wanted
     effectItem.addEventListener('contextmenu', function(e) {
         e.preventDefault();
+        if (!selectedRegex?.trim()) return;
         const currentState = checkedMods.get(key);
         if (currentState === 'wanted') {
             checkedMods.delete(key);
@@ -233,6 +241,7 @@ function updateCombinedRegex() {
         const mod = ModList[key];
         if (mod) {
             const regex = currentLanguage === 'ja' ? mod.Regex : mod.engRegex;
+            if (!regex?.trim()) return;
             if (state === 'ng') {
                 ngResults.push(regex);
             } else {
