@@ -13,7 +13,7 @@
     "effect": "ユニークアイテムを作成: タリスマン / アイテムを変化: 可能な最大リンク数 / アイテムを変化: 可能な最大ソケット数 / 2個のモッドをフラクチャーする: 最低6個のモッドを持つレアのタリスマン / アイテムにアスペクトスキルを追加: レベル30各アスペクト",
     "regex": "リガ",
     "enRegex": "k m",
-    "chaosValue": "556.5"
+    "chaosValue": "495.8"
   },
   "ワイルド・ブリスル・マトロン": {
     "engName": "Wild Bristle Matron",
@@ -21,7 +21,7 @@
     "effect": "アイテムのモッドを変化: 非ユニークアイテムにクラフトメタモッドを追加",
     "regex": "ル・マ",
     "enRegex": "le m",
-    "chaosValue": "59.5"
+    "chaosValue": "59"
   },
   "ビビッド・ヴァルチャー": {
     "engName": "Vivid Vulture",
@@ -29,7 +29,7 @@
     "effect": "アイテムを変換: ユニークアイテムのシンセシス暗黙モッドを1個リロール",
     "regex": "ド・ヴ",
     "enRegex": "id v",
-    "chaosValue": "35.7"
+    "chaosValue": "35.8"
   },
   "ワイルド・ヘリオン・アルファ": {
     "engName": "Wild Hellion Alpha",
@@ -37,7 +37,7 @@
     "effect": "アイテムのモッドを変化: ウォッチャーズアイのモッドをリロール",
     "regex": "ド・ヘリ",
     "enRegex": "ld h",
-    "chaosValue": "165"
+    "chaosValue": "144.5"
   },
   "ワイルド・ブランブルバック": {
     "engName": "Wild Brambleback",
@@ -45,7 +45,7 @@
     "effect": "アイテムを変換: 希少サポートジェムに500m経験値追加する",
     "regex": "ド・ブラ",
     "enRegex": "d bra",
-    "chaosValue": "45.6"
+    "chaosValue": "47.1"
   },
   "平原の始祖、ファルウル": {
     "engName": "Farrul, First of the Plains",
@@ -53,7 +53,7 @@
     "effect": "アイテムにアスペクトスキルを追加: 猫のアスペクト",
     "regex": "祖、ファ",
     "enRegex": "ul, f",
-    "chaosValue": "146.2"
+    "chaosValue": "148"
   },
   "フィヌムスのプレイグドアラクニド": {
     "engName": "Fenumal Plagued Arachnid",
@@ -61,7 +61,7 @@
     "effect": "インプリントを作成: レアタリスマン / 2個のモッドをフラクチャーする: 最低6個のモッドを持つレアのタリスマン",
     "regex": "のプレ",
     "enRegex": "l pla",
-    "chaosValue": "325.2"
+    "chaosValue": "333"
   },
   "プライマル・クリストコーラー": {
     "engName": "Primal Cystcaller",
@@ -69,7 +69,7 @@
     "effect": "アイテムを作成: ナイトメアマップ",
     "regex": "ル・クリ",
     "enRegex": " cy",
-    "chaosValue": "19.5"
+    "chaosValue": "15"
   },
   "夜の始祖、フィヌムス": {
     "engName": "Fenumus, First of the Night",
@@ -77,7 +77,7 @@
     "effect": "アイテムにアスペクトスキルを追加: 蜘蛛のアスペクト",
     "regex": "祖、フィ",
     "enRegex": "s, f",
-    "chaosValue": "71.3"
+    "chaosValue": "65"
   },
   "空の始祖、サカワル": {
     "engName": "Saqawal, First of the Sky",
@@ -85,7 +85,7 @@
     "effect": "アイテムにアスペクトスキルを追加: 鳥のアスペクト",
     "regex": "祖、サカ",
     "enRegex": "al, f",
-    "chaosValue": "9.4"
+    "chaosValue": "10"
   },
   "深海の始祖、クレイシアン": {
     "engName": "Craiceann, First of the Deep",
@@ -93,7 +93,7 @@
     "effect": "アイテムにアスペクトスキルを追加: 蟹のアスペクト",
     "regex": "祖、ク",
     "enRegex": "n, f",
-    "chaosValue": "19"
+    "chaosValue": "19.2"
   },
   "プライマル・レックス・メイトリアーク": {
     "engName": "Primal Rhex Matriarch",
@@ -101,7 +101,7 @@
     "effect": "アイテムを作成: シンセシスユニークマップ",
     "regex": "ル・レッ",
     "enRegex": "x ma",
-    "chaosValue": "0.31"
+    "chaosValue": "0.33"
   },
   "フィヌムスのハイブリッドアラクニド": {
     "engName": "Fenumal Hybrid Arachnid",
@@ -117,7 +117,7 @@
     "effect": "アイテムを変化: 可能な最大リンク数 / カレンシーアイテムを作成: 結合のオーブ / カレンシーアイテムを作成: 連結のオーブ2個",
     "regex": "アンの砂",
     "enRegex": "c san",
-    "chaosValue": "0.29"
+    "chaosValue": "0.33"
   },
   "ファルウルのタイガー・アルファ": {
     "engName": "Farric Tiger Alpha",
@@ -125,7 +125,7 @@
     "effect": "ポータルを開く: ファルウルの巣穴",
     "regex": "ルのタイ",
     "enRegex": "c ti",
-    "chaosValue": "14.7"
+    "chaosValue": "49"
   },
   "サカワルのレックス": {
     "engName": "Saqawine Rhex",
@@ -157,7 +157,7 @@
     "effect": "マップをコラプト: 暗黙モッドを1個付与 / マップをコラプト: ダブルコラプト",
     "regex": "ンの臣",
     "enRegex": "c v",
-    "chaosValue": "1"
+    "chaosValue": "2"
   },
   "ファルウルのリンクス・アルファ": {
     "engName": "Farric Lynx Alpha",
@@ -181,7 +181,7 @@
     "effect": "アイテムを作成: シェイパーの守護者、エルダーの守護者または征服者のマップ",
     "regex": "ド・アブ",
     "enRegex": "d ab",
-    "chaosValue": "0.23"
+    "chaosValue": "0.24"
   },
   "プライマル・クラッシュクロー": {
     "engName": "Primal Crushclaw",
@@ -189,7 +189,7 @@
     "effect": "アイテムを作成: 貴重なスカラベ",
     "regex": "ル・クラ",
     "enRegex": "l cru",
-    "chaosValue": "28.4"
+    "chaosValue": "27"
   },
   "ファルウルのフロストヘリオン・アルファ": {
     "engName": "Farric Frost Hellion Alpha",
@@ -197,7 +197,7 @@
     "effect": "1個のモッドをフラクチャーする: 最低4個のモッドを持つレアのタリスマン / カレンシーアイテムを作成: 解除のオーブ3個",
     "regex": "ルのフロ",
     "enRegex": "c fr",
-    "chaosValue": "0.45"
+    "chaosValue": "0.53"
   },
   "サカワルのヴァルチャー": {
     "engName": "Saqawine Vulture",
@@ -205,7 +205,7 @@
     "effect": "アイテムを作成: 6リンクソケットレアアイテム",
     "regex": "ワルのヴァ",
     "enRegex": "e vu",
-    "chaosValue": "0.59"
+    "chaosValue": "0.53"
   },
   "ファルウルのピット・ハウンド": {
     "engName": "Farric Pit Hound",
@@ -221,7 +221,7 @@
     "effect": "レアアイテムを作成: 4リンクヘルメット",
     "regex": "ルのロア",
     "enRegex": "ine rho",
-    "chaosValue": "0.45"
+    "chaosValue": "0.47"
   },
   "フィヌムスのスコーピオン": {
     "engName": "Fenumal Scorpion",
@@ -229,7 +229,7 @@
     "effect": "ユニークアイテムを変換: 他のユニークアイテムに変換 / マップをコラプト: ダブルコラプト",
     "regex": "スのスコ",
     "enRegex": "l sco",
-    "chaosValue": "0.31"
+    "chaosValue": "0.33"
   },
   "サカワルのブラッドヴァイパー": {
     "engName": "Saqawine Blood Viper",
@@ -237,7 +237,7 @@
     "effect": "ユニークアイテムを作成: 剣または斧 / アイテムのモッドを変化: エルダーアイテムにモッドを追加",
     "regex": "ルのブラ",
     "enRegex": "ne b",
-    "chaosValue": "0.32"
+    "chaosValue": "0.41"
   },
   "ファルウルのエイプ": {
     "engName": "Farric Ape",
@@ -261,7 +261,7 @@
     "effect": "ユニークアイテムを作成: メイスまたはセプター / アイテムのモッドを変化: レアマップにモッドを追加",
     "regex": "ルのコブ",
     "enRegex": "ne co",
-    "chaosValue": "0.18"
+    "chaosValue": "0.17"
   },
   "ファルウルのウルサ": {
     "engName": "Farric Ursa",
@@ -277,7 +277,7 @@
     "effect": "ユニークアイテムを作成: スタッフ / アイテムのモッドを変化: リディーマーアイテムにモッドを追加",
     "regex": "スの女王",
     "enRegex": "l q",
-    "chaosValue": "0.24"
+    "chaosValue": "0.32"
   },
   "ファルウルのゴライアス": {
     "engName": "Farric Goliath",
@@ -285,7 +285,7 @@
     "effect": "ユニークアイテムを作成: 弓 / アイテムのモッドを変化: クルセイダーアイテムにモッドを追加",
     "regex": "ルのゴラ",
     "enRegex": "c gol",
-    "chaosValue": "0.21"
+    "chaosValue": "0.2"
   },
   "フィヌムスのデヴァワラー": {
     "engName": "Fenumal Devourer",
@@ -293,7 +293,7 @@
     "effect": "ユニークアイテムを作成: 盾または矢筒 / アイテムのモッドを変化: シェイパーアイテムにモッドを追加",
     "regex": "スのデヴ",
     "enRegex": "mal d",
-    "chaosValue": "0.31"
+    "chaosValue": "0.4"
   },
   "クレイシアンのウォッチャー": {
     "engName": "Craicic Watcher",
@@ -301,7 +301,7 @@
     "effect": "ユニークアイテムを作成: 鉤爪または短剣 / アイテムのモッドを変化: ハンターアイテムにモッドを追加",
     "regex": "ンのウォ",
     "enRegex": "c wa",
-    "chaosValue": "0.55"
+    "chaosValue": "0.44"
   },
   "サカワルのキメラル": {
     "engName": "Saqawine Chimeral",
@@ -309,7 +309,7 @@
     "effect": "カレンシーアイテムを作成: ランダムなカレンシー10個",
     "regex": "ルのキメ",
     "enRegex": "ne ch",
-    "chaosValue": "0.45"
+    "chaosValue": "0.47"
   },
   "ファルウルのマグマ・ハウンド": {
     "engName": "Farric Magma Hound",
@@ -333,7 +333,7 @@
     "effect": "アイテムを変換: タリスマンのベースタイプをリロール 暗黙モッドおよび明示モッドは維持される",
     "regex": "ンのイカ",
     "enRegex": " sq",
-    "chaosValue": "1"
+    "chaosValue": "4"
   },
   "クレイシアンのシールドクラブ": {
     "engName": "Craicic Shield Crab",
@@ -341,7 +341,7 @@
     "effect": "カレンシーアイテムを作成: 宝飾職人のオーブ4個 / カレンシーアイテムを作成: 連結のオーブ2個 / アイテムを変化: 可能な最大ソケット数",
     "regex": "ンのシー",
     "enRegex": "c sh",
-    "chaosValue": "0.18"
+    "chaosValue": "0.19"
   },
   "フィヌムスのウィドウ": {
     "engName": "Fenumal Widow",
@@ -349,7 +349,7 @@
     "effect": "ユニークアイテムを作成: 手袋",
     "regex": "スのウィ",
     "enRegex": "l w",
-    "chaosValue": "0.17"
+    "chaosValue": "0.21"
   },
   "ファルウルのフレイムヘリオン・アルファ": {
     "engName": "Farric Flame Hellion Alpha",
@@ -357,7 +357,7 @@
     "effect": "ユニークアイテムを作成: 指輪",
     "regex": "ルのフレ",
     "enRegex": "c fl",
-    "chaosValue": "1"
+    "chaosValue": "0.58"
   },
   "ファルウルのチーフテン": {
     "engName": "Farric Chieftain",
@@ -365,7 +365,7 @@
     "effect": "ユニークアイテムを作成: アミュレット",
     "regex": "ウルのチ",
     "enRegex": "rric c",
-    "chaosValue": "0.28"
+    "chaosValue": "0.32"
   },
   "ファルウルのゴートマン": {
     "engName": "Farric Goatman",
@@ -389,7 +389,7 @@
     "effect": "ユニークアイテムを作成: 兜 / カレンシーアイテムを作成: 解除のオーブ3個",
     "regex": "ルのガル",
     "enRegex": "c ga",
-    "chaosValue": "0.2"
+    "chaosValue": "0.21"
   },
   "クレイシアンのクローカー": {
     "engName": "Craicic Croaker",
@@ -397,6 +397,6 @@
     "effect": "インプリントを作成: マジックアイテム / ヒネコラの髪束を適用: マジックアイテム",
     "regex": "クローカ",
     "enRegex": "c cro",
-    "chaosValue": "380"
+    "chaosValue": "398"
   }
 }
