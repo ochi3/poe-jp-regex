@@ -1,0 +1,799 @@
+{
+  "bases": [
+    "Metadata/Items/Jewels/JewelAbyssConglomerate"
+  ],
+  "mods": {
+    "prefix": {
+      "AbyssJewelLife": [
+        {
+          "key": "AbyssJewelAddedLife1",
+          "text": "最大ライフ +(21-25)",
+          "name": "強健な",
+          "engText": "+(21-25) to maximum Life",
+          "engName": "Hale",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 3000,
+          "family": "AbyssJewelLife"
+        },
+        {
+          "key": "AbyssJewelAddedLife2",
+          "text": "最大ライフ +(26-30)",
+          "name": "健康な",
+          "engText": "+(26-30) to maximum Life",
+          "engName": "Healthy",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 35,
+          "weight": 3000,
+          "family": "AbyssJewelLife"
+        },
+        {
+          "key": "AbyssJewelAddedLife3",
+          "text": "最大ライフ +(31-35)",
+          "name": "血色良い",
+          "engText": "+(31-35) to maximum Life",
+          "engName": "Sanguine",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 74,
+          "weight": 1000,
+          "family": "AbyssJewelLife"
+        },
+        {
+          "key": "AbyssJewelAddedLife4",
+          "text": "最大ライフ +(36-40)",
+          "name": "屈強な",
+          "engText": "+(36-40) to maximum Life",
+          "engName": "Stalwart",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 82,
+          "weight": 500,
+          "family": "AbyssJewelLife"
+        }
+      ],
+      "AbyssJewelMana": [
+        {
+          "key": "AbyssJewelAddedMana1",
+          "text": "最大マナ +(20-23)",
+          "name": "ベリルの",
+          "engText": "+(20-23) to maximum Mana",
+          "engName": "Beryl",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 1000,
+          "family": "AbyssJewelMana"
+        },
+        {
+          "key": "AbyssJewelAddedMana2",
+          "text": "最大マナ +(24-27)",
+          "name": "コバルトの",
+          "engText": "+(24-27) to maximum Mana",
+          "engName": "Cobalt",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 40,
+          "weight": 1000,
+          "family": "AbyssJewelMana"
+        },
+        {
+          "key": "AbyssJewelAddedMana3",
+          "text": "最大マナ +(28-31)",
+          "name": "淡青な",
+          "engText": "+(28-31) to maximum Mana",
+          "engName": "Azure",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 75,
+          "weight": 1000,
+          "family": "AbyssJewelMana"
+        },
+        {
+          "key": "AbyssJewelAddedMana4",
+          "text": "最大マナ +(32-34)",
+          "name": "サファイアの",
+          "engText": "+(32-34) to maximum Mana",
+          "engName": "Sapphire",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 83,
+          "weight": 500,
+          "family": "AbyssJewelMana"
+        }
+      ],
+      "DamageOverTimeWhileDualWielding": [
+        {
+          "key": "AbyssDamageOverTimeWhileDualWieldingJewel1",
+          "text": "二刀流中は継続ダメージが(10-14)%増加する",
+          "name": "退行させる",
+          "engText": "(10-14)% increased Damage over Time while Dual Wielding",
+          "engName": "Degenerative",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 300,
+          "family": "DamageOverTimeWhileDualWielding"
+        },
+        {
+          "key": "AbyssDamageOverTimeWhileDualWieldingJewel2",
+          "text": "二刀流中は継続ダメージが(15-18)%増加する",
+          "name": "害悪な",
+          "engText": "(15-18)% increased Damage over Time while Dual Wielding",
+          "engName": "Deleterious",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 60,
+          "weight": 100,
+          "family": "DamageOverTimeWhileDualWielding"
+        }
+      ],
+      "DamageOverTimeWhileWieldingTwoHandedWeapon": [
+        {
+          "key": "AbyssDamageOverTimeWhileWieldingTwoHandedWeaponJewel1",
+          "text": "両手武器装備中は継続ダメージが(10-14)%増加する",
+          "name": "退行させる",
+          "engText": "(10-14)% increased Damage over Time while wielding a Two Handed Weapon",
+          "engName": "Degenerative",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 450,
+          "family": "DamageOverTimeWhileWieldingTwoHandedWeapon"
+        },
+        {
+          "key": "AbyssDamageOverTimeWhileWieldingTwoHandedWeaponJewel2",
+          "text": "両手武器装備中は継続ダメージが(15-18)%増加する",
+          "name": "害悪な",
+          "engText": "(15-18)% increased Damage over Time while wielding a Two Handed Weapon",
+          "engName": "Deleterious",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 60,
+          "weight": 150,
+          "family": "DamageOverTimeWhileWieldingTwoHandedWeapon"
+        }
+      ],
+      "DamageOverTimeWhileHoldingAShield": [
+        {
+          "key": "AbyssDamageOverTimeWhileHoldingAShieldJewel1_",
+          "text": "盾装備中は継続ダメージが(10-14)%増加する",
+          "name": "退行させる",
+          "engText": "(10-14)% increased Damage over Time while holding a Shield",
+          "engName": "Degenerative",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 300,
+          "family": "DamageOverTimeWhileHoldingAShield"
+        },
+        {
+          "key": "AbyssDamageOverTimeWhileHoldingAShieldJewel2_",
+          "text": "盾装備中は継続ダメージが(15-18)%増加する",
+          "name": "害悪な",
+          "engText": "(15-18)% increased Damage over Time while holding a Shield",
+          "engName": "Deleterious",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 60,
+          "weight": 100,
+          "family": "DamageOverTimeWhileHoldingAShield"
+        }
+      ],
+      "ManaRegeneration": [
+        {
+          "key": "AbyssFlatManaShieldRegenerationJewel1",
+          "text": "毎秒(1.1-2)のマナを自動回復する",
+          "name": "充填する",
+          "engText": "Regenerate (1.1-2) Mana per second",
+          "engName": "Energising",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 350,
+          "family": "ManaRegeneration"
+        },
+        {
+          "key": "AbyssFlatManaShieldRegenerationJewel2",
+          "text": "毎秒(2.1-3)のマナを自動回復する",
+          "name": "心打つ",
+          "engText": "Regenerate (2.1-3) Mana per second",
+          "engName": "Inspirational",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 40,
+          "weight": 350,
+          "family": "ManaRegeneration"
+        },
+        {
+          "key": "AbyssFlatManaShieldRegenerationJewel3",
+          "text": "毎秒(3.3-4)のマナを自動回復する",
+          "name": "共鳴する",
+          "engText": "Regenerate (3.3-4) Mana per second",
+          "engName": "Resonating",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 75,
+          "weight": 350,
+          "family": "ManaRegeneration"
+        }
+      ],
+      "IncreasedPhysicalDamageReductionRating": [
+        {
+          "key": "AbyssFlatArmourJewel1",
+          "text": "アーマー +(36-60)",
+          "name": "塗装された",
+          "engText": "+(36-60) to Armour",
+          "engName": "Lacquered",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 600,
+          "family": "IncreasedPhysicalDamageReductionRating"
+        },
+        {
+          "key": "AbyssFlatArmourJewel2",
+          "text": "アーマー +(61-100)",
+          "name": "強靭な",
+          "engText": "+(61-100) to Armour",
+          "engName": "Fortified",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 40,
+          "weight": 600,
+          "family": "IncreasedPhysicalDamageReductionRating"
+        },
+        {
+          "key": "AbyssFlatArmourJewel3",
+          "text": "アーマー +(101-180)",
+          "name": "甲皮付き",
+          "engText": "+(101-180) to Armour",
+          "engName": "Carapaced",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 75,
+          "weight": 600,
+          "family": "IncreasedPhysicalDamageReductionRating"
+        },
+        {
+          "key": "AbyssFlatArmourJewel4__",
+          "text": "アーマー +(181-250)",
+          "name": "保護する",
+          "engText": "+(181-250) to Armour",
+          "engName": "Encased",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 83,
+          "weight": 300,
+          "family": "IncreasedPhysicalDamageReductionRating"
+        }
+      ],
+      "IncreasedEvasionRating": [
+        {
+          "key": "AbyssFlatEvasionJewel1",
+          "text": "回避力 +(36-60)",
+          "name": "機敏な",
+          "engText": "+(36-60) to Evasion Rating",
+          "engName": "Agile",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 600,
+          "family": "IncreasedEvasionRating"
+        },
+        {
+          "key": "AbyssFlatEvasionJewel2",
+          "text": "回避力 +(61-100)",
+          "name": "素早い",
+          "engText": "+(61-100) to Evasion Rating",
+          "engName": "Fleet",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 40,
+          "weight": 600,
+          "family": "IncreasedEvasionRating"
+        },
+        {
+          "key": "AbyssFlatEvasionJewel3",
+          "text": "回避力 +(101-180)",
+          "name": "霧状の",
+          "engText": "+(101-180) to Evasion Rating",
+          "engName": "Vaporous",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 75,
+          "weight": 600,
+          "family": "IncreasedEvasionRating"
+        },
+        {
+          "key": "AbyssFlatEvasionJewel4_",
+          "text": "回避力 +(181-250)",
+          "name": "曇らせる",
+          "engText": "+(181-250) to Evasion Rating",
+          "engName": "Beclouded",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 83,
+          "weight": 300,
+          "family": "IncreasedEvasionRating"
+        }
+      ],
+      "IncreasedEnergyShield": [
+        {
+          "key": "AbyssFlatEnergyShieldJewel1",
+          "text": "最大エナジーシールド +(21-25)",
+          "name": "輝く",
+          "engText": "+(21-25) to maximum Energy Shield",
+          "engName": "Shining",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 600,
+          "family": "IncreasedEnergyShield"
+        },
+        {
+          "key": "AbyssFlatEnergyShieldJewel2",
+          "text": "最大エナジーシールド +(26-30)",
+          "name": "沸き立つ",
+          "engText": "+(26-30) to maximum Energy Shield",
+          "engName": "Seething",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 40,
+          "weight": 600,
+          "family": "IncreasedEnergyShield"
+        },
+        {
+          "key": "AbyssFlatEnergyShieldJewel3",
+          "text": "最大エナジーシールド +(31-35)",
+          "name": "光り輝く",
+          "engText": "+(31-35) to maximum Energy Shield",
+          "engName": "Incandescent",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 75,
+          "weight": 600,
+          "family": "IncreasedEnergyShield"
+        },
+        {
+          "key": "AbyssFlatEnergyShieldJewel4",
+          "text": "最大エナジーシールド +(36-40)",
+          "name": "きらびやかな",
+          "engText": "+(36-40) to maximum Energy Shield",
+          "engName": "Resplendent",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 83,
+          "weight": 300,
+          "family": "IncreasedEnergyShield"
+        }
+      ]
+    },
+    "suffix": {
+      "AbyssJewelChillEffect": [
+        {
+          "key": "AbyssJewelChillEffect1_",
+          "text": "冷気系状態異常の効果が(10-20)%増加する",
+          "name": "冷却の",
+          "engText": "(10-20)% increased Effect of Cold Ailments",
+          "engName": "of Chilling",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 30,
+          "weight": 500,
+          "family": "AbyssJewelChillEffect"
+        }
+      ],
+      "AbyssJewelShockEffect": [
+        {
+          "key": "AbyssJewelShockEffect1",
+          "text": "雷系状態異常の効果が(10-20)%増加する",
+          "name": "感電の",
+          "engText": "(10-20)% increased Effect of Lightning Ailments",
+          "engName": "of Shocking",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 30,
+          "weight": 500,
+          "family": "AbyssJewelShockEffect"
+        }
+      ],
+      "Strength": [
+        {
+          "key": "AbyssStrengthJewel1_",
+          "text": "筋力 +(12-16)",
+          "name": "筋力の",
+          "engText": "+(12-16) to Strength",
+          "engName": "of Strength",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "Strength"
+        }
+      ],
+      "Dexterity": [
+        {
+          "key": "AbyssDexterityJewel1_",
+          "text": "器用さ +(12-16)",
+          "name": "器用さの",
+          "engText": "+(12-16) to Dexterity",
+          "engName": "of Dexterity",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "Dexterity"
+        }
+      ],
+      "Intelligence": [
+        {
+          "key": "AbyssIntelligenceJewel1",
+          "text": "知性 +(12-16)",
+          "name": "知性の",
+          "engText": "+(12-16) to Intelligence",
+          "engName": "of Intelligence",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "Intelligence"
+        }
+      ],
+      "StrengthDexterity": [
+        {
+          "key": "AbyssStrengthDexterityJewel1",
+          "text": "筋力および器用さ +(8-10)",
+          "name": "運動の",
+          "engText": "+(8-10) to Strength and Dexterity",
+          "engName": "of Athletics",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "StrengthDexterity"
+        }
+      ],
+      "StrengthIntelligence": [
+        {
+          "key": "AbyssStrengthIntelligenceJewel1_",
+          "text": "筋力および知性 +(8-10)",
+          "name": "魂の",
+          "engText": "+(8-10) to Strength and Intelligence",
+          "engName": "of Spirit",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "StrengthIntelligence"
+        }
+      ],
+      "DexterityIntelligence": [
+        {
+          "key": "AbyssDexterityIntelligenceJewel1",
+          "text": "器用さおよび知性 +(8-10)",
+          "name": "狡猾さの",
+          "engText": "+(8-10) to Dexterity and Intelligence",
+          "engName": "of Cunning",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "DexterityIntelligence"
+        }
+      ],
+      "AllAttributes": [
+        {
+          "key": "AbyssAllAttributesJewel1",
+          "text": "全ての能力値 +(6-8)",
+          "name": "馴致の",
+          "engText": "+(6-8) to all Attributes",
+          "engName": "of Adaption",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "AllAttributes"
+        }
+      ],
+      "FireResistance": [
+        {
+          "key": "AbyssFireResistanceJewel1",
+          "text": "火耐性 +(12-15)%",
+          "name": "ドラゴンの",
+          "engText": "+(12-15)% to Fire Resistance",
+          "engName": "of the Dragon",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 400,
+          "family": "FireResistance"
+        }
+      ],
+      "ColdResistance": [
+        {
+          "key": "AbyssColdResistanceJewel1",
+          "text": "冷気耐性 +(12-15)%",
+          "name": "獣の",
+          "engText": "+(12-15)% to Cold Resistance",
+          "engName": "of the Beast",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 400,
+          "family": "ColdResistance"
+        }
+      ],
+      "LightningResistance": [
+        {
+          "key": "AbyssLightningResistanceJewel1",
+          "text": "雷耐性 +(12-15)%",
+          "name": "接地の",
+          "engText": "+(12-15)% to Lightning Resistance",
+          "engName": "of Grounding",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 400,
+          "family": "LightningResistance"
+        }
+      ],
+      "FireAndColdResistance": [
+        {
+          "key": "AbyssFireColdResistanceJewel1",
+          "text": "火および冷気耐性 +(10-12)%",
+          "name": "路床の",
+          "engText": "+(10-12)% to Fire and Cold Resistances",
+          "engName": "of the Hearth",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "FireAndColdResistance"
+        }
+      ],
+      "FireAndLightningResistance": [
+        {
+          "key": "AbyssFireLightningResistanceJewel1",
+          "text": "火および雷耐性 +(10-12)%",
+          "name": "絶縁体の",
+          "engText": "+(10-12)% to Fire and Lightning Resistances",
+          "engName": "of Insulation",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "FireAndLightningResistance"
+        }
+      ],
+      "ColdAndLightningResistance": [
+        {
+          "key": "AbyssColdLightningResistanceJewel1",
+          "text": "冷気および雷耐性 +(10-12)%",
+          "name": "避難所の",
+          "engText": "+(10-12)% to Cold and Lightning Resistances",
+          "engName": "of Shelter",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "ColdAndLightningResistance"
+        }
+      ],
+      "AllResistances": [
+        {
+          "key": "AbyssAllResistancesJewel1",
+          "text": "全ての元素耐性 +(8-10)%",
+          "name": "抵抗力の",
+          "engText": "+(8-10)% to all Elemental Resistances",
+          "engName": "of Resistance",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 200,
+          "family": "AllResistances"
+        }
+      ],
+      "ChaosResistance": [
+        {
+          "key": "AbyssChaosResistanceJewel1",
+          "text": "混沌耐性 +(7-13)%",
+          "name": "秩序の",
+          "engText": "+(7-13)% to Chaos Resistance",
+          "engName": "of Order",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 100,
+          "family": "ChaosResistance"
+        }
+      ],
+      "CriticalStrikeChanceIncrease": [
+        {
+          "key": "AbyssCriticalStrikeChanceJewel1",
+          "text": "グローバルクリティカル率が(8-12)%増加する",
+          "name": "脅威の",
+          "engText": "(8-12)% increased Global Critical Strike Chance",
+          "engName": "of Menace",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 50,
+          "weight": 900,
+          "family": "CriticalStrikeChanceIncrease"
+        }
+      ],
+      "CriticalStrikeMultiplier": [
+        {
+          "key": "AbyssCriticalStrikeMultiplierJewel1",
+          "text": "グローバルクリティカルダメージ倍率 +(9-12)%",
+          "name": "有効性の",
+          "engText": "+(9-12)% to Global Critical Strike Multiplier",
+          "engName": "of Potency",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 50,
+          "weight": 900,
+          "family": "CriticalStrikeMultiplier"
+        }
+      ],
+      "AvoidIgnite": [
+        {
+          "key": "AbyssAvoidIgniteJewel1_",
+          "text": "(31-40)%の確率で発火を無効化する",
+          "name": "非引火性の",
+          "engText": "(31-40)% chance to Avoid being Ignited",
+          "engName": "of Nonflammability",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 50,
+          "weight": 300,
+          "family": "AvoidIgnite"
+        },
+        {
+          "key": "AbyssAvoidIgniteJewel2",
+          "text": "(41-50)%の確率で発火を無効化する",
+          "name": "耐火の",
+          "engText": "(41-50)% chance to Avoid being Ignited",
+          "engName": "of Fireproofing",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 70,
+          "weight": 150,
+          "family": "AvoidIgnite"
+        }
+      ],
+      "ChanceToAvoidFreezeAndChill": [
+        {
+          "key": "AbyssAvoidFreezeAndChillJewel1",
+          "text": "(31-40)%の確率で凍結を無効化する",
+          "name": "温めの",
+          "engText": "(31-40)% chance to Avoid being Frozen",
+          "engName": "of Warming",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 50,
+          "weight": 300,
+          "family": "ChanceToAvoidFreezeAndChill"
+        },
+        {
+          "key": "AbyssAvoidFreezeAndChillJewel2",
+          "text": "(41-50)%の確率で凍結を無効化する",
+          "name": "加熱の",
+          "engText": "(41-50)% chance to Avoid being Frozen",
+          "engName": "of Heating",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 70,
+          "weight": 150,
+          "family": "ChanceToAvoidFreezeAndChill"
+        }
+      ],
+      "ReducedShockChance": [
+        {
+          "key": "AbyssAvoidShockJewel1",
+          "text": "(31-40)%の確率で感電を無効化する",
+          "name": "絶縁の",
+          "engText": "(31-40)% chance to Avoid being Shocked",
+          "engName": "of Insulating",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 50,
+          "weight": 300,
+          "family": "ReducedShockChance"
+        },
+        {
+          "key": "AbyssAvoidShockJewel2",
+          "text": "(41-50)%の確率で感電を無効化する",
+          "name": "避雷針の",
+          "engText": "(41-50)% chance to Avoid being Shocked",
+          "engName": "of the Lightning Rod",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 70,
+          "weight": 150,
+          "family": "ReducedShockChance"
+        }
+      ],
+      "ChanceToAvoidPoison": [
+        {
+          "key": "AbyssAvoidPoisonJewel1__",
+          "text": "(31-40)%の確率で毒を無効化する",
+          "name": "耐性の",
+          "engText": "(31-40)% chance to Avoid being Poisoned",
+          "engName": "of Tolerance",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 50,
+          "weight": 300,
+          "family": "ChanceToAvoidPoison"
+        },
+        {
+          "key": "AbyssAvoidPoisonJewel2__",
+          "text": "(41-50)%の確率で毒を無効化する",
+          "name": "耐性の",
+          "engText": "(41-50)% chance to Avoid being Poisoned",
+          "engName": "of Immunity",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 70,
+          "weight": 150,
+          "family": "ChanceToAvoidPoison"
+        }
+      ],
+      "ChanceToAvoidBleeding": [
+        {
+          "key": "AbyssAvoidBleedingJewel1",
+          "text": "(31-40)%の確率で出血を無効化する",
+          "name": "食い止めの",
+          "engText": "(31-40)% chance to Avoid Bleeding",
+          "engName": "of Stemming",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 50,
+          "weight": 300,
+          "family": "ChanceToAvoidBleeding"
+        },
+        {
+          "key": "AbyssAvoidBleedingJewel2",
+          "text": "(41-50)%の確率で出血を無効化する",
+          "name": "止血帯の",
+          "engText": "(41-50)% chance to Avoid Bleeding",
+          "engName": "of the Tourniquet",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 70,
+          "weight": 150,
+          "family": "ChanceToAvoidBleeding"
+        }
+      ],
+      "AvoidStun": [
+        {
+          "key": "AbyssAvoidStunJewel1",
+          "text": "(21-24)%の確率でスタンを無効化する",
+          "name": "均衡の",
+          "engText": "(21-24)% chance to Avoid being Stunned",
+          "engName": "of Balance",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 50,
+          "weight": 300,
+          "family": "AvoidStun"
+        },
+        {
+          "key": "AbyssAvoidStunJewel2",
+          "text": "(25-30)%の確率でスタンを無効化する",
+          "name": "安定の",
+          "engText": "(25-30)% chance to Avoid being Stunned",
+          "engName": "of Poise",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 70,
+          "weight": 150,
+          "family": "AvoidStun"
+        }
+      ]
+    }
+  }
+}

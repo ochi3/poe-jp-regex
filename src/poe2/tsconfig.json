@@ -37,6 +37,9 @@
     "../../src/shared/features/regex-converter.ts",
     "../../src/poe2/features/vendor.ts",
     "../../src/poe2/features/saved-regex.ts",
-    "../../src/shared/features/item-translator.ts"
+    "../../src/shared/features/item-translator.ts",
+    "../../src/shared/features/profile-backup.ts",
+    "../../src/poe2/features/selection-tools.ts",
+    "../../src/shared/ui/site-tools.ts"
   ]
 }

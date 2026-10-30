@@ -1,0 +1,164 @@
+{
+  "schemaVersion": 1,
+  "games": {
+    "poe1": {
+      "gameVersion": null,
+      "versionNote": "",
+      "mods": {
+        "fingerprint": "795ee3e5ff65a5eb132c7b37fd66ebfc3deae44b81c75aab32b45d938384d05a",
+        "updatedAt": "2026-10-30T00:45:32.032Z"
+      },
+      "prices": {
+        "fingerprint": "175a0f502d0073f2a138000f39ce8e523453058d8d7851902f168131bd30456e",
+        "updatedAt": "2026-10-29T23:51:21.833Z"
+      },
+      "categories": {
+        "map": {
+          "mods": {
+            "fingerprint": "a48e1a3a748f9cbb01c9442333a22c704c0c027ede062073637e308c6e99a611",
+            "updatedAt": "2026-10-30T00:47:40.991Z"
+          },
+          "prices": null
+        },
+        "chart": {
+          "mods": {
+            "fingerprint": "6f3e641c37e6fa089b2b0a1aa7ea3fa808afd3278f7f53d895b98c4d2b089ed2",
+            "updatedAt": "2026-10-30T00:36:25.893Z"
+          },
+          "prices": null
+        },
+        "item": {
+          "mods": {
+            "fingerprint": "8fddd5dba161a760460ef35f3ad95b4cbedfdd1686e98bb482454968a7eb795a",
+            "updatedAt": "2026-10-30T00:36:25.893Z"
+          },
+          "prices": null
+        },
+        "flask": {
+          "mods": {
+            "fingerprint": "ed4b69b90beaa060f9bf0829480148f1b303119032c906d44894063cc95bbe50",
+            "updatedAt": "2026-10-30T00:36:25.893Z"
+          },
+          "prices": null
+        },
+        "beast": {
+          "mods": {
+            "fingerprint": "44de1d8c45bb32fe6e2796545ac700779bd1cab38f6e86472d901dd07793f55c",
+            "updatedAt": "2026-10-30T00:36:25.893Z"
+          },
+          "prices": {
+            "fingerprint": "d186c9c023efb34cc768c4a89ee3f0acab14a69bf50c89700e894c1270f895b1",
+            "updatedAt": "2026-10-30T00:36:25.893Z"
+          }
+        },
+        "scarab": {
+          "mods": {
+            "fingerprint": "df7c8c1cccd1369a804787dffc1d0a1866014fcde4f2bf82400e186e75332f0a",
+            "updatedAt": "2026-10-30T00:36:25.893Z"
+          },
+          "prices": {
+            "fingerprint": "6fc3e8ac3fe80af98bfe766cc5f477c838bba35afef945843f27a3be2f145c79",
+            "updatedAt": "2026-10-30T00:36:25.893Z"
+          }
+        },
+        "essence": {
+          "mods": {
+            "fingerprint": "fbd09be1fb77a74781dc25ac54d979fe8d2c3225fad917496ecd5b5c08449111",
+            "updatedAt": "2026-10-30T00:36:25.893Z"
+          },
+          "prices": {
+            "fingerprint": "06591a9d2a883b17f148a7b7e2063aa21b5a416e4db1fdf794197d4c5969982a",
+            "updatedAt": "2026-10-30T00:36:25.893Z"
+          }
+        },
+        "tattoo": {
+          "mods": {
+            "fingerprint": "0bb81972bc86c9faf13afd965cc01c3abd73cc8e6ebec0f485383e7b414fcf31",
+            "updatedAt": "2026-10-30T00:36:25.893Z"
+          },
+          "prices": {
+            "fingerprint": "812a626e0b312b0fca769cedf4c19aebbc89d7523fcd06e3f1ccacbe3fbab2a4",
+            "updatedAt": "2026-10-30T00:36:25.893Z"
+          }
+        },
+        "runegraft": {
+          "mods": {
+            "fingerprint": "c38739300773ecdecda394dd3386bdf3a8ce2f5b0f07d3caf6b23340fad19b09",
+            "updatedAt": "2026-10-30T00:36:25.893Z"
+          },
+          "prices": {
+            "fingerprint": "60afac64201747b78b0111a2fbec7a54d240ffda0a7ab481898fe65c4622c1e7",
+            "updatedAt": "2026-10-30T00:36:25.893Z"
+          }
+        },
+        "vendor": {
+          "mods": {
+            "fingerprint": "63b46773ceaa52f8d81b3400e5cfa268e8aaa33c934bb0c13b934f0b7cdacdcd",
+            "updatedAt": "2026-10-30T00:36:25.893Z"
+          },
+          "prices": null
+        },
+        "itemtrans": {
+          "mods": {
+            "fingerprint": "c93642998a7a54fa713d9e543f1cc4ee3d257661942cc33a3b1bbd56c4bda14b",
+            "updatedAt": "2026-10-30T00:36:25.893Z"
+          },
+          "prices": null
+        },
+        "trans": {
+          "mods": {
+            "fingerprint": "9fb6d5ee5b5a85bf5a3a4640a353430fe3477fc05b6c1ccad27c7795b100a0dd",
+            "updatedAt": "2026-10-30T00:47:40.991Z"
+          },
+          "prices": null
+        }
+      }
+    },
+    "poe2": {
+      "gameVersion": null,
+      "versionNote": "",
+      "mods": {
+        "fingerprint": "c4b59a75b24b43dd35c3ab4e13415739936470281d59d51903d88f6c7ce23107",
+        "updatedAt": "2026-10-29T23:51:21.833Z"
+      },
+      "prices": null,
+      "categories": {
+        "map": {
+          "mods": {
+            "fingerprint": "9b039e99ebf488fac05b82ae5f74ec946efa2d7343fedbaf5fd55dbac3eeb7e4",
+            "updatedAt": "2026-10-30T00:45:32.032Z"
+          },
+          "prices": null
+        },
+        "tablet": {
+          "mods": {
+            "fingerprint": "f84421bd1841d75972d4f77047bc52b3832d4da5c0c62c6ca8c4ebbdf3dd73ad",
+            "updatedAt": "2026-10-30T00:36:25.893Z"
+          },
+          "prices": null
+        },
+        "vendor": {
+          "mods": {
+            "fingerprint": "5ed8736be0f65f9bcf0b4fd7080ceeafb37d5fb8651b4825457beaf13444d39b",
+            "updatedAt": "2026-10-30T00:36:25.893Z"
+          },
+          "prices": null
+        },
+        "itemtrans": {
+          "mods": {
+            "fingerprint": "4e0f141b93285f9c0bc3df8735e312e89279ed4f20f3558b2e6982b2394c2f6e",
+            "updatedAt": "2026-10-30T00:36:25.893Z"
+          },
+          "prices": null
+        },
+        "trans": {
+          "mods": {
+            "fingerprint": "f953c7ff209dcf54aa89f3ecb026a3a219f9fbf632a7352e8f2085700ace3429",
+            "updatedAt": "2026-10-30T00:45:32.032Z"
+          },
+          "prices": null
+        }
+      }
+    }
+  }
+}

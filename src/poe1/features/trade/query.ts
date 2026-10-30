@@ -20,9 +20,12 @@ function buildTradeUrl() {
 
     // デフォルトで否定するステータスを追加 (T17/Guardian/Conqueror mods)
     const defaultNotStatIds = [
-        "implicit.stat_2563183002", // Map contains #'s Citadel
-        "implicit.stat_3624393862", // Map is occupied by #
-        "implicit.stat_1792283443"  // Area is influenced by #
+        "implicit.stat_2563183002|4", // Drox
+        "implicit.stat_2563183002|3", // Al-Hezmin
+        "implicit.stat_2563183002|2", // Veritania
+        "implicit.stat_2563183002|1", // Baran
+        "implicit.stat_1792283443|2", // The Elder
+        "implicit.stat_1792283443|1"  // The Shaper
     ];
     defaultNotStatIds.forEach(id => {
         notStats.push({ id, disabled: false });

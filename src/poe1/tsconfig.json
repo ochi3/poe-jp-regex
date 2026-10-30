@@ -44,6 +44,9 @@
     "../../src/poe1/features/saved-regex.ts",
     "../../src/poe1/features/pob-import.ts",
     "../../src/poe1/features/vendor.ts",
-    "../../src/shared/features/item-translator.ts"
+    "../../src/shared/features/item-translator.ts",
+    "../../src/shared/features/profile-backup.ts",
+    "../../src/poe1/features/selection-tools.ts",
+    "../../src/shared/ui/site-tools.ts"
   ]
 }

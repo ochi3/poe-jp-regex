@@ -34,12 +34,13 @@ jobs:
         run: |
           npm ci --ignore-scripts
           npm run build
+          npm run check:release
 
       - name: Commit and push changes
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add data/poe1/beastlist.json data/poe1/scarablist.json data/poe1/tattoolist.json data/poe1/runegraftlist.json data/poe1/essencelist.json assets/js/data-poe1.js
+          git add data/poe1/beastlist.json data/poe1/scarablist.json data/poe1/tattoolist.json data/poe1/runegraftlist.json data/poe1/essencelist.json data/status.json assets/js/data-poe1.js
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else

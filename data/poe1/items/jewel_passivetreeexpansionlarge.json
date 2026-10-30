@@ -1,0 +1,3920 @@
+{
+  "bases": [
+    "Metadata/Items/Jewels/JewelPassiveTreeExpansionLarge"
+  ],
+  "scopeNote": "小パッシブの種類ごとに付くModが異なります。全種類の候補を表示しています。",
+  "mods": {
+    "prefix": {
+      "AfflictionNotableProdigiousDefense": [
+        {
+          "key": "AfflictionNotableProdigiousDefense__",
+          "text": "パッシブスキルを1個追加: 驚異的な防御",
+          "name": "特殊な",
+          "engText": "1 Added Passive Skill is Prodigious Defence",
+          "engName": "Notable",
+          "tag": "affliction_attack_damage_while_holding_a_shield",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 600,
+          "family": "AfflictionNotableProdigiousDefense",
+          "variantTags": [
+            "affliction_attack_damage_while_holding_a_shield"
+          ]
+        }
+      ],
+      "AfflictionNotableAdvanceGuard": [
+        {
+          "key": "AfflictionNotableAdvanceGuard",
+          "text": "パッシブスキルを1個追加: 前衛",
+          "name": "特殊な",
+          "engText": "1 Added Passive Skill is Advance Guard",
+          "engName": "Notable",
+          "tag": "affliction_attack_damage_while_holding_a_shield",
+          "generation_type": "prefix",
+          "required_level": 50,
+          "weight": 300,
+          "family": "AfflictionNotableAdvanceGuard",
+          "variantTags": [
+            "affliction_attack_damage_while_holding_a_shield"
+          ]
+        }
+      ],
+      "AfflictionNotableStrikeLeader": [
+        {
+          "key": "AfflictionNotableStrikeLeader_",
+          "text": "パッシブスキルを1個追加: ストライクリーダー",
+          "name": "特殊な",
+          "engText": "1 Added Passive Skill is Strike Leader",
+          "engName": "Notable",
+          "tag": "affliction_attack_damage_while_holding_a_shield",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 600,
+          "family": "AfflictionNotableStrikeLeader",
+          "variantTags": [
+            "affliction_attack_damage_while_holding_a_shield"
+          ]
+        }
+      ],
+      "AfflictionNotableGladiatorsFortitude": [
+        {
+          "key": "AfflictionNotableGladiatorsFortitude",
+          "text": "パッシブスキルを1個追加: 剣闘士の剛勇",
+          "name": "特殊な",
+          "engText": "1 Added Passive Skill is Gladiator's Fortitude",
+          "engName": "Notable",
+          "tag": "affliction_attack_damage_while_holding_a_shield",
+          "generation_type": "prefix",
+          "required_level": 68,
+          "weight": 113,
+          "family": "AfflictionNotableGladiatorsFortitude",
+          "variantTags": [
+            "affliction_attack_damage_while_holding_a_shield"
+          ]
+        }
+      ],
+      "AfflictionNotablePreciseRetaliation": [
+        {
+          "key": "AfflictionNotablePreciseRetaliation_",
+          "text": "パッシブスキルを1個追加: 正確な報復",
+          "name": "特殊な",
+          "engText": "1 Added Passive Skill is Precise Retaliation",
+          "engName": "Notable",
+          "tag": "affliction_attack_damage_while_holding_a_shield",
+          "generation_type": "prefix",
+          "required_level": 50,
+          "weight": 300,
+          "family": "AfflictionNotablePreciseRetaliation",
+          "variantTags": [
+            "affliction_attack_damage_while_holding_a_shield"
+          ]
+        }
+      ],
+      "AfflictionNotableVeteranDefender": [
+        {
+          "key": "AfflictionNotableVeteranDefender",
+          "text": "パッシブスキルを1個追加: ベテラン・ディフェンダー",
+          "name": "特殊な",
+          "engText": "1 Added Passive Skill is Veteran Defender",
+          "engName": "Notable",
+          "tag": "affliction_attack_damage_while_holding_a_shield",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 600,
+          "family": "AfflictionNotableVeteranDefender",
+          "variantTags": [
+            "affliction_attack_damage_while_holding_a_shield"
+          ]
+        }
+      ],
+      "AfflictionNotableIronBreaker": [
+        {
+          "key": "AfflictionNotableIronBreaker",
+          "text": "パッシブスキルを1個追加: アイアンブレイカー",
+          "name": "特殊な",
+          "engText": "1 Added Passive Skill is Iron Breaker",
+          "engName": "Notable",
+          "tag": "affliction_physical_damage",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 464,
+          "family": "AfflictionNotableIronBreaker",
+          "variantTags": [
+            "affliction_physical_damage"
+          ]
+        }
+      ],
+      "AfflictionNotableMastertheFundamentals": [
+        {
+          "key": "AfflictionNotableMastertheFundamentals_",
+          "text": "パッシブスキルを1個追加: 基礎の習得",
+          "name": "特殊な",
+          "engText": "1 Added Passive Skill is Master the Fundamentals",
+          "engName": "Notable",
+          "tag": "affliction_physical_damage",
+          "generation_type": "prefix",
+          "required_level": 50,
+          "weight": 232,
+          "family": "AfflictionNotableMastertheFundamentals",
+          "variantTags": [
+            "affliction_physical_damage"
+          ]
+        }
+      ],
+      "AfflictionNotableViciousSkewering": [
+        {
+          "key": "AfflictionNotableViciousSkewering",
+          "text": "パッシブスキルを1個追加: 残忍な刺突",
+          "name": "特殊な",
+          "engText": "1 Added Passive Skill is Vicious Skewering",
+          "engName": "Notable",
+          "tag": "affliction_axe_and_sword_damage",
+          "generation_type": "prefix",
+          "required_level": 68,
+          "weight": 141,
+          "family": "AfflictionNotableViciousSkewering",
+          "variantTags": [
+            "affliction_axe_and_sword_damage",
+            "affliction_mace_and_staff_damage",
+            "affliction_dagger_and_claw_damage",
+            "affliction_bow_damage",
+            "affliction_wand_damage",
+            "affliction_damage_with_two_handed_melee_weapons",
+            "affliction_attack_damage_while_dual_wielding_",
+            "affliction_attack_damage_while_holding_a_shield",
+            "affliction_attack_damage_"
+          ]
+        }
+      ],
+      "AfflictionNotableBattleHardened": [
+        {
+          "key": "AfflictionNotableBattleHardened_",
+          "text": "パッシブスキルを1個追加: 百戦錬磨",
+          "name": "特殊な",
+          "engText": "1 Added Passive Skill is Battle-Hardened",
+          "engName": "Notable",
+          "tag": "affliction_physical_damage",
+          "generation_type": "prefix",
+          "required_level": 50,
+          "weight": 232,
+          "family": "AfflictionNotableBattleHardened",
+          "variantTags": [
+            "affliction_physical_damage"
+          ]
+        }
+      ],
+      "AfflictionNotableOverwhelmingMalice": [
+        {
+          "key": "AfflictionNotableOverwhelmingMalice",
+          "text": "パッシブスキルを1個追加: 圧倒的な悪意",
+          "name": "特殊な",
+          "engText": "1 Added Passive Skill is Overwhelming Malice",
+          "engName": "Notable",
+          "tag": "affliction_chaos_damage",
+          "generation_type": "prefix",
+          "required_level": 68,
+          "weight": 97,
+          "family": "AfflictionNotableOverwhelmingMalice",
+          "variantTags": [
+            "affliction_chaos_damage"
+          ]
+        }
+      ],
+      "AfflictionNotableTitanicSwings": [
+        {
+          "key": "AfflictionNotableTitanicSwings_",
+          "text": "パッシブスキルを1個追加: 巨人の一振り",
+          "name": "特殊な",
+          "engText": "1 Added Passive Skill is Titanic Swings",
+          "engName": "Notable",
+          "tag": "affliction_damage_with_two_handed_melee_weapons",
+          "generation_type": "prefix",
+          "required_level": 50,
+          "weight": 302,
+          "family": "AfflictionNotableTitanicSwings",
+          "variantTags": [
+            "affliction_damage_with_two_handed_melee_weapons"
+          ]
+        }
+      ],
+      "AfflictionNotableAncestralInspiration": [
+        {
+          "key": "AfflictionNotableAncestralInspiration__",
+          "text": "パッシブスキルを1個追加: 先祖の霊感",
+          "name": "特殊な",
+          "engText": "1 Added Passive Skill is Ancestral Inspiration",
+          "engName": "Notable",
+          "tag": "affliction_spell_damage",
+          "generation_type": "prefix",
+          "required_level": 68,
+          "weight": 281,
+          "family": "AfflictionNotableAncestralInspiration",
+          "variantTags": [
+            "affliction_spell_damage"
+          ]
+        }
+      ],
+      "AfflictionNotableArcaneAdept": [
+        {
+          "key": "AfflictionNotableArcaneAdept_",
+          "text": "パッシブスキルを1個追加: アーケーンアデプト",
+          "name": "特殊な",
+          "engText": "1 Added Passive Skill is Arcane Adept",
+          "engName": "Notable",
+          "tag": "affliction_spell_damage",
+          "generation_type": "prefix",
+          "required_level": 68,
+          "weight": 281,
+          "family": "AfflictionNotableArcaneAdept",
+          "variantTags": [
+            "affliction_spell_damage"
+          ]
+        }
+      ],
+      "AfflictionNotableBloodscent": [
+        {
+          "key": "AfflictionNotableBloodscent",
+          "text": "パッシブスキルを1個追加: 血の臭い",
+          "name": "特殊な",
+          "engText": "1 Added Passive Skill is Bloodscent",
+          "engName": "Notable",
+          "tag": "affliction_axe_and_sword_damage",
+          "generation_type": "prefix",
+          "required_level": 75,
+          "weight": 47,
+          "family": "AfflictionNotableBloodscent",
+          "variantTags": [
+            "affliction_axe_and_sword_damage"
+          ]
+        }
+      ],
+      "AfflictionNotableRunThrough": [
+        {
+          "key": "AfflictionNotableRunThrough",
+          "text": "パッシブスキルを1個追加: 貫通",
+          "name": "特殊な",
+          "engText": "1 Added Passive Skill is Run Through",
+          "engName": "Notable",
+          "tag": "affliction_axe_and_sword_damage",
+          "generation_type": "prefix",
+          "required_level": 68,
+          "weight": 141,
+          "family": "AfflictionNotableRunThrough",
+          "variantTags": [
+            "affliction_axe_and_sword_damage"
+          ]
+        }
+      ],
+      "AfflictionNotableWoundAggravation": [
+        {
+          "key": "AfflictionNotableWoundAggravation____",
+          "text": "パッシブスキルを1個追加: 重傷",
+          "name": "特殊な",
+          "engText": "1 Added Passive Skill is Wound Aggravation",
+          "engName": "Notable",
+          "tag": "affliction_axe_and_sword_damage",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 750,
+          "family": "AfflictionNotableWoundAggravation",
+          "variantTags": [
+            "affliction_axe_and_sword_damage"
+          ]
+        }
+      ],
+      "AfflictionNotableOverlord": [
+        {
+          "key": "AfflictionNotableOverlord",
+          "text": "パッシブスキルを1個追加: オーバーロード",
+          "name": "特殊な",
+          "engText": "1 Added Passive Skill is Overlord",
+          "engName": "Notable",
+          "tag": "affliction_mace_and_staff_damage",
+          "generation_type": "prefix",
+          "required_level": 75,
+          "weight": 47,
+          "family": "AfflictionNotableOverlord",
+          "variantTags": [
+            "affliction_mace_and_staff_damage"
+          ]
+        }
+      ],
+      "AfflictionNotableExpansiveMight": [
+        {
+          "key": "AfflictionNotableExpansiveMight",
+          "text": "パッシブスキルを1個追加: 膨張する力",
+          "name": "特殊な",
+          "engText": "1 Added Passive Skill is Expansive Might",
+          "engName": "Notable",
+          "tag": "affliction_mace_and_staff_damage",
+          "generation_type": "prefix",
+          "required_level": 68,
+          "weight": 141,
+          "family": "AfflictionNotableExpansiveMight",
+          "variantTags": [
+            "affliction_mace_and_staff_damage"
+          ]
+        }
+      ],
+      "AfflictionNotableWeightAdvantage": [
+        {
+          "key": "AfflictionNotableWeightAdvantage_",
+          "text": "パッシブスキルを1個追加: ウェイトアドバンテージ",
+          "name": "特殊な",
+          "engText": "1 Added Passive Skill is Weight Advantage",
+          "engName": "Notable",
+          "tag": "affliction_mace_and_staff_damage",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 750,
+          "family": "AfflictionNotableWeightAdvantage",
+          "variantTags": [
+            "affliction_mace_and_staff_damage"
+          ]
+        }
+      ],
+      "AfflictionNotableWindup": [
+        {
+          "key": "AfflictionNotableWindup_",
+          "text": "パッシブスキルを1個追加: ねじ巻き",
+          "name": "特殊な",
+          "engText": "1 Added Passive Skill is Wind-up",
+          "engName": "Notable",
+          "tag": "affliction_dagger_and_claw_damage",
+          "generation_type": "prefix",
+          "required_level": 68,
+          "weight": 151,
+          "family": "AfflictionNotableWindup",
+          "variantTags": [
+            "affliction_dagger_and_claw_damage"
+          ]
+        }
+      ],
+      "AfflictionNotableFanofBlades": [
+        {
+          "key": "AfflictionNotableFanofBlades_",
+          "text": "パッシブスキルを1個追加: 刃の扇",
+          "name": "特殊な",
+          "engText": "1 Added Passive Skill is Fan of Blades",
+          "engName": "Notable",
+          "tag": "affliction_dagger_and_claw_damage",
+          "generation_type": "prefix",
+          "required_level": 75,
+          "weight": 51,
+          "family": "AfflictionNotableFanofBlades",
+          "variantTags": [
+            "affliction_dagger_and_claw_damage"
+          ]
+        }
+      ],
+      "AfflictionNotableDiseaseVector": [
+        {
+          "key": "AfflictionNotableDiseaseVector",
+          "text": "パッシブスキルを1個追加: 病原媒介者",
+          "name": "特殊な",
+          "engText": "1 Added Passive Skill is Disease Vector",
+          "engName": "Notable",
+          "tag": "affliction_dagger_and_claw_damage",
+          "generation_type": "prefix",
+          "required_level": 50,
+          "weight": 404,
+          "family": "AfflictionNotableDiseaseVector",
+          "variantTags": [
+            "affliction_dagger_and_claw_damage"
+          ]
+        }
+      ],
+      "AfflictionNotableArcingShot": [
+        {
+          "key": "AfflictionNotableArcingShot__",
+          "text": "パッシブスキルを1個追加: 曲射",
+          "name": "特殊な",
+          "engText": "1 Added Passive Skill is Arcing Shot",
+          "engName": "Notable",
+          "tag": "affliction_bow_damage",
+          "generation_type": "prefix",
+          "required_level": 50,
+          "weight": 387,
+          "family": "AfflictionNotableArcingShot",
+          "variantTags": [
+            "affliction_bow_damage"
+          ]
+        }
+      ],
+      "AfflictionNotableTemperedArrowheads": [
+        {
+          "key": "AfflictionNotableTemperedArrowheads",
+          "text": "パッシブスキルを1個追加: 鍛えられた鏃",
+          "name": "特殊な",
+          "engText": "1 Added Passive Skill is Tempered Arrowheads",
+          "engName": "Notable",
+          "tag": "affliction_bow_damage",
+          "generation_type": "prefix",
+          "required_level": 50,
+          "weight": 387,
+          "family": "AfflictionNotableTemperedArrowheads",
+          "variantTags": [
+            "affliction_bow_damage"
+          ]
+        }
+      ],
+      "AfflictionNotableBroadside": [
+        {
+          "key": "AfflictionNotableBroadside_",
+          "text": "パッシブスキルを1個追加: 斉射",
+          "name": "特殊な",
+          "engText": "1 Added Passive Skill is Broadside",
+          "engName": "Notable",
+          "tag": "affliction_bow_damage",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 774,
+          "family": "AfflictionNotableBroadside",
+          "variantTags": [
+            "affliction_bow_damage"
+          ]
+        }
+      ],
+      "AfflictionNotableExplosiveForce": [
+        {
+          "key": "AfflictionNotableExplosiveForce",
+          "text": "パッシブスキルを1個追加: 爆発する力",
+          "name": "特殊な",
+          "engText": "1 Added Passive Skill is Explosive Force",
+          "engName": "Notable",
+          "tag": "affliction_wand_damage",
+          "generation_type": "prefix",
+          "required_level": 68,
+          "weight": 151,
+          "family": "AfflictionNotableExplosiveForce",
+          "variantTags": [
+            "affliction_wand_damage"
+          ]
+        }
+      ],
+      "AfflictionNotableOpportunisticFusilade": [
+        {
+          "key": "AfflictionNotableOpportunisticFusilade_",
+          "text": "パッシブスキルを1個追加: 機を見た斉射",
+          "name": "特殊な",
+          "engText": "1 Added Passive Skill is Opportunistic Fusilade",
+          "engName": "Notable",
+          "tag": "affliction_wand_damage",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 807,
+          "family": "AfflictionNotableOpportunisticFusilade",
+          "variantTags": [
+            "affliction_wand_damage"
+          ]
+        }
+      ],
+      "AfflictionNotableStormsHand": [
+        {
+          "key": "AfflictionNotableStormsHand",
+          "text": "パッシブスキルを1個追加: 嵐の手",
+          "name": "特殊な",
+          "engText": "1 Added Passive Skill is Storm's Hand",
+          "engName": "Notable",
+          "tag": "affliction_wand_damage",
+          "generation_type": "prefix",
+          "required_level": 50,
+          "weight": 403,
+          "family": "AfflictionNotableStormsHand",
+          "variantTags": [
+            "affliction_wand_damage"
+          ]
+        }
+      ],
+      "AfflictionNotableBattlefieldDominator": [
+        {
+          "key": "AfflictionNotableBattlefieldDominator",
+          "text": "パッシブスキルを1個追加: 戦場の支配者",
+          "name": "特殊な",
+          "engText": "1 Added Passive Skill is Battlefield Dominator",
+          "engName": "Notable",
+          "tag": "affliction_damage_with_two_handed_melee_weapons",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 604,
+          "family": "AfflictionNotableBattlefieldDominator",
+          "variantTags": [
+            "affliction_damage_with_two_handed_melee_weapons"
+          ]
+        }
+      ],
+      "AfflictionNotableMartialMastery": [
+        {
+          "key": "AfflictionNotableMartialMastery",
+          "text": "パッシブスキルを1個追加: マーシャルマスタリー",
+          "name": "特殊な",
+          "engText": "1 Added Passive Skill is Martial Mastery",
+          "engName": "Notable",
+          "tag": "affliction_damage_with_two_handed_melee_weapons",
+          "generation_type": "prefix",
+          "required_level": 50,
+          "weight": 302,
+          "family": "AfflictionNotableMartialMastery",
+          "variantTags": [
+            "affliction_damage_with_two_handed_melee_weapons"
+          ]
+        }
+      ],
+      "AfflictionNotableSurefootedStriker": [
+        {
+          "key": "AfflictionNotableSurefootedStriker_",
+          "text": "パッシブスキルを1個追加: 足取り確かな攻撃者",
+          "name": "特殊な",
+          "engText": "1 Added Passive Skill is Surefooted Striker",
+          "engName": "Notable",
+          "tag": "affliction_damage_with_two_handed_melee_weapons",
+          "generation_type": "prefix",
+          "required_level": 50,
+          "weight": 302,
+          "family": "AfflictionNotableSurefootedStriker",
+          "variantTags": [
+            "affliction_damage_with_two_handed_melee_weapons"
+          ]
+        }
+      ],
+      "AfflictionNotableGracefulExecution": [
+        {
+          "key": "AfflictionNotableGracefulExecution_",
+          "text": "パッシブスキルを1個追加: 優美な処刑",
+          "name": "特殊な",
+          "engText": "1 Added Passive Skill is Graceful Execution",
+          "engName": "Notable",
+          "tag": "affliction_damage_with_two_handed_melee_weapons",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 604,
+          "family": "AfflictionNotableGracefulExecution",
+          "variantTags": [
+            "affliction_damage_with_two_handed_melee_weapons"
+          ]
+        }
+      ],
+      "AfflictionNotableBrutalInfamy": [
+        {
+          "key": "AfflictionNotableBrutalInfamy",
+          "text": "パッシブスキルを1個追加: 野蛮な行い",
+          "name": "特殊な",
+          "engText": "1 Added Passive Skill is Brutal Infamy",
+          "engName": "Notable",
+          "tag": "affliction_damage_with_two_handed_melee_weapons",
+          "generation_type": "prefix",
+          "required_level": 50,
+          "weight": 302,
+          "family": "AfflictionNotableBrutalInfamy",
+          "variantTags": [
+            "affliction_damage_with_two_handed_melee_weapons"
+          ]
+        }
+      ],
+      "AfflictionNotableFearsomeWarrior": [
+        {
+          "key": "AfflictionNotableFearsomeWarrior",
+          "text": "パッシブスキルを1個追加: 恐怖の戦士",
+          "name": "特殊な",
+          "engText": "1 Added Passive Skill is Fearsome Warrior",
+          "engName": "Notable",
+          "tag": "affliction_damage_with_two_handed_melee_weapons",
+          "generation_type": "prefix",
+          "required_level": 68,
+          "weight": 113,
+          "family": "AfflictionNotableFearsomeWarrior",
+          "variantTags": [
+            "affliction_damage_with_two_handed_melee_weapons"
+          ]
+        }
+      ],
+      "AfflictionNotableCombatRhythm": [
+        {
+          "key": "AfflictionNotableCombatRhythm",
+          "text": "パッシブスキルを1個追加: コンバットリズム",
+          "name": "特殊な",
+          "engText": "1 Added Passive Skill is Combat Rhythm",
+          "engName": "Notable",
+          "tag": "affliction_attack_damage_while_dual_wielding_",
+          "generation_type": "prefix",
+          "required_level": 50,
+          "weight": 312,
+          "family": "AfflictionNotableCombatRhythm",
+          "variantTags": [
+            "affliction_attack_damage_while_dual_wielding_"
+          ]
+        }
+      ],
+      "AfflictionNotableHitandRun": [
+        {
+          "key": "AfflictionNotableHitandRun",
+          "text": "パッシブスキルを1個追加: ヒットエンドラン",
+          "name": "特殊な",
+          "engText": "1 Added Passive Skill is Hit and Run",
+          "engName": "Notable",
+          "tag": "affliction_attack_damage_while_dual_wielding_",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 623,
+          "family": "AfflictionNotableHitandRun",
+          "variantTags": [
+            "affliction_attack_damage_while_dual_wielding_"
+          ]
+        }
+      ],
+      "AfflictionNotableInsatiableKiller": [
+        {
+          "key": "AfflictionNotableInsatiableKiller_",
+          "text": "パッシブスキルを1個追加: 貪欲な殺し屋",
+          "name": "特殊な",
+          "engText": "1 Added Passive Skill is Insatiable Killer",
+          "engName": "Notable",
+          "tag": "affliction_attack_damage_while_dual_wielding_",
+          "generation_type": "prefix",
+          "required_level": 50,
+          "weight": 312,
+          "family": "AfflictionNotableInsatiableKiller",
+          "variantTags": [
+            "affliction_attack_damage_while_dual_wielding_"
+          ]
+        }
+      ],
+      "AfflictionNotableMageBane": [
+        {
+          "key": "AfflictionNotableMageBane__",
+          "text": "パッシブスキルを1個追加: メイジベイン",
+          "name": "特殊な",
+          "engText": "1 Added Passive Skill is Mage Bane",
+          "engName": "Notable",
+          "tag": "affliction_attack_damage_while_dual_wielding_",
+          "generation_type": "prefix",
+          "required_level": 68,
+          "weight": 117,
+          "family": "AfflictionNotableMageBane",
+          "variantTags": [
+            "affliction_attack_damage_while_dual_wielding_"
+          ]
+        }
+      ],
+      "AfflictionNotableMartialMomentum": [
+        {
+          "key": "AfflictionNotableMartialMomentum",
+          "text": "パッシブスキルを1個追加: 戦争の機運",
+          "name": "特殊な",
+          "engText": "1 Added Passive Skill is Martial Momentum",
+          "engName": "Notable",
+          "tag": "affliction_attack_damage_while_dual_wielding_",
+          "generation_type": "prefix",
+          "required_level": 50,
+          "weight": 312,
+          "family": "AfflictionNotableMartialMomentum",
+          "variantTags": [
+            "affliction_attack_damage_while_dual_wielding_"
+          ]
+        }
+      ],
+      "AfflictionNotableDeadlyRepartee": [
+        {
+          "key": "AfflictionNotableDeadlyRepartee",
+          "text": "パッシブスキルを1個追加: 死の応酬",
+          "name": "特殊な",
+          "engText": "1 Added Passive Skill is Deadly Repartee",
+          "engName": "Notable",
+          "tag": "affliction_attack_damage_while_dual_wielding_",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 623,
+          "family": "AfflictionNotableDeadlyRepartee",
+          "variantTags": [
+            "affliction_attack_damage_while_dual_wielding_"
+          ]
+        }
+      ],
+      "AfflictionNotableQuickandDeadly": [
+        {
+          "key": "AfflictionNotableQuickandDeadly_",
+          "text": "パッシブスキルを1個追加: クイックアンドデッドリー",
+          "name": "特殊な",
+          "engText": "1 Added Passive Skill is Quick and Deadly",
+          "engName": "Notable",
+          "tag": "affliction_attack_damage_while_dual_wielding_",
+          "generation_type": "prefix",
+          "required_level": 68,
+          "weight": 117,
+          "family": "AfflictionNotableQuickandDeadly",
+          "variantTags": [
+            "affliction_attack_damage_while_dual_wielding_"
+          ]
+        }
+      ],
+      "AfflictionNotableCalamitous": [
+        {
+          "key": "AfflictionNotableCalamitous",
+          "text": "パッシブスキルを1個追加: カラミティウス",
+          "name": "特殊な",
+          "engText": "1 Added Passive Skill is Calamitous",
+          "engName": "Notable",
+          "tag": "affliction_axe_and_sword_damage",
+          "generation_type": "prefix",
+          "required_level": 50,
+          "weight": 375,
+          "family": "AfflictionNotableCalamitous",
+          "variantTags": [
+            "affliction_axe_and_sword_damage",
+            "affliction_mace_and_staff_damage",
+            "affliction_dagger_and_claw_damage",
+            "affliction_bow_damage",
+            "affliction_wand_damage",
+            "affliction_damage_with_two_handed_melee_weapons",
+            "affliction_attack_damage_while_dual_wielding_",
+            "affliction_attack_damage_while_holding_a_shield",
+            "affliction_attack_damage_"
+          ]
+        }
+      ],
+      "AfflictionNotableDevastator": [
+        {
+          "key": "AfflictionNotableDevastator",
+          "text": "パッシブスキルを1個追加: 壊す者",
+          "name": "特殊な",
+          "engText": "1 Added Passive Skill is Devastator",
+          "engName": "Notable",
+          "tag": "affliction_axe_and_sword_damage",
+          "generation_type": "prefix",
+          "required_level": 75,
+          "weight": 47,
+          "family": "AfflictionNotableDevastator",
+          "variantTags": [
+            "affliction_axe_and_sword_damage",
+            "affliction_mace_and_staff_damage",
+            "affliction_dagger_and_claw_damage",
+            "affliction_bow_damage",
+            "affliction_wand_damage",
+            "affliction_damage_with_two_handed_melee_weapons",
+            "affliction_attack_damage_while_dual_wielding_",
+            "affliction_attack_damage_while_holding_a_shield",
+            "affliction_attack_damage_"
+          ]
+        }
+      ],
+      "AfflictionNotableFueltheFight": [
+        {
+          "key": "AfflictionNotableFueltheFight",
+          "text": "パッシブスキルを1個追加: 闘争心",
+          "name": "特殊な",
+          "engText": "1 Added Passive Skill is Fuel the Fight",
+          "engName": "Notable",
+          "tag": "affliction_axe_and_sword_damage",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 750,
+          "family": "AfflictionNotableFueltheFight",
+          "variantTags": [
+            "affliction_axe_and_sword_damage",
+            "affliction_mace_and_staff_damage",
+            "affliction_dagger_and_claw_damage",
+            "affliction_bow_damage",
+            "affliction_wand_damage",
+            "affliction_damage_with_two_handed_melee_weapons",
+            "affliction_attack_damage_while_dual_wielding_",
+            "affliction_attack_damage_while_holding_a_shield",
+            "affliction_attack_damage_"
+          ]
+        }
+      ],
+      "AfflictionNotableDrivetheDestruction": [
+        {
+          "key": "AfflictionNotableDrivetheDestruction__",
+          "text": "パッシブスキルを1個追加: 破滅への道",
+          "name": "特殊な",
+          "engText": "1 Added Passive Skill is Drive the Destruction",
+          "engName": "Notable",
+          "tag": "affliction_axe_and_sword_damage",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 750,
+          "family": "AfflictionNotableDrivetheDestruction",
+          "variantTags": [
+            "affliction_axe_and_sword_damage",
+            "affliction_mace_and_staff_damage",
+            "affliction_dagger_and_claw_damage",
+            "affliction_bow_damage",
+            "affliction_wand_damage",
+            "affliction_damage_with_two_handed_melee_weapons",
+            "affliction_attack_damage_while_dual_wielding_",
+            "affliction_attack_damage_while_holding_a_shield",
+            "affliction_attack_damage_"
+          ]
+        }
+      ],
+      "AfflictionNotableFeedtheFury": [
+        {
+          "key": "AfflictionNotableFeedtheFury",
+          "text": "パッシブスキルを1個追加: 高まる怒り",
+          "name": "特殊な",
+          "engText": "1 Added Passive Skill is Feed the Fury",
+          "engName": "Notable",
+          "tag": "affliction_axe_and_sword_damage",
+          "generation_type": "prefix",
+          "required_level": 50,
+          "weight": 375,
+          "family": "AfflictionNotableFeedtheFury",
+          "variantTags": [
+            "affliction_axe_and_sword_damage",
+            "affliction_mace_and_staff_damage",
+            "affliction_dagger_and_claw_damage",
+            "affliction_bow_damage",
+            "affliction_wand_damage",
+            "affliction_damage_with_two_handed_melee_weapons",
+            "affliction_attack_damage_while_dual_wielding_",
+            "affliction_attack_damage_while_holding_a_shield",
+            "affliction_attack_damage_"
+          ]
+        }
+      ],
+      "AfflictionNotableSealMender": [
+        {
+          "key": "AfflictionNotableSealMender",
+          "text": "パッシブスキルを1個追加: シールメンダー",
+          "name": "特殊な",
+          "engText": "1 Added Passive Skill is Seal Mender",
+          "engName": "Notable",
+          "tag": "affliction_spell_damage",
+          "generation_type": "prefix",
+          "required_level": 75,
+          "weight": 94,
+          "family": "AfflictionNotableSealMender",
+          "variantTags": [
+            "affliction_spell_damage"
+          ]
+        }
+      ],
+      "AfflictionNotableConjuredWall": [
+        {
+          "key": "AfflictionNotableConjuredWall",
+          "text": "パッシブスキルを1個追加: 魔法の壁",
+          "name": "特殊な",
+          "engText": "1 Added Passive Skill is Conjured Wall",
+          "engName": "Notable",
+          "tag": "affliction_spell_damage",
+          "generation_type": "prefix",
+          "required_level": 50,
+          "weight": 750,
+          "family": "AfflictionNotableConjuredWall",
+          "variantTags": [
+            "affliction_spell_damage"
+          ]
+        }
+      ],
+      "AfflictionNotableArcaneHeroism": [
+        {
+          "key": "AfflictionNotableArcaneHeroism_",
+          "text": "パッシブスキルを1個追加: アーケーンヒロイズム",
+          "name": "特殊な",
+          "engText": "1 Added Passive Skill is Arcane Heroism",
+          "engName": "Notable",
+          "tag": "affliction_spell_damage",
+          "generation_type": "prefix",
+          "required_level": 68,
+          "weight": 281,
+          "family": "AfflictionNotableArcaneHeroism",
+          "variantTags": [
+            "affliction_spell_damage"
+          ]
+        }
+      ],
+      "AfflictionNotablePracticedCaster": [
+        {
+          "key": "AfflictionNotablePracticedCaster",
+          "text": "パッシブスキルを1個追加: 熟練魔導士",
+          "name": "特殊な",
+          "engText": "1 Added Passive Skill is Practiced Caster",
+          "engName": "Notable",
+          "tag": "affliction_spell_damage",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 1500,
+          "family": "AfflictionNotablePracticedCaster",
+          "variantTags": [
+            "affliction_spell_damage"
+          ]
+        }
+      ],
+      "AfflictionNotableBurdenProjection": [
+        {
+          "key": "AfflictionNotableBurdenProjection",
+          "text": "パッシブスキルを1個追加: 負荷の投影",
+          "name": "特殊な",
+          "engText": "1 Added Passive Skill is Burden Projection",
+          "engName": "Notable",
+          "tag": "affliction_spell_damage",
+          "generation_type": "prefix",
+          "required_level": 50,
+          "weight": 750,
+          "family": "AfflictionNotableBurdenProjection",
+          "variantTags": [
+            "affliction_spell_damage"
+          ]
+        }
+      ],
+      "AfflictionNotableSadist": [
+        {
+          "key": "AfflictionNotableSadist_",
+          "text": "パッシブスキルを1個追加: サディスト",
+          "name": "特殊な",
+          "engText": "1 Added Passive Skill is Sadist",
+          "engName": "Notable",
+          "tag": "affliction_elemental_damage",
+          "generation_type": "prefix",
+          "required_level": 68,
+          "weight": 281,
+          "family": "AfflictionNotableSadist",
+          "variantTags": [
+            "affliction_elemental_damage",
+            "affliction_fire_damage",
+            "affliction_lightning_damage",
+            "affliction_cold_damage"
+          ]
+        }
+      ],
+      "AfflictionNotableCorrosiveElements": [
+        {
+          "key": "AfflictionNotableCorrosiveElements",
+          "text": "パッシブスキルを1個追加: 蝕む元素",
+          "name": "特殊な",
+          "engText": "1 Added Passive Skill is Corrosive Elements",
+          "engName": "Notable",
+          "tag": "affliction_elemental_damage",
+          "generation_type": "prefix",
+          "required_level": 75,
+          "weight": 94,
+          "family": "AfflictionNotableCorrosiveElements",
+          "variantTags": [
+            "affliction_elemental_damage",
+            "affliction_fire_damage",
+            "affliction_lightning_damage",
+            "affliction_cold_damage"
+          ]
+        }
+      ],
+      "AfflictionNotablePrismaticHeart": [
+        {
+          "key": "AfflictionNotablePrismaticHeart__",
+          "text": "パッシブスキルを1個追加: プリズマティックハート",
+          "name": "特殊な",
+          "engText": "1 Added Passive Skill is Prismatic Heart",
+          "engName": "Notable",
+          "tag": "affliction_elemental_damage",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 1500,
+          "family": "AfflictionNotablePrismaticHeart",
+          "variantTags": [
+            "affliction_elemental_damage",
+            "affliction_fire_damage",
+            "affliction_lightning_damage",
+            "affliction_cold_damage"
+          ]
+        }
+      ],
+      "AfflictionNotableMasterofFire": [
+        {
+          "key": "AfflictionNotableMasterofFire",
+          "text": "パッシブスキルを1個追加: マスターオブファイヤ",
+          "name": "特殊な",
+          "engText": "1 Added Passive Skill is Master of Fire",
+          "engName": "Notable",
+          "tag": "affliction_fire_damage",
+          "generation_type": "prefix",
+          "required_level": 75,
+          "weight": 30,
+          "family": "AfflictionNotableMasterofFire",
+          "variantTags": [
+            "affliction_fire_damage"
+          ]
+        }
+      ],
+      "AfflictionNotableSmokingRemains": [
+        {
+          "key": "AfflictionNotableSmokingRemains",
+          "text": "パッシブスキルを1個追加: 燻ぶる燃えさし",
+          "name": "特殊な",
+          "engText": "1 Added Passive Skill is Smoking Remains",
+          "engName": "Notable",
+          "tag": "affliction_fire_damage",
+          "generation_type": "prefix",
+          "required_level": 50,
+          "weight": 238,
+          "family": "AfflictionNotableSmokingRemains",
+          "variantTags": [
+            "affliction_fire_damage"
+          ]
+        }
+      ],
+      "AfflictionNotableCremator": [
+        {
+          "key": "AfflictionNotableCremator",
+          "text": "パッシブスキルを1個追加: 火葬人",
+          "name": "特殊な",
+          "engText": "1 Added Passive Skill is Cremator",
+          "engName": "Notable",
+          "tag": "affliction_fire_damage",
+          "generation_type": "prefix",
+          "required_level": 50,
+          "weight": 238,
+          "family": "AfflictionNotableCremator",
+          "variantTags": [
+            "affliction_fire_damage"
+          ]
+        }
+      ],
+      "AfflictionNotableSnowstorm": [
+        {
+          "key": "AfflictionNotableSnowstorm",
+          "text": "パッシブスキルを1個追加: 吹雪",
+          "name": "特殊な",
+          "engText": "1 Added Passive Skill is Snowstorm",
+          "engName": "Notable",
+          "tag": "affliction_lightning_damage",
+          "generation_type": "prefix",
+          "required_level": 50,
+          "weight": 364,
+          "family": "AfflictionNotableSnowstorm",
+          "variantTags": [
+            "affliction_lightning_damage",
+            "affliction_cold_damage"
+          ]
+        }
+      ],
+      "AfflictionNotableStormDrinker": [
+        {
+          "key": "AfflictionNotableStormDrinker___",
+          "text": "パッシブスキルを1個追加: ストームドリンカー",
+          "name": "特殊な",
+          "engText": "1 Added Passive Skill is Storm Drinker",
+          "engName": "Notable",
+          "tag": "affliction_lightning_damage",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 727,
+          "family": "AfflictionNotableStormDrinker",
+          "variantTags": [
+            "affliction_lightning_damage"
+          ]
+        }
+      ],
+      "AfflictionNotableParalysis": [
+        {
+          "key": "AfflictionNotableParalysis",
+          "text": "パッシブスキルを1個追加: 麻痺",
+          "name": "特殊な",
+          "engText": "1 Added Passive Skill is Paralysis",
+          "engName": "Notable",
+          "tag": "affliction_lightning_damage",
+          "generation_type": "prefix",
+          "required_level": 50,
+          "weight": 364,
+          "family": "AfflictionNotableParalysis",
+          "variantTags": [
+            "affliction_lightning_damage"
+          ]
+        }
+      ],
+      "AfflictionNotableBlanketedSnow": [
+        {
+          "key": "AfflictionNotableBlanketedSnow_",
+          "text": "パッシブスキルを1個追加: 覆いかぶさる雪",
+          "name": "特殊な",
+          "engText": "1 Added Passive Skill is Blanketed Snow",
+          "engName": "Notable",
+          "tag": "affliction_cold_damage",
+          "generation_type": "prefix",
+          "required_level": 68,
+          "weight": 95,
+          "family": "AfflictionNotableBlanketedSnow",
+          "variantTags": [
+            "affliction_cold_damage"
+          ]
+        }
+      ],
+      "AfflictionNotableColdtotheCore": [
+        {
+          "key": "AfflictionNotableColdtotheCore",
+          "text": "パッシブスキルを1個追加: 芯まで冷たい",
+          "name": "特殊な",
+          "engText": "1 Added Passive Skill is Cold to the Core",
+          "engName": "Notable",
+          "tag": "affliction_cold_damage",
+          "generation_type": "prefix",
+          "required_level": 68,
+          "weight": 95,
+          "family": "AfflictionNotableColdtotheCore",
+          "variantTags": [
+            "affliction_cold_damage"
+          ]
+        }
+      ],
+      "AfflictionNotableColdBloodedKiller": [
+        {
+          "key": "AfflictionNotableColdBloodedKiller_",
+          "text": "パッシブスキルを1個追加: 冷酷な殺人者",
+          "name": "特殊な",
+          "engText": "1 Added Passive Skill is Cold-Blooded Killer",
+          "engName": "Notable",
+          "tag": "affliction_cold_damage",
+          "generation_type": "prefix",
+          "required_level": 50,
+          "weight": 253,
+          "family": "AfflictionNotableColdBloodedKiller",
+          "variantTags": [
+            "affliction_cold_damage"
+          ]
+        }
+      ],
+      "AfflictionNotableTouchofCruelty": [
+        {
+          "key": "AfflictionNotableTouchofCruelty_",
+          "text": "パッシブスキルを1個追加: 残虐な気配",
+          "name": "特殊な",
+          "engText": "1 Added Passive Skill is Touch of Cruelty",
+          "engName": "Notable",
+          "tag": "affliction_chaos_damage",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 519,
+          "family": "AfflictionNotableTouchofCruelty",
+          "variantTags": [
+            "affliction_chaos_damage"
+          ]
+        }
+      ],
+      "AfflictionNotableUnwaveringlyEvil": [
+        {
+          "key": "AfflictionNotableUnwaveringlyEvil",
+          "text": "パッシブスキルを1個追加: 揺るぎない悪",
+          "name": "特殊な",
+          "engText": "1 Added Passive Skill is Unwaveringly Evil",
+          "engName": "Notable",
+          "tag": "affliction_chaos_damage",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 519,
+          "family": "AfflictionNotableUnwaveringlyEvil",
+          "variantTags": [
+            "affliction_chaos_damage"
+          ]
+        }
+      ],
+      "AfflictionNotableDarkIdeation": [
+        {
+          "key": "AfflictionNotableDarkIdeation",
+          "text": "パッシブスキルを1個追加: 闇の思考",
+          "name": "特殊な",
+          "engText": "1 Added Passive Skill is Dark Ideation",
+          "engName": "Notable",
+          "tag": "affliction_chaos_damage",
+          "generation_type": "prefix",
+          "required_level": 68,
+          "weight": 97,
+          "family": "AfflictionNotableDarkIdeation",
+          "variantTags": [
+            "affliction_chaos_damage"
+          ]
+        }
+      ],
+      "AfflictionNotableWickedPall": [
+        {
+          "key": "AfflictionNotableWickedPall_",
+          "text": "パッシブスキルを1個追加: 邪悪な棺",
+          "name": "特殊な",
+          "engText": "1 Added Passive Skill is Wicked Pall",
+          "engName": "Notable",
+          "tag": "affliction_chaos_damage",
+          "generation_type": "prefix",
+          "required_level": 50,
+          "weight": 259,
+          "family": "AfflictionNotableWickedPall",
+          "variantTags": [
+            "affliction_chaos_damage"
+          ]
+        }
+      ],
+      "AfflictionNotableRenewal": [
+        {
+          "key": "AfflictionNotableRenewal",
+          "text": "パッシブスキルを1個追加: 再生",
+          "name": "特殊な",
+          "engText": "1 Added Passive Skill is Renewal",
+          "engName": "Notable",
+          "tag": "affliction_minion_damage",
+          "generation_type": "prefix",
+          "required_level": 50,
+          "weight": 500,
+          "family": "AfflictionNotableRenewal",
+          "variantTags": [
+            "affliction_minion_damage"
+          ]
+        }
+      ],
+      "AfflictionNotableRazeandPillage": [
+        {
+          "key": "AfflictionNotableRazeandPillage_",
+          "text": "パッシブスキルを1個追加: 破壊と略奪",
+          "name": "特殊な",
+          "engText": "1 Added Passive Skill is Raze and Pillage",
+          "engName": "Notable",
+          "tag": "affliction_minion_damage",
+          "generation_type": "prefix",
+          "required_level": 68,
+          "weight": 188,
+          "family": "AfflictionNotableRazeandPillage",
+          "variantTags": [
+            "affliction_minion_damage"
+          ]
+        }
+      ],
+      "AfflictionNotableRottenClaws": [
+        {
+          "key": "AfflictionNotableRottenClaws",
+          "text": "パッシブスキルを1個追加: 腐敗した鉤爪",
+          "name": "特殊な",
+          "engText": "1 Added Passive Skill is Rotten Claws",
+          "engName": "Notable",
+          "tag": "affliction_minion_damage",
+          "generation_type": "prefix",
+          "required_level": 50,
+          "weight": 500,
+          "family": "AfflictionNotableRottenClaws",
+          "variantTags": [
+            "affliction_minion_damage"
+          ]
+        }
+      ],
+      "AfflictionNotableSkeletalAtrophy": [
+        {
+          "key": "AfflictionNotableSkeletalAtrophy",
+          "text": "パッシブスキルを1個追加: 骨萎縮症",
+          "name": "特殊な",
+          "engText": "1 Added Passive Skill is Skeletal Atrophy",
+          "engName": "Notable",
+          "tag": "affliction_minion_damage",
+          "generation_type": "prefix",
+          "required_level": 68,
+          "weight": 188,
+          "family": "AfflictionNotableSkeletalAtrophy",
+          "variantTags": [
+            "affliction_minion_damage"
+          ]
+        }
+      ],
+      "AfflictionNotableBurningBright": [
+        {
+          "key": "AfflictionNotableBurningBright",
+          "text": "パッシブスキルを1個追加: 紅蓮",
+          "name": "特殊な",
+          "engText": "1 Added Passive Skill is Burning Bright",
+          "engName": "Notable",
+          "tag": "affliction_fire_damage",
+          "generation_type": "prefix",
+          "required_level": 50,
+          "weight": 238,
+          "family": "AfflictionNotableBurningBright",
+          "variantTags": [
+            "affliction_fire_damage"
+          ]
+        }
+      ],
+      "AfflictionNotableInspiredOppression": [
+        {
+          "key": "AfflictionNotableInspiredOppression",
+          "text": "パッシブスキルを1個追加: 触発された弾圧",
+          "name": "特殊な",
+          "engText": "1 Added Passive Skill is Inspired Oppression",
+          "engName": "Notable",
+          "tag": "affliction_elemental_damage",
+          "generation_type": "prefix",
+          "required_level": 75,
+          "weight": 94,
+          "family": "AfflictionNotableInspiredOppression",
+          "variantTags": [
+            "affliction_elemental_damage",
+            "affliction_lightning_damage",
+            "affliction_cold_damage"
+          ]
+        }
+      ],
+      "AfflictionNotableDeepChill": [
+        {
+          "key": "AfflictionNotableDeepChill",
+          "text": "パッシブスキルを1個追加: 染み込む冷気",
+          "name": "特殊な",
+          "engText": "1 Added Passive Skill is Deep Chill",
+          "engName": "Notable",
+          "tag": "affliction_cold_damage",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 505,
+          "family": "AfflictionNotableDeepChill",
+          "variantTags": [
+            "affliction_cold_damage"
+          ]
+        }
+      ],
+      "AfflictionNotableBlastFreeze": [
+        {
+          "key": "AfflictionNotableBlastFreeze_",
+          "text": "パッシブスキルを1個追加: 急冷",
+          "name": "特殊な",
+          "engText": "1 Added Passive Skill is Blast-Freeze",
+          "engName": "Notable",
+          "tag": "affliction_cold_damage",
+          "generation_type": "prefix",
+          "required_level": 68,
+          "weight": 95,
+          "family": "AfflictionNotableBlastFreeze",
+          "variantTags": [
+            "affliction_cold_damage"
+          ]
+        }
+      ],
+      "AfflictionNotableThunderstruck": [
+        {
+          "key": "AfflictionNotableThunderstruck",
+          "text": "パッシブスキルを1個追加: 落雷",
+          "name": "特殊な",
+          "engText": "1 Added Passive Skill is Thunderstruck",
+          "engName": "Notable",
+          "tag": "affliction_lightning_damage",
+          "generation_type": "prefix",
+          "required_level": 50,
+          "weight": 364,
+          "family": "AfflictionNotableThunderstruck",
+          "variantTags": [
+            "affliction_lightning_damage"
+          ]
+        }
+      ],
+      "AfflictionNotableStormrider": [
+        {
+          "key": "AfflictionNotableStormrider",
+          "text": "パッシブスキルを1個追加: ストームライダー",
+          "name": "特殊な",
+          "engText": "1 Added Passive Skill is Stormrider",
+          "engName": "Notable",
+          "tag": "affliction_lightning_damage",
+          "generation_type": "prefix",
+          "required_level": 68,
+          "weight": 136,
+          "family": "AfflictionNotableStormrider",
+          "variantTags": [
+            "affliction_lightning_damage",
+            "affliction_cold_damage"
+          ]
+        }
+      ],
+      "AfflictionNotableOvershock": [
+        {
+          "key": "AfflictionNotableOvershock",
+          "text": "パッシブスキルを1個追加: オーバーショック",
+          "name": "特殊な",
+          "engText": "1 Added Passive Skill is Overshock",
+          "engName": "Notable",
+          "tag": "affliction_lightning_damage",
+          "generation_type": "prefix",
+          "required_level": 50,
+          "weight": 364,
+          "family": "AfflictionNotableOvershock",
+          "variantTags": [
+            "affliction_lightning_damage"
+          ]
+        }
+      ],
+      "AfflictionNotableFeastingFiends": [
+        {
+          "key": "AfflictionNotableFeastingFiends",
+          "text": "パッシブスキルを1個追加: 悪魔の宴",
+          "name": "特殊な",
+          "engText": "1 Added Passive Skill is Feasting Fiends",
+          "engName": "Notable",
+          "tag": "affliction_minion_damage",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 1000,
+          "family": "AfflictionNotableFeastingFiends",
+          "variantTags": [
+            "affliction_minion_damage"
+          ]
+        }
+      ],
+      "AfflictionNotableScintillatingIdea": [
+        {
+          "key": "AfflictionNotableScintillatingIdea_",
+          "text": "パッシブスキルを1個追加: きらめく発想",
+          "name": "特殊な",
+          "engText": "1 Added Passive Skill is Scintillating Idea",
+          "engName": "Notable",
+          "tag": "affliction_lightning_damage",
+          "generation_type": "prefix",
+          "required_level": 50,
+          "weight": 364,
+          "family": "AfflictionNotableScintillatingIdea",
+          "variantTags": [
+            "affliction_lightning_damage"
+          ]
+        }
+      ],
+      "AfflictionNotableMageHunter": [
+        {
+          "key": "AfflictionNotableMageHunter___",
+          "text": "パッシブスキルを1個追加: メイジハンター",
+          "name": "特殊な",
+          "engText": "1 Added Passive Skill is Mage Hunter",
+          "engName": "Notable",
+          "tag": "affliction_spell_damage",
+          "generation_type": "prefix",
+          "required_level": 68,
+          "weight": 281,
+          "family": "AfflictionNotableMageHunter",
+          "variantTags": [
+            "affliction_spell_damage"
+          ]
+        }
+      ],
+      "AfflictionNotableRiotQueller": [
+        {
+          "key": "AfflictionNotableRiotQueller",
+          "text": "パッシブスキルを1個追加: 暴動鎮圧者",
+          "name": "特殊な",
+          "engText": "1 Added Passive Skill is Riot Queller",
+          "engName": "Notable",
+          "tag": "affliction_attack_damage_while_holding_a_shield",
+          "generation_type": "prefix",
+          "required_level": 75,
+          "weight": 38,
+          "family": "AfflictionNotableRiotQueller",
+          "variantTags": [
+            "affliction_attack_damage_while_holding_a_shield"
+          ]
+        }
+      ],
+      "AfflictionNotableAggressiveDefence": [
+        {
+          "key": "AfflictionNotableAggressiveDefence",
+          "text": "パッシブスキルを1個追加: 攻撃的な防御",
+          "name": "特殊な",
+          "engText": "1 Added Passive Skill is Aggressive Defence",
+          "engName": "Notable",
+          "tag": "affliction_axe_and_sword_damage",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 750,
+          "family": "AfflictionNotableAggressiveDefence",
+          "variantTags": [
+            "affliction_axe_and_sword_damage",
+            "affliction_mace_and_staff_damage",
+            "affliction_dagger_and_claw_damage"
+          ]
+        }
+      ],
+      "AfflictionJewelSmallPassivesGrantLife": [
+        {
+          "key": "AfflictionJewelSmallPassivesGrantLife_",
+          "text": "追加されるスモールパッシブスキルはさらに付与: 最大ライフ +(2-3)",
+          "name": "強健な",
+          "engText": "Added Small Passive Skills also grant: +(2-3) to Maximum Life",
+          "engName": "Hale",
+          "tag": "expansion_jewel_large",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "AfflictionJewelSmallPassivesGrantLife",
+          "variantTags": [
+            "affliction_axe_and_sword_damage",
+            "affliction_mace_and_staff_damage",
+            "affliction_dagger_and_claw_damage",
+            "affliction_bow_damage",
+            "affliction_wand_damage",
+            "affliction_damage_with_two_handed_melee_weapons",
+            "affliction_attack_damage_while_dual_wielding_",
+            "affliction_attack_damage_while_holding_a_shield",
+            "affliction_attack_damage_",
+            "affliction_spell_damage",
+            "affliction_elemental_damage",
+            "affliction_physical_damage",
+            "affliction_fire_damage",
+            "affliction_lightning_damage",
+            "affliction_cold_damage",
+            "affliction_chaos_damage",
+            "affliction_minion_damage"
+          ]
+        },
+        {
+          "key": "AfflictionJewelSmallPassivesGrantLife2_",
+          "text": "追加されるスモールパッシブスキルはさらに付与: 最大ライフ +(4-7)",
+          "name": "健康な",
+          "engText": "Added Small Passive Skills also grant: +(4-7) to Maximum Life",
+          "engName": "Healthy",
+          "tag": "expansion_jewel_large",
+          "generation_type": "prefix",
+          "required_level": 68,
+          "weight": 400,
+          "family": "AfflictionJewelSmallPassivesGrantLife",
+          "variantTags": [
+            "affliction_axe_and_sword_damage",
+            "affliction_mace_and_staff_damage",
+            "affliction_dagger_and_claw_damage",
+            "affliction_bow_damage",
+            "affliction_wand_damage",
+            "affliction_damage_with_two_handed_melee_weapons",
+            "affliction_attack_damage_while_dual_wielding_",
+            "affliction_attack_damage_while_holding_a_shield",
+            "affliction_attack_damage_",
+            "affliction_spell_damage",
+            "affliction_elemental_damage",
+            "affliction_physical_damage",
+            "affliction_fire_damage",
+            "affliction_lightning_damage",
+            "affliction_cold_damage",
+            "affliction_chaos_damage",
+            "affliction_minion_damage"
+          ]
+        },
+        {
+          "key": "AfflictionJewelSmallPassivesGrantLife3",
+          "text": "追加されるスモールパッシブスキルはさらに付与: 最大ライフ +(8-10)",
+          "name": "血色良い",
+          "engText": "Added Small Passive Skills also grant: +(8-10) to Maximum Life",
+          "engName": "Sanguine",
+          "tag": "expansion_jewel_large",
+          "generation_type": "prefix",
+          "required_level": 84,
+          "weight": 300,
+          "family": "AfflictionJewelSmallPassivesGrantLife",
+          "variantTags": [
+            "affliction_axe_and_sword_damage",
+            "affliction_mace_and_staff_damage",
+            "affliction_dagger_and_claw_damage",
+            "affliction_bow_damage",
+            "affliction_wand_damage",
+            "affliction_damage_with_two_handed_melee_weapons",
+            "affliction_attack_damage_while_dual_wielding_",
+            "affliction_attack_damage_while_holding_a_shield",
+            "affliction_attack_damage_",
+            "affliction_spell_damage",
+            "affliction_elemental_damage",
+            "affliction_physical_damage",
+            "affliction_fire_damage",
+            "affliction_lightning_damage",
+            "affliction_cold_damage",
+            "affliction_chaos_damage",
+            "affliction_minion_damage"
+          ]
+        }
+      ],
+      "AfflictionJewelSmallPassivesGrantMana": [
+        {
+          "key": "AfflictionJewelSmallPassivesGrantMana",
+          "text": "追加されるスモールパッシブスキルはさらに付与: 最大マナ +(2-5)",
+          "name": "ベリルの",
+          "engText": "Added Small Passive Skills also grant: +(2-5) to Maximum Mana",
+          "engName": "Beryl",
+          "tag": "expansion_jewel_large",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "AfflictionJewelSmallPassivesGrantMana",
+          "variantTags": [
+            "affliction_axe_and_sword_damage",
+            "affliction_mace_and_staff_damage",
+            "affliction_dagger_and_claw_damage",
+            "affliction_bow_damage",
+            "affliction_wand_damage",
+            "affliction_damage_with_two_handed_melee_weapons",
+            "affliction_attack_damage_while_dual_wielding_",
+            "affliction_attack_damage_while_holding_a_shield",
+            "affliction_attack_damage_",
+            "affliction_spell_damage",
+            "affliction_elemental_damage",
+            "affliction_physical_damage",
+            "affliction_fire_damage",
+            "affliction_lightning_damage",
+            "affliction_cold_damage",
+            "affliction_chaos_damage",
+            "affliction_minion_damage"
+          ]
+        },
+        {
+          "key": "AfflictionJewelSmallPassivesGrantMana2",
+          "text": "追加されるスモールパッシブスキルはさらに付与: 最大マナ +(6-8)",
+          "name": "コバルトの",
+          "engText": "Added Small Passive Skills also grant: +(6-8) to Maximum Mana",
+          "engName": "Cobalt",
+          "tag": "expansion_jewel_large",
+          "generation_type": "prefix",
+          "required_level": 68,
+          "weight": 400,
+          "family": "AfflictionJewelSmallPassivesGrantMana",
+          "variantTags": [
+            "affliction_axe_and_sword_damage",
+            "affliction_mace_and_staff_damage",
+            "affliction_dagger_and_claw_damage",
+            "affliction_bow_damage",
+            "affliction_wand_damage",
+            "affliction_damage_with_two_handed_melee_weapons",
+            "affliction_attack_damage_while_dual_wielding_",
+            "affliction_attack_damage_while_holding_a_shield",
+            "affliction_attack_damage_",
+            "affliction_spell_damage",
+            "affliction_elemental_damage",
+            "affliction_physical_damage",
+            "affliction_fire_damage",
+            "affliction_lightning_damage",
+            "affliction_cold_damage",
+            "affliction_chaos_damage",
+            "affliction_minion_damage"
+          ]
+        },
+        {
+          "key": "AfflictionJewelSmallPassivesGrantMana3",
+          "text": "追加されるスモールパッシブスキルはさらに付与: 最大マナ +(9-10)",
+          "name": "淡青な",
+          "engText": "Added Small Passive Skills also grant: +(9-10) to Maximum Mana",
+          "engName": "Azure",
+          "tag": "expansion_jewel_large",
+          "generation_type": "prefix",
+          "required_level": 84,
+          "weight": 300,
+          "family": "AfflictionJewelSmallPassivesGrantMana",
+          "variantTags": [
+            "affliction_axe_and_sword_damage",
+            "affliction_mace_and_staff_damage",
+            "affliction_dagger_and_claw_damage",
+            "affliction_bow_damage",
+            "affliction_wand_damage",
+            "affliction_damage_with_two_handed_melee_weapons",
+            "affliction_attack_damage_while_dual_wielding_",
+            "affliction_attack_damage_while_holding_a_shield",
+            "affliction_attack_damage_",
+            "affliction_spell_damage",
+            "affliction_elemental_damage",
+            "affliction_physical_damage",
+            "affliction_fire_damage",
+            "affliction_lightning_damage",
+            "affliction_cold_damage",
+            "affliction_chaos_damage",
+            "affliction_minion_damage"
+          ]
+        }
+      ],
+      "AfflictionJewelSmallPassivesGrantES": [
+        {
+          "key": "AfflictionJewelSmallPassivesGrantES",
+          "text": "追加されるスモールパッシブスキルはさらに付与: 最大エナジーシールド +(4-5)",
+          "name": "輝く",
+          "engText": "Added Small Passive Skills also grant: +(4-5) to Maximum Energy Shield",
+          "engName": "Shining",
+          "tag": "expansion_jewel_large",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "AfflictionJewelSmallPassivesGrantES",
+          "variantTags": [
+            "affliction_axe_and_sword_damage",
+            "affliction_mace_and_staff_damage",
+            "affliction_dagger_and_claw_damage",
+            "affliction_bow_damage",
+            "affliction_wand_damage",
+            "affliction_damage_with_two_handed_melee_weapons",
+            "affliction_attack_damage_while_dual_wielding_",
+            "affliction_attack_damage_while_holding_a_shield",
+            "affliction_attack_damage_",
+            "affliction_spell_damage",
+            "affliction_elemental_damage",
+            "affliction_physical_damage",
+            "affliction_fire_damage",
+            "affliction_lightning_damage",
+            "affliction_cold_damage",
+            "affliction_chaos_damage",
+            "affliction_minion_damage"
+          ]
+        },
+        {
+          "key": "AfflictionJewelSmallPassivesGrantES2",
+          "text": "追加されるスモールパッシブスキルはさらに付与: 最大エナジーシールド +(6-9)",
+          "name": "瞬く",
+          "engText": "Added Small Passive Skills also grant: +(6-9) to Maximum Energy Shield",
+          "engName": "Glimmering",
+          "tag": "expansion_jewel_large",
+          "generation_type": "prefix",
+          "required_level": 68,
+          "weight": 400,
+          "family": "AfflictionJewelSmallPassivesGrantES",
+          "variantTags": [
+            "affliction_axe_and_sword_damage",
+            "affliction_mace_and_staff_damage",
+            "affliction_dagger_and_claw_damage",
+            "affliction_bow_damage",
+            "affliction_wand_damage",
+            "affliction_damage_with_two_handed_melee_weapons",
+            "affliction_attack_damage_while_dual_wielding_",
+            "affliction_attack_damage_while_holding_a_shield",
+            "affliction_attack_damage_",
+            "affliction_spell_damage",
+            "affliction_elemental_damage",
+            "affliction_physical_damage",
+            "affliction_fire_damage",
+            "affliction_lightning_damage",
+            "affliction_cold_damage",
+            "affliction_chaos_damage",
+            "affliction_minion_damage"
+          ]
+        },
+        {
+          "key": "AfflictionJewelSmallPassivesGrantES3",
+          "text": "追加されるスモールパッシブスキルはさらに付与: 最大エナジーシールド +(10-12)",
+          "name": "光る",
+          "engText": "Added Small Passive Skills also grant: +(10-12) to Maximum Energy Shield",
+          "engName": "Glowing",
+          "tag": "expansion_jewel_large",
+          "generation_type": "prefix",
+          "required_level": 84,
+          "weight": 300,
+          "family": "AfflictionJewelSmallPassivesGrantES",
+          "variantTags": [
+            "affliction_axe_and_sword_damage",
+            "affliction_mace_and_staff_damage",
+            "affliction_dagger_and_claw_damage",
+            "affliction_bow_damage",
+            "affliction_wand_damage",
+            "affliction_damage_with_two_handed_melee_weapons",
+            "affliction_attack_damage_while_dual_wielding_",
+            "affliction_attack_damage_while_holding_a_shield",
+            "affliction_attack_damage_",
+            "affliction_spell_damage",
+            "affliction_elemental_damage",
+            "affliction_physical_damage",
+            "affliction_fire_damage",
+            "affliction_lightning_damage",
+            "affliction_cold_damage",
+            "affliction_chaos_damage",
+            "affliction_minion_damage"
+          ]
+        }
+      ],
+      "AfflictionJewelSmallPassivesGrantArmour": [
+        {
+          "key": "AfflictionJewelSmallPassivesGrantArmour",
+          "text": "追加されるスモールパッシブスキルはさらに付与: アーマー +(11-20)",
+          "name": "塗装された",
+          "engText": "Added Small Passive Skills also grant: +(11-20) to Armour",
+          "engName": "Lacquered",
+          "tag": "expansion_jewel_large",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "AfflictionJewelSmallPassivesGrantArmour",
+          "variantTags": [
+            "affliction_axe_and_sword_damage",
+            "affliction_mace_and_staff_damage",
+            "affliction_dagger_and_claw_damage",
+            "affliction_bow_damage",
+            "affliction_wand_damage",
+            "affliction_damage_with_two_handed_melee_weapons",
+            "affliction_attack_damage_while_dual_wielding_",
+            "affliction_attack_damage_while_holding_a_shield",
+            "affliction_attack_damage_",
+            "affliction_spell_damage",
+            "affliction_elemental_damage",
+            "affliction_physical_damage",
+            "affliction_fire_damage",
+            "affliction_lightning_damage",
+            "affliction_cold_damage",
+            "affliction_chaos_damage",
+            "affliction_minion_damage"
+          ]
+        },
+        {
+          "key": "AfflictionJewelSmallPassivesGrantArmour2",
+          "text": "追加されるスモールパッシブスキルはさらに付与: アーマー +(21-30)",
+          "name": "スタッド付き",
+          "engText": "Added Small Passive Skills also grant: +(21-30) to Armour",
+          "engName": "Studded",
+          "tag": "expansion_jewel_large",
+          "generation_type": "prefix",
+          "required_level": 68,
+          "weight": 400,
+          "family": "AfflictionJewelSmallPassivesGrantArmour",
+          "variantTags": [
+            "affliction_axe_and_sword_damage",
+            "affliction_mace_and_staff_damage",
+            "affliction_dagger_and_claw_damage",
+            "affliction_bow_damage",
+            "affliction_wand_damage",
+            "affliction_damage_with_two_handed_melee_weapons",
+            "affliction_attack_damage_while_dual_wielding_",
+            "affliction_attack_damage_while_holding_a_shield",
+            "affliction_attack_damage_",
+            "affliction_spell_damage",
+            "affliction_elemental_damage",
+            "affliction_physical_damage",
+            "affliction_fire_damage",
+            "affliction_lightning_damage",
+            "affliction_cold_damage",
+            "affliction_chaos_damage",
+            "affliction_minion_damage"
+          ]
+        },
+        {
+          "key": "AfflictionJewelSmallPassivesGrantArmour3_",
+          "text": "追加されるスモールパッシブスキルはさらに付与: アーマー +(31-40)",
+          "name": "畝付き",
+          "engText": "Added Small Passive Skills also grant: +(31-40) to Armour",
+          "engName": "Ribbed",
+          "tag": "expansion_jewel_large",
+          "generation_type": "prefix",
+          "required_level": 84,
+          "weight": 300,
+          "family": "AfflictionJewelSmallPassivesGrantArmour",
+          "variantTags": [
+            "affliction_axe_and_sword_damage",
+            "affliction_mace_and_staff_damage",
+            "affliction_dagger_and_claw_damage",
+            "affliction_bow_damage",
+            "affliction_wand_damage",
+            "affliction_damage_with_two_handed_melee_weapons",
+            "affliction_attack_damage_while_dual_wielding_",
+            "affliction_attack_damage_while_holding_a_shield",
+            "affliction_attack_damage_",
+            "affliction_spell_damage",
+            "affliction_elemental_damage",
+            "affliction_physical_damage",
+            "affliction_fire_damage",
+            "affliction_lightning_damage",
+            "affliction_cold_damage",
+            "affliction_chaos_damage",
+            "affliction_minion_damage"
+          ]
+        }
+      ],
+      "AfflictionJewelSmallPassivesGrantEvasion": [
+        {
+          "key": "AfflictionJewelSmallPassivesGrantEvasion",
+          "text": "追加されるスモールパッシブスキルはさらに付与: 回避力 +(11-20)",
+          "name": "機敏な",
+          "engText": "Added Small Passive Skills also grant: +(11-20) to Evasion",
+          "engName": "Agile",
+          "tag": "expansion_jewel_large",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "AfflictionJewelSmallPassivesGrantEvasion",
+          "variantTags": [
+            "affliction_axe_and_sword_damage",
+            "affliction_mace_and_staff_damage",
+            "affliction_dagger_and_claw_damage",
+            "affliction_bow_damage",
+            "affliction_wand_damage",
+            "affliction_damage_with_two_handed_melee_weapons",
+            "affliction_attack_damage_while_dual_wielding_",
+            "affliction_attack_damage_while_holding_a_shield",
+            "affliction_attack_damage_",
+            "affliction_spell_damage",
+            "affliction_elemental_damage",
+            "affliction_physical_damage",
+            "affliction_fire_damage",
+            "affliction_lightning_damage",
+            "affliction_cold_damage",
+            "affliction_chaos_damage",
+            "affliction_minion_damage"
+          ]
+        },
+        {
+          "key": "AfflictionJewelSmallPassivesGrantEvasion2__",
+          "text": "追加されるスモールパッシブスキルはさらに付与: 回避力 +(21-30)",
+          "name": "踊り子の",
+          "engText": "Added Small Passive Skills also grant: +(21-30) to Evasion",
+          "engName": "Dancer's",
+          "tag": "expansion_jewel_large",
+          "generation_type": "prefix",
+          "required_level": 68,
+          "weight": 400,
+          "family": "AfflictionJewelSmallPassivesGrantEvasion",
+          "variantTags": [
+            "affliction_axe_and_sword_damage",
+            "affliction_mace_and_staff_damage",
+            "affliction_dagger_and_claw_damage",
+            "affliction_bow_damage",
+            "affliction_wand_damage",
+            "affliction_damage_with_two_handed_melee_weapons",
+            "affliction_attack_damage_while_dual_wielding_",
+            "affliction_attack_damage_while_holding_a_shield",
+            "affliction_attack_damage_",
+            "affliction_spell_damage",
+            "affliction_elemental_damage",
+            "affliction_physical_damage",
+            "affliction_fire_damage",
+            "affliction_lightning_damage",
+            "affliction_cold_damage",
+            "affliction_chaos_damage",
+            "affliction_minion_damage"
+          ]
+        },
+        {
+          "key": "AfflictionJewelSmallPassivesGrantEvasion3",
+          "text": "追加されるスモールパッシブスキルはさらに付与: 回避力 +(31-40)",
+          "name": "軽業師の",
+          "engText": "Added Small Passive Skills also grant: +(31-40) to Evasion",
+          "engName": "Acrobat's",
+          "tag": "expansion_jewel_large",
+          "generation_type": "prefix",
+          "required_level": 84,
+          "weight": 300,
+          "family": "AfflictionJewelSmallPassivesGrantEvasion",
+          "variantTags": [
+            "affliction_axe_and_sword_damage",
+            "affliction_mace_and_staff_damage",
+            "affliction_dagger_and_claw_damage",
+            "affliction_bow_damage",
+            "affliction_wand_damage",
+            "affliction_damage_with_two_handed_melee_weapons",
+            "affliction_attack_damage_while_dual_wielding_",
+            "affliction_attack_damage_while_holding_a_shield",
+            "affliction_attack_damage_",
+            "affliction_spell_damage",
+            "affliction_elemental_damage",
+            "affliction_physical_damage",
+            "affliction_fire_damage",
+            "affliction_lightning_damage",
+            "affliction_cold_damage",
+            "affliction_chaos_damage",
+            "affliction_minion_damage"
+          ]
+        }
+      ],
+      "AfflictionJewelSmallPassivesGrantDamage": [
+        {
+          "key": "AfflictionJewelSmallPassivesGrantDamage_",
+          "text": "追加されるスモールパッシブスキルはさらに付与: ダメージが2%増加する",
+          "name": "害ある",
+          "engText": "Added Small Passive Skills also grant: 2% increased Damage",
+          "engName": "Harmful",
+          "tag": "expansion_jewel_large",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "AfflictionJewelSmallPassivesGrantDamage",
+          "variantTags": [
+            "affliction_axe_and_sword_damage",
+            "affliction_mace_and_staff_damage",
+            "affliction_dagger_and_claw_damage",
+            "affliction_bow_damage",
+            "affliction_wand_damage",
+            "affliction_damage_with_two_handed_melee_weapons",
+            "affliction_attack_damage_while_dual_wielding_",
+            "affliction_attack_damage_while_holding_a_shield",
+            "affliction_attack_damage_",
+            "affliction_spell_damage",
+            "affliction_elemental_damage",
+            "affliction_physical_damage",
+            "affliction_fire_damage",
+            "affliction_lightning_damage",
+            "affliction_cold_damage",
+            "affliction_chaos_damage",
+            "affliction_minion_damage"
+          ]
+        },
+        {
+          "key": "AfflictionJewelSmallPassivesGrantDamage2_",
+          "text": "追加されるスモールパッシブスキルはさらに付与: ダメージが3%増加する",
+          "name": "危機的な",
+          "engText": "Added Small Passive Skills also grant: 3% increased Damage",
+          "engName": "Hazardous",
+          "tag": "expansion_jewel_large",
+          "generation_type": "prefix",
+          "required_level": 68,
+          "weight": 400,
+          "family": "AfflictionJewelSmallPassivesGrantDamage",
+          "variantTags": [
+            "affliction_axe_and_sword_damage",
+            "affliction_mace_and_staff_damage",
+            "affliction_dagger_and_claw_damage",
+            "affliction_bow_damage",
+            "affliction_wand_damage",
+            "affliction_damage_with_two_handed_melee_weapons",
+            "affliction_attack_damage_while_dual_wielding_",
+            "affliction_attack_damage_while_holding_a_shield",
+            "affliction_attack_damage_",
+            "affliction_spell_damage",
+            "affliction_elemental_damage",
+            "affliction_physical_damage",
+            "affliction_fire_damage",
+            "affliction_lightning_damage",
+            "affliction_cold_damage",
+            "affliction_chaos_damage",
+            "affliction_minion_damage"
+          ]
+        },
+        {
+          "key": "AfflictionJewelSmallPassivesGrantDamage3",
+          "text": "追加されるスモールパッシブスキルはさらに付与: ダメージが4%増加する",
+          "name": "危険な",
+          "engText": "Added Small Passive Skills also grant: 4% increased Damage",
+          "engName": "Dangerous",
+          "tag": "expansion_jewel_large",
+          "generation_type": "prefix",
+          "required_level": 84,
+          "weight": 300,
+          "family": "AfflictionJewelSmallPassivesGrantDamage",
+          "variantTags": [
+            "affliction_axe_and_sword_damage",
+            "affliction_mace_and_staff_damage",
+            "affliction_dagger_and_claw_damage",
+            "affliction_bow_damage",
+            "affliction_wand_damage",
+            "affliction_damage_with_two_handed_melee_weapons",
+            "affliction_attack_damage_while_dual_wielding_",
+            "affliction_attack_damage_while_holding_a_shield",
+            "affliction_attack_damage_",
+            "affliction_spell_damage",
+            "affliction_elemental_damage",
+            "affliction_physical_damage",
+            "affliction_fire_damage",
+            "affliction_lightning_damage",
+            "affliction_cold_damage",
+            "affliction_chaos_damage",
+            "affliction_minion_damage"
+          ]
+        }
+      ],
+      "AfflictionJewelSmallPassivesHaveIncreasedEffect": [
+        {
+          "key": "AfflictionJewelSmallPassivesHaveIncreasedEffect",
+          "text": "追加されるスモールパッシブスキルはさらに付与: 効果が25%増加する",
+          "name": "強い",
+          "engText": "Added Small Passive Skills have 25% increased Effect",
+          "engName": "Potent",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "AfflictionJewelSmallPassivesHaveIncreasedEffect",
+          "variantTags": [
+            "affliction_axe_and_sword_damage",
+            "affliction_mace_and_staff_damage",
+            "affliction_dagger_and_claw_damage",
+            "affliction_bow_damage",
+            "affliction_wand_damage",
+            "affliction_damage_with_two_handed_melee_weapons",
+            "affliction_attack_damage_while_dual_wielding_",
+            "affliction_attack_damage_while_holding_a_shield",
+            "affliction_attack_damage_",
+            "affliction_spell_damage",
+            "affliction_elemental_damage",
+            "affliction_physical_damage",
+            "affliction_fire_damage",
+            "affliction_lightning_damage",
+            "affliction_cold_damage",
+            "affliction_chaos_damage",
+            "affliction_minion_damage"
+          ]
+        },
+        {
+          "key": "AfflictionJewelSmallPassivesHaveIncreasedEffect2",
+          "text": "追加されるスモールパッシブスキルはさらに付与: 効果が35%増加する",
+          "name": "強力な",
+          "engText": "Added Small Passive Skills have 35% increased Effect",
+          "engName": "Powerful",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 84,
+          "weight": 300,
+          "family": "AfflictionJewelSmallPassivesHaveIncreasedEffect",
+          "variantTags": [
+            "affliction_axe_and_sword_damage",
+            "affliction_mace_and_staff_damage",
+            "affliction_dagger_and_claw_damage",
+            "affliction_bow_damage",
+            "affliction_wand_damage",
+            "affliction_damage_with_two_handed_melee_weapons",
+            "affliction_attack_damage_while_dual_wielding_",
+            "affliction_attack_damage_while_holding_a_shield",
+            "affliction_attack_damage_",
+            "affliction_spell_damage",
+            "affliction_elemental_damage",
+            "affliction_physical_damage",
+            "affliction_fire_damage",
+            "affliction_lightning_damage",
+            "affliction_cold_damage",
+            "affliction_chaos_damage",
+            "affliction_minion_damage"
+          ]
+        }
+      ]
+    },
+    "suffix": {
+      "AfflictionNotableLargeSuffix": [
+        {
+          "key": "AfflictionNotableForceMultiplier",
+          "text": "パッシブスキルを1個追加: フォースマルチプライヤー",
+          "name": "意義の",
+          "engText": "1 Added Passive Skill is Force Multiplier",
+          "engName": "of Significance",
+          "tag": "affliction_physical_damage",
+          "generation_type": "suffix",
+          "required_level": 50,
+          "weight": 232,
+          "family": "AfflictionNotableLargeSuffix",
+          "variantTags": [
+            "affliction_physical_damage"
+          ]
+        },
+        {
+          "key": "AfflictionNotableFuriousAssault",
+          "text": "パッシブスキルを1個追加: 怒り狂った暴行",
+          "name": "意義の",
+          "engText": "1 Added Passive Skill is Furious Assault",
+          "engName": "of Significance",
+          "tag": "affliction_physical_damage",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 464,
+          "family": "AfflictionNotableLargeSuffix",
+          "variantTags": [
+            "affliction_physical_damage"
+          ]
+        },
+        {
+          "key": "AfflictionNotableGrimOath",
+          "text": "パッシブスキルを1個追加: 冷酷な誓い",
+          "name": "意義の",
+          "engText": "1 Added Passive Skill is Grim Oath",
+          "engName": "of Significance",
+          "tag": "affliction_physical_damage",
+          "generation_type": "suffix",
+          "required_level": 68,
+          "weight": 87,
+          "family": "AfflictionNotableLargeSuffix",
+          "variantTags": [
+            "affliction_physical_damage",
+            "affliction_chaos_damage"
+          ]
+        },
+        {
+          "key": "AfflictionNotableSmitetheWeak",
+          "text": "パッシブスキルを1個追加: 弱きを打つ",
+          "name": "意義の",
+          "engText": "1 Added Passive Skill is Smite the Weak",
+          "engName": "of Significance",
+          "tag": "affliction_axe_and_sword_damage",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 750,
+          "family": "AfflictionNotableLargeSuffix",
+          "variantTags": [
+            "affliction_axe_and_sword_damage",
+            "affliction_mace_and_staff_damage",
+            "affliction_dagger_and_claw_damage",
+            "affliction_bow_damage",
+            "affliction_wand_damage",
+            "affliction_damage_with_two_handed_melee_weapons",
+            "affliction_attack_damage_while_dual_wielding_",
+            "affliction_attack_damage_while_holding_a_shield",
+            "affliction_attack_damage_"
+          ]
+        },
+        {
+          "key": "AfflictionNotableHeavyHitter",
+          "text": "パッシブスキルを1個追加: ヘビーヒッター",
+          "name": "意義の",
+          "engText": "1 Added Passive Skill is Heavy Hitter",
+          "engName": "of Significance",
+          "tag": "affliction_axe_and_sword_damage",
+          "generation_type": "suffix",
+          "required_level": 50,
+          "weight": 375,
+          "family": "AfflictionNotableLargeSuffix",
+          "variantTags": [
+            "affliction_axe_and_sword_damage",
+            "affliction_mace_and_staff_damage",
+            "affliction_dagger_and_claw_damage",
+            "affliction_bow_damage",
+            "affliction_wand_damage",
+            "affliction_damage_with_two_handed_melee_weapons",
+            "affliction_attack_damage_while_dual_wielding_",
+            "affliction_attack_damage_while_holding_a_shield",
+            "affliction_attack_damage_"
+          ]
+        },
+        {
+          "key": "AfflictionNotableMartialProwess",
+          "text": "パッシブスキルを1個追加: 武勇",
+          "name": "意義の",
+          "engText": "1 Added Passive Skill is Martial Prowess",
+          "engName": "of Significance",
+          "tag": "affliction_axe_and_sword_damage",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 750,
+          "family": "AfflictionNotableLargeSuffix",
+          "variantTags": [
+            "affliction_axe_and_sword_damage",
+            "affliction_mace_and_staff_damage",
+            "affliction_dagger_and_claw_damage",
+            "affliction_bow_damage",
+            "affliction_wand_damage",
+            "affliction_damage_with_two_handed_melee_weapons",
+            "affliction_attack_damage_while_dual_wielding_",
+            "affliction_attack_damage_while_holding_a_shield",
+            "affliction_attack_damage_"
+          ]
+        },
+        {
+          "key": "AfflictionNotableThaumophage",
+          "text": "パッシブスキルを1個追加: 魔力喰らい",
+          "name": "意義の",
+          "engText": "1 Added Passive Skill is Thaumophage",
+          "engName": "of Significance",
+          "tag": "affliction_spell_damage",
+          "generation_type": "suffix",
+          "required_level": 50,
+          "weight": 750,
+          "family": "AfflictionNotableLargeSuffix",
+          "variantTags": [
+            "affliction_spell_damage"
+          ]
+        },
+        {
+          "key": "AfflictionNotableEssenceRush",
+          "text": "パッシブスキルを1個追加: エッセンスラッシュ",
+          "name": "意義の",
+          "engText": "1 Added Passive Skill is Essence Rush",
+          "engName": "of Significance",
+          "tag": "affliction_spell_damage",
+          "generation_type": "suffix",
+          "required_level": 50,
+          "weight": 750,
+          "family": "AfflictionNotableLargeSuffix",
+          "variantTags": [
+            "affliction_spell_damage"
+          ]
+        },
+        {
+          "key": "AfflictionNotableSapPsyche",
+          "text": "パッシブスキルを1個追加: 蝕む精神",
+          "name": "意義の",
+          "engText": "1 Added Passive Skill is Sap Psyche",
+          "engName": "of Significance",
+          "tag": "affliction_spell_damage",
+          "generation_type": "suffix",
+          "required_level": 68,
+          "weight": 281,
+          "family": "AfflictionNotableLargeSuffix",
+          "variantTags": [
+            "affliction_spell_damage"
+          ]
+        },
+        {
+          "key": "AfflictionNotableDoryanisLesson_",
+          "text": "パッシブスキルを1個追加: ドリヤニの教え",
+          "name": "意義の",
+          "engText": "1 Added Passive Skill is Doryani's Lesson",
+          "engName": "of Significance",
+          "tag": "affliction_elemental_damage",
+          "generation_type": "suffix",
+          "required_level": 68,
+          "weight": 281,
+          "family": "AfflictionNotableLargeSuffix",
+          "variantTags": [
+            "affliction_elemental_damage",
+            "affliction_fire_damage",
+            "affliction_lightning_damage",
+            "affliction_cold_damage"
+          ]
+        },
+        {
+          "key": "AfflictionNotableDisorientingDisplay____",
+          "text": "パッシブスキルを1個追加: 狂った視界",
+          "name": "意義の",
+          "engText": "1 Added Passive Skill is Disorienting Display",
+          "engName": "of Significance",
+          "tag": "affliction_elemental_damage",
+          "generation_type": "suffix",
+          "required_level": 50,
+          "weight": 750,
+          "family": "AfflictionNotableLargeSuffix",
+          "variantTags": [
+            "affliction_elemental_damage",
+            "affliction_fire_damage",
+            "affliction_lightning_damage",
+            "affliction_cold_damage"
+          ]
+        },
+        {
+          "key": "AfflictionNotableWidespreadDestruction",
+          "text": "パッシブスキルを1個追加: 広範囲にわたる破壊",
+          "name": "意義の",
+          "engText": "1 Added Passive Skill is Widespread Destruction",
+          "engName": "of Significance",
+          "tag": "affliction_elemental_damage",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 1500,
+          "family": "AfflictionNotableLargeSuffix",
+          "variantTags": [
+            "affliction_elemental_damage",
+            "affliction_fire_damage",
+            "affliction_lightning_damage",
+            "affliction_cold_damage"
+          ]
+        },
+        {
+          "key": "AfflictionNotableUnspeakableGifts",
+          "text": "パッシブスキルを1個追加: 言語に絶する贈り物",
+          "name": "意義の",
+          "engText": "1 Added Passive Skill is Unspeakable Gifts",
+          "engName": "of Significance",
+          "tag": "affliction_chaos_damage",
+          "generation_type": "suffix",
+          "required_level": 75,
+          "weight": 32,
+          "family": "AfflictionNotableLargeSuffix",
+          "variantTags": [
+            "affliction_chaos_damage"
+          ]
+        },
+        {
+          "key": "AfflictionNotableUnholyGrace_",
+          "text": "パッシブスキルを1個追加: 不浄な恩寵",
+          "name": "意義の",
+          "engText": "1 Added Passive Skill is Unholy Grace",
+          "engName": "of Significance",
+          "tag": "affliction_chaos_damage",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 519,
+          "family": "AfflictionNotableLargeSuffix",
+          "variantTags": [
+            "affliction_chaos_damage"
+          ]
+        },
+        {
+          "key": "AfflictionNotableCalltotheSlaughter",
+          "text": "パッシブスキルを1個追加: 殺戮への呼び声",
+          "name": "意義の",
+          "engText": "1 Added Passive Skill is Call to the Slaughter",
+          "engName": "of Significance",
+          "tag": "affliction_minion_damage",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 1000,
+          "family": "AfflictionNotableLargeSuffix",
+          "variantTags": [
+            "affliction_minion_damage"
+          ]
+        },
+        {
+          "key": "AfflictionNotableViciousBite",
+          "text": "パッシブスキルを1個追加: 酷い噛み傷",
+          "name": "意義の",
+          "engText": "1 Added Passive Skill is Vicious Bite",
+          "engName": "of Significance",
+          "tag": "affliction_minion_damage",
+          "generation_type": "suffix",
+          "required_level": 75,
+          "weight": 63,
+          "family": "AfflictionNotableLargeSuffix",
+          "variantTags": [
+            "affliction_minion_damage"
+          ]
+        },
+        {
+          "key": "AfflictionNotablePrimordialBond",
+          "text": "パッシブスキルを1個追加: 原初の絆",
+          "name": "意義の",
+          "engText": "1 Added Passive Skill is Primordial Bond",
+          "engName": "of Significance",
+          "tag": "affliction_minion_damage",
+          "generation_type": "suffix",
+          "required_level": 68,
+          "weight": 188,
+          "family": "AfflictionNotableLargeSuffix",
+          "variantTags": [
+            "affliction_minion_damage"
+          ]
+        }
+      ],
+      "AfflictionJewelSmallPassivesGrantStr": [
+        {
+          "key": "AfflictionJewelSmallPassivesGrantStr",
+          "text": "追加されるスモールパッシブスキルはさらに付与: 筋力 +(2-3)",
+          "name": "蛮人の",
+          "engText": "Added Small Passive Skills also grant: +(2-3) to Strength",
+          "engName": "of the Brute",
+          "tag": "expansion_jewel_large",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "AfflictionJewelSmallPassivesGrantStr",
+          "variantTags": [
+            "affliction_axe_and_sword_damage",
+            "affliction_mace_and_staff_damage",
+            "affliction_dagger_and_claw_damage",
+            "affliction_bow_damage",
+            "affliction_wand_damage",
+            "affliction_damage_with_two_handed_melee_weapons",
+            "affliction_attack_damage_while_dual_wielding_",
+            "affliction_attack_damage_while_holding_a_shield",
+            "affliction_attack_damage_",
+            "affliction_spell_damage",
+            "affliction_elemental_damage",
+            "affliction_physical_damage",
+            "affliction_fire_damage",
+            "affliction_lightning_damage",
+            "affliction_cold_damage",
+            "affliction_chaos_damage",
+            "affliction_minion_damage"
+          ]
+        },
+        {
+          "key": "AfflictionJewelSmallPassivesGrantStr2_",
+          "text": "追加されるスモールパッシブスキルはさらに付与: 筋力 +(4-5)",
+          "name": "レスラーの",
+          "engText": "Added Small Passive Skills also grant: +(4-5) to Strength",
+          "engName": "of the Wrestler",
+          "tag": "expansion_jewel_large",
+          "generation_type": "suffix",
+          "required_level": 68,
+          "weight": 400,
+          "family": "AfflictionJewelSmallPassivesGrantStr",
+          "variantTags": [
+            "affliction_axe_and_sword_damage",
+            "affliction_mace_and_staff_damage",
+            "affliction_dagger_and_claw_damage",
+            "affliction_bow_damage",
+            "affliction_wand_damage",
+            "affliction_damage_with_two_handed_melee_weapons",
+            "affliction_attack_damage_while_dual_wielding_",
+            "affliction_attack_damage_while_holding_a_shield",
+            "affliction_attack_damage_",
+            "affliction_spell_damage",
+            "affliction_elemental_damage",
+            "affliction_physical_damage",
+            "affliction_fire_damage",
+            "affliction_lightning_damage",
+            "affliction_cold_damage",
+            "affliction_chaos_damage",
+            "affliction_minion_damage"
+          ]
+        },
+        {
+          "key": "AfflictionJewelSmallPassivesGrantStr3_",
+          "text": "追加されるスモールパッシブスキルはさらに付与: 筋力 +(6-8)",
+          "name": "熊の",
+          "engText": "Added Small Passive Skills also grant: +(6-8) to Strength",
+          "engName": "of the Bear",
+          "tag": "expansion_jewel_large",
+          "generation_type": "suffix",
+          "required_level": 84,
+          "weight": 300,
+          "family": "AfflictionJewelSmallPassivesGrantStr",
+          "variantTags": [
+            "affliction_axe_and_sword_damage",
+            "affliction_mace_and_staff_damage",
+            "affliction_dagger_and_claw_damage",
+            "affliction_bow_damage",
+            "affliction_wand_damage",
+            "affliction_damage_with_two_handed_melee_weapons",
+            "affliction_attack_damage_while_dual_wielding_",
+            "affliction_attack_damage_while_holding_a_shield",
+            "affliction_attack_damage_",
+            "affliction_spell_damage",
+            "affliction_elemental_damage",
+            "affliction_physical_damage",
+            "affliction_fire_damage",
+            "affliction_lightning_damage",
+            "affliction_cold_damage",
+            "affliction_chaos_damage",
+            "affliction_minion_damage"
+          ]
+        }
+      ],
+      "AfflictionJewelSmallPassivesGrantDex": [
+        {
+          "key": "AfflictionJewelSmallPassivesGrantDex_",
+          "text": "追加されるスモールパッシブスキルはさらに付与: 器用さ +(2-3)",
+          "name": "マングースの",
+          "engText": "Added Small Passive Skills also grant: +(2-3) to Dexterity",
+          "engName": "of the Mongoose",
+          "tag": "expansion_jewel_large",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "AfflictionJewelSmallPassivesGrantDex",
+          "variantTags": [
+            "affliction_axe_and_sword_damage",
+            "affliction_mace_and_staff_damage",
+            "affliction_dagger_and_claw_damage",
+            "affliction_bow_damage",
+            "affliction_wand_damage",
+            "affliction_damage_with_two_handed_melee_weapons",
+            "affliction_attack_damage_while_dual_wielding_",
+            "affliction_attack_damage_while_holding_a_shield",
+            "affliction_attack_damage_",
+            "affliction_spell_damage",
+            "affliction_elemental_damage",
+            "affliction_physical_damage",
+            "affliction_fire_damage",
+            "affliction_lightning_damage",
+            "affliction_cold_damage",
+            "affliction_chaos_damage",
+            "affliction_minion_damage"
+          ]
+        },
+        {
+          "key": "AfflictionJewelSmallPassivesGrantDex2",
+          "text": "追加されるスモールパッシブスキルはさらに付与: 器用さ +(4-5)",
+          "name": "リンクスの",
+          "engText": "Added Small Passive Skills also grant: +(4-5) to Dexterity",
+          "engName": "of the Lynx",
+          "tag": "expansion_jewel_large",
+          "generation_type": "suffix",
+          "required_level": 68,
+          "weight": 400,
+          "family": "AfflictionJewelSmallPassivesGrantDex",
+          "variantTags": [
+            "affliction_axe_and_sword_damage",
+            "affliction_mace_and_staff_damage",
+            "affliction_dagger_and_claw_damage",
+            "affliction_bow_damage",
+            "affliction_wand_damage",
+            "affliction_damage_with_two_handed_melee_weapons",
+            "affliction_attack_damage_while_dual_wielding_",
+            "affliction_attack_damage_while_holding_a_shield",
+            "affliction_attack_damage_",
+            "affliction_spell_damage",
+            "affliction_elemental_damage",
+            "affliction_physical_damage",
+            "affliction_fire_damage",
+            "affliction_lightning_damage",
+            "affliction_cold_damage",
+            "affliction_chaos_damage",
+            "affliction_minion_damage"
+          ]
+        },
+        {
+          "key": "AfflictionJewelSmallPassivesGrantDex3_",
+          "text": "追加されるスモールパッシブスキルはさらに付与: 器用さ +(6-8)",
+          "name": "狐の",
+          "engText": "Added Small Passive Skills also grant: +(6-8) to Dexterity",
+          "engName": "of the Fox",
+          "tag": "expansion_jewel_large",
+          "generation_type": "suffix",
+          "required_level": 84,
+          "weight": 300,
+          "family": "AfflictionJewelSmallPassivesGrantDex",
+          "variantTags": [
+            "affliction_axe_and_sword_damage",
+            "affliction_mace_and_staff_damage",
+            "affliction_dagger_and_claw_damage",
+            "affliction_bow_damage",
+            "affliction_wand_damage",
+            "affliction_damage_with_two_handed_melee_weapons",
+            "affliction_attack_damage_while_dual_wielding_",
+            "affliction_attack_damage_while_holding_a_shield",
+            "affliction_attack_damage_",
+            "affliction_spell_damage",
+            "affliction_elemental_damage",
+            "affliction_physical_damage",
+            "affliction_fire_damage",
+            "affliction_lightning_damage",
+            "affliction_cold_damage",
+            "affliction_chaos_damage",
+            "affliction_minion_damage"
+          ]
+        }
+      ],
+      "AfflictionJewelSmallPassivesGrantInt": [
+        {
+          "key": "AfflictionJewelSmallPassivesGrantInt_",
+          "text": "追加されるスモールパッシブスキルはさらに付与: 知性 +(2-3)",
+          "name": "生徒の",
+          "engText": "Added Small Passive Skills also grant: +(2-3) to Intelligence",
+          "engName": "of the Pupil",
+          "tag": "expansion_jewel_large",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "AfflictionJewelSmallPassivesGrantInt",
+          "variantTags": [
+            "affliction_axe_and_sword_damage",
+            "affliction_mace_and_staff_damage",
+            "affliction_dagger_and_claw_damage",
+            "affliction_bow_damage",
+            "affliction_wand_damage",
+            "affliction_damage_with_two_handed_melee_weapons",
+            "affliction_attack_damage_while_dual_wielding_",
+            "affliction_attack_damage_while_holding_a_shield",
+            "affliction_attack_damage_",
+            "affliction_spell_damage",
+            "affliction_elemental_damage",
+            "affliction_physical_damage",
+            "affliction_fire_damage",
+            "affliction_lightning_damage",
+            "affliction_cold_damage",
+            "affliction_chaos_damage",
+            "affliction_minion_damage"
+          ]
+        },
+        {
+          "key": "AfflictionJewelSmallPassivesGrantInt2_",
+          "text": "追加されるスモールパッシブスキルはさらに付与: 知性 +(4-5)",
+          "name": "学徒の",
+          "engText": "Added Small Passive Skills also grant: +(4-5) to Intelligence",
+          "engName": "of the Student",
+          "tag": "expansion_jewel_large",
+          "generation_type": "suffix",
+          "required_level": 68,
+          "weight": 400,
+          "family": "AfflictionJewelSmallPassivesGrantInt",
+          "variantTags": [
+            "affliction_axe_and_sword_damage",
+            "affliction_mace_and_staff_damage",
+            "affliction_dagger_and_claw_damage",
+            "affliction_bow_damage",
+            "affliction_wand_damage",
+            "affliction_damage_with_two_handed_melee_weapons",
+            "affliction_attack_damage_while_dual_wielding_",
+            "affliction_attack_damage_while_holding_a_shield",
+            "affliction_attack_damage_",
+            "affliction_spell_damage",
+            "affliction_elemental_damage",
+            "affliction_physical_damage",
+            "affliction_fire_damage",
+            "affliction_lightning_damage",
+            "affliction_cold_damage",
+            "affliction_chaos_damage",
+            "affliction_minion_damage"
+          ]
+        },
+        {
+          "key": "AfflictionJewelSmallPassivesGrantInt3",
+          "text": "追加されるスモールパッシブスキルはさらに付与: 知性 +(6-8)",
+          "name": "神童の",
+          "engText": "Added Small Passive Skills also grant: +(6-8) to Intelligence",
+          "engName": "of the Prodigy",
+          "tag": "expansion_jewel_large",
+          "generation_type": "suffix",
+          "required_level": 84,
+          "weight": 300,
+          "family": "AfflictionJewelSmallPassivesGrantInt",
+          "variantTags": [
+            "affliction_axe_and_sword_damage",
+            "affliction_mace_and_staff_damage",
+            "affliction_dagger_and_claw_damage",
+            "affliction_bow_damage",
+            "affliction_wand_damage",
+            "affliction_damage_with_two_handed_melee_weapons",
+            "affliction_attack_damage_while_dual_wielding_",
+            "affliction_attack_damage_while_holding_a_shield",
+            "affliction_attack_damage_",
+            "affliction_spell_damage",
+            "affliction_elemental_damage",
+            "affliction_physical_damage",
+            "affliction_fire_damage",
+            "affliction_lightning_damage",
+            "affliction_cold_damage",
+            "affliction_chaos_damage",
+            "affliction_minion_damage"
+          ]
+        }
+      ],
+      "AfflictionJewelSmallPassivesGrantAttributes": [
+        {
+          "key": "AfflictionJewelSmallPassivesGrantAttributes",
+          "text": "追加されるスモールパッシブスキルはさらに付与: 全ての能力値 +2",
+          "name": "雲の",
+          "engText": "Added Small Passive Skills also grant: +2 to All Attributes",
+          "engName": "of the Cloud",
+          "tag": "expansion_jewel_large",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "AfflictionJewelSmallPassivesGrantAttributes",
+          "variantTags": [
+            "affliction_axe_and_sword_damage",
+            "affliction_mace_and_staff_damage",
+            "affliction_dagger_and_claw_damage",
+            "affliction_bow_damage",
+            "affliction_wand_damage",
+            "affliction_damage_with_two_handed_melee_weapons",
+            "affliction_attack_damage_while_dual_wielding_",
+            "affliction_attack_damage_while_holding_a_shield",
+            "affliction_attack_damage_",
+            "affliction_spell_damage",
+            "affliction_elemental_damage",
+            "affliction_physical_damage",
+            "affliction_fire_damage",
+            "affliction_lightning_damage",
+            "affliction_cold_damage",
+            "affliction_chaos_damage",
+            "affliction_minion_damage"
+          ]
+        },
+        {
+          "key": "AfflictionJewelSmallPassivesGrantAttributes2",
+          "text": "追加されるスモールパッシブスキルはさらに付与: 全ての能力値 +3",
+          "name": "空の",
+          "engText": "Added Small Passive Skills also grant: +3 to All Attributes",
+          "engName": "of the Sky",
+          "tag": "expansion_jewel_large",
+          "generation_type": "suffix",
+          "required_level": 68,
+          "weight": 400,
+          "family": "AfflictionJewelSmallPassivesGrantAttributes",
+          "variantTags": [
+            "affliction_axe_and_sword_damage",
+            "affliction_mace_and_staff_damage",
+            "affliction_dagger_and_claw_damage",
+            "affliction_bow_damage",
+            "affliction_wand_damage",
+            "affliction_damage_with_two_handed_melee_weapons",
+            "affliction_attack_damage_while_dual_wielding_",
+            "affliction_attack_damage_while_holding_a_shield",
+            "affliction_attack_damage_",
+            "affliction_spell_damage",
+            "affliction_elemental_damage",
+            "affliction_physical_damage",
+            "affliction_fire_damage",
+            "affliction_lightning_damage",
+            "affliction_cold_damage",
+            "affliction_chaos_damage",
+            "affliction_minion_damage"
+          ]
+        },
+        {
+          "key": "AfflictionJewelSmallPassivesGrantAttributes3",
+          "text": "追加されるスモールパッシブスキルはさらに付与: 全ての能力値 +4",
+          "name": "隕石の",
+          "engText": "Added Small Passive Skills also grant: +4 to All Attributes",
+          "engName": "of the Meteor",
+          "tag": "expansion_jewel_large",
+          "generation_type": "suffix",
+          "required_level": 84,
+          "weight": 300,
+          "family": "AfflictionJewelSmallPassivesGrantAttributes",
+          "variantTags": [
+            "affliction_axe_and_sword_damage",
+            "affliction_mace_and_staff_damage",
+            "affliction_dagger_and_claw_damage",
+            "affliction_bow_damage",
+            "affliction_wand_damage",
+            "affliction_damage_with_two_handed_melee_weapons",
+            "affliction_attack_damage_while_dual_wielding_",
+            "affliction_attack_damage_while_holding_a_shield",
+            "affliction_attack_damage_",
+            "affliction_spell_damage",
+            "affliction_elemental_damage",
+            "affliction_physical_damage",
+            "affliction_fire_damage",
+            "affliction_lightning_damage",
+            "affliction_cold_damage",
+            "affliction_chaos_damage",
+            "affliction_minion_damage"
+          ]
+        }
+      ],
+      "AfflictionJewelSmallPassivesGrantManaRegen": [
+        {
+          "key": "AfflictionJewelSmallPassivesGrantManaRegen",
+          "text": "追加されるスモールパッシブスキルはさらに付与: マナ自動回復レートが4%増加する",
+          "name": "興奮の",
+          "engText": "Added Small Passive Skills also grant: 4% increased Mana Regeneration Rate",
+          "engName": "of Excitement",
+          "tag": "expansion_jewel_large",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "AfflictionJewelSmallPassivesGrantManaRegen",
+          "variantTags": [
+            "affliction_axe_and_sword_damage",
+            "affliction_mace_and_staff_damage",
+            "affliction_dagger_and_claw_damage",
+            "affliction_bow_damage",
+            "affliction_wand_damage",
+            "affliction_damage_with_two_handed_melee_weapons",
+            "affliction_attack_damage_while_dual_wielding_",
+            "affliction_attack_damage_while_holding_a_shield",
+            "affliction_attack_damage_",
+            "affliction_spell_damage",
+            "affliction_elemental_damage",
+            "affliction_physical_damage",
+            "affliction_fire_damage",
+            "affliction_lightning_damage",
+            "affliction_cold_damage",
+            "affliction_chaos_damage",
+            "affliction_minion_damage"
+          ]
+        },
+        {
+          "key": "AfflictionJewelSmallPassivesGrantManaRegen2",
+          "text": "追加されるスモールパッシブスキルはさらに付与: マナ自動回復レートが5%増加する",
+          "name": "歓喜の",
+          "engText": "Added Small Passive Skills also grant: 5% increased Mana Regeneration Rate",
+          "engName": "of Joy",
+          "tag": "expansion_jewel_large",
+          "generation_type": "suffix",
+          "required_level": 68,
+          "weight": 400,
+          "family": "AfflictionJewelSmallPassivesGrantManaRegen",
+          "variantTags": [
+            "affliction_axe_and_sword_damage",
+            "affliction_mace_and_staff_damage",
+            "affliction_dagger_and_claw_damage",
+            "affliction_bow_damage",
+            "affliction_wand_damage",
+            "affliction_damage_with_two_handed_melee_weapons",
+            "affliction_attack_damage_while_dual_wielding_",
+            "affliction_attack_damage_while_holding_a_shield",
+            "affliction_attack_damage_",
+            "affliction_spell_damage",
+            "affliction_elemental_damage",
+            "affliction_physical_damage",
+            "affliction_fire_damage",
+            "affliction_lightning_damage",
+            "affliction_cold_damage",
+            "affliction_chaos_damage",
+            "affliction_minion_damage"
+          ]
+        },
+        {
+          "key": "AfflictionJewelSmallPassivesGrantManaRegen3_",
+          "text": "追加されるスモールパッシブスキルはさらに付与: マナ自動回復レートが6%増加する",
+          "name": "高揚の",
+          "engText": "Added Small Passive Skills also grant: 6% increased Mana Regeneration Rate",
+          "engName": "of Elation",
+          "tag": "expansion_jewel_large",
+          "generation_type": "suffix",
+          "required_level": 84,
+          "weight": 300,
+          "family": "AfflictionJewelSmallPassivesGrantManaRegen",
+          "variantTags": [
+            "affliction_axe_and_sword_damage",
+            "affliction_mace_and_staff_damage",
+            "affliction_dagger_and_claw_damage",
+            "affliction_bow_damage",
+            "affliction_wand_damage",
+            "affliction_damage_with_two_handed_melee_weapons",
+            "affliction_attack_damage_while_dual_wielding_",
+            "affliction_attack_damage_while_holding_a_shield",
+            "affliction_attack_damage_",
+            "affliction_spell_damage",
+            "affliction_elemental_damage",
+            "affliction_physical_damage",
+            "affliction_fire_damage",
+            "affliction_lightning_damage",
+            "affliction_cold_damage",
+            "affliction_chaos_damage",
+            "affliction_minion_damage"
+          ]
+        }
+      ],
+      "AfflictionJewelSmallPassivesGrantLifeRegen": [
+        {
+          "key": "AfflictionJewelSmallPassivesGrantLifeRegen___",
+          "text": "追加されるスモールパッシブスキルはさらに付与: 毎秒ライフの0.1%を自動回復する",
+          "name": "イモリの",
+          "engText": "Added Small Passive Skills also grant: Regenerate 0.1% of Life per Second",
+          "engName": "of the Newt",
+          "tag": "expansion_jewel_large",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "AfflictionJewelSmallPassivesGrantLifeRegen",
+          "variantTags": [
+            "affliction_axe_and_sword_damage",
+            "affliction_mace_and_staff_damage",
+            "affliction_dagger_and_claw_damage",
+            "affliction_bow_damage",
+            "affliction_wand_damage",
+            "affliction_damage_with_two_handed_melee_weapons",
+            "affliction_attack_damage_while_dual_wielding_",
+            "affliction_attack_damage_while_holding_a_shield",
+            "affliction_attack_damage_",
+            "affliction_spell_damage",
+            "affliction_elemental_damage",
+            "affliction_physical_damage",
+            "affliction_fire_damage",
+            "affliction_lightning_damage",
+            "affliction_cold_damage",
+            "affliction_chaos_damage",
+            "affliction_minion_damage"
+          ]
+        },
+        {
+          "key": "AfflictionJewelSmallPassivesGrantLifeRegen2_",
+          "text": "追加されるスモールパッシブスキルはさらに付与: 毎秒ライフの0.15%を自動回復する",
+          "name": "蜥蜴の",
+          "engText": "Added Small Passive Skills also grant: Regenerate 0.15% of Life per Second",
+          "engName": "of the Lizard",
+          "tag": "expansion_jewel_large",
+          "generation_type": "suffix",
+          "required_level": 68,
+          "weight": 400,
+          "family": "AfflictionJewelSmallPassivesGrantLifeRegen",
+          "variantTags": [
+            "affliction_axe_and_sword_damage",
+            "affliction_mace_and_staff_damage",
+            "affliction_dagger_and_claw_damage",
+            "affliction_bow_damage",
+            "affliction_wand_damage",
+            "affliction_damage_with_two_handed_melee_weapons",
+            "affliction_attack_damage_while_dual_wielding_",
+            "affliction_attack_damage_while_holding_a_shield",
+            "affliction_attack_damage_",
+            "affliction_spell_damage",
+            "affliction_elemental_damage",
+            "affliction_physical_damage",
+            "affliction_fire_damage",
+            "affliction_lightning_damage",
+            "affliction_cold_damage",
+            "affliction_chaos_damage",
+            "affliction_minion_damage"
+          ]
+        },
+        {
+          "key": "AfflictionJewelSmallPassivesGrantLifeRegen3",
+          "text": "追加されるスモールパッシブスキルはさらに付与: 毎秒ライフの0.2%を自動回復する",
+          "name": "平虫の",
+          "engText": "Added Small Passive Skills also grant: Regenerate 0.2% of Life per Second",
+          "engName": "of the Flatworm",
+          "tag": "expansion_jewel_large",
+          "generation_type": "suffix",
+          "required_level": 84,
+          "weight": 300,
+          "family": "AfflictionJewelSmallPassivesGrantLifeRegen",
+          "variantTags": [
+            "affliction_axe_and_sword_damage",
+            "affliction_mace_and_staff_damage",
+            "affliction_dagger_and_claw_damage",
+            "affliction_bow_damage",
+            "affliction_wand_damage",
+            "affliction_damage_with_two_handed_melee_weapons",
+            "affliction_attack_damage_while_dual_wielding_",
+            "affliction_attack_damage_while_holding_a_shield",
+            "affliction_attack_damage_",
+            "affliction_spell_damage",
+            "affliction_elemental_damage",
+            "affliction_physical_damage",
+            "affliction_fire_damage",
+            "affliction_lightning_damage",
+            "affliction_cold_damage",
+            "affliction_chaos_damage",
+            "affliction_minion_damage"
+          ]
+        }
+      ],
+      "AfflictionJewelSmallPassivesGrantFireRes": [
+        {
+          "key": "AfflictionJewelSmallPassivesGrantFireRes",
+          "text": "追加されるスモールパッシブスキルはさらに付与: 火耐性 +(2-3)%",
+          "name": "仔竜の",
+          "engText": "Added Small Passive Skills also grant: +(2-3)% to Fire Resistance",
+          "engName": "of the Whelpling",
+          "tag": "expansion_jewel_large",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "AfflictionJewelSmallPassivesGrantFireRes",
+          "variantTags": [
+            "affliction_axe_and_sword_damage",
+            "affliction_mace_and_staff_damage",
+            "affliction_dagger_and_claw_damage",
+            "affliction_bow_damage",
+            "affliction_wand_damage",
+            "affliction_damage_with_two_handed_melee_weapons",
+            "affliction_attack_damage_while_dual_wielding_",
+            "affliction_attack_damage_while_holding_a_shield",
+            "affliction_attack_damage_",
+            "affliction_spell_damage",
+            "affliction_elemental_damage",
+            "affliction_physical_damage",
+            "affliction_fire_damage",
+            "affliction_lightning_damage",
+            "affliction_cold_damage",
+            "affliction_chaos_damage",
+            "affliction_minion_damage"
+          ]
+        },
+        {
+          "key": "AfflictionJewelSmallPassivesGrantFireRes2",
+          "text": "追加されるスモールパッシブスキルはさらに付与: 火耐性 +(4-5)%",
+          "name": "サラマンダーの",
+          "engText": "Added Small Passive Skills also grant: +(4-5)% to Fire Resistance",
+          "engName": "of the Salamander",
+          "tag": "expansion_jewel_large",
+          "generation_type": "suffix",
+          "required_level": 68,
+          "weight": 400,
+          "family": "AfflictionJewelSmallPassivesGrantFireRes",
+          "variantTags": [
+            "affliction_axe_and_sword_damage",
+            "affliction_mace_and_staff_damage",
+            "affliction_dagger_and_claw_damage",
+            "affliction_bow_damage",
+            "affliction_wand_damage",
+            "affliction_damage_with_two_handed_melee_weapons",
+            "affliction_attack_damage_while_dual_wielding_",
+            "affliction_attack_damage_while_holding_a_shield",
+            "affliction_attack_damage_",
+            "affliction_spell_damage",
+            "affliction_elemental_damage",
+            "affliction_physical_damage",
+            "affliction_fire_damage",
+            "affliction_lightning_damage",
+            "affliction_cold_damage",
+            "affliction_chaos_damage",
+            "affliction_minion_damage"
+          ]
+        },
+        {
+          "key": "AfflictionJewelSmallPassivesGrantFireRes3",
+          "text": "追加されるスモールパッシブスキルはさらに付与: 火耐性 +(6-7)%",
+          "name": "ドレイクの",
+          "engText": "Added Small Passive Skills also grant: +(6-7)% to Fire Resistance",
+          "engName": "of the Drake",
+          "tag": "expansion_jewel_large",
+          "generation_type": "suffix",
+          "required_level": 84,
+          "weight": 300,
+          "family": "AfflictionJewelSmallPassivesGrantFireRes",
+          "variantTags": [
+            "affliction_axe_and_sword_damage",
+            "affliction_mace_and_staff_damage",
+            "affliction_dagger_and_claw_damage",
+            "affliction_bow_damage",
+            "affliction_wand_damage",
+            "affliction_damage_with_two_handed_melee_weapons",
+            "affliction_attack_damage_while_dual_wielding_",
+            "affliction_attack_damage_while_holding_a_shield",
+            "affliction_attack_damage_",
+            "affliction_spell_damage",
+            "affliction_elemental_damage",
+            "affliction_physical_damage",
+            "affliction_fire_damage",
+            "affliction_lightning_damage",
+            "affliction_cold_damage",
+            "affliction_chaos_damage",
+            "affliction_minion_damage"
+          ]
+        }
+      ],
+      "AfflictionJewelSmallPassivesGrantColdRes": [
+        {
+          "key": "AfflictionJewelSmallPassivesGrantColdRes_",
+          "text": "追加されるスモールパッシブスキルはさらに付与: 冷気耐性 +(2-3)%",
+          "name": "イヌイットの",
+          "engText": "Added Small Passive Skills also grant: +(2-3)% to Cold Resistance",
+          "engName": "of the Inuit",
+          "tag": "expansion_jewel_large",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "AfflictionJewelSmallPassivesGrantColdRes",
+          "variantTags": [
+            "affliction_axe_and_sword_damage",
+            "affliction_mace_and_staff_damage",
+            "affliction_dagger_and_claw_damage",
+            "affliction_bow_damage",
+            "affliction_wand_damage",
+            "affliction_damage_with_two_handed_melee_weapons",
+            "affliction_attack_damage_while_dual_wielding_",
+            "affliction_attack_damage_while_holding_a_shield",
+            "affliction_attack_damage_",
+            "affliction_spell_damage",
+            "affliction_elemental_damage",
+            "affliction_physical_damage",
+            "affliction_fire_damage",
+            "affliction_lightning_damage",
+            "affliction_cold_damage",
+            "affliction_chaos_damage",
+            "affliction_minion_damage"
+          ]
+        },
+        {
+          "key": "AfflictionJewelSmallPassivesGrantColdRes2",
+          "text": "追加されるスモールパッシブスキルはさらに付与: 冷気耐性 +(4-5)%",
+          "name": "アシカの",
+          "engText": "Added Small Passive Skills also grant: +(4-5)% to Cold Resistance",
+          "engName": "of the Seal",
+          "tag": "expansion_jewel_large",
+          "generation_type": "suffix",
+          "required_level": 68,
+          "weight": 400,
+          "family": "AfflictionJewelSmallPassivesGrantColdRes",
+          "variantTags": [
+            "affliction_axe_and_sword_damage",
+            "affliction_mace_and_staff_damage",
+            "affliction_dagger_and_claw_damage",
+            "affliction_bow_damage",
+            "affliction_wand_damage",
+            "affliction_damage_with_two_handed_melee_weapons",
+            "affliction_attack_damage_while_dual_wielding_",
+            "affliction_attack_damage_while_holding_a_shield",
+            "affliction_attack_damage_",
+            "affliction_spell_damage",
+            "affliction_elemental_damage",
+            "affliction_physical_damage",
+            "affliction_fire_damage",
+            "affliction_lightning_damage",
+            "affliction_cold_damage",
+            "affliction_chaos_damage",
+            "affliction_minion_damage"
+          ]
+        },
+        {
+          "key": "AfflictionJewelSmallPassivesGrantColdRes3",
+          "text": "追加されるスモールパッシブスキルはさらに付与: 冷気耐性 +(6-7)%",
+          "name": "ペンギンの",
+          "engText": "Added Small Passive Skills also grant: +(6-7)% to Cold Resistance",
+          "engName": "of the Penguin",
+          "tag": "expansion_jewel_large",
+          "generation_type": "suffix",
+          "required_level": 84,
+          "weight": 300,
+          "family": "AfflictionJewelSmallPassivesGrantColdRes",
+          "variantTags": [
+            "affliction_axe_and_sword_damage",
+            "affliction_mace_and_staff_damage",
+            "affliction_dagger_and_claw_damage",
+            "affliction_bow_damage",
+            "affliction_wand_damage",
+            "affliction_damage_with_two_handed_melee_weapons",
+            "affliction_attack_damage_while_dual_wielding_",
+            "affliction_attack_damage_while_holding_a_shield",
+            "affliction_attack_damage_",
+            "affliction_spell_damage",
+            "affliction_elemental_damage",
+            "affliction_physical_damage",
+            "affliction_fire_damage",
+            "affliction_lightning_damage",
+            "affliction_cold_damage",
+            "affliction_chaos_damage",
+            "affliction_minion_damage"
+          ]
+        }
+      ],
+      "AfflictionJewelSmallPassivesGrantLightningRes": [
+        {
+          "key": "AfflictionJewelSmallPassivesGrantLightningRes",
+          "text": "追加されるスモールパッシブスキルはさらに付与: 雷耐性 +(2-3)%",
+          "name": "雲の",
+          "engText": "Added Small Passive Skills also grant: +(2-3)% to Lightning Resistance",
+          "engName": "of the Cloud",
+          "tag": "expansion_jewel_large",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "AfflictionJewelSmallPassivesGrantLightningRes",
+          "variantTags": [
+            "affliction_axe_and_sword_damage",
+            "affliction_mace_and_staff_damage",
+            "affliction_dagger_and_claw_damage",
+            "affliction_bow_damage",
+            "affliction_wand_damage",
+            "affliction_damage_with_two_handed_melee_weapons",
+            "affliction_attack_damage_while_dual_wielding_",
+            "affliction_attack_damage_while_holding_a_shield",
+            "affliction_attack_damage_",
+            "affliction_spell_damage",
+            "affliction_elemental_damage",
+            "affliction_physical_damage",
+            "affliction_fire_damage",
+            "affliction_lightning_damage",
+            "affliction_cold_damage",
+            "affliction_chaos_damage",
+            "affliction_minion_damage"
+          ]
+        },
+        {
+          "key": "AfflictionJewelSmallPassivesGrantLightningRes2_",
+          "text": "追加されるスモールパッシブスキルはさらに付与: 雷耐性 +(4-5)%",
+          "name": "スコールの",
+          "engText": "Added Small Passive Skills also grant: +(4-5)% to Lightning Resistance",
+          "engName": "of the Squall",
+          "tag": "expansion_jewel_large",
+          "generation_type": "suffix",
+          "required_level": 68,
+          "weight": 400,
+          "family": "AfflictionJewelSmallPassivesGrantLightningRes",
+          "variantTags": [
+            "affliction_axe_and_sword_damage",
+            "affliction_mace_and_staff_damage",
+            "affliction_dagger_and_claw_damage",
+            "affliction_bow_damage",
+            "affliction_wand_damage",
+            "affliction_damage_with_two_handed_melee_weapons",
+            "affliction_attack_damage_while_dual_wielding_",
+            "affliction_attack_damage_while_holding_a_shield",
+            "affliction_attack_damage_",
+            "affliction_spell_damage",
+            "affliction_elemental_damage",
+            "affliction_physical_damage",
+            "affliction_fire_damage",
+            "affliction_lightning_damage",
+            "affliction_cold_damage",
+            "affliction_chaos_damage",
+            "affliction_minion_damage"
+          ]
+        },
+        {
+          "key": "AfflictionJewelSmallPassivesGrantLightningRes3",
+          "text": "追加されるスモールパッシブスキルはさらに付与: 雷耐性 +(6-7)%",
+          "name": "嵐の",
+          "engText": "Added Small Passive Skills also grant: +(6-7)% to Lightning Resistance",
+          "engName": "of the Storm",
+          "tag": "expansion_jewel_large",
+          "generation_type": "suffix",
+          "required_level": 84,
+          "weight": 300,
+          "family": "AfflictionJewelSmallPassivesGrantLightningRes",
+          "variantTags": [
+            "affliction_axe_and_sword_damage",
+            "affliction_mace_and_staff_damage",
+            "affliction_dagger_and_claw_damage",
+            "affliction_bow_damage",
+            "affliction_wand_damage",
+            "affliction_damage_with_two_handed_melee_weapons",
+            "affliction_attack_damage_while_dual_wielding_",
+            "affliction_attack_damage_while_holding_a_shield",
+            "affliction_attack_damage_",
+            "affliction_spell_damage",
+            "affliction_elemental_damage",
+            "affliction_physical_damage",
+            "affliction_fire_damage",
+            "affliction_lightning_damage",
+            "affliction_cold_damage",
+            "affliction_chaos_damage",
+            "affliction_minion_damage"
+          ]
+        }
+      ],
+      "AfflictionJewelSmallPassivesGrantElementalRes": [
+        {
+          "key": "AfflictionJewelSmallPassivesGrantElementalRes",
+          "text": "追加されるスモールパッシブスキルはさらに付与: 全ての元素耐性 +2%",
+          "name": "クリスタルの",
+          "engText": "Added Small Passive Skills also grant: +2% to all Elemental Resistances",
+          "engName": "of the Crystal",
+          "tag": "expansion_jewel_large",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "AfflictionJewelSmallPassivesGrantElementalRes",
+          "variantTags": [
+            "affliction_axe_and_sword_damage",
+            "affliction_mace_and_staff_damage",
+            "affliction_dagger_and_claw_damage",
+            "affliction_bow_damage",
+            "affliction_wand_damage",
+            "affliction_damage_with_two_handed_melee_weapons",
+            "affliction_attack_damage_while_dual_wielding_",
+            "affliction_attack_damage_while_holding_a_shield",
+            "affliction_attack_damage_",
+            "affliction_spell_damage",
+            "affliction_elemental_damage",
+            "affliction_physical_damage",
+            "affliction_fire_damage",
+            "affliction_lightning_damage",
+            "affliction_cold_damage",
+            "affliction_chaos_damage",
+            "affliction_minion_damage"
+          ]
+        },
+        {
+          "key": "AfflictionJewelSmallPassivesGrantElementalRes2",
+          "text": "追加されるスモールパッシブスキルはさらに付与: 全ての元素耐性 +3%",
+          "name": "プリズムの",
+          "engText": "Added Small Passive Skills also grant: +3% to all Elemental Resistances",
+          "engName": "of the Prism",
+          "tag": "expansion_jewel_large",
+          "generation_type": "suffix",
+          "required_level": 68,
+          "weight": 400,
+          "family": "AfflictionJewelSmallPassivesGrantElementalRes",
+          "variantTags": [
+            "affliction_axe_and_sword_damage",
+            "affliction_mace_and_staff_damage",
+            "affliction_dagger_and_claw_damage",
+            "affliction_bow_damage",
+            "affliction_wand_damage",
+            "affliction_damage_with_two_handed_melee_weapons",
+            "affliction_attack_damage_while_dual_wielding_",
+            "affliction_attack_damage_while_holding_a_shield",
+            "affliction_attack_damage_",
+            "affliction_spell_damage",
+            "affliction_elemental_damage",
+            "affliction_physical_damage",
+            "affliction_fire_damage",
+            "affliction_lightning_damage",
+            "affliction_cold_damage",
+            "affliction_chaos_damage",
+            "affliction_minion_damage"
+          ]
+        },
+        {
+          "key": "AfflictionJewelSmallPassivesGrantElementalRes3",
+          "text": "追加されるスモールパッシブスキルはさらに付与: 全ての元素耐性 +4%",
+          "name": "万華鏡の",
+          "engText": "Added Small Passive Skills also grant: +4% to all Elemental Resistances",
+          "engName": "of the Kaleidoscope",
+          "tag": "expansion_jewel_large",
+          "generation_type": "suffix",
+          "required_level": 84,
+          "weight": 300,
+          "family": "AfflictionJewelSmallPassivesGrantElementalRes",
+          "variantTags": [
+            "affliction_axe_and_sword_damage",
+            "affliction_mace_and_staff_damage",
+            "affliction_dagger_and_claw_damage",
+            "affliction_bow_damage",
+            "affliction_wand_damage",
+            "affliction_damage_with_two_handed_melee_weapons",
+            "affliction_attack_damage_while_dual_wielding_",
+            "affliction_attack_damage_while_holding_a_shield",
+            "affliction_attack_damage_",
+            "affliction_spell_damage",
+            "affliction_elemental_damage",
+            "affliction_physical_damage",
+            "affliction_fire_damage",
+            "affliction_lightning_damage",
+            "affliction_cold_damage",
+            "affliction_chaos_damage",
+            "affliction_minion_damage"
+          ]
+        }
+      ],
+      "AfflictionJewelSmallPassivesGrantChaosRes": [
+        {
+          "key": "AfflictionJewelSmallPassivesGrantChaosRes",
+          "text": "追加されるスモールパッシブスキルはさらに付与: 混沌耐性 +3%",
+          "name": "迷い子の",
+          "engText": "Added Small Passive Skills also grant: +3% to Chaos Resistance",
+          "engName": "of the Lost",
+          "tag": "expansion_jewel_large",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "AfflictionJewelSmallPassivesGrantChaosRes",
+          "variantTags": [
+            "affliction_axe_and_sword_damage",
+            "affliction_mace_and_staff_damage",
+            "affliction_dagger_and_claw_damage",
+            "affliction_bow_damage",
+            "affliction_wand_damage",
+            "affliction_damage_with_two_handed_melee_weapons",
+            "affliction_attack_damage_while_dual_wielding_",
+            "affliction_attack_damage_while_holding_a_shield",
+            "affliction_attack_damage_",
+            "affliction_spell_damage",
+            "affliction_elemental_damage",
+            "affliction_physical_damage",
+            "affliction_fire_damage",
+            "affliction_lightning_damage",
+            "affliction_cold_damage",
+            "affliction_chaos_damage",
+            "affliction_minion_damage"
+          ]
+        },
+        {
+          "key": "AfflictionJewelSmallPassivesGrantChaosRes2",
+          "text": "追加されるスモールパッシブスキルはさらに付与: 混沌耐性 +4%",
+          "name": "流刑の",
+          "engText": "Added Small Passive Skills also grant: +4% to Chaos Resistance",
+          "engName": "of Banishment",
+          "tag": "expansion_jewel_large",
+          "generation_type": "suffix",
+          "required_level": 68,
+          "weight": 400,
+          "family": "AfflictionJewelSmallPassivesGrantChaosRes",
+          "variantTags": [
+            "affliction_axe_and_sword_damage",
+            "affliction_mace_and_staff_damage",
+            "affliction_dagger_and_claw_damage",
+            "affliction_bow_damage",
+            "affliction_wand_damage",
+            "affliction_damage_with_two_handed_melee_weapons",
+            "affliction_attack_damage_while_dual_wielding_",
+            "affliction_attack_damage_while_holding_a_shield",
+            "affliction_attack_damage_",
+            "affliction_spell_damage",
+            "affliction_elemental_damage",
+            "affliction_physical_damage",
+            "affliction_fire_damage",
+            "affliction_lightning_damage",
+            "affliction_cold_damage",
+            "affliction_chaos_damage",
+            "affliction_minion_damage"
+          ]
+        },
+        {
+          "key": "AfflictionJewelSmallPassivesGrantChaosRes3",
+          "text": "追加されるスモールパッシブスキルはさらに付与: 混沌耐性 +5%",
+          "name": "排出の",
+          "engText": "Added Small Passive Skills also grant: +5% to Chaos Resistance",
+          "engName": "of Eviction",
+          "tag": "expansion_jewel_large",
+          "generation_type": "suffix",
+          "required_level": 84,
+          "weight": 300,
+          "family": "AfflictionJewelSmallPassivesGrantChaosRes",
+          "variantTags": [
+            "affliction_axe_and_sword_damage",
+            "affliction_mace_and_staff_damage",
+            "affliction_dagger_and_claw_damage",
+            "affliction_bow_damage",
+            "affliction_wand_damage",
+            "affliction_damage_with_two_handed_melee_weapons",
+            "affliction_attack_damage_while_dual_wielding_",
+            "affliction_attack_damage_while_holding_a_shield",
+            "affliction_attack_damage_",
+            "affliction_spell_damage",
+            "affliction_elemental_damage",
+            "affliction_physical_damage",
+            "affliction_fire_damage",
+            "affliction_lightning_damage",
+            "affliction_cold_damage",
+            "affliction_chaos_damage",
+            "affliction_minion_damage"
+          ]
+        }
+      ],
+      "AfflictionJewelSmallPassivesGrantAttackSpeed": [
+        {
+          "key": "AfflictionJewelSmallPassivesGrantAttackSpeed",
+          "text": "追加されるスモールパッシブスキルはさらに付与: アタックスピードが1%増加する",
+          "name": "技量の",
+          "engText": "Added Small Passive Skills also grant: 1% increased Attack Speed",
+          "engName": "of Skill",
+          "tag": "affliction_axe_and_sword_damage",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 350,
+          "family": "AfflictionJewelSmallPassivesGrantAttackSpeed",
+          "variantTags": [
+            "affliction_axe_and_sword_damage",
+            "affliction_mace_and_staff_damage",
+            "affliction_dagger_and_claw_damage",
+            "affliction_bow_damage",
+            "affliction_wand_damage",
+            "affliction_damage_with_two_handed_melee_weapons",
+            "affliction_attack_damage_while_dual_wielding_",
+            "affliction_attack_damage_while_holding_a_shield",
+            "affliction_attack_damage_"
+          ]
+        },
+        {
+          "key": "AfflictionJewelSmallPassivesGrantAttackSpeed2_",
+          "text": "追加されるスモールパッシブスキルはさらに付与: アタックスピードが2%増加する",
+          "name": "手軽さの",
+          "engText": "Added Small Passive Skills also grant: 2% increased Attack Speed",
+          "engName": "of Ease",
+          "tag": "affliction_axe_and_sword_damage",
+          "generation_type": "suffix",
+          "required_level": 68,
+          "weight": 350,
+          "family": "AfflictionJewelSmallPassivesGrantAttackSpeed",
+          "variantTags": [
+            "affliction_axe_and_sword_damage",
+            "affliction_mace_and_staff_damage",
+            "affliction_dagger_and_claw_damage",
+            "affliction_bow_damage",
+            "affliction_wand_damage",
+            "affliction_damage_with_two_handed_melee_weapons",
+            "affliction_attack_damage_while_dual_wielding_",
+            "affliction_attack_damage_while_holding_a_shield",
+            "affliction_attack_damage_"
+          ]
+        },
+        {
+          "key": "AfflictionJewelSmallPassivesGrantAttackSpeed3__",
+          "text": "追加されるスモールパッシブスキルはさらに付与: アタックスピードが3%増加する",
+          "name": "習得の",
+          "engText": "Added Small Passive Skills also grant: 3% increased Attack Speed",
+          "engName": "of Mastery",
+          "tag": "affliction_axe_and_sword_damage",
+          "generation_type": "suffix",
+          "required_level": 84,
+          "weight": 250,
+          "family": "AfflictionJewelSmallPassivesGrantAttackSpeed",
+          "variantTags": [
+            "affliction_axe_and_sword_damage",
+            "affliction_mace_and_staff_damage",
+            "affliction_dagger_and_claw_damage",
+            "affliction_bow_damage",
+            "affliction_wand_damage",
+            "affliction_damage_with_two_handed_melee_weapons",
+            "affliction_attack_damage_while_dual_wielding_",
+            "affliction_attack_damage_while_holding_a_shield",
+            "affliction_attack_damage_"
+          ]
+        }
+      ],
+      "AfflictionJewelSmallPassivesGrantCastSpeed": [
+        {
+          "key": "AfflictionJewelSmallPassivesGrantCastSpeed",
+          "text": "追加されるスモールパッシブスキルはさらに付与: キャストスピードが1%増加する",
+          "name": "才能の",
+          "engText": "Added Small Passive Skills also grant: 1% increased Cast Speed",
+          "engName": "of Talent",
+          "tag": "affliction_spell_damage",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 350,
+          "family": "AfflictionJewelSmallPassivesGrantCastSpeed",
+          "variantTags": [
+            "affliction_spell_damage"
+          ]
+        },
+        {
+          "key": "AfflictionJewelSmallPassivesGrantCastSpeed2",
+          "text": "追加されるスモールパッシブスキルはさらに付与: キャストスピードが2%増加する",
+          "name": "軽快さの",
+          "engText": "Added Small Passive Skills also grant: 2% increased Cast Speed",
+          "engName": "of Nimbleness",
+          "tag": "affliction_spell_damage",
+          "generation_type": "suffix",
+          "required_level": 68,
+          "weight": 350,
+          "family": "AfflictionJewelSmallPassivesGrantCastSpeed",
+          "variantTags": [
+            "affliction_spell_damage"
+          ]
+        },
+        {
+          "key": "AfflictionJewelSmallPassivesGrantCastSpeed3_",
+          "text": "追加されるスモールパッシブスキルはさらに付与: キャストスピードが3%増加する",
+          "name": "専門性の",
+          "engText": "Added Small Passive Skills also grant: 3% increased Cast Speed",
+          "engName": "of Expertise",
+          "tag": "affliction_spell_damage",
+          "generation_type": "suffix",
+          "required_level": 84,
+          "weight": 250,
+          "family": "AfflictionJewelSmallPassivesGrantCastSpeed",
+          "variantTags": [
+            "affliction_spell_damage"
+          ]
+        }
+      ],
+      "AfflictionJewelSmallPassivesGrantFireSkillAttackAndCastSpeed": [
+        {
+          "key": "AfflictionJewelSmallPassivesGrantFireSkillAttackAndCastSpeed",
+          "text": "追加されるスモールパッシブスキルはさらに付与: 火スキルのアタックスピードおよびキャストスピードが1%増加する",
+          "name": "焚付の",
+          "engText": "Added Small Passive Skills also grant: 1% increased Attack and Cast Speed with Fire Skills",
+          "engName": "of Kindling",
+          "tag": "affliction_fire_damage",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 350,
+          "family": "AfflictionJewelSmallPassivesGrantFireSkillAttackAndCastSpeed",
+          "variantTags": [
+            "affliction_fire_damage"
+          ]
+        },
+        {
+          "key": "AfflictionJewelSmallPassivesGrantFireSkillAttackAndCastSpeed2",
+          "text": "追加されるスモールパッシブスキルはさらに付与: 火スキルのアタックスピードおよびキャストスピードが2%増加する",
+          "name": "煙の",
+          "engText": "Added Small Passive Skills also grant: 2% increased Attack and Cast Speed with Fire Skills",
+          "engName": "of Smoke",
+          "tag": "affliction_fire_damage",
+          "generation_type": "suffix",
+          "required_level": 68,
+          "weight": 350,
+          "family": "AfflictionJewelSmallPassivesGrantFireSkillAttackAndCastSpeed",
+          "variantTags": [
+            "affliction_fire_damage"
+          ]
+        },
+        {
+          "key": "AfflictionJewelSmallPassivesGrantFireSkillAttackAndCastSpeed3_",
+          "text": "追加されるスモールパッシブスキルはさらに付与: 火スキルのアタックスピードおよびキャストスピードが3%増加する",
+          "name": "瞬炎の",
+          "engText": "Added Small Passive Skills also grant: 3% increased Attack and Cast Speed with Fire Skills",
+          "engName": "of Flashfires",
+          "tag": "affliction_fire_damage",
+          "generation_type": "suffix",
+          "required_level": 84,
+          "weight": 250,
+          "family": "AfflictionJewelSmallPassivesGrantFireSkillAttackAndCastSpeed",
+          "variantTags": [
+            "affliction_fire_damage"
+          ]
+        }
+      ],
+      "AfflictionJewelSmallPassivesGrantColdSkillAttackAndCastSpeed": [
+        {
+          "key": "AfflictionJewelSmallPassivesGrantColdSkillAttackAndCastSpeed",
+          "text": "追加されるスモールパッシブスキルはさらに付与: 冷気スキルのアタックスピードおよびキャストスピードが1%増加する",
+          "name": "寒冷の",
+          "engText": "Added Small Passive Skills also grant: 1% increased Attack and Cast Speed with Cold Skills",
+          "engName": "of Cooling",
+          "tag": "affliction_cold_damage",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 350,
+          "family": "AfflictionJewelSmallPassivesGrantColdSkillAttackAndCastSpeed",
+          "variantTags": [
+            "affliction_cold_damage"
+          ]
+        },
+        {
+          "key": "AfflictionJewelSmallPassivesGrantColdSkillAttackAndCastSpeed2_",
+          "text": "追加されるスモールパッシブスキルはさらに付与: 冷気スキルのアタックスピードおよびキャストスピードが2%増加する",
+          "name": "冷気の",
+          "engText": "Added Small Passive Skills also grant: 2% increased Attack and Cast Speed with Cold Skills",
+          "engName": "of Frigidity",
+          "tag": "affliction_cold_damage",
+          "generation_type": "suffix",
+          "required_level": 68,
+          "weight": 350,
+          "family": "AfflictionJewelSmallPassivesGrantColdSkillAttackAndCastSpeed",
+          "variantTags": [
+            "affliction_cold_damage"
+          ]
+        },
+        {
+          "key": "AfflictionJewelSmallPassivesGrantColdSkillAttackAndCastSpeed3",
+          "text": "追加されるスモールパッシブスキルはさらに付与: 冷気スキルのアタックスピードおよびキャストスピードが3%増加する",
+          "name": "雪崩の",
+          "engText": "Added Small Passive Skills also grant: 3% increased Attack and Cast Speed with Cold Skills",
+          "engName": "of the Avalanche",
+          "tag": "affliction_cold_damage",
+          "generation_type": "suffix",
+          "required_level": 84,
+          "weight": 250,
+          "family": "AfflictionJewelSmallPassivesGrantColdSkillAttackAndCastSpeed",
+          "variantTags": [
+            "affliction_cold_damage"
+          ]
+        }
+      ],
+      "AfflictionJewelSmallPassivesGrantLightningSkillAttackAndCastSpeed": [
+        {
+          "key": "AfflictionJewelSmallPassivesGrantLightningSkillAttackAndCastSpeed",
+          "text": "追加されるスモールパッシブスキルはさらに付与: 雷スキルのアタックスピードおよびキャストスピードが1%増加する",
+          "name": "雲集めの",
+          "engText": "Added Small Passive Skills also grant: 1% increased Attack and Cast Speed with Lightning Skills",
+          "engName": "of Gathering Clouds",
+          "tag": "affliction_lightning_damage",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 350,
+          "family": "AfflictionJewelSmallPassivesGrantLightningSkillAttackAndCastSpeed",
+          "variantTags": [
+            "affliction_lightning_damage"
+          ]
+        },
+        {
+          "key": "AfflictionJewelSmallPassivesGrantLightningSkillAttackAndCastSpeed2",
+          "text": "追加されるスモールパッシブスキルはさらに付与: 雷スキルのアタックスピードおよびキャストスピードが2%増加する",
+          "name": "突然の嵐の",
+          "engText": "Added Small Passive Skills also grant: 2% increased Attack and Cast Speed with Lightning Skills",
+          "engName": "of Sudden Storms",
+          "tag": "affliction_lightning_damage",
+          "generation_type": "suffix",
+          "required_level": 68,
+          "weight": 350,
+          "family": "AfflictionJewelSmallPassivesGrantLightningSkillAttackAndCastSpeed",
+          "variantTags": [
+            "affliction_lightning_damage"
+          ]
+        },
+        {
+          "key": "AfflictionJewelSmallPassivesGrantLightningSkillAttackAndCastSpeed3",
+          "text": "追加されるスモールパッシブスキルはさらに付与: 雷スキルのアタックスピードおよびキャストスピードが3%増加する",
+          "name": "雷撃の",
+          "engText": "Added Small Passive Skills also grant: 3% increased Attack and Cast Speed with Lightning Skills",
+          "engName": "of the Strike",
+          "tag": "affliction_lightning_damage",
+          "generation_type": "suffix",
+          "required_level": 84,
+          "weight": 250,
+          "family": "AfflictionJewelSmallPassivesGrantLightningSkillAttackAndCastSpeed",
+          "variantTags": [
+            "affliction_lightning_damage"
+          ]
+        }
+      ],
+      "AfflictionJewelSmallPassivesGrantChaosSkillAttackAndCastSpeed": [
+        {
+          "key": "AfflictionJewelSmallPassivesGrantChaosSkillAttackAndCastSpeed",
+          "text": "追加されるスモールパッシブスキルはさらに付与: 混沌スキルのアタックスピードおよびキャストスピードが1%増加する",
+          "name": "夕暮れの",
+          "engText": "Added Small Passive Skills also grant: 1% increased Attack and Cast Speed with Chaos Skills",
+          "engName": "of Dusk",
+          "tag": "affliction_chaos_damage",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 350,
+          "family": "AfflictionJewelSmallPassivesGrantChaosSkillAttackAndCastSpeed",
+          "variantTags": [
+            "affliction_chaos_damage"
+          ]
+        },
+        {
+          "key": "AfflictionJewelSmallPassivesGrantChaosSkillAttackAndCastSpeed2____",
+          "text": "追加されるスモールパッシブスキルはさらに付与: 混沌スキルのアタックスピードおよびキャストスピードが2%増加する",
+          "name": "真夜中の",
+          "engText": "Added Small Passive Skills also grant: 2% increased Attack and Cast Speed with Chaos Skills",
+          "engName": "of Midnight",
+          "tag": "affliction_chaos_damage",
+          "generation_type": "suffix",
+          "required_level": 68,
+          "weight": 350,
+          "family": "AfflictionJewelSmallPassivesGrantChaosSkillAttackAndCastSpeed",
+          "variantTags": [
+            "affliction_chaos_damage"
+          ]
+        },
+        {
+          "key": "AfflictionJewelSmallPassivesGrantChaosSkillAttackAndCastSpeed3",
+          "text": "追加されるスモールパッシブスキルはさらに付与: 混沌スキルのアタックスピードおよびキャストスピードが3%増加する",
+          "name": "月食の",
+          "engText": "Added Small Passive Skills also grant: 3% increased Attack and Cast Speed with Chaos Skills",
+          "engName": "of the Eclipse",
+          "tag": "affliction_chaos_damage",
+          "generation_type": "suffix",
+          "required_level": 84,
+          "weight": 250,
+          "family": "AfflictionJewelSmallPassivesGrantChaosSkillAttackAndCastSpeed",
+          "variantTags": [
+            "affliction_chaos_damage"
+          ]
+        }
+      ],
+      "AfflictionJewelSmallPassivesGrantPhysicalSkillAttackAndCastSpeed": [
+        {
+          "key": "AfflictionJewelSmallPassivesGrantPhysicalSkillAttackAndCastSpeed",
+          "text": "追加されるスモールパッシブスキルはさらに付与: 物理スキルのアタックスピードおよびキャストスピードが1%増加する",
+          "name": "轟音の",
+          "engText": "Added Small Passive Skills also grant: 1% increased Attack and Cast Speed with Physical Skills",
+          "engName": "of Rumbling",
+          "tag": "affliction_physical_damage",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 350,
+          "family": "AfflictionJewelSmallPassivesGrantPhysicalSkillAttackAndCastSpeed",
+          "variantTags": [
+            "affliction_physical_damage"
+          ]
+        },
+        {
+          "key": "AfflictionJewelSmallPassivesGrantPhysicalSkillAttackAndCastSpeed2",
+          "text": "追加されるスモールパッシブスキルはさらに付与: 物理スキルのアタックスピードおよびキャストスピードが2%増加する",
+          "name": "地響きの",
+          "engText": "Added Small Passive Skills also grant: 2% increased Attack and Cast Speed with Physical Skills",
+          "engName": "of Tremors",
+          "tag": "affliction_physical_damage",
+          "generation_type": "suffix",
+          "required_level": 68,
+          "weight": 350,
+          "family": "AfflictionJewelSmallPassivesGrantPhysicalSkillAttackAndCastSpeed",
+          "variantTags": [
+            "affliction_physical_damage"
+          ]
+        },
+        {
+          "key": "AfflictionJewelSmallPassivesGrantPhysicalSkillAttackAndCastSpeed3_",
+          "text": "追加されるスモールパッシブスキルはさらに付与: 物理スキルのアタックスピードおよびキャストスピードが3%増加する",
+          "name": "地震の",
+          "engText": "Added Small Passive Skills also grant: 3% increased Attack and Cast Speed with Physical Skills",
+          "engName": "of the Earthquake",
+          "tag": "affliction_physical_damage",
+          "generation_type": "suffix",
+          "required_level": 84,
+          "weight": 250,
+          "family": "AfflictionJewelSmallPassivesGrantPhysicalSkillAttackAndCastSpeed",
+          "variantTags": [
+            "affliction_physical_damage"
+          ]
+        }
+      ],
+      "AfflictionJewelSmallPassivesGrantElementalSkillAttackAndCastSpeed": [
+        {
+          "key": "AfflictionJewelSmallPassivesGrantElementalSkillAttackAndCastSpeed",
+          "text": "追加されるスモールパッシブスキルはさらに付与: 元素スキルのアタックスピードおよびキャストスピードが1%増加する",
+          "name": "言いくるめの",
+          "engText": "Added Small Passive Skills also grant: 1% increased Attack and Cast Speed with Elemental Skills",
+          "engName": "of Coaxing",
+          "tag": "affliction_elemental_damage",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 350,
+          "family": "AfflictionJewelSmallPassivesGrantElementalSkillAttackAndCastSpeed",
+          "variantTags": [
+            "affliction_elemental_damage"
+          ]
+        },
+        {
+          "key": "AfflictionJewelSmallPassivesGrantElementalSkillAttackAndCastSpeed2_",
+          "text": "追加されるスモールパッシブスキルはさらに付与: 元素スキルのアタックスピードおよびキャストスピードが2%増加する",
+          "name": "喚起の",
+          "engText": "Added Small Passive Skills also grant: 2% increased Attack and Cast Speed with Elemental Skills",
+          "engName": "of Evoking",
+          "tag": "affliction_elemental_damage",
+          "generation_type": "suffix",
+          "required_level": 68,
+          "weight": 350,
+          "family": "AfflictionJewelSmallPassivesGrantElementalSkillAttackAndCastSpeed",
+          "variantTags": [
+            "affliction_elemental_damage"
+          ]
+        },
+        {
+          "key": "AfflictionJewelSmallPassivesGrantElementalSkillAttackAndCastSpeed3_",
+          "text": "追加されるスモールパッシブスキルはさらに付与: 元素スキルのアタックスピードおよびキャストスピードが3%増加する",
+          "name": "顕現の",
+          "engText": "Added Small Passive Skills also grant: 3% increased Attack and Cast Speed with Elemental Skills",
+          "engName": "of Manifesting",
+          "tag": "affliction_elemental_damage",
+          "generation_type": "suffix",
+          "required_level": 84,
+          "weight": 250,
+          "family": "AfflictionJewelSmallPassivesGrantElementalSkillAttackAndCastSpeed",
+          "variantTags": [
+            "affliction_elemental_damage"
+          ]
+        }
+      ],
+      "AfflictionJewelSmallPassivesGrantMinionAttackAndCastSpeed": [
+        {
+          "key": "AfflictionJewelSmallPassivesGrantMinionAttackAndCastSpeed",
+          "text": "追加されるスモールパッシブスキルはさらに付与: ミニオンのアタックスピードおよびキャストスピードが1%増加する",
+          "name": "分捕りの",
+          "engText": "Added Small Passive Skills also grant: Minions have 1% increased Attack and Cast Speed",
+          "engName": "of Pillaging",
+          "tag": "affliction_minion_damage",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 350,
+          "family": "AfflictionJewelSmallPassivesGrantMinionAttackAndCastSpeed",
+          "variantTags": [
+            "affliction_minion_damage"
+          ]
+        },
+        {
+          "key": "AfflictionJewelSmallPassivesGrantMinionAttackAndCastSpeed2",
+          "text": "追加されるスモールパッシブスキルはさらに付与: ミニオンのアタックスピードおよびキャストスピードが2%増加する",
+          "name": "猛威の",
+          "engText": "Added Small Passive Skills also grant: Minions have 2% increased Attack and Cast Speed",
+          "engName": "of Ravaging",
+          "tag": "affliction_minion_damage",
+          "generation_type": "suffix",
+          "required_level": 68,
+          "weight": 350,
+          "family": "AfflictionJewelSmallPassivesGrantMinionAttackAndCastSpeed",
+          "variantTags": [
+            "affliction_minion_damage"
+          ]
+        },
+        {
+          "key": "AfflictionJewelSmallPassivesGrantMinionAttackAndCastSpeed3",
+          "text": "追加されるスモールパッシブスキルはさらに付与: ミニオンのアタックスピードおよびキャストスピードが3%増加する",
+          "name": "倒壊の",
+          "engText": "Added Small Passive Skills also grant: Minions have 3% increased Attack and Cast Speed",
+          "engName": "of Razing",
+          "tag": "affliction_minion_damage",
+          "generation_type": "suffix",
+          "required_level": 84,
+          "weight": 250,
+          "family": "AfflictionJewelSmallPassivesGrantMinionAttackAndCastSpeed",
+          "variantTags": [
+            "affliction_minion_damage"
+          ]
+        }
+      ]
+    }
+  }
+}

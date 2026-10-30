@@ -409,6 +409,8 @@ function switchTab(tabId) {
     if (targetContent) {
         targetContent.style.display = 'block';
     }
+    if (typeof positionSiteUtilities === 'function')
+        positionSiteUtilities(tabId);
     if (tabId === 'essenceContent' && typeof window.syncEssenceNameColumnWidth === 'function') {
         window.syncEssenceNameColumnWidth();
     }
@@ -4782,4 +4784,313 @@ function getItemTranslationEngine() {
         initItemTranslatorTab();
     }
 })();
+const PROFILE_BACKUP_KEYS = ['poeProfiles', 'flaskProfiles', 'itemProfiles', 'vendorProfiles', 'beastProfiles', 'scarabProfiles', 'essenceProfiles', 'tattooProfiles', 'runegraftProfiles', 'poe2_poeProfiles', 'poe2_vendorProfiles', 'poe2_tabletProfiles'];
+const PROFILE_RECOVERY_KEY = 'profileBackupBeforeRestore';
+function checkBackupKeys(value) {
+    if (!value || typeof value !== 'object')
+        return;
+    for (const [key, item] of Object.entries(value)) {
+        if (['__proto__', 'constructor', 'prototype'].includes(key))
+            throw new Error('利用できないキーが含まれます: ' + key);
+        checkBackupKeys(item);
+    }
+}
+function validateProfileBackup(value) {
+    checkBackupKeys(value);
+    if (!storageRecord(value) || value.format !== 'poe-jp-regex-profiles' || value.version !== 1 || !storageRecord(value.profiles) || typeof value.createdAt !== 'string')
+        throw new Error('対応するプロファイルバックアップではありません。');
+    let count = 0;
+    for (const [key, profiles] of Object.entries(value.profiles)) {
+        if (!PROFILE_BACKUP_KEYS.includes(key) || !storageRecord(profiles) || !validStoredJson(key, profiles))
+            throw new Error('保存内容が不正です: ' + key);
+        count += Object.keys(profiles).length;
+    }
+    if (count > 5000)
+        throw new Error('プロファイルは一度に5000件まで復元できます。');
+    return value;
+}
+function createProfileBackup() {
+    const profiles = {};
+    for (const key of PROFILE_BACKUP_KEYS) {
+        const raw = readStoredText(key);
+        if (raw !== null)
+            profiles[key] = JSON.parse(raw);
+    }
+    return validateProfileBackup({ format: 'poe-jp-regex-profiles', version: 1, createdAt: new Date().toISOString(), profiles });
+}
+function restoreProfileBackup(value) {
+    const backup = validateProfileBackup(value);
+    const previous = createProfileBackup();
+    const plans = [];
+    let count = 0, renamed = 0;
+    for (const [key, profiles] of Object.entries(backup.profiles)) {
+        const merged = Object.assign(Object.create(null), previous.profiles[key] || {});
+        for (const [name, profile] of Object.entries(profiles)) {
+            let target = name, index = 1;
+            while (Object.prototype.hasOwnProperty.call(merged, target))
+                target = `${name} (復元 ${index++})`;
+            if (target !== name)
+                renamed++;
+            merged[target] = profile;
+            count++;
+        }
+        plans.push([key, JSON.stringify(merged)]);
+    }
+    if (!count)
+        return { count, renamed };
+    // Save recovery first; if quota is insufficient, do not touch any profile.
+    localStorage.setItem(PROFILE_RECOVERY_KEY, JSON.stringify(previous));
+    const originals = plans.map(([key]) => [key, localStorage.getItem(key)]);
+    try {
+        for (const [key, text] of plans)
+            localStorage.setItem(key, text);
+    }
+    catch (error) {
+        for (const [key, text] of originals) {
+            if (text === null)
+                localStorage.removeItem(key);
+            else
+                localStorage.setItem(key, text);
+        }
+        throw error;
+    }
+    return { count, renamed };
+}
+function downloadProfileBackup(backup, filename) {
+    const url = URL.createObjectURL(new Blob([JSON.stringify(backup, null, 2)], { type: 'application/json' }));
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = filename;
+    link.click();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+}
+function siteGame() { return 'poe2'; }
+function selectionPanels() {
+    return [
+        { outputId: 'combinedRegexOutput', choices: () => [...checkedMods].map(([key, state]) => ({ kind: state === 'ng' ? 'NG' : '欲しい', label: formatModText(currentLanguage === 'ja' ? ModList[key]?.mod : ModList[key]?.engMod, ModList[key]?.value) || key, remove: () => { checkedMods.delete(key); saveModCheckboxState(); updateModList(); updateCombinedRegex(); } })) },
+        { outputId: 'tabletRegexOutput', choices: () => [...tabletCheckedMods].map(key => ({ kind: '選択', label: formatTabletModText(currentLanguage === 'ja' ? tabletModList[key]?.mod : tabletModList[key]?.engMod, tabletModList[key]?.value) || key, remove: () => { tabletCheckedMods.delete(key); saveTabletState(); updateTabletModList(); updateTabletCombinedRegex(); } })) },
+    ];
+}
+function toolsElement(tag, text = '', className = '') {
+    const element = document.createElement(tag);
+    element.textContent = text;
+    if (className)
+        element.className = className;
+    return element;
+}
+function toolsButton(label, action) {
+    const button = toolsElement('button', label);
+    button.type = 'button';
+    button.addEventListener('click', action);
+    return button;
+}
+function mountProfileBackup() {
+    const card = document.querySelector('#savedContent .card');
+    if (!card)
+        return;
+    const box = toolsElement('details', '', 'site-tools');
+    box.id = 'profileBackupTools';
+    box.append(toolsElement('summary', '全プロファイルのバックアップ・復元'));
+    box.append(toolsElement('p', 'このサイト・ブラウザーに保存されたPoE1／PoE2の全カテゴリをまとめて書き出します。復元は追加方式で、同名は別名にして既存の内容を残します。'));
+    const status = toolsElement('p');
+    status.setAttribute('role', 'status');
+    const actions = toolsElement('div', '', 'site-tools-actions');
+    const recovery = toolsButton('復元前のバックアップを書き出す', () => {
+        try {
+            const raw = readStoredText(PROFILE_RECOVERY_KEY);
+            if (!raw)
+                throw Error('復元前のバックアップはありません。');
+            downloadProfileBackup(validateProfileBackup(JSON.parse(raw)), 'poe-profiles-before-restore.json');
+        }
+        catch (error) {
+            status.textContent = error.message;
+        }
+    });
+    recovery.disabled = !readStoredText(PROFILE_RECOVERY_KEY);
+    actions.append(toolsButton('全プロファイルを書き出す', () => {
+        try {
+            const backup = createProfileBackup();
+            downloadProfileBackup(backup, 'poe-profiles-' + new Date().toISOString().slice(0, 10) + '.json');
+            status.textContent = 'バックアップを書き出しました。';
+        }
+        catch (error) {
+            status.textContent = '書き出しできません: ' + error.message;
+        }
+    }), recovery);
+    const fileLabel = toolsElement('label', '復元するJSONファイル');
+    fileLabel.htmlFor = 'profileBackupFile';
+    const file = toolsElement('input');
+    file.type = 'file';
+    file.accept = '.json,application/json';
+    file.id = 'profileBackupFile';
+    let pending = null;
+    let fileRevision = 0;
+    const restore = toolsButton('確認した内容を追加で復元', () => {
+        if (!pending)
+            return;
+        try {
+            const result = restoreProfileBackup(pending);
+            status.textContent = `${result.count}件を復元しました（同名の別名保存 ${result.renamed}件）。再読み込みで反映されます。`;
+            pending = null;
+            restore.disabled = true;
+            recovery.disabled = !readStoredText(PROFILE_RECOVERY_KEY);
+            reload.hidden = false;
+        }
+        catch (error) {
+            status.textContent = '復元できません。元のプロファイルは保持しています: ' + error.message;
+        }
+    });
+    restore.disabled = true;
+    const reload = toolsButton('再読み込みして反映', () => location.reload());
+    reload.hidden = true;
+    file.addEventListener('change', async () => {
+        const current = ++fileRevision;
+        pending = null;
+        restore.disabled = true;
+        try {
+            const selected = file.files?.[0];
+            if (!selected)
+                return;
+            if (selected.size > 10 * 1024 * 1024)
+                throw Error('ファイルは10MB以内にしてください。');
+            const contents = await selected.text();
+            if (current !== fileRevision)
+                return;
+            pending = validateProfileBackup(JSON.parse(contents));
+            const summaries = Object.entries(pending.profiles).map(([key, profiles]) => `${key}: ${Object.keys(profiles).length}件`);
+            status.textContent = '内容を検証しました。' + summaries.join(' / ');
+            restore.disabled = false;
+        }
+        catch (error) {
+            status.textContent = 'ファイルを読み込めません: ' + error.message;
+        }
+    });
+    box.append(actions, fileLabel, file, restore, reload, status);
+    card.insertBefore(box, card.querySelector('#savedRegexList'));
+}
+let siteDataStatus = null;
+function renderDataStatus() {
+    const status = document.getElementById('dataStatusTools');
+    if (!status || !siteDataStatus)
+        return;
+    const tab = document.getElementById('siteUtilities')?.closest('.tab-content')?.id || 'mapContent';
+    const category = tab.replace(/Content$/, '').toLowerCase();
+    const info = siteDataStatus.categories?.[category] || (['saved', 'link', 'changelog'].includes(category) ? siteDataStatus : null);
+    const date = (value) => { const parsed = new Date(value); return value && !Number.isNaN(parsed.getTime()) ? [String(parsed.getFullYear()).slice(-2), String(parsed.getMonth() + 1).padStart(2, '0'), String(parsed.getDate()).padStart(2, '0')].join('/') : '未記録'; };
+    status.textContent = `Modデータ更新: ${date(info?.mods?.updatedAt)} / 価格データ更新: ${info?.prices ? date(info.prices.updatedAt) : '対象データなし'}`;
+    status.title = `表示中のRegexカテゴリの更新日です。対応ゲームバージョン: ${siteDataStatus.gameVersion || '未登録'}。${siteDataStatus.versionNote || ''}`;
+}
+function mountDataStatus(container) {
+    const status = toolsElement('p', '更新情報を読み込み中…');
+    status.id = 'dataStatusTools';
+    status.setAttribute('role', 'status');
+    container.append(status);
+    const game = siteGame();
+    fetch('data/status.json').then(response => { if (!response.ok)
+        throw Error(); return response.json(); }).then(data => {
+        const info = data.games?.[game];
+        if (!info)
+            throw Error();
+        siteDataStatus = info;
+        renderDataStatus();
+    }).catch(() => { status.textContent = 'データ更新情報を取得できません。'; });
+}
+function mountSelectedConditions() {
+    for (const panel of selectionPanels()) {
+        const output = document.getElementById(panel.outputId);
+        if (!output)
+            continue;
+        const selected = toolsElement('span', '', 'selected-conditions');
+        const dialog = toolsElement('dialog', '', 'selection-dialog');
+        dialog.id = panel.outputId + 'SelectedDialog';
+        const title = toolsElement('h2', '選択中');
+        title.id = dialog.id + 'Title';
+        dialog.setAttribute('aria-labelledby', title.id);
+        const list = toolsElement('ul', '', 'selected-condition-list');
+        const heading = toolsButton('選択中（0件）', () => dialog.showModal());
+        heading.setAttribute('aria-haspopup', 'dialog');
+        heading.setAttribute('aria-expanded', 'false');
+        heading.setAttribute('aria-controls', dialog.id);
+        heading.addEventListener('click', () => heading.setAttribute('aria-expanded', 'true'));
+        dialog.addEventListener('close', () => heading.setAttribute('aria-expanded', 'false'));
+        dialog.addEventListener('click', event => { const bounds = dialog.getBoundingClientRect(); if (event.target === dialog && (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom))
+            dialog.close(); });
+        const close = toolsButton('閉じる', () => dialog.close());
+        const header = toolsElement('div', '', 'selection-dialog-header');
+        header.append(title, close);
+        dialog.append(header, list);
+        document.body.append(dialog);
+        selected.append(heading);
+        const reset = Array.from(output.closest('.card')?.querySelectorAll('button') || []).find(button => button.textContent.trim() === 'リセット');
+        if (reset)
+            reset.before(selected);
+        else
+            output.after(selected);
+        const render = () => {
+            const choices = panel.choices();
+            heading.textContent = `選択中（${choices.length}件）`;
+            list.replaceChildren();
+            title.textContent = `選択中（${choices.length}件）`;
+            if (!choices.length) {
+                list.append(toolsElement('li', '選択なし'));
+                return;
+            }
+            for (const choice of choices) {
+                const row = toolsElement('li', '', 'selected-condition-row');
+                row.dataset.kind = choice.kind;
+                row.append(toolsElement('span', `${choice.kind}: ${choice.label}`));
+                const button = toolsButton('解除', () => { choice.remove(); render(); close.focus(); });
+                button.className = 'selected-condition';
+                button.setAttribute('aria-label', `${choice.kind}: ${choice.label} を解除`);
+                row.append(button);
+                list.append(row);
+            }
+        };
+        new MutationObserver(render).observe(output, { childList: true, subtree: true, characterData: true });
+        render();
+    }
+}
+function positionSiteUtilities(tabId) {
+    const tools = document.getElementById('siteUtilities');
+    if (!tools)
+        return;
+    const tab = tabId ? document.getElementById(tabId) : Array.from(document.querySelectorAll('.tab-content')).find(element => element.style.display === 'block');
+    const card = tab?.querySelector('.card');
+    if (!card)
+        return;
+    let header = card.querySelector(':scope > .main-card-heading');
+    if (!header) {
+        header = toolsElement('div', '', 'main-card-heading');
+        const title = card.querySelector(':scope > h2');
+        if (title) {
+            card.insertBefore(header, title);
+            header.append(title);
+        }
+        else
+            card.prepend(header);
+    }
+    header.append(tools);
+    renderDataStatus();
+}
+function initSiteTools() {
+    const area = document.getElementById('contentArea');
+    if (!area)
+        return;
+    const tools = toolsElement('div', '', 'site-utilities');
+    tools.id = 'siteUtilities';
+    mountDataStatus(tools);
+    const language = document.getElementById('globalLangToggleContainer');
+    if (language) {
+        language.removeAttribute('style');
+        tools.append(language);
+    }
+    area.prepend(tools);
+    positionSiteUtilities();
+    mountProfileBackup();
+    mountSelectedConditions();
+}
+if (document.readyState === 'loading')
+    document.addEventListener('DOMContentLoaded', initSiteTools);
+else
+    initSiteTools();
 //# sourceMappingURL=poe2.js.map

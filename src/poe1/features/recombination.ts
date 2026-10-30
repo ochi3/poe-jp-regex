@@ -34,6 +34,52 @@ function getRecombGroupSearchText(group: AffixGroup) {
 
 // アイテムデータ
 const itemData = {
+  jewel: [
+  {
+    "value": "jewel_str",
+    "text": "クリムゾンジュエル"
+  },
+  {
+    "value": "jewel_dex",
+    "text": "ビリジアンジュエル"
+  },
+  {
+    "value": "jewel_int",
+    "text": "コバルトジュエル"
+  },
+  {
+    "value": "jewel_abyssmelee",
+    "text": "凶暴な眼のジュエル"
+  },
+  {
+    "value": "jewel_abyssranged",
+    "text": "探索する眼のジュエル"
+  },
+  {
+    "value": "jewel_abysscaster",
+    "text": "催眠の眼のジュエル"
+  },
+  {
+    "value": "jewel_abysssummoner",
+    "text": "恐怖の眼のジュエル"
+  },
+  {
+    "value": "jewel_abyssconglomerate",
+    "text": "集合体の眼のジュエル"
+  },
+  {
+    "value": "jewel_passivetreeexpansionlarge",
+    "text": "クラスタージュエル (大)"
+  },
+  {
+    "value": "jewel_passivetreeexpansionmedium",
+    "text": "クラスタージュエル (中)"
+  },
+  {
+    "value": "jewel_passivetreeexpansionsmall",
+    "text": "クラスタージュエル (小)"
+  }
+],
   "oneHanded": [
     { value: "claw", text: "鉤爪" },
     { value: "dagger", text: "短剣" },
@@ -106,6 +152,17 @@ const itemData = {
 
 // ファイルマッピング
 const itemFileMapping = {
+  "jewel_str": "data/poe1/items/jewel_str.json",
+  "jewel_dex": "data/poe1/items/jewel_dex.json",
+  "jewel_int": "data/poe1/items/jewel_int.json",
+  "jewel_abyssmelee": "data/poe1/items/jewel_abyssmelee.json",
+  "jewel_abyssranged": "data/poe1/items/jewel_abyssranged.json",
+  "jewel_abysscaster": "data/poe1/items/jewel_abysscaster.json",
+  "jewel_abysssummoner": "data/poe1/items/jewel_abysssummoner.json",
+  "jewel_abyssconglomerate": "data/poe1/items/jewel_abyssconglomerate.json",
+  "jewel_passivetreeexpansionlarge": "data/poe1/items/jewel_passivetreeexpansionlarge.json",
+  "jewel_passivetreeexpansionmedium": "data/poe1/items/jewel_passivetreeexpansionmedium.json",
+  "jewel_passivetreeexpansionsmall": "data/poe1/items/jewel_passivetreeexpansionsmall.json",
   // 片手武器
   'claw': 'data/poe1/items/top_tier_base_item_type,claw,one_hand_weapon,onehand,weapon,default.json',
   'dagger': 'data/poe1/items/dagger,attack_dagger,one_hand_weapon,onehand,weapon,default.json',
@@ -213,6 +270,7 @@ async function loadItemMods() {
     rawItemMods = [...processedData.prefix, ...processedData.suffix];
     
     statusElement.textContent = `${itemType} アイテムModデータ (${rawItemMods.length}件) 読み込み完了`;
+    if (rawData.scopeNote) statusElement.textContent += ' ' + rawData.scopeNote;
     statusElement.style.color = "#4CAF50";
     
     updateSeparatedItemModLists();

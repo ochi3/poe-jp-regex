@@ -1,4 +1,5 @@
 import fs from 'node:fs';
+import {refreshDataStatus} from './data/status.mjs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import ts from 'typescript';
@@ -36,5 +37,6 @@ export function build() {
     fs.writeFileSync(path.join(root, `assets/js/data-${game}.js`), outputs[game]);
     console.log(`Built ${game}`);
   }
+  refreshDataStatus(root);
 }
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) build();

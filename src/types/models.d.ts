@@ -64,6 +64,7 @@ interface AffixMod {
 }
 
 interface AffixData {
+  scopeNote?: string;
   mods?: { prefix?: Record<string, AffixMod[]>; suffix?: Record<string, AffixMod[]> };
 }
 interface AffixGroup {

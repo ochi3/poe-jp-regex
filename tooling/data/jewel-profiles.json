@@ -1,0 +1,200 @@
+[
+  {
+    "type": "jewel_str",
+    "label": "クリムゾンジュエル",
+    "base": "Metadata/Items/Jewels/JewelStr",
+    "tags": [
+      "jewel",
+      "not_dex",
+      "not_int",
+      "not_for_sale",
+      "strjewel",
+      "default"
+    ],
+    "domain": "misc"
+  },
+  {
+    "type": "jewel_dex",
+    "label": "ビリジアンジュエル",
+    "base": "Metadata/Items/Jewels/JewelDex",
+    "tags": [
+      "jewel",
+      "not_str",
+      "not_int",
+      "not_for_sale",
+      "dexjewel",
+      "default"
+    ],
+    "domain": "misc"
+  },
+  {
+    "type": "jewel_int",
+    "label": "コバルトジュエル",
+    "base": "Metadata/Items/Jewels/JewelInt",
+    "tags": [
+      "jewel",
+      "not_dex",
+      "not_str",
+      "not_for_sale",
+      "intjewel",
+      "default"
+    ],
+    "domain": "misc"
+  },
+  {
+    "type": "jewel_abyssmelee",
+    "label": "凶暴な眼のジュエル",
+    "base": "Metadata/Items/Jewels/JewelAbyssMelee",
+    "tags": [
+      "not_for_sale",
+      "abyss_jewel_melee",
+      "abyss_jewel",
+      "default"
+    ],
+    "domain": "abyss_jewel"
+  },
+  {
+    "type": "jewel_abyssranged",
+    "label": "探索する眼のジュエル",
+    "base": "Metadata/Items/Jewels/JewelAbyssRanged",
+    "tags": [
+      "not_for_sale",
+      "abyss_jewel_ranged",
+      "abyss_jewel",
+      "default"
+    ],
+    "domain": "abyss_jewel"
+  },
+  {
+    "type": "jewel_abysscaster",
+    "label": "催眠の眼のジュエル",
+    "base": "Metadata/Items/Jewels/JewelAbyssCaster",
+    "tags": [
+      "not_for_sale",
+      "abyss_jewel_caster",
+      "abyss_jewel",
+      "default"
+    ],
+    "domain": "abyss_jewel"
+  },
+  {
+    "type": "jewel_abysssummoner",
+    "label": "恐怖の眼のジュエル",
+    "base": "Metadata/Items/Jewels/JewelAbyssSummoner",
+    "tags": [
+      "not_for_sale",
+      "abyss_jewel_summoner",
+      "abyss_jewel",
+      "default"
+    ],
+    "domain": "abyss_jewel"
+  },
+  {
+    "type": "jewel_abyssconglomerate",
+    "label": "集合体の眼のジュエル",
+    "base": "Metadata/Items/Jewels/JewelAbyssConglomerate",
+    "tags": [
+      "not_for_sale",
+      "abyss_jewel_special",
+      "abyss_jewel",
+      "default"
+    ],
+    "domain": "abyss_jewel"
+  },
+  {
+    "type": "jewel_passivetreeexpansionlarge",
+    "label": "クラスタージュエル (大)",
+    "base": "Metadata/Items/Jewels/JewelPassiveTreeExpansionLarge",
+    "tags": [
+      "jewel",
+      "not_for_sale",
+      "expansion_jewel_large",
+      "default"
+    ],
+    "domain": "affliction_jewel",
+    "variantTags": [
+      "affliction_axe_and_sword_damage",
+      "affliction_mace_and_staff_damage",
+      "affliction_dagger_and_claw_damage",
+      "affliction_bow_damage",
+      "affliction_wand_damage",
+      "affliction_damage_with_two_handed_melee_weapons",
+      "affliction_attack_damage_while_dual_wielding_",
+      "affliction_attack_damage_while_holding_a_shield",
+      "affliction_attack_damage_",
+      "affliction_spell_damage",
+      "affliction_elemental_damage",
+      "affliction_physical_damage",
+      "affliction_fire_damage",
+      "affliction_lightning_damage",
+      "affliction_cold_damage",
+      "affliction_chaos_damage",
+      "affliction_minion_damage"
+    ]
+  },
+  {
+    "type": "jewel_passivetreeexpansionmedium",
+    "label": "クラスタージュエル (中)",
+    "base": "Metadata/Items/Jewels/JewelPassiveTreeExpansionMedium",
+    "tags": [
+      "jewel",
+      "not_for_sale",
+      "expansion_jewel_medium",
+      "default"
+    ],
+    "domain": "affliction_jewel",
+    "variantTags": [
+      "affliction_fire_damage_over_time_multiplier",
+      "affliction_chaos_damage_over_time_multiplier",
+      "affliction_physical_damage_over_time_multiplier",
+      "affliction_cold_damage_over_time_multiplier",
+      "affliction_damage_over_time_multiplier",
+      "affliction_effect_of_non-damaging_ailments",
+      "old_do_not_use_affliction_aura_effect",
+      "old_do_not_use_affliction_curse_effect",
+      "affliction_damage_while_you_have_a_herald",
+      "affliction_minion_damage_while_you_have_a_herald",
+      "affliction_warcry_buff_effect",
+      "affliction_critical_chance",
+      "affliction_minion_life",
+      "affliction_area_damage",
+      "affliction_projectile_damage",
+      "affliction_trap_and_mine_damage",
+      "affliction_totem_damage",
+      "affliction_brand_damage",
+      "affliction_channelling_skill_damage",
+      "affliction_flask_duration",
+      "affliction_life_and_mana_recovery_from_flasks"
+    ]
+  },
+  {
+    "type": "jewel_passivetreeexpansionsmall",
+    "label": "クラスタージュエル (小)",
+    "base": "Metadata/Items/Jewels/JewelPassiveTreeExpansionSmall",
+    "tags": [
+      "jewel",
+      "not_for_sale",
+      "expansion_jewel_small",
+      "default"
+    ],
+    "domain": "affliction_jewel",
+    "variantTags": [
+      "affliction_maximum_life",
+      "affliction_maximum_energy_shield",
+      "affliction_maximum_mana",
+      "affliction_armour",
+      "affliction_evasion",
+      "affliction_chance_to_block",
+      "affliction_fire_resistance",
+      "affliction_cold_resistance",
+      "affliction_lightning_resistance",
+      "affliction_chaos_resistance",
+      "affliction_chance_to_dodge_attacks",
+      "affliction_strength",
+      "affliction_dexterity",
+      "affliction_intelligence",
+      "affliction_reservation_efficiency_small",
+      "affliction_curse_effect_small"
+    ]
+  }
+]

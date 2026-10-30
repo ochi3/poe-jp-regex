@@ -1,5 +1,6 @@
 /** Public compatibility API used by existing HTML and profile-save hooks. */
 interface Window {
+  getChartSelectionChoices?: () => SelectionChoice[];
   syncEssenceNameColumnWidth?: () => void;
   JpPoeUtils?: ItemTranslationEngine;
   JpPoe2Utils?: ItemTranslationEngine;

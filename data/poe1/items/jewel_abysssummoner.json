@@ -1,0 +1,1639 @@
+{
+  "bases": [
+    "Metadata/Items/Jewels/JewelAbyssSummoner"
+  ],
+  "mods": {
+    "prefix": {
+      "AbyssJewelLife": [
+        {
+          "key": "AbyssJewelAddedLife1",
+          "text": "最大ライフ +(21-25)",
+          "name": "強健な",
+          "engText": "+(21-25) to maximum Life",
+          "engName": "Hale",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 3000,
+          "family": "AbyssJewelLife"
+        },
+        {
+          "key": "AbyssJewelAddedLife2",
+          "text": "最大ライフ +(26-30)",
+          "name": "健康な",
+          "engText": "+(26-30) to maximum Life",
+          "engName": "Healthy",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 35,
+          "weight": 3000,
+          "family": "AbyssJewelLife"
+        },
+        {
+          "key": "AbyssJewelAddedLife3",
+          "text": "最大ライフ +(31-35)",
+          "name": "血色良い",
+          "engText": "+(31-35) to maximum Life",
+          "engName": "Sanguine",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 74,
+          "weight": 1000,
+          "family": "AbyssJewelLife"
+        },
+        {
+          "key": "AbyssJewelAddedLife4",
+          "text": "最大ライフ +(36-40)",
+          "name": "屈強な",
+          "engText": "+(36-40) to maximum Life",
+          "engName": "Stalwart",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 82,
+          "weight": 500,
+          "family": "AbyssJewelLife"
+        }
+      ],
+      "AbyssJewelMana": [
+        {
+          "key": "AbyssJewelAddedMana1",
+          "text": "最大マナ +(20-23)",
+          "name": "ベリルの",
+          "engText": "+(20-23) to maximum Mana",
+          "engName": "Beryl",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 1000,
+          "family": "AbyssJewelMana"
+        },
+        {
+          "key": "AbyssJewelAddedMana2",
+          "text": "最大マナ +(24-27)",
+          "name": "コバルトの",
+          "engText": "+(24-27) to maximum Mana",
+          "engName": "Cobalt",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 40,
+          "weight": 1000,
+          "family": "AbyssJewelMana"
+        },
+        {
+          "key": "AbyssJewelAddedMana3",
+          "text": "最大マナ +(28-31)",
+          "name": "淡青な",
+          "engText": "+(28-31) to maximum Mana",
+          "engName": "Azure",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 75,
+          "weight": 1000,
+          "family": "AbyssJewelMana"
+        },
+        {
+          "key": "AbyssJewelAddedMana4",
+          "text": "最大マナ +(32-34)",
+          "name": "サファイアの",
+          "engText": "+(32-34) to maximum Mana",
+          "engName": "Sapphire",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 83,
+          "weight": 500,
+          "family": "AbyssJewelMana"
+        }
+      ],
+      "MinionAddedFireDamage": [
+        {
+          "key": "AbyssMinionAddedFireDamageJewel1",
+          "text": "ミニオンは(3-6)から(8-11)の追加火ダメージを与える",
+          "name": "熱した",
+          "engText": "Minions deal (3-6) to (8-11) additional Fire Damage",
+          "engName": "Heated",
+          "tag": "abyss_jewel_summoner",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 700,
+          "family": "MinionAddedFireDamage"
+        },
+        {
+          "key": "AbyssMinionAddedFireDamageJewel2",
+          "text": "ミニオンは(11-14)から(17-20)の追加火ダメージを与える",
+          "name": "燃え立つ",
+          "engText": "Minions deal (11-14) to (17-20) additional Fire Damage",
+          "engName": "Flaming",
+          "tag": "abyss_jewel_summoner",
+          "generation_type": "prefix",
+          "required_level": 39,
+          "weight": 700,
+          "family": "MinionAddedFireDamage"
+        },
+        {
+          "key": "AbyssMinionAddedFireDamageJewel3",
+          "text": "ミニオンは(15-18)から(21-24)の追加火ダメージを与える",
+          "name": "焼き焦がす",
+          "engText": "Minions deal (15-18) to (21-24) additional Fire Damage",
+          "engName": "Scorching",
+          "tag": "abyss_jewel_summoner",
+          "generation_type": "prefix",
+          "required_level": 48,
+          "weight": 700,
+          "family": "MinionAddedFireDamage"
+        },
+        {
+          "key": "AbyssMinionAddedFireDamageJewel4_",
+          "text": "ミニオンは(20-23)から(26-32)の追加火ダメージを与える",
+          "name": "焼却する",
+          "engText": "Minions deal (20-23) to (26-32) additional Fire Damage",
+          "engName": "Incinerating",
+          "tag": "abyss_jewel_summoner",
+          "generation_type": "prefix",
+          "required_level": 58,
+          "weight": 700,
+          "family": "MinionAddedFireDamage"
+        },
+        {
+          "key": "AbyssMinionAddedFireDamageJewel5",
+          "text": "ミニオンは(24-27)から(33-36)の追加火ダメージを与える",
+          "name": "爆破する",
+          "engText": "Minions deal (24-27) to (33-36) additional Fire Damage",
+          "engName": "Blasting",
+          "tag": "abyss_jewel_summoner",
+          "generation_type": "prefix",
+          "required_level": 70,
+          "weight": 350,
+          "family": "MinionAddedFireDamage"
+        },
+        {
+          "key": "AbyssMinionAddedFireDamageJewel6_",
+          "text": "ミニオンは(29-35)から(42-51)の追加火ダメージを与える",
+          "name": "火葬する",
+          "engText": "Minions deal (29-35) to (42-51) additional Fire Damage",
+          "engName": "Cremating",
+          "tag": "abyss_jewel_summoner",
+          "generation_type": "prefix",
+          "required_level": 82,
+          "weight": 175,
+          "family": "MinionAddedFireDamage"
+        }
+      ],
+      "MinionAddedColdDamage": [
+        {
+          "key": "AbyssMinionAddedColdDamageJewel1",
+          "text": "ミニオンは(3-6)から(8-11)の追加冷気ダメージを与える",
+          "name": "凍てついた",
+          "engText": "Minions deal (3-6) to (8-11) additional Cold Damage",
+          "engName": "Frosted",
+          "tag": "abyss_jewel_summoner",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 700,
+          "family": "MinionAddedColdDamage"
+        },
+        {
+          "key": "AbyssMinionAddedColdDamageJewel2",
+          "text": "ミニオンは(11-14)から(17-20)の追加冷気ダメージを与える",
+          "name": "凍りつく",
+          "engText": "Minions deal (11-14) to (17-20) additional Cold Damage",
+          "engName": "Freezing",
+          "tag": "abyss_jewel_summoner",
+          "generation_type": "prefix",
+          "required_level": 39,
+          "weight": 700,
+          "family": "MinionAddedColdDamage"
+        },
+        {
+          "key": "AbyssMinionAddedColdDamageJewel3",
+          "text": "ミニオンは(15-18)から(21-24)の追加冷気ダメージを与える",
+          "name": "凍結した",
+          "engText": "Minions deal (15-18) to (21-24) additional Cold Damage",
+          "engName": "Frozen",
+          "tag": "abyss_jewel_summoner",
+          "generation_type": "prefix",
+          "required_level": 48,
+          "weight": 700,
+          "family": "MinionAddedColdDamage"
+        },
+        {
+          "key": "AbyssMinionAddedColdDamageJewel4",
+          "text": "ミニオンは(20-23)から(26-32)の追加冷気ダメージを与える",
+          "name": "氷結した",
+          "engText": "Minions deal (20-23) to (26-32) additional Cold Damage",
+          "engName": "Glaciated",
+          "tag": "abyss_jewel_summoner",
+          "generation_type": "prefix",
+          "required_level": 58,
+          "weight": 700,
+          "family": "MinionAddedColdDamage"
+        },
+        {
+          "key": "AbyssMinionAddedColdDamageJewel5",
+          "text": "ミニオンは(24-27)から(33-36)の追加冷気ダメージを与える",
+          "name": "極地の",
+          "engText": "Minions deal (24-27) to (33-36) additional Cold Damage",
+          "engName": "Polar",
+          "tag": "abyss_jewel_summoner",
+          "generation_type": "prefix",
+          "required_level": 70,
+          "weight": 350,
+          "family": "MinionAddedColdDamage"
+        },
+        {
+          "key": "AbyssMinionAddedColdDamageJewel6_",
+          "text": "ミニオンは(29-35)から(42-51)の追加冷気ダメージを与える",
+          "name": "氷葬する",
+          "engText": "Minions deal (29-35) to (42-51) additional Cold Damage",
+          "engName": "Entombing",
+          "tag": "abyss_jewel_summoner",
+          "generation_type": "prefix",
+          "required_level": 82,
+          "weight": 175,
+          "family": "MinionAddedColdDamage"
+        }
+      ],
+      "MinionAddedLightningDamage": [
+        {
+          "key": "AbyssMinionAddedLightningDamageJewel1_",
+          "text": "ミニオンは1から(9-15)の追加雷ダメージを与える",
+          "name": "電音の",
+          "engText": "Minions deal 1 to (9-15) additional Lightning Damage",
+          "engName": "Humming",
+          "tag": "abyss_jewel_summoner",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 700,
+          "family": "MinionAddedLightningDamage"
+        },
+        {
+          "key": "AbyssMinionAddedLightningDamageJewel2",
+          "text": "ミニオンは(1-2)から(26-32)の追加雷ダメージを与える",
+          "name": "電光走る",
+          "engText": "Minions deal (1-2) to (26-32) additional Lightning Damage",
+          "engName": "Sparking",
+          "tag": "abyss_jewel_summoner",
+          "generation_type": "prefix",
+          "required_level": 39,
+          "weight": 700,
+          "family": "MinionAddedLightningDamage"
+        },
+        {
+          "key": "AbyssMinionAddedLightningDamageJewel3_",
+          "text": "ミニオンは(1-3)から(33-39)の追加雷ダメージを与える",
+          "name": "電弧する",
+          "engText": "Minions deal (1-3) to (33-39) additional Lightning Damage",
+          "engName": "Arcing",
+          "tag": "abyss_jewel_summoner",
+          "generation_type": "prefix",
+          "required_level": 48,
+          "weight": 700,
+          "family": "MinionAddedLightningDamage"
+        },
+        {
+          "key": "AbyssMinionAddedLightningDamageJewel4",
+          "text": "ミニオンは(1-4)から(44-50)の追加雷ダメージを与える",
+          "name": "電撃の",
+          "engText": "Minions deal (1-4) to (44-50) additional Lightning Damage",
+          "engName": "Shocking",
+          "tag": "abyss_jewel_summoner",
+          "generation_type": "prefix",
+          "required_level": 58,
+          "weight": 700,
+          "family": "MinionAddedLightningDamage"
+        },
+        {
+          "key": "AbyssMinionAddedLightningDamageJewel5",
+          "text": "ミニオンは(1-5)から(51-54)の追加雷ダメージを与える",
+          "name": "放電する",
+          "engText": "Minions deal (1-5) to (51-54) additional Lightning Damage",
+          "engName": "Discharging",
+          "tag": "abyss_jewel_summoner",
+          "generation_type": "prefix",
+          "required_level": 70,
+          "weight": 350,
+          "family": "MinionAddedLightningDamage"
+        },
+        {
+          "key": "AbyssMinionAddedLightningDamageJewel6",
+          "text": "ミニオンは(1-6)から(65-77)の追加雷ダメージを与える",
+          "name": "感電する",
+          "engText": "Minions deal (1-6) to (65-77) additional Lightning Damage",
+          "engName": "Electrocuting",
+          "tag": "abyss_jewel_summoner",
+          "generation_type": "prefix",
+          "required_level": 82,
+          "weight": 175,
+          "family": "MinionAddedLightningDamage"
+        }
+      ],
+      "MinionAddedPhysicalDamage": [
+        {
+          "key": "AbyssMinionAddedPhysicalDamageJewel1",
+          "text": "ミニオンは(2-3)から(5-8)の追加物理ダメージを与える",
+          "name": "閃く",
+          "engText": "Minions deal (2-3) to (5-8) additional Physical Damage",
+          "engName": "Glinting",
+          "tag": "abyss_jewel_summoner",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 700,
+          "family": "MinionAddedPhysicalDamage"
+        },
+        {
+          "key": "AbyssMinionAddedPhysicalDamageJewel2",
+          "text": "ミニオンは(5-8)から(11-14)の追加物理ダメージを与える",
+          "name": "光沢帯びた",
+          "engText": "Minions deal (5-8) to (11-14) additional Physical Damage",
+          "engName": "Gleaming",
+          "tag": "abyss_jewel_summoner",
+          "generation_type": "prefix",
+          "required_level": 42,
+          "weight": 700,
+          "family": "MinionAddedPhysicalDamage"
+        },
+        {
+          "key": "AbyssMinionAddedPhysicalDamageJewel3",
+          "text": "ミニオンは(9-12)から(15-18)の追加物理ダメージを与える",
+          "name": "鍛えられた",
+          "engText": "Minions deal (9-12) to (15-18) additional Physical Damage",
+          "engName": "Annealed",
+          "tag": "abyss_jewel_summoner",
+          "generation_type": "prefix",
+          "required_level": 54,
+          "weight": 700,
+          "family": "MinionAddedPhysicalDamage"
+        },
+        {
+          "key": "AbyssMinionAddedPhysicalDamageJewel4",
+          "text": "ミニオンは(14-17)から(20-23)の追加物理ダメージを与える",
+          "name": "鋭利な",
+          "engText": "Minions deal (14-17) to (20-23) additional Physical Damage",
+          "engName": "Razor-sharp",
+          "tag": "abyss_jewel_summoner",
+          "generation_type": "prefix",
+          "required_level": 63,
+          "weight": 700,
+          "family": "MinionAddedPhysicalDamage"
+        },
+        {
+          "key": "AbyssMinionAddedPhysicalDamageJewel5",
+          "text": "ミニオンは(18-21)から(24-27)の追加物理ダメージを与える",
+          "name": "鍛錬された",
+          "engText": "Minions deal (18-21) to (24-27) additional Physical Damage",
+          "engName": "Tempered",
+          "tag": "abyss_jewel_summoner",
+          "generation_type": "prefix",
+          "required_level": 72,
+          "weight": 350,
+          "family": "MinionAddedPhysicalDamage"
+        },
+        {
+          "key": "AbyssMinionAddedPhysicalDamageJewel6",
+          "text": "ミニオンは(23-26)から(33-39)の追加物理ダメージを与える",
+          "name": "猛烈な",
+          "engText": "Minions deal (23-26) to (33-39) additional Physical Damage",
+          "engName": "Flaring",
+          "tag": "abyss_jewel_summoner",
+          "generation_type": "prefix",
+          "required_level": 83,
+          "weight": 175,
+          "family": "MinionAddedPhysicalDamage"
+        }
+      ],
+      "MinionAddedChaosDamage": [
+        {
+          "key": "AbyssMinionAddedChaosDamageJewel1",
+          "text": "ミニオンは(2-3)から(5-8)の追加混沌ダメージを与える",
+          "name": "汚れた",
+          "engText": "Minions deal (2-3) to (5-8) additional Chaos Damage",
+          "engName": "Tainted",
+          "tag": "abyss_jewel_summoner",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 700,
+          "family": "MinionAddedChaosDamage"
+        },
+        {
+          "key": "AbyssMinionAddedChaosDamageJewel2_",
+          "text": "ミニオンは(5-8)から(11-14)の追加混沌ダメージを与える",
+          "name": "曇った",
+          "engText": "Minions deal (5-8) to (11-14) additional Chaos Damage",
+          "engName": "Clouded",
+          "tag": "abyss_jewel_summoner",
+          "generation_type": "prefix",
+          "required_level": 42,
+          "weight": 700,
+          "family": "MinionAddedChaosDamage"
+        },
+        {
+          "key": "AbyssMinionAddedChaosDamageJewel3",
+          "text": "ミニオンは(9-12)から(15-18)の追加混沌ダメージを与える",
+          "name": "昏い",
+          "engText": "Minions deal (9-12) to (15-18) additional Chaos Damage",
+          "engName": "Darkened",
+          "tag": "abyss_jewel_summoner",
+          "generation_type": "prefix",
+          "required_level": 54,
+          "weight": 700,
+          "family": "MinionAddedChaosDamage"
+        },
+        {
+          "key": "AbyssMinionAddedChaosDamageJewel4",
+          "text": "ミニオンは(14-17)から(20-23)の追加混沌ダメージを与える",
+          "name": "有害な",
+          "engText": "Minions deal (14-17) to (20-23) additional Chaos Damage",
+          "engName": "Malignant",
+          "tag": "abyss_jewel_summoner",
+          "generation_type": "prefix",
+          "required_level": 65,
+          "weight": 700,
+          "family": "MinionAddedChaosDamage"
+        },
+        {
+          "key": "AbyssMinionAddedChaosDamageJewel5_",
+          "text": "ミニオンは(18-21)から(24-27)の追加混沌ダメージを与える",
+          "name": "不浄な",
+          "engText": "Minions deal (18-21) to (24-27) additional Chaos Damage",
+          "engName": "Vile",
+          "tag": "abyss_jewel_summoner",
+          "generation_type": "prefix",
+          "required_level": 75,
+          "weight": 350,
+          "family": "MinionAddedChaosDamage"
+        },
+        {
+          "key": "AbyssMinionAddedChaosDamageJewel6",
+          "text": "ミニオンは(23-26)から(33-39)の追加混沌ダメージを与える",
+          "name": "害意ある",
+          "engText": "Minions deal (23-26) to (33-39) additional Chaos Damage",
+          "engName": "Malicious",
+          "tag": "abyss_jewel_summoner",
+          "generation_type": "prefix",
+          "required_level": 84,
+          "weight": 175,
+          "family": "MinionAddedChaosDamage"
+        }
+      ],
+      "MinionLifeRegeneration": [
+        {
+          "key": "AbyssFlatMinionLifeRegenerationJewel1",
+          "text": "ミニオンは毎秒(22-30)のライフを自動回復する",
+          "name": "供給する",
+          "engText": "Minions Regenerate (22-30) Life per second",
+          "engName": "Fuelling",
+          "tag": "abyss_jewel_summoner",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "MinionLifeRegeneration"
+        },
+        {
+          "key": "AbyssFlatMinionLifeRegenerationJewel2",
+          "text": "ミニオンは毎秒(32-40)のライフを自動回復する",
+          "name": "活気ある",
+          "engText": "Minions Regenerate (32-40) Life per second",
+          "engName": "Lively",
+          "tag": "abyss_jewel_summoner",
+          "generation_type": "prefix",
+          "required_level": 30,
+          "weight": 500,
+          "family": "MinionLifeRegeneration"
+        },
+        {
+          "key": "AbyssFlatMinionLifeRegenerationJewel3",
+          "text": "ミニオンは毎秒(42-60)のライフを自動回復する",
+          "name": "繁茂する",
+          "engText": "Minions Regenerate (42-60) Life per second",
+          "engName": "Exuberant",
+          "tag": "abyss_jewel_summoner",
+          "generation_type": "prefix",
+          "required_level": 60,
+          "weight": 500,
+          "family": "MinionLifeRegeneration"
+        }
+      ],
+      "EnergyShieldRegeneration": [
+        {
+          "key": "AbyssFlatEnergyShieldRegenerationJewel1",
+          "text": "毎秒(9-12)のエナジーシールドを自動回復する",
+          "name": "魅了する",
+          "engText": "Regenerate (9-12) Energy Shield per second",
+          "engName": "Captivating",
+          "tag": "abyss_jewel_summoner",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "EnergyShieldRegeneration"
+        },
+        {
+          "key": "AbyssFlatEnergyShieldRegenerationJewel2",
+          "text": "毎秒(13-16)のエナジーシールドを自動回復する",
+          "name": "美しい",
+          "engText": "Regenerate (13-16) Energy Shield per second",
+          "engName": "Beautiful",
+          "tag": "abyss_jewel_summoner",
+          "generation_type": "prefix",
+          "required_level": 30,
+          "weight": 500,
+          "family": "EnergyShieldRegeneration"
+        },
+        {
+          "key": "AbyssFlatEnergyShieldRegenerationJewel3",
+          "text": "毎秒(17-20)のエナジーシールドを自動回復する",
+          "name": "息を呑む",
+          "engText": "Regenerate (17-20) Energy Shield per second",
+          "engName": "Breathtaking",
+          "tag": "abyss_jewel_summoner",
+          "generation_type": "prefix",
+          "required_level": 60,
+          "weight": 500,
+          "family": "EnergyShieldRegeneration"
+        }
+      ],
+      "LifeRegeneration": [
+        {
+          "key": "AbyssFlatLifeRegenerationJewel1",
+          "text": "毎秒(9-12)のライフを自動回復する",
+          "name": "若い",
+          "engText": "Regenerate (9-12) Life per second",
+          "engName": "Youthful",
+          "tag": "abyss_jewel_summoner",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "LifeRegeneration"
+        },
+        {
+          "key": "AbyssFlatLifeRegenerationJewel2",
+          "text": "毎秒(13-16)のライフを自動回復する",
+          "name": "元気ある",
+          "engText": "Regenerate (13-16) Life per second",
+          "engName": "Spirited",
+          "tag": "abyss_jewel_summoner",
+          "generation_type": "prefix",
+          "required_level": 40,
+          "weight": 250,
+          "family": "LifeRegeneration"
+        },
+        {
+          "key": "AbyssFlatLifeRegenerationJewel3_",
+          "text": "毎秒(17-20)のライフを自動回復する",
+          "name": "快活な",
+          "engText": "Regenerate (17-20) Life per second",
+          "engName": "Vivacious",
+          "tag": "abyss_jewel_summoner",
+          "generation_type": "prefix",
+          "required_level": 80,
+          "weight": 250,
+          "family": "LifeRegeneration"
+        }
+      ],
+      "ManaRegeneration": [
+        {
+          "key": "AbyssFlatManaShieldRegenerationJewel1",
+          "text": "毎秒(1.1-2)のマナを自動回復する",
+          "name": "充填する",
+          "engText": "Regenerate (1.1-2) Mana per second",
+          "engName": "Energising",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 350,
+          "family": "ManaRegeneration"
+        },
+        {
+          "key": "AbyssFlatManaShieldRegenerationJewel2",
+          "text": "毎秒(2.1-3)のマナを自動回復する",
+          "name": "心打つ",
+          "engText": "Regenerate (2.1-3) Mana per second",
+          "engName": "Inspirational",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 40,
+          "weight": 350,
+          "family": "ManaRegeneration"
+        },
+        {
+          "key": "AbyssFlatManaShieldRegenerationJewel3",
+          "text": "毎秒(3.3-4)のマナを自動回復する",
+          "name": "共鳴する",
+          "engText": "Regenerate (3.3-4) Mana per second",
+          "engName": "Resonating",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 75,
+          "weight": 350,
+          "family": "ManaRegeneration"
+        }
+      ],
+      "IncreasedPhysicalDamageReductionRating": [
+        {
+          "key": "AbyssFlatArmourJewel1",
+          "text": "アーマー +(36-60)",
+          "name": "塗装された",
+          "engText": "+(36-60) to Armour",
+          "engName": "Lacquered",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 600,
+          "family": "IncreasedPhysicalDamageReductionRating"
+        },
+        {
+          "key": "AbyssFlatArmourJewel2",
+          "text": "アーマー +(61-100)",
+          "name": "強靭な",
+          "engText": "+(61-100) to Armour",
+          "engName": "Fortified",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 40,
+          "weight": 600,
+          "family": "IncreasedPhysicalDamageReductionRating"
+        },
+        {
+          "key": "AbyssFlatArmourJewel3",
+          "text": "アーマー +(101-180)",
+          "name": "甲皮付き",
+          "engText": "+(101-180) to Armour",
+          "engName": "Carapaced",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 75,
+          "weight": 600,
+          "family": "IncreasedPhysicalDamageReductionRating"
+        },
+        {
+          "key": "AbyssFlatArmourJewel4__",
+          "text": "アーマー +(181-250)",
+          "name": "保護する",
+          "engText": "+(181-250) to Armour",
+          "engName": "Encased",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 83,
+          "weight": 300,
+          "family": "IncreasedPhysicalDamageReductionRating"
+        }
+      ],
+      "IncreasedEvasionRating": [
+        {
+          "key": "AbyssFlatEvasionJewel1",
+          "text": "回避力 +(36-60)",
+          "name": "機敏な",
+          "engText": "+(36-60) to Evasion Rating",
+          "engName": "Agile",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 600,
+          "family": "IncreasedEvasionRating"
+        },
+        {
+          "key": "AbyssFlatEvasionJewel2",
+          "text": "回避力 +(61-100)",
+          "name": "素早い",
+          "engText": "+(61-100) to Evasion Rating",
+          "engName": "Fleet",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 40,
+          "weight": 600,
+          "family": "IncreasedEvasionRating"
+        },
+        {
+          "key": "AbyssFlatEvasionJewel3",
+          "text": "回避力 +(101-180)",
+          "name": "霧状の",
+          "engText": "+(101-180) to Evasion Rating",
+          "engName": "Vaporous",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 75,
+          "weight": 600,
+          "family": "IncreasedEvasionRating"
+        },
+        {
+          "key": "AbyssFlatEvasionJewel4_",
+          "text": "回避力 +(181-250)",
+          "name": "曇らせる",
+          "engText": "+(181-250) to Evasion Rating",
+          "engName": "Beclouded",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 83,
+          "weight": 300,
+          "family": "IncreasedEvasionRating"
+        }
+      ],
+      "IncreasedEnergyShield": [
+        {
+          "key": "AbyssFlatEnergyShieldJewel1",
+          "text": "最大エナジーシールド +(21-25)",
+          "name": "輝く",
+          "engText": "+(21-25) to maximum Energy Shield",
+          "engName": "Shining",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 600,
+          "family": "IncreasedEnergyShield"
+        },
+        {
+          "key": "AbyssFlatEnergyShieldJewel2",
+          "text": "最大エナジーシールド +(26-30)",
+          "name": "沸き立つ",
+          "engText": "+(26-30) to maximum Energy Shield",
+          "engName": "Seething",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 40,
+          "weight": 600,
+          "family": "IncreasedEnergyShield"
+        },
+        {
+          "key": "AbyssFlatEnergyShieldJewel3",
+          "text": "最大エナジーシールド +(31-35)",
+          "name": "光り輝く",
+          "engText": "+(31-35) to maximum Energy Shield",
+          "engName": "Incandescent",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 75,
+          "weight": 600,
+          "family": "IncreasedEnergyShield"
+        },
+        {
+          "key": "AbyssFlatEnergyShieldJewel4",
+          "text": "最大エナジーシールド +(36-40)",
+          "name": "きらびやかな",
+          "engText": "+(36-40) to maximum Energy Shield",
+          "engName": "Resplendent",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 83,
+          "weight": 300,
+          "family": "IncreasedEnergyShield"
+        }
+      ],
+      "CooldownRecovery": [
+        {
+          "key": "AbyssCooldownRecoverySpeed1_",
+          "text": "クールダウン解消レートが2%増加する",
+          "name": "円滑化する",
+          "engText": "2% increased Cooldown Recovery Rate",
+          "engName": "Facilitating",
+          "tag": "abyss_jewel_summoner",
+          "generation_type": "prefix",
+          "required_level": 75,
+          "weight": 100,
+          "family": "CooldownRecovery"
+        },
+        {
+          "key": "AbyssCooldownRecoverySpeed2__",
+          "text": "クールダウン解消レートが3%増加する",
+          "name": "促進する",
+          "engText": "3% increased Cooldown Recovery Rate",
+          "engName": "Expediting",
+          "tag": "abyss_jewel_summoner",
+          "generation_type": "prefix",
+          "required_level": 86,
+          "weight": 100,
+          "family": "CooldownRecovery"
+        }
+      ],
+      "PercentDamageGoesToMana": [
+        {
+          "key": "AbyssDamageRecoupedAsMana1",
+          "text": "受けたダメージの(2-3)%をマナとして回収する",
+          "name": "駆り立てる",
+          "engText": "(2-3)% of Damage taken Recouped as Mana",
+          "engName": "Spurring",
+          "tag": "abyss_jewel_summoner",
+          "generation_type": "prefix",
+          "required_level": 75,
+          "weight": 300,
+          "family": "PercentDamageGoesToMana"
+        },
+        {
+          "key": "AbyssDamageRecoupedAsMana2",
+          "text": "受けたダメージの(4-5)%をマナとして回収する",
+          "name": "滾らす",
+          "engText": "(4-5)% of Damage taken Recouped as Mana",
+          "engName": "Motivating",
+          "tag": "abyss_jewel_summoner",
+          "generation_type": "prefix",
+          "required_level": 86,
+          "weight": 300,
+          "family": "PercentDamageGoesToMana"
+        }
+      ]
+    },
+    "suffix": {
+      "Strength": [
+        {
+          "key": "AbyssStrengthJewel1_",
+          "text": "筋力 +(12-16)",
+          "name": "筋力の",
+          "engText": "+(12-16) to Strength",
+          "engName": "of Strength",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "Strength"
+        }
+      ],
+      "Dexterity": [
+        {
+          "key": "AbyssDexterityJewel1_",
+          "text": "器用さ +(12-16)",
+          "name": "器用さの",
+          "engText": "+(12-16) to Dexterity",
+          "engName": "of Dexterity",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "Dexterity"
+        }
+      ],
+      "Intelligence": [
+        {
+          "key": "AbyssIntelligenceJewel1",
+          "text": "知性 +(12-16)",
+          "name": "知性の",
+          "engText": "+(12-16) to Intelligence",
+          "engName": "of Intelligence",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "Intelligence"
+        }
+      ],
+      "StrengthDexterity": [
+        {
+          "key": "AbyssStrengthDexterityJewel1",
+          "text": "筋力および器用さ +(8-10)",
+          "name": "運動の",
+          "engText": "+(8-10) to Strength and Dexterity",
+          "engName": "of Athletics",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "StrengthDexterity"
+        }
+      ],
+      "StrengthIntelligence": [
+        {
+          "key": "AbyssStrengthIntelligenceJewel1_",
+          "text": "筋力および知性 +(8-10)",
+          "name": "魂の",
+          "engText": "+(8-10) to Strength and Intelligence",
+          "engName": "of Spirit",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "StrengthIntelligence"
+        }
+      ],
+      "DexterityIntelligence": [
+        {
+          "key": "AbyssDexterityIntelligenceJewel1",
+          "text": "器用さおよび知性 +(8-10)",
+          "name": "狡猾さの",
+          "engText": "+(8-10) to Dexterity and Intelligence",
+          "engName": "of Cunning",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "DexterityIntelligence"
+        }
+      ],
+      "AllAttributes": [
+        {
+          "key": "AbyssAllAttributesJewel1",
+          "text": "全ての能力値 +(6-8)",
+          "name": "馴致の",
+          "engText": "+(6-8) to all Attributes",
+          "engName": "of Adaption",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "AllAttributes"
+        }
+      ],
+      "FireResistance": [
+        {
+          "key": "AbyssFireResistanceJewel1",
+          "text": "火耐性 +(12-15)%",
+          "name": "ドラゴンの",
+          "engText": "+(12-15)% to Fire Resistance",
+          "engName": "of the Dragon",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 400,
+          "family": "FireResistance"
+        }
+      ],
+      "ColdResistance": [
+        {
+          "key": "AbyssColdResistanceJewel1",
+          "text": "冷気耐性 +(12-15)%",
+          "name": "獣の",
+          "engText": "+(12-15)% to Cold Resistance",
+          "engName": "of the Beast",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 400,
+          "family": "ColdResistance"
+        }
+      ],
+      "LightningResistance": [
+        {
+          "key": "AbyssLightningResistanceJewel1",
+          "text": "雷耐性 +(12-15)%",
+          "name": "接地の",
+          "engText": "+(12-15)% to Lightning Resistance",
+          "engName": "of Grounding",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 400,
+          "family": "LightningResistance"
+        }
+      ],
+      "FireAndColdResistance": [
+        {
+          "key": "AbyssFireColdResistanceJewel1",
+          "text": "火および冷気耐性 +(10-12)%",
+          "name": "路床の",
+          "engText": "+(10-12)% to Fire and Cold Resistances",
+          "engName": "of the Hearth",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "FireAndColdResistance"
+        }
+      ],
+      "FireAndLightningResistance": [
+        {
+          "key": "AbyssFireLightningResistanceJewel1",
+          "text": "火および雷耐性 +(10-12)%",
+          "name": "絶縁体の",
+          "engText": "+(10-12)% to Fire and Lightning Resistances",
+          "engName": "of Insulation",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "FireAndLightningResistance"
+        }
+      ],
+      "ColdAndLightningResistance": [
+        {
+          "key": "AbyssColdLightningResistanceJewel1",
+          "text": "冷気および雷耐性 +(10-12)%",
+          "name": "避難所の",
+          "engText": "+(10-12)% to Cold and Lightning Resistances",
+          "engName": "of Shelter",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "ColdAndLightningResistance"
+        }
+      ],
+      "AllResistances": [
+        {
+          "key": "AbyssAllResistancesJewel1",
+          "text": "全ての元素耐性 +(8-10)%",
+          "name": "抵抗力の",
+          "engText": "+(8-10)% to all Elemental Resistances",
+          "engName": "of Resistance",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 200,
+          "family": "AllResistances"
+        }
+      ],
+      "ChaosResistance": [
+        {
+          "key": "AbyssChaosResistanceJewel1",
+          "text": "混沌耐性 +(7-13)%",
+          "name": "秩序の",
+          "engText": "+(7-13)% to Chaos Resistance",
+          "engName": "of Order",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 100,
+          "family": "ChaosResistance"
+        }
+      ],
+      "IncreasedCastSpeed": [
+        {
+          "key": "AbyssCastSpeedJewel1",
+          "text": "キャストスピードが(2-4)%増加する",
+          "name": "魔法の",
+          "engText": "(2-4)% increased Cast Speed",
+          "engName": "of Enchanting",
+          "tag": "abyss_jewel_summoner",
+          "generation_type": "suffix",
+          "required_level": 50,
+          "weight": 750,
+          "family": "IncreasedCastSpeed"
+        }
+      ],
+      "BlindOnHit": [
+        {
+          "key": "AbyssMinionAttacksBlindOnHitChanceJewel1",
+          "text": "ミニオンはアタックによるヒット時に(3-4)%の確率で敵を盲目にする",
+          "name": "抑止の",
+          "engText": "Minions have (3-4)% chance to Blind on Hit with Attacks",
+          "engName": "of Stifling",
+          "tag": "abyss_jewel_summoner",
+          "generation_type": "suffix",
+          "required_level": 32,
+          "weight": 800,
+          "family": "BlindOnHit"
+        },
+        {
+          "key": "AbyssMinionAttacksBlindOnHitChanceJewel2",
+          "text": "ミニオンはアタックによるヒット時に(5-6)%の確率で敵を盲目にする",
+          "name": "抑止の",
+          "engText": "Minions have (5-6)% chance to Blind on Hit with Attacks",
+          "engName": "of Stifling",
+          "tag": "abyss_jewel_summoner",
+          "generation_type": "suffix",
+          "required_level": 65,
+          "weight": 400,
+          "family": "BlindOnHit"
+        }
+      ],
+      "TauntOnHit": [
+        {
+          "key": "AbyssMinionAttacksTauntOnHitChanceJewel1",
+          "text": "ミニオンはアタックによるヒット時に(3-5)%の確率で敵を挑発する",
+          "name": "気逸らしの",
+          "engText": "Minions have (3-5)% chance to Taunt on Hit with Attacks",
+          "engName": "of Distraction",
+          "tag": "abyss_jewel_summoner",
+          "generation_type": "suffix",
+          "required_level": 32,
+          "weight": 800,
+          "family": "TauntOnHit"
+        },
+        {
+          "key": "AbyssMinionAttacksTauntOnHitChanceJewel2_",
+          "text": "ミニオンはアタックによるヒット時に(6-8)%の確率で敵を挑発する",
+          "name": "気逸らしの",
+          "engText": "Minions have (6-8)% chance to Taunt on Hit with Attacks",
+          "engName": "of Distraction",
+          "tag": "abyss_jewel_summoner",
+          "generation_type": "suffix",
+          "required_level": 65,
+          "weight": 400,
+          "family": "TauntOnHit"
+        }
+      ],
+      "HinderOnHit": [
+        {
+          "key": "AbyssMinionSpellsHinderOnHitChanceJewel1",
+          "text": "ミニオンはスペルによるヒット時に(3-5)%の確率で敵に阻害を与える",
+          "name": "減速の",
+          "engText": "Minions have (3-5)% chance to Hinder Enemies on Hit with Spells",
+          "engName": "of Delaying",
+          "tag": "abyss_jewel_summoner",
+          "generation_type": "suffix",
+          "required_level": 32,
+          "weight": 800,
+          "family": "HinderOnHit"
+        },
+        {
+          "key": "AbyssMinionSpellsHinderOnHitChanceJewel2",
+          "text": "ミニオンはスペルによるヒット時に(6-8)%の確率で敵に阻害を与える",
+          "name": "減速の",
+          "engText": "Minions have (6-8)% chance to Hinder Enemies on Hit with Spells",
+          "engName": "of Delaying",
+          "tag": "abyss_jewel_summoner",
+          "generation_type": "suffix",
+          "required_level": 65,
+          "weight": 400,
+          "family": "HinderOnHit"
+        }
+      ],
+      "AbyssMinionAilmentOnHitChance": [
+        {
+          "key": "AbyssMinionPoisonOnHitChanceJewel1",
+          "text": "ミニオンはヒット時に(10-15)%の確率で毒を付与する",
+          "name": "毒液の",
+          "engText": "Minions have (10-15)% chance to Poison Enemies on Hit",
+          "engName": "of Venom",
+          "tag": "abyss_jewel_summoner",
+          "generation_type": "suffix",
+          "required_level": 60,
+          "weight": 400,
+          "family": "AbyssMinionAilmentOnHitChance"
+        },
+        {
+          "key": "AbyssMinionIgniteOnHitChanceJewel1",
+          "text": "ミニオンは(10-15)%の確率で敵を発火させる",
+          "name": "点火の",
+          "engText": "Minions have (10-15)% chance to Ignite",
+          "engName": "of Combustion",
+          "tag": "abyss_jewel_summoner",
+          "generation_type": "suffix",
+          "required_level": 60,
+          "weight": 400,
+          "family": "AbyssMinionAilmentOnHitChance"
+        },
+        {
+          "key": "AbyssMinionAttacksBleedOnHitChanceJewel1",
+          "text": "ミニオンによるアタックは(10-15)%の確率で出血を付与する",
+          "name": "瀉血の",
+          "engText": "Minions have (10-15)% chance to cause Bleeding with Attacks",
+          "engName": "of Bloodletting",
+          "tag": "abyss_jewel_summoner",
+          "generation_type": "suffix",
+          "required_level": 60,
+          "weight": 400,
+          "family": "AbyssMinionAilmentOnHitChance"
+        }
+      ],
+      "AvoidIgnite": [
+        {
+          "key": "AbyssAvoidIgniteJewel1_",
+          "text": "(31-40)%の確率で発火を無効化する",
+          "name": "非引火性の",
+          "engText": "(31-40)% chance to Avoid being Ignited",
+          "engName": "of Nonflammability",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 50,
+          "weight": 300,
+          "family": "AvoidIgnite"
+        },
+        {
+          "key": "AbyssAvoidIgniteJewel2",
+          "text": "(41-50)%の確率で発火を無効化する",
+          "name": "耐火の",
+          "engText": "(41-50)% chance to Avoid being Ignited",
+          "engName": "of Fireproofing",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 70,
+          "weight": 150,
+          "family": "AvoidIgnite"
+        }
+      ],
+      "ChanceToAvoidFreezeAndChill": [
+        {
+          "key": "AbyssAvoidFreezeAndChillJewel1",
+          "text": "(31-40)%の確率で凍結を無効化する",
+          "name": "温めの",
+          "engText": "(31-40)% chance to Avoid being Frozen",
+          "engName": "of Warming",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 50,
+          "weight": 300,
+          "family": "ChanceToAvoidFreezeAndChill"
+        },
+        {
+          "key": "AbyssAvoidFreezeAndChillJewel2",
+          "text": "(41-50)%の確率で凍結を無効化する",
+          "name": "加熱の",
+          "engText": "(41-50)% chance to Avoid being Frozen",
+          "engName": "of Heating",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 70,
+          "weight": 150,
+          "family": "ChanceToAvoidFreezeAndChill"
+        }
+      ],
+      "ReducedShockChance": [
+        {
+          "key": "AbyssAvoidShockJewel1",
+          "text": "(31-40)%の確率で感電を無効化する",
+          "name": "絶縁の",
+          "engText": "(31-40)% chance to Avoid being Shocked",
+          "engName": "of Insulating",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 50,
+          "weight": 300,
+          "family": "ReducedShockChance"
+        },
+        {
+          "key": "AbyssAvoidShockJewel2",
+          "text": "(41-50)%の確率で感電を無効化する",
+          "name": "避雷針の",
+          "engText": "(41-50)% chance to Avoid being Shocked",
+          "engName": "of the Lightning Rod",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 70,
+          "weight": 150,
+          "family": "ReducedShockChance"
+        }
+      ],
+      "ChanceToAvoidPoison": [
+        {
+          "key": "AbyssAvoidPoisonJewel1__",
+          "text": "(31-40)%の確率で毒を無効化する",
+          "name": "耐性の",
+          "engText": "(31-40)% chance to Avoid being Poisoned",
+          "engName": "of Tolerance",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 50,
+          "weight": 300,
+          "family": "ChanceToAvoidPoison"
+        },
+        {
+          "key": "AbyssAvoidPoisonJewel2__",
+          "text": "(41-50)%の確率で毒を無効化する",
+          "name": "耐性の",
+          "engText": "(41-50)% chance to Avoid being Poisoned",
+          "engName": "of Immunity",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 70,
+          "weight": 150,
+          "family": "ChanceToAvoidPoison"
+        }
+      ],
+      "ChanceToAvoidBleeding": [
+        {
+          "key": "AbyssAvoidBleedingJewel1",
+          "text": "(31-40)%の確率で出血を無効化する",
+          "name": "食い止めの",
+          "engText": "(31-40)% chance to Avoid Bleeding",
+          "engName": "of Stemming",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 50,
+          "weight": 300,
+          "family": "ChanceToAvoidBleeding"
+        },
+        {
+          "key": "AbyssAvoidBleedingJewel2",
+          "text": "(41-50)%の確率で出血を無効化する",
+          "name": "止血帯の",
+          "engText": "(41-50)% chance to Avoid Bleeding",
+          "engName": "of the Tourniquet",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 70,
+          "weight": 150,
+          "family": "ChanceToAvoidBleeding"
+        }
+      ],
+      "AvoidStun": [
+        {
+          "key": "AbyssAvoidStunJewel1",
+          "text": "(21-24)%の確率でスタンを無効化する",
+          "name": "均衡の",
+          "engText": "(21-24)% chance to Avoid being Stunned",
+          "engName": "of Balance",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 50,
+          "weight": 300,
+          "family": "AvoidStun"
+        },
+        {
+          "key": "AbyssAvoidStunJewel2",
+          "text": "(25-30)%の確率でスタンを無効化する",
+          "name": "安定の",
+          "engText": "(25-30)% chance to Avoid being Stunned",
+          "engName": "of Poise",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 70,
+          "weight": 150,
+          "family": "AvoidStun"
+        }
+      ],
+      "MinionAttackSpeedAndCastSpeed": [
+        {
+          "key": "AbyssMinionAttackAndCastSpeedJewel1",
+          "text": "ミニオンのアタックスピードが(4-6)%増加する\nミニオンのキャストスピードが(4-6)%増加する",
+          "name": "訓練の",
+          "engText": "Minions have (4-6)% increased Attack Speed\nMinions have (4-6)% increased Cast Speed",
+          "engName": "of Training",
+          "tag": "abyss_jewel_summoner",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 800,
+          "family": "MinionAttackSpeedAndCastSpeed"
+        }
+      ],
+      "MinionLifeRegeneration": [
+        {
+          "key": "AbyssMinionLifeRegenerationJewel1",
+          "text": "ミニオンは毎秒ライフの(0.4-0.8)%を自動回復する",
+          "name": "長寿の",
+          "engText": "Minions Regenerate (0.4-0.8)% of Life per second",
+          "engName": "of Longevity",
+          "tag": "abyss_jewel_summoner",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 800,
+          "family": "MinionLifeRegeneration"
+        }
+      ],
+      "MinionLifeLeech": [
+        {
+          "key": "AbyssMinionLifeLeechJewel1",
+          "text": "ミニオンはダメージの(0.3-0.5)%をライフとしてリーチする",
+          "name": "吸血の",
+          "engText": "Minions Leech (0.3-0.5)% of Damage as Life",
+          "engName": "of Vampirism",
+          "tag": "abyss_jewel_summoner",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 800,
+          "family": "MinionLifeLeech"
+        }
+      ],
+      "MinionMovementSpeed": [
+        {
+          "key": "AbyssMinionMovementSpeedJewel1",
+          "text": "ミニオンの移動スピードが(10-15)%増加する",
+          "name": "指揮の",
+          "engText": "Minions have (10-15)% increased Movement Speed",
+          "engName": "of Orchestration",
+          "tag": "abyss_jewel_summoner",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 800,
+          "family": "MinionMovementSpeed"
+        }
+      ],
+      "MinionLife": [
+        {
+          "key": "AbyssMinionLifeJewel1_",
+          "text": "ミニオンの最大ライフが(8-12)%増加する",
+          "name": "頑強さの",
+          "engText": "Minions have (8-12)% increased maximum Life",
+          "engName": "of Fortitude",
+          "tag": "abyss_jewel_summoner",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 800,
+          "family": "MinionLife"
+        }
+      ],
+      "MinionElementalResistances": [
+        {
+          "key": "AbyssMinionElementalResistancesJewel1",
+          "text": "ミニオンの全ての元素耐性 +(6-10)%",
+          "name": "順応の",
+          "engText": "Minions have +(6-10)% to all Elemental Resistances",
+          "engName": "of Acclimatisation",
+          "tag": "abyss_jewel_summoner",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 800,
+          "family": "MinionElementalResistances"
+        }
+      ],
+      "MinionChaosResistance": [
+        {
+          "key": "AbyssMinionChaosResistanceJewel1",
+          "text": "ミニオンの混沌耐性 +(7-11)%",
+          "name": "正義感の",
+          "engText": "Minions have +(7-11)% to Chaos Resistance",
+          "engName": "of Righteousness",
+          "tag": "abyss_jewel_summoner",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 800,
+          "family": "MinionChaosResistance"
+        }
+      ],
+      "SpellBlockPercentage": [
+        {
+          "key": "AbyssSpellBlockChanceIfHitRecentlyJewel1",
+          "text": "直近ヒットによるダメージを受けていればスペルブロック率 +(3-4)%",
+          "name": "本能の",
+          "engText": "+(3-4)% Chance to Block Spell Damage if you were Damaged by a Hit Recently",
+          "engName": "of Instinct",
+          "tag": "abyss_jewel_summoner",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "SpellBlockPercentage"
+        },
+        {
+          "key": "AbyssSpellDodgeAndDodgeChanceIfHitRecentlyJewel1",
+          "text": "直近ヒットによるダメージを受けていればスペルブロック率 +2%",
+          "name": "周到の",
+          "engText": "+2% Chance to Block Spell Damage if you were Damaged by a Hit Recently",
+          "engName": "of Readiness",
+          "tag": "abyss_jewel_summoner",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "SpellBlockPercentage"
+        }
+      ],
+      "MovementSpeedIfNotDamagedRecently": [
+        {
+          "key": "AbyssMovementSpeedIfNotDamagedRecentlyJewel1",
+          "text": "直近プレイヤーがダメージを受けていなければ移動スピードが(3-4)%増加する",
+          "name": "勢いの",
+          "engText": "(3-4)% increased Movement Speed if you haven't taken Damage Recently",
+          "engName": "of Momentum",
+          "tag": "abyss_jewel_summoner",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "MovementSpeedIfNotDamagedRecently"
+        }
+      ],
+      "CastSpeedIfMinionKilledRecently": [
+        {
+          "key": "AbyssCastSpeedIfMinionKilledRecentlyJewel1",
+          "text": "直近ミニオンが倒されていればキャストスピードが(7-10)%増加する",
+          "name": "報復の",
+          "engText": "(7-10)% increased Cast Speed if a Minion has been Killed Recently",
+          "engName": "of Retaliation",
+          "tag": "abyss_jewel_summoner",
+          "generation_type": "suffix",
+          "required_level": 30,
+          "weight": 500,
+          "family": "CastSpeedIfMinionKilledRecently"
+        }
+      ],
+      "MinionDamageIfMinionSkillUsedRecently": [
+        {
+          "key": "AbyssMinionDamageIfMinionSkillUsedRecentlyJewel1",
+          "text": "直近プレイヤーがミニオンスキルを使用していればミニオンのダメージが(15-20)%増加する",
+          "name": "権威の",
+          "engText": "Minions deal (15-20)% increased Damage if you've used a Minion Skill Recently",
+          "engName": "of Authority",
+          "tag": "abyss_jewel_summoner",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "MinionDamageIfMinionSkillUsedRecently"
+        }
+      ],
+      "EvasionRatingWhileMoving": [
+        {
+          "key": "AbyssEvasionRatingWhileMovingJewel1",
+          "text": "移動中は回避力が(25-35)%増加する",
+          "name": "巧動の",
+          "engText": "(25-35)% increased Evasion Rating while moving",
+          "engName": "of Maneuvering",
+          "tag": "abyss_jewel_summoner",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "EvasionRatingWhileMoving"
+        }
+      ],
+      "ManaRegenerationRateWhileMoving": [
+        {
+          "key": "AbyssManaRegenerationRateWhileMovingJewel1",
+          "text": "移動中はマナ自動回復レートが(20-25)%増加する",
+          "name": "実践の",
+          "engText": "(20-25)% increased Mana Regeneration Rate while moving",
+          "engName": "of Praxis",
+          "tag": "abyss_jewel_summoner",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "ManaRegenerationRateWhileMoving"
+        }
+      ],
+      "LifeRegenerationRateWhileMoving": [
+        {
+          "key": "AbyssLifeRegenerationRateWhileMovingJewel1",
+          "text": "移動中は毎秒ライフの(0.5-1)%を自動回復する",
+          "name": "快活の",
+          "engText": "Regenerate (0.5-1)% of Life per second while moving",
+          "engName": "of Vivaciousness",
+          "tag": "abyss_jewel_summoner",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "LifeRegenerationRateWhileMoving"
+        }
+      ],
+      "AdditionalBlock": [
+        {
+          "key": "AbyssChanceToBlockIfDamagedRecentlyJewel1_",
+          "text": "直近プレイヤーがヒットによるダメージを受けていればアタックブロック率 +(3-4)%",
+          "name": "守護の",
+          "engText": "+(3-4)% Chance to Block Attack Damage if you were Damaged by a Hit Recently",
+          "engName": "of Guarding",
+          "tag": "abyss_jewel_summoner",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "AdditionalBlock"
+        }
+      ],
+      "BuffEnchantment": [
+        {
+          "key": "AbyssSelfCurseEffectOnConsecratedGroundJewel1__",
+          "text": "神聖領域の上にいる時にプレイヤーに対する呪いの効果が(25-15)%減少する",
+          "name": "聖所の",
+          "engText": "(25-15)% reduced Effect of Curses on you while on Consecrated Ground",
+          "engName": "of the Sanctum",
+          "tag": "abyss_jewel_summoner",
+          "generation_type": "suffix",
+          "required_level": 84,
+          "weight": 500,
+          "family": "BuffEnchantment"
+        },
+        {
+          "key": "AbyssAvoidElementalAilmentsWhileElusiveJewel1",
+          "text": "身躱し中は(10-20)%の確率で元素系状態異常を無効化する",
+          "name": "脱出の",
+          "engText": "(10-20)% chance to Avoid Elemental Ailments while you have Elusive",
+          "engName": "of Escape",
+          "tag": "abyss_jewel_summoner",
+          "generation_type": "suffix",
+          "required_level": 84,
+          "weight": 100,
+          "family": "BuffEnchantment"
+        },
+        {
+          "key": "AbyssHinderedEnemiesLifeRegenerationRateJewel1",
+          "text": "プレイヤーにより阻害された敵のライフ自動回復レートが(35-25)%減少する",
+          "name": "衰弱の",
+          "engText": "Enemies Hindered by you have (35-25)% reduced Life Regeneration rate",
+          "engName": "of Enervation",
+          "tag": "abyss_jewel_summoner",
+          "generation_type": "suffix",
+          "required_level": 84,
+          "weight": 500,
+          "family": "BuffEnchantment"
+        },
+        {
+          "key": "AbyssBlindedEnemiesCriticalStrikeChanceJewel1",
+          "text": "プレイヤーにより盲目を付与された敵のクリティカル率が(30-20)%減少する",
+          "name": "雲りの",
+          "engText": "Enemies Blinded by you have (30-20)% reduced Critical Strike Chance",
+          "engName": "of Clouding",
+          "tag": "abyss_jewel_summoner",
+          "generation_type": "suffix",
+          "required_level": 84,
+          "weight": 100,
+          "family": "BuffEnchantment"
+        },
+        {
+          "key": "AbyssWitheredEnemiesAllResistanceJewel1___",
+          "text": "プレイヤーにより衰弱を受けた敵は全ての耐性が-2%される",
+          "name": "衰えの",
+          "engText": "Enemies Withered by you have -2% to all Resistances",
+          "engName": "of Languishing",
+          "tag": "abyss_jewel_summoner",
+          "generation_type": "suffix",
+          "required_level": 84,
+          "weight": 500,
+          "family": "BuffEnchantment"
+        },
+        {
+          "key": "AbyssMaimedEnemiesDamageOverTimeJewel1",
+          "text": "プレイヤーにより重傷を受けた敵が受ける継続ダメージが(4-5)%増加する",
+          "name": "創痍の",
+          "engText": "Enemies Maimed by you take (4-5)% increased Damage Over Time",
+          "engName": "of Mangling",
+          "tag": "abyss_jewel_summoner",
+          "generation_type": "suffix",
+          "required_level": 84,
+          "weight": 100,
+          "family": "BuffEnchantment"
+        },
+        {
+          "key": "AbyssIntimidatedEnemiesStunDurationJewel1",
+          "text": "プレイヤーにより威嚇された敵に対するスタン持続時間が(10-15)%増加する",
+          "name": "脅嚇の",
+          "engText": "Enemies Intimidated by you have (10-15)% increased duration of stuns against them",
+          "engName": "of Daunting",
+          "tag": "abyss_jewel_summoner",
+          "generation_type": "suffix",
+          "required_level": 84,
+          "weight": 100,
+          "family": "BuffEnchantment"
+        }
+      ]
+    }
+  }
+}

@@ -7,6 +7,7 @@ function switchTab(tabId: string) {
     if (targetContent) {
         targetContent.style.display = 'block';
     }
+    if (typeof positionSiteUtilities === 'function') positionSiteUtilities(tabId);
 
     if (tabId === 'essenceContent' && typeof window.syncEssenceNameColumnWidth === 'function') {
         window.syncEssenceNameColumnWidth();

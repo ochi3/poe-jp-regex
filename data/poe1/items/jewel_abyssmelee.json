@@ -1,0 +1,3451 @@
+{
+  "bases": [
+    "Metadata/Items/Jewels/JewelAbyssMelee"
+  ],
+  "mods": {
+    "prefix": {
+      "AbyssJewelLife": [
+        {
+          "key": "AbyssJewelAddedLife1",
+          "text": "最大ライフ +(21-25)",
+          "name": "強健な",
+          "engText": "+(21-25) to maximum Life",
+          "engName": "Hale",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 3000,
+          "family": "AbyssJewelLife"
+        },
+        {
+          "key": "AbyssJewelAddedLife2",
+          "text": "最大ライフ +(26-30)",
+          "name": "健康な",
+          "engText": "+(26-30) to maximum Life",
+          "engName": "Healthy",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 35,
+          "weight": 3000,
+          "family": "AbyssJewelLife"
+        },
+        {
+          "key": "AbyssJewelAddedLife3",
+          "text": "最大ライフ +(31-35)",
+          "name": "血色良い",
+          "engText": "+(31-35) to maximum Life",
+          "engName": "Sanguine",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 74,
+          "weight": 1000,
+          "family": "AbyssJewelLife"
+        },
+        {
+          "key": "AbyssJewelAddedLife4",
+          "text": "最大ライフ +(36-40)",
+          "name": "屈強な",
+          "engText": "+(36-40) to maximum Life",
+          "engName": "Stalwart",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 82,
+          "weight": 500,
+          "family": "AbyssJewelLife"
+        }
+      ],
+      "AbyssJewelMana": [
+        {
+          "key": "AbyssJewelAddedMana1",
+          "text": "最大マナ +(20-23)",
+          "name": "ベリルの",
+          "engText": "+(20-23) to maximum Mana",
+          "engName": "Beryl",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 1000,
+          "family": "AbyssJewelMana"
+        },
+        {
+          "key": "AbyssJewelAddedMana2",
+          "text": "最大マナ +(24-27)",
+          "name": "コバルトの",
+          "engText": "+(24-27) to maximum Mana",
+          "engName": "Cobalt",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 40,
+          "weight": 1000,
+          "family": "AbyssJewelMana"
+        },
+        {
+          "key": "AbyssJewelAddedMana3",
+          "text": "最大マナ +(28-31)",
+          "name": "淡青な",
+          "engText": "+(28-31) to maximum Mana",
+          "engName": "Azure",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 75,
+          "weight": 1000,
+          "family": "AbyssJewelMana"
+        },
+        {
+          "key": "AbyssJewelAddedMana4",
+          "text": "最大マナ +(32-34)",
+          "name": "サファイアの",
+          "engText": "+(32-34) to maximum Mana",
+          "engName": "Sapphire",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 83,
+          "weight": 500,
+          "family": "AbyssJewelMana"
+        }
+      ],
+      "DamageOverTimeWhileDualWielding": [
+        {
+          "key": "AbyssDamageOverTimeWhileDualWieldingJewel1",
+          "text": "二刀流中は継続ダメージが(10-14)%増加する",
+          "name": "退行させる",
+          "engText": "(10-14)% increased Damage over Time while Dual Wielding",
+          "engName": "Degenerative",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 300,
+          "family": "DamageOverTimeWhileDualWielding"
+        },
+        {
+          "key": "AbyssDamageOverTimeWhileDualWieldingJewel2",
+          "text": "二刀流中は継続ダメージが(15-18)%増加する",
+          "name": "害悪な",
+          "engText": "(15-18)% increased Damage over Time while Dual Wielding",
+          "engName": "Deleterious",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 60,
+          "weight": 100,
+          "family": "DamageOverTimeWhileDualWielding"
+        }
+      ],
+      "DamageOverTimeWhileWieldingTwoHandedWeapon": [
+        {
+          "key": "AbyssDamageOverTimeWhileWieldingTwoHandedWeaponJewel1",
+          "text": "両手武器装備中は継続ダメージが(10-14)%増加する",
+          "name": "退行させる",
+          "engText": "(10-14)% increased Damage over Time while wielding a Two Handed Weapon",
+          "engName": "Degenerative",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 450,
+          "family": "DamageOverTimeWhileWieldingTwoHandedWeapon"
+        },
+        {
+          "key": "AbyssDamageOverTimeWhileWieldingTwoHandedWeaponJewel2",
+          "text": "両手武器装備中は継続ダメージが(15-18)%増加する",
+          "name": "害悪な",
+          "engText": "(15-18)% increased Damage over Time while wielding a Two Handed Weapon",
+          "engName": "Deleterious",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 60,
+          "weight": 150,
+          "family": "DamageOverTimeWhileWieldingTwoHandedWeapon"
+        }
+      ],
+      "DamageOverTimeWhileHoldingAShield": [
+        {
+          "key": "AbyssDamageOverTimeWhileHoldingAShieldJewel1_",
+          "text": "盾装備中は継続ダメージが(10-14)%増加する",
+          "name": "退行させる",
+          "engText": "(10-14)% increased Damage over Time while holding a Shield",
+          "engName": "Degenerative",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 300,
+          "family": "DamageOverTimeWhileHoldingAShield"
+        },
+        {
+          "key": "AbyssDamageOverTimeWhileHoldingAShieldJewel2_",
+          "text": "盾装備中は継続ダメージが(15-18)%増加する",
+          "name": "害悪な",
+          "engText": "(15-18)% increased Damage over Time while holding a Shield",
+          "engName": "Deleterious",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 60,
+          "weight": 100,
+          "family": "DamageOverTimeWhileHoldingAShield"
+        }
+      ],
+      "SpecificWeaponPhysicalDamage": [
+        {
+          "key": "AbyssAddedPhysicalDamageWithDaggersJewel1",
+          "text": "短剣によるアタックに2から3の追加物理ダメージ",
+          "name": "閃く",
+          "engText": "2 to 3 Added Physical Damage with Dagger Attacks",
+          "engName": "Glinting",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "SpecificWeaponPhysicalDamage"
+        },
+        {
+          "key": "AbyssAddedPhysicalDamageWithDaggersJewel2",
+          "text": "短剣によるアタックに3から4の追加物理ダメージ",
+          "name": "光沢帯びた",
+          "engText": "3 to 4 Added Physical Damage with Dagger Attacks",
+          "engName": "Gleaming",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 42,
+          "weight": 500,
+          "family": "SpecificWeaponPhysicalDamage"
+        },
+        {
+          "key": "AbyssAddedPhysicalDamageWithDaggersJewel3_",
+          "text": "短剣によるアタックに4から(5-6)の追加物理ダメージ",
+          "name": "鍛錬された",
+          "engText": "4 to (5-6) Added Physical Damage with Dagger Attacks",
+          "engName": "Tempered",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 64,
+          "weight": 500,
+          "family": "SpecificWeaponPhysicalDamage"
+        },
+        {
+          "key": "AbyssAddedPhysicalDamageWithDaggersJewel4",
+          "text": "短剣によるアタックに(5-6)から(7-8)の追加物理ダメージ",
+          "name": "猛烈な",
+          "engText": "(5-6) to (7-8) Added Physical Damage with Dagger Attacks",
+          "engName": "Flaring",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 77,
+          "weight": 250,
+          "family": "SpecificWeaponPhysicalDamage"
+        },
+        {
+          "key": "AbyssAddedPhysicalDamageWithDaggersJewel5_",
+          "text": "短剣によるアタックに(7-8)から(9-10)の追加物理ダメージ",
+          "name": "尖った",
+          "engText": "(7-8) to (9-10) Added Physical Damage with Dagger Attacks",
+          "engName": "Acuminate",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 85,
+          "weight": 125,
+          "family": "SpecificWeaponPhysicalDamage"
+        },
+        {
+          "key": "AbyssAddedPhysicalDamageWithClawsJewel1",
+          "text": "鉤爪によるアタックに2から3の追加物理ダメージ",
+          "name": "閃く",
+          "engText": "2 to 3 Added Physical Damage with Claw Attacks",
+          "engName": "Glinting",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "SpecificWeaponPhysicalDamage"
+        },
+        {
+          "key": "AbyssAddedPhysicalDamageWithClawsJewel2",
+          "text": "鉤爪によるアタックに3から4の追加物理ダメージ",
+          "name": "光沢帯びた",
+          "engText": "3 to 4 Added Physical Damage with Claw Attacks",
+          "engName": "Gleaming",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 42,
+          "weight": 500,
+          "family": "SpecificWeaponPhysicalDamage"
+        },
+        {
+          "key": "AbyssAddedPhysicalDamageWithClawsJewel3",
+          "text": "鉤爪によるアタックに4から(5-6)の追加物理ダメージ",
+          "name": "鍛錬された",
+          "engText": "4 to (5-6) Added Physical Damage with Claw Attacks",
+          "engName": "Tempered",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 64,
+          "weight": 500,
+          "family": "SpecificWeaponPhysicalDamage"
+        },
+        {
+          "key": "AbyssAddedPhysicalDamageWithClawsJewel4",
+          "text": "鉤爪によるアタックに(5-6)から(7-8)の追加物理ダメージ",
+          "name": "猛烈な",
+          "engText": "(5-6) to (7-8) Added Physical Damage with Claw Attacks",
+          "engName": "Flaring",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 77,
+          "weight": 250,
+          "family": "SpecificWeaponPhysicalDamage"
+        },
+        {
+          "key": "AbyssAddedPhysicalDamageWithClawsJewel5",
+          "text": "鉤爪によるアタックに(7-8)から(9-10)の追加物理ダメージ",
+          "name": "尖った",
+          "engText": "(7-8) to (9-10) Added Physical Damage with Claw Attacks",
+          "engName": "Acuminate",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 85,
+          "weight": 125,
+          "family": "SpecificWeaponPhysicalDamage"
+        },
+        {
+          "key": "AbyssAddedPhysicalDamageWithSwordsJewel1",
+          "text": "剣によるアタックに2から3の追加物理ダメージ",
+          "name": "閃く",
+          "engText": "2 to 3 Added Physical Damage with Sword Attacks",
+          "engName": "Glinting",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "SpecificWeaponPhysicalDamage"
+        },
+        {
+          "key": "AbyssAddedPhysicalDamageWithSwordsJewel2",
+          "text": "剣によるアタックに3から4の追加物理ダメージ",
+          "name": "光沢帯びた",
+          "engText": "3 to 4 Added Physical Damage with Sword Attacks",
+          "engName": "Gleaming",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 42,
+          "weight": 500,
+          "family": "SpecificWeaponPhysicalDamage"
+        },
+        {
+          "key": "AbyssAddedPhysicalDamageWithSwordsJewel3",
+          "text": "剣によるアタックに4から(5-6)の追加物理ダメージ",
+          "name": "鍛錬された",
+          "engText": "4 to (5-6) Added Physical Damage with Sword Attacks",
+          "engName": "Tempered",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 64,
+          "weight": 500,
+          "family": "SpecificWeaponPhysicalDamage"
+        },
+        {
+          "key": "AbyssAddedPhysicalDamageWithSwordsJewel4",
+          "text": "剣によるアタックに(5-6)から(7-8)の追加物理ダメージ",
+          "name": "猛烈な",
+          "engText": "(5-6) to (7-8) Added Physical Damage with Sword Attacks",
+          "engName": "Flaring",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 77,
+          "weight": 250,
+          "family": "SpecificWeaponPhysicalDamage"
+        },
+        {
+          "key": "AbyssAddedPhysicalDamageWithSwordsJewel5",
+          "text": "剣によるアタックに(7-8)から(9-10)の追加物理ダメージ",
+          "name": "尖った",
+          "engText": "(7-8) to (9-10) Added Physical Damage with Sword Attacks",
+          "engName": "Acuminate",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 85,
+          "weight": 125,
+          "family": "SpecificWeaponPhysicalDamage"
+        },
+        {
+          "key": "AbyssAddedPhysicalDamageWithAxesJewel1",
+          "text": "斧によるアタックに2から3の追加物理ダメージ",
+          "name": "閃く",
+          "engText": "2 to 3 Added Physical Damage with Axe Attacks",
+          "engName": "Glinting",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "SpecificWeaponPhysicalDamage"
+        },
+        {
+          "key": "AbyssAddedPhysicalDamageWithAxesJewel2",
+          "text": "斧によるアタックに3から4の追加物理ダメージ",
+          "name": "光沢帯びた",
+          "engText": "3 to 4 Added Physical Damage with Axe Attacks",
+          "engName": "Gleaming",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 42,
+          "weight": 500,
+          "family": "SpecificWeaponPhysicalDamage"
+        },
+        {
+          "key": "AbyssAddedPhysicalDamageWithAxesJewel3",
+          "text": "斧によるアタックに4から(5-6)の追加物理ダメージ",
+          "name": "鍛錬された",
+          "engText": "4 to (5-6) Added Physical Damage with Axe Attacks",
+          "engName": "Tempered",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 64,
+          "weight": 500,
+          "family": "SpecificWeaponPhysicalDamage"
+        },
+        {
+          "key": "AbyssAddedPhysicalDamageWithAxesJewel4",
+          "text": "斧によるアタックに(5-6)から(7-8)の追加物理ダメージ",
+          "name": "猛烈な",
+          "engText": "(5-6) to (7-8) Added Physical Damage with Axe Attacks",
+          "engName": "Flaring",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 77,
+          "weight": 250,
+          "family": "SpecificWeaponPhysicalDamage"
+        },
+        {
+          "key": "AbyssAddedPhysicalDamageWithAxesJewel5_",
+          "text": "斧によるアタックに(7-8)から(9-10)の追加物理ダメージ",
+          "name": "尖った",
+          "engText": "(7-8) to (9-10) Added Physical Damage with Axe Attacks",
+          "engName": "Acuminate",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 85,
+          "weight": 125,
+          "family": "SpecificWeaponPhysicalDamage"
+        },
+        {
+          "key": "AbyssAddedPhysicalDamageWithMacesJewel1",
+          "text": "メイスまたはセプターによるアタックに2から3の追加物理ダメージ",
+          "name": "閃く",
+          "engText": "2 to 3 Added Physical Damage with Mace or Sceptre Attacks",
+          "engName": "Glinting",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "SpecificWeaponPhysicalDamage"
+        },
+        {
+          "key": "AbyssAddedPhysicalDamageWithMacesJewel2",
+          "text": "メイスまたはセプターによるアタックに3から4の追加物理ダメージ",
+          "name": "光沢帯びた",
+          "engText": "3 to 4 Added Physical Damage with Mace or Sceptre Attacks",
+          "engName": "Gleaming",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 42,
+          "weight": 500,
+          "family": "SpecificWeaponPhysicalDamage"
+        },
+        {
+          "key": "AbyssAddedPhysicalDamageWithMacesJewel3",
+          "text": "メイスまたはセプターによるアタックに4から(5-6)の追加物理ダメージ",
+          "name": "鍛錬された",
+          "engText": "4 to (5-6) Added Physical Damage with Mace or Sceptre Attacks",
+          "engName": "Tempered",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 64,
+          "weight": 500,
+          "family": "SpecificWeaponPhysicalDamage"
+        },
+        {
+          "key": "AbyssAddedPhysicalDamageWithMacesJewel4_",
+          "text": "メイスまたはセプターによるアタックに(5-6)から(7-8)の追加物理ダメージ",
+          "name": "猛烈な",
+          "engText": "(5-6) to (7-8) Added Physical Damage with Mace or Sceptre Attacks",
+          "engName": "Flaring",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 77,
+          "weight": 250,
+          "family": "SpecificWeaponPhysicalDamage"
+        },
+        {
+          "key": "AbyssAddedPhysicalDamageWithMacesJewel5",
+          "text": "メイスまたはセプターによるアタックに(7-8)から(9-10)の追加物理ダメージ",
+          "name": "尖った",
+          "engText": "(7-8) to (9-10) Added Physical Damage with Mace or Sceptre Attacks",
+          "engName": "Acuminate",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 85,
+          "weight": 125,
+          "family": "SpecificWeaponPhysicalDamage"
+        },
+        {
+          "key": "AbyssAddedPhysicalDamageWithStavesJewel1",
+          "text": "スタッフによるアタックに2から3の追加物理ダメージ",
+          "name": "閃く",
+          "engText": "2 to 3 Added Physical Damage with Staff Attacks",
+          "engName": "Glinting",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "SpecificWeaponPhysicalDamage"
+        },
+        {
+          "key": "AbyssAddedPhysicalDamageWithStavesJewel2",
+          "text": "スタッフによるアタックに3から4の追加物理ダメージ",
+          "name": "光沢帯びた",
+          "engText": "3 to 4 Added Physical Damage with Staff Attacks",
+          "engName": "Gleaming",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 42,
+          "weight": 500,
+          "family": "SpecificWeaponPhysicalDamage"
+        },
+        {
+          "key": "AbyssAddedPhysicalDamageWithStavesJewel3_",
+          "text": "スタッフによるアタックに4から(5-6)の追加物理ダメージ",
+          "name": "鍛錬された",
+          "engText": "4 to (5-6) Added Physical Damage with Staff Attacks",
+          "engName": "Tempered",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 64,
+          "weight": 500,
+          "family": "SpecificWeaponPhysicalDamage"
+        },
+        {
+          "key": "AbyssAddedPhysicalDamageWithStavesJewel4",
+          "text": "スタッフによるアタックに(5-6)から(7-8)の追加物理ダメージ",
+          "name": "猛烈な",
+          "engText": "(5-6) to (7-8) Added Physical Damage with Staff Attacks",
+          "engName": "Flaring",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 77,
+          "weight": 250,
+          "family": "SpecificWeaponPhysicalDamage"
+        },
+        {
+          "key": "AbyssAddedPhysicalDamageWithStavesJewel5_",
+          "text": "スタッフによるアタックに(7-8)から(9-10)の追加物理ダメージ",
+          "name": "尖った",
+          "engText": "(7-8) to (9-10) Added Physical Damage with Staff Attacks",
+          "engName": "Acuminate",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 85,
+          "weight": 125,
+          "family": "SpecificWeaponPhysicalDamage"
+        }
+      ],
+      "SpecificWeaponLightningDamage": [
+        {
+          "key": "AbyssAddedLightningDamageWithDaggersJewel1",
+          "text": "短剣によるアタックに1から(19-20)の追加雷ダメージ",
+          "name": "電音の",
+          "engText": "1 to (19-20) Added Lightning Damage with Dagger Attacks",
+          "engName": "Humming",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "SpecificWeaponLightningDamage"
+        },
+        {
+          "key": "AbyssAddedLightningDamageWithDaggersJewel2_",
+          "text": "短剣によるアタックに(1-2)から(23-24)の追加雷ダメージ",
+          "name": "電光走る",
+          "engText": "(1-2) to (23-24) Added Lightning Damage with Dagger Attacks",
+          "engName": "Sparking",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 37,
+          "weight": 500,
+          "family": "SpecificWeaponLightningDamage"
+        },
+        {
+          "key": "AbyssAddedLightningDamageWithDaggersJewel3",
+          "text": "短剣によるアタックに(1-3)から(28-30)の追加雷ダメージ",
+          "name": "電弧する",
+          "engText": "(1-3) to (28-30) Added Lightning Damage with Dagger Attacks",
+          "engName": "Arcing",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 48,
+          "weight": 500,
+          "family": "SpecificWeaponLightningDamage"
+        },
+        {
+          "key": "AbyssAddedLightningDamageWithDaggersJewel4",
+          "text": "短剣によるアタックに(1-4)から(33-35)の追加雷ダメージ",
+          "name": "電撃の",
+          "engText": "(1-4) to (33-35) Added Lightning Damage with Dagger Attacks",
+          "engName": "Shocking",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 60,
+          "weight": 500,
+          "family": "SpecificWeaponLightningDamage"
+        },
+        {
+          "key": "AbyssAddedLightningDamageWithDaggersJewel5",
+          "text": "短剣によるアタックに(2-4)から(40-43)の追加雷ダメージ",
+          "name": "放電する",
+          "engText": "(2-4) to (40-43) Added Lightning Damage with Dagger Attacks",
+          "engName": "Discharging",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 70,
+          "weight": 250,
+          "family": "SpecificWeaponLightningDamage"
+        },
+        {
+          "key": "AbyssAddedLightningDamageWithDaggersJewel6",
+          "text": "短剣によるアタックに(2-5)から(48-50)の追加雷ダメージ",
+          "name": "感電する",
+          "engText": "(2-5) to (48-50) Added Lightning Damage with Dagger Attacks",
+          "engName": "Electrocuting",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 82,
+          "weight": 125,
+          "family": "SpecificWeaponLightningDamage"
+        },
+        {
+          "key": "AbyssAddedLightningDamageWithClawsJewel1__",
+          "text": "鉤爪によるアタックに1から(19-20)の追加雷ダメージ",
+          "name": "電音の",
+          "engText": "1 to (19-20) Added Lightning Damage with Claw Attacks",
+          "engName": "Humming",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "SpecificWeaponLightningDamage"
+        },
+        {
+          "key": "AbyssAddedLightningDamageWithClawsJewel2_",
+          "text": "鉤爪によるアタックに(1-2)から(23-24)の追加雷ダメージ",
+          "name": "電光走る",
+          "engText": "(1-2) to (23-24) Added Lightning Damage with Claw Attacks",
+          "engName": "Sparking",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 37,
+          "weight": 500,
+          "family": "SpecificWeaponLightningDamage"
+        },
+        {
+          "key": "AbyssAddedLightningDamageWithClawsJewel3",
+          "text": "鉤爪によるアタックに(1-3)から(28-30)の追加雷ダメージ",
+          "name": "電弧する",
+          "engText": "(1-3) to (28-30) Added Lightning Damage with Claw Attacks",
+          "engName": "Arcing",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 48,
+          "weight": 500,
+          "family": "SpecificWeaponLightningDamage"
+        },
+        {
+          "key": "AbyssAddedLightningDamageWithClawsJewel4",
+          "text": "鉤爪によるアタックに(1-4)から(33-35)の追加雷ダメージ",
+          "name": "電撃の",
+          "engText": "(1-4) to (33-35) Added Lightning Damage with Claw Attacks",
+          "engName": "Shocking",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 60,
+          "weight": 500,
+          "family": "SpecificWeaponLightningDamage"
+        },
+        {
+          "key": "AbyssAddedLightningDamageWithClawsJewel5",
+          "text": "鉤爪によるアタックに(2-4)から(40-43)の追加雷ダメージ",
+          "name": "放電する",
+          "engText": "(2-4) to (40-43) Added Lightning Damage with Claw Attacks",
+          "engName": "Discharging",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 70,
+          "weight": 250,
+          "family": "SpecificWeaponLightningDamage"
+        },
+        {
+          "key": "AbyssAddedLightningDamageWithClawsJewel6",
+          "text": "鉤爪によるアタックに(2-5)から(48-50)の追加雷ダメージ",
+          "name": "感電する",
+          "engText": "(2-5) to (48-50) Added Lightning Damage with Claw Attacks",
+          "engName": "Electrocuting",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 82,
+          "weight": 125,
+          "family": "SpecificWeaponLightningDamage"
+        },
+        {
+          "key": "AbyssAddedLightningDamageWithSwordsJewel1",
+          "text": "剣によるアタックに1から(19-20)の追加雷ダメージ",
+          "name": "電音の",
+          "engText": "1 to (19-20) Added Lightning Damage with Sword Attacks",
+          "engName": "Humming",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "SpecificWeaponLightningDamage"
+        },
+        {
+          "key": "AbyssAddedLightningDamageWithSwordsJewel2__",
+          "text": "剣によるアタックに(1-2)から(23-24)の追加雷ダメージ",
+          "name": "電光走る",
+          "engText": "(1-2) to (23-24) Added Lightning Damage with Sword Attacks",
+          "engName": "Sparking",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 37,
+          "weight": 500,
+          "family": "SpecificWeaponLightningDamage"
+        },
+        {
+          "key": "AbyssAddedLightningDamageWithSwordsJewel3",
+          "text": "剣によるアタックに(1-3)から(28-30)の追加雷ダメージ",
+          "name": "電弧する",
+          "engText": "(1-3) to (28-30) Added Lightning Damage with Sword Attacks",
+          "engName": "Arcing",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 48,
+          "weight": 500,
+          "family": "SpecificWeaponLightningDamage"
+        },
+        {
+          "key": "AbyssAddedLightningDamageWithSwordsJewel4_",
+          "text": "剣によるアタックに(1-4)から(33-35)の追加雷ダメージ",
+          "name": "電撃の",
+          "engText": "(1-4) to (33-35) Added Lightning Damage with Sword Attacks",
+          "engName": "Shocking",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 60,
+          "weight": 500,
+          "family": "SpecificWeaponLightningDamage"
+        },
+        {
+          "key": "AbyssAddedLightningDamageWithSwordsJewel5_",
+          "text": "剣によるアタックに(2-4)から(40-43)の追加雷ダメージ",
+          "name": "放電する",
+          "engText": "(2-4) to (40-43) Added Lightning Damage with Sword Attacks",
+          "engName": "Discharging",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 70,
+          "weight": 250,
+          "family": "SpecificWeaponLightningDamage"
+        },
+        {
+          "key": "AbyssAddedLightningDamageWithSwordsJewel6",
+          "text": "剣によるアタックに(2-5)から(48-50)の追加雷ダメージ",
+          "name": "感電する",
+          "engText": "(2-5) to (48-50) Added Lightning Damage with Sword Attacks",
+          "engName": "Electrocuting",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 82,
+          "weight": 125,
+          "family": "SpecificWeaponLightningDamage"
+        },
+        {
+          "key": "AbyssAddedLightningDamageWithAxesJewel1",
+          "text": "斧によるアタックに1から(19-20)の追加雷ダメージ",
+          "name": "電音の",
+          "engText": "1 to (19-20) Added Lightning Damage with Axe Attacks",
+          "engName": "Humming",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "SpecificWeaponLightningDamage"
+        },
+        {
+          "key": "AbyssAddedLightningDamageWithAxesJewel2",
+          "text": "斧によるアタックに(1-2)から(23-24)の追加雷ダメージ",
+          "name": "電光走る",
+          "engText": "(1-2) to (23-24) Added Lightning Damage with Axe Attacks",
+          "engName": "Sparking",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 37,
+          "weight": 500,
+          "family": "SpecificWeaponLightningDamage"
+        },
+        {
+          "key": "AbyssAddedLightningDamageWithAxesJewel3_",
+          "text": "斧によるアタックに(1-3)から(28-30)の追加雷ダメージ",
+          "name": "電弧する",
+          "engText": "(1-3) to (28-30) Added Lightning Damage with Axe Attacks",
+          "engName": "Arcing",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 48,
+          "weight": 500,
+          "family": "SpecificWeaponLightningDamage"
+        },
+        {
+          "key": "AbyssAddedLightningDamageWithAxesJewel4",
+          "text": "斧によるアタックに(1-4)から(33-35)の追加雷ダメージ",
+          "name": "電撃の",
+          "engText": "(1-4) to (33-35) Added Lightning Damage with Axe Attacks",
+          "engName": "Shocking",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 60,
+          "weight": 500,
+          "family": "SpecificWeaponLightningDamage"
+        },
+        {
+          "key": "AbyssAddedLightningDamageWithAxesJewel5",
+          "text": "斧によるアタックに(2-4)から(40-43)の追加雷ダメージ",
+          "name": "放電する",
+          "engText": "(2-4) to (40-43) Added Lightning Damage with Axe Attacks",
+          "engName": "Discharging",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 70,
+          "weight": 250,
+          "family": "SpecificWeaponLightningDamage"
+        },
+        {
+          "key": "AbyssAddedLightningDamageWithAxesJewel6",
+          "text": "斧によるアタックに(2-5)から(48-50)の追加雷ダメージ",
+          "name": "感電する",
+          "engText": "(2-5) to (48-50) Added Lightning Damage with Axe Attacks",
+          "engName": "Electrocuting",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 82,
+          "weight": 125,
+          "family": "SpecificWeaponLightningDamage"
+        },
+        {
+          "key": "AbyssAddedLightningDamageWithMacesJewel1",
+          "text": "メイスまたはセプターによるアタックに1から(19-20)の追加雷ダメージ",
+          "name": "電音の",
+          "engText": "1 to (19-20) Added Lightning Damage with Mace or Sceptre Attacks",
+          "engName": "Humming",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "SpecificWeaponLightningDamage"
+        },
+        {
+          "key": "AbyssAddedLightningDamageWithMacesJewel2",
+          "text": "メイスまたはセプターによるアタックに(1-2)から(23-24)の追加雷ダメージ",
+          "name": "電光走る",
+          "engText": "(1-2) to (23-24) Added Lightning Damage with Mace or Sceptre Attacks",
+          "engName": "Sparking",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 37,
+          "weight": 500,
+          "family": "SpecificWeaponLightningDamage"
+        },
+        {
+          "key": "AbyssAddedLightningDamageWithMacesJewel3",
+          "text": "メイスまたはセプターによるアタックに(1-3)から(28-30)の追加雷ダメージ",
+          "name": "電弧する",
+          "engText": "(1-3) to (28-30) Added Lightning Damage with Mace or Sceptre Attacks",
+          "engName": "Arcing",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 48,
+          "weight": 500,
+          "family": "SpecificWeaponLightningDamage"
+        },
+        {
+          "key": "AbyssAddedLightningDamageWithMacesJewel4_",
+          "text": "メイスまたはセプターによるアタックに(1-4)から(33-35)の追加雷ダメージ",
+          "name": "電撃の",
+          "engText": "(1-4) to (33-35) Added Lightning Damage with Mace or Sceptre Attacks",
+          "engName": "Shocking",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 60,
+          "weight": 500,
+          "family": "SpecificWeaponLightningDamage"
+        },
+        {
+          "key": "AbyssAddedLightningDamageWithMacesJewel5",
+          "text": "メイスまたはセプターによるアタックに(2-4)から(40-43)の追加雷ダメージ",
+          "name": "放電する",
+          "engText": "(2-4) to (40-43) Added Lightning Damage with Mace or Sceptre Attacks",
+          "engName": "Discharging",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 70,
+          "weight": 250,
+          "family": "SpecificWeaponLightningDamage"
+        },
+        {
+          "key": "AbyssAddedLightningDamageWithMacesJewel6",
+          "text": "メイスまたはセプターによるアタックに(2-5)から(48-50)の追加雷ダメージ",
+          "name": "感電する",
+          "engText": "(2-5) to (48-50) Added Lightning Damage with Mace or Sceptre Attacks",
+          "engName": "Electrocuting",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 82,
+          "weight": 125,
+          "family": "SpecificWeaponLightningDamage"
+        },
+        {
+          "key": "AbyssAddedLightningDamageWithStavesJewel1",
+          "text": "スタッフによるアタックに1から(19-20)の追加雷ダメージ",
+          "name": "電音の",
+          "engText": "1 to (19-20) Added Lightning Damage with Staff Attacks",
+          "engName": "Humming",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "SpecificWeaponLightningDamage"
+        },
+        {
+          "key": "AbyssAddedLightningDamageWithStavesJewel2",
+          "text": "スタッフによるアタックに(1-2)から(23-24)の追加雷ダメージ",
+          "name": "電光走る",
+          "engText": "(1-2) to (23-24) Added Lightning Damage with Staff Attacks",
+          "engName": "Sparking",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 37,
+          "weight": 500,
+          "family": "SpecificWeaponLightningDamage"
+        },
+        {
+          "key": "AbyssAddedLightningDamageWithStavesJewel3",
+          "text": "スタッフによるアタックに(1-3)から(28-30)の追加雷ダメージ",
+          "name": "電弧する",
+          "engText": "(1-3) to (28-30) Added Lightning Damage with Staff Attacks",
+          "engName": "Arcing",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 48,
+          "weight": 500,
+          "family": "SpecificWeaponLightningDamage"
+        },
+        {
+          "key": "AbyssAddedLightningDamageWithStavesJewel4",
+          "text": "スタッフによるアタックに(1-4)から(33-35)の追加雷ダメージ",
+          "name": "電撃の",
+          "engText": "(1-4) to (33-35) Added Lightning Damage with Staff Attacks",
+          "engName": "Shocking",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 60,
+          "weight": 500,
+          "family": "SpecificWeaponLightningDamage"
+        },
+        {
+          "key": "AbyssAddedLightningDamageWithStavesJewel5",
+          "text": "スタッフによるアタックに(2-4)から(40-43)の追加雷ダメージ",
+          "name": "放電する",
+          "engText": "(2-4) to (40-43) Added Lightning Damage with Staff Attacks",
+          "engName": "Discharging",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 70,
+          "weight": 250,
+          "family": "SpecificWeaponLightningDamage"
+        },
+        {
+          "key": "AbyssAddedLightningDamageWithStavesJewel6",
+          "text": "スタッフによるアタックに(2-5)から(48-50)の追加雷ダメージ",
+          "name": "感電する",
+          "engText": "(2-5) to (48-50) Added Lightning Damage with Staff Attacks",
+          "engName": "Electrocuting",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 82,
+          "weight": 125,
+          "family": "SpecificWeaponLightningDamage"
+        }
+      ],
+      "SpecificWeaponFireDamage": [
+        {
+          "key": "AbyssAddedFireDamageWithDaggersJewel1",
+          "text": "短剣によるアタックに(5-6)から(11-12)の追加火ダメージ",
+          "name": "熱した",
+          "engText": "(5-6) to (11-12) Added Fire Damage with Dagger Attacks",
+          "engName": "Heated",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "SpecificWeaponFireDamage"
+        },
+        {
+          "key": "AbyssAddedFireDamageWithDaggersJewel2",
+          "text": "短剣によるアタックに(7-8)から(13-15)の追加火ダメージ",
+          "name": "燃え立つ",
+          "engText": "(7-8) to (13-15) Added Fire Damage with Dagger Attacks",
+          "engName": "Flaming",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 40,
+          "weight": 500,
+          "family": "SpecificWeaponFireDamage"
+        },
+        {
+          "key": "AbyssAddedFireDamageWithDaggersJewel3",
+          "text": "短剣によるアタックに(9-11)から(16-19)の追加火ダメージ",
+          "name": "焼き焦がす",
+          "engText": "(9-11) to (16-19) Added Fire Damage with Dagger Attacks",
+          "engName": "Scorching",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 51,
+          "weight": 500,
+          "family": "SpecificWeaponFireDamage"
+        },
+        {
+          "key": "AbyssAddedFireDamageWithDaggersJewel4",
+          "text": "短剣によるアタックに(12-13)から(20-22)の追加火ダメージ",
+          "name": "焼却する",
+          "engText": "(12-13) to (20-22) Added Fire Damage with Dagger Attacks",
+          "engName": "Incinerating",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 62,
+          "weight": 500,
+          "family": "SpecificWeaponFireDamage"
+        },
+        {
+          "key": "AbyssAddedFireDamageWithDaggersJewel5",
+          "text": "短剣によるアタックに(14-15)から(23-26)の追加火ダメージ",
+          "name": "爆破する",
+          "engText": "(14-15) to (23-26) Added Fire Damage with Dagger Attacks",
+          "engName": "Blasting",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 72,
+          "weight": 250,
+          "family": "SpecificWeaponFireDamage"
+        },
+        {
+          "key": "AbyssAddedFireDamageWithDaggersJewel6",
+          "text": "短剣によるアタックに(16-18)から(27-32)の追加火ダメージ",
+          "name": "火葬する",
+          "engText": "(16-18) to (27-32) Added Fire Damage with Dagger Attacks",
+          "engName": "Cremating",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 84,
+          "weight": 125,
+          "family": "SpecificWeaponFireDamage"
+        },
+        {
+          "key": "AbyssAddedFireDamageWithClawsJewel1",
+          "text": "鉤爪によるアタックに(5-6)から(11-12)の追加火ダメージ",
+          "name": "熱した",
+          "engText": "(5-6) to (11-12) Added Fire Damage with Claw Attacks",
+          "engName": "Heated",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "SpecificWeaponFireDamage"
+        },
+        {
+          "key": "AbyssAddedFireDamageWithClawsJewel2",
+          "text": "鉤爪によるアタックに(7-8)から(13-15)の追加火ダメージ",
+          "name": "燃え立つ",
+          "engText": "(7-8) to (13-15) Added Fire Damage with Claw Attacks",
+          "engName": "Flaming",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 40,
+          "weight": 500,
+          "family": "SpecificWeaponFireDamage"
+        },
+        {
+          "key": "AbyssAddedFireDamageWithClawsJewel3",
+          "text": "鉤爪によるアタックに(9-11)から(16-19)の追加火ダメージ",
+          "name": "焼き焦がす",
+          "engText": "(9-11) to (16-19) Added Fire Damage with Claw Attacks",
+          "engName": "Scorching",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 51,
+          "weight": 500,
+          "family": "SpecificWeaponFireDamage"
+        },
+        {
+          "key": "AbyssAddedFireDamageWithClawsJewel4",
+          "text": "鉤爪によるアタックに(12-13)から(20-22)の追加火ダメージ",
+          "name": "焼却する",
+          "engText": "(12-13) to (20-22) Added Fire Damage with Claw Attacks",
+          "engName": "Incinerating",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 62,
+          "weight": 500,
+          "family": "SpecificWeaponFireDamage"
+        },
+        {
+          "key": "AbyssAddedFireDamageWithClawsJewel5",
+          "text": "鉤爪によるアタックに(14-15)から(23-26)の追加火ダメージ",
+          "name": "爆破する",
+          "engText": "(14-15) to (23-26) Added Fire Damage with Claw Attacks",
+          "engName": "Blasting",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 72,
+          "weight": 250,
+          "family": "SpecificWeaponFireDamage"
+        },
+        {
+          "key": "AbyssAddedFireDamageWithClawsJewel6",
+          "text": "鉤爪によるアタックに(16-18)から(27-32)の追加火ダメージ",
+          "name": "火葬する",
+          "engText": "(16-18) to (27-32) Added Fire Damage with Claw Attacks",
+          "engName": "Cremating",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 84,
+          "weight": 125,
+          "family": "SpecificWeaponFireDamage"
+        },
+        {
+          "key": "AbyssAddedFireDamageWithSwordsJewel1",
+          "text": "剣によるアタックに(5-6)から(11-12)の追加火ダメージ",
+          "name": "熱した",
+          "engText": "(5-6) to (11-12) Added Fire Damage with Sword Attacks",
+          "engName": "Heated",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "SpecificWeaponFireDamage"
+        },
+        {
+          "key": "AbyssAddedFireDamageWithSwordsJewel2",
+          "text": "剣によるアタックに(7-8)から(13-15)の追加火ダメージ",
+          "name": "燃え立つ",
+          "engText": "(7-8) to (13-15) Added Fire Damage with Sword Attacks",
+          "engName": "Flaming",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 40,
+          "weight": 500,
+          "family": "SpecificWeaponFireDamage"
+        },
+        {
+          "key": "AbyssAddedFireDamageWithSwordsJewel3___",
+          "text": "剣によるアタックに(9-11)から(16-19)の追加火ダメージ",
+          "name": "焼き焦がす",
+          "engText": "(9-11) to (16-19) Added Fire Damage with Sword Attacks",
+          "engName": "Scorching",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 51,
+          "weight": 500,
+          "family": "SpecificWeaponFireDamage"
+        },
+        {
+          "key": "AbyssAddedFireDamageWithSwordsJewel4",
+          "text": "剣によるアタックに(12-13)から(20-22)の追加火ダメージ",
+          "name": "焼却する",
+          "engText": "(12-13) to (20-22) Added Fire Damage with Sword Attacks",
+          "engName": "Incinerating",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 62,
+          "weight": 500,
+          "family": "SpecificWeaponFireDamage"
+        },
+        {
+          "key": "AbyssAddedFireDamageWithSwordsJewel5_",
+          "text": "剣によるアタックに(14-15)から(23-26)の追加火ダメージ",
+          "name": "爆破する",
+          "engText": "(14-15) to (23-26) Added Fire Damage with Sword Attacks",
+          "engName": "Blasting",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 72,
+          "weight": 250,
+          "family": "SpecificWeaponFireDamage"
+        },
+        {
+          "key": "AbyssAddedFireDamageWithSwordsJewel6",
+          "text": "剣によるアタックに(16-18)から(27-32)の追加火ダメージ",
+          "name": "火葬する",
+          "engText": "(16-18) to (27-32) Added Fire Damage with Sword Attacks",
+          "engName": "Cremating",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 84,
+          "weight": 125,
+          "family": "SpecificWeaponFireDamage"
+        },
+        {
+          "key": "AbyssAddedFireDamageWithAxesJewel1_",
+          "text": "斧によるアタックに(5-6)から(11-12)の追加火ダメージ",
+          "name": "熱した",
+          "engText": "(5-6) to (11-12) Added Fire Damage with Axe Attacks",
+          "engName": "Heated",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "SpecificWeaponFireDamage"
+        },
+        {
+          "key": "AbyssAddedFireDamageWithAxesJewel2",
+          "text": "斧によるアタックに(7-8)から(13-15)の追加火ダメージ",
+          "name": "燃え立つ",
+          "engText": "(7-8) to (13-15) Added Fire Damage with Axe Attacks",
+          "engName": "Flaming",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 40,
+          "weight": 500,
+          "family": "SpecificWeaponFireDamage"
+        },
+        {
+          "key": "AbyssAddedFireDamageWithAxesJewel3",
+          "text": "斧によるアタックに(9-11)から(16-19)の追加火ダメージ",
+          "name": "焼き焦がす",
+          "engText": "(9-11) to (16-19) Added Fire Damage with Axe Attacks",
+          "engName": "Scorching",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 51,
+          "weight": 500,
+          "family": "SpecificWeaponFireDamage"
+        },
+        {
+          "key": "AbyssAddedFireDamageWithAxesJewel4",
+          "text": "斧によるアタックに(12-13)から(20-22)の追加火ダメージ",
+          "name": "焼却する",
+          "engText": "(12-13) to (20-22) Added Fire Damage with Axe Attacks",
+          "engName": "Incinerating",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 62,
+          "weight": 500,
+          "family": "SpecificWeaponFireDamage"
+        },
+        {
+          "key": "AbyssAddedFireDamageWithAxesJewel5",
+          "text": "斧によるアタックに(14-15)から(23-26)の追加火ダメージ",
+          "name": "爆破する",
+          "engText": "(14-15) to (23-26) Added Fire Damage with Axe Attacks",
+          "engName": "Blasting",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 72,
+          "weight": 250,
+          "family": "SpecificWeaponFireDamage"
+        },
+        {
+          "key": "AbyssAddedFireDamageWithAxesJewel6_",
+          "text": "斧によるアタックに(16-18)から(27-32)の追加火ダメージ",
+          "name": "火葬する",
+          "engText": "(16-18) to (27-32) Added Fire Damage with Axe Attacks",
+          "engName": "Cremating",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 84,
+          "weight": 125,
+          "family": "SpecificWeaponFireDamage"
+        },
+        {
+          "key": "AbyssAddedFireDamageWithMacesJewel1",
+          "text": "メイスまたはセプターによるアタックに(5-6)から(11-12)の追加火ダメージ",
+          "name": "熱した",
+          "engText": "(5-6) to (11-12) Added Fire Damage with Mace or Sceptre Attacks",
+          "engName": "Heated",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "SpecificWeaponFireDamage"
+        },
+        {
+          "key": "AbyssAddedFireDamageWithMacesJewel2_",
+          "text": "メイスまたはセプターによるアタックに(7-8)から(13-15)の追加火ダメージ",
+          "name": "燃え立つ",
+          "engText": "(7-8) to (13-15) Added Fire Damage with Mace or Sceptre Attacks",
+          "engName": "Flaming",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 40,
+          "weight": 500,
+          "family": "SpecificWeaponFireDamage"
+        },
+        {
+          "key": "AbyssAddedFireDamageWithMacesJewel3",
+          "text": "メイスまたはセプターによるアタックに(9-11)から(16-19)の追加火ダメージ",
+          "name": "焼き焦がす",
+          "engText": "(9-11) to (16-19) Added Fire Damage with Mace or Sceptre Attacks",
+          "engName": "Scorching",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 51,
+          "weight": 500,
+          "family": "SpecificWeaponFireDamage"
+        },
+        {
+          "key": "AbyssAddedFireDamageWithMacesJewel4",
+          "text": "メイスまたはセプターによるアタックに(12-13)から(20-22)の追加火ダメージ",
+          "name": "焼却する",
+          "engText": "(12-13) to (20-22) Added Fire Damage with Mace or Sceptre Attacks",
+          "engName": "Incinerating",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 62,
+          "weight": 500,
+          "family": "SpecificWeaponFireDamage"
+        },
+        {
+          "key": "AbyssAddedFireDamageWithMacesJewel5_",
+          "text": "メイスまたはセプターによるアタックに(14-15)から(23-26)の追加火ダメージ",
+          "name": "爆破する",
+          "engText": "(14-15) to (23-26) Added Fire Damage with Mace or Sceptre Attacks",
+          "engName": "Blasting",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 72,
+          "weight": 250,
+          "family": "SpecificWeaponFireDamage"
+        },
+        {
+          "key": "AbyssAddedFireDamageWithMacesJewel6",
+          "text": "メイスまたはセプターによるアタックに(16-18)から(27-32)の追加火ダメージ",
+          "name": "火葬する",
+          "engText": "(16-18) to (27-32) Added Fire Damage with Mace or Sceptre Attacks",
+          "engName": "Cremating",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 84,
+          "weight": 125,
+          "family": "SpecificWeaponFireDamage"
+        },
+        {
+          "key": "AbyssAddedFireDamageWithStavesJewel1_",
+          "text": "スタッフによるアタックに(5-6)から(11-12)の追加火ダメージ",
+          "name": "熱した",
+          "engText": "(5-6) to (11-12) Added Fire Damage with Staff Attacks",
+          "engName": "Heated",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "SpecificWeaponFireDamage"
+        },
+        {
+          "key": "AbyssAddedFireDamageWithStavesJewel2",
+          "text": "スタッフによるアタックに(7-8)から(13-15)の追加火ダメージ",
+          "name": "燃え立つ",
+          "engText": "(7-8) to (13-15) Added Fire Damage with Staff Attacks",
+          "engName": "Flaming",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 40,
+          "weight": 500,
+          "family": "SpecificWeaponFireDamage"
+        },
+        {
+          "key": "AbyssAddedFireDamageWithStavesJewel3__",
+          "text": "スタッフによるアタックに(9-11)から(16-19)の追加火ダメージ",
+          "name": "焼き焦がす",
+          "engText": "(9-11) to (16-19) Added Fire Damage with Staff Attacks",
+          "engName": "Scorching",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 51,
+          "weight": 500,
+          "family": "SpecificWeaponFireDamage"
+        },
+        {
+          "key": "AbyssAddedFireDamageWithStavesJewel4",
+          "text": "スタッフによるアタックに(12-13)から(20-22)の追加火ダメージ",
+          "name": "焼却する",
+          "engText": "(12-13) to (20-22) Added Fire Damage with Staff Attacks",
+          "engName": "Incinerating",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 62,
+          "weight": 500,
+          "family": "SpecificWeaponFireDamage"
+        },
+        {
+          "key": "AbyssAddedFireDamageWithStavesJewel5__",
+          "text": "スタッフによるアタックに(14-15)から(23-26)の追加火ダメージ",
+          "name": "爆破する",
+          "engText": "(14-15) to (23-26) Added Fire Damage with Staff Attacks",
+          "engName": "Blasting",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 72,
+          "weight": 250,
+          "family": "SpecificWeaponFireDamage"
+        },
+        {
+          "key": "AbyssAddedFireDamageWithStavesJewel6",
+          "text": "スタッフによるアタックに(16-18)から(27-32)の追加火ダメージ",
+          "name": "火葬する",
+          "engText": "(16-18) to (27-32) Added Fire Damage with Staff Attacks",
+          "engName": "Cremating",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 84,
+          "weight": 125,
+          "family": "SpecificWeaponFireDamage"
+        }
+      ],
+      "SpecificWeaponColdDamage": [
+        {
+          "key": "AbyssAddedColdDamageWithDaggersJewel1",
+          "text": "短剣によるアタックに(4-5)から(9-10)の追加冷気ダメージ",
+          "name": "凍てついた",
+          "engText": "(4-5) to (9-10) Added Cold Damage with Dagger Attacks",
+          "engName": "Frosted",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "SpecificWeaponColdDamage"
+        },
+        {
+          "key": "AbyssAddedColdDamageWithDaggersJewel2",
+          "text": "短剣によるアタックに(6-7)から(11-13)の追加冷気ダメージ",
+          "name": "凍りつく",
+          "engText": "(6-7) to (11-13) Added Cold Damage with Dagger Attacks",
+          "engName": "Freezing",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 38,
+          "weight": 500,
+          "family": "SpecificWeaponColdDamage"
+        },
+        {
+          "key": "AbyssAddedColdDamageWithDaggersJewel3",
+          "text": "短剣によるアタックに(8-9)から(14-16)の追加冷気ダメージ",
+          "name": "凍結した",
+          "engText": "(8-9) to (14-16) Added Cold Damage with Dagger Attacks",
+          "engName": "Frozen",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 47,
+          "weight": 500,
+          "family": "SpecificWeaponColdDamage"
+        },
+        {
+          "key": "AbyssAddedColdDamageWithDaggersJewel4",
+          "text": "短剣によるアタックに(10-11)から(17-20)の追加冷気ダメージ",
+          "name": "氷結した",
+          "engText": "(10-11) to (17-20) Added Cold Damage with Dagger Attacks",
+          "engName": "Glaciated",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 59,
+          "weight": 500,
+          "family": "SpecificWeaponColdDamage"
+        },
+        {
+          "key": "AbyssAddedColdDamageWithDaggersJewel5",
+          "text": "短剣によるアタックに(12-13)から(21-24)の追加冷気ダメージ",
+          "name": "極地の",
+          "engText": "(12-13) to (21-24) Added Cold Damage with Dagger Attacks",
+          "engName": "Polar",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 68,
+          "weight": 250,
+          "family": "SpecificWeaponColdDamage"
+        },
+        {
+          "key": "AbyssAddedColdDamageWithDaggersJewel6",
+          "text": "短剣によるアタックに(14-15)から(25-28)の追加冷気ダメージ",
+          "name": "氷葬する",
+          "engText": "(14-15) to (25-28) Added Cold Damage with Dagger Attacks",
+          "engName": "Entombing",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 83,
+          "weight": 125,
+          "family": "SpecificWeaponColdDamage"
+        },
+        {
+          "key": "AbyssAddedColdDamageWithClawsJewel1",
+          "text": "鉤爪によるアタックに(4-5)から(9-10)の追加冷気ダメージ",
+          "name": "凍てついた",
+          "engText": "(4-5) to (9-10) Added Cold Damage with Claw Attacks",
+          "engName": "Frosted",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "SpecificWeaponColdDamage"
+        },
+        {
+          "key": "AbyssAddedColdDamageWithClawsJewel2",
+          "text": "鉤爪によるアタックに(6-7)から(11-13)の追加冷気ダメージ",
+          "name": "凍りつく",
+          "engText": "(6-7) to (11-13) Added Cold Damage with Claw Attacks",
+          "engName": "Freezing",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 38,
+          "weight": 500,
+          "family": "SpecificWeaponColdDamage"
+        },
+        {
+          "key": "AbyssAddedColdDamageWithClawsJewel3",
+          "text": "鉤爪によるアタックに(8-9)から(14-16)の追加冷気ダメージ",
+          "name": "凍結した",
+          "engText": "(8-9) to (14-16) Added Cold Damage with Claw Attacks",
+          "engName": "Frozen",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 47,
+          "weight": 500,
+          "family": "SpecificWeaponColdDamage"
+        },
+        {
+          "key": "AbyssAddedColdDamageWithClawsJewel4",
+          "text": "鉤爪によるアタックに(10-11)から(17-20)の追加冷気ダメージ",
+          "name": "氷結した",
+          "engText": "(10-11) to (17-20) Added Cold Damage with Claw Attacks",
+          "engName": "Glaciated",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 59,
+          "weight": 500,
+          "family": "SpecificWeaponColdDamage"
+        },
+        {
+          "key": "AbyssAddedColdDamageWithClawsJewel5",
+          "text": "鉤爪によるアタックに(12-13)から(21-24)の追加冷気ダメージ",
+          "name": "極地の",
+          "engText": "(12-13) to (21-24) Added Cold Damage with Claw Attacks",
+          "engName": "Polar",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 68,
+          "weight": 250,
+          "family": "SpecificWeaponColdDamage"
+        },
+        {
+          "key": "AbyssAddedColdDamageWithClawsJewel6",
+          "text": "鉤爪によるアタックに(14-15)から(25-28)の追加冷気ダメージ",
+          "name": "氷葬する",
+          "engText": "(14-15) to (25-28) Added Cold Damage with Claw Attacks",
+          "engName": "Entombing",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 83,
+          "weight": 125,
+          "family": "SpecificWeaponColdDamage"
+        },
+        {
+          "key": "AbyssAddedColdDamageWithSwordsJewel1",
+          "text": "剣によるアタックに(4-5)から(9-10)の追加冷気ダメージ",
+          "name": "凍てついた",
+          "engText": "(4-5) to (9-10) Added Cold Damage with Sword Attacks",
+          "engName": "Frosted",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "SpecificWeaponColdDamage"
+        },
+        {
+          "key": "AbyssAddedColdDamageWithSwordsJewel2",
+          "text": "剣によるアタックに(6-7)から(11-13)の追加冷気ダメージ",
+          "name": "凍りつく",
+          "engText": "(6-7) to (11-13) Added Cold Damage with Sword Attacks",
+          "engName": "Freezing",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 38,
+          "weight": 500,
+          "family": "SpecificWeaponColdDamage"
+        },
+        {
+          "key": "AbyssAddedColdDamageWithSwordsJewel3",
+          "text": "剣によるアタックに(8-9)から(14-16)の追加冷気ダメージ",
+          "name": "凍結した",
+          "engText": "(8-9) to (14-16) Added Cold Damage with Sword Attacks",
+          "engName": "Frozen",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 47,
+          "weight": 500,
+          "family": "SpecificWeaponColdDamage"
+        },
+        {
+          "key": "AbyssAddedColdDamageWithSwordsJewel4",
+          "text": "剣によるアタックに(10-11)から(17-20)の追加冷気ダメージ",
+          "name": "氷結した",
+          "engText": "(10-11) to (17-20) Added Cold Damage with Sword Attacks",
+          "engName": "Glaciated",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 59,
+          "weight": 500,
+          "family": "SpecificWeaponColdDamage"
+        },
+        {
+          "key": "AbyssAddedColdDamageWithSwordsJewel5",
+          "text": "剣によるアタックに(12-13)から(21-24)の追加冷気ダメージ",
+          "name": "極地の",
+          "engText": "(12-13) to (21-24) Added Cold Damage with Sword Attacks",
+          "engName": "Polar",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 68,
+          "weight": 250,
+          "family": "SpecificWeaponColdDamage"
+        },
+        {
+          "key": "AbyssAddedColdDamageWithSwordsJewel6",
+          "text": "剣によるアタックに(14-15)から(25-28)の追加冷気ダメージ",
+          "name": "氷葬する",
+          "engText": "(14-15) to (25-28) Added Cold Damage with Sword Attacks",
+          "engName": "Entombing",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 83,
+          "weight": 125,
+          "family": "SpecificWeaponColdDamage"
+        },
+        {
+          "key": "AbyssAddedColdDamageWithAxesJewel1",
+          "text": "斧によるアタックに(4-5)から(9-10)の追加冷気ダメージ",
+          "name": "凍てついた",
+          "engText": "(4-5) to (9-10) Added Cold Damage with Axe Attacks",
+          "engName": "Frosted",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "SpecificWeaponColdDamage"
+        },
+        {
+          "key": "AbyssAddedColdDamageWithAxesJewel2",
+          "text": "斧によるアタックに(6-7)から(11-13)の追加冷気ダメージ",
+          "name": "凍りつく",
+          "engText": "(6-7) to (11-13) Added Cold Damage with Axe Attacks",
+          "engName": "Freezing",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 38,
+          "weight": 500,
+          "family": "SpecificWeaponColdDamage"
+        },
+        {
+          "key": "AbyssAddedColdDamageWithAxesJewel3",
+          "text": "斧によるアタックに(8-9)から(14-16)の追加冷気ダメージ",
+          "name": "凍結した",
+          "engText": "(8-9) to (14-16) Added Cold Damage with Axe Attacks",
+          "engName": "Frozen",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 47,
+          "weight": 500,
+          "family": "SpecificWeaponColdDamage"
+        },
+        {
+          "key": "AbyssAddedColdDamageWithAxesJewel4",
+          "text": "斧によるアタックに(10-11)から(17-20)の追加冷気ダメージ",
+          "name": "氷結した",
+          "engText": "(10-11) to (17-20) Added Cold Damage with Axe Attacks",
+          "engName": "Glaciated",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 59,
+          "weight": 500,
+          "family": "SpecificWeaponColdDamage"
+        },
+        {
+          "key": "AbyssAddedColdDamageWithAxesJewel5",
+          "text": "斧によるアタックに(12-13)から(21-24)の追加冷気ダメージ",
+          "name": "極地の",
+          "engText": "(12-13) to (21-24) Added Cold Damage with Axe Attacks",
+          "engName": "Polar",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 68,
+          "weight": 250,
+          "family": "SpecificWeaponColdDamage"
+        },
+        {
+          "key": "AbyssAddedColdDamageWithAxesJewel6",
+          "text": "斧によるアタックに(14-15)から(25-28)の追加冷気ダメージ",
+          "name": "氷葬する",
+          "engText": "(14-15) to (25-28) Added Cold Damage with Axe Attacks",
+          "engName": "Entombing",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 83,
+          "weight": 125,
+          "family": "SpecificWeaponColdDamage"
+        },
+        {
+          "key": "AbyssAddedColdDamageWithMacesJewel1",
+          "text": "メイスまたはセプターによるアタックに(4-5)から(9-10)の追加冷気ダメージ",
+          "name": "凍てついた",
+          "engText": "(4-5) to (9-10) Added Cold Damage with Mace or Sceptre Attacks",
+          "engName": "Frosted",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "SpecificWeaponColdDamage"
+        },
+        {
+          "key": "AbyssAddedColdDamageWithMacesJewel2",
+          "text": "メイスまたはセプターによるアタックに(6-7)から(11-13)の追加冷気ダメージ",
+          "name": "凍りつく",
+          "engText": "(6-7) to (11-13) Added Cold Damage with Mace or Sceptre Attacks",
+          "engName": "Freezing",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 38,
+          "weight": 500,
+          "family": "SpecificWeaponColdDamage"
+        },
+        {
+          "key": "AbyssAddedColdDamageWithMacesJewel3",
+          "text": "メイスまたはセプターによるアタックに(8-9)から(14-16)の追加冷気ダメージ",
+          "name": "凍結した",
+          "engText": "(8-9) to (14-16) Added Cold Damage with Mace or Sceptre Attacks",
+          "engName": "Frozen",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 47,
+          "weight": 500,
+          "family": "SpecificWeaponColdDamage"
+        },
+        {
+          "key": "AbyssAddedColdDamageWithMacesJewel4",
+          "text": "メイスまたはセプターによるアタックに(10-11)から(17-20)の追加冷気ダメージ",
+          "name": "氷結した",
+          "engText": "(10-11) to (17-20) Added Cold Damage with Mace or Sceptre Attacks",
+          "engName": "Glaciated",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 59,
+          "weight": 500,
+          "family": "SpecificWeaponColdDamage"
+        },
+        {
+          "key": "AbyssAddedColdDamageWithMacesJewel5_",
+          "text": "メイスまたはセプターによるアタックに(12-13)から(21-24)の追加冷気ダメージ",
+          "name": "極地の",
+          "engText": "(12-13) to (21-24) Added Cold Damage with Mace or Sceptre Attacks",
+          "engName": "Polar",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 68,
+          "weight": 250,
+          "family": "SpecificWeaponColdDamage"
+        },
+        {
+          "key": "AbyssAddedColdDamageWithMacesJewel6",
+          "text": "メイスまたはセプターによるアタックに(14-15)から(25-28)の追加冷気ダメージ",
+          "name": "氷葬する",
+          "engText": "(14-15) to (25-28) Added Cold Damage with Mace or Sceptre Attacks",
+          "engName": "Entombing",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 83,
+          "weight": 125,
+          "family": "SpecificWeaponColdDamage"
+        },
+        {
+          "key": "AbyssAddedColdDamageWithStavesJewel1",
+          "text": "スタッフによるアタックに(4-5)から(9-10)の追加冷気ダメージ",
+          "name": "凍てついた",
+          "engText": "(4-5) to (9-10) Added Cold Damage with Staff Attacks",
+          "engName": "Frosted",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "SpecificWeaponColdDamage"
+        },
+        {
+          "key": "AbyssAddedColdDamageWithStavesJewel2_",
+          "text": "スタッフによるアタックに(6-7)から(11-13)の追加冷気ダメージ",
+          "name": "凍りつく",
+          "engText": "(6-7) to (11-13) Added Cold Damage with Staff Attacks",
+          "engName": "Freezing",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 38,
+          "weight": 500,
+          "family": "SpecificWeaponColdDamage"
+        },
+        {
+          "key": "AbyssAddedColdDamageWithStavesJewel3_",
+          "text": "スタッフによるアタックに(8-9)から(14-16)の追加冷気ダメージ",
+          "name": "凍結した",
+          "engText": "(8-9) to (14-16) Added Cold Damage with Staff Attacks",
+          "engName": "Frozen",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 47,
+          "weight": 500,
+          "family": "SpecificWeaponColdDamage"
+        },
+        {
+          "key": "AbyssAddedColdDamageWithStavesJewel4",
+          "text": "スタッフによるアタックに(10-11)から(17-20)の追加冷気ダメージ",
+          "name": "氷結した",
+          "engText": "(10-11) to (17-20) Added Cold Damage with Staff Attacks",
+          "engName": "Glaciated",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 59,
+          "weight": 500,
+          "family": "SpecificWeaponColdDamage"
+        },
+        {
+          "key": "AbyssAddedColdDamageWithStavesJewel5",
+          "text": "スタッフによるアタックに(12-13)から(21-24)の追加冷気ダメージ",
+          "name": "極地の",
+          "engText": "(12-13) to (21-24) Added Cold Damage with Staff Attacks",
+          "engName": "Polar",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 68,
+          "weight": 250,
+          "family": "SpecificWeaponColdDamage"
+        },
+        {
+          "key": "AbyssAddedColdDamageWithStavesJewel6",
+          "text": "スタッフによるアタックに(14-15)から(25-28)の追加冷気ダメージ",
+          "name": "氷葬する",
+          "engText": "(14-15) to (25-28) Added Cold Damage with Staff Attacks",
+          "engName": "Entombing",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 83,
+          "weight": 125,
+          "family": "SpecificWeaponColdDamage"
+        }
+      ],
+      "SpecificWeaponChaosDamage": [
+        {
+          "key": "AbyssAddedChaosDamageWithDaggersJewel1",
+          "text": "短剣によるアタックに(4-5)から(9-10)の追加混沌ダメージ",
+          "name": "汚れた",
+          "engText": "(4-5) to (9-10) Added Chaos Damage with Dagger Attacks",
+          "engName": "Tainted",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "SpecificWeaponChaosDamage"
+        },
+        {
+          "key": "AbyssAddedChaosDamageWithDaggersJewel2_",
+          "text": "短剣によるアタックに(6-7)から(11-13)の追加混沌ダメージ",
+          "name": "曇った",
+          "engText": "(6-7) to (11-13) Added Chaos Damage with Dagger Attacks",
+          "engName": "Clouded",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 42,
+          "weight": 250,
+          "family": "SpecificWeaponChaosDamage"
+        },
+        {
+          "key": "AbyssAddedChaosDamageWithDaggersJewel3__",
+          "text": "短剣によるアタックに(8-9)から(14-16)の追加混沌ダメージ",
+          "name": "昏い",
+          "engText": "(8-9) to (14-16) Added Chaos Damage with Dagger Attacks",
+          "engName": "Darkened",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 64,
+          "weight": 250,
+          "family": "SpecificWeaponChaosDamage"
+        },
+        {
+          "key": "AbyssAddedChaosDamageWithDaggersJewel4",
+          "text": "短剣によるアタックに(10-11)から(17-20)の追加混沌ダメージ",
+          "name": "有害な",
+          "engText": "(10-11) to (17-20) Added Chaos Damage with Dagger Attacks",
+          "engName": "Malignant",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 77,
+          "weight": 125,
+          "family": "SpecificWeaponChaosDamage"
+        },
+        {
+          "key": "AbyssAddedChaosDamageWithDaggersJewel5",
+          "text": "短剣によるアタックに(12-13)から(21-24)の追加混沌ダメージ",
+          "name": "不浄な",
+          "engText": "(12-13) to (21-24) Added Chaos Damage with Dagger Attacks",
+          "engName": "Vile",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 85,
+          "weight": 60,
+          "family": "SpecificWeaponChaosDamage"
+        },
+        {
+          "key": "AbyssAddedChaosDamageWithClawsJewel1",
+          "text": "鉤爪によるアタックに(4-5)から(9-10)の追加混沌ダメージ",
+          "name": "汚れた",
+          "engText": "(4-5) to (9-10) Added Chaos Damage with Claw Attacks",
+          "engName": "Tainted",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "SpecificWeaponChaosDamage"
+        },
+        {
+          "key": "AbyssAddedChaosDamageWithClawsJewel2",
+          "text": "鉤爪によるアタックに(6-7)から(11-13)の追加混沌ダメージ",
+          "name": "曇った",
+          "engText": "(6-7) to (11-13) Added Chaos Damage with Claw Attacks",
+          "engName": "Clouded",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 42,
+          "weight": 250,
+          "family": "SpecificWeaponChaosDamage"
+        },
+        {
+          "key": "AbyssAddedChaosDamageWithClawsJewel3_",
+          "text": "鉤爪によるアタックに(8-9)から(14-16)の追加混沌ダメージ",
+          "name": "昏い",
+          "engText": "(8-9) to (14-16) Added Chaos Damage with Claw Attacks",
+          "engName": "Darkened",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 64,
+          "weight": 250,
+          "family": "SpecificWeaponChaosDamage"
+        },
+        {
+          "key": "AbyssAddedChaosDamageWithClawsJewel4",
+          "text": "鉤爪によるアタックに(10-11)から(17-20)の追加混沌ダメージ",
+          "name": "有害な",
+          "engText": "(10-11) to (17-20) Added Chaos Damage with Claw Attacks",
+          "engName": "Malignant",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 77,
+          "weight": 125,
+          "family": "SpecificWeaponChaosDamage"
+        },
+        {
+          "key": "AbyssAddedChaosDamageWithClawsJewel5_",
+          "text": "鉤爪によるアタックに(12-13)から(21-24)の追加混沌ダメージ",
+          "name": "不浄な",
+          "engText": "(12-13) to (21-24) Added Chaos Damage with Claw Attacks",
+          "engName": "Vile",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 85,
+          "weight": 60,
+          "family": "SpecificWeaponChaosDamage"
+        }
+      ],
+      "EnergyShieldRegeneration": [
+        {
+          "key": "AbyssFlatEnergyShieldRegenerationJewel1",
+          "text": "毎秒(9-12)のエナジーシールドを自動回復する",
+          "name": "魅了する",
+          "engText": "Regenerate (9-12) Energy Shield per second",
+          "engName": "Captivating",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "EnergyShieldRegeneration"
+        },
+        {
+          "key": "AbyssFlatEnergyShieldRegenerationJewel2",
+          "text": "毎秒(13-16)のエナジーシールドを自動回復する",
+          "name": "美しい",
+          "engText": "Regenerate (13-16) Energy Shield per second",
+          "engName": "Beautiful",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 30,
+          "weight": 250,
+          "family": "EnergyShieldRegeneration"
+        },
+        {
+          "key": "AbyssFlatEnergyShieldRegenerationJewel3",
+          "text": "毎秒(17-20)のエナジーシールドを自動回復する",
+          "name": "息を呑む",
+          "engText": "Regenerate (17-20) Energy Shield per second",
+          "engName": "Breathtaking",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 60,
+          "weight": 250,
+          "family": "EnergyShieldRegeneration"
+        }
+      ],
+      "LifeRegeneration": [
+        {
+          "key": "AbyssFlatLifeRegenerationJewel1",
+          "text": "毎秒(9-12)のライフを自動回復する",
+          "name": "若い",
+          "engText": "Regenerate (9-12) Life per second",
+          "engName": "Youthful",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "LifeRegeneration"
+        },
+        {
+          "key": "AbyssFlatLifeRegenerationJewel2",
+          "text": "毎秒(13-16)のライフを自動回復する",
+          "name": "元気ある",
+          "engText": "Regenerate (13-16) Life per second",
+          "engName": "Spirited",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 40,
+          "weight": 500,
+          "family": "LifeRegeneration"
+        },
+        {
+          "key": "AbyssFlatLifeRegenerationJewel3_",
+          "text": "毎秒(17-20)のライフを自動回復する",
+          "name": "快活な",
+          "engText": "Regenerate (17-20) Life per second",
+          "engName": "Vivacious",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 80,
+          "weight": 500,
+          "family": "LifeRegeneration"
+        }
+      ],
+      "ManaRegeneration": [
+        {
+          "key": "AbyssFlatManaShieldRegenerationJewel1",
+          "text": "毎秒(1.1-2)のマナを自動回復する",
+          "name": "充填する",
+          "engText": "Regenerate (1.1-2) Mana per second",
+          "engName": "Energising",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 350,
+          "family": "ManaRegeneration"
+        },
+        {
+          "key": "AbyssFlatManaShieldRegenerationJewel2",
+          "text": "毎秒(2.1-3)のマナを自動回復する",
+          "name": "心打つ",
+          "engText": "Regenerate (2.1-3) Mana per second",
+          "engName": "Inspirational",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 40,
+          "weight": 350,
+          "family": "ManaRegeneration"
+        },
+        {
+          "key": "AbyssFlatManaShieldRegenerationJewel3",
+          "text": "毎秒(3.3-4)のマナを自動回復する",
+          "name": "共鳴する",
+          "engText": "Regenerate (3.3-4) Mana per second",
+          "engName": "Resonating",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 75,
+          "weight": 350,
+          "family": "ManaRegeneration"
+        }
+      ],
+      "IncreasedPhysicalDamageReductionRating": [
+        {
+          "key": "AbyssFlatArmourJewel1",
+          "text": "アーマー +(36-60)",
+          "name": "塗装された",
+          "engText": "+(36-60) to Armour",
+          "engName": "Lacquered",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 600,
+          "family": "IncreasedPhysicalDamageReductionRating"
+        },
+        {
+          "key": "AbyssFlatArmourJewel2",
+          "text": "アーマー +(61-100)",
+          "name": "強靭な",
+          "engText": "+(61-100) to Armour",
+          "engName": "Fortified",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 40,
+          "weight": 600,
+          "family": "IncreasedPhysicalDamageReductionRating"
+        },
+        {
+          "key": "AbyssFlatArmourJewel3",
+          "text": "アーマー +(101-180)",
+          "name": "甲皮付き",
+          "engText": "+(101-180) to Armour",
+          "engName": "Carapaced",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 75,
+          "weight": 600,
+          "family": "IncreasedPhysicalDamageReductionRating"
+        },
+        {
+          "key": "AbyssFlatArmourJewel4__",
+          "text": "アーマー +(181-250)",
+          "name": "保護する",
+          "engText": "+(181-250) to Armour",
+          "engName": "Encased",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 83,
+          "weight": 300,
+          "family": "IncreasedPhysicalDamageReductionRating"
+        }
+      ],
+      "IncreasedEvasionRating": [
+        {
+          "key": "AbyssFlatEvasionJewel1",
+          "text": "回避力 +(36-60)",
+          "name": "機敏な",
+          "engText": "+(36-60) to Evasion Rating",
+          "engName": "Agile",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 600,
+          "family": "IncreasedEvasionRating"
+        },
+        {
+          "key": "AbyssFlatEvasionJewel2",
+          "text": "回避力 +(61-100)",
+          "name": "素早い",
+          "engText": "+(61-100) to Evasion Rating",
+          "engName": "Fleet",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 40,
+          "weight": 600,
+          "family": "IncreasedEvasionRating"
+        },
+        {
+          "key": "AbyssFlatEvasionJewel3",
+          "text": "回避力 +(101-180)",
+          "name": "霧状の",
+          "engText": "+(101-180) to Evasion Rating",
+          "engName": "Vaporous",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 75,
+          "weight": 600,
+          "family": "IncreasedEvasionRating"
+        },
+        {
+          "key": "AbyssFlatEvasionJewel4_",
+          "text": "回避力 +(181-250)",
+          "name": "曇らせる",
+          "engText": "+(181-250) to Evasion Rating",
+          "engName": "Beclouded",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 83,
+          "weight": 300,
+          "family": "IncreasedEvasionRating"
+        }
+      ],
+      "IncreasedEnergyShield": [
+        {
+          "key": "AbyssFlatEnergyShieldJewel1",
+          "text": "最大エナジーシールド +(21-25)",
+          "name": "輝く",
+          "engText": "+(21-25) to maximum Energy Shield",
+          "engName": "Shining",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 600,
+          "family": "IncreasedEnergyShield"
+        },
+        {
+          "key": "AbyssFlatEnergyShieldJewel2",
+          "text": "最大エナジーシールド +(26-30)",
+          "name": "沸き立つ",
+          "engText": "+(26-30) to maximum Energy Shield",
+          "engName": "Seething",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 40,
+          "weight": 600,
+          "family": "IncreasedEnergyShield"
+        },
+        {
+          "key": "AbyssFlatEnergyShieldJewel3",
+          "text": "最大エナジーシールド +(31-35)",
+          "name": "光り輝く",
+          "engText": "+(31-35) to maximum Energy Shield",
+          "engName": "Incandescent",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 75,
+          "weight": 600,
+          "family": "IncreasedEnergyShield"
+        },
+        {
+          "key": "AbyssFlatEnergyShieldJewel4",
+          "text": "最大エナジーシールド +(36-40)",
+          "name": "きらびやかな",
+          "engText": "+(36-40) to maximum Energy Shield",
+          "engName": "Resplendent",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 83,
+          "weight": 300,
+          "family": "IncreasedEnergyShield"
+        }
+      ],
+      "CooldownRecovery": [
+        {
+          "key": "AbyssCooldownRecoverySpeed1_",
+          "text": "クールダウン解消レートが2%増加する",
+          "name": "円滑化する",
+          "engText": "2% increased Cooldown Recovery Rate",
+          "engName": "Facilitating",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 75,
+          "weight": 300,
+          "family": "CooldownRecovery"
+        },
+        {
+          "key": "AbyssCooldownRecoverySpeed2__",
+          "text": "クールダウン解消レートが3%増加する",
+          "name": "促進する",
+          "engText": "3% increased Cooldown Recovery Rate",
+          "engName": "Expediting",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 86,
+          "weight": 300,
+          "family": "CooldownRecovery"
+        }
+      ],
+      "ImpaleEffect": [
+        {
+          "key": "AbyssImpaleEffect1_",
+          "text": "串刺しの効果が(3-5)%増加する",
+          "name": "串刺す",
+          "engText": "(3-5)% increased Impale Effect",
+          "engName": "Skewering",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 75,
+          "weight": 300,
+          "family": "ImpaleEffect"
+        },
+        {
+          "key": "AbyssImpaleEffect2_",
+          "text": "串刺しの効果が(6-8)%増加する",
+          "name": "突き刺す",
+          "engText": "(6-8)% increased Impale Effect",
+          "engName": "Lancing",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 86,
+          "weight": 300,
+          "family": "ImpaleEffect"
+        }
+      ],
+      "PercentDamageGoesToMana": [
+        {
+          "key": "AbyssDamageRecoupedAsMana1",
+          "text": "受けたダメージの(2-3)%をマナとして回収する",
+          "name": "駆り立てる",
+          "engText": "(2-3)% of Damage taken Recouped as Mana",
+          "engName": "Spurring",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 75,
+          "weight": 100,
+          "family": "PercentDamageGoesToMana"
+        },
+        {
+          "key": "AbyssDamageRecoupedAsMana2",
+          "text": "受けたダメージの(4-5)%をマナとして回収する",
+          "name": "滾らす",
+          "engText": "(4-5)% of Damage taken Recouped as Mana",
+          "engName": "Motivating",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "prefix",
+          "required_level": 86,
+          "weight": 100,
+          "family": "PercentDamageGoesToMana"
+        }
+      ]
+    },
+    "suffix": {
+      "AbyssJewelChillEffect": [
+        {
+          "key": "AbyssJewelChillEffect1_",
+          "text": "冷気系状態異常の効果が(10-20)%増加する",
+          "name": "冷却の",
+          "engText": "(10-20)% increased Effect of Cold Ailments",
+          "engName": "of Chilling",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 30,
+          "weight": 500,
+          "family": "AbyssJewelChillEffect"
+        }
+      ],
+      "AbyssJewelShockEffect": [
+        {
+          "key": "AbyssJewelShockEffect1",
+          "text": "雷系状態異常の効果が(10-20)%増加する",
+          "name": "感電の",
+          "engText": "(10-20)% increased Effect of Lightning Ailments",
+          "engName": "of Shocking",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 30,
+          "weight": 500,
+          "family": "AbyssJewelShockEffect"
+        }
+      ],
+      "Strength": [
+        {
+          "key": "AbyssStrengthJewel1_",
+          "text": "筋力 +(12-16)",
+          "name": "筋力の",
+          "engText": "+(12-16) to Strength",
+          "engName": "of Strength",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "Strength"
+        }
+      ],
+      "Dexterity": [
+        {
+          "key": "AbyssDexterityJewel1_",
+          "text": "器用さ +(12-16)",
+          "name": "器用さの",
+          "engText": "+(12-16) to Dexterity",
+          "engName": "of Dexterity",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "Dexterity"
+        }
+      ],
+      "Intelligence": [
+        {
+          "key": "AbyssIntelligenceJewel1",
+          "text": "知性 +(12-16)",
+          "name": "知性の",
+          "engText": "+(12-16) to Intelligence",
+          "engName": "of Intelligence",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "Intelligence"
+        }
+      ],
+      "StrengthDexterity": [
+        {
+          "key": "AbyssStrengthDexterityJewel1",
+          "text": "筋力および器用さ +(8-10)",
+          "name": "運動の",
+          "engText": "+(8-10) to Strength and Dexterity",
+          "engName": "of Athletics",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "StrengthDexterity"
+        }
+      ],
+      "StrengthIntelligence": [
+        {
+          "key": "AbyssStrengthIntelligenceJewel1_",
+          "text": "筋力および知性 +(8-10)",
+          "name": "魂の",
+          "engText": "+(8-10) to Strength and Intelligence",
+          "engName": "of Spirit",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "StrengthIntelligence"
+        }
+      ],
+      "DexterityIntelligence": [
+        {
+          "key": "AbyssDexterityIntelligenceJewel1",
+          "text": "器用さおよび知性 +(8-10)",
+          "name": "狡猾さの",
+          "engText": "+(8-10) to Dexterity and Intelligence",
+          "engName": "of Cunning",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "DexterityIntelligence"
+        }
+      ],
+      "AllAttributes": [
+        {
+          "key": "AbyssAllAttributesJewel1",
+          "text": "全ての能力値 +(6-8)",
+          "name": "馴致の",
+          "engText": "+(6-8) to all Attributes",
+          "engName": "of Adaption",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "AllAttributes"
+        }
+      ],
+      "FireResistance": [
+        {
+          "key": "AbyssFireResistanceJewel1",
+          "text": "火耐性 +(12-15)%",
+          "name": "ドラゴンの",
+          "engText": "+(12-15)% to Fire Resistance",
+          "engName": "of the Dragon",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 400,
+          "family": "FireResistance"
+        }
+      ],
+      "ColdResistance": [
+        {
+          "key": "AbyssColdResistanceJewel1",
+          "text": "冷気耐性 +(12-15)%",
+          "name": "獣の",
+          "engText": "+(12-15)% to Cold Resistance",
+          "engName": "of the Beast",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 400,
+          "family": "ColdResistance"
+        }
+      ],
+      "LightningResistance": [
+        {
+          "key": "AbyssLightningResistanceJewel1",
+          "text": "雷耐性 +(12-15)%",
+          "name": "接地の",
+          "engText": "+(12-15)% to Lightning Resistance",
+          "engName": "of Grounding",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 400,
+          "family": "LightningResistance"
+        }
+      ],
+      "FireAndColdResistance": [
+        {
+          "key": "AbyssFireColdResistanceJewel1",
+          "text": "火および冷気耐性 +(10-12)%",
+          "name": "路床の",
+          "engText": "+(10-12)% to Fire and Cold Resistances",
+          "engName": "of the Hearth",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "FireAndColdResistance"
+        }
+      ],
+      "FireAndLightningResistance": [
+        {
+          "key": "AbyssFireLightningResistanceJewel1",
+          "text": "火および雷耐性 +(10-12)%",
+          "name": "絶縁体の",
+          "engText": "+(10-12)% to Fire and Lightning Resistances",
+          "engName": "of Insulation",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "FireAndLightningResistance"
+        }
+      ],
+      "ColdAndLightningResistance": [
+        {
+          "key": "AbyssColdLightningResistanceJewel1",
+          "text": "冷気および雷耐性 +(10-12)%",
+          "name": "避難所の",
+          "engText": "+(10-12)% to Cold and Lightning Resistances",
+          "engName": "of Shelter",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "ColdAndLightningResistance"
+        }
+      ],
+      "AllResistances": [
+        {
+          "key": "AbyssAllResistancesJewel1",
+          "text": "全ての元素耐性 +(8-10)%",
+          "name": "抵抗力の",
+          "engText": "+(8-10)% to all Elemental Resistances",
+          "engName": "of Resistance",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 200,
+          "family": "AllResistances"
+        }
+      ],
+      "ChaosResistance": [
+        {
+          "key": "AbyssChaosResistanceJewel1",
+          "text": "混沌耐性 +(7-13)%",
+          "name": "秩序の",
+          "engText": "+(7-13)% to Chaos Resistance",
+          "engName": "of Order",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 100,
+          "family": "ChaosResistance"
+        }
+      ],
+      "IncreasedAttackSpeed": [
+        {
+          "key": "AbyssAttackSpeedJewel1_",
+          "text": "アタックスピードが(3-5)%増加する",
+          "name": "狂戦士化の",
+          "engText": "(3-5)% increased Attack Speed",
+          "engName": "of Berserking",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "suffix",
+          "required_level": 50,
+          "weight": 750,
+          "family": "IncreasedAttackSpeed"
+        }
+      ],
+      "CriticalStrikeChanceIncrease": [
+        {
+          "key": "AbyssCriticalStrikeChanceJewel1",
+          "text": "グローバルクリティカル率が(8-12)%増加する",
+          "name": "脅威の",
+          "engText": "(8-12)% increased Global Critical Strike Chance",
+          "engName": "of Menace",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 50,
+          "weight": 900,
+          "family": "CriticalStrikeChanceIncrease"
+        }
+      ],
+      "CriticalStrikeMultiplier": [
+        {
+          "key": "AbyssCriticalStrikeMultiplierJewel1",
+          "text": "グローバルクリティカルダメージ倍率 +(9-12)%",
+          "name": "有効性の",
+          "engText": "+(9-12)% to Global Critical Strike Multiplier",
+          "engName": "of Potency",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 50,
+          "weight": 900,
+          "family": "CriticalStrikeMultiplier"
+        }
+      ],
+      "AddedFireSuffix": [
+        {
+          "key": "AbyssAddedFireSuffixJewel1",
+          "text": "(4-5)から(10-12)の火ダメージをアタックに追加する",
+          "name": "石炭の",
+          "engText": "Adds (4-5) to (10-12) Fire Damage to Attacks",
+          "engName": "of Coals",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "suffix",
+          "required_level": 35,
+          "weight": 1000,
+          "family": "AddedFireSuffix"
+        },
+        {
+          "key": "AbyssAddedFireSuffixJewel2",
+          "text": "(6-7)から(13-16)の火ダメージをアタックに追加する",
+          "name": "消し炭の",
+          "engText": "Adds (6-7) to (13-16) Fire Damage to Attacks",
+          "engName": "of Cinders",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "suffix",
+          "required_level": 44,
+          "weight": 1000,
+          "family": "AddedFireSuffix"
+        },
+        {
+          "key": "AbyssAddedFireSuffixJewel3",
+          "text": "(8-9)から(17-20)の火ダメージをアタックに追加する",
+          "name": "炎の",
+          "engText": "Adds (8-9) to (17-20) Fire Damage to Attacks",
+          "engName": "of Flames",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "suffix",
+          "required_level": 52,
+          "weight": 1000,
+          "family": "AddedFireSuffix"
+        },
+        {
+          "key": "AbyssAddedFireSuffixJewel4_",
+          "text": "(10-12)から(21-24)の火ダメージをアタックに追加する",
+          "name": "焼棄の",
+          "engText": "Adds (10-12) to (21-24) Fire Damage to Attacks",
+          "engName": "of Immolation",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "suffix",
+          "required_level": 64,
+          "weight": 500,
+          "family": "AddedFireSuffix"
+        },
+        {
+          "key": "AbyssAddedFireSuffixJewel5",
+          "text": "(13-15)から(25-28)の火ダメージをアタックに追加する",
+          "name": "灰の",
+          "engText": "Adds (13-15) to (25-28) Fire Damage to Attacks",
+          "engName": "of Ashes",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "suffix",
+          "required_level": 76,
+          "weight": 300,
+          "family": "AddedFireSuffix"
+        }
+      ],
+      "AddedColdSuffix": [
+        {
+          "key": "AbyssAddedColdSuffixJewel1",
+          "text": "(4-5)から(8-10)の冷気ダメージをアタックに追加する",
+          "name": "霙の",
+          "engText": "Adds (4-5) to (8-10) Cold Damage to Attacks",
+          "engName": "of Sleet",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "suffix",
+          "required_level": 36,
+          "weight": 1000,
+          "family": "AddedColdSuffix"
+        },
+        {
+          "key": "AbyssAddedColdSuffixJewel2_",
+          "text": "(6-7)から(11-13)の冷気ダメージをアタックに追加する",
+          "name": "氷雪の",
+          "engText": "Adds (6-7) to (11-13) Cold Damage to Attacks",
+          "engName": "of Ice",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "suffix",
+          "required_level": 45,
+          "weight": 1000,
+          "family": "AddedColdSuffix"
+        },
+        {
+          "key": "AbyssAddedColdSuffixJewel3",
+          "text": "(8-9)から(14-17)の冷気ダメージをアタックに追加する",
+          "name": "霧氷の",
+          "engText": "Adds (8-9) to (14-17) Cold Damage to Attacks",
+          "engName": "of Rime",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "suffix",
+          "required_level": 53,
+          "weight": 1000,
+          "family": "AddedColdSuffix"
+        },
+        {
+          "key": "AbyssAddedColdSuffixJewel4",
+          "text": "(10-11)から(18-21)の冷気ダメージをアタックに追加する",
+          "name": "氷原の",
+          "engText": "Adds (10-11) to (18-21) Cold Damage to Attacks",
+          "engName": "of Floe",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "suffix",
+          "required_level": 65,
+          "weight": 500,
+          "family": "AddedColdSuffix"
+        },
+        {
+          "key": "AbyssAddedColdSuffixJewel5_",
+          "text": "(12-13)から(22-26)の冷気ダメージをアタックに追加する",
+          "name": "氷結の",
+          "engText": "Adds (12-13) to (22-26) Cold Damage to Attacks",
+          "engName": "of Glaciation",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "suffix",
+          "required_level": 77,
+          "weight": 300,
+          "family": "AddedColdSuffix"
+        }
+      ],
+      "AddedLightningSuffix": [
+        {
+          "key": "AbyssAddedLightningSuffixJewel1",
+          "text": "1から(19-20)の雷ダメージをアタックに追加する",
+          "name": "静電気の",
+          "engText": "Adds 1 to (19-20) Lightning Damage to Attacks",
+          "engName": "of Static",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "suffix",
+          "required_level": 35,
+          "weight": 1000,
+          "family": "AddedLightningSuffix"
+        },
+        {
+          "key": "AbyssAddedLightningSuffixJewel2",
+          "text": "(1-2)から(25-27)の雷ダメージをアタックに追加する",
+          "name": "電気の",
+          "engText": "Adds (1-2) to (25-27) Lightning Damage to Attacks",
+          "engName": "of Electricity",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "suffix",
+          "required_level": 44,
+          "weight": 1000,
+          "family": "AddedLightningSuffix"
+        },
+        {
+          "key": "AbyssAddedLightningSuffixJewel3",
+          "text": "(1-3)から(29-32)の雷ダメージをアタックに追加する",
+          "name": "電圧の",
+          "engText": "Adds (1-3) to (29-32) Lightning Damage to Attacks",
+          "engName": "of Voltage",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "suffix",
+          "required_level": 52,
+          "weight": 1000,
+          "family": "AddedLightningSuffix"
+        },
+        {
+          "key": "AbyssAddedLightningSuffixJewel4",
+          "text": "(1-4)から(36-39)の雷ダメージをアタックに追加する",
+          "name": "放電の",
+          "engText": "Adds (1-4) to (36-39) Lightning Damage to Attacks",
+          "engName": "of Discharge",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "suffix",
+          "required_level": 64,
+          "weight": 500,
+          "family": "AddedLightningSuffix"
+        },
+        {
+          "key": "AbyssAddedLightningSuffixJewel5",
+          "text": "(1-4)から(43-48)の雷ダメージをアタックに追加する",
+          "name": "電弧の",
+          "engText": "Adds (1-4) to (43-48) Lightning Damage to Attacks",
+          "engName": "of Arcing",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "suffix",
+          "required_level": 76,
+          "weight": 300,
+          "family": "AddedLightningSuffix"
+        }
+      ],
+      "AddedPhysicalSuffix": [
+        {
+          "key": "AbyssAddedPhysicalSuffixJewel1",
+          "text": "1から3の物理ダメージをアタックに追加する",
+          "name": "重みの",
+          "engText": "Adds 1 to 3 Physical Damage to Attacks",
+          "engName": "of Weight",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "suffix",
+          "required_level": 34,
+          "weight": 1000,
+          "family": "AddedPhysicalSuffix"
+        },
+        {
+          "key": "AbyssAddedPhysicalSuffixJewel2",
+          "text": "(2-3)から(4-5)の物理ダメージをアタックに追加する",
+          "name": "衝撃の",
+          "engText": "Adds (2-3) to (4-5) Physical Damage to Attacks",
+          "engName": "of Impact",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "suffix",
+          "required_level": 45,
+          "weight": 1000,
+          "family": "AddedPhysicalSuffix"
+        },
+        {
+          "key": "AbyssAddedPhysicalSuffixJewel3",
+          "text": "(4-5)から(6-7)の物理ダメージをアタックに追加する",
+          "name": "衝突の",
+          "engText": "Adds (4-5) to (6-7) Physical Damage to Attacks",
+          "engName": "of Collision",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "suffix",
+          "required_level": 61,
+          "weight": 500,
+          "family": "AddedPhysicalSuffix"
+        }
+      ],
+      "AddedChaosSuffix": [
+        {
+          "key": "AbyssAddedChaosSuffixJewel1",
+          "text": "(6-7)から(11-13)の混沌ダメージをアタックに追加する",
+          "name": "悪意の",
+          "engText": "Adds (6-7) to (11-13) Chaos Damage to Attacks",
+          "engName": "of Malevolence",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "suffix",
+          "required_level": 36,
+          "weight": 750,
+          "family": "AddedChaosSuffix"
+        },
+        {
+          "key": "AbyssAddedChaosSuffixJewel2",
+          "text": "(8-9)から(14-17)の混沌ダメージをアタックに追加する",
+          "name": "害意の",
+          "engText": "Adds (8-9) to (14-17) Chaos Damage to Attacks",
+          "engName": "of Malice",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "suffix",
+          "required_level": 48,
+          "weight": 750,
+          "family": "AddedChaosSuffix"
+        },
+        {
+          "key": "AbyssAddedChaosSuffixJewel3",
+          "text": "(10-11)から(18-21)の混沌ダメージをアタックに追加する",
+          "name": "罪の",
+          "engText": "Adds (10-11) to (18-21) Chaos Damage to Attacks",
+          "engName": "of Sin",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "suffix",
+          "required_level": 64,
+          "weight": 375,
+          "family": "AddedChaosSuffix"
+        }
+      ],
+      "BlindOnHit": [
+        {
+          "key": "AbyssAttacksBlindOnHitChanceJewel1",
+          "text": "アタックによるヒット時に(3-4)%の確率で敵を盲目にする",
+          "name": "盲目化の",
+          "engText": "(3-4)% chance to Blind Enemies on Hit with Attacks",
+          "engName": "of Blinding",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "suffix",
+          "required_level": 32,
+          "weight": 800,
+          "family": "BlindOnHit"
+        },
+        {
+          "key": "AbyssAttacksBlindOnHitChanceJewel2___",
+          "text": "アタックによるヒット時に(5-6)%の確率で敵を盲目にする",
+          "name": "盲目化の",
+          "engText": "(5-6)% chance to Blind Enemies on Hit with Attacks",
+          "engName": "of Blinding",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "suffix",
+          "required_level": 65,
+          "weight": 400,
+          "family": "BlindOnHit"
+        }
+      ],
+      "TauntOnHit": [
+        {
+          "key": "AbyssAttacksTauntOnHitChanceJewel1",
+          "text": "アタックによるヒット時に(3-5)%の確率で敵を挑発する",
+          "name": "挑発の",
+          "engText": "(3-5)% chance to Taunt Enemies on Hit with Attacks",
+          "engName": "of Taunting",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "suffix",
+          "required_level": 32,
+          "weight": 800,
+          "family": "TauntOnHit"
+        },
+        {
+          "key": "AbyssAttacksTauntOnHitChanceJewel2",
+          "text": "アタックによるヒット時に(6-8)%の確率で敵を挑発する",
+          "name": "挑発の",
+          "engText": "(6-8)% chance to Taunt Enemies on Hit with Attacks",
+          "engName": "of Taunting",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "suffix",
+          "required_level": 65,
+          "weight": 400,
+          "family": "TauntOnHit"
+        }
+      ],
+      "AvoidIgnite": [
+        {
+          "key": "AbyssAvoidIgniteJewel1_",
+          "text": "(31-40)%の確率で発火を無効化する",
+          "name": "非引火性の",
+          "engText": "(31-40)% chance to Avoid being Ignited",
+          "engName": "of Nonflammability",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 50,
+          "weight": 300,
+          "family": "AvoidIgnite"
+        },
+        {
+          "key": "AbyssAvoidIgniteJewel2",
+          "text": "(41-50)%の確率で発火を無効化する",
+          "name": "耐火の",
+          "engText": "(41-50)% chance to Avoid being Ignited",
+          "engName": "of Fireproofing",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 70,
+          "weight": 150,
+          "family": "AvoidIgnite"
+        }
+      ],
+      "ChanceToAvoidFreezeAndChill": [
+        {
+          "key": "AbyssAvoidFreezeAndChillJewel1",
+          "text": "(31-40)%の確率で凍結を無効化する",
+          "name": "温めの",
+          "engText": "(31-40)% chance to Avoid being Frozen",
+          "engName": "of Warming",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 50,
+          "weight": 300,
+          "family": "ChanceToAvoidFreezeAndChill"
+        },
+        {
+          "key": "AbyssAvoidFreezeAndChillJewel2",
+          "text": "(41-50)%の確率で凍結を無効化する",
+          "name": "加熱の",
+          "engText": "(41-50)% chance to Avoid being Frozen",
+          "engName": "of Heating",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 70,
+          "weight": 150,
+          "family": "ChanceToAvoidFreezeAndChill"
+        }
+      ],
+      "ReducedShockChance": [
+        {
+          "key": "AbyssAvoidShockJewel1",
+          "text": "(31-40)%の確率で感電を無効化する",
+          "name": "絶縁の",
+          "engText": "(31-40)% chance to Avoid being Shocked",
+          "engName": "of Insulating",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 50,
+          "weight": 300,
+          "family": "ReducedShockChance"
+        },
+        {
+          "key": "AbyssAvoidShockJewel2",
+          "text": "(41-50)%の確率で感電を無効化する",
+          "name": "避雷針の",
+          "engText": "(41-50)% chance to Avoid being Shocked",
+          "engName": "of the Lightning Rod",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 70,
+          "weight": 150,
+          "family": "ReducedShockChance"
+        }
+      ],
+      "ChanceToAvoidPoison": [
+        {
+          "key": "AbyssAvoidPoisonJewel1__",
+          "text": "(31-40)%の確率で毒を無効化する",
+          "name": "耐性の",
+          "engText": "(31-40)% chance to Avoid being Poisoned",
+          "engName": "of Tolerance",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 50,
+          "weight": 300,
+          "family": "ChanceToAvoidPoison"
+        },
+        {
+          "key": "AbyssAvoidPoisonJewel2__",
+          "text": "(41-50)%の確率で毒を無効化する",
+          "name": "耐性の",
+          "engText": "(41-50)% chance to Avoid being Poisoned",
+          "engName": "of Immunity",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 70,
+          "weight": 150,
+          "family": "ChanceToAvoidPoison"
+        }
+      ],
+      "ChanceToAvoidBleeding": [
+        {
+          "key": "AbyssAvoidBleedingJewel1",
+          "text": "(31-40)%の確率で出血を無効化する",
+          "name": "食い止めの",
+          "engText": "(31-40)% chance to Avoid Bleeding",
+          "engName": "of Stemming",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 50,
+          "weight": 300,
+          "family": "ChanceToAvoidBleeding"
+        },
+        {
+          "key": "AbyssAvoidBleedingJewel2",
+          "text": "(41-50)%の確率で出血を無効化する",
+          "name": "止血帯の",
+          "engText": "(41-50)% chance to Avoid Bleeding",
+          "engName": "of the Tourniquet",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 70,
+          "weight": 150,
+          "family": "ChanceToAvoidBleeding"
+        }
+      ],
+      "AvoidStun": [
+        {
+          "key": "AbyssAvoidStunJewel1",
+          "text": "(21-24)%の確率でスタンを無効化する",
+          "name": "均衡の",
+          "engText": "(21-24)% chance to Avoid being Stunned",
+          "engName": "of Balance",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 50,
+          "weight": 300,
+          "family": "AvoidStun"
+        },
+        {
+          "key": "AbyssAvoidStunJewel2",
+          "text": "(25-30)%の確率でスタンを無効化する",
+          "name": "安定の",
+          "engText": "(25-30)% chance to Avoid being Stunned",
+          "engName": "of Poise",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 70,
+          "weight": 150,
+          "family": "AvoidStun"
+        }
+      ],
+      "IncreasedAccuracy": [
+        {
+          "key": "AbyssAccuracyRatingJewel2",
+          "text": "命中力 +(31-60)",
+          "name": "着実さの",
+          "engText": "+(31-60) to Accuracy Rating",
+          "engName": "of Steadiness",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "IncreasedAccuracy"
+        },
+        {
+          "key": "AbyssAccuracyRatingJewel3",
+          "text": "命中力 +(61-120)",
+          "name": "射手の",
+          "engText": "+(61-120) to Accuracy Rating",
+          "engName": "of the Marksman",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "suffix",
+          "required_level": 52,
+          "weight": 500,
+          "family": "IncreasedAccuracy"
+        },
+        {
+          "key": "AbyssAccuracyRatingJewel4",
+          "text": "命中力 +(121-240)",
+          "name": "レンジャーの",
+          "engText": "+(121-240) to Accuracy Rating",
+          "engName": "of the Ranger",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "suffix",
+          "required_level": 78,
+          "weight": 500,
+          "family": "IncreasedAccuracy"
+        },
+        {
+          "key": "AbyssAccuracyRatingJewel5",
+          "text": "命中力 +(241-300)",
+          "name": "名射手の",
+          "engText": "+(241-300) to Accuracy Rating",
+          "engName": "of the Deadeye",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "suffix",
+          "required_level": 85,
+          "weight": 250,
+          "family": "IncreasedAccuracy"
+        }
+      ],
+      "SpellBlockPercentage": [
+        {
+          "key": "AbyssSpellBlockChanceIfHitRecentlyJewel1",
+          "text": "直近ヒットによるダメージを受けていればスペルブロック率 +(3-4)%",
+          "name": "本能の",
+          "engText": "+(3-4)% Chance to Block Spell Damage if you were Damaged by a Hit Recently",
+          "engName": "of Instinct",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "SpellBlockPercentage"
+        },
+        {
+          "key": "AbyssSpellDodgeAndDodgeChanceIfHitRecentlyJewel1",
+          "text": "直近ヒットによるダメージを受けていればスペルブロック率 +2%",
+          "name": "周到の",
+          "engText": "+2% Chance to Block Spell Damage if you were Damaged by a Hit Recently",
+          "engName": "of Readiness",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "SpellBlockPercentage"
+        }
+      ],
+      "MovementSpeedIfNotDamagedRecently": [
+        {
+          "key": "AbyssMovementSpeedIfNotDamagedRecentlyJewel1",
+          "text": "直近プレイヤーがダメージを受けていなければ移動スピードが(3-4)%増加する",
+          "name": "勢いの",
+          "engText": "(3-4)% increased Movement Speed if you haven't taken Damage Recently",
+          "engName": "of Momentum",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "MovementSpeedIfNotDamagedRecently"
+        }
+      ],
+      "DamageIfEnemySlainRecently": [
+        {
+          "key": "AbyssDamageIfEnemySlainRecentlyJewel1",
+          "text": "直近プレイヤーが敵を倒していればダメージが(15-20)%増加する",
+          "name": "殺害者の",
+          "engText": "(15-20)% increased Damage if you've Killed Recently",
+          "engName": "of the Slayer",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "DamageIfEnemySlainRecently"
+        }
+      ],
+      "CriticalStrikeMultiplierIfEnemySlainRecently": [
+        {
+          "key": "AbyssCriticalStrikeMultiplierIfEnemySlainRecentlyJewel1",
+          "text": "直近プレイヤーが敵を倒していればクリティカルダメージ倍率 +(8-14)%",
+          "name": "暗殺者の",
+          "engText": "+(8-14)% to Critical Strike Multiplier if you've Killed Recently",
+          "engName": "of the Assassin",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "suffix",
+          "required_level": 25,
+          "weight": 250,
+          "family": "CriticalStrikeMultiplierIfEnemySlainRecently"
+        }
+      ],
+      "IncreasedArmourIfNoEnemySlainRecently": [
+        {
+          "key": "AbyssIncreasedArmourIfNoEnemySlainRecentlyJewel1__",
+          "text": "直近プレイヤーが敵を倒していなければアーマーが(20-30)%増加する",
+          "name": "守護者の",
+          "engText": "(20-30)% increased Armour if you haven't Killed Recently",
+          "engName": "of the Guardian",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "IncreasedArmourIfNoEnemySlainRecently"
+        }
+      ],
+      "DamagePenetratesElementalResistancesIfNoEnemySlainRecently": [
+        {
+          "key": "AbyssDamagePenetratesElementalResistancesIfNoEnemySlainRecentlyJewel1",
+          "text": "直近プレイヤーが敵を倒していなければダメージは2%の元素耐性を貫通する",
+          "name": "審問官の",
+          "engText": "Damage Penetrates 2% Elemental Resistances if you haven't Killed Recently",
+          "engName": "of the Inquisitor",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "DamagePenetratesElementalResistancesIfNoEnemySlainRecently"
+        }
+      ],
+      "EvasionRatingWhileMoving": [
+        {
+          "key": "AbyssEvasionRatingWhileMovingJewel1",
+          "text": "移動中は回避力が(25-35)%増加する",
+          "name": "巧動の",
+          "engText": "(25-35)% increased Evasion Rating while moving",
+          "engName": "of Maneuvering",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "EvasionRatingWhileMoving"
+        }
+      ],
+      "ManaRegenerationRateWhileMoving": [
+        {
+          "key": "AbyssManaRegenerationRateWhileMovingJewel1",
+          "text": "移動中はマナ自動回復レートが(20-25)%増加する",
+          "name": "実践の",
+          "engText": "(20-25)% increased Mana Regeneration Rate while moving",
+          "engName": "of Praxis",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "ManaRegenerationRateWhileMoving"
+        }
+      ],
+      "LifeRegenerationRateWhileMoving": [
+        {
+          "key": "AbyssLifeRegenerationRateWhileMovingJewel1",
+          "text": "移動中は毎秒ライフの(0.5-1)%を自動回復する",
+          "name": "快活の",
+          "engText": "Regenerate (0.5-1)% of Life per second while moving",
+          "engName": "of Vivaciousness",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "LifeRegenerationRateWhileMoving"
+        }
+      ],
+      "PhysicalDamageAddedAsExtraFireIfCriticalStrikeDealtRecently": [
+        {
+          "key": "AbyssPhysicalDamageAddedAsExtraFireIfCriticalStrikeDealtRecentlyJewel1",
+          "text": "プレイヤーがクリティカルストライクを与えていれば物理ダメージの(2-4)%を追加火ダメージとして獲得する",
+          "name": "業火の",
+          "engText": "Gain (2-4)% of Physical Damage as Extra Fire Damage if you've dealt a Critical Strike Recently",
+          "engName": "of the Inferno",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "suffix",
+          "required_level": 40,
+          "weight": 300,
+          "family": "PhysicalDamageAddedAsExtraFireIfCriticalStrikeDealtRecently"
+        }
+      ],
+      "AttackSpeedIfCriticalStrikeDealtRecently": [
+        {
+          "key": "AbyssAttackSpeedIfCriticalStrikeDealtRecentlyJewel1",
+          "text": "直近プレイヤーがクリティカルストライクを与えていればアタックスピードが(6-8)%増加する",
+          "name": "好機の",
+          "engText": "(6-8)% increased Attack Speed if you've dealt a Critical Strike Recently",
+          "engName": "of Opportunity",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "suffix",
+          "required_level": 25,
+          "weight": 500,
+          "family": "AttackSpeedIfCriticalStrikeDealtRecently"
+        }
+      ],
+      "CastSpeedIfCriticalStrikeDealtRecently": [
+        {
+          "key": "AbyssCastSpeedIfCriticalStrikeDealtRecentlyJewel1",
+          "text": "直近プレイヤーがクリティカルストライクを与えていればキャストスピードが(5-7)%増加する",
+          "name": "虐待の",
+          "engText": "(5-7)% increased Cast Speed if you've dealt a Critical Strike Recently",
+          "engName": "of Abuse",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "suffix",
+          "required_level": 25,
+          "weight": 250,
+          "family": "CastSpeedIfCriticalStrikeDealtRecently"
+        }
+      ],
+      "CriticalStrikeChanceIfNoCriticalStrikeDealtRecently": [
+        {
+          "key": "AbyssCriticalStrikeChanceIfNoCriticalStrikeDealtRecentlyJewel1",
+          "text": "直近プレイヤーがクリティカルストライクを与えていなければクリティカル率が(20-30)%増加する",
+          "name": "準備の",
+          "engText": "(20-30)% increased Critical Strike Chance if you haven't dealt a Critical Strike Recently",
+          "engName": "of Preparation",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "CriticalStrikeChanceIfNoCriticalStrikeDealtRecently"
+        }
+      ],
+      "MovementSpeedIfEnemySlainRecently": [
+        {
+          "key": "AbyssMovementSpeedIfEnemySlainRecentlyJewel1",
+          "text": "直近プレイヤーが敵を倒していれば移動スピードが(2-4)%増加する",
+          "name": "略奪者の",
+          "engText": "(2-4)% increased Movement Speed if you've Killed Recently",
+          "engName": "of the Raider",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "MovementSpeedIfEnemySlainRecently"
+        }
+      ],
+      "AdditionalBlock": [
+        {
+          "key": "AbyssChanceToBlockIfDamagedRecentlyJewel1_",
+          "text": "直近プレイヤーがヒットによるダメージを受けていればアタックブロック率 +(3-4)%",
+          "name": "守護の",
+          "engText": "+(3-4)% Chance to Block Attack Damage if you were Damaged by a Hit Recently",
+          "engName": "of Guarding",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "AdditionalBlock"
+        }
+      ],
+      "ChanceToGainUnholyMightOnKillAbyss": [
+        {
+          "key": "AbyssChanceToGainUnholyMightOnKillAbyssJewel1",
+          "text": "近接スキルで敵を倒した時に(3-5)%の確率でアンホーリーマイトを4秒間獲得する",
+          "name": "不浄なる力の",
+          "engText": "(3-5)% chance to Gain Unholy Might for 4 seconds on Melee Kill",
+          "engName": "of Unholy Might",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "suffix",
+          "required_level": 60,
+          "weight": 1000,
+          "family": "ChanceToGainUnholyMightOnKillAbyss"
+        },
+        {
+          "key": "AbyssChanceToGainUnholyMightOnKillAbyssJewel2_",
+          "text": "近接スキルで敵を倒した時に(6-8)%の確率でアンホーリーマイトを4秒間獲得する",
+          "name": "不浄なる力の",
+          "engText": "(6-8)% chance to Gain Unholy Might for 4 seconds on Melee Kill",
+          "engName": "of Unholy Might",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "suffix",
+          "required_level": 84,
+          "weight": 500,
+          "family": "ChanceToGainUnholyMightOnKillAbyss"
+        }
+      ],
+      "BuffEnchantment": [
+        {
+          "key": "AbyssSelfCurseEffectOnConsecratedGroundJewel1__",
+          "text": "神聖領域の上にいる時にプレイヤーに対する呪いの効果が(25-15)%減少する",
+          "name": "聖所の",
+          "engText": "(25-15)% reduced Effect of Curses on you while on Consecrated Ground",
+          "engName": "of the Sanctum",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "suffix",
+          "required_level": 84,
+          "weight": 100,
+          "family": "BuffEnchantment"
+        },
+        {
+          "key": "AbyssAvoidElementalAilmentsWhileElusiveJewel1",
+          "text": "身躱し中は(10-20)%の確率で元素系状態異常を無効化する",
+          "name": "脱出の",
+          "engText": "(10-20)% chance to Avoid Elemental Ailments while you have Elusive",
+          "engName": "of Escape",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "suffix",
+          "required_level": 84,
+          "weight": 100,
+          "family": "BuffEnchantment"
+        },
+        {
+          "key": "AbyssHinderedEnemiesLifeRegenerationRateJewel1",
+          "text": "プレイヤーにより阻害された敵のライフ自動回復レートが(35-25)%減少する",
+          "name": "衰弱の",
+          "engText": "Enemies Hindered by you have (35-25)% reduced Life Regeneration rate",
+          "engName": "of Enervation",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "suffix",
+          "required_level": 84,
+          "weight": 500,
+          "family": "BuffEnchantment"
+        },
+        {
+          "key": "AbyssBlindedEnemiesCriticalStrikeChanceJewel1",
+          "text": "プレイヤーにより盲目を付与された敵のクリティカル率が(30-20)%減少する",
+          "name": "雲りの",
+          "engText": "Enemies Blinded by you have (30-20)% reduced Critical Strike Chance",
+          "engName": "of Clouding",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "suffix",
+          "required_level": 84,
+          "weight": 500,
+          "family": "BuffEnchantment"
+        },
+        {
+          "key": "AbyssWitheredEnemiesAllResistanceJewel1___",
+          "text": "プレイヤーにより衰弱を受けた敵は全ての耐性が-2%される",
+          "name": "衰えの",
+          "engText": "Enemies Withered by you have -2% to all Resistances",
+          "engName": "of Languishing",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "suffix",
+          "required_level": 84,
+          "weight": 100,
+          "family": "BuffEnchantment"
+        },
+        {
+          "key": "AbyssMaimedEnemiesDamageOverTimeJewel1",
+          "text": "プレイヤーにより重傷を受けた敵が受ける継続ダメージが(4-5)%増加する",
+          "name": "創痍の",
+          "engText": "Enemies Maimed by you take (4-5)% increased Damage Over Time",
+          "engName": "of Mangling",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "suffix",
+          "required_level": 84,
+          "weight": 500,
+          "family": "BuffEnchantment"
+        },
+        {
+          "key": "AbyssIntimidatedEnemiesStunDurationJewel1",
+          "text": "プレイヤーにより威嚇された敵に対するスタン持続時間が(10-15)%増加する",
+          "name": "脅嚇の",
+          "engText": "Enemies Intimidated by you have (10-15)% increased duration of stuns against them",
+          "engName": "of Daunting",
+          "tag": "abyss_jewel_melee",
+          "generation_type": "suffix",
+          "required_level": 84,
+          "weight": 500,
+          "family": "BuffEnchantment"
+        }
+      ]
+    }
+  }
+}

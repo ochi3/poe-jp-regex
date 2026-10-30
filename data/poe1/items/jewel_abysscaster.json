@@ -1,0 +1,2701 @@
+{
+  "bases": [
+    "Metadata/Items/Jewels/JewelAbyssCaster"
+  ],
+  "mods": {
+    "prefix": {
+      "AbyssJewelLife": [
+        {
+          "key": "AbyssJewelAddedLife1",
+          "text": "最大ライフ +(21-25)",
+          "name": "強健な",
+          "engText": "+(21-25) to maximum Life",
+          "engName": "Hale",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 3000,
+          "family": "AbyssJewelLife"
+        },
+        {
+          "key": "AbyssJewelAddedLife2",
+          "text": "最大ライフ +(26-30)",
+          "name": "健康な",
+          "engText": "+(26-30) to maximum Life",
+          "engName": "Healthy",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 35,
+          "weight": 3000,
+          "family": "AbyssJewelLife"
+        },
+        {
+          "key": "AbyssJewelAddedLife3",
+          "text": "最大ライフ +(31-35)",
+          "name": "血色良い",
+          "engText": "+(31-35) to maximum Life",
+          "engName": "Sanguine",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 74,
+          "weight": 1000,
+          "family": "AbyssJewelLife"
+        },
+        {
+          "key": "AbyssJewelAddedLife4",
+          "text": "最大ライフ +(36-40)",
+          "name": "屈強な",
+          "engText": "+(36-40) to maximum Life",
+          "engName": "Stalwart",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 82,
+          "weight": 500,
+          "family": "AbyssJewelLife"
+        }
+      ],
+      "AbyssJewelMana": [
+        {
+          "key": "AbyssJewelAddedMana1",
+          "text": "最大マナ +(20-23)",
+          "name": "ベリルの",
+          "engText": "+(20-23) to maximum Mana",
+          "engName": "Beryl",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 1000,
+          "family": "AbyssJewelMana"
+        },
+        {
+          "key": "AbyssJewelAddedMana2",
+          "text": "最大マナ +(24-27)",
+          "name": "コバルトの",
+          "engText": "+(24-27) to maximum Mana",
+          "engName": "Cobalt",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 40,
+          "weight": 1000,
+          "family": "AbyssJewelMana"
+        },
+        {
+          "key": "AbyssJewelAddedMana3",
+          "text": "最大マナ +(28-31)",
+          "name": "淡青な",
+          "engText": "+(28-31) to maximum Mana",
+          "engName": "Azure",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 75,
+          "weight": 1000,
+          "family": "AbyssJewelMana"
+        },
+        {
+          "key": "AbyssJewelAddedMana4",
+          "text": "最大マナ +(32-34)",
+          "name": "サファイアの",
+          "engText": "+(32-34) to maximum Mana",
+          "engName": "Sapphire",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 83,
+          "weight": 500,
+          "family": "AbyssJewelMana"
+        }
+      ],
+      "DamageOverTimeWhileDualWielding": [
+        {
+          "key": "AbyssDamageOverTimeWhileDualWieldingJewel1",
+          "text": "二刀流中は継続ダメージが(10-14)%増加する",
+          "name": "退行させる",
+          "engText": "(10-14)% increased Damage over Time while Dual Wielding",
+          "engName": "Degenerative",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 600,
+          "family": "DamageOverTimeWhileDualWielding"
+        },
+        {
+          "key": "AbyssDamageOverTimeWhileDualWieldingJewel2",
+          "text": "二刀流中は継続ダメージが(15-18)%増加する",
+          "name": "害悪な",
+          "engText": "(15-18)% increased Damage over Time while Dual Wielding",
+          "engName": "Deleterious",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 60,
+          "weight": 200,
+          "family": "DamageOverTimeWhileDualWielding"
+        }
+      ],
+      "DamageOverTimeWhileWieldingTwoHandedWeapon": [
+        {
+          "key": "AbyssDamageOverTimeWhileWieldingTwoHandedWeaponJewel1",
+          "text": "両手武器装備中は継続ダメージが(10-14)%増加する",
+          "name": "退行させる",
+          "engText": "(10-14)% increased Damage over Time while wielding a Two Handed Weapon",
+          "engName": "Degenerative",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 900,
+          "family": "DamageOverTimeWhileWieldingTwoHandedWeapon"
+        },
+        {
+          "key": "AbyssDamageOverTimeWhileWieldingTwoHandedWeaponJewel2",
+          "text": "両手武器装備中は継続ダメージが(15-18)%増加する",
+          "name": "害悪な",
+          "engText": "(15-18)% increased Damage over Time while wielding a Two Handed Weapon",
+          "engName": "Deleterious",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 60,
+          "weight": 300,
+          "family": "DamageOverTimeWhileWieldingTwoHandedWeapon"
+        }
+      ],
+      "DamageOverTimeWhileHoldingAShield": [
+        {
+          "key": "AbyssDamageOverTimeWhileHoldingAShieldJewel1_",
+          "text": "盾装備中は継続ダメージが(10-14)%増加する",
+          "name": "退行させる",
+          "engText": "(10-14)% increased Damage over Time while holding a Shield",
+          "engName": "Degenerative",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 600,
+          "family": "DamageOverTimeWhileHoldingAShield"
+        },
+        {
+          "key": "AbyssDamageOverTimeWhileHoldingAShieldJewel2_",
+          "text": "盾装備中は継続ダメージが(15-18)%増加する",
+          "name": "害悪な",
+          "engText": "(15-18)% increased Damage over Time while holding a Shield",
+          "engName": "Deleterious",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 60,
+          "weight": 200,
+          "family": "DamageOverTimeWhileHoldingAShield"
+        }
+      ],
+      "WeaponClassFireDamage": [
+        {
+          "key": "AbyssSpellAddedFireDamageWhileDualWieldingJewel1",
+          "text": "二刀流中に(3-5)から(7-9)の追加スペル火ダメージ",
+          "name": "熱した",
+          "engText": "(3-5) to (7-9) Added Spell Fire Damage while Dual Wielding",
+          "engName": "Heated",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "WeaponClassFireDamage"
+        },
+        {
+          "key": "AbyssSpellAddedFireDamageWhileDualWieldingJewel2",
+          "text": "二刀流中に(9-12)から(14-17)の追加スペル火ダメージ",
+          "name": "燃え立つ",
+          "engText": "(9-12) to (14-17) Added Spell Fire Damage while Dual Wielding",
+          "engName": "Flaming",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 39,
+          "weight": 250,
+          "family": "WeaponClassFireDamage"
+        },
+        {
+          "key": "AbyssSpellAddedFireDamageWhileDualWieldingJewel3",
+          "text": "二刀流中に(13-16)から(18-21)の追加スペル火ダメージ",
+          "name": "焼き焦がす",
+          "engText": "(13-16) to (18-21) Added Spell Fire Damage while Dual Wielding",
+          "engName": "Scorching",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 48,
+          "weight": 250,
+          "family": "WeaponClassFireDamage"
+        },
+        {
+          "key": "AbyssSpellAddedFireDamageWhileDualWieldingJewel4",
+          "text": "二刀流中に(17-20)から(22-27)の追加スペル火ダメージ",
+          "name": "焼却する",
+          "engText": "(17-20) to (22-27) Added Spell Fire Damage while Dual Wielding",
+          "engName": "Incinerating",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 58,
+          "weight": 250,
+          "family": "WeaponClassFireDamage"
+        },
+        {
+          "key": "AbyssSpellAddedFireDamageWhileDualWieldingJewel5_",
+          "text": "二刀流中に(21-23)から(29-31)の追加スペル火ダメージ",
+          "name": "爆破する",
+          "engText": "(21-23) to (29-31) Added Spell Fire Damage while Dual Wielding",
+          "engName": "Blasting",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 70,
+          "weight": 125,
+          "family": "WeaponClassFireDamage"
+        },
+        {
+          "key": "AbyssSpellAddedFireDamageWhileDualWieldingJewel6",
+          "text": "二刀流中に(25-33)から(34-44)の追加スペル火ダメージ",
+          "name": "火葬する",
+          "engText": "(25-33) to (34-44) Added Spell Fire Damage while Dual Wielding",
+          "engName": "Cremating",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 82,
+          "weight": 62,
+          "family": "WeaponClassFireDamage"
+        },
+        {
+          "key": "AbyssSpellAddedFireDamageWhileWieldingTwoHandedWeaponJewel1",
+          "text": "両手武器装備中に(3-5)から(7-9)の追加スペル火ダメージ",
+          "name": "熱した",
+          "engText": "(3-5) to (7-9) Added Spell Fire Damage while wielding a Two Handed Weapon",
+          "engName": "Heated",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "WeaponClassFireDamage"
+        },
+        {
+          "key": "AbyssSpellAddedFireDamageWhileWieldingTwoHandedWeaponJewel2",
+          "text": "両手武器装備中に(9-12)から(14-17)の追加スペル火ダメージ",
+          "name": "燃え立つ",
+          "engText": "(9-12) to (14-17) Added Spell Fire Damage while wielding a Two Handed Weapon",
+          "engName": "Flaming",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 39,
+          "weight": 250,
+          "family": "WeaponClassFireDamage"
+        },
+        {
+          "key": "AbyssSpellAddedFireDamageWhileWieldingTwoHandedWeaponJewel3_",
+          "text": "両手武器装備中に(13-16)から(18-21)の追加スペル火ダメージ",
+          "name": "焼き焦がす",
+          "engText": "(13-16) to (18-21) Added Spell Fire Damage while wielding a Two Handed Weapon",
+          "engName": "Scorching",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 48,
+          "weight": 250,
+          "family": "WeaponClassFireDamage"
+        },
+        {
+          "key": "AbyssSpellAddedFireDamageWhileWieldingTwoHandedWeaponJewel4",
+          "text": "両手武器装備中に(17-20)から(22-27)の追加スペル火ダメージ",
+          "name": "焼却する",
+          "engText": "(17-20) to (22-27) Added Spell Fire Damage while wielding a Two Handed Weapon",
+          "engName": "Incinerating",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 58,
+          "weight": 250,
+          "family": "WeaponClassFireDamage"
+        },
+        {
+          "key": "AbyssSpellAddedFireDamageWhileWieldingTwoHandedWeaponJewel5",
+          "text": "両手武器装備中に(21-23)から(29-31)の追加スペル火ダメージ",
+          "name": "爆破する",
+          "engText": "(21-23) to (29-31) Added Spell Fire Damage while wielding a Two Handed Weapon",
+          "engName": "Blasting",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 70,
+          "weight": 125,
+          "family": "WeaponClassFireDamage"
+        },
+        {
+          "key": "AbyssSpellAddedFireDamageWhileWieldingTwoHandedWeaponJewel6",
+          "text": "両手武器装備中に(25-33)から(34-44)の追加スペル火ダメージ",
+          "name": "火葬する",
+          "engText": "(25-33) to (34-44) Added Spell Fire Damage while wielding a Two Handed Weapon",
+          "engName": "Cremating",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 82,
+          "weight": 62,
+          "family": "WeaponClassFireDamage"
+        },
+        {
+          "key": "AbyssSpellAddedFireDamageWhileHoldingAShieldJewel1",
+          "text": "盾装備中に(3-5)から(7-9)の追加スペル火ダメージ",
+          "name": "熱した",
+          "engText": "(3-5) to (7-9) Added Spell Fire Damage while holding a Shield",
+          "engName": "Heated",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "WeaponClassFireDamage"
+        },
+        {
+          "key": "AbyssSpellAddedFireDamageWhileHoldingAShieldJewel2",
+          "text": "盾装備中に(9-12)から(14-17)の追加スペル火ダメージ",
+          "name": "燃え立つ",
+          "engText": "(9-12) to (14-17) Added Spell Fire Damage while holding a Shield",
+          "engName": "Flaming",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 39,
+          "weight": 250,
+          "family": "WeaponClassFireDamage"
+        },
+        {
+          "key": "AbyssSpellAddedFireDamageWhileHoldingAShieldJewel3",
+          "text": "盾装備中に(13-16)から(18-21)の追加スペル火ダメージ",
+          "name": "焼き焦がす",
+          "engText": "(13-16) to (18-21) Added Spell Fire Damage while holding a Shield",
+          "engName": "Scorching",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 48,
+          "weight": 250,
+          "family": "WeaponClassFireDamage"
+        },
+        {
+          "key": "AbyssSpellAddedFireDamageWhileHoldingAShieldJewel4_",
+          "text": "盾装備中に(17-20)から(22-27)の追加スペル火ダメージ",
+          "name": "焼却する",
+          "engText": "(17-20) to (22-27) Added Spell Fire Damage while holding a Shield",
+          "engName": "Incinerating",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 58,
+          "weight": 250,
+          "family": "WeaponClassFireDamage"
+        },
+        {
+          "key": "AbyssSpellAddedFireDamageWhileHoldingAShieldJewel5",
+          "text": "盾装備中に(21-23)から(29-31)の追加スペル火ダメージ",
+          "name": "爆破する",
+          "engText": "(21-23) to (29-31) Added Spell Fire Damage while holding a Shield",
+          "engName": "Blasting",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 70,
+          "weight": 125,
+          "family": "WeaponClassFireDamage"
+        },
+        {
+          "key": "AbyssSpellAddedFireDamageWhileHoldingAShieldJewel6__",
+          "text": "盾装備中に(25-33)から(34-44)の追加スペル火ダメージ",
+          "name": "火葬する",
+          "engText": "(25-33) to (34-44) Added Spell Fire Damage while holding a Shield",
+          "engName": "Cremating",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 82,
+          "weight": 62,
+          "family": "WeaponClassFireDamage"
+        }
+      ],
+      "WeaponClassColdDamage": [
+        {
+          "key": "AbyssSpellAddedColdDamageWhileDualWieldingJewel1",
+          "text": "二刀流中に(2-5)から(6-8)の追加スペル冷気ダメージ",
+          "name": "凍てついた",
+          "engText": "(2-5) to (6-8) Added Spell Cold Damage while Dual Wielding",
+          "engName": "Frosted",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "WeaponClassColdDamage"
+        },
+        {
+          "key": "AbyssSpellAddedColdDamageWhileDualWieldingJewel2",
+          "text": "二刀流中に(8-11)から(13-16)の追加スペル冷気ダメージ",
+          "name": "凍りつく",
+          "engText": "(8-11) to (13-16) Added Spell Cold Damage while Dual Wielding",
+          "engName": "Freezing",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 39,
+          "weight": 250,
+          "family": "WeaponClassColdDamage"
+        },
+        {
+          "key": "AbyssSpellAddedColdDamageWhileDualWieldingJewel3",
+          "text": "二刀流中に(12-14)から(17-19)の追加スペル冷気ダメージ",
+          "name": "凍結した",
+          "engText": "(12-14) to (17-19) Added Spell Cold Damage while Dual Wielding",
+          "engName": "Frozen",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 48,
+          "weight": 250,
+          "family": "WeaponClassColdDamage"
+        },
+        {
+          "key": "AbyssSpellAddedColdDamageWhileDualWieldingJewel4__",
+          "text": "二刀流中に(16-18)から(20-25)の追加スペル冷気ダメージ",
+          "name": "氷結した",
+          "engText": "(16-18) to (20-25) Added Spell Cold Damage while Dual Wielding",
+          "engName": "Glaciated",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 58,
+          "weight": 250,
+          "family": "WeaponClassColdDamage"
+        },
+        {
+          "key": "AbyssSpellAddedColdDamageWhileDualWieldingJewel5",
+          "text": "二刀流中に(19-22)から(26-29)の追加スペル冷気ダメージ",
+          "name": "極地の",
+          "engText": "(19-22) to (26-29) Added Spell Cold Damage while Dual Wielding",
+          "engName": "Polar",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 70,
+          "weight": 125,
+          "family": "WeaponClassColdDamage"
+        },
+        {
+          "key": "AbyssSpellAddedColdDamageWhileDualWieldingJewel6",
+          "text": "二刀流中に(23-30)から(31-41)の追加スペル冷気ダメージ",
+          "name": "氷葬する",
+          "engText": "(23-30) to (31-41) Added Spell Cold Damage while Dual Wielding",
+          "engName": "Entombing",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 82,
+          "weight": 62,
+          "family": "WeaponClassColdDamage"
+        },
+        {
+          "key": "AbyssSpellAddedColdDamageWhileWieldingTwoHandedWeaponJewel1",
+          "text": "両手武器装備中に(2-5)から(6-8)の追加スペル冷気ダメージ",
+          "name": "凍てついた",
+          "engText": "(2-5) to (6-8) Added Spell Cold Damage while wielding a Two Handed Weapon",
+          "engName": "Frosted",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "WeaponClassColdDamage"
+        },
+        {
+          "key": "AbyssSpellAddedColdDamageWhileWieldingTwoHandedWeaponJewel2",
+          "text": "両手武器装備中に(8-11)から(13-16)の追加スペル冷気ダメージ",
+          "name": "凍りつく",
+          "engText": "(8-11) to (13-16) Added Spell Cold Damage while wielding a Two Handed Weapon",
+          "engName": "Freezing",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 39,
+          "weight": 250,
+          "family": "WeaponClassColdDamage"
+        },
+        {
+          "key": "AbyssSpellAddedColdDamageWhileWieldingTwoHandedWeaponJewel3",
+          "text": "両手武器装備中に(12-14)から(17-19)の追加スペル冷気ダメージ",
+          "name": "凍結した",
+          "engText": "(12-14) to (17-19) Added Spell Cold Damage while wielding a Two Handed Weapon",
+          "engName": "Frozen",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 48,
+          "weight": 250,
+          "family": "WeaponClassColdDamage"
+        },
+        {
+          "key": "AbyssSpellAddedColdDamageWhileWieldingTwoHandedWeaponJewel4",
+          "text": "両手武器装備中に(16-18)から(20-25)の追加スペル冷気ダメージ",
+          "name": "氷結した",
+          "engText": "(16-18) to (20-25) Added Spell Cold Damage while wielding a Two Handed Weapon",
+          "engName": "Glaciated",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 58,
+          "weight": 250,
+          "family": "WeaponClassColdDamage"
+        },
+        {
+          "key": "AbyssSpellAddedColdDamageWhileWieldingTwoHandedWeaponJewel5",
+          "text": "両手武器装備中に(19-22)から(26-29)の追加スペル冷気ダメージ",
+          "name": "極地の",
+          "engText": "(19-22) to (26-29) Added Spell Cold Damage while wielding a Two Handed Weapon",
+          "engName": "Polar",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 70,
+          "weight": 125,
+          "family": "WeaponClassColdDamage"
+        },
+        {
+          "key": "AbyssSpellAddedColdDamageWhileWieldingTwoHandedWeaponJewel6",
+          "text": "両手武器装備中に(23-30)から(31-41)の追加スペル冷気ダメージ",
+          "name": "氷葬する",
+          "engText": "(23-30) to (31-41) Added Spell Cold Damage while wielding a Two Handed Weapon",
+          "engName": "Entombing",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 82,
+          "weight": 62,
+          "family": "WeaponClassColdDamage"
+        },
+        {
+          "key": "AbyssSpellAddedColdDamageWhileHoldingAShieldJewel1_",
+          "text": "盾装備中に(2-5)から(6-8)の追加スペル冷気ダメージ",
+          "name": "凍てついた",
+          "engText": "(2-5) to (6-8) Added Spell Cold Damage while holding a Shield",
+          "engName": "Frosted",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "WeaponClassColdDamage"
+        },
+        {
+          "key": "AbyssSpellAddedColdDamageWhileHoldingAShieldJewel2",
+          "text": "盾装備中に(8-11)から(13-16)の追加スペル冷気ダメージ",
+          "name": "凍りつく",
+          "engText": "(8-11) to (13-16) Added Spell Cold Damage while holding a Shield",
+          "engName": "Freezing",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 39,
+          "weight": 250,
+          "family": "WeaponClassColdDamage"
+        },
+        {
+          "key": "AbyssSpellAddedColdDamageWhileHoldingAShieldJewel3",
+          "text": "盾装備中に(12-14)から(17-19)の追加スペル冷気ダメージ",
+          "name": "凍結した",
+          "engText": "(12-14) to (17-19) Added Spell Cold Damage while holding a Shield",
+          "engName": "Frozen",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 48,
+          "weight": 250,
+          "family": "WeaponClassColdDamage"
+        },
+        {
+          "key": "AbyssSpellAddedColdDamageWhileHoldingAShieldJewel4",
+          "text": "盾装備中に(16-18)から(20-25)の追加スペル冷気ダメージ",
+          "name": "氷結した",
+          "engText": "(16-18) to (20-25) Added Spell Cold Damage while holding a Shield",
+          "engName": "Glaciated",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 58,
+          "weight": 250,
+          "family": "WeaponClassColdDamage"
+        },
+        {
+          "key": "AbyssSpellAddedColdDamageWhileHoldingAShieldJewel5_",
+          "text": "盾装備中に(19-22)から(26-29)の追加スペル冷気ダメージ",
+          "name": "極地の",
+          "engText": "(19-22) to (26-29) Added Spell Cold Damage while holding a Shield",
+          "engName": "Polar",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 70,
+          "weight": 125,
+          "family": "WeaponClassColdDamage"
+        },
+        {
+          "key": "AbyssSpellAddedColdDamageWhileHoldingAShieldJewel6",
+          "text": "盾装備中に(23-30)から(31-41)の追加スペル冷気ダメージ",
+          "name": "氷葬する",
+          "engText": "(23-30) to (31-41) Added Spell Cold Damage while holding a Shield",
+          "engName": "Entombing",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 82,
+          "weight": 62,
+          "family": "WeaponClassColdDamage"
+        }
+      ],
+      "WeaponClassLightningDamage": [
+        {
+          "key": "AbyssSpellAddedLightningDamageWhileDualWieldingJewel1",
+          "text": "二刀流中に1から(8-13)の追加スペル雷ダメージ",
+          "name": "電音の",
+          "engText": "1 to (8-13) Added Spell Lightning Damage while Dual Wielding",
+          "engName": "Humming",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "WeaponClassLightningDamage"
+        },
+        {
+          "key": "AbyssSpellAddedLightningDamageWhileDualWieldingJewel2",
+          "text": "二刀流中に(1-3)から(22-27)の追加スペル雷ダメージ",
+          "name": "電光走る",
+          "engText": "(1-3) to (22-27) Added Spell Lightning Damage while Dual Wielding",
+          "engName": "Sparking",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 39,
+          "weight": 250,
+          "family": "WeaponClassLightningDamage"
+        },
+        {
+          "key": "AbyssSpellAddedLightningDamageWhileDualWieldingJewel3",
+          "text": "二刀流中に(1-4)から(29-34)の追加スペル雷ダメージ",
+          "name": "電弧する",
+          "engText": "(1-4) to (29-34) Added Spell Lightning Damage while Dual Wielding",
+          "engName": "Arcing",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 48,
+          "weight": 250,
+          "family": "WeaponClassLightningDamage"
+        },
+        {
+          "key": "AbyssSpellAddedLightningDamageWhileDualWieldingJewel4",
+          "text": "二刀流中に(1-5)から(38-43)の追加スペル雷ダメージ",
+          "name": "電撃の",
+          "engText": "(1-5) to (38-43) Added Spell Lightning Damage while Dual Wielding",
+          "engName": "Shocking",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 58,
+          "weight": 250,
+          "family": "WeaponClassLightningDamage"
+        },
+        {
+          "key": "AbyssSpellAddedLightningDamageWhileDualWieldingJewel5_",
+          "text": "二刀流中に(1-7)から(44-47)の追加スペル雷ダメージ",
+          "name": "放電する",
+          "engText": "(1-7) to (44-47) Added Spell Lightning Damage while Dual Wielding",
+          "engName": "Discharging",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 70,
+          "weight": 125,
+          "family": "WeaponClassLightningDamage"
+        },
+        {
+          "key": "AbyssSpellAddedLightningDamageWhileDualWieldingJewel6",
+          "text": "二刀流中に(1-8)から(56-66)の追加スペル雷ダメージ",
+          "name": "感電する",
+          "engText": "(1-8) to (56-66) Added Spell Lightning Damage while Dual Wielding",
+          "engName": "Electrocuting",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 82,
+          "weight": 62,
+          "family": "WeaponClassLightningDamage"
+        },
+        {
+          "key": "AbyssSpellAddedLightningDamageWhileWieldingTwoHandedWeaponJewel1",
+          "text": "両手武器装備中に1から(8-13)の追加スペル雷ダメージ",
+          "name": "電音の",
+          "engText": "1 to (8-13) Added Spell Lightning Damage while wielding a Two Handed Weapon",
+          "engName": "Humming",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "WeaponClassLightningDamage"
+        },
+        {
+          "key": "AbyssSpellAddedLightningDamageWhileWieldingTwoHandedWeaponJewel2",
+          "text": "両手武器装備中に(1-3)から(22-27)の追加スペル雷ダメージ",
+          "name": "電光走る",
+          "engText": "(1-3) to (22-27) Added Spell Lightning Damage while wielding a Two Handed Weapon",
+          "engName": "Sparking",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 39,
+          "weight": 250,
+          "family": "WeaponClassLightningDamage"
+        },
+        {
+          "key": "AbyssSpellAddedLightningDamageWhileWieldingTwoHandedWeaponJewel3",
+          "text": "両手武器装備中に(1-4)から(29-34)の追加スペル雷ダメージ",
+          "name": "電弧する",
+          "engText": "(1-4) to (29-34) Added Spell Lightning Damage while wielding a Two Handed Weapon",
+          "engName": "Arcing",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 48,
+          "weight": 250,
+          "family": "WeaponClassLightningDamage"
+        },
+        {
+          "key": "AbyssSpellAddedLightningDamageWhileWieldingTwoHandedWeaponJewel4",
+          "text": "両手武器装備中に(1-5)から(38-43)の追加スペル雷ダメージ",
+          "name": "電撃の",
+          "engText": "(1-5) to (38-43) Added Spell Lightning Damage while wielding a Two Handed Weapon",
+          "engName": "Shocking",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 58,
+          "weight": 250,
+          "family": "WeaponClassLightningDamage"
+        },
+        {
+          "key": "AbyssSpellAddedLightningDamageWhileWieldingTwoHandedWeaponJewel5_",
+          "text": "両手武器装備中に(1-7)から(44-47)の追加スペル雷ダメージ",
+          "name": "放電する",
+          "engText": "(1-7) to (44-47) Added Spell Lightning Damage while wielding a Two Handed Weapon",
+          "engName": "Discharging",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 70,
+          "weight": 125,
+          "family": "WeaponClassLightningDamage"
+        },
+        {
+          "key": "AbyssSpellAddedLightningDamageWhileWieldingTwoHandedWeaponJewel6_",
+          "text": "両手武器装備中に(1-8)から(56-66)の追加スペル雷ダメージ",
+          "name": "感電する",
+          "engText": "(1-8) to (56-66) Added Spell Lightning Damage while wielding a Two Handed Weapon",
+          "engName": "Electrocuting",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 82,
+          "weight": 62,
+          "family": "WeaponClassLightningDamage"
+        },
+        {
+          "key": "AbyssSpellAddedLightningDamageWhileHoldingAShieldJewel1",
+          "text": "盾装備中に1から(8-13)の追加スペル雷ダメージ",
+          "name": "電音の",
+          "engText": "1 to (8-13) Added Spell Lightning Damage while holding a Shield",
+          "engName": "Humming",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "WeaponClassLightningDamage"
+        },
+        {
+          "key": "AbyssSpellAddedLightningDamageWhileHoldingAShieldJewel2",
+          "text": "盾装備中に(1-3)から(22-27)の追加スペル雷ダメージ",
+          "name": "電光走る",
+          "engText": "(1-3) to (22-27) Added Spell Lightning Damage while holding a Shield",
+          "engName": "Sparking",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 39,
+          "weight": 250,
+          "family": "WeaponClassLightningDamage"
+        },
+        {
+          "key": "AbyssSpellAddedLightningDamageWhileHoldingAShieldJewel3",
+          "text": "盾装備中に(1-4)から(29-34)の追加スペル雷ダメージ",
+          "name": "電弧する",
+          "engText": "(1-4) to (29-34) Added Spell Lightning Damage while holding a Shield",
+          "engName": "Arcing",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 48,
+          "weight": 250,
+          "family": "WeaponClassLightningDamage"
+        },
+        {
+          "key": "AbyssSpellAddedLightningDamageWhileHoldingAShieldJewel4",
+          "text": "盾装備中に(1-5)から(38-43)の追加スペル雷ダメージ",
+          "name": "電撃の",
+          "engText": "(1-5) to (38-43) Added Spell Lightning Damage while holding a Shield",
+          "engName": "Shocking",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 58,
+          "weight": 250,
+          "family": "WeaponClassLightningDamage"
+        },
+        {
+          "key": "AbyssSpellAddedLightningDamageWhileHoldingAShieldJewel5",
+          "text": "盾装備中に(1-7)から(44-47)の追加スペル雷ダメージ",
+          "name": "放電する",
+          "engText": "(1-7) to (44-47) Added Spell Lightning Damage while holding a Shield",
+          "engName": "Discharging",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 70,
+          "weight": 125,
+          "family": "WeaponClassLightningDamage"
+        },
+        {
+          "key": "AbyssSpellAddedLightningDamageWhileHoldingAShieldJewel6",
+          "text": "盾装備中に(1-8)から(56-66)の追加スペル雷ダメージ",
+          "name": "感電する",
+          "engText": "(1-8) to (56-66) Added Spell Lightning Damage while holding a Shield",
+          "engName": "Electrocuting",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 82,
+          "weight": 62,
+          "family": "WeaponClassLightningDamage"
+        }
+      ],
+      "WeaponClassPhysicalDamage": [
+        {
+          "key": "AbyssSpellAddedPhysicalDamageWhileDualWieldingJewel1",
+          "text": "二刀流中に(1-3)から(4-7)の追加スペル物理ダメージ",
+          "name": "閃く",
+          "engText": "(1-3) to (4-7) Added Spell Physical Damage while Dual Wielding",
+          "engName": "Glinting",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "WeaponClassPhysicalDamage"
+        },
+        {
+          "key": "AbyssSpellAddedPhysicalDamageWhileDualWieldingJewel2",
+          "text": "二刀流中に(4-7)から(10-13)の追加スペル物理ダメージ",
+          "name": "光沢帯びた",
+          "engText": "(4-7) to (10-13) Added Spell Physical Damage while Dual Wielding",
+          "engName": "Gleaming",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 42,
+          "weight": 250,
+          "family": "WeaponClassPhysicalDamage"
+        },
+        {
+          "key": "AbyssSpellAddedPhysicalDamageWhileDualWieldingJewel3",
+          "text": "二刀流中に(9-12)から(14-17)の追加スペル物理ダメージ",
+          "name": "鍛えられた",
+          "engText": "(9-12) to (14-17) Added Spell Physical Damage while Dual Wielding",
+          "engName": "Annealed",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 54,
+          "weight": 250,
+          "family": "WeaponClassPhysicalDamage"
+        },
+        {
+          "key": "AbyssSpellAddedPhysicalDamageWhileDualWieldingJewel4",
+          "text": "二刀流中に(13-16)から(19-22)の追加スペル物理ダメージ",
+          "name": "鋭利な",
+          "engText": "(13-16) to (19-22) Added Spell Physical Damage while Dual Wielding",
+          "engName": "Razor-sharp",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 63,
+          "weight": 250,
+          "family": "WeaponClassPhysicalDamage"
+        },
+        {
+          "key": "AbyssSpellAddedPhysicalDamageWhileDualWieldingJewel5",
+          "text": "二刀流中に(17-20)から(22-24)の追加スペル物理ダメージ",
+          "name": "鍛錬された",
+          "engText": "(17-20) to (22-24) Added Spell Physical Damage while Dual Wielding",
+          "engName": "Tempered",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 72,
+          "weight": 125,
+          "family": "WeaponClassPhysicalDamage"
+        },
+        {
+          "key": "AbyssSpellAddedPhysicalDamageWhileDualWieldingJewel6",
+          "text": "二刀流中に(22-24)から(29-35)の追加スペル物理ダメージ",
+          "name": "猛烈な",
+          "engText": "(22-24) to (29-35) Added Spell Physical Damage while Dual Wielding",
+          "engName": "Flaring",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 83,
+          "weight": 62,
+          "family": "WeaponClassPhysicalDamage"
+        },
+        {
+          "key": "AbyssSpellAddedPhysicalDamageWhileWieldingTwoHandedWeaponJewel1",
+          "text": "両手武器装備中に(1-3)から(4-7)の追加スペル物理ダメージ",
+          "name": "閃く",
+          "engText": "(1-3) to (4-7) Added Spell Physical Damage while wielding a Two Handed Weapon",
+          "engName": "Glinting",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "WeaponClassPhysicalDamage"
+        },
+        {
+          "key": "AbyssSpellAddedPhysicalDamageWhileWieldingTwoHandedWeaponJewel2",
+          "text": "両手武器装備中に(4-7)から(10-13)の追加スペル物理ダメージ",
+          "name": "光沢帯びた",
+          "engText": "(4-7) to (10-13) Added Spell Physical Damage while wielding a Two Handed Weapon",
+          "engName": "Gleaming",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 42,
+          "weight": 250,
+          "family": "WeaponClassPhysicalDamage"
+        },
+        {
+          "key": "AbyssSpellAddedPhysicalDamageWhileWieldingTwoHandedWeaponJewel3",
+          "text": "両手武器装備中に(9-12)から(14-17)の追加スペル物理ダメージ",
+          "name": "鍛えられた",
+          "engText": "(9-12) to (14-17) Added Spell Physical Damage while wielding a Two Handed Weapon",
+          "engName": "Annealed",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 54,
+          "weight": 250,
+          "family": "WeaponClassPhysicalDamage"
+        },
+        {
+          "key": "AbyssSpellAddedPhysicalDamageWhileWieldingTwoHandedWeaponJewel4",
+          "text": "両手武器装備中に(13-16)から(19-22)の追加スペル物理ダメージ",
+          "name": "鋭利な",
+          "engText": "(13-16) to (19-22) Added Spell Physical Damage while wielding a Two Handed Weapon",
+          "engName": "Razor-sharp",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 63,
+          "weight": 250,
+          "family": "WeaponClassPhysicalDamage"
+        },
+        {
+          "key": "AbyssSpellAddedPhysicalDamageWhileWieldingTwoHandedWeaponJewel5",
+          "text": "両手武器装備中に(17-20)から(22-24)の追加スペル物理ダメージ",
+          "name": "鍛錬された",
+          "engText": "(17-20) to (22-24) Added Spell Physical Damage while wielding a Two Handed Weapon",
+          "engName": "Tempered",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 72,
+          "weight": 125,
+          "family": "WeaponClassPhysicalDamage"
+        },
+        {
+          "key": "AbyssSpellAddedPhysicalDamageWhileWieldingTwoHandedWeaponJewel6",
+          "text": "両手武器装備中に(22-24)から(29-35)の追加スペル物理ダメージ",
+          "name": "猛烈な",
+          "engText": "(22-24) to (29-35) Added Spell Physical Damage while wielding a Two Handed Weapon",
+          "engName": "Flaring",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 83,
+          "weight": 62,
+          "family": "WeaponClassPhysicalDamage"
+        },
+        {
+          "key": "AbyssSpellAddedPhysicalDamageWhileHoldingAShieldJewel1",
+          "text": "盾装備中に(1-3)から(4-7)の追加スペル物理ダメージ",
+          "name": "閃く",
+          "engText": "(1-3) to (4-7) Added Spell Physical Damage while holding a Shield",
+          "engName": "Glinting",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "WeaponClassPhysicalDamage"
+        },
+        {
+          "key": "AbyssSpellAddedPhysicalDamageWhileHoldingAShieldJewel2",
+          "text": "盾装備中に(4-7)から(10-13)の追加スペル物理ダメージ",
+          "name": "光沢帯びた",
+          "engText": "(4-7) to (10-13) Added Spell Physical Damage while holding a Shield",
+          "engName": "Gleaming",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 42,
+          "weight": 250,
+          "family": "WeaponClassPhysicalDamage"
+        },
+        {
+          "key": "AbyssSpellAddedPhysicalDamageWhileHoldingAShieldJewel3",
+          "text": "盾装備中に(9-12)から(14-17)の追加スペル物理ダメージ",
+          "name": "鍛えられた",
+          "engText": "(9-12) to (14-17) Added Spell Physical Damage while holding a Shield",
+          "engName": "Annealed",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 54,
+          "weight": 250,
+          "family": "WeaponClassPhysicalDamage"
+        },
+        {
+          "key": "AbyssSpellAddedPhysicalDamageWhileHoldingAShieldJewel4",
+          "text": "盾装備中に(13-16)から(19-22)の追加スペル物理ダメージ",
+          "name": "鋭利な",
+          "engText": "(13-16) to (19-22) Added Spell Physical Damage while holding a Shield",
+          "engName": "Razor-sharp",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 63,
+          "weight": 250,
+          "family": "WeaponClassPhysicalDamage"
+        },
+        {
+          "key": "AbyssSpellAddedPhysicalDamageWhileHoldingAShieldJewel5",
+          "text": "盾装備中に(17-20)から(22-24)の追加スペル物理ダメージ",
+          "name": "鍛錬された",
+          "engText": "(17-20) to (22-24) Added Spell Physical Damage while holding a Shield",
+          "engName": "Tempered",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 72,
+          "weight": 125,
+          "family": "WeaponClassPhysicalDamage"
+        },
+        {
+          "key": "AbyssSpellAddedPhysicalDamageWhileHoldingAShieldJewel6",
+          "text": "盾装備中に(22-24)から(29-35)の追加スペル物理ダメージ",
+          "name": "猛烈な",
+          "engText": "(22-24) to (29-35) Added Spell Physical Damage while holding a Shield",
+          "engName": "Flaring",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 83,
+          "weight": 62,
+          "family": "WeaponClassPhysicalDamage"
+        }
+      ],
+      "WeaponClassChaosDamage": [
+        {
+          "key": "AbyssSpellAddedChaosDamageWhileDualWieldingJewel1",
+          "text": "二刀流中に(1-3)から(4-7)の追加スペル混沌ダメージ",
+          "name": "汚れた",
+          "engText": "(1-3) to (4-7) Added Spell Chaos Damage while Dual Wielding",
+          "engName": "Tainted",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "WeaponClassChaosDamage"
+        },
+        {
+          "key": "AbyssSpellAddedChaosDamageWhileDualWieldingJewel2",
+          "text": "二刀流中に(4-7)から(10-13)の追加スペル混沌ダメージ",
+          "name": "曇った",
+          "engText": "(4-7) to (10-13) Added Spell Chaos Damage while Dual Wielding",
+          "engName": "Clouded",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 42,
+          "weight": 250,
+          "family": "WeaponClassChaosDamage"
+        },
+        {
+          "key": "AbyssSpellAddedChaosDamageWhileDualWieldingJewel3",
+          "text": "二刀流中に(9-12)から(14-17)の追加スペル混沌ダメージ",
+          "name": "昏い",
+          "engText": "(9-12) to (14-17) Added Spell Chaos Damage while Dual Wielding",
+          "engName": "Darkened",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 54,
+          "weight": 250,
+          "family": "WeaponClassChaosDamage"
+        },
+        {
+          "key": "AbyssSpellAddedChaosDamageWhileDualWieldingJewel4",
+          "text": "二刀流中に(13-16)から(19-22)の追加スペル混沌ダメージ",
+          "name": "有害な",
+          "engText": "(13-16) to (19-22) Added Spell Chaos Damage while Dual Wielding",
+          "engName": "Malignant",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 65,
+          "weight": 250,
+          "family": "WeaponClassChaosDamage"
+        },
+        {
+          "key": "AbyssSpellAddedChaosDamageWhileDualWieldingJewel5",
+          "text": "二刀流中に(17-20)から(22-24)の追加スペル混沌ダメージ",
+          "name": "不浄な",
+          "engText": "(17-20) to (22-24) Added Spell Chaos Damage while Dual Wielding",
+          "engName": "Vile",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 75,
+          "weight": 125,
+          "family": "WeaponClassChaosDamage"
+        },
+        {
+          "key": "AbyssSpellAddedChaosDamageWhileDualWieldingJewel6",
+          "text": "二刀流中に(22-24)から(29-35)の追加スペル混沌ダメージ",
+          "name": "害意ある",
+          "engText": "(22-24) to (29-35) Added Spell Chaos Damage while Dual Wielding",
+          "engName": "Malicious",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 84,
+          "weight": 62,
+          "family": "WeaponClassChaosDamage"
+        },
+        {
+          "key": "AbyssSpellAddedChaosDamageWhileWieldingTwoHandedWeaponJewel1",
+          "text": "両武器装備中に(1-3)から(4-7)の追加スペル混沌ダメージ",
+          "name": "汚れた",
+          "engText": "(1-3) to (4-7) Added Spell Chaos Damage while wielding a Two Handed Weapon",
+          "engName": "Tainted",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "WeaponClassChaosDamage"
+        },
+        {
+          "key": "AbyssSpellAddedChaosDamageWhileWieldingTwoHandedWeaponJewel2",
+          "text": "両武器装備中に(4-7)から(10-13)の追加スペル混沌ダメージ",
+          "name": "曇った",
+          "engText": "(4-7) to (10-13) Added Spell Chaos Damage while wielding a Two Handed Weapon",
+          "engName": "Clouded",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 42,
+          "weight": 250,
+          "family": "WeaponClassChaosDamage"
+        },
+        {
+          "key": "AbyssSpellAddedChaosDamageWhileWieldingTwoHandedWeaponJewel3",
+          "text": "両武器装備中に(9-12)から(14-17)の追加スペル混沌ダメージ",
+          "name": "昏い",
+          "engText": "(9-12) to (14-17) Added Spell Chaos Damage while wielding a Two Handed Weapon",
+          "engName": "Darkened",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 54,
+          "weight": 250,
+          "family": "WeaponClassChaosDamage"
+        },
+        {
+          "key": "AbyssSpellAddedChaosDamageWhileWieldingTwoHandedWeaponJewel4",
+          "text": "両武器装備中に(13-16)から(19-22)の追加スペル混沌ダメージ",
+          "name": "有害な",
+          "engText": "(13-16) to (19-22) Added Spell Chaos Damage while wielding a Two Handed Weapon",
+          "engName": "Malignant",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 65,
+          "weight": 250,
+          "family": "WeaponClassChaosDamage"
+        },
+        {
+          "key": "AbyssSpellAddedChaosDamageWhileWieldingTwoHandedWeaponJewel5",
+          "text": "両武器装備中に(17-20)から(22-24)の追加スペル混沌ダメージ",
+          "name": "不浄な",
+          "engText": "(17-20) to (22-24) Added Spell Chaos Damage while wielding a Two Handed Weapon",
+          "engName": "Vile",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 75,
+          "weight": 125,
+          "family": "WeaponClassChaosDamage"
+        },
+        {
+          "key": "AbyssSpellAddedChaosDamageWhileWieldingTwoHandedWeaponJewel6",
+          "text": "両武器装備中に(22-24)から(29-35)の追加スペル混沌ダメージ",
+          "name": "害意ある",
+          "engText": "(22-24) to (29-35) Added Spell Chaos Damage while wielding a Two Handed Weapon",
+          "engName": "Malicious",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 84,
+          "weight": 62,
+          "family": "WeaponClassChaosDamage"
+        },
+        {
+          "key": "AbyssSpellAddedChaosDamageWhileHoldingAShieldJewel1",
+          "text": "盾装備中に(1-3)から(4-7)の追加スペル混沌ダメージ",
+          "name": "汚れた",
+          "engText": "(1-3) to (4-7) Added Spell Chaos Damage while holding a Shield",
+          "engName": "Tainted",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "WeaponClassChaosDamage"
+        },
+        {
+          "key": "AbyssSpellAddedChaosDamageWhileHoldingAShieldJewel2",
+          "text": "盾装備中に(4-7)から(10-13)の追加スペル混沌ダメージ",
+          "name": "曇った",
+          "engText": "(4-7) to (10-13) Added Spell Chaos Damage while holding a Shield",
+          "engName": "Clouded",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 42,
+          "weight": 250,
+          "family": "WeaponClassChaosDamage"
+        },
+        {
+          "key": "AbyssSpellAddedChaosDamageWhileHoldingAShieldJewel3__",
+          "text": "盾装備中に(9-12)から(14-17)の追加スペル混沌ダメージ",
+          "name": "昏い",
+          "engText": "(9-12) to (14-17) Added Spell Chaos Damage while holding a Shield",
+          "engName": "Darkened",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 54,
+          "weight": 250,
+          "family": "WeaponClassChaosDamage"
+        },
+        {
+          "key": "AbyssSpellAddedChaosDamageWhileHoldingAShieldJewel4",
+          "text": "盾装備中に(13-16)から(19-22)の追加スペル混沌ダメージ",
+          "name": "有害な",
+          "engText": "(13-16) to (19-22) Added Spell Chaos Damage while holding a Shield",
+          "engName": "Malignant",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 65,
+          "weight": 250,
+          "family": "WeaponClassChaosDamage"
+        },
+        {
+          "key": "AbyssSpellAddedChaosDamageWhileHoldingAShieldJewel5",
+          "text": "盾装備中に(17-20)から(22-24)の追加スペル混沌ダメージ",
+          "name": "不浄な",
+          "engText": "(17-20) to (22-24) Added Spell Chaos Damage while holding a Shield",
+          "engName": "Vile",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 75,
+          "weight": 125,
+          "family": "WeaponClassChaosDamage"
+        },
+        {
+          "key": "AbyssSpellAddedChaosDamageWhileHoldingAShieldJewel6",
+          "text": "盾装備中に(22-24)から(29-35)の追加スペル混沌ダメージ",
+          "name": "害意ある",
+          "engText": "(22-24) to (29-35) Added Spell Chaos Damage while holding a Shield",
+          "engName": "Malicious",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 84,
+          "weight": 62,
+          "family": "WeaponClassChaosDamage"
+        }
+      ],
+      "EnergyShieldRegeneration": [
+        {
+          "key": "AbyssFlatEnergyShieldRegenerationJewel1",
+          "text": "毎秒(9-12)のエナジーシールドを自動回復する",
+          "name": "魅了する",
+          "engText": "Regenerate (9-12) Energy Shield per second",
+          "engName": "Captivating",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "EnergyShieldRegeneration"
+        },
+        {
+          "key": "AbyssFlatEnergyShieldRegenerationJewel2",
+          "text": "毎秒(13-16)のエナジーシールドを自動回復する",
+          "name": "美しい",
+          "engText": "Regenerate (13-16) Energy Shield per second",
+          "engName": "Beautiful",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 30,
+          "weight": 500,
+          "family": "EnergyShieldRegeneration"
+        },
+        {
+          "key": "AbyssFlatEnergyShieldRegenerationJewel3",
+          "text": "毎秒(17-20)のエナジーシールドを自動回復する",
+          "name": "息を呑む",
+          "engText": "Regenerate (17-20) Energy Shield per second",
+          "engName": "Breathtaking",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 60,
+          "weight": 500,
+          "family": "EnergyShieldRegeneration"
+        }
+      ],
+      "LifeRegeneration": [
+        {
+          "key": "AbyssFlatLifeRegenerationJewel1",
+          "text": "毎秒(9-12)のライフを自動回復する",
+          "name": "若い",
+          "engText": "Regenerate (9-12) Life per second",
+          "engName": "Youthful",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "LifeRegeneration"
+        },
+        {
+          "key": "AbyssFlatLifeRegenerationJewel2",
+          "text": "毎秒(13-16)のライフを自動回復する",
+          "name": "元気ある",
+          "engText": "Regenerate (13-16) Life per second",
+          "engName": "Spirited",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 40,
+          "weight": 250,
+          "family": "LifeRegeneration"
+        },
+        {
+          "key": "AbyssFlatLifeRegenerationJewel3_",
+          "text": "毎秒(17-20)のライフを自動回復する",
+          "name": "快活な",
+          "engText": "Regenerate (17-20) Life per second",
+          "engName": "Vivacious",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 80,
+          "weight": 250,
+          "family": "LifeRegeneration"
+        }
+      ],
+      "ManaRegeneration": [
+        {
+          "key": "AbyssFlatManaShieldRegenerationJewel1",
+          "text": "毎秒(1.1-2)のマナを自動回復する",
+          "name": "充填する",
+          "engText": "Regenerate (1.1-2) Mana per second",
+          "engName": "Energising",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 350,
+          "family": "ManaRegeneration"
+        },
+        {
+          "key": "AbyssFlatManaShieldRegenerationJewel2",
+          "text": "毎秒(2.1-3)のマナを自動回復する",
+          "name": "心打つ",
+          "engText": "Regenerate (2.1-3) Mana per second",
+          "engName": "Inspirational",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 40,
+          "weight": 350,
+          "family": "ManaRegeneration"
+        },
+        {
+          "key": "AbyssFlatManaShieldRegenerationJewel3",
+          "text": "毎秒(3.3-4)のマナを自動回復する",
+          "name": "共鳴する",
+          "engText": "Regenerate (3.3-4) Mana per second",
+          "engName": "Resonating",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 75,
+          "weight": 350,
+          "family": "ManaRegeneration"
+        }
+      ],
+      "IncreasedPhysicalDamageReductionRating": [
+        {
+          "key": "AbyssFlatArmourJewel1",
+          "text": "アーマー +(36-60)",
+          "name": "塗装された",
+          "engText": "+(36-60) to Armour",
+          "engName": "Lacquered",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 600,
+          "family": "IncreasedPhysicalDamageReductionRating"
+        },
+        {
+          "key": "AbyssFlatArmourJewel2",
+          "text": "アーマー +(61-100)",
+          "name": "強靭な",
+          "engText": "+(61-100) to Armour",
+          "engName": "Fortified",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 40,
+          "weight": 600,
+          "family": "IncreasedPhysicalDamageReductionRating"
+        },
+        {
+          "key": "AbyssFlatArmourJewel3",
+          "text": "アーマー +(101-180)",
+          "name": "甲皮付き",
+          "engText": "+(101-180) to Armour",
+          "engName": "Carapaced",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 75,
+          "weight": 600,
+          "family": "IncreasedPhysicalDamageReductionRating"
+        },
+        {
+          "key": "AbyssFlatArmourJewel4__",
+          "text": "アーマー +(181-250)",
+          "name": "保護する",
+          "engText": "+(181-250) to Armour",
+          "engName": "Encased",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 83,
+          "weight": 300,
+          "family": "IncreasedPhysicalDamageReductionRating"
+        }
+      ],
+      "IncreasedEvasionRating": [
+        {
+          "key": "AbyssFlatEvasionJewel1",
+          "text": "回避力 +(36-60)",
+          "name": "機敏な",
+          "engText": "+(36-60) to Evasion Rating",
+          "engName": "Agile",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 600,
+          "family": "IncreasedEvasionRating"
+        },
+        {
+          "key": "AbyssFlatEvasionJewel2",
+          "text": "回避力 +(61-100)",
+          "name": "素早い",
+          "engText": "+(61-100) to Evasion Rating",
+          "engName": "Fleet",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 40,
+          "weight": 600,
+          "family": "IncreasedEvasionRating"
+        },
+        {
+          "key": "AbyssFlatEvasionJewel3",
+          "text": "回避力 +(101-180)",
+          "name": "霧状の",
+          "engText": "+(101-180) to Evasion Rating",
+          "engName": "Vaporous",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 75,
+          "weight": 600,
+          "family": "IncreasedEvasionRating"
+        },
+        {
+          "key": "AbyssFlatEvasionJewel4_",
+          "text": "回避力 +(181-250)",
+          "name": "曇らせる",
+          "engText": "+(181-250) to Evasion Rating",
+          "engName": "Beclouded",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 83,
+          "weight": 300,
+          "family": "IncreasedEvasionRating"
+        }
+      ],
+      "IncreasedEnergyShield": [
+        {
+          "key": "AbyssFlatEnergyShieldJewel1",
+          "text": "最大エナジーシールド +(21-25)",
+          "name": "輝く",
+          "engText": "+(21-25) to maximum Energy Shield",
+          "engName": "Shining",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 600,
+          "family": "IncreasedEnergyShield"
+        },
+        {
+          "key": "AbyssFlatEnergyShieldJewel2",
+          "text": "最大エナジーシールド +(26-30)",
+          "name": "沸き立つ",
+          "engText": "+(26-30) to maximum Energy Shield",
+          "engName": "Seething",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 40,
+          "weight": 600,
+          "family": "IncreasedEnergyShield"
+        },
+        {
+          "key": "AbyssFlatEnergyShieldJewel3",
+          "text": "最大エナジーシールド +(31-35)",
+          "name": "光り輝く",
+          "engText": "+(31-35) to maximum Energy Shield",
+          "engName": "Incandescent",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 75,
+          "weight": 600,
+          "family": "IncreasedEnergyShield"
+        },
+        {
+          "key": "AbyssFlatEnergyShieldJewel4",
+          "text": "最大エナジーシールド +(36-40)",
+          "name": "きらびやかな",
+          "engText": "+(36-40) to maximum Energy Shield",
+          "engName": "Resplendent",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 83,
+          "weight": 300,
+          "family": "IncreasedEnergyShield"
+        }
+      ],
+      "CooldownRecovery": [
+        {
+          "key": "AbyssCooldownRecoverySpeed1_",
+          "text": "クールダウン解消レートが2%増加する",
+          "name": "円滑化する",
+          "engText": "2% increased Cooldown Recovery Rate",
+          "engName": "Facilitating",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 75,
+          "weight": 100,
+          "family": "CooldownRecovery"
+        },
+        {
+          "key": "AbyssCooldownRecoverySpeed2__",
+          "text": "クールダウン解消レートが3%増加する",
+          "name": "促進する",
+          "engText": "3% increased Cooldown Recovery Rate",
+          "engName": "Expediting",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 86,
+          "weight": 100,
+          "family": "CooldownRecovery"
+        }
+      ],
+      "PercentDamageGoesToMana": [
+        {
+          "key": "AbyssDamageRecoupedAsMana1",
+          "text": "受けたダメージの(2-3)%をマナとして回収する",
+          "name": "駆り立てる",
+          "engText": "(2-3)% of Damage taken Recouped as Mana",
+          "engName": "Spurring",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 75,
+          "weight": 300,
+          "family": "PercentDamageGoesToMana"
+        },
+        {
+          "key": "AbyssDamageRecoupedAsMana2",
+          "text": "受けたダメージの(4-5)%をマナとして回収する",
+          "name": "滾らす",
+          "engText": "(4-5)% of Damage taken Recouped as Mana",
+          "engName": "Motivating",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "prefix",
+          "required_level": 86,
+          "weight": 300,
+          "family": "PercentDamageGoesToMana"
+        }
+      ]
+    },
+    "suffix": {
+      "AbyssJewelChillEffect": [
+        {
+          "key": "AbyssJewelChillEffect1_",
+          "text": "冷気系状態異常の効果が(10-20)%増加する",
+          "name": "冷却の",
+          "engText": "(10-20)% increased Effect of Cold Ailments",
+          "engName": "of Chilling",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 30,
+          "weight": 500,
+          "family": "AbyssJewelChillEffect"
+        }
+      ],
+      "AbyssJewelShockEffect": [
+        {
+          "key": "AbyssJewelShockEffect1",
+          "text": "雷系状態異常の効果が(10-20)%増加する",
+          "name": "感電の",
+          "engText": "(10-20)% increased Effect of Lightning Ailments",
+          "engName": "of Shocking",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 30,
+          "weight": 500,
+          "family": "AbyssJewelShockEffect"
+        }
+      ],
+      "Strength": [
+        {
+          "key": "AbyssStrengthJewel1_",
+          "text": "筋力 +(12-16)",
+          "name": "筋力の",
+          "engText": "+(12-16) to Strength",
+          "engName": "of Strength",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "Strength"
+        }
+      ],
+      "Dexterity": [
+        {
+          "key": "AbyssDexterityJewel1_",
+          "text": "器用さ +(12-16)",
+          "name": "器用さの",
+          "engText": "+(12-16) to Dexterity",
+          "engName": "of Dexterity",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "Dexterity"
+        }
+      ],
+      "Intelligence": [
+        {
+          "key": "AbyssIntelligenceJewel1",
+          "text": "知性 +(12-16)",
+          "name": "知性の",
+          "engText": "+(12-16) to Intelligence",
+          "engName": "of Intelligence",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "Intelligence"
+        }
+      ],
+      "StrengthDexterity": [
+        {
+          "key": "AbyssStrengthDexterityJewel1",
+          "text": "筋力および器用さ +(8-10)",
+          "name": "運動の",
+          "engText": "+(8-10) to Strength and Dexterity",
+          "engName": "of Athletics",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "StrengthDexterity"
+        }
+      ],
+      "StrengthIntelligence": [
+        {
+          "key": "AbyssStrengthIntelligenceJewel1_",
+          "text": "筋力および知性 +(8-10)",
+          "name": "魂の",
+          "engText": "+(8-10) to Strength and Intelligence",
+          "engName": "of Spirit",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "StrengthIntelligence"
+        }
+      ],
+      "DexterityIntelligence": [
+        {
+          "key": "AbyssDexterityIntelligenceJewel1",
+          "text": "器用さおよび知性 +(8-10)",
+          "name": "狡猾さの",
+          "engText": "+(8-10) to Dexterity and Intelligence",
+          "engName": "of Cunning",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "DexterityIntelligence"
+        }
+      ],
+      "AllAttributes": [
+        {
+          "key": "AbyssAllAttributesJewel1",
+          "text": "全ての能力値 +(6-8)",
+          "name": "馴致の",
+          "engText": "+(6-8) to all Attributes",
+          "engName": "of Adaption",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "AllAttributes"
+        }
+      ],
+      "FireResistance": [
+        {
+          "key": "AbyssFireResistanceJewel1",
+          "text": "火耐性 +(12-15)%",
+          "name": "ドラゴンの",
+          "engText": "+(12-15)% to Fire Resistance",
+          "engName": "of the Dragon",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 400,
+          "family": "FireResistance"
+        }
+      ],
+      "ColdResistance": [
+        {
+          "key": "AbyssColdResistanceJewel1",
+          "text": "冷気耐性 +(12-15)%",
+          "name": "獣の",
+          "engText": "+(12-15)% to Cold Resistance",
+          "engName": "of the Beast",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 400,
+          "family": "ColdResistance"
+        }
+      ],
+      "LightningResistance": [
+        {
+          "key": "AbyssLightningResistanceJewel1",
+          "text": "雷耐性 +(12-15)%",
+          "name": "接地の",
+          "engText": "+(12-15)% to Lightning Resistance",
+          "engName": "of Grounding",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 400,
+          "family": "LightningResistance"
+        }
+      ],
+      "FireAndColdResistance": [
+        {
+          "key": "AbyssFireColdResistanceJewel1",
+          "text": "火および冷気耐性 +(10-12)%",
+          "name": "路床の",
+          "engText": "+(10-12)% to Fire and Cold Resistances",
+          "engName": "of the Hearth",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "FireAndColdResistance"
+        }
+      ],
+      "FireAndLightningResistance": [
+        {
+          "key": "AbyssFireLightningResistanceJewel1",
+          "text": "火および雷耐性 +(10-12)%",
+          "name": "絶縁体の",
+          "engText": "+(10-12)% to Fire and Lightning Resistances",
+          "engName": "of Insulation",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "FireAndLightningResistance"
+        }
+      ],
+      "ColdAndLightningResistance": [
+        {
+          "key": "AbyssColdLightningResistanceJewel1",
+          "text": "冷気および雷耐性 +(10-12)%",
+          "name": "避難所の",
+          "engText": "+(10-12)% to Cold and Lightning Resistances",
+          "engName": "of Shelter",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "ColdAndLightningResistance"
+        }
+      ],
+      "AllResistances": [
+        {
+          "key": "AbyssAllResistancesJewel1",
+          "text": "全ての元素耐性 +(8-10)%",
+          "name": "抵抗力の",
+          "engText": "+(8-10)% to all Elemental Resistances",
+          "engName": "of Resistance",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 200,
+          "family": "AllResistances"
+        }
+      ],
+      "ChaosResistance": [
+        {
+          "key": "AbyssChaosResistanceJewel1",
+          "text": "混沌耐性 +(7-13)%",
+          "name": "秩序の",
+          "engText": "+(7-13)% to Chaos Resistance",
+          "engName": "of Order",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 100,
+          "family": "ChaosResistance"
+        }
+      ],
+      "IncreasedCastSpeed": [
+        {
+          "key": "AbyssCastSpeedJewel1",
+          "text": "キャストスピードが(2-4)%増加する",
+          "name": "魔法の",
+          "engText": "(2-4)% increased Cast Speed",
+          "engName": "of Enchanting",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "suffix",
+          "required_level": 50,
+          "weight": 750,
+          "family": "IncreasedCastSpeed"
+        }
+      ],
+      "CriticalStrikeChanceIncrease": [
+        {
+          "key": "AbyssCriticalStrikeChanceJewel1",
+          "text": "グローバルクリティカル率が(8-12)%増加する",
+          "name": "脅威の",
+          "engText": "(8-12)% increased Global Critical Strike Chance",
+          "engName": "of Menace",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 50,
+          "weight": 900,
+          "family": "CriticalStrikeChanceIncrease"
+        }
+      ],
+      "CriticalStrikeMultiplier": [
+        {
+          "key": "AbyssCriticalStrikeMultiplierJewel1",
+          "text": "グローバルクリティカルダメージ倍率 +(9-12)%",
+          "name": "有効性の",
+          "engText": "+(9-12)% to Global Critical Strike Multiplier",
+          "engName": "of Potency",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 50,
+          "weight": 900,
+          "family": "CriticalStrikeMultiplier"
+        }
+      ],
+      "SpellAddedFireSuffix": [
+        {
+          "key": "AbyssSpellAddedFireDamageJewel1",
+          "text": "(8-10)から(12-14)の火ダメージをスペルに追加する",
+          "name": "石炭の",
+          "engText": "Adds (8-10) to (12-14) Fire Damage to Spells",
+          "engName": "of Coals",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "suffix",
+          "required_level": 30,
+          "weight": 700,
+          "family": "SpellAddedFireSuffix"
+        },
+        {
+          "key": "AbyssSpellAddedFireDamageJewel2_",
+          "text": "(12-14)から(16-18)の火ダメージをスペルに追加する",
+          "name": "消し炭の",
+          "engText": "Adds (12-14) to (16-18) Fire Damage to Spells",
+          "engName": "of Cinders",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "suffix",
+          "required_level": 43,
+          "weight": 700,
+          "family": "SpellAddedFireSuffix"
+        },
+        {
+          "key": "AbyssSpellAddedFireDamageJewel3",
+          "text": "(16-18)から(20-25)の火ダメージをスペルに追加する",
+          "name": "炎の",
+          "engText": "Adds (16-18) to (20-25) Fire Damage to Spells",
+          "engName": "of Flames",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "suffix",
+          "required_level": 55,
+          "weight": 700,
+          "family": "SpellAddedFireSuffix"
+        },
+        {
+          "key": "AbyssSpellAddedFireDamageJewel4",
+          "text": "(20-22)から(26-30)の火ダメージをスペルに追加する",
+          "name": "焼棄の",
+          "engText": "Adds (20-22) to (26-30) Fire Damage to Spells",
+          "engName": "of Immolation",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "suffix",
+          "required_level": 66,
+          "weight": 350,
+          "family": "SpellAddedFireSuffix"
+        },
+        {
+          "key": "AbyssSpellAddedFireDamageJewel5",
+          "text": "(25-30)から(31-42)の火ダメージをスペルに追加する",
+          "name": "灰の",
+          "engText": "Adds (25-30) to (31-42) Fire Damage to Spells",
+          "engName": "of Ashes",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "suffix",
+          "required_level": 77,
+          "weight": 175,
+          "family": "SpellAddedFireSuffix"
+        }
+      ],
+      "SpellAddedColdSuffix": [
+        {
+          "key": "AbyssSpellAddedColdDamageJewel1",
+          "text": "(7-10)から(11-13)の冷気ダメージをスペルに追加する",
+          "name": "霙の",
+          "engText": "Adds (7-10) to (11-13) Cold Damage to Spells",
+          "engName": "of Sleet",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "suffix",
+          "required_level": 30,
+          "weight": 700,
+          "family": "SpellAddedColdSuffix"
+        },
+        {
+          "key": "AbyssSpellAddedColdDamageJewel2",
+          "text": "(11-13)から(14-17)の冷気ダメージをスペルに追加する",
+          "name": "氷雪の",
+          "engText": "Adds (11-13) to (14-17) Cold Damage to Spells",
+          "engName": "of Ice",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "suffix",
+          "required_level": 43,
+          "weight": 700,
+          "family": "SpellAddedColdSuffix"
+        },
+        {
+          "key": "AbyssSpellAddedColdDamageJewel3",
+          "text": "(14-17)から(18-23)の冷気ダメージをスペルに追加する",
+          "name": "霧氷の",
+          "engText": "Adds (14-17) to (18-23) Cold Damage to Spells",
+          "engName": "of Rime",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "suffix",
+          "required_level": 55,
+          "weight": 700,
+          "family": "SpellAddedColdSuffix"
+        },
+        {
+          "key": "AbyssSpellAddedColdDamageJewel4",
+          "text": "(18-20)から(24-28)の冷気ダメージをスペルに追加する",
+          "name": "氷原の",
+          "engText": "Adds (18-20) to (24-28) Cold Damage to Spells",
+          "engName": "of Floe",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "suffix",
+          "required_level": 66,
+          "weight": 350,
+          "family": "SpellAddedColdSuffix"
+        },
+        {
+          "key": "AbyssSpellAddedColdDamageJewel5",
+          "text": "(23-28)から(29-38)の冷気ダメージをスペルに追加する",
+          "name": "氷結の",
+          "engText": "Adds (23-28) to (29-38) Cold Damage to Spells",
+          "engName": "of Glaciation",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "suffix",
+          "required_level": 77,
+          "weight": 175,
+          "family": "SpellAddedColdSuffix"
+        }
+      ],
+      "SpellAddedLightningSuffix": [
+        {
+          "key": "AbyssSpellAddedLightningDamageJewel1__",
+          "text": "(1-3)から(20-25)の雷ダメージをスペルに追加する",
+          "name": "静電気の",
+          "engText": "Adds (1-3) to (20-25) Lightning Damage to Spells",
+          "engName": "of Static",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "suffix",
+          "required_level": 30,
+          "weight": 700,
+          "family": "SpellAddedLightningSuffix"
+        },
+        {
+          "key": "AbyssSpellAddedLightningDamageJewel2",
+          "text": "(1-4)から(26-31)の雷ダメージをスペルに追加する",
+          "name": "電気の",
+          "engText": "Adds (1-4) to (26-31) Lightning Damage to Spells",
+          "engName": "of Electricity",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "suffix",
+          "required_level": 43,
+          "weight": 700,
+          "family": "SpellAddedLightningSuffix"
+        },
+        {
+          "key": "AbyssSpellAddedLightningDamageJewel3__",
+          "text": "(1-5)から(33-38)の雷ダメージをスペルに追加する",
+          "name": "電圧の",
+          "engText": "Adds (1-5) to (33-38) Lightning Damage to Spells",
+          "engName": "of Voltage",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "suffix",
+          "required_level": 55,
+          "weight": 700,
+          "family": "SpellAddedLightningSuffix"
+        },
+        {
+          "key": "AbyssSpellAddedLightningDamageJewel4",
+          "text": "(1-7)から(39-42)の雷ダメージをスペルに追加する",
+          "name": "放電の",
+          "engText": "Adds (1-7) to (39-42) Lightning Damage to Spells",
+          "engName": "of Discharge",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "suffix",
+          "required_level": 66,
+          "weight": 350,
+          "family": "SpellAddedLightningSuffix"
+        },
+        {
+          "key": "AbyssSpellAddedLightningDamageJewel5_",
+          "text": "(1-8)から(48-59)の雷ダメージをスペルに追加する",
+          "name": "電弧の",
+          "engText": "Adds (1-8) to (48-59) Lightning Damage to Spells",
+          "engName": "of Arcing",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "suffix",
+          "required_level": 77,
+          "weight": 175,
+          "family": "SpellAddedLightningSuffix"
+        }
+      ],
+      "SpellAddedPhysicalSuffix": [
+        {
+          "key": "AbyssSpellAddedPhysicalDamageJewel1",
+          "text": "(4-6)から(9-10)の物理ダメージをスペルに追加する",
+          "name": "重量の",
+          "engText": "Adds (4-6) to (9-10) Physical Damage to Spells",
+          "engName": "of Heft",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "suffix",
+          "required_level": 32,
+          "weight": 700,
+          "family": "SpellAddedPhysicalSuffix"
+        },
+        {
+          "key": "AbyssSpellAddedPhysicalDamageJewel2",
+          "text": "(7-10)から(12-14)の物理ダメージをスペルに追加する",
+          "name": "力の",
+          "engText": "Adds (7-10) to (12-14) Physical Damage to Spells",
+          "engName": "of Force",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "suffix",
+          "required_level": 45,
+          "weight": 700,
+          "family": "SpellAddedPhysicalSuffix"
+        },
+        {
+          "key": "AbyssSpellAddedPhysicalDamageJewel3",
+          "text": "(12-14)から(16-19)の物理ダメージをスペルに追加する",
+          "name": "重みの",
+          "engText": "Adds (12-14) to (16-19) Physical Damage to Spells",
+          "engName": "of Weight",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "suffix",
+          "required_level": 56,
+          "weight": 700,
+          "family": "SpellAddedPhysicalSuffix"
+        },
+        {
+          "key": "AbyssSpellAddedPhysicalDamageJewel4",
+          "text": "(16-19)から(20-23)の物理ダメージをスペルに追加する",
+          "name": "衝撃の",
+          "engText": "Adds (16-19) to (20-23) Physical Damage to Spells",
+          "engName": "of Impact",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "suffix",
+          "required_level": 65,
+          "weight": 350,
+          "family": "SpellAddedPhysicalSuffix"
+        },
+        {
+          "key": "AbyssSpellAddedPhysicalDamageJewel5__",
+          "text": "(20-23)から(26-32)の物理ダメージをスペルに追加する",
+          "name": "衝突の",
+          "engText": "Adds (20-23) to (26-32) Physical Damage to Spells",
+          "engName": "of Collision",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "suffix",
+          "required_level": 78,
+          "weight": 175,
+          "family": "SpellAddedPhysicalSuffix"
+        }
+      ],
+      "SpellAddedChaosSuffix": [
+        {
+          "key": "AbyssSpellAddedChaosDamageJewel1",
+          "text": "(4-6)から(9-10)の混沌ダメージをスペルに追加する",
+          "name": "不名誉の",
+          "engText": "Adds (4-6) to (9-10) Chaos Damage to Spells",
+          "engName": "of Dishonour",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "suffix",
+          "required_level": 33,
+          "weight": 700,
+          "family": "SpellAddedChaosSuffix"
+        },
+        {
+          "key": "AbyssSpellAddedChaosDamageJewel2",
+          "text": "(7-10)から(12-14)の混沌ダメージをスペルに追加する",
+          "name": "害の",
+          "engText": "Adds (7-10) to (12-14) Chaos Damage to Spells",
+          "engName": "of Harm",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "suffix",
+          "required_level": 48,
+          "weight": 700,
+          "family": "SpellAddedChaosSuffix"
+        },
+        {
+          "key": "AbyssSpellAddedChaosDamageJewel3",
+          "text": "(12-14)から(16-19)の混沌ダメージをスペルに追加する",
+          "name": "悪意の",
+          "engText": "Adds (12-14) to (16-19) Chaos Damage to Spells",
+          "engName": "of Malevolence",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "suffix",
+          "required_level": 57,
+          "weight": 700,
+          "family": "SpellAddedChaosSuffix"
+        },
+        {
+          "key": "AbyssSpellAddedChaosDamageJewel4",
+          "text": "(16-19)から(20-23)の混沌ダメージをスペルに追加する",
+          "name": "害意の",
+          "engText": "Adds (16-19) to (20-23) Chaos Damage to Spells",
+          "engName": "of Malice",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "suffix",
+          "required_level": 68,
+          "weight": 350,
+          "family": "SpellAddedChaosSuffix"
+        },
+        {
+          "key": "AbyssSpellAddedChaosDamageJewel5",
+          "text": "(20-23)から(26-32)の混沌ダメージをスペルに追加する",
+          "name": "罪の",
+          "engText": "Adds (20-23) to (26-32) Chaos Damage to Spells",
+          "engName": "of Sin",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "suffix",
+          "required_level": 79,
+          "weight": 175,
+          "family": "SpellAddedChaosSuffix"
+        }
+      ],
+      "HinderOnHit": [
+        {
+          "key": "AbyssSpellsHinderOnHitChanceJewel1",
+          "text": "スペルによるヒット時に(3-5)%の確率で敵を阻害する",
+          "name": "阻害の",
+          "engText": "(3-5)% chance to Hinder Enemies on Hit with Spells",
+          "engName": "of Hindering",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "suffix",
+          "required_level": 32,
+          "weight": 800,
+          "family": "HinderOnHit"
+        },
+        {
+          "key": "AbyssSpellsHinderOnHitChanceJewel2",
+          "text": "スペルによるヒット時に(6-8)%の確率で敵を阻害する",
+          "name": "阻害の",
+          "engText": "(6-8)% chance to Hinder Enemies on Hit with Spells",
+          "engName": "of Hindering",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "suffix",
+          "required_level": 65,
+          "weight": 400,
+          "family": "HinderOnHit"
+        }
+      ],
+      "AvoidIgnite": [
+        {
+          "key": "AbyssAvoidIgniteJewel1_",
+          "text": "(31-40)%の確率で発火を無効化する",
+          "name": "非引火性の",
+          "engText": "(31-40)% chance to Avoid being Ignited",
+          "engName": "of Nonflammability",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 50,
+          "weight": 300,
+          "family": "AvoidIgnite"
+        },
+        {
+          "key": "AbyssAvoidIgniteJewel2",
+          "text": "(41-50)%の確率で発火を無効化する",
+          "name": "耐火の",
+          "engText": "(41-50)% chance to Avoid being Ignited",
+          "engName": "of Fireproofing",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 70,
+          "weight": 150,
+          "family": "AvoidIgnite"
+        }
+      ],
+      "ChanceToAvoidFreezeAndChill": [
+        {
+          "key": "AbyssAvoidFreezeAndChillJewel1",
+          "text": "(31-40)%の確率で凍結を無効化する",
+          "name": "温めの",
+          "engText": "(31-40)% chance to Avoid being Frozen",
+          "engName": "of Warming",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 50,
+          "weight": 300,
+          "family": "ChanceToAvoidFreezeAndChill"
+        },
+        {
+          "key": "AbyssAvoidFreezeAndChillJewel2",
+          "text": "(41-50)%の確率で凍結を無効化する",
+          "name": "加熱の",
+          "engText": "(41-50)% chance to Avoid being Frozen",
+          "engName": "of Heating",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 70,
+          "weight": 150,
+          "family": "ChanceToAvoidFreezeAndChill"
+        }
+      ],
+      "ReducedShockChance": [
+        {
+          "key": "AbyssAvoidShockJewel1",
+          "text": "(31-40)%の確率で感電を無効化する",
+          "name": "絶縁の",
+          "engText": "(31-40)% chance to Avoid being Shocked",
+          "engName": "of Insulating",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 50,
+          "weight": 300,
+          "family": "ReducedShockChance"
+        },
+        {
+          "key": "AbyssAvoidShockJewel2",
+          "text": "(41-50)%の確率で感電を無効化する",
+          "name": "避雷針の",
+          "engText": "(41-50)% chance to Avoid being Shocked",
+          "engName": "of the Lightning Rod",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 70,
+          "weight": 150,
+          "family": "ReducedShockChance"
+        }
+      ],
+      "ChanceToAvoidPoison": [
+        {
+          "key": "AbyssAvoidPoisonJewel1__",
+          "text": "(31-40)%の確率で毒を無効化する",
+          "name": "耐性の",
+          "engText": "(31-40)% chance to Avoid being Poisoned",
+          "engName": "of Tolerance",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 50,
+          "weight": 300,
+          "family": "ChanceToAvoidPoison"
+        },
+        {
+          "key": "AbyssAvoidPoisonJewel2__",
+          "text": "(41-50)%の確率で毒を無効化する",
+          "name": "耐性の",
+          "engText": "(41-50)% chance to Avoid being Poisoned",
+          "engName": "of Immunity",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 70,
+          "weight": 150,
+          "family": "ChanceToAvoidPoison"
+        }
+      ],
+      "ChanceToAvoidBleeding": [
+        {
+          "key": "AbyssAvoidBleedingJewel1",
+          "text": "(31-40)%の確率で出血を無効化する",
+          "name": "食い止めの",
+          "engText": "(31-40)% chance to Avoid Bleeding",
+          "engName": "of Stemming",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 50,
+          "weight": 300,
+          "family": "ChanceToAvoidBleeding"
+        },
+        {
+          "key": "AbyssAvoidBleedingJewel2",
+          "text": "(41-50)%の確率で出血を無効化する",
+          "name": "止血帯の",
+          "engText": "(41-50)% chance to Avoid Bleeding",
+          "engName": "of the Tourniquet",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 70,
+          "weight": 150,
+          "family": "ChanceToAvoidBleeding"
+        }
+      ],
+      "AvoidStun": [
+        {
+          "key": "AbyssAvoidStunJewel1",
+          "text": "(21-24)%の確率でスタンを無効化する",
+          "name": "均衡の",
+          "engText": "(21-24)% chance to Avoid being Stunned",
+          "engName": "of Balance",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 50,
+          "weight": 300,
+          "family": "AvoidStun"
+        },
+        {
+          "key": "AbyssAvoidStunJewel2",
+          "text": "(25-30)%の確率でスタンを無効化する",
+          "name": "安定の",
+          "engText": "(25-30)% chance to Avoid being Stunned",
+          "engName": "of Poise",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 70,
+          "weight": 150,
+          "family": "AvoidStun"
+        }
+      ],
+      "SpellBlockPercentage": [
+        {
+          "key": "AbyssSpellBlockChanceIfHitRecentlyJewel1",
+          "text": "直近ヒットによるダメージを受けていればスペルブロック率 +(3-4)%",
+          "name": "本能の",
+          "engText": "+(3-4)% Chance to Block Spell Damage if you were Damaged by a Hit Recently",
+          "engName": "of Instinct",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "SpellBlockPercentage"
+        },
+        {
+          "key": "AbyssSpellDodgeAndDodgeChanceIfHitRecentlyJewel1",
+          "text": "直近ヒットによるダメージを受けていればスペルブロック率 +2%",
+          "name": "周到の",
+          "engText": "+2% Chance to Block Spell Damage if you were Damaged by a Hit Recently",
+          "engName": "of Readiness",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "SpellBlockPercentage"
+        }
+      ],
+      "MovementSpeedIfNotDamagedRecently": [
+        {
+          "key": "AbyssMovementSpeedIfNotDamagedRecentlyJewel1",
+          "text": "直近プレイヤーがダメージを受けていなければ移動スピードが(3-4)%増加する",
+          "name": "勢いの",
+          "engText": "(3-4)% increased Movement Speed if you haven't taken Damage Recently",
+          "engName": "of Momentum",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "MovementSpeedIfNotDamagedRecently"
+        }
+      ],
+      "DamageIfEnemySlainRecently": [
+        {
+          "key": "AbyssDamageIfEnemySlainRecentlyJewel1",
+          "text": "直近プレイヤーが敵を倒していればダメージが(15-20)%増加する",
+          "name": "殺害者の",
+          "engText": "(15-20)% increased Damage if you've Killed Recently",
+          "engName": "of the Slayer",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "DamageIfEnemySlainRecently"
+        }
+      ],
+      "CriticalStrikeMultiplierIfEnemySlainRecently": [
+        {
+          "key": "AbyssCriticalStrikeMultiplierIfEnemySlainRecentlyJewel1",
+          "text": "直近プレイヤーが敵を倒していればクリティカルダメージ倍率 +(8-14)%",
+          "name": "暗殺者の",
+          "engText": "+(8-14)% to Critical Strike Multiplier if you've Killed Recently",
+          "engName": "of the Assassin",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "suffix",
+          "required_level": 25,
+          "weight": 500,
+          "family": "CriticalStrikeMultiplierIfEnemySlainRecently"
+        }
+      ],
+      "IncreasedArmourIfNoEnemySlainRecently": [
+        {
+          "key": "AbyssIncreasedArmourIfNoEnemySlainRecentlyJewel1__",
+          "text": "直近プレイヤーが敵を倒していなければアーマーが(20-30)%増加する",
+          "name": "守護者の",
+          "engText": "(20-30)% increased Armour if you haven't Killed Recently",
+          "engName": "of the Guardian",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "IncreasedArmourIfNoEnemySlainRecently"
+        }
+      ],
+      "DamagePenetratesElementalResistancesIfNoEnemySlainRecently": [
+        {
+          "key": "AbyssDamagePenetratesElementalResistancesIfNoEnemySlainRecentlyJewel1",
+          "text": "直近プレイヤーが敵を倒していなければダメージは2%の元素耐性を貫通する",
+          "name": "審問官の",
+          "engText": "Damage Penetrates 2% Elemental Resistances if you haven't Killed Recently",
+          "engName": "of the Inquisitor",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "DamagePenetratesElementalResistancesIfNoEnemySlainRecently"
+        }
+      ],
+      "EvasionRatingWhileMoving": [
+        {
+          "key": "AbyssEvasionRatingWhileMovingJewel1",
+          "text": "移動中は回避力が(25-35)%増加する",
+          "name": "巧動の",
+          "engText": "(25-35)% increased Evasion Rating while moving",
+          "engName": "of Maneuvering",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "EvasionRatingWhileMoving"
+        }
+      ],
+      "ManaRegenerationRateWhileMoving": [
+        {
+          "key": "AbyssManaRegenerationRateWhileMovingJewel1",
+          "text": "移動中はマナ自動回復レートが(20-25)%増加する",
+          "name": "実践の",
+          "engText": "(20-25)% increased Mana Regeneration Rate while moving",
+          "engName": "of Praxis",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "ManaRegenerationRateWhileMoving"
+        }
+      ],
+      "LifeRegenerationRateWhileMoving": [
+        {
+          "key": "AbyssLifeRegenerationRateWhileMovingJewel1",
+          "text": "移動中は毎秒ライフの(0.5-1)%を自動回復する",
+          "name": "快活の",
+          "engText": "Regenerate (0.5-1)% of Life per second while moving",
+          "engName": "of Vivaciousness",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "LifeRegenerationRateWhileMoving"
+        }
+      ],
+      "PhysicalDamageAddedAsExtraFireIfCriticalStrikeDealtRecently": [
+        {
+          "key": "AbyssPhysicalDamageAddedAsExtraFireIfCriticalStrikeDealtRecentlyJewel1",
+          "text": "プレイヤーがクリティカルストライクを与えていれば物理ダメージの(2-4)%を追加火ダメージとして獲得する",
+          "name": "業火の",
+          "engText": "Gain (2-4)% of Physical Damage as Extra Fire Damage if you've dealt a Critical Strike Recently",
+          "engName": "of the Inferno",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "suffix",
+          "required_level": 40,
+          "weight": 150,
+          "family": "PhysicalDamageAddedAsExtraFireIfCriticalStrikeDealtRecently"
+        }
+      ],
+      "AttackSpeedIfCriticalStrikeDealtRecently": [
+        {
+          "key": "AbyssAttackSpeedIfCriticalStrikeDealtRecentlyJewel1",
+          "text": "直近プレイヤーがクリティカルストライクを与えていればアタックスピードが(6-8)%増加する",
+          "name": "好機の",
+          "engText": "(6-8)% increased Attack Speed if you've dealt a Critical Strike Recently",
+          "engName": "of Opportunity",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "suffix",
+          "required_level": 25,
+          "weight": 250,
+          "family": "AttackSpeedIfCriticalStrikeDealtRecently"
+        }
+      ],
+      "CastSpeedIfCriticalStrikeDealtRecently": [
+        {
+          "key": "AbyssCastSpeedIfCriticalStrikeDealtRecentlyJewel1",
+          "text": "直近プレイヤーがクリティカルストライクを与えていればキャストスピードが(5-7)%増加する",
+          "name": "虐待の",
+          "engText": "(5-7)% increased Cast Speed if you've dealt a Critical Strike Recently",
+          "engName": "of Abuse",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "suffix",
+          "required_level": 25,
+          "weight": 500,
+          "family": "CastSpeedIfCriticalStrikeDealtRecently"
+        }
+      ],
+      "CriticalStrikeChanceIfNoCriticalStrikeDealtRecently": [
+        {
+          "key": "AbyssCriticalStrikeChanceIfNoCriticalStrikeDealtRecentlyJewel1",
+          "text": "直近プレイヤーがクリティカルストライクを与えていなければクリティカル率が(20-30)%増加する",
+          "name": "準備の",
+          "engText": "(20-30)% increased Critical Strike Chance if you haven't dealt a Critical Strike Recently",
+          "engName": "of Preparation",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "CriticalStrikeChanceIfNoCriticalStrikeDealtRecently"
+        }
+      ],
+      "MovementSpeedIfEnemySlainRecently": [
+        {
+          "key": "AbyssMovementSpeedIfEnemySlainRecentlyJewel1",
+          "text": "直近プレイヤーが敵を倒していれば移動スピードが(2-4)%増加する",
+          "name": "略奪者の",
+          "engText": "(2-4)% increased Movement Speed if you've Killed Recently",
+          "engName": "of the Raider",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "MovementSpeedIfEnemySlainRecently"
+        }
+      ],
+      "AdditionalBlock": [
+        {
+          "key": "AbyssChanceToBlockIfDamagedRecentlyJewel1_",
+          "text": "直近プレイヤーがヒットによるダメージを受けていればアタックブロック率 +(3-4)%",
+          "name": "守護の",
+          "engText": "+(3-4)% Chance to Block Attack Damage if you were Damaged by a Hit Recently",
+          "engName": "of Guarding",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "AdditionalBlock"
+        }
+      ],
+      "ChancetoGainPhasingOnKill": [
+        {
+          "key": "AbyssChancetoGainPhasingOnKillJewel1",
+          "text": "敵を倒した時に(3-5)%の確率で透明化を4秒間獲得する",
+          "name": "透明化の",
+          "engText": "(3-5)% chance to gain Phasing for 4 seconds on Kill",
+          "engName": "of Phasing",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "suffix",
+          "required_level": 50,
+          "weight": 1000,
+          "family": "ChancetoGainPhasingOnKill"
+        },
+        {
+          "key": "AbyssChancetoGainPhasingOnKillJewel2",
+          "text": "敵を倒した時に(6-8)%の確率で透明化を4秒間獲得する",
+          "name": "透明化の",
+          "engText": "(6-8)% chance to gain Phasing for 4 seconds on Kill",
+          "engName": "of Phasing",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "suffix",
+          "required_level": 80,
+          "weight": 500,
+          "family": "ChancetoGainPhasingOnKill"
+        }
+      ],
+      "BuffEnchantment": [
+        {
+          "key": "AbyssSelfCurseEffectOnConsecratedGroundJewel1__",
+          "text": "神聖領域の上にいる時にプレイヤーに対する呪いの効果が(25-15)%減少する",
+          "name": "聖所の",
+          "engText": "(25-15)% reduced Effect of Curses on you while on Consecrated Ground",
+          "engName": "of the Sanctum",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "suffix",
+          "required_level": 84,
+          "weight": 500,
+          "family": "BuffEnchantment"
+        },
+        {
+          "key": "AbyssAvoidElementalAilmentsWhileElusiveJewel1",
+          "text": "身躱し中は(10-20)%の確率で元素系状態異常を無効化する",
+          "name": "脱出の",
+          "engText": "(10-20)% chance to Avoid Elemental Ailments while you have Elusive",
+          "engName": "of Escape",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "suffix",
+          "required_level": 84,
+          "weight": 100,
+          "family": "BuffEnchantment"
+        },
+        {
+          "key": "AbyssHinderedEnemiesLifeRegenerationRateJewel1",
+          "text": "プレイヤーにより阻害された敵のライフ自動回復レートが(35-25)%減少する",
+          "name": "衰弱の",
+          "engText": "Enemies Hindered by you have (35-25)% reduced Life Regeneration rate",
+          "engName": "of Enervation",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "suffix",
+          "required_level": 84,
+          "weight": 500,
+          "family": "BuffEnchantment"
+        },
+        {
+          "key": "AbyssBlindedEnemiesCriticalStrikeChanceJewel1",
+          "text": "プレイヤーにより盲目を付与された敵のクリティカル率が(30-20)%減少する",
+          "name": "雲りの",
+          "engText": "Enemies Blinded by you have (30-20)% reduced Critical Strike Chance",
+          "engName": "of Clouding",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "suffix",
+          "required_level": 84,
+          "weight": 100,
+          "family": "BuffEnchantment"
+        },
+        {
+          "key": "AbyssWitheredEnemiesAllResistanceJewel1___",
+          "text": "プレイヤーにより衰弱を受けた敵は全ての耐性が-2%される",
+          "name": "衰えの",
+          "engText": "Enemies Withered by you have -2% to all Resistances",
+          "engName": "of Languishing",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "suffix",
+          "required_level": 84,
+          "weight": 500,
+          "family": "BuffEnchantment"
+        },
+        {
+          "key": "AbyssMaimedEnemiesDamageOverTimeJewel1",
+          "text": "プレイヤーにより重傷を受けた敵が受ける継続ダメージが(4-5)%増加する",
+          "name": "創痍の",
+          "engText": "Enemies Maimed by you take (4-5)% increased Damage Over Time",
+          "engName": "of Mangling",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "suffix",
+          "required_level": 84,
+          "weight": 100,
+          "family": "BuffEnchantment"
+        },
+        {
+          "key": "AbyssIntimidatedEnemiesStunDurationJewel1",
+          "text": "プレイヤーにより威嚇された敵に対するスタン持続時間が(10-15)%増加する",
+          "name": "脅嚇の",
+          "engText": "Enemies Intimidated by you have (10-15)% increased duration of stuns against them",
+          "engName": "of Daunting",
+          "tag": "abyss_jewel_caster",
+          "generation_type": "suffix",
+          "required_level": 84,
+          "weight": 100,
+          "family": "BuffEnchantment"
+        }
+      ]
+    }
+  }
+}

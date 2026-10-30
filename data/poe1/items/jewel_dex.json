@@ -1,0 +1,1547 @@
+{
+  "bases": [
+    "Metadata/Items/Jewels/JewelDex"
+  ],
+  "mods": {
+    "prefix": {
+      "SpecificWeaponDamage": [
+        {
+          "key": "AxeDamageJewel",
+          "text": "斧によるダメージが(14-16)%増加する",
+          "name": "不吉の",
+          "engText": "(14-16)% increased Damage with Axes",
+          "engName": "Sinister",
+          "tag": "not_int",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "SpecificWeaponDamage"
+        },
+        {
+          "key": "SwordDamageJewel",
+          "text": "剣によるダメージが(14-16)%増加する",
+          "name": "凶悪な",
+          "engText": "(14-16)% increased Damage with Swords",
+          "engName": "Vicious",
+          "tag": "not_int",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "SpecificWeaponDamage"
+        },
+        {
+          "key": "BowDamageJewel",
+          "text": "弓によるダメージが(14-16)%増加する",
+          "name": "激しい",
+          "engText": "(14-16)% increased Damage with Bows",
+          "engName": "Fierce",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "SpecificWeaponDamage"
+        },
+        {
+          "key": "ClawDamageJewel",
+          "text": "鉤爪によるダメージが(14-16)%増加する",
+          "name": "獰猛な",
+          "engText": "(14-16)% increased Damage with Claws",
+          "engName": "Savage",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "SpecificWeaponDamage"
+        },
+        {
+          "key": "DaggerDamageJewel",
+          "text": "短剣によるダメージが(14-16)%増加する",
+          "name": "致死の",
+          "engText": "(14-16)% increased Damage with Daggers",
+          "engName": "Lethal",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "SpecificWeaponDamage"
+        }
+      ],
+      "MeleeTypeDamage": [
+        {
+          "key": "OneHandedMeleeDamageJewel",
+          "text": "片手武器によるダメージが(12-14)%増加する",
+          "name": "兵士の",
+          "engText": "(12-14)% increased Damage with One Handed Weapons",
+          "engName": "Soldier's",
+          "tag": "not_int",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "MeleeTypeDamage"
+        },
+        {
+          "key": "TwoHandedMeleeDamageJewel",
+          "text": "両手武器によるダメージが(12-14)%増加する",
+          "name": "覇者の",
+          "engText": "(12-14)% increased Damage with Two Handed Weapons",
+          "engName": "Champion's",
+          "tag": "not_int",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "MeleeTypeDamage"
+        },
+        {
+          "key": "DualWieldingMeleeDamageJewel",
+          "text": "二刀流中はアタックダメージが(12-14)%増加する",
+          "name": "剣闘士の",
+          "engText": "(12-14)% increased Attack Damage while Dual Wielding",
+          "engName": "Gladiator's",
+          "tag": "not_int",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "MeleeTypeDamage"
+        },
+        {
+          "key": "PhysicalDamageWhileHoldingAShield",
+          "text": "盾装備中はアタックダメージが(12-14)%増加する",
+          "name": "側面攻撃の",
+          "engText": "(12-14)% increased Attack Damage while holding a Shield",
+          "engName": "Flanking",
+          "tag": "not_int",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "MeleeTypeDamage"
+        }
+      ],
+      "DamageForm": [
+        {
+          "key": "TrapDamageJewel",
+          "text": "トラップダメージが(14-16)%増加する",
+          "name": "罠の",
+          "engText": "(14-16)% increased Trap Damage",
+          "engName": "Trapping",
+          "tag": "not_str",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "DamageForm"
+        },
+        {
+          "key": "MineDamageJewel",
+          "text": "マインダメージが(14-16)%増加する",
+          "name": "サボタージュする",
+          "engText": "(14-16)% increased Mine Damage",
+          "engName": "Sabotage",
+          "tag": "not_str",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "DamageForm"
+        }
+      ],
+      "FireDamagePercentage": [
+        {
+          "key": "FireDamageJewel",
+          "text": "火ダメージが(14-16)%増加する",
+          "name": "燃え立つ",
+          "engText": "(14-16)% increased Fire Damage",
+          "engName": "Flaming",
+          "tag": "not_str",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 400,
+          "family": "FireDamagePercentage"
+        }
+      ],
+      "ColdDamagePercentage": [
+        {
+          "key": "ColdDamageJewel",
+          "text": "冷気ダメージが(14-16)%増加する",
+          "name": "冷却する",
+          "engText": "(14-16)% increased Cold Damage",
+          "engName": "Chilling",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "ColdDamagePercentage"
+        }
+      ],
+      "LightningDamagePercentage": [
+        {
+          "key": "LightningDamageJewel",
+          "text": "雷ダメージが(14-16)%増加する",
+          "name": "電音の",
+          "engText": "(14-16)% increased Lightning Damage",
+          "engName": "Humming",
+          "tag": "not_int",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 400,
+          "family": "LightningDamagePercentage"
+        }
+      ],
+      "PhysicalDamagePercent": [
+        {
+          "key": "PhysicalDamageJewel",
+          "text": "グローバル物理ダメージが(14-16)%増加する",
+          "name": "研いだ",
+          "engText": "(14-16)% increased Global Physical Damage",
+          "engName": "Sharpened",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "PhysicalDamagePercent"
+        }
+      ],
+      "ChaosDamage": [
+        {
+          "key": "ChaosDamageJewel",
+          "text": "混沌ダメージが(9-13)%増加する",
+          "name": "混沌とした",
+          "engText": "(9-13)% increased Chaos Damage",
+          "engName": "Chaotic",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 200,
+          "family": "ChaosDamage"
+        }
+      ],
+      "SpecificWeaponSpeed": [
+        {
+          "key": "AxeAttackSpeedJewel",
+          "text": "斧のアタックスピードが(6-8)%増加する",
+          "name": "薙ぎ払う",
+          "engText": "(6-8)% increased Attack Speed with Axes",
+          "engName": "Cleaving",
+          "tag": "not_int",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "SpecificWeaponSpeed"
+        },
+        {
+          "key": "SwordAttackSpeedJewel",
+          "text": "剣のアタックスピードが(6-8)%増加する",
+          "name": "斬り合う",
+          "engText": "(6-8)% increased Attack Speed with Swords",
+          "engName": "Fencing",
+          "tag": "not_int",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "SpecificWeaponSpeed"
+        },
+        {
+          "key": "BowAttackSpeedJewel",
+          "text": "弓のアタックスピードが(6-8)%増加する",
+          "name": "斉射する",
+          "engText": "(6-8)% increased Attack Speed with Bows",
+          "engName": "Volleying",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "SpecificWeaponSpeed"
+        },
+        {
+          "key": "ClawAttackSpeedJewel",
+          "text": "鉤爪のアタックスピードが(6-8)%増加する",
+          "name": "引き裂く",
+          "engText": "(6-8)% increased Attack Speed with Claws",
+          "engName": "Ripping",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "SpecificWeaponSpeed"
+        },
+        {
+          "key": "DaggerAttackSpeedJewel",
+          "text": "短剣のアタックスピードが(6-8)%増加する",
+          "name": "斬りつける",
+          "engText": "(6-8)% increased Attack Speed with Daggers",
+          "engName": "Slicing",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "SpecificWeaponSpeed"
+        }
+      ],
+      "MeleeTypeSpeed": [
+        {
+          "key": "OneHandedMeleeAttackSpeedJewel",
+          "text": "片手近接武器のアタックスピードが(4-6)%増加する",
+          "name": "山賊の",
+          "engText": "(4-6)% increased Attack Speed with One Handed Melee Weapons",
+          "engName": "Bandit's",
+          "tag": "not_int",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "MeleeTypeSpeed"
+        },
+        {
+          "key": "TwoHandedMeleeAttackSpeedJewel",
+          "text": "両手近接武器のアタックスピードが(4-6)%増加する",
+          "name": "戦士の",
+          "engText": "(4-6)% increased Attack Speed with Two Handed Melee Weapons",
+          "engName": "Warrior's",
+          "tag": "not_int",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "MeleeTypeSpeed"
+        },
+        {
+          "key": "DualWieldingAttackSpeedJewel",
+          "text": "二刀流中はアタックスピードが(4-6)%増加する",
+          "name": "調和する",
+          "engText": "(4-6)% increased Attack Speed while Dual Wielding",
+          "engName": "Harmonic",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "MeleeTypeSpeed"
+        },
+        {
+          "key": "ShieldAttackSpeedJewel",
+          "text": "盾装備中はアタックスピードが(4-6)%増加する",
+          "name": "突撃する",
+          "engText": "(4-6)% increased Attack Speed while holding a Shield",
+          "engName": "Charging",
+          "tag": "not_int",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "MeleeTypeSpeed"
+        }
+      ],
+      "TrapThrowSpeed": [
+        {
+          "key": "TrapThrowSpeedJewel",
+          "text": "トラップ投擲スピードが(6-8)%増加する",
+          "name": "研ぎ澄まされた",
+          "engText": "(6-8)% increased Trap Throwing Speed",
+          "engName": "Honed",
+          "tag": "not_str",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "TrapThrowSpeed"
+        }
+      ],
+      "MineLaySpeed": [
+        {
+          "key": "MineLaySpeedJewel",
+          "text": "マイン投擲スピードが(6-8)%増加する",
+          "name": "装填の",
+          "engText": "(6-8)% increased Mine Throwing Speed",
+          "engName": "Arming",
+          "tag": "not_str",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "MineLaySpeed"
+        }
+      ],
+      "MaximumLifeIncreasePercent": [
+        {
+          "key": "PercentIncreasedLifeJewel",
+          "text": "最大ライフが(5-7)%増加する",
+          "name": "色鮮やかな",
+          "engText": "(5-7)% increased maximum Life",
+          "engName": "Vivid",
+          "tag": "not_str",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 350,
+          "family": "MaximumLifeIncreasePercent"
+        }
+      ],
+      "MaximumManaIncreasePercent": [
+        {
+          "key": "PercentIncreasedManaJewel",
+          "text": "最大マナが(8-10)%増加する",
+          "name": "啓発された",
+          "engText": "(8-10)% increased maximum Mana",
+          "engName": "Enlightened",
+          "tag": "not_str",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "MaximumManaIncreasePercent"
+        }
+      ],
+      "ManaRegeneration": [
+        {
+          "key": "IncreasedManaRegenJewel",
+          "text": "マナ自動回復レートが(12-15)%増加する",
+          "name": "精力的な",
+          "engText": "(12-15)% increased Mana Regeneration Rate",
+          "engName": "Energetic",
+          "tag": "not_int",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "ManaRegeneration"
+        }
+      ],
+      "EvasionRatingPercent": [
+        {
+          "key": "IncreasedEvasionJewel",
+          "text": "回避力が(14-18)%増加する",
+          "name": "回避する",
+          "engText": "(14-18)% increased Evasion Rating",
+          "engName": "Evasive",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "EvasionRatingPercent"
+        }
+      ],
+      "MeleeTypeCritChance": [
+        {
+          "key": "OneHandedCritChanceJewel",
+          "text": "片手近接武器のクリティカル率が(14-18)%増加する",
+          "name": "害する",
+          "engText": "(14-18)% increased Critical Strike Chance with One Handed Melee Weapons",
+          "engName": "Harming",
+          "tag": "not_int",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "MeleeTypeCritChance"
+        },
+        {
+          "key": "TwoHandedCritChanceJewel",
+          "text": "両手近接武器のクリティカル率が(14-18)%増加する",
+          "name": "切断する",
+          "engText": "(14-18)% increased Critical Strike Chance with Two Handed Melee Weapons",
+          "engName": "Sundering",
+          "tag": "not_int",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "MeleeTypeCritChance"
+        },
+        {
+          "key": "DualWieldingCritChanceJewel",
+          "text": "二刀流中はアタッククリティカル率が(14-18)%増加する",
+          "name": "巧みな",
+          "engText": "(14-18)% increased Attack Critical Strike Chance while Dual Wielding",
+          "engName": "Technical",
+          "tag": "not_int",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "MeleeTypeCritChance"
+        }
+      ],
+      "FireCritChance": [
+        {
+          "key": "FireCritChanceJewel",
+          "text": "火スキルのクリティカル率が(14-18)%増加する",
+          "name": "焼却する",
+          "engText": "(14-18)% increased Critical Strike Chance with Fire Skills",
+          "engName": "Incinerating",
+          "tag": "not_str",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 200,
+          "family": "FireCritChance"
+        }
+      ],
+      "ColdCritChance": [
+        {
+          "key": "ColdCritChanceJewel",
+          "text": "冷気スキルのクリティカル率が(14-18)%増加する",
+          "name": "雪崩れる",
+          "engText": "(14-18)% increased Critical Strike Chance with Cold Skills",
+          "engName": "Avalanching",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "ColdCritChance"
+        }
+      ],
+      "LightningCritChance": [
+        {
+          "key": "LightningCritChanceJewel",
+          "text": "雷スキルのクリティカル率が(14-18)%増加する",
+          "name": "轟く",
+          "engText": "(14-18)% increased Critical Strike Chance with Lightning Skills",
+          "engName": "Thundering",
+          "tag": "not_int",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 200,
+          "family": "LightningCritChance"
+        }
+      ],
+      "MeleeTypeCritMultiplier": [
+        {
+          "key": "OneHandCritMultiplierJewel_",
+          "text": "片手近接武器のクリティカルダメージ倍率 +(15-18)%",
+          "name": "貫通する",
+          "engText": "+(15-18)% to Critical Strike Multiplier with One Handed Melee Weapons",
+          "engName": "Piercing",
+          "tag": "not_int",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "MeleeTypeCritMultiplier"
+        },
+        {
+          "key": "TwoHandCritMultiplierJewel",
+          "text": "両手近接武器のクリティカルダメージ倍率 +(15-18)%",
+          "name": "破裂させる",
+          "engText": "+(15-18)% to Critical Strike Multiplier with Two Handed Melee Weapons",
+          "engName": "Rupturing",
+          "tag": "not_int",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "MeleeTypeCritMultiplier"
+        },
+        {
+          "key": "DualWieldingCritMultiplierJewel",
+          "text": "二刀流中のクリティカルダメージ倍率 +(15-18)%",
+          "name": "刺突する",
+          "engText": "+(15-18)% to Critical Strike Multiplier while Dual Wielding",
+          "engName": "Puncturing",
+          "tag": "not_int",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "MeleeTypeCritMultiplier"
+        }
+      ],
+      "FireCritMultiplier": [
+        {
+          "key": "FireCritMultiplier",
+          "text": "火スキルのクリティカルダメージ倍率 +(15-18)%",
+          "name": "業炎の",
+          "engText": "+(15-18)% to Critical Strike Multiplier with Fire Skills",
+          "engName": "Infernal",
+          "tag": "not_str",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 200,
+          "family": "FireCritMultiplier"
+        }
+      ],
+      "ColdCritMultiplier": [
+        {
+          "key": "ColdCritMultiplier",
+          "text": "冷気スキルのクリティカルダメージ倍率 +(15-18)%",
+          "name": "極寒の",
+          "engText": "+(15-18)% to Critical Strike Multiplier with Cold Skills",
+          "engName": "Arctic",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "ColdCritMultiplier"
+        }
+      ],
+      "LightningCritMultiplier": [
+        {
+          "key": "LightningCritMultiplier",
+          "text": "雷スキルのクリティカルダメージ倍率 +(15-18)%",
+          "name": "電流の",
+          "engText": "+(15-18)% to Critical Strike Multiplier with Lightning Skills",
+          "engName": "Surging",
+          "tag": "not_int",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 200,
+          "family": "LightningCritMultiplier"
+        }
+      ],
+      "FasterAilmentDamage": [
+        {
+          "key": "FasterAilmentDamageJewel",
+          "text": "ダメージ性状態異常がダメージを与える速度が(4-6)%速くなる",
+          "name": "老衰させる",
+          "engText": "Damaging Ailments deal damage (4-6)% faster",
+          "engName": "Decrepifying",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "FasterAilmentDamage"
+        }
+      ],
+      "FormBlock": [
+        {
+          "key": "BlockDualWieldingJewel",
+          "text": "二刀流中のアタックブロック率 +(2-3)%",
+          "name": "受け流す",
+          "engText": "+(2-3)% Chance to Block Attack Damage while Dual Wielding",
+          "engName": "Parrying",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 350,
+          "family": "FormBlock"
+        },
+        {
+          "key": "BlockShieldJewel",
+          "text": "盾装備中のアタックブロック率 +(2-3)%",
+          "name": "庇護する",
+          "engText": "+(2-3)% Chance to Block Attack Damage while holding a Shield",
+          "engName": "Shielding",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 350,
+          "family": "FormBlock"
+        }
+      ],
+      "FormSpellBlock": [
+        {
+          "key": "DualWieldingSpellBlockForJewel",
+          "text": "二刀流中のスペルブロック率 +(2-3)%",
+          "name": "霧散させる",
+          "engText": "+(2-3)% Chance to Block Spell Damage while Dual Wielding",
+          "engName": "Dissipating",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 350,
+          "family": "FormSpellBlock"
+        },
+        {
+          "key": "ShieldSpellBlockJewel",
+          "text": "盾装備中のスペルブロック率 +(2-3)%",
+          "name": "阻止する",
+          "engText": "+(2-3)% Chance to Block Spell Damage while holding a Shield",
+          "engName": "Thwarting",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 350,
+          "family": "FormSpellBlock"
+        }
+      ],
+      "ReducedManaReservationsCost": [
+        {
+          "key": "ManaReservationEfficiencyJewel",
+          "text": "スキルのマナリザーブ効率が(2-3)%増加する",
+          "name": "脳の",
+          "engText": "(2-3)% increased Mana Reservation Efficiency of Skills",
+          "engName": "Cerebral",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "ReducedManaReservationsCost"
+        }
+      ],
+      "BeltFlaskDuration": [
+        {
+          "key": "FlaskDurationJewel",
+          "text": "フラスコ効果の持続時間が(6-10)%増加する",
+          "name": "延命する",
+          "engText": "(6-10)% increased Flask Effect Duration",
+          "engName": "Prolonging",
+          "tag": "default",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "BeltFlaskDuration"
+        }
+      ],
+      "TotemDamage": [
+        {
+          "key": "TotemDamageJewel",
+          "text": "トーテムダメージが(12-16)%増加する",
+          "name": "シャーマンの",
+          "engText": "(12-16)% increased Totem Damage",
+          "engName": "Shaman's",
+          "tag": "not_str",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "TotemDamage"
+        }
+      ],
+      "IncreasedTotemLife": [
+        {
+          "key": "TotemLifeJewel",
+          "text": "トーテムのライフが(8-12)%増加する",
+          "name": "刻まれた",
+          "engText": "(8-12)% increased Totem Life",
+          "engName": "Carved",
+          "tag": "not_str",
+          "generation_type": "prefix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "IncreasedTotemLife"
+        }
+      ]
+    },
+    "suffix": {
+      "DamageForm": [
+        {
+          "key": "MeleeDamageJewel_",
+          "text": "近接ダメージが(10-12)%増加する",
+          "name": "戦闘の",
+          "engText": "(10-12)% increased Melee Damage",
+          "engName": "of Combat",
+          "tag": "not_int",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "DamageForm"
+        },
+        {
+          "key": "ProjectileDamageJewel",
+          "text": "投射物ダメージが(10-12)%増加する",
+          "name": "弓術の",
+          "engText": "(10-12)% increased Projectile Damage",
+          "engName": "of Archery",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "DamageForm"
+        },
+        {
+          "key": "DamageJewel",
+          "text": "ダメージが(8-10)%増加する",
+          "name": "負傷の",
+          "engText": "(8-10)% increased Damage",
+          "engName": "of Wounding",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 350,
+          "family": "DamageForm"
+        }
+      ],
+      "DegenerationDamage": [
+        {
+          "key": "DamageOverTimeJewel",
+          "text": "継続ダメージが(10-12)%増加する",
+          "name": "エントロピーの",
+          "engText": "(10-12)% increased Damage over Time",
+          "engName": "of Entropy",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "DegenerationDamage"
+        }
+      ],
+      "AreaDamage": [
+        {
+          "key": "AreaDamageJewel",
+          "text": "範囲ダメージが(10-12)%増加する",
+          "name": "爆破の",
+          "engText": "(10-12)% increased Area Damage",
+          "engName": "of Blasting",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "AreaDamage"
+        }
+      ],
+      "IncreasedAttackSpeed": [
+        {
+          "key": "AttackSpeedJewel",
+          "text": "アタックスピードが(3-5)%増加する",
+          "name": "狂戦士化の",
+          "engText": "(3-5)% increased Attack Speed",
+          "engName": "of Berserking",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "IncreasedAttackSpeed"
+        }
+      ],
+      "ProjectileSpeed": [
+        {
+          "key": "ProjectileSpeedJewel",
+          "text": "投射物スピードが(6-8)%増加する",
+          "name": "飛翔の",
+          "engText": "(6-8)% increased Projectile Speed",
+          "engName": "of Soaring",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "ProjectileSpeed"
+        }
+      ],
+      "AttackCastSpeed": [
+        {
+          "key": "AttackAndCastSpeedJewel",
+          "text": "アタックスピードおよびキャストスピードが(2-4)%増加する",
+          "name": "熱狂の",
+          "engText": "(2-4)% increased Attack and Cast Speed",
+          "engName": "of Zeal",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 350,
+          "family": "AttackCastSpeed"
+        }
+      ],
+      "Strength": [
+        {
+          "key": "StrengthJewel",
+          "text": "筋力 +(12-16)",
+          "name": "筋力の",
+          "engText": "+(12-16) to Strength",
+          "engName": "of Strength",
+          "tag": "not_str",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 300,
+          "family": "Strength"
+        }
+      ],
+      "Dexterity": [
+        {
+          "key": "DexterityJewel",
+          "text": "器用さ +(12-16)",
+          "name": "器用さの",
+          "engText": "+(12-16) to Dexterity",
+          "engName": "of Dexterity",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "Dexterity"
+        }
+      ],
+      "Intelligence": [
+        {
+          "key": "IntelligenceJewel",
+          "text": "知性 +(12-16)",
+          "name": "知性の",
+          "engText": "+(12-16) to Intelligence",
+          "engName": "of Intelligence",
+          "tag": "not_int",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 300,
+          "family": "Intelligence"
+        }
+      ],
+      "StrengthDexterity": [
+        {
+          "key": "StrengthDexterityJewel",
+          "text": "筋力および器用さ +(8-10)",
+          "name": "運動の",
+          "engText": "+(8-10) to Strength and Dexterity",
+          "engName": "of Athletics",
+          "tag": "not_int",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 450,
+          "family": "StrengthDexterity"
+        }
+      ],
+      "StrengthIntelligence": [
+        {
+          "key": "StrengthIntelligenceJewel",
+          "text": "筋力および知性 +(8-10)",
+          "name": "魂の",
+          "engText": "+(8-10) to Strength and Intelligence",
+          "engName": "of Spirit",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "StrengthIntelligence"
+        }
+      ],
+      "DexterityIntelligence": [
+        {
+          "key": "DexterityIntelligenceJewel",
+          "text": "器用さおよび知性 +(8-10)",
+          "name": "狡猾さの",
+          "engText": "+(8-10) to Dexterity and Intelligence",
+          "engName": "of Cunning",
+          "tag": "not_str",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 450,
+          "family": "DexterityIntelligence"
+        }
+      ],
+      "AllAttributes": [
+        {
+          "key": "AllAttributesJewel",
+          "text": "全ての能力値 +(6-8)",
+          "name": "馴致の",
+          "engText": "+(6-8) to all Attributes",
+          "engName": "of Adaption",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 300,
+          "family": "AllAttributes"
+        }
+      ],
+      "ManaLeech": [
+        {
+          "key": "ManaLeechPermyriadSuffixJewel",
+          "text": "物理アタックダメージの(0.2-0.4)%をマナとしてリーチする",
+          "name": "乾渇の",
+          "engText": "(0.2-0.4)% of Physical Attack Damage Leeched as Mana",
+          "engName": "of Thirsting",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "ManaLeech"
+        }
+      ],
+      "ManaGainPerTarget": [
+        {
+          "key": "ManaOnHitJewel",
+          "text": "アタックでヒットを与えた敵1体ごとに(1-2)のマナを獲得する",
+          "name": "吸収の",
+          "engText": "Gain (1-2) Mana per Enemy Hit with Attacks",
+          "engName": "of Absorption",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "ManaGainPerTarget"
+        }
+      ],
+      "DamageTakenGainedAsLife": [
+        {
+          "key": "LifeRecoupJewel",
+          "text": "受けたダメージの(4-6)%をライフとして回収する",
+          "name": "注入の",
+          "engText": "(4-6)% of Damage taken Recouped as Life",
+          "engName": "of Infusion",
+          "tag": "not_int",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "DamageTakenGainedAsLife"
+        }
+      ],
+      "IncreasedAccuracyPercent": [
+        {
+          "key": "PercentIncreasedAccuracyJewel",
+          "text": "グローバル命中力が(10-14)%増加する",
+          "name": "精密さの",
+          "engText": "(10-14)% increased Global Accuracy Rating",
+          "engName": "of Precision",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "IncreasedAccuracyPercent"
+        }
+      ],
+      "AccuracyAndCrits": [
+        {
+          "key": "AccuracyAndCritsJewel",
+          "text": "グローバル命中力が(6-10)%増加する\nグローバルクリティカル率が(6-10)%増加する",
+          "name": "危険の",
+          "engText": "(6-10)% increased Global Accuracy Rating\n(6-10)% increased Global Critical Strike Chance",
+          "engName": "of Deadliness",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 150,
+          "family": "AccuracyAndCrits"
+        }
+      ],
+      "CriticalStrikeChanceIncrease": [
+        {
+          "key": "CriticalStrikeChanceJewel",
+          "text": "グローバルクリティカル率が(8-12)%増加する",
+          "name": "脅威の",
+          "engText": "(8-12)% increased Global Critical Strike Chance",
+          "engName": "of Menace",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "CriticalStrikeChanceIncrease"
+        }
+      ],
+      "CriticalStrikeMultiplier": [
+        {
+          "key": "CriticalStrikeMultiplierJewel",
+          "text": "グローバルクリティカルダメージ倍率 +(9-12)%",
+          "name": "有効性の",
+          "engText": "+(9-12)% to Global Critical Strike Multiplier",
+          "engName": "of Potency",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "CriticalStrikeMultiplier"
+        }
+      ],
+      "FormCritChance": [
+        {
+          "key": "MeleeCritChanceJewel",
+          "text": "近接クリティカル率が(10-14)%増加する",
+          "name": "重みの",
+          "engText": "(10-14)% increased Melee Critical Strike Chance",
+          "engName": "of Weight",
+          "tag": "not_int",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "FormCritChance"
+        }
+      ],
+      "ElementalCritChance": [
+        {
+          "key": "ElementalCritChanceJewel",
+          "text": "元素スキルのクリティカル率が(10-14)%増加する",
+          "name": "黙示録の",
+          "engText": "(10-14)% increased Critical Strike Chance with Elemental Skills",
+          "engName": "of the Apocalypse",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 100,
+          "family": "ElementalCritChance"
+        }
+      ],
+      "FormCritMultiplier": [
+        {
+          "key": "MeleeCritMultiplier",
+          "text": "近接クリティカルダメージ倍率 +(12-15)%",
+          "name": "粉砕の",
+          "engText": "+(12-15)% to Melee Critical Strike Multiplier",
+          "engName": "of Demolishing",
+          "tag": "not_int",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "FormCritMultiplier"
+        }
+      ],
+      "ElementalCritMultiplier": [
+        {
+          "key": "ElementalCritMultiplier",
+          "text": "元素スキルのクリティカルダメージ倍率 +(12-15)%",
+          "name": "元素の",
+          "engText": "+(12-15)% to Critical Strike Multiplier with Elemental Skills",
+          "engName": "of the Elements",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 100,
+          "family": "ElementalCritMultiplier"
+        }
+      ],
+      "FireResistance": [
+        {
+          "key": "FireResistanceJewel",
+          "text": "火耐性 +(12-15)%",
+          "name": "ドラゴンの",
+          "engText": "+(12-15)% to Fire Resistance",
+          "engName": "of the Dragon",
+          "tag": "not_str",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 300,
+          "family": "FireResistance"
+        }
+      ],
+      "ColdResistance": [
+        {
+          "key": "ColdResistanceJewel",
+          "text": "冷気耐性 +(12-15)%",
+          "name": "獣の",
+          "engText": "+(12-15)% to Cold Resistance",
+          "engName": "of the Beast",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "ColdResistance"
+        }
+      ],
+      "LightningResistance": [
+        {
+          "key": "LightningResistanceJewel",
+          "text": "雷耐性 +(12-15)%",
+          "name": "接地の",
+          "engText": "+(12-15)% to Lightning Resistance",
+          "engName": "of Grounding",
+          "tag": "not_int",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 300,
+          "family": "LightningResistance"
+        }
+      ],
+      "FireAndColdResistance": [
+        {
+          "key": "FireColdResistanceJewel",
+          "text": "火および冷気耐性 +(10-12)%",
+          "name": "路床の",
+          "engText": "+(10-12)% to Fire and Cold Resistances",
+          "engName": "of the Hearth",
+          "tag": "not_int",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 450,
+          "family": "FireAndColdResistance"
+        }
+      ],
+      "FireAndLightningResistance": [
+        {
+          "key": "FireLightningResistanceJewel",
+          "text": "火および雷耐性 +(10-12)%",
+          "name": "絶縁体の",
+          "engText": "+(10-12)% to Fire and Lightning Resistances",
+          "engName": "of Insulation",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "FireAndLightningResistance"
+        }
+      ],
+      "ColdAndLightningResistance": [
+        {
+          "key": "ColdLightningResistanceJewel",
+          "text": "冷気および雷耐性 +(10-12)%",
+          "name": "避難所の",
+          "engText": "+(10-12)% to Cold and Lightning Resistances",
+          "engName": "of Shelter",
+          "tag": "not_str",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 450,
+          "family": "ColdAndLightningResistance"
+        }
+      ],
+      "AllResistances": [
+        {
+          "key": "AllResistancesJewel",
+          "text": "全ての元素耐性 +(8-10)%",
+          "name": "抵抗力の",
+          "engText": "+(8-10)% to all Elemental Resistances",
+          "engName": "of Resistance",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 300,
+          "family": "AllResistances"
+        }
+      ],
+      "ChaosResistance": [
+        {
+          "key": "ChaosResistanceJewel",
+          "text": "混沌耐性 +(7-13)%",
+          "name": "秩序の",
+          "engText": "+(7-13)% to Chaos Resistance",
+          "engName": "of Order",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 100,
+          "family": "ChaosResistance"
+        }
+      ],
+      "MaximumFireResist": [
+        {
+          "key": "MaximumFireResistanceJewel",
+          "text": "火耐性の最大値 +(1-2)%",
+          "name": "不死鳥の",
+          "engText": "+(1-2)% to maximum Fire Resistance",
+          "engName": "of the Phoenix",
+          "tag": "not_str",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 60,
+          "family": "MaximumFireResist"
+        }
+      ],
+      "MaximumColdResist": [
+        {
+          "key": "MaximumColdResistanceJewel",
+          "text": "冷気耐性の最大値 +(1-2)%",
+          "name": "クラーケンの",
+          "engText": "+(1-2)% to maximum Cold Resistance",
+          "engName": "of the Kraken",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 100,
+          "family": "MaximumColdResist"
+        }
+      ],
+      "MaximumLightningResistance": [
+        {
+          "key": "MaximumLightningResistanceJewel",
+          "text": "雷耐性の最大値 +(1-2)%",
+          "name": "リヴァイアサンの",
+          "engText": "+(1-2)% to maximum Lightning Resistance",
+          "engName": "of the Leviathan",
+          "tag": "not_int",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 60,
+          "family": "MaximumLightningResistance"
+        }
+      ],
+      "StunDurationIncreasePercent": [
+        {
+          "key": "StunDurationJewel",
+          "text": "敵に対するスタンの持続時間が(10-14)%増加する",
+          "name": "気絶の",
+          "engText": "(10-14)% increased Stun Duration on Enemies",
+          "engName": "of Stunning",
+          "tag": "not_str",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 200,
+          "family": "StunDurationIncreasePercent"
+        }
+      ],
+      "StunRecovery": [
+        {
+          "key": "StunRecoveryJewel",
+          "text": "スタンおよびブロック復帰が(25-35)%増加する",
+          "name": "回復の",
+          "engText": "(25-35)% increased Stun and Block Recovery",
+          "engName": "of Recovery",
+          "tag": "not_str",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 200,
+          "family": "StunRecovery"
+        }
+      ],
+      "CostEfficiency": [
+        {
+          "key": "ManaCostEfficiencyJewel",
+          "text": "マナコスト効率が(10-15)%増加する",
+          "name": "効率の",
+          "engText": "(10-15)% increased Mana Cost Efficiency",
+          "engName": "of Efficiency",
+          "tag": "not_int",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 300,
+          "family": "CostEfficiency"
+        }
+      ],
+      "Knockback": [
+        {
+          "key": "KnockbackChanceJewel_",
+          "text": "ヒット時に(4-6)%の確率で敵をノックバックする",
+          "name": "受け流しの",
+          "engText": "(4-6)% chance to Knock Enemies Back on hit",
+          "engName": "of Fending",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "Knockback"
+        }
+      ],
+      "ReducedCurseEffect": [
+        {
+          "key": "CurseEffectOnYouJewel",
+          "text": "プレイヤーに対する呪いの効果が(30-25)%減少する",
+          "name": "防呪の",
+          "engText": "(30-25)% reduced Effect of Curses on you",
+          "engName": "of Hexwarding",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "ReducedCurseEffect"
+        }
+      ],
+      "ReducedSelfIgniteDuration": [
+        {
+          "key": "IgniteDurationOnYouJewel",
+          "text": "受ける発火の持続時間が(30-35)%減少する",
+          "name": "炎の支配者の",
+          "engText": "(30-35)% reduced Ignite Duration on you",
+          "engName": "of the Flameruler",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "ReducedSelfIgniteDuration"
+        }
+      ],
+      "ChillEffectivenessOnSelf": [
+        {
+          "key": "ChillEffectOnYouJewel",
+          "text": "プレイヤー自身に対する冷却の効果が(35-30)%減少する",
+          "name": "雪の息を吐く者の",
+          "engText": "(35-30)% reduced Effect of Chill on you",
+          "engName": "of the Snowbreather",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "ChillEffectivenessOnSelf"
+        }
+      ],
+      "ShockEffect": [
+        {
+          "key": "ShockEffectOnYouJewel",
+          "text": "プレイヤーに対する感電の効果が(35-30)%減少する",
+          "name": "嵐に住む者の",
+          "engText": "(35-30)% reduced Effect of Shock on you",
+          "engName": "of the Stormdweller",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "ShockEffect"
+        }
+      ],
+      "ReducedPoisonDuration": [
+        {
+          "key": "PoisonDurationOnYouJewel",
+          "text": "プレイヤー自身に対する毒の持続時間が(35-30)%減少する",
+          "name": "中和の",
+          "engText": "(35-30)% reduced Poison Duration on you",
+          "engName": "of Neutralisation",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "ReducedPoisonDuration"
+        }
+      ],
+      "ReducedBleedDuration": [
+        {
+          "key": "BleedDurationOnYouJewel",
+          "text": "プレイヤー自身に対する出血の持続時間が(35-30)%減少する",
+          "name": "食い止めの",
+          "engText": "(35-30)% reduced Bleed Duration on you",
+          "engName": "of Stemming",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "ReducedBleedDuration"
+        }
+      ],
+      "AilmentChanceAndDuration": [
+        {
+          "key": "FreezeChanceAndDurationJewel",
+          "text": "(3-5)%の確率で敵を凍結させる\n敵に対する凍結の持続時間が(12-16)%増加する",
+          "name": "凍結の",
+          "engText": "(3-5)% chance to Freeze\n(12-16)% increased Freeze Duration on Enemies",
+          "engName": "of Freezing",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 350,
+          "family": "AilmentChanceAndDuration"
+        },
+        {
+          "key": "ShockChanceAndDurationJewel",
+          "text": "(3-5)%の確率で敵を感電させる\n敵に対する感電の持続時間が(12-16)%増加する",
+          "name": "感電の",
+          "engText": "(3-5)% chance to Shock\n(12-16)% increased Shock Duration on Enemies",
+          "engName": "of Shocking",
+          "tag": "not_int",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "AilmentChanceAndDuration"
+        },
+        {
+          "key": "IgniteChanceAndDurationJewel",
+          "text": "(3-5)%の確率で敵を発火させる\n敵に対する発火の持続時間が(6-8)%増加する",
+          "name": "燃焼の",
+          "engText": "(3-5)% chance to Ignite\n(6-8)% increased Ignite Duration on Enemies",
+          "engName": "of Burning",
+          "tag": "not_str",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "AilmentChanceAndDuration"
+        },
+        {
+          "key": "PoisonChanceAndDurationForJewel",
+          "text": "ヒット時に(3-5)%の確率で敵に毒を付与する\n毒持続時間が(6-8)%増加する",
+          "name": "毒殺の",
+          "engText": "(3-5)% chance to Poison on Hit\n(6-8)% increased Poison Duration",
+          "engName": "of Poisoning",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 350,
+          "family": "AilmentChanceAndDuration"
+        },
+        {
+          "key": "BleedChanceAndDurationForJewel__",
+          "text": "アタックは(3-5)%の確率で出血を付与する\n出血持続時間が(12-16)%増加する",
+          "name": "出血の",
+          "engText": "Attacks have (3-5)% chance to cause Bleeding\n(12-16)% increased Bleeding Duration",
+          "engName": "of Bleeding",
+          "tag": "not_str",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "AilmentChanceAndDuration"
+        }
+      ],
+      "ImpaleOnHit": [
+        {
+          "key": "ImpaleChanceForJewel_",
+          "text": "アタックによるヒット時に(5-7)%の確率で敵を串刺しにする",
+          "name": "串刺しの",
+          "engText": "(5-7)% chance to Impale Enemies on Hit with Attacks",
+          "engName": "of Impaling",
+          "tag": "not_str",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "ImpaleOnHit"
+        }
+      ],
+      "PoisonDamage": [
+        {
+          "key": "PoisonDamageForJewel",
+          "text": "毒ダメージが(16-20)%増加する",
+          "name": "毒液の",
+          "engText": "(16-20)% increased Damage with Poison",
+          "engName": "of Venom",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "PoisonDamage"
+        }
+      ],
+      "BleedingDamage": [
+        {
+          "key": "BleedDamageForJewel",
+          "text": "出血によるダメージが(16-20)%増加する",
+          "name": "血友病の",
+          "engText": "(16-20)% increased Damage with Bleeding",
+          "engName": "of Haemophilia",
+          "tag": "not_str",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "BleedingDamage"
+        }
+      ],
+      "BurnDamage": [
+        {
+          "key": "BurningDamageForJewel",
+          "text": "燃焼ダメージが(16-20)%増加する",
+          "name": "着火の",
+          "engText": "(16-20)% increased Burning Damage",
+          "engName": "of Combusting",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 500,
+          "family": "BurnDamage"
+        }
+      ],
+      "TotemElementalResistances": [
+        {
+          "key": "TotemElementalResistancesJewel",
+          "text": "トーテムは全ての元素耐性が+(6-10)%される",
+          "name": "ルーンの",
+          "engText": "Totems gain +(6-10)% to all Elemental Resistances",
+          "engName": "of Runes",
+          "tag": "not_str",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 250,
+          "family": "TotemElementalResistances"
+        }
+      ],
+      "DamageOverTimeMultiplier": [
+        {
+          "key": "JewelChaosNonAilmentDamageOverTimeMultiplier2",
+          "text": "混沌継続ダメージ倍率 +(6-8)%",
+          "name": "萎縮の",
+          "engText": "+(6-8)% to Chaos Damage over Time Multiplier",
+          "engName": "of Atrophy",
+          "tag": "not_str",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 300,
+          "family": "DamageOverTimeMultiplier"
+        },
+        {
+          "key": "JewelColdDamageOverTimeMultiplier1",
+          "text": "冷気継続ダメージ倍率 +(6-8)%",
+          "name": "冷寒の",
+          "engText": "+(6-8)% to Cold Damage over Time Multiplier",
+          "engName": "of Gelidity",
+          "tag": "not_str",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 300,
+          "family": "DamageOverTimeMultiplier"
+        },
+        {
+          "key": "JewelFireDamageOverTimeMultiplier1",
+          "text": "火継続ダメージ倍率 +(6-8)%",
+          "name": "熱狂心の",
+          "engText": "+(6-8)% to Fire Damage over Time Multiplier",
+          "engName": "of Zealousness",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 300,
+          "family": "DamageOverTimeMultiplier"
+        },
+        {
+          "key": "JewelPhysicalDamageOverTimeMultiplier1",
+          "text": "物理継続ダメージ倍率 +(6-8)%",
+          "name": "放血の",
+          "engText": "+(6-8)% to Physical Damage over Time Multiplier",
+          "engName": "of Exsanguinating",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 300,
+          "family": "DamageOverTimeMultiplier"
+        }
+      ],
+      "GlobalDamageOverTimeMultiplier": [
+        {
+          "key": "JewelGlobalDamageOverTimeMultiplier1",
+          "text": "継続ダメージ倍率 +(4-6)%",
+          "name": "辛辣さの",
+          "engText": "+(4-6)% to Damage over Time Multiplier",
+          "engName": "of Acrimony",
+          "tag": "default",
+          "generation_type": "suffix",
+          "required_level": 1,
+          "weight": 300,
+          "family": "GlobalDamageOverTimeMultiplier"
+        }
+      ]
+    }
+  }
+}

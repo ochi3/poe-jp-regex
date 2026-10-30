@@ -180,6 +180,7 @@
         });
     };
 
+    window.getChartSelectionChoices = () => [...chartCheckedMods].map(([key,state])=>({kind:state==='ng'?'NG':'欲しい',label:formatChartModText(currentLanguage==='ja'?chartList()[key]?.mod:chartList()[key]?.engMod,chartList()[key]?.value)||key,remove:()=>{chartCheckedMods.delete(key);saveChartChecked();window.updateChartModList();window.updateChartCombinedRegex();}}));
     window.updateChartCombinedRegex = function () {
         const out = getElement("chartRegexOutput");
         const countEl = getElement("chartCharCount");

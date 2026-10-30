@@ -1,4 +1,40 @@
 import {test, expect} from '@playwright/test';
+test('equipment Mods load all jewel families and preserve selected affixes in profiles',async({page})=>{
+  const errors=[];page.on('pageerror',error=>errors.push(error.message));
+  await page.goto('/poe1.html#item');
+  await page.locator('#categorySelect').selectOption('jewel');
+  const types=await page.locator('#itemTypeSelect option').evaluateAll(options=>options.map(option=>option.value).filter(Boolean));
+  expect(types).toHaveLength(11);
+  for(const type of types) {
+    const response=page.waitForResponse(response=>response.url().endsWith(`/data/poe1/items/${type}.json`));
+    await page.locator('#itemTypeSelect').selectOption(type);
+    expect((await response).ok()).toBe(true);
+    await expect(page.locator('#itemModLoadingStatus')).toContainText('読み込み完了');
+    expect(await page.locator('#prefixModList .mod-group-item').count()).toBeGreaterThan(0);
+    expect(await page.locator('#suffixModList .mod-group-item').count()).toBeGreaterThan(0);
+    if(type.includes('expansion'))await expect(page.locator('#itemModLoadingStatus')).toContainText('全種類の候補');
+  }
+  await page.locator('#itemTypeSelect').selectOption('jewel_str');
+  await expect(page.locator('#itemModLoadingStatus')).toContainText('jewel_str アイテムModデータ');
+  await page.locator('#prefixModList .mod-group-item').first().click();
+  const choice=page.locator('#itemModalModList .modal-mod-item').first();
+  const affix=await choice.locator('.modal-mod-name').textContent();
+  await choice.click();
+  await page.locator('#itemModGroupModal').getByRole('button',{name:'適用',exact:true}).click();
+  await expect(page.locator('#combinedItemRegexOutput')).toContainText(affix);
+  const regex=await page.locator('#combinedItemRegexOutput').textContent();
+  await page.locator('#itemProfileName').fill('Jewel test');
+  await page.locator('#itemContent').getByRole('button',{name:'保存',exact:true}).click();
+  await page.locator('#itemTypeSelect').selectOption('jewel_int');
+  await page.locator('#itemProfileList').selectOption('Jewel test');
+  await page.locator('#itemContent').getByRole('button',{name:'読み込み',exact:true}).click();
+  await expect(page.locator('#categorySelect')).toHaveValue('jewel');
+  await expect(page.locator('#itemTypeSelect')).toHaveValue('jewel_str');
+  await expect(page.locator('#combinedItemRegexOutput')).toHaveText(regex);
+  await page.locator('#globalLangToggle [data-lang="en"]').click();
+  await expect(page.locator('#combinedItemRegexOutput')).not.toHaveText(regex);
+  expect(errors).toEqual([]);
+});
 test.beforeEach(async ({page}) => {
   await page.route('**/*', route => {
     return new URL(route.request().url()).origin === 'http://127.0.0.1:5174' ? route.continue() : route.abort();
