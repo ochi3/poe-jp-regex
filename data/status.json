@@ -9,14 +9,14 @@
         "updatedAt": "2026-10-30T00:45:32.032Z"
       },
       "prices": {
-        "fingerprint": "175a0f502d0073f2a138000f39ce8e523453058d8d7851902f168131bd30456e",
-        "updatedAt": "2026-10-29T23:51:21.833Z"
+        "fingerprint": "8f586160c10e05fa41e012edc749b7131fff1faf825f9cb2f94b5072600a9c6d",
+        "updatedAt": "2026-10-30T03:52:33.240Z"
       },
       "categories": {
         "map": {
           "mods": {
-            "fingerprint": "a48e1a3a748f9cbb01c9442333a22c704c0c027ede062073637e308c6e99a611",
-            "updatedAt": "2026-10-30T00:47:40.991Z"
+            "fingerprint": "bf54d527113a0951f990599ca54ac4e85f0fb991d4c8e80a0c13c9f5b69e5ebd",
+            "updatedAt": "2026-10-30T03:52:33.240Z"
           },
           "prices": null
         },
@@ -47,8 +47,8 @@
             "updatedAt": "2026-10-30T00:36:25.893Z"
           },
           "prices": {
-            "fingerprint": "d186c9c023efb34cc768c4a89ee3f0acab14a69bf50c89700e894c1270f895b1",
-            "updatedAt": "2026-10-30T00:36:25.893Z"
+            "fingerprint": "d0d7ea63fb260e33e0f11a9c808180c235160ad9b81af5ed3bafae292ec0980a",
+            "updatedAt": "2026-10-30T03:52:33.240Z"
           }
         },
         "scarab": {
@@ -57,8 +57,8 @@
             "updatedAt": "2026-10-30T00:36:25.893Z"
           },
           "prices": {
-            "fingerprint": "6fc3e8ac3fe80af98bfe766cc5f477c838bba35afef945843f27a3be2f145c79",
-            "updatedAt": "2026-10-30T00:36:25.893Z"
+            "fingerprint": "3bf000843546d6fedfd5543057987ac6caddafb34ed77007ebcce11ad5b13a93",
+            "updatedAt": "2026-10-30T03:52:33.240Z"
           }
         },
         "essence": {
@@ -67,8 +67,8 @@
             "updatedAt": "2026-10-30T00:36:25.893Z"
           },
           "prices": {
-            "fingerprint": "06591a9d2a883b17f148a7b7e2063aa21b5a416e4db1fdf794197d4c5969982a",
-            "updatedAt": "2026-10-30T00:36:25.893Z"
+            "fingerprint": "8d62d7785f8ebb9959e041d26da8e0371eef9429043cff803a37efe97b509c73",
+            "updatedAt": "2026-10-30T03:52:33.240Z"
           }
         },
         "tattoo": {
@@ -77,8 +77,8 @@
             "updatedAt": "2026-10-30T00:36:25.893Z"
           },
           "prices": {
-            "fingerprint": "812a626e0b312b0fca769cedf4c19aebbc89d7523fcd06e3f1ccacbe3fbab2a4",
-            "updatedAt": "2026-10-30T00:36:25.893Z"
+            "fingerprint": "ab88e3704aa38175b19da6c6aa810dfb051d699099f6e447d5dc72404f2963ef",
+            "updatedAt": "2026-10-30T03:52:33.240Z"
           }
         },
         "runegraft": {
@@ -87,28 +87,28 @@
             "updatedAt": "2026-10-30T00:36:25.893Z"
           },
           "prices": {
-            "fingerprint": "60afac64201747b78b0111a2fbec7a54d240ffda0a7ab481898fe65c4622c1e7",
-            "updatedAt": "2026-10-30T00:36:25.893Z"
+            "fingerprint": "97f88502bc1e156be556ccb819fd77a8cd184efe8a0666a81ce20a3b8b393daa",
+            "updatedAt": "2026-10-30T03:52:33.240Z"
           }
         },
         "vendor": {
           "mods": {
-            "fingerprint": "63b46773ceaa52f8d81b3400e5cfa268e8aaa33c934bb0c13b934f0b7cdacdcd",
-            "updatedAt": "2026-10-30T00:36:25.893Z"
+            "fingerprint": "389be7ee6ee39e2f3c49cdcc040d42bfdbcdcd9bc8c9a939c2831add2dac7f4c",
+            "updatedAt": "2026-10-30T03:52:33.240Z"
           },
           "prices": null
         },
         "itemtrans": {
           "mods": {
-            "fingerprint": "c93642998a7a54fa713d9e543f1cc4ee3d257661942cc33a3b1bbd56c4bda14b",
-            "updatedAt": "2026-10-30T00:36:25.893Z"
+            "fingerprint": "96aebbccbe60f20d55cbe4f3b39039816f62295e6ed9d7e5cc9847d02c30f268",
+            "updatedAt": "2026-10-30T03:52:33.240Z"
           },
           "prices": null
         },
         "trans": {
           "mods": {
-            "fingerprint": "9fb6d5ee5b5a85bf5a3a4640a353430fe3477fc05b6c1ccad27c7795b100a0dd",
-            "updatedAt": "2026-10-30T00:47:40.991Z"
+            "fingerprint": "3fb317004dc89dfccae70ab890154461b1d28ea0985b22720303fade846f3301",
+            "updatedAt": "2026-10-30T03:52:33.240Z"
           },
           "prices": null
         }
@@ -125,8 +125,8 @@
       "categories": {
         "map": {
           "mods": {
-            "fingerprint": "9b039e99ebf488fac05b82ae5f74ec946efa2d7343fedbaf5fd55dbac3eeb7e4",
-            "updatedAt": "2026-10-30T00:45:32.032Z"
+            "fingerprint": "f41b00b8acad71080113a01ce6289ae46ad1a0c9d9e71d7e1f6a5eda93eb53da",
+            "updatedAt": "2026-10-30T03:52:33.240Z"
           },
           "prices": null
         },
@@ -139,22 +139,22 @@
         },
         "vendor": {
           "mods": {
-            "fingerprint": "5ed8736be0f65f9bcf0b4fd7080ceeafb37d5fb8651b4825457beaf13444d39b",
-            "updatedAt": "2026-10-30T00:36:25.893Z"
+            "fingerprint": "f6bdabf88073435bbb98b41a7353b51ea861f4a6e4811286a92d6011fc3e8d30",
+            "updatedAt": "2026-10-30T03:52:33.240Z"
           },
           "prices": null
         },
         "itemtrans": {
           "mods": {
-            "fingerprint": "4e0f141b93285f9c0bc3df8735e312e89279ed4f20f3558b2e6982b2394c2f6e",
-            "updatedAt": "2026-10-30T00:36:25.893Z"
+            "fingerprint": "af2408d0cf1c9beb562dfb14553db1d7f36ace63f414f933ed3d77eecc8ba3b7",
+            "updatedAt": "2026-10-30T03:52:33.240Z"
           },
           "prices": null
         },
         "trans": {
           "mods": {
-            "fingerprint": "f953c7ff209dcf54aa89f3ecb026a3a219f9fbf632a7352e8f2085700ace3429",
-            "updatedAt": "2026-10-30T00:45:32.032Z"
+            "fingerprint": "c080b6dd38f09bed71a2f6a99815b4630b4d9f2111978aeb43a602c2d81336b8",
+            "updatedAt": "2026-10-30T03:52:33.240Z"
           },
           "prices": null
         }
