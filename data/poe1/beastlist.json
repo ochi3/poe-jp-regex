@@ -13,7 +13,7 @@
     "effect": "ユニークアイテムを作成: タリスマン / アイテムを変化: 可能な最大リンク数 / アイテムを変化: 可能な最大ソケット数 / 2個のモッドをフラクチャーする: 最低6個のモッドを持つレアのタリスマン / アイテムにアスペクトスキルを追加: レベル30各アスペクト",
     "regex": "リガ",
     "enRegex": "k m",
-    "chaosValue": "1613"
+    "chaosValue": "1766"
   },
   "ワイルド・ブリスル・マトロン": {
     "engName": "Wild Bristle Matron",
@@ -21,7 +21,7 @@
     "effect": "アイテムのモッドを変化: 非ユニークアイテムにクラフトメタモッドを追加",
     "regex": "ル・マ",
     "enRegex": "le m",
-    "chaosValue": "105"
+    "chaosValue": "104.9"
   },
   "ビビッド・ヴァルチャー": {
     "engName": "Vivid Vulture",
@@ -29,7 +29,7 @@
     "effect": "アイテムを変換: ユニークアイテムのシンセシス暗黙モッドを1個リロール",
     "regex": "ド・ヴ",
     "enRegex": "id v",
-    "chaosValue": "59.2"
+    "chaosValue": "56.2"
   },
   "ワイルド・ヘリオン・アルファ": {
     "engName": "Wild Hellion Alpha",
@@ -37,7 +37,7 @@
     "effect": "アイテムのモッドを変化: ウォッチャーズアイのモッドをリロール",
     "regex": "ド・ヘリ",
     "enRegex": "ld h",
-    "chaosValue": "80"
+    "chaosValue": "76.8"
   },
   "ワイルド・ブランブルバック": {
     "engName": "Wild Brambleback",
@@ -53,7 +53,7 @@
     "effect": "アイテムにアスペクトスキルを追加: 猫のアスペクト",
     "regex": "祖、ファ",
     "enRegex": "ul, f",
-    "chaosValue": "150"
+    "chaosValue": "305"
   },
   "フィヌムスのプレイグドアラクニド": {
     "engName": "Fenumal Plagued Arachnid",
@@ -61,7 +61,7 @@
     "effect": "インプリントを作成: レアタリスマン / 2個のモッドをフラクチャーする: 最低6個のモッドを持つレアのタリスマン",
     "regex": "のプレ",
     "enRegex": "l pla",
-    "chaosValue": "193.2"
+    "chaosValue": "194.7"
   },
   "プライマル・クリストコーラー": {
     "engName": "Primal Cystcaller",
@@ -77,7 +77,7 @@
     "effect": "アイテムにアスペクトスキルを追加: 蜘蛛のアスペクト",
     "regex": "祖、フィ",
     "enRegex": "s, f",
-    "chaosValue": "114"
+    "chaosValue": "110.8"
   },
   "空の始祖、サカワル": {
     "engName": "Saqawal, First of the Sky",
@@ -101,7 +101,7 @@
     "effect": "アイテムを作成: シンセシスユニークマップ",
     "regex": "ル・レッ",
     "enRegex": "x ma",
-    "chaosValue": "0.81"
+    "chaosValue": "0.82"
   },
   "フィヌムスのハイブリッドアラクニド": {
     "engName": "Fenumal Hybrid Arachnid",
@@ -125,7 +125,7 @@
     "effect": "ポータルを開く: ファルウルの巣穴",
     "regex": "ルのタイ",
     "enRegex": "c ti",
-    "chaosValue": "185"
+    "chaosValue": "184.1"
   },
   "サカワルのレックス": {
     "engName": "Saqawine Rhex",
@@ -165,7 +165,7 @@
     "effect": "アイテムのモッドを変化: サフィックスを1つ追加し、ランダムなプレフィックスを1つ削除",
     "regex": "ルのリ",
     "enRegex": "c l",
-    "chaosValue": "1.4"
+    "chaosValue": "1"
   },
   "クレイシアンの口": {
     "engName": "Craicic Maw",
@@ -205,7 +205,7 @@
     "effect": "アイテムを作成: 6リンクソケットレアアイテム",
     "regex": "ワルのヴァ",
     "enRegex": "e vu",
-    "chaosValue": "0.56"
+    "chaosValue": "0.57"
   },
   "ファルウルのピット・ハウンド": {
     "engName": "Farric Pit Hound",
@@ -293,7 +293,7 @@
     "effect": "ユニークアイテムを作成: 盾または矢筒 / アイテムのモッドを変化: シェイパーアイテムにモッドを追加",
     "regex": "スのデヴ",
     "enRegex": "mal d",
-    "chaosValue": "0.69"
+    "chaosValue": "0.7"
   },
   "クレイシアンのウォッチャー": {
     "engName": "Craicic Watcher",
@@ -301,7 +301,7 @@
     "effect": "ユニークアイテムを作成: 鉤爪または短剣 / アイテムのモッドを変化: ハンターアイテムにモッドを追加",
     "regex": "ンのウォ",
     "enRegex": "c wa",
-    "chaosValue": "1"
+    "chaosValue": "0.8"
   },
   "サカワルのキメラル": {
     "engName": "Saqawine Chimeral",
@@ -397,6 +397,6 @@
     "effect": "インプリントを作成: マジックアイテム / ヒネコラの髪束を適用: マジックアイテム",
     "regex": "クローカ",
     "enRegex": "c cro",
-    "chaosValue": "560"
+    "chaosValue": "1325"
   }
 }
