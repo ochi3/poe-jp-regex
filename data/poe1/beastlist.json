@@ -5,7 +5,7 @@
     "effect": "希少サポートジェムを捧げる: 高レベル、高品質のサポートジェム3個",
     "regex": "ド・ウ",
     "enRegex": "id w",
-    "chaosValue": "10"
+    "chaosValue": "8.4"
   },
   "黒のモリガン": {
     "engName": "Black Mórrigan",
@@ -21,7 +21,7 @@
     "effect": "アイテムのモッドを変化: 非ユニークアイテムにクラフトメタモッドを追加",
     "regex": "ル・マ",
     "enRegex": "le m",
-    "chaosValue": "89"
+    "chaosValue": "99"
   },
   "ビビッド・ヴァルチャー": {
     "engName": "Vivid Vulture",
@@ -29,7 +29,7 @@
     "effect": "アイテムを変換: ユニークアイテムのシンセシス暗黙モッドを1個リロール",
     "regex": "ド・ヴ",
     "enRegex": "id v",
-    "chaosValue": "56.2"
+    "chaosValue": "59.8"
   },
   "ワイルド・ヘリオン・アルファ": {
     "engName": "Wild Hellion Alpha",
@@ -37,7 +37,7 @@
     "effect": "アイテムのモッドを変化: ウォッチャーズアイのモッドをリロール",
     "regex": "ド・ヘリ",
     "enRegex": "ld h",
-    "chaosValue": "44"
+    "chaosValue": "40"
   },
   "ワイルド・ブランブルバック": {
     "engName": "Wild Brambleback",
@@ -45,7 +45,7 @@
     "effect": "アイテムを変換: 希少サポートジェムに500m経験値追加する",
     "regex": "ド・ブラ",
     "enRegex": "d bra",
-    "chaosValue": "69.3"
+    "chaosValue": "64.6"
   },
   "平原の始祖、ファルウル": {
     "engName": "Farrul, First of the Plains",
@@ -53,7 +53,7 @@
     "effect": "アイテムにアスペクトスキルを追加: 猫のアスペクト",
     "regex": "祖、ファ",
     "enRegex": "ul, f",
-    "chaosValue": "457.2"
+    "chaosValue": "473"
   },
   "フィヌムスのプレイグドアラクニド": {
     "engName": "Fenumal Plagued Arachnid",
@@ -61,7 +61,7 @@
     "effect": "インプリントを作成: レアタリスマン / 2個のモッドをフラクチャーする: 最低6個のモッドを持つレアのタリスマン",
     "regex": "のプレ",
     "enRegex": "l pla",
-    "chaosValue": "291.4"
+    "chaosValue": "290"
   },
   "プライマル・クリストコーラー": {
     "engName": "Primal Cystcaller",
@@ -77,7 +77,7 @@
     "effect": "アイテムにアスペクトスキルを追加: 蜘蛛のアスペクト",
     "regex": "祖、フィ",
     "enRegex": "s, f",
-    "chaosValue": "100"
+    "chaosValue": "99.9"
   },
   "空の始祖、サカワル": {
     "engName": "Saqawal, First of the Sky",
@@ -101,7 +101,7 @@
     "effect": "アイテムを作成: シンセシスユニークマップ",
     "regex": "ル・レッ",
     "enRegex": "x ma",
-    "chaosValue": "0.95"
+    "chaosValue": "1"
   },
   "フィヌムスのハイブリッドアラクニド": {
     "engName": "Fenumal Hybrid Arachnid",
@@ -109,7 +109,7 @@
     "effect": "ポータルを開く: フィヌムスの巣",
     "regex": "スのハイ",
     "enRegex": "l hy",
-    "chaosValue": "2.3"
+    "chaosValue": "2.2"
   },
   "クレイシアンの砂のスピッター": {
     "engName": "Craicic Sand Spitter",
@@ -125,7 +125,7 @@
     "effect": "ポータルを開く: ファルウルの巣穴",
     "regex": "ルのタイ",
     "enRegex": "c ti",
-    "chaosValue": "150"
+    "chaosValue": "220"
   },
   "サカワルのレックス": {
     "engName": "Saqawine Rhex",
@@ -157,7 +157,7 @@
     "effect": "マップをコラプト: 暗黙モッドを1個付与 / マップをコラプト: ダブルコラプト",
     "regex": "ンの臣",
     "enRegex": "c v",
-    "chaosValue": "3.1"
+    "chaosValue": "1.7"
   },
   "ファルウルのリンクス・アルファ": {
     "engName": "Farric Lynx Alpha",
@@ -165,7 +165,7 @@
     "effect": "アイテムのモッドを変化: サフィックスを1つ追加し、ランダムなプレフィックスを1つ削除",
     "regex": "ルのリ",
     "enRegex": "c l",
-    "chaosValue": "1.9"
+    "chaosValue": "2"
   },
   "クレイシアンの口": {
     "engName": "Craicic Maw",
@@ -189,7 +189,7 @@
     "effect": "アイテムを作成: 貴重なスカラベ",
     "regex": "ル・クラ",
     "enRegex": "l cru",
-    "chaosValue": "15"
+    "chaosValue": "14.4"
   },
   "ファルウルのフロストヘリオン・アルファ": {
     "engName": "Farric Frost Hellion Alpha",
@@ -333,7 +333,7 @@
     "effect": "アイテムを変換: タリスマンのベースタイプをリロール 暗黙モッドおよび明示モッドは維持される",
     "regex": "ンのイカ",
     "enRegex": " sq",
-    "chaosValue": "4"
+    "chaosValue": "10.1"
   },
   "クレイシアンのシールドクラブ": {
     "engName": "Craicic Shield Crab",
@@ -373,7 +373,7 @@
     "effect": "ユニークアイテムを作成: フラスコ",
     "regex": "ルのゴー",
     "enRegex": "c goa",
-    "chaosValue": "0.83"
+    "chaosValue": "0.79"
   },
   "フィヌムスのスクラブラー": {
     "engName": "Fenumal Scrabbler",
@@ -397,6 +397,6 @@
     "effect": "インプリントを作成: マジックアイテム / ヒネコラの髪束を適用: マジックアイテム",
     "regex": "クローカ",
     "enRegex": "c cro",
-    "chaosValue": "1372"
+    "chaosValue": "1419"
   }
 }
