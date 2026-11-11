@@ -118,7 +118,7 @@
     "eng": "Blade Flurry"
   },
   {
-    "display_name": "スウィープ",
+    "display_name": "ホーリースウィープ",
     "id": "Sweep",
     "color": "r",
     "quest_reward": {
@@ -133,8 +133,8 @@
     "classes": null,
     "quest": null,
     "is_support": false,
-    "regex": "スウィー",
-    "eng": "Sweep"
+    "regex": "ホーリースウ",
+    "eng": "Holy Sweep"
   },
   {
     "display_name": "ディスコレクタングルスラム",
@@ -1921,7 +1921,7 @@
     "quest": null,
     "is_support": false,
     "regex": "バラージ",
-    "eng": "Barrage Support"
+    "eng": "Barrage"
   },
   {
     "display_name": "ボールライトニング",
@@ -2856,7 +2856,7 @@
     "quest": null,
     "is_support": false,
     "regex": "ードフォ",
-    "eng": "Bladefall of Trarthus"
+    "eng": "Bladefall"
   },
   {
     "display_name": "ブレードヴォーテックス",
@@ -3193,7 +3193,7 @@
     "quest": null,
     "is_support": false,
     "regex": "ダークパ",
-    "eng": "Dark Pact"
+    "eng": "Dark Bargain"
   },
   {
     "display_name": "スコーチングレイ",
@@ -4857,7 +4857,7 @@
     "eng": "Battlemage's Cry"
   },
   {
-    "display_name": "アブソルーション",
+    "display_name": "アブソリューション",
     "id": "Absolution",
     "color": "r",
     "quest_reward": {
@@ -4872,7 +4872,7 @@
     "classes": null,
     "quest": null,
     "is_support": false,
-    "regex": "アブソル",
+    "regex": "アブソリ",
     "eng": "Absolution"
   },
   {
@@ -5746,7 +5746,7 @@
     "eng": "Greater Multiple Projectiles Support"
   },
   {
-    "display_name": "レッサー投射物追加サポート",
+    "display_name": "投射物追加サポート",
     "id": "LesserMultipleProjectiles",
     "color": "g",
     "quest_reward": {
@@ -5763,8 +5763,8 @@
     "classes": null,
     "quest": null,
     "is_support": true,
-    "regex": "レッサー",
-    "eng": "Lesser Multiple Projectiles Support"
+    "regex": "^投射物追加サポート",
+    "eng": "Multiple Projectiles Support"
   },
   {
     "display_name": "投射物高速化サポート",
@@ -7881,6 +7881,24 @@
     "eng": "Nightblade Support"
   },
   {
+    "display_name": "狂乱の餌付けサポート",
+    "id": "SupportFeedingFrenzy",
+    "color": "b",
+    "quest_reward": {
+      "act": 3,
+      "classes": [
+        "ウィッチ"
+      ],
+      "quest": "運命の定め"
+    },
+    "act": null,
+    "classes": null,
+    "quest": null,
+    "is_support": true,
+    "regex": "狂乱の餌",
+    "eng": "Feeding Frenzy Support"
+  },
+  {
     "display_name": "肉の壁サポート",
     "id": "MeatShield",
     "color": "b",
@@ -7989,7 +8007,7 @@
     "quest": null,
     "is_support": true,
     "regex": "ラージサ",
-    "eng": "Barrage Support"
+    "eng": "Barrage"
   },
   {
     "display_name": "グレーターボレーサポート",
@@ -8792,5 +8810,137 @@
     "is_support": true,
     "regex": "リビング",
     "eng": "Living Lightning Support"
+  },
+  {
+    "display_name": "ホーリーストライク",
+    "id": "HolyStrike",
+    "color": "r",
+    "quest_reward": null,
+    "act": null,
+    "classes": null,
+    "quest": null,
+    "is_support": false,
+    "regex": "リースト",
+    "eng": "Holy Strike"
+  },
+  {
+    "display_name": "ホーリーハンマー",
+    "id": "HolyHammers",
+    "color": "r",
+    "quest_reward": {
+      "act": 3,
+      "classes": [
+        "テンプラー"
+      ],
+      "quest": "腹心の部下を倒せ"
+    },
+    "act": null,
+    "classes": null,
+    "quest": null,
+    "is_support": false,
+    "regex": "ーリーハ",
+    "eng": "Holy Hammers"
+  },
+  {
+    "display_name": "シールドオブライト",
+    "id": "ShieldOfLight",
+    "color": "r",
+    "quest_reward": {
+      "act": 2,
+      "classes": [
+        "テンプラー"
+      ],
+      "quest": "黒ずくめの侵入者"
+    },
+    "act": null,
+    "classes": null,
+    "quest": null,
+    "is_support": false,
+    "regex": "ールドオ",
+    "eng": "Shield of Light"
+  },
+  {
+    "display_name": "ディバインブラスト",
+    "id": "DivineBlast",
+    "color": "r",
+    "quest_reward": {
+      "act": 3,
+      "classes": [
+        "テンプラー"
+      ],
+      "quest": "腹心の部下を倒せ"
+    },
+    "act": null,
+    "classes": null,
+    "quest": null,
+    "is_support": false,
+    "regex": "インブラ",
+    "eng": "Divine Blast"
+  },
+  {
+    "display_name": "マナインフューズスタッフ",
+    "id": "ManaInfusedStaff",
+    "color": "b",
+    "quest_reward": {
+      "act": 2,
+      "classes": [
+        "テンプラー"
+      ],
+      "quest": "黒ずくめの侵入者"
+    },
+    "act": null,
+    "classes": null,
+    "quest": null,
+    "is_support": false,
+    "regex": "マナイン",
+    "eng": "Mana-Infused Staff"
+  },
+  {
+    "display_name": "聖別サポート",
+    "id": "SupportHallow",
+    "color": "r",
+    "quest_reward": null,
+    "act": null,
+    "classes": null,
+    "quest": null,
+    "is_support": true,
+    "regex": "聖別サポ",
+    "eng": "Hallow Support"
+  },
+  {
+    "display_name": "祝福された呼び声サポート",
+    "id": "SupportBlessedCall",
+    "color": "r",
+    "quest_reward": {
+      "act": 3,
+      "classes": [
+        "テンプラー"
+      ],
+      "quest": "運命の定め"
+    },
+    "act": null,
+    "classes": null,
+    "quest": null,
+    "is_support": true,
+    "regex": "祝福され",
+    "eng": "Blessed Call Support"
+  },
+  {
+    "display_name": "破門サポート",
+    "id": "SupportExcommunicate",
+    "color": "r",
+    "quest_reward": {
+      "act": 3,
+      "classes": [
+        "テンプラー"
+      ],
+      "quest": "運命の定め"
+    },
+    "act": null,
+    "classes": null,
+    "quest": null,
+    "is_support": true,
+    "regex": "破門サポ",
+    "eng": "Excommunicate Support"
   }
 ]
