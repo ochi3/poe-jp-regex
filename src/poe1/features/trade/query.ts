@@ -5,12 +5,25 @@ function buildTradeUrl() {
     // UIから設定を取得
     const league = (typeof getLeagueName === 'function' ? getLeagueName() : null)
         || getElement('leagueInput')?.value
-        || "Allflame";
+        || "Covens";
     let tradeMethod = getElement('tradeMethodSelect').value || "any";
     let minModCount = parseInt(getElement('minModCountInput').value) || 0;
 
     const notStats = [];
     const wantedStats = [];
+
+    // These 3.30 trade fields must be verified before replacing the old API IDs.
+    // Reject the entire request so an unsupported condition is never silently omitted.
+    const missingTradeMod = [...checkedMods.keys()].find(key => {
+        const mod = ModList[key];
+        return mod && !mod.tradeStatIds?.some(id => id);
+    });
+    if (parseInt(getElement('itemQuantityInput').value) > 0 || parseInt(getElement('scarabInput').value) > 0 || missingTradeMod) {
+        alert(currentLanguage === 'ja'
+            ? 'アトラスドロップ・スレッド、または選択したModのトレード検索にはまだ対応していません。ゲーム内Regexをご利用ください。'
+            : 'Trade search is not yet supported for Atlas Drops, Threads, or one of the selected modifiers. Please use the in-game regex.');
+        return null;
+    }
 
     // checkedModsから選択されたModを取得
     if ((!checkedMods || checkedMods.size === 0) && notStats.length === 0 && !getElement('memoryMapCheckbox').checked && !getElement('nightmareMapCheckbox').checked && !parseInt(getElement('minModCountInput').value) && !getElement('itemQuantityInput').value && !getElement('packSizeInput').value && !getElement('rarityInput').value && !getElement('scarabInput').value && !getElement('currencyInput').value && !getElement('mapInput').value) {

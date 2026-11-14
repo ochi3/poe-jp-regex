@@ -12,6 +12,7 @@ from mod_data_source import load_mods_and_stat_map, parse_source_arg
 from poe_db_source import trade_stats_path
 
 TARGET_STATS = [
+    'map_drop_scaling_+%',
     'map_item_drop_quantity_+%',
     'map_item_drop_rarity_+%',
     'map_pack_size_+%',
@@ -48,6 +49,10 @@ MANUAL_TRADE_STAT_MAP = {
 
 # mod名/テキストから除外する汎用マップ統計テキスト
 GENERIC_STAT_TEXTS = [
+    "このエリアのアトラスドロップが#%増加する",
+    "#% increased Atlas Drops in this Area",
+    "エリアで見つかるスレッドが#%上昇する",
+    "#% more Threads found in Area",
     "このエリアで見つかるアイテムの数量が#%増加する",
     "このエリアで見つかるアイテムのレアリティが#%増加する",
     "パックサイズが#%増加する",
@@ -769,11 +774,14 @@ def main():
             "Regex": regex_previous.get('Regex', ""),
             "tradeStatIds": trade_stat_ids       # 各行に対応したID配列
         }
-        with_source_id(entry, m_id, result_mod_list.get(full_jp))
+        # Keep the storage key stable when the same Mod's displayed translation changes.
+        result_key = next((key for key, old in old_output_data.items()
+                           if m_id in old.get('sourceIds', [])), full_jp)
+        with_source_id(entry, m_id, result_mod_list.get(result_key))
         entry.update(mod_stats_values)
         entry["modTier17"] = is_t17
         
-        result_mod_list[full_jp] = entry
+        result_mod_list[result_key] = entry
         count += 1
 
     print(f"Extracted {count} modifiers (filtered by spawn_weights).")

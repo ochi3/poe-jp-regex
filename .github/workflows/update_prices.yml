@@ -22,6 +22,8 @@ jobs:
           python-version: '3.x'
 
       - name: Run update script
+        env:
+          POE_LEAGUE: Covens
         run: python tooling/data/update-prices.py
 
       - name: Set up Node

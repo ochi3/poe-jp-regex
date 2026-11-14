@@ -12,7 +12,7 @@ test('map trade URLs exclude current individual influence and citadel IDs in bot
  for(const family of ['implicit.stat_2563183002','implicit.stat_3624393862','implicit.stat_1792283443'])assert.equal(ids.has(family),false);
  const site=await loadSite(root,'poe1');try{
   const w=site.window;
-  w.document.getElementById('itemQuantityInput').value='80';
+  w.document.getElementById('packSizeInput').value='20';
   for(const language of ['ja','en']) {
    w.setLanguage(language);
    const url=new URL(w.buildTradeUrl());

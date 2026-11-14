@@ -2,7 +2,7 @@
 function getLeagueName() {
     const select = getElement('leagueSelect');
     if (select.value === '__custom__') {
-        return getElement('leagueInput').value.trim() || 'Allflame';
+        return getElement('leagueInput').value.trim() || 'Covens';
     }
     return select.value;
 }
@@ -44,8 +44,12 @@ function saveTradeSettings() {
 }
 
 function loadTradeSettings() {
-    const league = readStoredText('poeTradeLeague') || "Allflame";
+    let league = readStoredText('poeTradeLeague') || "Covens";
     const leagueIsCustom = readStoredText('poeTradeLeagueIsCustom') === 'true';
+    if (!leagueIsCustom && /^(?:(?:Hardcore|Ruthless|HC Ruthless) )?Allflame$/.test(league)) {
+        league = league.replace(/Allflame$/, 'Covens');
+        writeStoredText('poeTradeLeague', league);
+    }
     let method = readStoredText('poeTradeMethod');
     if (method === null) method = "securable";
     let minModCount = readStoredText('poeTradeMinModCount');

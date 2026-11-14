@@ -7,7 +7,7 @@ import {loadSite,exercise} from './helpers/site.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 for(const game of ['poe1','poe2']) {
-  test(`${game}: matches the pre-migration behavior fixtures`, async()=>{
+  test(`${game}: matches the maintained compatibility fixtures`, async()=>{
     const expected=JSON.parse(fs.readFileSync(path.join(root,`tests/fixtures/${game}.json`),'utf8'));
     const site=await loadSite(root,game);
     try {

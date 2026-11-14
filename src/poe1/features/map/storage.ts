@@ -63,14 +63,14 @@ function updateModList() {
                     if (valueA.type !== valueB.type) return (valueB.type || '').localeCompare(valueA.type || '');
                     break;
                 case 'quantity_asc': {
-                    const qA = valueA["map_map_item_drop_chance_+%"] || valueA["map_item_drop_quantity_+%"] || 0;
-                    const qB = valueB["map_map_item_drop_chance_+%"] || valueB["map_item_drop_quantity_+%"] || 0;
+                    const qA = valueA["map_drop_scaling_+%"] ?? valueA["map_map_item_drop_chance_+%"] ?? valueA["map_item_drop_quantity_+%"] ?? 0;
+                    const qB = valueB["map_drop_scaling_+%"] ?? valueB["map_map_item_drop_chance_+%"] ?? valueB["map_item_drop_quantity_+%"] ?? 0;
                     if (qA !== qB) return qA - qB;
                     break;
                 }
                 case 'quantity_desc': {
-                    const qA = valueA["map_map_item_drop_chance_+%"] || valueA["map_item_drop_quantity_+%"] || 0;
-                    const qB = valueB["map_map_item_drop_chance_+%"] || valueB["map_item_drop_quantity_+%"] || 0;
+                    const qA = valueA["map_drop_scaling_+%"] ?? valueA["map_map_item_drop_chance_+%"] ?? valueA["map_item_drop_quantity_+%"] ?? 0;
+                    const qB = valueB["map_drop_scaling_+%"] ?? valueB["map_map_item_drop_chance_+%"] ?? valueB["map_item_drop_quantity_+%"] ?? 0;
                     if (qA !== qB) return qB - qA;
                     break;
                 }

@@ -267,7 +267,7 @@ function calcMapModTotals(profile) {
     if (!mod) return;
     totalCurrency += Number(mod['map_currency_drop_chance_+%_final_from_uber_mod'] || 0);
     totalPackSize += Number(mod['map_pack_size_+%'] || 0);
-    totalQuantity += Number(mod['map_item_drop_quantity_+%'] || 0);
+    totalQuantity += Number(mod['map_drop_scaling_+%'] ?? mod['map_item_drop_quantity_+%'] ?? 0);
     totalRarity += Number(mod['map_item_drop_rarity_+%'] || 0);
     totalScarab += Number(mod['map_scarab_drop_chance_+%_final_from_uber_mod'] || 0);
     totalMap += Number(mod['map_map_item_drop_chance_+%_final_from_uber_mod'] || 0);
@@ -422,10 +422,10 @@ function createProfileCard(name, profile, type, tabId) {
     
     const isEn = typeof currentLanguage !== 'undefined' ? currentLanguage === 'en' : false;
     const badgeConfigs = [
-      { label: isEn ? 'Quality' : '数量', value: settings.itemQuantity, color: '#a54242' },
+      { label: isEn ? 'Atlas Drops' : 'アトラスドロップ', value: settings.itemQuantity, color: '#a54242' },
       { label: isEn ? 'Pack' : 'パック', value: settings.packSize, color: '#42a5a5' },
       { label: isEn ? 'Rarity' : 'レア', value: settings.rarity, color: '#a58242' },
-      { label: isEn ? 'Scarab' : 'スカラベ', value: settings.scarab, color: '#a542a5' },
+      { label: isEn ? 'Threads' : 'スレッド', value: settings.scarab, color: '#a542a5' },
       { label: isEn ? 'Currency' : 'カレンシー', value: settings.currency, color: '#a5a542' },
       { label: isEn ? 'Map' : 'マップ', value: settings.map, color: '#4264a5' }
     ];
@@ -554,7 +554,7 @@ function createProfileSummary(profile, type) {
     }
     if (modCount > 0) parts.push(`${modCount}個のMod`);
     const settings = profile.settings || {};
-    if (settings.itemQuantity) parts.push(`数量${settings.itemQuantity}%`);
+    if (settings.itemQuantity) parts.push(`アトラスドロップ${settings.itemQuantity}%`);
     if (settings.packSize) parts.push(`パック${settings.packSize}%`);
   } else if (type === 'flask') {
     const modCount = (profile.mods || []).length;
@@ -648,10 +648,10 @@ function createDetailedView(profile, type) {
       return badge;
     };
 
-    if (settings.itemQuantity > 0) summaryRow.appendChild(makeSummaryBadge(isEn ? 'Quality' : '数量', settings.itemQuantity, '#a54242'));
+    if (settings.itemQuantity > 0) summaryRow.appendChild(makeSummaryBadge(isEn ? 'Atlas Drops' : 'アトラスドロップ', settings.itemQuantity, '#a54242'));
     if (settings.packSize > 0) summaryRow.appendChild(makeSummaryBadge(isEn ? 'Pack' : 'パック', settings.packSize, '#42a5a5'));
     if (settings.rarity > 0) summaryRow.appendChild(makeSummaryBadge(isEn ? 'Rarity' : 'レア', settings.rarity, '#a58242'));
-    if (settings.scarab > 0) summaryRow.appendChild(makeSummaryBadge(isEn ? 'Scarab' : 'スカラベ', settings.scarab, '#a542a5'));
+    if (settings.scarab > 0) summaryRow.appendChild(makeSummaryBadge(isEn ? 'Threads' : 'スレッド', settings.scarab, '#a542a5'));
     if (settings.currency > 0) summaryRow.appendChild(makeSummaryBadge(isEn ? 'Currency' : 'カレンシー', settings.currency, '#a5a542'));
     if (settings.map > 0) summaryRow.appendChild(makeSummaryBadge(isEn ? 'Map' : 'マップ', settings.map, '#4264a5'));
 
@@ -663,11 +663,11 @@ function createDetailedView(profile, type) {
       const settingsDiv = document.createElement('div');
       settingsDiv.style.cssText = 'margin-bottom: 12px;';
       const rows = [];
-      if (settings.itemQuantity) rows.push(createDetailRow(isEn ? 'Min Quality' : '数量', `${settings.itemQuantity}%`));
+      if (settings.itemQuantity) rows.push(createDetailRow(isEn ? 'Min Atlas Drops' : 'アトラスドロップ', `${settings.itemQuantity}%`));
       if (settings.customRegex) rows.push(createDetailRow(isEn ? 'Custom' : 'カスタム', settings.customRegex));
       if (settings.packSize) rows.push(createDetailRow(isEn ? 'Min Pack' : 'パックサイズ', `${settings.packSize}%`));
       if (settings.rarity) rows.push(createDetailRow(isEn ? 'Min Rarity' : 'レアリティ', `${settings.rarity}%`));
-      if (settings.scarab) rows.push(createDetailRow(isEn ? 'Min Scarab' : 'スカラベ', `${settings.scarab}%`));
+      if (settings.scarab) rows.push(createDetailRow(isEn ? 'Min Threads' : 'スレッド', `${settings.scarab}%`));
       if (settings.currency) rows.push(createDetailRow(isEn ? 'Min Currency' : 'カレンシー', `${settings.currency}%`));
       if (settings.map) rows.push(createDetailRow(isEn ? 'Min Map' : 'マップ', `${settings.map}%`));
       

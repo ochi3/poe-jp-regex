@@ -4,8 +4,7 @@ import os
 
 # 定数
 USER_AGENT = 'PoE-JP-Regex-Tool/1.0 (contact: user)'
-LEAGUE_API_URL = "https://api.pathofexile.com/leagues?type=main"
-DEFAULT_LEAGUE = "Allflame"
+DEFAULT_LEAGUE = "Covens"
 
 # poe.ninja API URL
 NINJA_BEAST_API = "https://poe.ninja/poe1/api/economy/stash/current/item/overview?league={league}&type=Beast"
@@ -44,11 +43,9 @@ def save_json_data(path, data):
     print(f"Saved to {path}")
 
 def get_current_league():
-    leagues = fetch_json(LEAGUE_API_URL)
-    if not leagues: return DEFAULT_LEAGUE
-    exclude = ["Standard", "Hardcore", "HardMode", "SSF", "Ruthless"]
-    challenge_leagues = [l['id'] for l in leagues if not any(ex.lower() in l['id'].lower() for ex in exclude)]
-    return challenge_leagues[-1] if challenge_leagues else DEFAULT_LEAGUE
+    # A league list's order is not a reliable current-league indicator, especially
+    # at league launch. Use the configured economy instead of an older fallback.
+    return os.environ.get("POE_LEAGUE", "").strip() or DEFAULT_LEAGUE
 
 def update_prices(path, prices):
     data = load_json_data(path)

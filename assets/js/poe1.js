@@ -863,11 +863,23 @@ function buildTradeUrl() {
     // UIから設定を取得
     const league = (typeof getLeagueName === 'function' ? getLeagueName() : null)
         || getElement('leagueInput')?.value
-        || "Allflame";
+        || "Covens";
     let tradeMethod = getElement('tradeMethodSelect').value || "any";
     let minModCount = parseInt(getElement('minModCountInput').value) || 0;
     const notStats = [];
     const wantedStats = [];
+    // These 3.30 trade fields must be verified before replacing the old API IDs.
+    // Reject the entire request so an unsupported condition is never silently omitted.
+    const missingTradeMod = [...checkedMods.keys()].find(key => {
+        const mod = ModList[key];
+        return mod && !mod.tradeStatIds?.some(id => id);
+    });
+    if (parseInt(getElement('itemQuantityInput').value) > 0 || parseInt(getElement('scarabInput').value) > 0 || missingTradeMod) {
+        alert(currentLanguage === 'ja'
+            ? 'アトラスドロップ・スレッド、または選択したModのトレード検索にはまだ対応していません。ゲーム内Regexをご利用ください。'
+            : 'Trade search is not yet supported for Atlas Drops, Threads, or one of the selected modifiers. Please use the in-game regex.');
+        return null;
+    }
     // checkedModsから選択されたModを取得
     if ((!checkedMods || checkedMods.size === 0) && notStats.length === 0 && !getElement('memoryMapCheckbox').checked && !getElement('nightmareMapCheckbox').checked && !parseInt(getElement('minModCountInput').value) && !getElement('itemQuantityInput').value && !getElement('packSizeInput').value && !getElement('rarityInput').value && !getElement('scarabInput').value && !getElement('currencyInput').value && !getElement('mapInput').value) {
         alert("検索条件を一つ以上指定してください。");
@@ -1587,10 +1599,12 @@ function addEffectItem(key, value) {
         typeBadge.textContent = 'S';
     }
     badgeContainer.appendChild(typeBadge);
-    if (value["map_item_drop_quantity_+%"]) {
+    if (value["map_drop_scaling_+%"] || value["map_item_drop_quantity_+%"]) {
         const qtyBadge = document.createElement('span');
         qtyBadge.classList.add('badge', 'qty-badge');
-        qtyBadge.textContent = `数量 ${value["map_item_drop_quantity_+%"]}`;
+        qtyBadge.textContent = value["map_drop_scaling_+%"]
+            ? `アトラスドロップ ${value["map_drop_scaling_+%"]}`
+            : `数量 ${value["map_item_drop_quantity_+%"]}`;
         badgeContainer.appendChild(qtyBadge);
     }
     if (value["map_item_drop_rarity_+%"]) {
@@ -1620,7 +1634,7 @@ function addEffectItem(key, value) {
     if (value["map_scarab_drop_chance_+%_final_from_uber_mod"]) {
         const scarabBadge = document.createElement('span');
         scarabBadge.classList.add('badge', 'scarab-badge');
-        scarabBadge.textContent = `スカラベ ${value["map_scarab_drop_chance_+%_final_from_uber_mod"]}`;
+        scarabBadge.textContent = `スレッド ${value["map_scarab_drop_chance_+%_final_from_uber_mod"]}`;
         badgeContainer.appendChild(scarabBadge);
     }
     const showBadges = getElement('showModBadgesCheckbox')?.checked !== false;
@@ -1673,7 +1687,7 @@ function updateCombinedRegex() {
     }
     getElement('ModListResult').textContent = ModListResult;
     if (itemQuantityValue) {
-        const itemQuantityRegex = getFixedRangeRegex(itemQuantityValue, currentLanguage === 'ja' ? '量:.*' : 'm q.*');
+        const itemQuantityRegex = getFixedRangeRegex(itemQuantityValue, currentLanguage === 'ja' ? 'アトラスドロップ.*' : 'atlas drops.*');
         combinedResult += ` ${itemQuantityRegex}`;
     }
     if (packSizeValue) {
@@ -1706,7 +1720,7 @@ function generateExtraRegex() {
     const mapValue = getElement('mapInput').value;
     let extraRegex = [];
     if (scarabValue) {
-        const scarabRegex = getFixedRangeRegex(scarabValue, currentLanguage === 'ja' ? 'ラベ量.*' : 're s.*');
+        const scarabRegex = getFixedRangeRegex(scarabValue, currentLanguage === 'ja' ? 'スレッド.*' : 'more threads.*');
         extraRegex.push(scarabRegex);
     }
     if (currencyValue) {
@@ -1845,15 +1859,15 @@ function updateModList() {
                     return (valueB.type || '').localeCompare(valueA.type || '');
                 break;
             case 'quantity_asc': {
-                const qA = valueA["map_map_item_drop_chance_+%"] || valueA["map_item_drop_quantity_+%"] || 0;
-                const qB = valueB["map_map_item_drop_chance_+%"] || valueB["map_item_drop_quantity_+%"] || 0;
+                const qA = valueA["map_drop_scaling_+%"] ?? valueA["map_map_item_drop_chance_+%"] ?? valueA["map_item_drop_quantity_+%"] ?? 0;
+                const qB = valueB["map_drop_scaling_+%"] ?? valueB["map_map_item_drop_chance_+%"] ?? valueB["map_item_drop_quantity_+%"] ?? 0;
                 if (qA !== qB)
                     return qA - qB;
                 break;
             }
             case 'quantity_desc': {
-                const qA = valueA["map_map_item_drop_chance_+%"] || valueA["map_item_drop_quantity_+%"] || 0;
-                const qB = valueB["map_map_item_drop_chance_+%"] || valueB["map_item_drop_quantity_+%"] || 0;
+                const qA = valueA["map_drop_scaling_+%"] ?? valueA["map_map_item_drop_chance_+%"] ?? valueA["map_item_drop_quantity_+%"] ?? 0;
+                const qB = valueB["map_drop_scaling_+%"] ?? valueB["map_map_item_drop_chance_+%"] ?? valueB["map_item_drop_quantity_+%"] ?? 0;
                 if (qA !== qB)
                     return qB - qA;
                 break;
@@ -2655,7 +2669,7 @@ function findModsFromJpRegex(jpRegex) {
 function getLeagueName() {
     const select = getElement('leagueSelect');
     if (select.value === '__custom__') {
-        return getElement('leagueInput').value.trim() || 'Allflame';
+        return getElement('leagueInput').value.trim() || 'Covens';
     }
     return select.value;
 }
@@ -2694,8 +2708,12 @@ function saveTradeSettings() {
     writeStoredText('poeTradeDeliriumMax', String(deliriumMax));
 }
 function loadTradeSettings() {
-    const league = readStoredText('poeTradeLeague') || "Allflame";
+    let league = readStoredText('poeTradeLeague') || "Covens";
     const leagueIsCustom = readStoredText('poeTradeLeagueIsCustom') === 'true';
+    if (!leagueIsCustom && /^(?:(?:Hardcore|Ruthless|HC Ruthless) )?Allflame$/.test(league)) {
+        league = league.replace(/Allflame$/, 'Covens');
+        writeStoredText('poeTradeLeague', league);
+    }
     let method = readStoredText('poeTradeMethod');
     if (method === null)
         method = "securable";
@@ -5909,7 +5927,7 @@ function calcMapModTotals(profile) {
             return;
         totalCurrency += Number(mod['map_currency_drop_chance_+%_final_from_uber_mod'] || 0);
         totalPackSize += Number(mod['map_pack_size_+%'] || 0);
-        totalQuantity += Number(mod['map_item_drop_quantity_+%'] || 0);
+        totalQuantity += Number(mod['map_drop_scaling_+%'] ?? mod['map_item_drop_quantity_+%'] ?? 0);
         totalRarity += Number(mod['map_item_drop_rarity_+%'] || 0);
         totalScarab += Number(mod['map_scarab_drop_chance_+%_final_from_uber_mod'] || 0);
         totalMap += Number(mod['map_map_item_drop_chance_+%_final_from_uber_mod'] || 0);
@@ -6046,10 +6064,10 @@ function createProfileCard(name, profile, type, tabId) {
         badgeContainer.style.cssText = 'display: flex; gap: 4px; margin-left: 10px; flex-wrap: wrap;';
         const isEn = typeof currentLanguage !== 'undefined' ? currentLanguage === 'en' : false;
         const badgeConfigs = [
-            { label: isEn ? 'Quality' : '数量', value: settings.itemQuantity, color: '#a54242' },
+            { label: isEn ? 'Atlas Drops' : 'アトラスドロップ', value: settings.itemQuantity, color: '#a54242' },
             { label: isEn ? 'Pack' : 'パック', value: settings.packSize, color: '#42a5a5' },
             { label: isEn ? 'Rarity' : 'レア', value: settings.rarity, color: '#a58242' },
-            { label: isEn ? 'Scarab' : 'スカラベ', value: settings.scarab, color: '#a542a5' },
+            { label: isEn ? 'Threads' : 'スレッド', value: settings.scarab, color: '#a542a5' },
             { label: isEn ? 'Currency' : 'カレンシー', value: settings.currency, color: '#a5a542' },
             { label: isEn ? 'Map' : 'マップ', value: settings.map, color: '#4264a5' }
         ];
@@ -6166,7 +6184,7 @@ function createProfileSummary(profile, type) {
             parts.push(`${modCount}個のMod`);
         const settings = profile.settings || {};
         if (settings.itemQuantity)
-            parts.push(`数量${settings.itemQuantity}%`);
+            parts.push(`アトラスドロップ${settings.itemQuantity}%`);
         if (settings.packSize)
             parts.push(`パック${settings.packSize}%`);
     }
@@ -6278,13 +6296,13 @@ function createDetailedView(profile, type) {
             return badge;
         };
         if (settings.itemQuantity > 0)
-            summaryRow.appendChild(makeSummaryBadge(isEn ? 'Quality' : '数量', settings.itemQuantity, '#a54242'));
+            summaryRow.appendChild(makeSummaryBadge(isEn ? 'Atlas Drops' : 'アトラスドロップ', settings.itemQuantity, '#a54242'));
         if (settings.packSize > 0)
             summaryRow.appendChild(makeSummaryBadge(isEn ? 'Pack' : 'パック', settings.packSize, '#42a5a5'));
         if (settings.rarity > 0)
             summaryRow.appendChild(makeSummaryBadge(isEn ? 'Rarity' : 'レア', settings.rarity, '#a58242'));
         if (settings.scarab > 0)
-            summaryRow.appendChild(makeSummaryBadge(isEn ? 'Scarab' : 'スカラベ', settings.scarab, '#a542a5'));
+            summaryRow.appendChild(makeSummaryBadge(isEn ? 'Threads' : 'スレッド', settings.scarab, '#a542a5'));
         if (settings.currency > 0)
             summaryRow.appendChild(makeSummaryBadge(isEn ? 'Currency' : 'カレンシー', settings.currency, '#a5a542'));
         if (settings.map > 0)
@@ -6297,7 +6315,7 @@ function createDetailedView(profile, type) {
             settingsDiv.style.cssText = 'margin-bottom: 12px;';
             const rows = [];
             if (settings.itemQuantity)
-                rows.push(createDetailRow(isEn ? 'Min Quality' : '数量', `${settings.itemQuantity}%`));
+                rows.push(createDetailRow(isEn ? 'Min Atlas Drops' : 'アトラスドロップ', `${settings.itemQuantity}%`));
             if (settings.customRegex)
                 rows.push(createDetailRow(isEn ? 'Custom' : 'カスタム', settings.customRegex));
             if (settings.packSize)
@@ -6305,7 +6323,7 @@ function createDetailedView(profile, type) {
             if (settings.rarity)
                 rows.push(createDetailRow(isEn ? 'Min Rarity' : 'レアリティ', `${settings.rarity}%`));
             if (settings.scarab)
-                rows.push(createDetailRow(isEn ? 'Min Scarab' : 'スカラベ', `${settings.scarab}%`));
+                rows.push(createDetailRow(isEn ? 'Min Threads' : 'スレッド', `${settings.scarab}%`));
             if (settings.currency)
                 rows.push(createDetailRow(isEn ? 'Min Currency' : 'カレンシー', `${settings.currency}%`));
             if (settings.map)

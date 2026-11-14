@@ -1,5 +1,21 @@
 # マップModの更新
 
+## 3.30の更新済みゲームデータ反映（2026-11-14）
+
+PoE1のMap Modは2026-11-14更新済みSteam本体からMods／Stats／Tags、日英ClientStrings、stat_descriptions.csd／map_stat_descriptions.csdを抽出し直し、134件に更新しました（既存125件＋未収録9件）。海図・PoE2は対象外です。既存の手動tier・weight・トレードIDを保持し、新規9件のトレードIDは未照合のため空欄です。数値入り本文への不一致が見つかった既存Mod3件の日英Regex計4項目を個別修正しました。
+
+報酬の旧数量statは `map_drop_scaling_+%`（アトラスドロップ）に変わりました。Map画面の表示・ソート・最低値Regexを対応し、スレッド量も新しい名称で検索します。保存設定の入力ID・設定キーは維持しています。旧スカラベカタログと海図の数量条件は今回の変更範囲に含みません。
+
+公式トレードAPIの照合は403により未完了です。アトラスドロップ・スレッドの最低値、トレードID未設定のModを含む検索は、条件を無視したURLを出さず案内を表示します。APIの実在するフィルタ／stat IDを照合できたら `src/poe1/features/trade/query.ts` の対応を更新してください。
+
+通常の抽出対象は下記ツールの既存条件（area、Prefix/Suffix、default/top_tier_map/uber_tier_mapの正のウェイト）を維持しています。`has_uber_map_suffix` 条件だけを持つ同じ効果の弱いT17定義は別項目として追加していません。ゲーム内検索の実機確認は未実施です。
+
+表示文言が変わっても、同じsourceIdの既存辞書キーは保存設定の識別子として維持します。表示には `mod` / `engMod` を使います。今回のT17毒Modも、旧文言のキーを持ちながら新しい収録文を表示します。
+
+日本語のゲーム内見出しは `ItemDisplayMapDropScalingBonus`＝「アトラスドロップ」、`ItemDisplayMapScarabDropBonus`＝「スレッド量が上昇」で照合しています。先行DLと今回のMap効果文・数値は一致しています。
+
+今回の反映は更新パイプラインの候補検証・バックアップを通しています。以後の再生成では、元のPoE-DBデータも3.30へ更新してから実行してください。
+
 ゲーム本体のアップデートが完了してから実行します。Python 3.10以降、Node.js 24、ローカルのPoE-DB／PoE2-DBを使用します。元データの抽出には各DB側のuv・PyPoE・RePoE環境も必要です。
 
 ## メンテナンスGUI

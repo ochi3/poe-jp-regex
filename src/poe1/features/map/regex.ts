@@ -123,10 +123,12 @@ function addEffectItem(key, value) {
     }
     badgeContainer.appendChild(typeBadge);
 
-    if (value["map_item_drop_quantity_+%"]) {
+    if (value["map_drop_scaling_+%"] || value["map_item_drop_quantity_+%"]) {
         const qtyBadge = document.createElement('span');
         qtyBadge.classList.add('badge', 'qty-badge');
-        qtyBadge.textContent = `数量 ${value["map_item_drop_quantity_+%"]}`;
+        qtyBadge.textContent = value["map_drop_scaling_+%"]
+            ? `アトラスドロップ ${value["map_drop_scaling_+%"]}`
+            : `数量 ${value["map_item_drop_quantity_+%"]}`;
         badgeContainer.appendChild(qtyBadge);
     }
     if (value["map_item_drop_rarity_+%"]) {
@@ -156,7 +158,7 @@ function addEffectItem(key, value) {
     if (value["map_scarab_drop_chance_+%_final_from_uber_mod"]) {
         const scarabBadge = document.createElement('span');
         scarabBadge.classList.add('badge', 'scarab-badge');
-        scarabBadge.textContent = `スカラベ ${value["map_scarab_drop_chance_+%_final_from_uber_mod"]}`;
+        scarabBadge.textContent = `スレッド ${value["map_scarab_drop_chance_+%_final_from_uber_mod"]}`;
         badgeContainer.appendChild(scarabBadge);
     }
 
@@ -217,7 +219,7 @@ function updateCombinedRegex() {
     getElement('ModListResult').textContent = ModListResult;
 
     if (itemQuantityValue) {
-        const itemQuantityRegex = getFixedRangeRegex(itemQuantityValue, currentLanguage === 'ja' ? '量:.*' : 'm q.*');
+        const itemQuantityRegex = getFixedRangeRegex(itemQuantityValue, currentLanguage === 'ja' ? 'アトラスドロップ.*' : 'atlas drops.*');
         combinedResult += ` ${itemQuantityRegex}`;
     }
 
@@ -259,7 +261,7 @@ function generateExtraRegex() {
     let extraRegex = [];
 
     if (scarabValue) {
-        const scarabRegex = getFixedRangeRegex(scarabValue, currentLanguage === 'ja' ? 'ラベ量.*' : 're s.*');
+        const scarabRegex = getFixedRangeRegex(scarabValue, currentLanguage === 'ja' ? 'スレッド.*' : 'more threads.*');
         extraRegex.push(scarabRegex);
     }
 

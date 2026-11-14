@@ -21,7 +21,7 @@
 </head>
 <body>
     <div id="sideMenu">
-        <h3>PoE JP Regex <span style="font-size: 0.6em; opacity: 0.8; margin-left: 8px;">3.29</span></h3>
+        <h3>PoE JP Regex <span style="font-size: 0.6em; opacity: 0.8; margin-left: 8px;">3.30</span></h3>
         <div style="display: flex; gap: 8px; margin-top: 10px; margin-bottom: 10px;">
             <a href="poe1" style="flex: 1; text-align: center; padding: 3px; background: var(--accent-primary); border: 1px solid var(--accent-primary); border-radius: 4px; color: #000; text-decoration: none; font-weight: bold;">PoE 1</a>
             <a href="poe2" style="flex: 1; text-align: center; padding: 3px; background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: 4px; color: var(--text-primary); text-decoration: none;">PoE 2</a>
@@ -99,7 +99,7 @@
 
                 <div class="input-group">
                     <label class="input-label">
-                        数量:
+                        アトラスドロップ:
                         <input type="number" id="itemQuantityInput" oninput="updateCombinedRegex(); saveInputState()">
                     </label>
                     <label class="input-label">
@@ -114,7 +114,7 @@
 
                 <div class="input-group">
                     <label class="input-label">
-                        スカラベ:
+                        スレッド:
                         <input type="number" id="scarabInput" oninput="updateCombinedRegex(); saveInputState()">
                     </label>
                     <label class="input-label">
@@ -191,13 +191,13 @@
                         <option value="tier_asc">危険度(Tier) 昇順</option>
                         <option value="type_asc">プレフィックス 降順</option>
                         <option value="type_desc">サフィックス 降順</option>
-                        <option value="quantity_desc">数量 降順</option>
+                        <option value="quantity_desc">アトラスドロップ 降順</option>
                         <!-- <option value="quantity_asc">数量 昇順</option> -->
                         <option value="packsize_desc">パックサイズ 降順</option>
                         <!-- <option value="packsize_asc">パックサイズ 昇順</option> -->
                         <option value="rarity_desc">レアリティ 降順</option>
                         <!-- <option value="rarity_asc">レアリティ 昇順</option> -->
-                        <option value="scarab_desc">スカラベ 降順</option>
+                        <option value="scarab_desc">スレッド 降順</option>
                         <!-- <option value="scarab_asc">スカラベ 昇順</option> -->
                         <option value="currency_desc">カレンシー 降順</option>
                         <!-- <option value="currency_asc">カレンシー 昇順</option> -->
@@ -1170,10 +1170,10 @@ Monsters have #% chance to Avoid Elemental Ailments
             <div class="settings-group flex-group">
                 <label>リーグ:</label>
                 <select id="leagueSelect" onchange="onLeagueSelectChange()" style="width: 100%; margin-bottom: 6px;">
-                    <option value="Allflame">Allflame</option>
-                    <option value="Hardcore Allflame">Hardcore Allflame</option>
-                    <option value="Ruthless Allflame">Ruthless Allflame</option>
-                    <option value="HC Ruthless Allflame">HC Ruthless Allflame</option>
+                    <option value="Covens">Covens</option>
+                    <option value="Hardcore Covens">Hardcore Covens</option>
+                    <option value="Ruthless Covens">Ruthless Covens</option>
+                    <option value="HC Ruthless Covens">HC Ruthless Covens</option>
                     <option value="Standard">Standard</option>
                     <option value="Hardcore">Hardcore</option>
                     <option value="Ruthless">Ruthless</option>
