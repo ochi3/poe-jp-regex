@@ -117,7 +117,7 @@
     "effect": "アイテムを変化: 可能な最大リンク数 / カレンシーアイテムを作成: 結合のオーブ / カレンシーアイテムを作成: 連結のオーブ2個",
     "regex": "アンの砂",
     "enRegex": "c san",
-    "chaosValue": "1"
+    "chaosValue": "20"
   },
   "ファルウルのタイガー・アルファ": {
     "engName": "Farric Tiger Alpha",

@@ -4,7 +4,7 @@
     "description": "火耐性 +6%",
     "enDescription": "",
     "attribute": "STR",
-    "chaosValue": "42.91",
+    "chaosValue": "1.73",
     "regex": "火歩",
     "enRegex": "u f"
   },
@@ -31,7 +31,7 @@
     "description": "5%の確率で敵を発火させる",
     "enDescription": "",
     "attribute": "STR",
-    "chaosValue": "144.6",
+    "chaosValue": "2.8",
     "regex": "フのウ",
     "enRegex": "u Warm"
   },
@@ -67,7 +67,7 @@
     "description": "アタックダメージの0.5%をライフとしてリーチする",
     "enDescription": "",
     "attribute": "STR",
-    "chaosValue": "4.5",
+    "chaosValue": "1.96",
     "regex": "血飲",
     "enRegex": "dri"
   },
@@ -103,7 +103,7 @@
     "description": "アタックは5%の確率で出血を付与する",
     "enDescription": "",
     "attribute": "STR",
-    "chaosValue": "5.5",
+    "chaosValue": "1",
     "regex": "ァのシ",
     "enRegex": "cau"
   },
@@ -166,7 +166,7 @@
     "description": "ウォークライクールダウン解消レートが8%増加する",
     "enDescription": "",
     "attribute": "STR",
-    "chaosValue": "253",
+    "chaosValue": "2.83",
     "regex": "ーコ",
     "enRegex": "rca"
   },
@@ -283,7 +283,7 @@
     "description": "アタックによるヒット時に5%の確率で敵を盲目にする",
     "enDescription": "",
     "attribute": "DEX",
-    "chaosValue": "17.67",
+    "chaosValue": "1",
     "regex": "オの戦",
     "enRegex": "bli"
   },
@@ -355,7 +355,7 @@
     "description": "プレイヤーに対するヘラルドのバフの効果が5%増加する",
     "enDescription": "",
     "attribute": "INT",
-    "chaosValue": "286.5",
+    "chaosValue": "3.4",
     "regex": "イのシ",
     "enRegex": "ald"
   },
@@ -409,7 +409,7 @@
     "description": "移動スピードが2%増加する",
     "enDescription": "",
     "attribute": "DEX",
-    "chaosValue": "31.12",
+    "chaosValue": "3",
     "regex": "俊足",
     "enRegex": "fle"
   },
@@ -418,7 +418,7 @@
     "description": "プレイヤーが移動している間のライフ自動回復レートが10%増加する",
     "enDescription": "",
     "attribute": "DEX",
-    "chaosValue": "73.5",
+    "chaosValue": "9",
     "regex": "マコのシ",
     "enRegex": "ppr"
   },
@@ -445,7 +445,7 @@
     "description": "最大エナジーシールドが3%増加する",
     "enDescription": "",
     "attribute": "INT",
-    "chaosValue": "40.87",
+    "chaosValue": "2.67",
     "regex": "ラの戦",
     "enRegex": "3% I"
   },
@@ -535,7 +535,7 @@
     "description": "フラスコ効果の持続時間が4%増加する",
     "enDescription": "",
     "attribute": "DEX",
-    "chaosValue": "2",
+    "chaosValue": "1",
     "regex": "薬草",
     "enRegex": "erb"
   },
@@ -571,7 +571,7 @@
     "description": "雷耐性 +6%",
     "enDescription": "",
     "attribute": "INT",
-    "chaosValue": "8.38",
+    "chaosValue": "1",
     "regex": "のスト",
     "enRegex": "orm"
   },
@@ -580,7 +580,7 @@
     "description": "プレイヤーに対する感電の効果が10%減少する",
     "enDescription": "",
     "attribute": "INT",
-    "chaosValue": "8",
+    "chaosValue": "1",
     "regex": "ラコの偵",
     "enRegex": "f Sh"
   },
@@ -598,7 +598,7 @@
     "description": "アタックブロック率 +1%",
     "enDescription": "",
     "attribute": "STR",
-    "chaosValue": "278",
+    "chaosValue": "3",
     "regex": "のシー",
     "enRegex": "mako Sh"
   },
