@@ -22,15 +22,15 @@ test('content choices form one positive OR condition while retaining NG and nume
  } finally {site.close();}
 });
 
-test('wanted Mods and content choices share an OR; quotes remain only when spaces require them',async()=>{
+test('right-clicked wanted Mods are quoted together with their content OR alternatives',async()=>{
  const site=await loadSite(root,'poe1');
  try {
   const w=site.window,mods=w.eval('mapModList');
   const mirage=Object.keys(mods).find(k=>mods[k].sourceIds.includes('MapContainsMirageWorlds'));
   w.eval(`checkedMods = new Map([[${JSON.stringify(mirage)}, 'wanted']])`);
   w.setMapHighlights(['mirage','wildwood']);w.updateCombinedRegex();
-  assert.equal(output(w),'ージュ|ディアン');
-  w.setMapHighlights([]);w.updateCombinedRegex();assert.equal(output(w),'ージュ');
+  assert.equal(output(w),'"ージュ|ディアン"');
+  w.setMapHighlights([]);w.updateCombinedRegex();assert.equal(output(w),'"ージュ"');
   const beyond=Object.keys(mods).find(k=>mods[k].sourceIds.includes('MapContainsBeyondPaleFactionWorlds'));
   assert.ok(/\s/.test(mods[beyond].engRegex));
   w.eval(`currentLanguage = 'en'; checkedMods = new Map([[${JSON.stringify(beyond)}, 'wanted']])`);

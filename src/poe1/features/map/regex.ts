@@ -240,8 +240,9 @@ function updateCombinedRegex() {
     
     let ngString = uniqueNg.length > 0 ? `"!${uniqueNg.join('|')}"` : '';
     const wantedPattern = uniqueWanted.join('|');
-    // Spaces would split a wanted expression into separate search conditions.
-    const wantedString = /\s/.test(wantedPattern) ? `"${wantedPattern}"` : wantedPattern;
+    const hasWantedMod = [...checkedMods.values()].includes('wanted');
+    // Keep right-clicked wanted Mods quoted, including their OR alternatives.
+    const wantedString = wantedPattern && (hasWantedMod || /\s/.test(wantedPattern)) ? `"${wantedPattern}"` : wantedPattern;
 
     let ModListResult = '';
     if (ngString && wantedString) {
