@@ -5,8 +5,8 @@
       "gameVersion": "3.30",
       "versionNote": "",
       "mods": {
-        "fingerprint": "bab7de2696b5da31ababb117ebc0584cf5ca389a2227165c8515d47046a7fe80",
-        "updatedAt": "2026-11-22T03:51:43.307Z"
+        "fingerprint": "956a77f7ab7993bc16a0560fe440273efc86033dc0b08ccbc6a07fcf63577b1a",
+        "updatedAt": "2026-11-22T04:26:16.700Z"
       },
       "prices": {
         "fingerprint": "72da5fd5af8b959edc441e42479f13d15dd24800894d0747a7aaf84a52d81fdd",
@@ -15,8 +15,8 @@
       "categories": {
         "map": {
           "mods": {
-            "fingerprint": "34a497131135dc69d684f8b3abb6aa75c16596035232fc7757f64966199338ad",
-            "updatedAt": "2026-11-22T03:51:43.307Z"
+            "fingerprint": "3e5334ee4c157d4266324e3b13b05ed5cd18150513d434df6ce52ade999064cf",
+            "updatedAt": "2026-11-22T04:26:16.700Z"
           },
           "prices": null
         },
@@ -107,8 +107,8 @@
         },
         "trans": {
           "mods": {
-            "fingerprint": "6703600bcaa58d380f5daefc6eced3861217ea55319ec4496629b3717d40647a",
-            "updatedAt": "2026-11-22T03:51:43.307Z"
+            "fingerprint": "ee05eafcd32cc1e067f0766f8a7a553e5420a045289ccf2723dea82e3a7409e0",
+            "updatedAt": "2026-11-22T04:26:16.700Z"
           },
           "prices": null
         }

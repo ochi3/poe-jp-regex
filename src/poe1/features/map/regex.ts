@@ -1,9 +1,9 @@
 const mapHighlightContents = [
-    {id: 'mirage', ja: 'ージュ', en: 'irag'},
-    {id: 'delirium', ja: 'ムの鏡', en: 'r.of.de'},
-    {id: 'wildwood', ja: 'ディアン', en: 'an.wi'},
-    {id: 'beyond', ja: '召喚者', en: 'evocator'},
-    {id: 'sentinel', ja: 'センチネル', en: 'sentinel'}
+    {id: 'mirage', ja: 'ージュ', en: 'irag', sourceIds: ['MapContainsMirageWorlds']},
+    {id: 'delirium', ja: 'ムの鏡', en: 'r.of.de', sourceIds: ['MapContainsDeliriumMirrorWorlds']},
+    {id: 'wildwood', ja: 'ディアン', en: 'an.wi', sourceIds: ['MapContainsWildwoodWorlds']},
+    {id: 'beyond', ja: '召喚者', en: 'evocator', sourceIds: ['MapContainsBeyondPaleFactionWorlds', 'MapContainsBeyondFleshFactionWorlds', 'MapContainsBeyondDemonFactionWorlds']},
+    {id: 'sentinel', ja: 'センチネル', en: 'sentinel', sourceIds: ['MapContainsSentinelPandemoniumWorlds', 'MapContainsSentinelApexWorlds', 'MapContainsSentinelStalkerWorlds']}
 ];
 
 function getMapHighlights(): string[] {
@@ -18,6 +18,12 @@ function setMapHighlights(value: unknown): void {
         const input = document.querySelector<HTMLInputElement>(`[data-map-highlight="${content.id}"]`);
         if (input) input.checked = selected.has(content.id);
     }
+}
+
+function getMapContentTradeMods(): ModDefinition[] {
+    const selected = new Set(getMapHighlights());
+    const sources = new Set(mapHighlightContents.filter(content => selected.has(content.id)).flatMap(content => content.sourceIds));
+    return Object.values(mapModList).filter(mod => mod.sourceIds?.some(id => sources.has(id)));
 }
 
 function addEffectItem(key, value) {

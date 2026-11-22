@@ -41,7 +41,7 @@
     "engRegex": "nu",
     "Regex": "アモ.*数",
     "tradeStatIds": [
-      "explicit.stat_3793155082"
+      "explicit.stat_3126771445"
     ],
     "sourceIds": [
       "MapNemesisModOnRaresMapWorlds"
@@ -73,7 +73,7 @@
     "engRegex": "d mag",
     "Regex": "マ.*増",
     "tradeStatIds": [
-      "explicit.stat_3873704640"
+      "explicit.stat_1821565133"
     ],
     "sourceIds": [
       "MapBloodlinesModOnMagicsMapWorlds"
@@ -3229,7 +3229,9 @@
   },
   "エリアにミラージュが出現する": {
     "tier": 0,
-    "tradeStatIds": [],
+    "tradeStatIds": [
+      "explicit.stat_2436559047"
+    ],
     "tagIds": [],
     "modTags": [],
     "reminderIds": [],
@@ -3258,7 +3260,9 @@
   },
   "エリアにベイダットの召喚者が出現する": {
     "tier": 0,
-    "tradeStatIds": [],
+    "tradeStatIds": [
+      "explicit.stat_260515856"
+    ],
     "tagIds": [],
     "modTags": [],
     "reminderIds": [],
@@ -3287,7 +3291,9 @@
   },
   "エリアにゴールの召喚者が出現する": {
     "tier": 0,
-    "tradeStatIds": [],
+    "tradeStatIds": [
+      "explicit.stat_1290924623"
+    ],
     "tagIds": [],
     "modTags": [],
     "reminderIds": [],
@@ -3316,7 +3322,9 @@
   },
   "エリアにカタッシュの召喚者が出現する": {
     "tier": 0,
-    "tradeStatIds": [],
+    "tradeStatIds": [
+      "explicit.stat_2896557935"
+    ],
     "tagIds": [],
     "modTags": [],
     "reminderIds": [],
@@ -3345,7 +3353,9 @@
   },
   "エリアに土に埋もれたパンデモニウムセンチネルが出現する": {
     "tier": 0,
-    "tradeStatIds": [],
+    "tradeStatIds": [
+      "explicit.stat_70969043"
+    ],
     "tagIds": [],
     "modTags": [],
     "reminderIds": [],
@@ -3374,7 +3384,9 @@
   },
   "エリアに土に埋もれたエイペックスセンチネルが出現する": {
     "tier": 0,
-    "tradeStatIds": [],
+    "tradeStatIds": [
+      "explicit.stat_2788592463"
+    ],
     "tagIds": [],
     "modTags": [],
     "reminderIds": [],
@@ -3403,7 +3415,9 @@
   },
   "エリアに土に埋もれたストーカーセンチネルが出現する": {
     "tier": 0,
-    "tradeStatIds": [],
+    "tradeStatIds": [
+      "explicit.stat_2712450522"
+    ],
     "tagIds": [],
     "modTags": [],
     "reminderIds": [],
@@ -3432,7 +3446,9 @@
   },
   "エリアにデリリウムの鏡が出現する": {
     "tier": 0,
-    "tradeStatIds": [],
+    "tradeStatIds": [
+      "explicit.stat_2398157267"
+    ],
     "tagIds": [],
     "modTags": [],
     "reminderIds": [],
@@ -3461,7 +3477,9 @@
   },
   "エリアにヴィリディアンワイルドウッドが出現する": {
     "tier": 0,
-    "tradeStatIds": [],
+    "tradeStatIds": [
+      "explicit.stat_1975119765"
+    ],
     "tagIds": [],
     "modTags": [],
     "reminderIds": [],
@@ -4144,7 +4162,7 @@
     "Regex": "はモ",
     "tradeStatIds": [
       "explicit.stat_2550456553",
-      "explicit.stat_3793155082"
+      "explicit.stat_3126771445"
     ],
     "sourceIds": [
       "MapUberModRareMonsters"

@@ -52,20 +52,13 @@ test('PoE1 minimum search matches 3.30 Atlas Drops and Threads in either languag
  } finally {site.close();}
 });
 
-test('PoE1 trade never omits unsupported 3.30 conditions',async()=>{
+test('PoE1 trade still rejects an unmapped Mod instead of omitting it',async()=>{
  const site=await loadSite(root,'poe1');
  try {
-  const w=site.window,doc=w.document,alerts=[];w.alert=message=>alerts.push(message);
-  w.eval('checkedMods = new Map()');
-  for(const id of ['itemQuantityInput','scarabInput']) {
-   doc.getElementById(id).value='80';assert.equal(w.buildTradeUrl(),null);doc.getElementById(id).value='';
-  }
-  w.eval('checkedMods = new Map([["エリアにミラージュが出現する","wanted"]])');
-  assert.equal(w.buildTradeUrl(),null);assert.equal(alerts.length,3);
-  w.eval('checkedMods = new Map()');
-  doc.getElementById('packSizeInput').value='20';
-  const url=w.buildTradeUrl();assert.ok(url);
-  const query=JSON.parse(new URL(url).searchParams.get('q'));
-  assert.equal(query.query.filters.map_filters.filters.map_packsize.min,20);
+  const w=site.window,alerts=[];w.alert=message=>alerts.push(message);
+  w.eval('mapModList["エリアにミラージュが出現する"].tradeStatIds = []; checkedMods = new Map([["エリアにミラージュが出現する","wanted"]])');
+  assert.equal(w.buildTradeUrl(),null);assert.equal(alerts.length,1);
+  w.eval('checkedMods = new Map()');w.setMapHighlights(['mirage']);
+  assert.equal(w.buildTradeUrl(),null);assert.equal(alerts.length,2);
  } finally {site.close();}
 });

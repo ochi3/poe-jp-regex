@@ -12,21 +12,21 @@ function buildTradeUrl() {
     const notStats = [];
     const wantedStats = [];
 
-    // These 3.30 trade fields must be verified before replacing the old API IDs.
-    // Reject the entire request so an unsupported condition is never silently omitted.
+    // Reject unknown Mod mappings instead of silently omitting a condition.
+    const contentMods = getMapContentTradeMods();
     const missingTradeMod = [...checkedMods.keys()].find(key => {
         const mod = ModList[key];
         return mod && !mod.tradeStatIds?.some(id => id);
     });
-    if (parseInt(getElement('itemQuantityInput').value) > 0 || parseInt(getElement('scarabInput').value) > 0 || missingTradeMod) {
+    if (missingTradeMod || contentMods.some(mod => !mod.tradeStatIds?.some(id => id)) || (getMapHighlights().length > 0 && contentMods.length === 0)) {
         alert(currentLanguage === 'ja'
-            ? 'アトラスドロップ・スレッド、または選択したModのトレード検索にはまだ対応していません。ゲーム内Regexをご利用ください。'
-            : 'Trade search is not yet supported for Atlas Drops, Threads, or one of the selected modifiers. Please use the in-game regex.');
+            ? '選択したModのトレード項目が未設定です。ゲーム内Regexをご利用ください。'
+            : 'A selected modifier has no trade mapping. Please use the in-game regex.');
         return null;
     }
 
     // checkedModsから選択されたModを取得
-    if ((!checkedMods || checkedMods.size === 0) && notStats.length === 0 && !getElement('memoryMapCheckbox').checked && !getElement('nightmareMapCheckbox').checked && !parseInt(getElement('minModCountInput').value) && !getElement('itemQuantityInput').value && !getElement('packSizeInput').value && !getElement('rarityInput').value && !getElement('scarabInput').value && !getElement('currencyInput').value && !getElement('mapInput').value) {
+    if ((!checkedMods || checkedMods.size === 0) && contentMods.length === 0 && notStats.length === 0 && !getElement('memoryMapCheckbox').checked && !getElement('nightmareMapCheckbox').checked && !parseInt(getElement('minModCountInput').value) && !getElement('itemQuantityInput').value && !getElement('packSizeInput').value && !getElement('rarityInput').value && !getElement('scarabInput').value && !getElement('currencyInput').value && !getElement('mapInput').value) {
         alert("検索条件を一つ以上指定してください。");
         return null;
     }
@@ -146,20 +146,24 @@ function buildTradeUrl() {
     }
 
     // Wanted（希望）統計グループを追加
-    if (wantedStats.length > 0) {
+    const contentStats: TradeStat[] = [...new Set(contentMods.flatMap(mod => mod.tradeStatIds || []).filter(Boolean))]
+        .map(id => ({id, disabled: false}));
+    if (wantedStats.length > 0 || contentStats.length > 0) {
         const wantedMode = getElement('wantedModModeSelect').value;
         if (wantedMode === 'all') {
             // 全てに一致 (AND検索)
-            query.stats.push({
+            if (wantedStats.length) query.stats.push({
                 type: "and",
                 filters: wantedStats
             });
+            // A content category such as Beyond always means any of its variants.
+            if (contentStats.length) query.stats.push({type: "count", value: {min: 1}, filters: contentStats});
         } else {
             // いずれかに一致 (RegexのようなOR検索)
             query.stats.push({
                 type: "count",
                 value: { min: 1 },
-                filters: wantedStats
+                filters: [...wantedStats, ...contentStats].filter((filter, index, all) => all.findIndex(other => other.id === filter.id) === index)
             });
         }
     }
@@ -242,7 +246,7 @@ function buildTradeUrl() {
             filters.map_filters.filters.map_tier = tierFilter;
         }
 
-        if (iiq > 0) filters.map_filters.filters.map_iiq = { min: iiq };
+        if (iiq > 0) filters.map_filters.filters.map_bonus = { min: iiq };
         if (packsize > 0) filters.map_filters.filters.map_packsize = { min: packsize };
         if (iir > 0) filters.map_filters.filters.map_iir = { min: iir };
     }
