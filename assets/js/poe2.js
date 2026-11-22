@@ -31,7 +31,7 @@ function validStoredSettings(value) {
             return typeof item === 'boolean';
         if (['colors', 'movement', 'weapon', 'excludeWeapons', 'selected', 'rarities', 'rarityChecked'].includes(key))
             return storageRecord(item) && Object.values(item).every(flag => typeof flag === 'boolean');
-        if (key === 'selectedGems')
+        if (key === 'selectedGems' || key === 'highlightContents')
             return storageStrings(item);
         if (key === 'customRegex')
             return typeof item === 'string';

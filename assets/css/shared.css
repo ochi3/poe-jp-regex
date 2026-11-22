@@ -1629,11 +1629,13 @@ button.btn-secondary-highlight:hover {
     font-size: 13px;
 }
 
-.button-with-info:hover .info-tooltip {
+.button-with-info:hover .info-tooltip,
+.button-with-info:focus-within .info-tooltip {
     opacity: 1;
     visibility: visible;
     transform: translateX(-50%) translateY(-4px);
 }
+
 
 /* ========================================
    サイドパネル (詳細設定)

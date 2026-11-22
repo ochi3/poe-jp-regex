@@ -31,7 +31,7 @@ function validStoredSettings(value) {
             return typeof item === 'boolean';
         if (['colors', 'movement', 'weapon', 'excludeWeapons', 'selected', 'rarities', 'rarityChecked'].includes(key))
             return storageRecord(item) && Object.values(item).every(flag => typeof flag === 'boolean');
-        if (key === 'selectedGems')
+        if (key === 'selectedGems' || key === 'highlightContents')
             return storageStrings(item);
         if (key === 'customRegex')
             return typeof item === 'string';
@@ -1477,6 +1477,24 @@ function formatModText(text, value) {
 function getCatalogDisplayName(name, data) {
     return currentLanguage === 'en' ? data.engName || name : name;
 }
+const mapHighlightContents = [
+    { id: 'mirage', ja: 'ージュ', en: 'irag' },
+    { id: 'delirium', ja: 'ムの鏡', en: 'r.of.de' },
+    { id: 'wildwood', ja: 'ディアン', en: 'an.wi' },
+    { id: 'beyond', ja: '召喚者', en: 'evocator' },
+    { id: 'sentinel', ja: 'センチネル', en: 'sentinel' }
+];
+function getMapHighlights() {
+    return mapHighlightContents.filter(content => document.querySelector(`[data-map-highlight="${content.id}"]`)?.checked).map(content => content.id);
+}
+function setMapHighlights(value) {
+    const selected = new Set(Array.isArray(value) ? value.filter(id => typeof id === 'string') : []);
+    for (const content of mapHighlightContents) {
+        const input = document.querySelector(`[data-map-highlight="${content.id}"]`);
+        if (input)
+            input.checked = selected.has(content.id);
+    }
+}
 function addEffectItem(key, value) {
     const ModListDiv = getElement('ModList');
     const checkbox = document.createElement('input');
@@ -1671,10 +1689,17 @@ function updateCombinedRegex() {
         }
     });
     checkedMods = validCheckedMods;
+    // Content choices are ordinary alternatives to other wanted Mods, not an
+    // exception to NG or numeric conditions.
+    const selectedContents = new Set(getMapHighlights());
+    wantedResults.push(...mapHighlightContents.filter(content => selectedContents.has(content.id))
+        .map(content => content[currentLanguage]));
     const uniqueNg = [...new Set(ngResults)];
     const uniqueWanted = [...new Set(wantedResults)];
     let ngString = uniqueNg.length > 0 ? `"!${uniqueNg.join('|')}"` : '';
-    let wantedString = uniqueWanted.length > 0 ? `"${uniqueWanted.join('|')}"` : '';
+    const wantedPattern = uniqueWanted.join('|');
+    // Spaces would split a wanted expression into separate search conditions.
+    const wantedString = /\s/.test(wantedPattern) ? `"${wantedPattern}"` : wantedPattern;
     let ModListResult = '';
     if (ngString && wantedString) {
         ModListResult = `${ngString} ${wantedString}`;
@@ -1687,7 +1712,7 @@ function updateCombinedRegex() {
     }
     getElement('ModListResult').textContent = ModListResult;
     if (itemQuantityValue) {
-        const itemQuantityRegex = getFixedRangeRegex(itemQuantityValue, currentLanguage === 'ja' ? 'アトラスドロップ.*' : 'atlas drops.*');
+        const itemQuantityRegex = getFixedRangeRegex(itemQuantityValue, currentLanguage === 'ja' ? 'ラスド.*' : 'as d.*');
         combinedResult += ` ${itemQuantityRegex}`;
     }
     if (packSizeValue) {
@@ -1755,6 +1780,7 @@ function updateCharCount() {
     }
 }
 function resetAll() {
+    setMapHighlights([]);
     getElement('mapCustomRegex').value = '';
     if (getElement('itemQuantityInput'))
         getElement('itemQuantityInput').value = '';
@@ -2006,6 +2032,7 @@ function loadModCheckboxState() {
 }
 function saveInputState() {
     const state = {
+        ...(getMapHighlights().length ? { highlightContents: getMapHighlights() } : {}),
         ...(getElement('mapCustomRegex').value ? { customRegex: getElement('mapCustomRegex').value } : {}),
         itemQuantity: getElement('itemQuantityInput')?.value || '',
         packSize: getElement('packSizeInput')?.value || '',
@@ -2028,6 +2055,7 @@ function saveInputState() {
 }
 function loadInputState() {
     const state = readStoredJson('inputState');
+    setMapHighlights(state.highlightContents);
     getElement('mapCustomRegex').value = state.customRegex || '';
     if (getElement('itemQuantityInput'))
         getElement('itemQuantityInput').value = state.itemQuantity || '';
@@ -2110,6 +2138,7 @@ function saveProfile() {
     profiles[profileName] = {
         mods: Array.from(checkedMods), // [[id, state], ...] の形式で保存
         settings: {
+            ...(getMapHighlights().length ? { highlightContents: getMapHighlights() } : {}),
             ...(getElement('mapCustomRegex').value ? { customRegex: getElement('mapCustomRegex').value } : {}),
             itemQuantity: getElement('itemQuantityInput').value,
             packSize: getElement('packSizeInput').value,
@@ -2149,6 +2178,7 @@ function loadProfile() {
         // 完全リセット
         resetAll();
         const profile = profiles[profileName];
+        setMapHighlights(profile.settings?.highlightContents);
         getElement('mapCustomRegex').value = profile.settings?.customRegex || '';
         // 入力値復元
         if (getElement('itemQuantityInput'))
@@ -2203,7 +2233,7 @@ function loadProfile() {
         saveModCheckboxState();
         updateModList();
         updateCombinedRegex();
-        if (profile.settings?.customRegex)
+        if (profile.settings?.customRegex || getMapHighlights().length)
             saveInputState();
         ['change', 'input'].forEach(event => {
             const tierCb = getElement('mapTierCheckbox');
@@ -5808,6 +5838,7 @@ function generateRegexFromProfile(profile, type) {
 function generateMapRegexFromProfile(profile) {
     const originalCheckedMods = new Map(checkedMods);
     const originalInputState = {
+        highlightContents: getMapHighlights(),
         customRegex: getElement('mapCustomRegex').value,
         itemQuantity: getElement('itemQuantityInput')?.value || '',
         packSize: getElement('packSizeInput')?.value || '',
@@ -5842,6 +5873,7 @@ function generateMapRegexFromProfile(profile) {
                 Object.entries(profile.mods).forEach(([mod, state]) => checkedMods.set(mod, state));
             }
         }
+        setMapHighlights(profile.settings?.highlightContents);
         getElement('mapCustomRegex').value = profile.settings?.customRegex || '';
         if (profile.settings) {
             const settings = profile.settings;
@@ -5876,6 +5908,7 @@ function generateMapRegexFromProfile(profile) {
     finally {
         checkedMods.clear();
         originalCheckedMods.forEach((state, mod) => checkedMods.set(mod, state));
+        setMapHighlights(originalInputState.highlightContents);
         getElement('mapCustomRegex').value = originalInputState.customRegex;
         if (getElement('itemQuantityInput'))
             getElement('itemQuantityInput').value = originalInputState.itemQuantity;

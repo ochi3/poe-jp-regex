@@ -1,3 +1,25 @@
+const mapHighlightContents = [
+    {id: 'mirage', ja: 'ージュ', en: 'irag'},
+    {id: 'delirium', ja: 'ムの鏡', en: 'r.of.de'},
+    {id: 'wildwood', ja: 'ディアン', en: 'an.wi'},
+    {id: 'beyond', ja: '召喚者', en: 'evocator'},
+    {id: 'sentinel', ja: 'センチネル', en: 'sentinel'}
+];
+
+function getMapHighlights(): string[] {
+    return mapHighlightContents.filter(content =>
+        document.querySelector<HTMLInputElement>(`[data-map-highlight="${content.id}"]`)?.checked
+    ).map(content => content.id);
+}
+
+function setMapHighlights(value: unknown): void {
+    const selected = new Set(Array.isArray(value) ? value.filter(id => typeof id === 'string') : []);
+    for (const content of mapHighlightContents) {
+        const input = document.querySelector<HTMLInputElement>(`[data-map-highlight="${content.id}"]`);
+        if (input) input.checked = selected.has(content.id);
+    }
+}
+
 function addEffectItem(key, value) {
     const ModListDiv = getElement('ModList');
     
@@ -201,11 +223,19 @@ function updateCombinedRegex() {
 
     checkedMods = validCheckedMods;
 
+    // Content choices are ordinary alternatives to other wanted Mods, not an
+    // exception to NG or numeric conditions.
+    const selectedContents = new Set(getMapHighlights());
+    wantedResults.push(...mapHighlightContents.filter(content => selectedContents.has(content.id))
+        .map(content => content[currentLanguage]));
+
     const uniqueNg = [...new Set(ngResults)];
     const uniqueWanted = [...new Set(wantedResults)];
     
     let ngString = uniqueNg.length > 0 ? `"!${uniqueNg.join('|')}"` : '';
-    let wantedString = uniqueWanted.length > 0 ? `"${uniqueWanted.join('|')}"` : '';
+    const wantedPattern = uniqueWanted.join('|');
+    // Spaces would split a wanted expression into separate search conditions.
+    const wantedString = /\s/.test(wantedPattern) ? `"${wantedPattern}"` : wantedPattern;
 
     let ModListResult = '';
     if (ngString && wantedString) {
@@ -219,7 +249,7 @@ function updateCombinedRegex() {
     getElement('ModListResult').textContent = ModListResult;
 
     if (itemQuantityValue) {
-        const itemQuantityRegex = getFixedRangeRegex(itemQuantityValue, currentLanguage === 'ja' ? 'アトラスドロップ.*' : 'atlas drops.*');
+        const itemQuantityRegex = getFixedRangeRegex(itemQuantityValue, currentLanguage === 'ja' ? 'ラスド.*' : 'as d.*');
         combinedResult += ` ${itemQuantityRegex}`;
     }
 
@@ -301,6 +331,7 @@ function updateCharCount() {
 }
 
 function resetAll() {
+    setMapHighlights([]);
     getElement('mapCustomRegex').value = '';
     if (getElement('itemQuantityInput')) getElement('itemQuantityInput').value = '';
     if (getElement('packSizeInput')) getElement('packSizeInput').value = '';

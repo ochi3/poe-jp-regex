@@ -86,9 +86,9 @@
                     <!-- <button class="secondary-btn" id="copyTradeLinkBtn" onclick="copyTradeLink()">リンクをコピー(デバッグ)</button> -->
                     <div class="button-with-info">
                         <button class="btn-secondary-highlight" id="tradeSettingsBtn" onclick="toggleTradeSettings()">設定</button>
-                        <div class="info-icon">New</div>
+                        <div class="info-icon">!</div>
                         <div class="info-tooltip">
-                            <strong>トレードリンク機能を追加</strong>
+                            <strong>トレードリンク</strong>
                             Regexに合ったトレードリンクを生成できます。<br>
                         </div>
                     </div>
@@ -135,6 +135,17 @@
                     </label>
                 </div>
 
+                <fieldset style="border: 0; padding: 0; margin: 12px 0 16px;">
+                    <legend class="input-label" style="margin-bottom: 10px;">下記いずれかに一致</legend>
+                    <div class="input-group" style="flex-wrap: wrap;">
+                        <label class="input-label"><input type="checkbox" data-map-highlight="mirage" onchange="updateCombinedRegex(); saveInputState()">ミラージュ</label>
+                        <label class="input-label"><input type="checkbox" data-map-highlight="delirium" onchange="updateCombinedRegex(); saveInputState()">デリリウム</label>
+                        <label class="input-label"><input type="checkbox" data-map-highlight="wildwood" onchange="updateCombinedRegex(); saveInputState()">ヴィリディアンワイルドウッド</label>
+                        <label class="input-label"><input type="checkbox" data-map-highlight="beyond" onchange="updateCombinedRegex(); saveInputState()">ビヨンド</label>
+                        <label class="input-label"><input type="checkbox" data-map-highlight="sentinel" onchange="updateCombinedRegex(); saveInputState()">センチネル</label>
+                    </div>
+                </fieldset>
+
                 <details style="margin: 16px 0;"><summary style="cursor: pointer; color: var(--accent-primary);">カスタム</summary><label for="mapCustomRegex" style="display: block; font-size: 0.85em; margin: 8px 0;">1行に1つのRegexを入力。欲しいModとORで結合します。外側の引用符は不要です。</label><textarea id="mapCustomRegex" rows="3" oninput="updateCombinedRegex(); saveInputState()" spellcheck="false" placeholder="カスタムRegexを入力" style="width: 100%; box-sizing: border-box; resize: vertical;"></textarea></details>
                 <div class="input-group">
                     <button onclick="copyUnidentified()">未鑑定</button>
@@ -163,7 +174,7 @@
                         <input type="checkbox" id="mapTierCheckbox" onchange="updateModList()"> T17 mod
                     </label>
                     <div class="button-with-info">
-                        <div class="info-icon">i</div>
+                        <div class="info-icon">!</div>
                         <div class="info-tooltip">
                             <strong>T17 MOD</strong>
                             Tier17やメモリーマップで付くMODが表示されます。<br>

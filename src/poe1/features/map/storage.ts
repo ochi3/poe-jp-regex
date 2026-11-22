@@ -203,6 +203,7 @@ function loadModCheckboxState() {
 
 function saveInputState() {
     const state = {
+        ...(getMapHighlights().length ? {highlightContents: getMapHighlights()} : {}),
         ...(getElement('mapCustomRegex').value ? {customRegex: getElement('mapCustomRegex').value} : {}),
         itemQuantity: getElement('itemQuantityInput')?.value || '',
         packSize: getElement('packSizeInput')?.value || '',
@@ -226,6 +227,7 @@ function saveInputState() {
 
 function loadInputState() {
     const state = readStoredJson('inputState');
+    setMapHighlights(state.highlightContents);
     getElement('mapCustomRegex').value = state.customRegex || '';
     if (getElement('itemQuantityInput')) getElement('itemQuantityInput').value = state.itemQuantity || '';
     if (getElement('packSizeInput')) getElement('packSizeInput').value = state.packSize || '';

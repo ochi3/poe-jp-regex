@@ -3246,8 +3246,8 @@
     "sourceIds": [
       "MapContainsMirageWorlds"
     ],
-    "Regex": "ミラージュ",
-    "engRegex": "a mirage",
+    "Regex": "ージュ",
+    "engRegex": "irag",
     "map_item_drop_quantity_+%": 0,
     "map_drop_scaling_+%": 13,
     "map_item_drop_rarity_+%": 8,
@@ -3275,8 +3275,8 @@
     "sourceIds": [
       "MapContainsBeyondPaleFactionWorlds"
     ],
-    "Regex": "ベイダットの召",
-    "engRegex": "evocator of beidat",
+    "Regex": "ットの召",
+    "engRegex": "f bei",
     "map_item_drop_quantity_+%": 0,
     "map_drop_scaling_+%": 13,
     "map_item_drop_rarity_+%": 8,
@@ -3304,8 +3304,8 @@
     "sourceIds": [
       "MapContainsBeyondFleshFactionWorlds"
     ],
-    "Regex": "ゴールの召",
-    "engRegex": "evocator of ghorr",
+    "Regex": "ルの召",
+    "engRegex": "f gho",
     "map_item_drop_quantity_+%": 0,
     "map_drop_scaling_+%": 13,
     "map_item_drop_rarity_+%": 8,
@@ -3333,8 +3333,8 @@
     "sourceIds": [
       "MapContainsBeyondDemonFactionWorlds"
     ],
-    "Regex": "カタッシュの召",
-    "engRegex": "evocator of k'tash",
+    "Regex": "シュの召",
+    "engRegex": "f k'ta",
     "map_item_drop_quantity_+%": 0,
     "map_drop_scaling_+%": 13,
     "map_item_drop_rarity_+%": 8,
@@ -3362,8 +3362,8 @@
     "sourceIds": [
       "MapContainsSentinelPandemoniumWorlds"
     ],
-    "Regex": "パンデモニウムセ",
-    "engRegex": "pandemonium sentinel",
+    "Regex": "ウムセ",
+    "engRegex": "m se",
     "map_item_drop_quantity_+%": 0,
     "map_drop_scaling_+%": 13,
     "map_item_drop_rarity_+%": 8,
@@ -3391,8 +3391,8 @@
     "sourceIds": [
       "MapContainsSentinelApexWorlds"
     ],
-    "Regex": "エイペックスセ",
-    "engRegex": "apex sentinel",
+    "Regex": "クスセ",
+    "engRegex": "ex se",
     "map_item_drop_quantity_+%": 0,
     "map_drop_scaling_+%": 13,
     "map_item_drop_rarity_+%": 8,
@@ -3420,8 +3420,8 @@
     "sourceIds": [
       "MapContainsSentinelStalkerWorlds"
     ],
-    "Regex": "ストーカーセ",
-    "engRegex": "stalker sentinel",
+    "Regex": "カーセ",
+    "engRegex": "r se",
     "map_item_drop_quantity_+%": 0,
     "map_drop_scaling_+%": 13,
     "map_item_drop_rarity_+%": 8,
@@ -3449,8 +3449,8 @@
     "sourceIds": [
       "MapContainsDeliriumMirrorWorlds"
     ],
-    "Regex": "デリリウムの鏡",
-    "engRegex": "mirror of delirium",
+    "Regex": "ムの鏡",
+    "engRegex": "r of de",
     "map_item_drop_quantity_+%": 0,
     "map_drop_scaling_+%": 13,
     "map_item_drop_rarity_+%": 8,
@@ -3478,8 +3478,8 @@
     "sourceIds": [
       "MapContainsWildwoodWorlds"
     ],
-    "Regex": "ヴィリディアン",
-    "engRegex": "viridian wildwood",
+    "Regex": "ディアン",
+    "engRegex": "an wi",
     "map_item_drop_quantity_+%": 0,
     "map_drop_scaling_+%": 13,
     "map_item_drop_rarity_+%": 8,

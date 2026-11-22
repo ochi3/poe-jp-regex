@@ -165,6 +165,7 @@ function generateRegexFromProfile(profile: SavedProfile, type: string) {
 function generateMapRegexFromProfile(profile: SavedProfile) {
   const originalCheckedMods = new Map(checkedMods);
   const originalInputState = {
+    highlightContents: getMapHighlights(),
     customRegex: getElement('mapCustomRegex').value,
     itemQuantity: getElement('itemQuantityInput')?.value || '',
     packSize: getElement('packSizeInput')?.value || '',
@@ -198,6 +199,7 @@ function generateMapRegexFromProfile(profile: SavedProfile) {
       }
     }
 
+    setMapHighlights(profile.settings?.highlightContents);
     getElement('mapCustomRegex').value = profile.settings?.customRegex || '';
     if (profile.settings) {
       const settings = profile.settings;
@@ -224,6 +226,7 @@ function generateMapRegexFromProfile(profile: SavedProfile) {
   } finally {
     checkedMods.clear();
     originalCheckedMods.forEach((state, mod) => checkedMods.set(mod, state));
+    setMapHighlights(originalInputState.highlightContents);
     getElement('mapCustomRegex').value = originalInputState.customRegex;
 
     if (getElement('itemQuantityInput')) getElement('itemQuantityInput').value = originalInputState.itemQuantity;
