@@ -9,8 +9,8 @@
         "updatedAt": "2026-11-22T04:26:16.700Z"
       },
       "prices": {
-        "fingerprint": "682ce0c91a3b06d2d7cf7026e08d0731c868d002d7e3806324b014e94ff61d11",
-        "updatedAt": "2026-11-27T13:22:29.488Z"
+        "fingerprint": "35199fa97a453c407017e669a65f282dac6852c24044ec5d2d8564175c93c685",
+        "updatedAt": "2026-11-27T23:51:25.488Z"
       },
       "categories": {
         "map": {
@@ -47,8 +47,8 @@
             "updatedAt": "2026-10-30T00:36:25.893Z"
           },
           "prices": {
-            "fingerprint": "795828e83acfec1f4aabeba1101d563d0573483a922bb330e2855cded7883295",
-            "updatedAt": "2026-11-27T13:22:29.488Z"
+            "fingerprint": "c21359fccb9a888e7637038e5e5e01d5801c621fb344d63d4ba91d41cd1e3c04",
+            "updatedAt": "2026-11-27T23:51:25.488Z"
           }
         },
         "scarab": {
@@ -67,8 +67,8 @@
             "updatedAt": "2026-10-30T00:36:25.893Z"
           },
           "prices": {
-            "fingerprint": "12b10b003ce9933261d73f7ee3d6e21a9c8a61be2bd05457b62bbf8bc93302b8",
-            "updatedAt": "2026-11-27T13:22:29.488Z"
+            "fingerprint": "81308cf65a278511da6f9c701bdffd094d70235451616080725e568e25e78a2f",
+            "updatedAt": "2026-11-27T23:51:25.488Z"
           }
         },
         "tattoo": {
@@ -77,8 +77,8 @@
             "updatedAt": "2026-10-30T00:36:25.893Z"
           },
           "prices": {
-            "fingerprint": "fa64a8d22c19bd856e75d95397834e5a53dccbfb3e392e269b25d2604c866bce",
-            "updatedAt": "2026-11-27T13:22:29.488Z"
+            "fingerprint": "ebc58ff0cfa1cb1e1fc172ba063c159b394cb130e3b2a3429208ae951c4352fc",
+            "updatedAt": "2026-11-27T23:51:25.488Z"
           }
         },
         "runegraft": {
@@ -87,8 +87,8 @@
             "updatedAt": "2026-10-30T00:36:25.893Z"
           },
           "prices": {
-            "fingerprint": "f08de035aaac6e50f6cf64bb1b9a285134aa5d11d7dd84ac00502b072b3bbda4",
-            "updatedAt": "2026-11-27T13:22:29.488Z"
+            "fingerprint": "6d6cefc74431d1354a3b7feae2fdf846e7fc203d93fdb625078df4e8f2c03418",
+            "updatedAt": "2026-11-27T23:51:25.488Z"
           }
         },
         "vendor": {
